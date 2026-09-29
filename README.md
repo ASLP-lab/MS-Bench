@@ -20,6 +20,12 @@ MS-Bench is a condition-stratified benchmark for fine-grained evaluation of mult
 
 > MS-Bench asks not only “Which system performs best?”, but also “Under which conversational conditions does it fail, and why?”
 
+## Interactive demo
+
+**Live site:** https://aslp-lab.github.io/MS-Bench/demo.html
+
+The demo provides interactive views of the five condition dimensions, language and duration distributions, recording setups, scenario coverage, overall system results, and playable examples from meetings, education, podcasts, films, and dinner-party conversations. Long recordings are presented as previews of at most five minutes.
+
 ## At a glance
 
 | Duration | Speakers | Avg. overlap | Languages | Systems |
@@ -79,7 +85,7 @@ The best aggregate score is not the whole story: DER and cpWER rank several syst
 
 ## Repository status
 
-This repository currently hosts the project page and interactive result explorer. The paper, benchmark metadata, scoring recipes, and release instructions will be linked here as they become publicly available.
+This repository currently hosts the project page and interactive benchmark demo, including compressed scenario previews and the reported system results. The paper, full benchmark metadata, scoring recipes, and release instructions will be linked here as they become publicly available.
 
 ```text
 MS-Bench/
@@ -88,7 +94,8 @@ MS-Bench/
 └── assets/
     ├── app.js          # shared page interactions and result data
     ├── style.css       # responsive visual system
-    └── mark.svg        # project mark
+    ├── mark.svg        # project mark
+    └── audio/          # compressed demo excerpts (≤ 5 min each)
 ```
 
 To preview the site locally:
