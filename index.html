@@ -1,2 +1,90 @@
-<h1>Demo Page Coming Soon</h1>
-<p>This page will be updated with the paper demo.</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MS-Bench is a condition-stratified benchmark for fine-grained evaluation of multi-speaker automatic speech recognition systems.">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>MS-Bench · Condition-Stratified Multi-Speaker ASR Evaluation</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="MS-Bench home"><img src="assets/mark.svg" alt="" width="34" height="34"><span>MS-Bench</span></a>
+      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" data-menu>
+        <a href="#benchmark">Benchmark</a><a href="#findings">Findings</a><a href="#results">Results</a><a href="demo.html">Demo</a>
+        <a class="nav-pill" href="https://github.com/ASLP-lab/MS-Bench">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> A diagnostic benchmark for MSASR</p>
+        <h1>One score cannot explain a <em>conversation.</em></h1>
+        <p class="hero-lede">MS-Bench evaluates multi-speaker ASR across the conditions that make real conversations difficult—overlap, similar voices, rapid turns, crowded rooms, and imperfect audio.</p>
+        <div class="hero-actions"><a class="button button-primary" href="demo.html">Explore the results <span aria-hidden="true">→</span></a><a class="button button-secondary" href="#benchmark">Discover MS-Bench</a></div>
+        <p class="paper-status"><span class="status-dot"></span> Paper submitted · Resources will be released here</p>
+      </div>
+      <div class="condition-orbit reveal" aria-label="Five benchmark dimensions">
+        <div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div>
+        <div class="orbit-center"><span>MS</span><strong>Bench</strong><small>diagnose the conditions</small></div>
+        <div class="orbit-item orbit-speakers"><i>01</i><span>Speaker<br>count</span></div>
+        <div class="orbit-item orbit-overlap"><i>02</i><span>Overlap<br>ratio</span></div>
+        <div class="orbit-item orbit-similarity"><i>03</i><span>Speaker<br>similarity</span></div>
+        <div class="orbit-item orbit-turns"><i>04</i><span>Turn<br>interval</span></div>
+        <div class="orbit-item orbit-quality"><i>05</i><span>Acoustic<br>quality</span></div>
+      </div>
+      <div class="stat-strip reveal"><div><strong>32.72</strong><span>hours</span></div><div><strong>2–14</strong><span>speakers</span></div><div><strong>21.87%</strong><span>avg. overlap</span></div><div><strong>7</strong><span>languages</span></div><div><strong>8</strong><span>systems</span></div></div>
+    </section>
+
+    <section class="statement section-pad">
+      <div class="shell statement-grid reveal"><p class="section-index">01 / Motivation</p><div><h2>Aggregate accuracy hides <span>where systems break.</span></h2><p>Two systems can have similar WER while failing for entirely different reasons. MS-Bench separates recognition, segmentation, and speaker attribution, then measures each under controlled conversational conditions.</p></div></div>
+      <div class="failure-flow shell reveal" aria-label="From conversational condition to diagnostic outcome">
+        <div class="flow-card flow-input"><span class="flow-label">Input condition</span><div class="mini-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>Concurrent speech</strong><small>Who spoke what, and when?</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+        <div class="outcome-cluster"><div class="flow-card"><span class="flow-label">Lexical</span><strong>What was said?</strong><small>Substitutions, insertions, deletions</small></div><div class="flow-card"><span class="flow-label">Segmentation</span><strong>Was speech found?</strong><small>Missed or fabricated regions</small></div><div class="flow-card flow-accent"><span class="flow-label">Attribution</span><strong>Who said it?</strong><small>Words assigned to the wrong speaker</small></div></div>
+      </div>
+    </section>
+
+    <section class="benchmark section-pad" id="benchmark">
+      <div class="shell">
+        <div class="section-head reveal"><p class="section-index">02 / Benchmark</p><h2>Five axes.<br><span>A fuller stress test.</span></h2><p>Each recording receives a compact condition profile. Stratification turns a diverse collection into an interpretable diagnostic space.</p></div>
+        <div class="dimension-grid">
+          <article class="dimension-card reveal"><div class="dimension-number">01</div><div class="dimension-icon people-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Speaker count</h3><p>From dyadic speech to conversations with fourteen speakers.</p><span class="dimension-range">2 → 14 speakers</span></article>
+          <article class="dimension-card reveal"><div class="dimension-number">02</div><div class="dimension-icon overlap-icon" aria-hidden="true"><i></i><i></i></div><h3>Overlap ratio</h3><p>Measures how much concurrent speech challenges recognition and attribution.</p><span class="dimension-range">none → severe</span></article>
+          <article class="dimension-card reveal"><div class="dimension-number">03</div><div class="dimension-icon similarity-icon" aria-hidden="true"><i></i><i></i><b></b></div><h3>Speaker similarity</h3><p>Uses the most confusable voice pair within each recording.</p><span class="dimension-range">distinct → similar</span></article>
+          <article class="dimension-card reveal"><div class="dimension-number">04</div><div class="dimension-icon turn-icon" aria-hidden="true"><i></i><b></b><i></i></div><h3>Turn interval</h3><p>Characterizes rapid transitions without conflating concurrent speech.</p><span class="dimension-range">rapid → relaxed</span></article>
+          <article class="dimension-card reveal"><div class="dimension-number">05</div><div class="dimension-icon quality-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Acoustic quality</h3><p>Combines DNSMOS and NISQA ranks into one degradation measure.</p><span class="dimension-range">clean → degraded</span></article>
+        </div>
+        <div class="pipeline reveal"><div class="pipeline-intro"><span class="chip">Construction pipeline</span><h3>Broad coverage, deliberately selected.</h3></div><ol><li><span>1</span><div><strong>Source</strong><small>Public and internal multi-speaker sets</small></div></li><li><span>2</span><div><strong>Characterize</strong><small>Interaction, acoustics, and metadata</small></div></li><li><span>3</span><div><strong>Stratify</strong><small>Build an interpretable condition space</small></div></li><li><span>4</span><div><strong>Select &amp; inspect</strong><small>Optimize coverage, then manually verify</small></div></li></ol></div>
+      </div>
+    </section>
+
+    <section class="findings section-pad" id="findings">
+      <div class="shell"><div class="section-head light reveal"><p class="section-index">03 / Findings</p><h2>Different conditions leave<br><span>different fingerprints.</span></h2></div>
+        <div class="finding-grid">
+          <article class="finding-card finding-main reveal"><div class="finding-top"><span>Overlap</span><span>all 8 systems</span></div><div class="finding-value">+24.2<span> to </span>+38.6<small> pp</small></div><h3>Lexical error under high overlap</h3><p>Concurrent speech jointly damages what is recognized and who is speaking.</p><div class="overlap-viz" aria-hidden="true"><span></span><span></span></div></article>
+          <article class="finding-card reveal"><div class="finding-top"><span>Speaker similarity</span><span>p &lt; 0.05</span></div><div class="finding-value">ρ .25–.37</div><h3>Similar voices are exchanged</h3><p>The effect remains after restricting analysis to completely non-overlapping utterances.</p></article>
+          <article class="finding-card reveal"><div class="finding-top"><span>Acoustic quality</span><span>all 8 systems</span></div><div class="finding-value">ρ .18–.57</div><h3>Noise stresses recognition</h3><p>Acoustic degradation tracks lexical error, but generally not speaker-attribution failure.</p></article>
+          <article class="finding-card reveal"><div class="finding-top"><span>Speaker turns</span><span>δ = 0.5 s</span></div><div class="finding-value">+1.51–4.17<small> pp</small></div><h3>Switches disrupt “who”</h3><p>Attribution worsens near turns without a consistent lexical or segmentation penalty.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="results section-pad" id="results"><div class="shell"><div class="section-head reveal"><p class="section-index">04 / Results</p><h2>A leaderboard with<br><span>more than one answer.</span></h2><p>DER measures the timeline; cpWER and tcpWER demand correct word-to-speaker assignment. Lower is better.</p></div><div class="table-wrap reveal"><table><thead><tr><th>System</th><th>DER ↓</th><th>cpWER ↓</th><th>tcpWER ↓</th><th>WER ↓</th></tr></thead><tbody data-results-table></tbody></table><div class="table-note"><span>*</span> MOSS-Transcribe-Diarize-Pro is a commercial API; its aggregate metrics cover scorable outputs. See the paper for exclusion rules.</div></div><div class="result-callout reveal"><p><span>Takeaway</span> Accurate diarization does not guarantee accurate speaker-attributed transcription.</p><a href="demo.html">Open the interactive explorer <span aria-hidden="true">→</span></a></div></div></section>
+
+    <section class="cta section-pad"><div class="shell cta-inner reveal"><p class="section-index">Go beyond the average</p><h2>Explore every system.<br>Change the metric. See the gap.</h2><div class="hero-actions"><a class="button button-light" href="demo.html">Launch results explorer <span aria-hidden="true">→</span></a><a class="button button-ghost" href="https://github.com/ASLP-lab/MS-Bench">View on GitHub <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="index.html"><img src="assets/mark.svg" alt="" width="30" height="30"><span>MS-Bench</span></a><p>A condition-stratified benchmark for multi-speaker ASR evaluation.</p></div><div><strong>Project</strong><a href="#benchmark">Benchmark</a><a href="#results">Results</a><a href="demo.html">Interactive demo</a></div><div><strong>Resources</strong><a href="https://github.com/ASLP-lab/MS-Bench">GitHub</a><span>Paper · coming soon</span><span>Data · coming soon</span></div><div><strong>ASLP@NPU</strong><span>Northwestern Polytechnical University</span><span>Xi’an, China</span></div></div><div class="shell footer-bottom"><span>© 2026 MS-Bench authors</span><span>Built for careful evaluation.</span></div></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
