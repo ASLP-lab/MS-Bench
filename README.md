@@ -2,19 +2,14 @@
 
 <img src="assets/mark.svg" alt="MS-Bench icon" width="104">
 
-# MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark
+<h2>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</h2>
 
-[**Interactive Demo Page**](https://aslp-lab.github.io/MS-Bench/demo.html?v=20260930)
+[**🎧 Demo**](https://aslp-lab.github.io/MS-Bench/demo.html?v=20260930) · [**💻 Project Page**](https://github.com/ASLP-lab/MS-Bench)
 
 </div>
 
-## MS-Bench
 
-Understanding real-world conversations requires not only accurate speech recognition, but also a faithful account of **who spoke what and when**. Multi-speaker automatic speech recognition (MSASR) addresses this problem by jointly transcribing speech and attributing each segment to its corresponding speaker. Despite rapid progress in end-to-end speech large language models, MSASR remains challenging under overlapping speech, rapid speaker transitions, acoustically similar speakers, and diverse recording conditions.
-
-Existing benchmarks typically cover only a narrow range of multi-speaker conditions or focus on a single application scenario. Aggregate scores on these benchmarks therefore make it difficult to identify where a system fails and whether its errors arise from lexical recognition, temporal prediction, or speaker attribution.
-
-**MS-Bench** is a condition-stratified benchmark for fine-grained MSASR evaluation. It integrates recordings from multiple public and internal benchmarks and characterizes every recording along five dimensions: **speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality**. These dimensions are divided into interpretable condition ranges, enabling systematic evaluation across different interaction patterns, scenarios, languages, and recording devices. Experiments with representative commercial, open-source, and cascaded systems show that aggregate metrics alone obscure important failure modes, highlighting the need for condition-specific evaluation.
+**MS-Bench** is a condition-stratified benchmark for fine-grained evaluation of multi-speaker automatic speech recognition systems. It integrates recordings from multiple public and internal benchmarks and characterizes each recording along five dimensions: **speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality**. By stratifying these dimensions into interpretable condition ranges and selecting recordings with broad coverage of conditions, scenarios, languages, and recording devices, MS-Bench enables systematic analysis of where different systems succeed or fail beyond a single aggregate score.
 
 ## Data Construction Pipeline
 

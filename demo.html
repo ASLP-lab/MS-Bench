@@ -7,10 +7,7 @@
   <meta name="theme-color" content="#ffffff">
   <title>MS-Bench · Interactive Demo</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Roboto+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=20260930">
+  <link rel="stylesheet" href="assets/style.css?v=20261001">
 </head>
 <body class="demo-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,43 +32,7 @@
 
   <main id="main">
     <section class="demo-hero shell" id="top">
-      <div class="demo-hero-copy reveal">
-        <p class="eyebrow"><span></span> Interactive Benchmark Demo</p>
-        <h1><span>MS-Bench:</span> A Condition-Stratified Benchmark for Multi-Speaker ASR</h1>
-        <p class="hero-lede">Fine-grained evaluation of multi-speaker ASR across speaker count, overlap, voice similarity, turn-taking, and acoustic quality.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#explore">Explore conditions</a>
-          <a class="button button-secondary" href="https://github.com/ASLP-lab/MS-Bench">View on GitHub</a>
-        </div>
-        <p class="privacy-note"><span aria-hidden="true">◉</span> Complete metadata, curated audio only. Audio is loaded after you choose a case.</p>
-      </div>
-
-      <div class="profile-console reveal" aria-label="Example condition profile">
-        <div class="console-head"><span>recording profile</span><i>live view</i></div>
-        <p class="console-id">aishell4::M_R003S01C01</p>
-        <div class="profile-code" aria-label="P2 O1 S2 T3 N3">
-          <span data-axis-label="P"><b>P2</b><small>speakers</small></span>
-          <span data-axis-label="O"><b>O1</b><small>overlap</small></span>
-          <span data-axis-label="S"><b>S2</b><small>similarity</small></span>
-          <span data-axis-label="T"><b>T3</b><small>turns</small></span>
-          <span data-axis-label="N"><b>N3</b><small>acoustics</small></span>
-        </div>
-        <div class="console-wave" aria-hidden="true">
-          <div class="wave-row"><span>spk 01</span><i style="--x:4%;--w:29%"></i><i style="--x:56%;--w:31%"></i></div>
-          <div class="wave-row"><span>spk 02</span><i style="--x:25%;--w:38%"></i><i style="--x:81%;--w:15%"></i></div>
-          <div class="wave-row"><span>spk 03</span><i style="--x:46%;--w:23%"></i></div>
-          <div class="wave-row"><span>spk 04</span><i style="--x:9%;--w:18%"></i><i style="--x:69%;--w:19%"></i></div>
-        </div>
-        <div class="console-foot"><span>meeting</span><span>Chinese</span><span>8-ch array</span></div>
-      </div>
-
-      <div class="stat-strip reveal" aria-label="Benchmark summary">
-        <div><strong>99</strong><span>recordings</span></div>
-        <div><strong>32.72</strong><span>hours</span></div>
-        <div><strong>2–14</strong><span>speakers</span></div>
-        <div><strong>5</strong><span>condition axes</span></div>
-        <div><strong>ZH / EN</strong><span>dominant</span></div>
-      </div>
+      <h1 class="reveal"><span>MS-Bench:</span> A Condition-Stratified Multi-Speaker ASR Benchmark</h1>
     </section>
 
     <section class="overview section-pad" id="overview">
@@ -113,24 +74,24 @@
           <aside class="filter-panel" aria-label="Condition filters">
             <div class="filter-head"><span>Condition filters</span><button type="button" data-reset-filters>Reset</button></div>
             <div class="filter-group">
-              <div class="filter-label"><b>P</b><span>Speaker count</span><small>2 → ≥9</small></div>
-              <div class="filter-options" role="group" aria-label="Speaker count"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div>
+              <div class="filter-label"><b>P</b><span>Speaker Number</span><small>2 → ≥9</small></div>
+              <div class="filter-options" role="group" aria-label="Speaker Number"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div>
             </div>
             <div class="filter-group">
-              <div class="filter-label"><b>O</b><span>Overlap ratio</span><small>none → ≥40%</small></div>
-              <div class="filter-options" role="group" aria-label="Overlap ratio"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div>
+              <div class="filter-label"><b>O</b><span>Overlap Ratio</span><small>none → ≥40%</small></div>
+              <div class="filter-options" role="group" aria-label="Overlap Ratio"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div>
             </div>
             <div class="filter-group">
-              <div class="filter-label"><b>S</b><span>Voice similarity</span><small>distinct → similar</small></div>
-              <div class="filter-options" role="group" aria-label="Speaker similarity"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div>
+              <div class="filter-label"><b>S</b><span>Speaker Similarity</span><small>distinct → similar</small></div>
+              <div class="filter-options" role="group" aria-label="Speaker Similarity"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div>
             </div>
             <div class="filter-group">
-              <div class="filter-label"><b>T</b><span>Turn interval</span><small>relaxed → ≤60 ms</small></div>
-              <div class="filter-options" role="group" aria-label="Turn interval"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div>
+              <div class="filter-label"><b>T</b><span>Speaker Turn Interval</span><small>relaxed → ≤60 ms</small></div>
+              <div class="filter-options" role="group" aria-label="Speaker Turn Interval"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div>
             </div>
             <div class="filter-group">
-              <div class="filter-label"><b>N</b><span>Acoustic difficulty</span><small>clean → degraded</small></div>
-              <div class="filter-options" role="group" aria-label="Acoustic difficulty"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div>
+              <div class="filter-label"><b>N</b><span>Acoustic Quality</span><small>clean → degraded</small></div>
+              <div class="filter-options" role="group" aria-label="Acoustic Quality"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div>
             </div>
           </aside>
 
@@ -142,10 +103,10 @@
             <div class="match-stats">
               <div><span>Median duration</span><strong data-median-duration>—</strong></div>
               <div><span>Average overlap</span><strong data-average-overlap>—</strong></div>
-              <div><span>Sources</span><strong data-source-count>—</strong></div>
+              <div><span>Languages</span><strong data-language-count>—</strong></div>
+              <div><span>Scenarios</span><strong data-scenario-count>—</strong></div>
             </div>
             <div class="match-breakdown">
-              <div><span>Top sources</span><p data-source-summary>—</p></div>
               <div><span>Languages</span><p data-language-summary>—</p></div>
               <div><span>Scenarios</span><p data-scenario-summary>—</p></div>
             </div>
@@ -185,8 +146,8 @@
             <button type="button" role="tab" aria-selected="true" data-diagnostic="overlap"><b>01</b> Overlap</button>
             <button type="button" role="tab" aria-selected="false" data-diagnostic="similarity"><b>02</b> Similarity</button>
             <button type="button" role="tab" aria-selected="false" data-diagnostic="acoustic"><b>03</b> Acoustics</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="turn"><b>04</b> Turn boundaries</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="speaker"><b>05</b> Speaker count</button>
+            <button type="button" role="tab" aria-selected="false" data-diagnostic="turn"><b>04</b> Speaker Turn Interval</button>
+            <button type="button" role="tab" aria-selected="false" data-diagnostic="speaker"><b>05</b> Speaker Number</button>
           </div>
           <div class="diagnostic-panel" data-diagnostic-panel role="tabpanel" aria-live="polite"><p class="loading-block">Loading diagnostic findings…</p></div>
         </div>
@@ -197,7 +158,7 @@
       <div class="shell">
         <div class="section-head split-head reveal">
           <div><p class="section-index">05 / Audio</p><h2>Representative Cases</h2></div>
-          <p>Four short excerpts connect abstract tiers to actual conversational structure. Nothing is downloaded until a case is opened.</p>
+          <p>Eight short excerpts connect condition profiles to real conversational structure. Play any example to follow its time-aligned reference transcript.</p>
         </div>
         <div class="case-grid" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases…</p></div>
       </div>
@@ -213,12 +174,7 @@
     <div class="shell footer-base"><span>ASLP@NPU</span><span>Research preview · 2026</span></div>
   </footer>
 
-  <dialog class="case-dialog" data-case-dialog aria-labelledby="case-dialog-title">
-    <button class="dialog-close" type="button" data-dialog-close aria-label="Close case">Close <span aria-hidden="true">×</span></button>
-    <div data-dialog-content></div>
-  </dialog>
-
   <noscript><div class="noscript">This interactive report requires JavaScript. Benchmark metadata remains available in <a href="benchmark/metadata.jsonl">JSONL format</a>.</div></noscript>
-  <script src="assets/app.js?v=20260930" defer></script>
+  <script src="assets/app.js?v=20261001" defer></script>
 </body>
 </html>
