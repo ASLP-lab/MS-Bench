@@ -6,11 +6,11 @@ const DATA_ROOT = "demo-data";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_NAMES = { P: "Speaker count", O: "Overlap ratio", S: "Speaker similarity", T: "Turn interval", N: "Acoustic difficulty" };
 const AXIS_COLORS = {
-  P: ["#dbe7de", "#a9c8b4", "#5f9680", "#235143"],
-  O: ["#f3dfd3", "#edba9f", "#df8f69", "#cf5f3a", "#963b28"],
-  S: ["#e8e2d4", "#d6c49d", "#b89b63", "#856b39"],
-  T: ["#dce5e7", "#a9c3c7", "#6b9aa0", "#336c73"],
-  N: ["#e4e0e8", "#c3b7ce", "#9786aa", "#645373"]
+  P: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
+  O: ["#eff6ff", "#dbeafe", "#bfdbfe", "#60a5fa", "#2563eb"],
+  S: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
+  T: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
+  N: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"]
 };
 
 const state = {
@@ -96,10 +96,10 @@ function renderOverview(summary) {
   language.innerHTML = `
     <div class="language-total"><strong>${summary.primary_languages.join(" + ")}</strong><span>dominant</span></div>
     <div class="stacked-bar" aria-label="Language distribution">${languages.map(([name, count], index) =>
-      `<i style="width:${count / total * 100}%;--bar:${index < 2 ? (index ? "#df7049" : "#235143") : "#c5a15a"}" title="${escapeHTML(name)}: ${count}"></i>`
+      `<i style="width:${count / total * 100}%;--bar:${index === 0 ? "#2563eb" : index === 1 ? "#7aa7f8" : "#cbd5e1"}" title="${escapeHTML(name)}: ${count}"></i>`
     ).join("")}</div>
     <ul class="legend-list">${languages.map(([name, count], index) =>
-      `<li><i style="--dot:${index < 2 ? (index ? "#df7049" : "#235143") : "#c5a15a"}"></i><span>${escapeHTML(name)}</span><b>${count}</b></li>`
+      `<li><i style="--dot:${index === 0 ? "#2563eb" : index === 1 ? "#7aa7f8" : "#cbd5e1"}"></i><span>${escapeHTML(name)}</span><b>${count}</b></li>`
     ).join("")}</ul>`;
 
   const scenarios = $("[data-overview-scenarios]");
@@ -187,7 +187,7 @@ function renderCases() {
 
 function speakerColor(speaker, speakers) {
   const index = speakers.indexOf(speaker);
-  return ["#df7049", "#235143", "#c5a15a", "#6b9aa0", "#856b79", "#79885c"][index % 6];
+  return ["#2563eb", "#60a5fa", "#1e40af", "#94a3b8", "#64748b", "#38bdf8"][index % 6];
 }
 
 function openCase(slug) {

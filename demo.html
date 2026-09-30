@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore MS-Bench conditions, system results, diagnostic findings, and representative multi-speaker ASR cases.">
-  <meta name="theme-color" content="#f4f0e8">
+  <meta name="theme-color" content="#ffffff">
   <title>MS-Bench · Interactive Demo</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Roboto+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="demo-page">
@@ -36,12 +36,12 @@
   <main id="main">
     <section class="demo-hero shell" id="top">
       <div class="demo-hero-copy reveal">
-        <p class="eyebrow"><span></span> Interactive condition report</p>
-        <h1>Listen less broadly.<br><em>Diagnose more deeply.</em></h1>
-        <p class="hero-lede">Explore how 99 long-form recordings stress multi-speaker ASR across speaker count, overlap, voice similarity, turn-taking, and acoustic quality.</p>
+        <p class="eyebrow"><span></span> Interactive Benchmark Demo</p>
+        <h1><span>MS-Bench:</span> A Condition-Stratified Benchmark for Multi-Speaker ASR</h1>
+        <p class="hero-lede">Fine-grained evaluation of multi-speaker ASR across speaker count, overlap, voice similarity, turn-taking, and acoustic quality.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#explore">Explore conditions <span aria-hidden="true">↓</span></a>
-          <a class="button button-secondary" href="#cases">Hear representative cases</a>
+          <a class="button button-primary" href="#explore">Explore conditions</a>
+          <a class="button button-secondary" href="https://github.com/ASLP-lab/MS-Bench">View on GitHub</a>
         </div>
         <p class="privacy-note"><span aria-hidden="true">◉</span> Complete metadata, curated audio only. Audio is loaded after you choose a case.</p>
       </div>
@@ -77,7 +77,7 @@
     <section class="overview section-pad" id="overview">
       <div class="shell">
         <div class="section-head split-head reveal">
-          <div><p class="section-index">01 / Overview</p><h2>A compact benchmark with a <span>wide condition space.</span></h2></div>
+          <div><p class="section-index">01 / Overview</p><h2>Benchmark Overview</h2></div>
           <p>MS-Bench is primarily Chinese and English, with additional multilingual samples across real meeting, media, conversational, wearable, and in-vehicle settings.</p>
         </div>
 
@@ -105,7 +105,7 @@
     <section class="explorer section-pad" id="explore">
       <div class="shell">
         <div class="section-head light split-head reveal">
-          <div><p class="section-index">02 / Condition explorer</p><h2>Build a profile.<br><span>See what remains.</span></h2></div>
+          <div><p class="section-index">02 / Explore</p><h2>Condition Explorer</h2></div>
           <p>Select any combination of tiers. The explorer filters metadata for all 99 recordings; public audio remains limited to hand-picked examples.</p>
         </div>
 
@@ -159,7 +159,7 @@
     <section class="leaderboard section-pad" id="leaderboard">
       <div class="shell">
         <div class="section-head split-head reveal">
-          <div><p class="section-index">03 / Leaderboard</p><h2>Accuracy is only half of <span>reliability.</span></h2></div>
+          <div><p class="section-index">03 / Results</p><h2>System Leaderboard</h2></div>
           <p>Compare headline error rates with structural robustness: whether a system returned a valid, scoreable speaker-attributed output.</p>
         </div>
         <div class="board-toolbar reveal">
@@ -177,7 +177,7 @@
     <section class="diagnostics section-pad" id="diagnostics">
       <div class="shell">
         <div class="section-head light split-head reveal">
-          <div><p class="section-index">04 / Diagnostics</p><h2>Each condition leaves a <span>different error signature.</span></h2></div>
+          <div><p class="section-index">04 / Analysis</p><h2>Diagnostic Findings</h2></div>
           <p>Switch between controlled analyses to separate lexical recognition from speaker-attribution failure.</p>
         </div>
         <div class="diagnostic-shell reveal">
@@ -196,7 +196,7 @@
     <section class="cases section-pad" id="cases">
       <div class="shell">
         <div class="section-head split-head reveal">
-          <div><p class="section-index">05 / Representative cases</p><h2>Hear the conditions behind <span>the labels.</span></h2></div>
+          <div><p class="section-index">05 / Audio</p><h2>Representative Cases</h2></div>
           <p>Four short excerpts connect abstract tiers to actual conversational structure. Nothing is downloaded until a case is opened.</p>
         </div>
         <div class="case-grid" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases…</p></div>
