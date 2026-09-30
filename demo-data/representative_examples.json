@@ -1,0 +1,374 @@
+[
+  {
+    "slug": "meeting",
+    "recording_id": "aishell4::M_R003S01C01",
+    "title": "Rapid-turn meeting",
+    "eyebrow": "Meeting · Chinese",
+    "description": "A six-speaker far-field meeting with extremely short turn gaps and degraded acoustics.",
+    "audio": "assets/audio/meeting-aishell4.mp3",
+    "clip_duration": "05:00",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2282.21,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "stats": {
+      "num_speakers": 6,
+      "overlap_ratio": 0.055924,
+      "speaker_similarity_max": 0.620441,
+      "speaker_switch_q25": 0.023567,
+      "noise_difficulty": 0.8968705547652915
+    },
+    "timeline": [
+      {
+        "speaker": "001-M",
+        "start": 4.08,
+        "end": 6.65,
+        "text": "零零幺幼儿教幼儿校长"
+      },
+      {
+        "speaker": "002-M",
+        "start": 6.88,
+        "end": 8.58,
+        "text": "零幺零教师"
+      },
+      {
+        "speaker": "003-F",
+        "start": 8.63,
+        "end": 9.95,
+        "text": "零幺幺教师"
+      },
+      {
+        "speaker": "004-F",
+        "start": 10.05,
+        "end": 11.48,
+        "text": "零幺二厨师"
+      },
+      {
+        "speaker": "005-F",
+        "start": 11.52,
+        "end": 12.8,
+        "text": "零幺三保安"
+      },
+      {
+        "speaker": "006-F",
+        "start": 12.82,
+        "end": 14.45,
+        "text": "零幺四招生"
+      },
+      {
+        "speaker": "001-M",
+        "start": 14.5,
+        "end": 22.06,
+        "text": "呃<sil>这次啊我要把大家伙儿都叫过来了，咱们把咱那个幼儿园啊咱那个重新再<sil>"
+      },
+      {
+        "speaker": "001-M",
+        "start": 22.14,
+        "end": 34.86,
+        "text": "咱开一次会因为毕竟<sil>呃<sil>就是。大半年也要呃快过去了，马上这个要呃，接近这个<sil>这个咱那个要放假啦"
+      },
+      {
+        "speaker": "001-M",
+        "start": 34.93,
+        "end": 48.1,
+        "text": "呃<sil>呃<sil>，我这边儿呢因为也是进入冬天了咱把大家伙儿叫过来看看来咱幼儿园还有什么呃安全啊，包括呃<sil>问题也包括。呃，各个方面的"
+      },
+      {
+        "speaker": "001-M",
+        "start": 48.11,
+        "end": 56.78,
+        "text": "呃<sil>，你们呃的幼儿老师们啊对孩子这块儿嘞学习，还有一些这个呃<sil>教育"
+      },
+      {
+        "speaker": "001-M",
+        "start": 56.84,
+        "end": 60,
+        "text": "咱嗯有没有要套探讨的，包括就是<sil>就是那个招生招生，这次就是<$>也是"
+      }
+    ]
+  },
+  {
+    "slug": "education",
+    "recording_id": "SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active",
+    "title": "Full-duplex tutoring",
+    "eyebrow": "Education · Chinese",
+    "description": "A clean, low-overlap tutoring exchange that anchors the easier end of the condition space.",
+    "audio": "assets/audio/education-smoothconv.mp3",
+    "clip_duration": "01:31",
+    "source_dataset": "SmoothConv_DuplexConv",
+    "language": "Chinese",
+    "scenario": "education",
+    "recording_device": "multi-channel digital audio capture",
+    "duration_seconds": 90.768,
+    "conditions": {
+      "P": "P1",
+      "O": "O0",
+      "S": "S0",
+      "T": "T0",
+      "N": "N0"
+    },
+    "stats": {
+      "num_speakers": 3,
+      "overlap_ratio": 0.0,
+      "speaker_similarity_max": 0.203782,
+      "speaker_switch_q25": 0.50364,
+      "noise_difficulty": 0.24110953058321472
+    },
+    "timeline": [
+      {
+        "speaker": "B1",
+        "start": 11.11,
+        "end": 13.72,
+        "text": "那我这个 BCP 等于多<pause>这个 BCF 多少知不知道"
+      },
+      {
+        "speaker": "A1",
+        "start": 17.78,
+        "end": 18.31,
+        "text": "不知道"
+      },
+      {
+        "speaker": "B1",
+        "start": 30.33,
+        "end": 33.02,
+        "text": "CF 咋来的 C 平行 AB 啊用了没有"
+      },
+      {
+        "speaker": "B1",
+        "start": 44.51,
+        "end": 49.7,
+        "text": "我还拿这个题给你举例子这个平行<pause>只有平行它俩才相等才有了全等是不是"
+      },
+      {
+        "speaker": "B1",
+        "start": 57.62,
+        "end": 58.01,
+        "text": "是不是"
+      },
+      {
+        "speaker": "A1",
+        "start": 59.45,
+        "end": 59.84,
+        "text": "嗯"
+      }
+    ]
+  },
+  {
+    "slug": "podcast",
+    "recording_id": "BenchFilms_ZH::part004_e12074b4",
+    "title": "Fast podcast exchange",
+    "eyebrow": "Podcast · Chinese",
+    "description": "A two-speaker discussion with highly similar voices and rapid conversational turns.",
+    "audio": "assets/audio/podcast-benchzh.mp3",
+    "clip_duration": "05:00",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "podcast",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 373.03,
+    "conditions": {
+      "P": "P0",
+      "O": "O1",
+      "S": "S3",
+      "T": "T3",
+      "N": "N0"
+    },
+    "stats": {
+      "num_speakers": 2,
+      "overlap_ratio": 0.00857,
+      "speaker_similarity_max": 0.909934,
+      "speaker_switch_q25": 0.02625,
+      "noise_difficulty": 0.10668563300142253
+    },
+    "timeline": [
+      {
+        "speaker": "spk_01",
+        "start": 2.86,
+        "end": 6.58,
+        "text": "我觉得女性之间的关系背后真正反映的是她们的自我。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 13.83,
+        "end": 21.26,
+        "text": "但你会发现在阳光姐妹淘里面，她们所有起冲突的部分，是与她的个人成长，她内心的那些东西高度相关的。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 23.75,
+        "end": 29.82,
+        "text": "比如我家里欠了钱，然后我希望有一天我可以出人头地，所以我想要去当什么什么样的人。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 36.7,
+        "end": 45.17,
+        "text": "它是和你的自卑，你的报复，你在家庭里面的爱的缺失，你所有求而不得，想要获得的那个东西高度相关的。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 54.2,
+        "end": 58.99,
+        "text": "你看到了他承担的背后家庭的不容易，和他如何想要努力的做出改变。"
+      }
+    ]
+  },
+  {
+    "slug": "film",
+    "recording_id": "BenchFilms_ZH::000049_part018",
+    "title": "Crowded film scene",
+    "eyebrow": "Film · Chinese",
+    "description": "Eight character voices, high pairwise similarity, and degraded media acoustics stress attribution.",
+    "audio": "assets/audio/film-benchfilms.mp3",
+    "clip_duration": "04:57",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 296.635,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "stats": {
+      "num_speakers": 8,
+      "overlap_ratio": 7.4e-05,
+      "speaker_similarity_max": 0.815854,
+      "speaker_switch_q25": 0.082,
+      "noise_difficulty": 0.9740398293029872
+    },
+    "timeline": [
+      {
+        "speaker": "spk_01",
+        "start": 13.01,
+        "end": 13.84,
+        "text": "阿宁。"
+      },
+      {
+        "speaker": "spk_03",
+        "start": 26.17,
+        "end": 28.22,
+        "text": "我姐姐还在吗？"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 32.19,
+        "end": 33.88,
+        "text": "没人毁得了她。"
+      },
+      {
+        "speaker": "spk_02",
+        "start": 38.51,
+        "end": 40.02,
+        "text": "老马！"
+      },
+      {
+        "speaker": "spk_02",
+        "start": 48.19,
+        "end": 52.97,
+        "text": "吉时已到，哈哈！我得回去洞房花烛夜了。"
+      }
+    ]
+  },
+  {
+    "slug": "dinner",
+    "recording_id": "dipco_eval_U01_CH1::S06",
+    "title": "Dense dinner-party overlap",
+    "eyebrow": "Dinner party · English",
+    "description": "Four distant speakers combine overlap, similar voices, fast turns, and difficult room acoustics.",
+    "audio": "assets/audio/dinner-party-dipco.mp3",
+    "clip_duration": "05:00",
+    "source_dataset": "dipco_eval_U01_CH1",
+    "language": "English",
+    "scenario": "dinner party",
+    "recording_device": "7-microphone far-field array (U01, channel 1)",
+    "duration_seconds": 1204.562,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "stats": {
+      "num_speakers": 4,
+      "overlap_ratio": 0.269426,
+      "speaker_similarity_max": 0.767128,
+      "speaker_switch_q25": 0.13,
+      "noise_difficulty": 0.8879800853485064
+    },
+    "timeline": [
+      {
+        "speaker": "P24",
+        "start": 22.72,
+        "end": 23.97,
+        "text": "speaker four"
+      },
+      {
+        "speaker": "P23",
+        "start": 25.68,
+        "end": 31.41,
+        "text": "[noise] let's get food [noise] i got a lot already"
+      },
+      {
+        "speaker": "P22",
+        "start": 27.49,
+        "end": 30.06,
+        "text": "yeah that's good idea"
+      },
+      {
+        "speaker": "P21",
+        "start": 36.26,
+        "end": 40.77,
+        "text": "i'm not super hungry but it's in the name of science so i can't resist"
+      },
+      {
+        "speaker": "P23",
+        "start": 47.13,
+        "end": 48.48,
+        "text": "i want meat"
+      },
+      {
+        "speaker": "P21",
+        "start": 48.29,
+        "end": 49.7,
+        "text": "including tacos"
+      },
+      {
+        "speaker": "P24",
+        "start": 51.43,
+        "end": 52.54,
+        "text": "what's that"
+      },
+      {
+        "speaker": "P23",
+        "start": 51.47,
+        "end": 53.53,
+        "text": "[unintelligible] i don't know pork"
+      },
+      {
+        "speaker": "P21",
+        "start": 54.45,
+        "end": 57.49,
+        "text": "[noise] pretty sure it's chicken [noise]"
+      },
+      {
+        "speaker": "P22",
+        "start": 57.97,
+        "end": 60,
+        "text": "[noise] ok i should have some cream sour cream on that"
+      }
+    ]
+  }
+]

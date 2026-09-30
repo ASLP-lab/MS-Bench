@@ -1,113 +1,163 @@
 <div align="center">
 
+<img src="assets/mark.svg" alt="MS-Bench mark" width="72">
+
 # MS-Bench
 
-### A Condition-Stratified Benchmark for Multi-Speaker ASR Evaluation
+### A Condition-Stratified Multi-Speaker ASR Benchmark
+
+Fine-grained evaluation across speaker interaction, voice similarity, turn-taking, and acoustic conditions.
 
 **Chunjiang He\*** · **Zheng Zi\*** · **Bingshen Mu** · **Yurun Li** · **Jingyi Wang** · **Lei Xie†**
-
 ASLP@NPU, Northwestern Polytechnical University
 
-\* Equal contribution &nbsp;&nbsp; † Corresponding author
+\* Equal contribution · † Corresponding author
 
-[![Project page](https://img.shields.io/badge/Project_Page-live-16382c?style=flat-square)](https://aslp-lab.github.io/MS-Bench/)
-[![Demo](https://img.shields.io/badge/Interactive_Demo-explore-dc6b43?style=flat-square)](https://aslp-lab.github.io/MS-Bench/demo.html)
-[![Paper](https://img.shields.io/badge/Paper-submitted-ae8a48?style=flat-square)](#citation)
+[![Demo](https://img.shields.io/badge/Interactive_Demo-explore-EA6A47?style=flat-square)](https://aslp-lab.github.io/MS-Bench/)
+[![Metadata](https://img.shields.io/badge/Benchmark_Metadata-99_recordings-193C35?style=flat-square)](benchmark/metadata.jsonl)
+[![Paper](https://img.shields.io/badge/Paper-submitted-BCA66A?style=flat-square)](#citation)
 
 </div>
 
-MS-Bench is a condition-stratified benchmark for fine-grained evaluation of multi-speaker automatic speech recognition (MSASR). Instead of reducing performance to a single aggregate score, it characterizes every recording along five conditions that expose different failure modes: **speaker count, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality**.
+MS-Bench evaluates multi-speaker ASR systems under five recording-level conditions: **speaker number (P), overlap ratio (O), speaker similarity (S), speaker turn interval (T), and acoustic quality (N)**. It complements aggregate metrics with condition-wise diagnostics that answer a more useful question: _under which conversational conditions does a system fail, and how?_
 
-> MS-Bench asks not only “Which system performs best?”, but also “Under which conversational conditions does it fail, and why?”
+> MS-Bench standardizes evaluation, not model inference. Bring predictions from any cascade, end-to-end model, speech LLM, or commercial API; convert them to the common segment format; then score them with the same protocol.
 
-## Interactive demo
+## Benchmark overview
 
-**Live site:** https://aslp-lab.github.io/MS-Bench/demo.html
+| Recordings | Duration | Speakers | Conditions |
+|:--:|:--:|:--:|:--:|
+| **99** | **32.72 h** | **2–14** | **5 dimensions** |
 
-The demo provides interactive views of the five condition dimensions, language and duration distributions, recording setups, scenario coverage, overall system results, and playable examples from meetings, education, podcasts, films, and dinner-party conversations. Long recordings are presented as previews of at most five minutes.
+The benchmark is **primarily Chinese and English**, with additional Portuguese, Japanese, Thai, Italian, and Spanish samples. It spans meetings, conversations, podcasts, films and television, dinner parties, education, live streaming, in-vehicle interaction, and smart-glasses recordings.
 
-## At a glance
+The [interactive demo](https://aslp-lab.github.io/MS-Bench/) lets you filter the complete metadata by condition profile, inspect distribution shifts, compare system accuracy and robustness, and listen to a small set of curated excerpts. It does not preload or expose all 99 recordings.
 
-| Duration | Speakers | Avg. overlap | Languages | Systems |
-|:--:|:--:|:--:|:--:|:--:|
-| 32.72 h | 2–14 | 21.87% | 7 | 8 |
+## Condition space
 
-The benchmark spans meetings, spontaneous conversations, film and television, podcasts, dinner-party conversations, educational and live-streaming content, in-vehicle interactions, and smart-glasses recordings. It covers primarily Chinese and English, with additional Portuguese, Japanese, Thai, Italian, and Spanish speech.
+Each recording receives a profile such as `P2-O3-S2-T3-N3`.
 
-## Why condition-stratified evaluation?
-
-Existing multi-speaker benchmarks are often tied to a small set of scenarios or conversational conditions. Their aggregate scores can conceal whether a system fails because it cannot recognize overlapped words, confuses acoustically similar speakers, loses attribution around rapid turns, or simply struggles with degraded audio.
-
-MS-Bench organizes evaluation around five complementary axes:
-
-| Dimension | Recording-level representation | What it probes |
+| Axis | Statistic | Tiers |
 |---|---|---|
-| Speaker count | Number of reference speakers | Scaling to crowded conversations |
-| Overlap ratio | Fraction of concurrent speech | Recognition and attribution under overlap |
-| Speaker similarity | Maximum pairwise cosine similarity | Confusion between similar voices |
-| Speaker turn interval | 25th percentile of non-overlapping turn gaps | Attribution near rapid speaker changes |
-| Acoustic quality | Combined DNSMOS and NISQA percentile rank | Robustness to acoustic degradation |
+| **P · Speaker number** | Number of valid reference speakers | `P0`: 2 · `P1`: 3–4 · `P2`: 5–8 · `P3`: ≥9 |
+| **O · Overlap ratio** | Concurrent-speech duration / total reference-speech duration | `O0`: 0 · `O1`: (0, 0.10) · `O2`: [0.10, 0.20) · `O3`: [0.20, 0.40) · `O4`: ≥0.40 |
+| **S · Speaker similarity** | Maximum pairwise cosine similarity of speaker embeddings | `S0`: <0.32 · `S1`: [0.32, 0.49) · `S2`: [0.49, 0.65) · `S3`: ≥0.65 |
+| **T · Turn interval** | 25th percentile of non-overlapping speaker-turn gaps | `T0`: >0.45 s · `T1`: (0.15, 0.45] · `T2`: (0.06, 0.15] · `T3`: ≤0.06 s |
+| **N · Acoustic difficulty** | `dN = 1 − mean(percentile(DNSMOS), percentile(NISQA))` | `N0`: <0.27 · `N1`: [0.27, 0.51) · `N2`: [0.51, 0.74) · `N3`: ≥0.74 |
 
-Recordings are selected by jointly considering condition coverage, difficult-factor co-occurrence, condition-profile diversity, and source diversity, followed by manual quality control.
+Tier labels describe operating ranges rather than an assumed universal ordering of model difficulty. Analyses control relevant confounds instead of interpreting pooled trends causally.
 
-## Main findings
+## Data contract
 
-- **Overlap damages both content and attribution.** High-overlap utterances increase lexical error by **24.2–38.6 percentage points** across all eight systems, and increase wrong-speaker attribution by **3.5–19.1 points**.
-- **Similar voices are consistently confused.** Pairwise speaker similarity correlates with speaker confusion for every evaluated system (Spearman’s **ρ = 0.25–0.37**, *p* < 0.05), even on completely non-overlapping speech.
-- **Acoustic degradation mainly affects recognition.** It correlates with lexical error across all systems (**ρ = 0.18–0.57**, *p* < 0.05), but generally not with speaker-attribution failures.
-- **Speaker switches target “who,” not “what.”** Wrong-speaker attribution rises by **1.51–4.17 points** near non-overlapping turns, while lexical and segmentation penalties are not consistently significant.
+### Reference metadata
 
-## Overall results
+The public [metadata file](benchmark/metadata.jsonl) contains one JSON object per recording. Internal storage paths and full reference content are intentionally excluded from this web-facing artifact.
 
-Lower is better. Scores are percentages. “Excluded / soft” reports structurally unscorable outputs and parseable degeneration cases separately.
+```json
+{
+  "recording_id": "aishell4::M_R003S01C01",
+  "source_dataset": "aishell4",
+  "language": "Chinese",
+  "scenario": "meeting",
+  "recording_device": "8-channel circular microphone array",
+  "duration_seconds": 2282.21,
+  "conditions": {"P": "P2", "O": "O1", "S": "S2", "T": "T3", "N": "N3"}
+}
+```
 
-| System | DER ↓ | cpWER ↓ | tcpWER ↓ | WER ↓ | Excluded / soft |
-|---|---:|---:|---:|---:|---:|
-| **MOSS-Transcribe-Diarize-Pro** | **10.96** | **21.95** | **22.81** | **22.49** | 15 / 2 |
-| **MOSS-Transcribe-Diarize** | 12.74 | 24.94 | 26.22 | 25.02 | **0 / 2** |
-| DiaScriber | 19.79 | 30.36 | 33.20 | 26.42 | 27 / 1 |
-| Qwen3.8-Omni-Flash | 17.97 | 29.43 | 32.59 | 27.86 | 5 / 2 |
-| VibeVoice-ASR | 20.19 | 43.41 | 44.76 | 33.11 | 10 / 12 |
-| pyannote + Qwen3-ASR | 17.35 | 43.25 | 46.54 | 34.96 | **0 / 1** |
-| Doubao-ASR 2.0 | 39.52 | 55.37 | 62.07 | 38.20 | 4 / 26 |
-| SoulX-Transcriber | 19.42 | 49.16 | 52.60 | 39.96 | 8 / 30 |
+### System output
 
-The best aggregate score is not the whole story: DER and cpWER rank several systems differently, revealing that accurate speaker timelines do not necessarily imply accurate word-to-speaker attribution.
+MS-Bench does not prescribe an inference stack. Convert model predictions into speaker-attributed segments:
 
-## Metrics
+```json
+{
+  "recording_id": "aishell4::M_R003S01C01",
+  "segments": [
+    {"speaker": "spk0", "start": 4.08, "end": 6.65, "text": "..."},
+    {"speaker": "spk1", "start": 14.50, "end": 22.06, "text": "..."}
+  ]
+}
+```
 
-- **DER** evaluates the speaker timeline with a 0.5 s collar.
-- **cpWER** finds the speaker permutation that minimizes word error.
-- **tcpWER** additionally constrains speaker–transcript matching in time, using a 5 s collar.
-- **WER** ignores speaker labels and measures transcription content alone.
-- **Lexical / segmentation error** separates recognition errors from words inserted or lost because of speech-region detection and segmentation.
-- **AttrWrong** is the fraction of reference utterances whose content is attributed to the wrong speaker.
+Required properties:
 
-## Repository status
+- timestamps are in seconds and satisfy `0 ≤ start < end`;
+- speaker identifiers are stable within one recording;
+- text is the system prediction, before reference-dependent correction;
+- one prediction object is provided per recording.
 
-This repository currently hosts the project page and interactive benchmark demo, including compressed scenario previews and the reported system results. The paper, full benchmark metadata, scoring recipes, and release instructions will be linked here as they become publicly available.
+## Evaluation protocol
+
+The release toolkit validates the submission schema, normalizes text by language, computes the metrics below, and summarizes overall and condition-wise results.
+
+| Metric | What it measures |
+|---|---|
+| **DER** | Speaker activity and identity on the timeline, with a 0.5 s collar |
+| **cpWER** | Speaker-attributed word error after the best global speaker permutation |
+| **tcpWER** | Time-constrained speaker–transcript matching, with a 5 s collar |
+| **WER** | Speaker-agnostic transcript content |
+| **Excluded / soft degradation** | Structurally unscorable outputs / parseable but degenerate outputs |
+
+The intended workflow is:
+
+```text
+your model → MS-Bench segment JSONL → schema validation → unified scoring → condition report
+```
+
+The inference adapter and scoring package will be published with the benchmark release. The repository will expose the following interface rather than attempting to run arbitrary third-party models:
+
+```bash
+python evaluation/validate_output.py outputs/my_system.jsonl
+python evaluation/score.py \
+  --reference benchmark/reference \
+  --hypothesis outputs/my_system.jsonl \
+  --output results/my_system
+```
+
+## What MS-Bench reveals
+
+- **Overlap damages both words and attribution.** High overlap increases lexical error by 27.2–38.6 percentage points and attribution error by 4.2–19.1 points across the seven systems in the condition analysis.
+- **Similar voices are exchanged even without overlap.** Pairwise similarity correlates with directional speaker confusion for every evaluated system (`ρ = 0.248–0.323`, `p < 0.05`).
+- **Poor acoustics primarily affect recognition.** Acoustic difficulty correlates with lexical error in all systems, while attribution effects are weak and inconsistent.
+- **Speaker transitions mainly affect “who.”** Attribution error rises by 1.51–4.17 points near non-overlapping turn boundaries.
+- **Speaker-number effects require controls.** The reported association is conditioned on dataset identity and overlap; the raw pooled `P0 → P3` trend is not treated as causal.
+
+Explore the per-system plots and methodology notes in the [diagnostics section](https://aslp-lab.github.io/MS-Bench/#diagnostics).
+
+## Repository layout
 
 ```text
 MS-Bench/
-├── index.html          # project homepage
-├── demo.html           # interactive result and condition explorer
-└── assets/
-    ├── app.js          # shared page interactions and result data
-    ├── style.css       # responsive visual system
-    ├── mark.svg        # project mark
-    └── audio/          # compressed demo excerpts (≤ 5 min each)
+├── README.md
+├── benchmark/
+│   └── metadata.jsonl            # public recording-level metadata
+├── demo-data/
+│   ├── summary.json
+│   ├── sample_metadata.json
+│   ├── leaderboard.json
+│   ├── condition_results.json
+│   └── representative_examples.json
+├── assets/
+│   ├── audio/                    # curated demo excerpts only
+│   ├── app.js
+│   ├── style.css
+│   └── mark.svg
+├── index.html                    # GitHub Pages entry
+└── demo.html                     # interactive single-page demo
 ```
 
-To preview the site locally:
+Preview the site locally through HTTP so that the JSON data files can load:
 
 ```bash
-python -m http.server 8000
-# open http://localhost:8000
+python -m http.server 8000 --directory MS-Bench
+# open http://localhost:8000/
 ```
 
-## Citation
+## Release status
 
-If you find MS-Bench useful, please cite the paper. The final publication entry will replace this submitted-manuscript record when available.
+The website, public metadata schema, curated examples, reported aggregate results, and condition diagnostics are included in this repository. Full reference annotations, source-specific access instructions, adapter examples, and the unified scoring toolkit will be linked at benchmark release. Source-corpus licenses and redistribution terms continue to apply.
+
+## Citation
 
 ```bibtex
 @misc{he2026msbench,
@@ -120,4 +170,4 @@ If you find MS-Bench useful, please cite the paper. The final publication entry 
 
 ## Contact
 
-For questions about the benchmark or evaluation protocol, please open a GitHub issue.
+Please open a GitHub issue for questions about benchmark access, output conversion, or the evaluation protocol.

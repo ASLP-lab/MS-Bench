@@ -1,0 +1,45 @@
+{
+  "systems": ["MOSS-Pro", "MOSS", "Qwen-Omni", "VibeVoice", "pyannote+Qwen", "Doubao", "SoulX"],
+  "overlap": {
+    "title": "Overlap damages both content and attribution.",
+    "description": "Within-recording penalty for utterances with at least 50% overlap exposure versus non-overlapped utterances.",
+    "series": [
+      {"label": "Δ lexical error", "unit": "pp", "values": [27.3, 27.3, 28.7, 34.3, 38.6, 27.2, 35.2]},
+      {"label": "Δ attribution error", "unit": "pp", "values": [10.6, 10.9, 10.5, 4.2, 19.1, 6.3, 8.7]}
+    ],
+    "note": "All reported overlap penalties are statistically significant."
+  },
+  "similarity": {
+    "title": "Similar voices are consistently confused.",
+    "description": "Spearman correlation between pairwise voice similarity and directional speaker confusion on non-overlapping speech.",
+    "series": [
+      {"label": "Spearman ρ", "unit": "ρ", "values": [0.311, 0.312, 0.323, 0.297, 0.248, 0.268, 0.319]}
+    ],
+    "note": "All seven correlations are positive and significant (p < 0.05)."
+  },
+  "acoustic": {
+    "title": "Poor acoustics primarily affect lexical recognition.",
+    "description": "Correlation with acoustic difficulty on utterances away from overlap and speaker-turn boundaries.",
+    "series": [
+      {"label": "ρ(dN, lexical error)", "unit": "ρ", "values": [0.392, 0.480, 0.364, 0.569, 0.392, 0.304, 0.181]},
+      {"label": "ρ(dN, attribution error)", "unit": "ρ", "values": [-0.060, -0.121, -0.063, 0.081, 0.030, -0.057, -0.174]}
+    ],
+    "note": "Lexical correlations are significant for all systems; attribution effects are weak and inconsistent."
+  },
+  "turn": {
+    "title": "Speaker transitions mainly disrupt who spoke.",
+    "description": "Attribution penalty near non-overlapping speaker switches using a ±0.5 s boundary neighborhood.",
+    "series": [
+      {"label": "Δ attribution error", "unit": "pp", "values": [2.49, 2.48, 2.74, 3.07, 3.43, 4.17, 1.51]}
+    ],
+    "note": "The attribution penalty is significant for every evaluated system; lexical penalties are not consistently significant."
+  },
+  "speaker": {
+    "title": "More speakers are associated with attribution difficulty.",
+    "description": "Speaker-count association after controlling for dataset identity and overlap; P3 is excluded to reduce source-specific bias.",
+    "series": [
+      {"label": "ρ(attr | dataset, overlap)", "unit": "ρ", "values": [0.403, 0.350, 0.257, 0.054, 0.438, 0.281, null]}
+    ],
+    "note": "Controlled analysis—not a raw P0→P3 trend. SoulX is excluded because its 5-minute units do not always contain every recording-level speaker."
+  }
+}

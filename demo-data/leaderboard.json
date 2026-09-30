@@ -1,0 +1,10 @@
+[
+  {"system":"MOSS-Transcribe-Diarize-Pro","short":"MOSS-Pro","der":10.96,"cpwer":21.95,"tcpwer":22.81,"wer":22.49,"excluded":15,"soft_degradation":2},
+  {"system":"MOSS-Transcribe-Diarize","short":"MOSS","der":12.74,"cpwer":24.94,"tcpwer":26.22,"wer":25.02,"excluded":0,"soft_degradation":2},
+  {"system":"DiaScriber","short":"DiaScriber","der":19.79,"cpwer":30.36,"tcpwer":33.20,"wer":26.42,"excluded":27,"soft_degradation":1},
+  {"system":"Qwen3.8-Omni-Flash","short":"Qwen-Omni","der":17.97,"cpwer":29.43,"tcpwer":32.59,"wer":27.86,"excluded":5,"soft_degradation":2},
+  {"system":"VibeVoice-ASR","short":"VibeVoice","der":20.19,"cpwer":43.41,"tcpwer":44.76,"wer":33.11,"excluded":10,"soft_degradation":12},
+  {"system":"pyannote + Qwen3-ASR","short":"pyannote+Qwen","der":17.35,"cpwer":43.25,"tcpwer":46.54,"wer":34.96,"excluded":0,"soft_degradation":1},
+  {"system":"Doubao-ASR 2.0","short":"Doubao","der":39.52,"cpwer":55.37,"tcpwer":62.07,"wer":38.20,"excluded":4,"soft_degradation":26},
+  {"system":"SoulX-Transcriber","short":"SoulX","der":19.42,"cpwer":49.16,"tcpwer":52.60,"wer":39.96,"excluded":8,"soft_degradation":30}
+]

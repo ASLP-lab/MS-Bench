@@ -1,0 +1,1982 @@
+[
+  {
+    "recording_id": "aishell4::M_R003S01C01",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2282.21,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.055924,
+    "speaker_similarity_max": 0.620441,
+    "speaker_switch_q25": 0.023567,
+    "noise_difficulty": 0.8968705547652915
+  },
+  {
+    "recording_id": "aishell4::M_R003S05C01",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2341.215,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.063975,
+    "speaker_similarity_max": 0.556259,
+    "speaker_switch_q25": 0.036311,
+    "noise_difficulty": 0.8613086770981508
+  },
+  {
+    "recording_id": "chime6::S01",
+    "source_dataset": "chime6",
+    "language": "English",
+    "scenario": "dinner party",
+    "recording_device": "far-field microphone array (U01, channel 1)",
+    "duration_seconds": 9544.141,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.284968,
+    "speaker_similarity_max": 0.588607,
+    "speaker_switch_q25": 0.12,
+    "noise_difficulty": 0.9793741109530584
+  },
+  {
+    "recording_id": "dipco_eval_U01_CH1::S06",
+    "source_dataset": "dipco_eval_U01_CH1",
+    "language": "English",
+    "scenario": "dinner party",
+    "recording_device": "7-microphone far-field array (U01, channel 1)",
+    "duration_seconds": 1204.562,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.269426,
+    "speaker_similarity_max": 0.767128,
+    "speaker_switch_q25": 0.13,
+    "noise_difficulty": 0.8879800853485064
+  },
+  {
+    "recording_id": "aishell4::S_R004S04C01",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2299.396,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.000344,
+    "speaker_similarity_max": 0.584717,
+    "speaker_switch_q25": 0.034375,
+    "noise_difficulty": 0.5668563300142248
+  },
+  {
+    "recording_id": "aishell4::M_R003S02C01",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2321.259,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.090435,
+    "speaker_similarity_max": 0.543482,
+    "speaker_switch_q25": 0.103273,
+    "noise_difficulty": 0.8965149359886202
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32054",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 360.318,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.318362,
+    "speaker_similarity_max": 0.753819,
+    "speaker_switch_q25": 0.04,
+    "noise_difficulty": 0.9054054054054054
+  },
+  {
+    "recording_id": "aishell4::S_R003S04C01",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2393.927,
+    "conditions": {
+      "P": "P2",
+      "O": "O2",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.130942,
+    "speaker_similarity_max": 0.546792,
+    "speaker_switch_q25": 0.027786,
+    "noise_difficulty": 0.577524893314367
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part003_92c4be65",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "podcast",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 260.74,
+    "conditions": {
+      "P": "P1",
+      "O": "O1",
+      "S": "S3",
+      "T": "T3",
+      "N": "N0"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.011065,
+    "speaker_similarity_max": 0.937313,
+    "speaker_switch_q25": 0.02175,
+    "noise_difficulty": 0.035206258890469355
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32047",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 381.763,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.207663,
+    "speaker_similarity_max": 0.807671,
+    "speaker_switch_q25": 0.0425,
+    "noise_difficulty": 0.8453058321479374
+  },
+  {
+    "recording_id": "aishell4::L_R003S04C02",
+    "source_dataset": "aishell4",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel circular microphone array",
+    "duration_seconds": 2324.984,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.024979,
+    "speaker_similarity_max": 0.641654,
+    "speaker_switch_q25": 0.131492,
+    "noise_difficulty": 0.8367709815078236
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32052",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 360.628,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S3",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.406915,
+    "speaker_similarity_max": 0.709479,
+    "speaker_switch_q25": 0.05,
+    "noise_difficulty": 0.9125177809388336
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000049_part018",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 296.635,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 8,
+    "overlap_ratio": 7.4e-05,
+    "speaker_similarity_max": 0.815854,
+    "speaker_switch_q25": 0.082,
+    "noise_difficulty": 0.9740398293029872
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32110",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 478.703,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 7,
+    "overlap_ratio": 0.618089,
+    "speaker_similarity_max": 0.649862,
+    "speaker_switch_q25": 0.0475,
+    "noise_difficulty": 0.8556187766714083
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32190",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 359.333,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.251208,
+    "speaker_similarity_max": 0.675343,
+    "speaker_switch_q25": 0.03,
+    "noise_difficulty": 0.6952347083926032
+  },
+  {
+    "recording_id": "dipco_eval_U01_CH1::S03",
+    "source_dataset": "dipco_eval_U01_CH1",
+    "language": "English",
+    "scenario": "dinner party",
+    "recording_device": "7-microphone far-field array (U01, channel 1)",
+    "duration_seconds": 2796.5,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.31921,
+    "speaker_similarity_max": 0.737383,
+    "speaker_switch_q25": 0.18,
+    "noise_difficulty": 0.8943812233285917
+  },
+  {
+    "recording_id": "dipco_eval_U01_CH1::S07",
+    "source_dataset": "dipco_eval_U01_CH1",
+    "language": "English",
+    "scenario": "dinner party",
+    "recording_device": "7-microphone far-field array (U01, channel 1)",
+    "duration_seconds": 1575.25,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.325225,
+    "speaker_similarity_max": 0.70989,
+    "speaker_switch_q25": 0.165,
+    "noise_difficulty": 0.8993598862019915
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32106",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 478.338,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 7,
+    "overlap_ratio": 0.369348,
+    "speaker_similarity_max": 0.625121,
+    "speaker_switch_q25": 0.04075,
+    "noise_difficulty": 0.8214793741109531
+  },
+  {
+    "recording_id": "alimeeting_far::R8005_M8007",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1869.669,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.468388,
+    "speaker_similarity_max": 0.534298,
+    "speaker_switch_q25": 0.075,
+    "noise_difficulty": 0.8342816500711238
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000028_part018",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 373.77,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 5.9e-05,
+    "speaker_similarity_max": 0.85474,
+    "speaker_switch_q25": 0.1085,
+    "noise_difficulty": 0.9975106685633002
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32041",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 363.803,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.43703,
+    "speaker_similarity_max": 0.65551,
+    "speaker_switch_q25": 0.065,
+    "noise_difficulty": 0.8975817923186344
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32093",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 356.268,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.489092,
+    "speaker_similarity_max": 0.658749,
+    "speaker_switch_q25": 0.0825,
+    "noise_difficulty": 0.9438122332859175
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32092",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 358.478,
+    "conditions": {
+      "P": "P2",
+      "O": "O2",
+      "S": "S3",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.13583,
+    "speaker_similarity_max": 0.760775,
+    "speaker_switch_q25": 0.0425,
+    "noise_difficulty": 0.8211237553342816
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32050",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 360.583,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.416024,
+    "speaker_similarity_max": 0.681234,
+    "speaker_switch_q25": 0.085,
+    "noise_difficulty": 0.8982930298719772
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32048",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 358.468,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.340363,
+    "speaker_similarity_max": 0.727398,
+    "speaker_switch_q25": 0.1025,
+    "noise_difficulty": 0.8790896159317212
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260511下午-4",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1510.99,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.358798,
+    "speaker_similarity_max": 0.6803,
+    "speaker_switch_q25": 0.14,
+    "noise_difficulty": 0.8691322901849218
+  },
+  {
+    "recording_id": "ami_array1-01::EN2002b",
+    "source_dataset": "ami_array1-01",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "tabletop microphone array (Array1, channel 01)",
+    "duration_seconds": 1786.848,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.251526,
+    "speaker_similarity_max": 0.736808,
+    "speaker_switch_q25": 0.27125,
+    "noise_difficulty": 0.8225462304409673
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260407-5",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1330.605,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.534663,
+    "speaker_similarity_max": 0.495323,
+    "speaker_switch_q25": 0.03,
+    "noise_difficulty": 0.8385490753911806
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260512-4",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1639.877,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.510306,
+    "speaker_similarity_max": 0.616616,
+    "speaker_switch_q25": 0.07,
+    "noise_difficulty": 0.7165718349928876
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32086",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 358.023,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.321348,
+    "speaker_similarity_max": 0.661143,
+    "speaker_switch_q25": 0.08,
+    "noise_difficulty": 0.9171408250355619
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260512-5",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1431.379,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 7,
+    "overlap_ratio": 0.423432,
+    "speaker_similarity_max": 0.633645,
+    "speaker_switch_q25": 0.09,
+    "noise_difficulty": 0.7411095305832147
+  },
+  {
+    "recording_id": "SmartGlassesChallenge::meet_0045",
+    "source_dataset": "SmartGlassesChallenge",
+    "language": "Chinese",
+    "scenario": "smart glasses",
+    "recording_device": "4-channel smart-glasses microphone array",
+    "duration_seconds": 1061.525,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 6,
+    "overlap_ratio": 0.315582,
+    "speaker_similarity_max": 0.623603,
+    "speaker_switch_q25": 0.07,
+    "noise_difficulty": 0.6660739687055477
+  },
+  {
+    "recording_id": "SmartGlassesChallenge::meet_0040",
+    "source_dataset": "SmartGlassesChallenge",
+    "language": "Chinese",
+    "scenario": "smart glasses",
+    "recording_device": "4-channel smart-glasses microphone array",
+    "duration_seconds": 884.242,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 7,
+    "overlap_ratio": 0.288123,
+    "speaker_similarity_max": 0.648607,
+    "speaker_switch_q25": 0.08,
+    "noise_difficulty": 0.7347083926031295
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260407-8",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1218.678,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.724144,
+    "speaker_similarity_max": 0.56251,
+    "speaker_switch_q25": 0.0425,
+    "noise_difficulty": 0.8221906116642959
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32088",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 358.348,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.24869,
+    "speaker_similarity_max": 0.665734,
+    "speaker_switch_q25": 0.08,
+    "noise_difficulty": 0.8769559032716927
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000102_part014",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "English",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 365.03,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S3",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 14,
+    "overlap_ratio": 0.009068,
+    "speaker_similarity_max": 0.676018,
+    "speaker_switch_q25": 0.0925,
+    "noise_difficulty": 0.6703413940256046
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260417-4",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1210.028,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.459976,
+    "speaker_similarity_max": 0.688807,
+    "speaker_switch_q25": 0.085,
+    "noise_difficulty": 0.8421052631578947
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32081",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 357.873,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.276637,
+    "speaker_similarity_max": 0.678797,
+    "speaker_switch_q25": 0.1,
+    "noise_difficulty": 0.8207681365576103
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260511下午-2",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1652.646,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.598574,
+    "speaker_similarity_max": 0.566119,
+    "speaker_switch_q25": 0.115,
+    "noise_difficulty": 0.6653627311522048
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::外国人__20260507-6",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1209.07,
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.249356,
+    "speaker_similarity_max": 0.705574,
+    "speaker_switch_q25": 0.11,
+    "noise_difficulty": 0.7190611664295875
+  },
+  {
+    "recording_id": "ami_array1-01::EN2002d",
+    "source_dataset": "ami_array1-01",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "tabletop microphone array (Array1, channel 01)",
+    "duration_seconds": 2209.899,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S2",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.307433,
+    "speaker_similarity_max": 0.601213,
+    "speaker_switch_q25": 0.2355,
+    "noise_difficulty": 0.8147226173541964
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260407-7",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1768.232,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S2",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.604922,
+    "speaker_similarity_max": 0.522156,
+    "speaker_switch_q25": 0.04,
+    "noise_difficulty": 0.7514224751066856
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::外国人__20260423-1",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1213.084,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.214722,
+    "speaker_similarity_max": 0.76901,
+    "speaker_switch_q25": 0.105,
+    "noise_difficulty": 0.7965860597439545
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000046_part003",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 390.0,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 9,
+    "overlap_ratio": 9.2e-05,
+    "speaker_similarity_max": 0.818589,
+    "speaker_switch_q25": 0.309,
+    "noise_difficulty": 0.9861308677098151
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32089",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 358.133,
+    "conditions": {
+      "P": "P2",
+      "O": "O2",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.164526,
+    "speaker_similarity_max": 0.681005,
+    "speaker_switch_q25": 0.0875,
+    "noise_difficulty": 0.8200568990042674
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part004_e12074b4",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "podcast",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 373.03,
+    "conditions": {
+      "P": "P0",
+      "O": "O1",
+      "S": "S3",
+      "T": "T3",
+      "N": "N0"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.00857,
+    "speaker_similarity_max": 0.909934,
+    "speaker_switch_q25": 0.02625,
+    "noise_difficulty": 0.10668563300142253
+  },
+  {
+    "recording_id": "alimeeting_far::R8005_M8009",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1776.99,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.636362,
+    "speaker_similarity_max": 0.412872,
+    "speaker_switch_q25": 0.1275,
+    "noise_difficulty": 0.817923186344239
+  },
+  {
+    "recording_id": "alimeeting_far::R8004_M8006",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1965.215,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.588991,
+    "speaker_similarity_max": 0.465532,
+    "speaker_switch_q25": 0.1475,
+    "noise_difficulty": 0.8328591749644381
+  },
+  {
+    "recording_id": "alimeeting_far::R8005_M8008",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1960.822,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.24536,
+    "speaker_similarity_max": 0.356759,
+    "speaker_switch_q25": 0.1,
+    "noise_difficulty": 0.8051209103840683
+  },
+  {
+    "recording_id": "notsofar_1::MTG_32046",
+    "source_dataset": "notsofar_1",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "commercial far-field single-channel meeting device",
+    "duration_seconds": 359.553,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.041764,
+    "speaker_similarity_max": 0.72994,
+    "speaker_switch_q25": 0.115,
+    "noise_difficulty": 0.7514224751066856
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::外国人__20260418-4",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1270.239,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S3",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.221199,
+    "speaker_similarity_max": 0.694438,
+    "speaker_switch_q25": 0.09,
+    "noise_difficulty": 0.7816500711237553
+  },
+  {
+    "recording_id": "ami_array1-01::IS1009c",
+    "source_dataset": "ami_array1-01",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "tabletop microphone array (Array1, channel 01)",
+    "duration_seconds": 1820.843,
+    "conditions": {
+      "P": "P1",
+      "O": "O1",
+      "S": "S3",
+      "T": "T1",
+      "N": "N2"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.05517,
+    "speaker_similarity_max": 0.665979,
+    "speaker_switch_q25": 0.23575,
+    "noise_difficulty": 0.6034850640113798
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000040_part015",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 302.13,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 9,
+    "overlap_ratio": 0.000649,
+    "speaker_similarity_max": 0.733695,
+    "speaker_switch_q25": 0.2225,
+    "noise_difficulty": 0.9921763869132291
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260407-2",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1306.112,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.538261,
+    "speaker_similarity_max": 0.552732,
+    "speaker_switch_q25": 0.09,
+    "noise_difficulty": 0.8253911806543386
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-013-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 665.741,
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.141466,
+    "speaker_similarity_max": 0.492309,
+    "speaker_switch_q25": 0.075,
+    "noise_difficulty": 0.9377667140825036
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__260411-3",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1360.681,
+    "conditions": {
+      "P": "P1",
+      "O": "O4",
+      "S": "S1",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.64958,
+    "speaker_similarity_max": 0.482715,
+    "speaker_switch_q25": 0.035,
+    "noise_difficulty": 0.75
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-017-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 643.186,
+    "conditions": {
+      "P": "P0",
+      "O": "O1",
+      "S": "S3",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.03394,
+    "speaker_similarity_max": 0.726424,
+    "speaker_switch_q25": 0.265,
+    "noise_difficulty": 0.903271692745377
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000052_part015",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 329.43,
+    "conditions": {
+      "P": "P3",
+      "O": "O0",
+      "S": "S3",
+      "T": "T0",
+      "N": "N3"
+    },
+    "num_speakers": 9,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.790611,
+    "speaker_switch_q25": 0.86375,
+    "noise_difficulty": 0.9960881934566145
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260511下午-3",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1554.077,
+    "conditions": {
+      "P": "P2",
+      "O": "O4",
+      "S": "S1",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.474858,
+    "speaker_similarity_max": 0.408268,
+    "speaker_switch_q25": 0.105,
+    "noise_difficulty": 0.713371266002845
+  },
+  {
+    "recording_id": "alimeeting_far::R8004_M8005",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 2093.014,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.278824,
+    "speaker_similarity_max": 0.474264,
+    "speaker_switch_q25": 0.14,
+    "noise_difficulty": 0.8474395448079659
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part019_ceba9ecb",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 390.0,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S3",
+      "T": "T0",
+      "N": "N3"
+    },
+    "num_speakers": 9,
+    "overlap_ratio": 3.1e-05,
+    "speaker_similarity_max": 0.754624,
+    "speaker_switch_q25": 1.9715,
+    "noise_difficulty": 0.9864864864864865
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part007_1ef423a7",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 390.0,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S2",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 11,
+    "overlap_ratio": 0.000677,
+    "speaker_similarity_max": 0.610112,
+    "speaker_switch_q25": 0.197,
+    "noise_difficulty": 0.870199146514936
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part012_ceba9ecb",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 368.82,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S3",
+      "T": "T0",
+      "N": "N3"
+    },
+    "num_speakers": 10,
+    "overlap_ratio": 0.002031,
+    "speaker_similarity_max": 0.675281,
+    "speaker_switch_q25": 0.50675,
+    "noise_difficulty": 0.8168563300142248
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part005_ad51a3ea",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "TV",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 358.26,
+    "conditions": {
+      "P": "P3",
+      "O": "O1",
+      "S": "S1",
+      "T": "T3",
+      "N": "N0"
+    },
+    "num_speakers": 9,
+    "overlap_ratio": 0.011695,
+    "speaker_similarity_max": 0.3537,
+    "speaker_switch_q25": 0.051,
+    "noise_difficulty": 0.22190611664295878
+  },
+  {
+    "recording_id": "alimeeting_far::R8008_M8015",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1896.185,
+    "conditions": {
+      "P": "P1",
+      "O": "O2",
+      "S": "S2",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.116036,
+    "speaker_similarity_max": 0.541496,
+    "speaker_switch_q25": 0.2175,
+    "noise_difficulty": 0.9679943100995733
+  },
+  {
+    "recording_id": "alimeeting_far::R8006_M8012",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1832.183,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S1",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.282568,
+    "speaker_similarity_max": 0.428437,
+    "speaker_switch_q25": 0.17,
+    "noise_difficulty": 0.9118065433854907
+  },
+  {
+    "recording_id": "ami_array1-01::ES2014d",
+    "source_dataset": "ami_array1-01",
+    "language": "English",
+    "scenario": "meeting",
+    "recording_device": "tabletop microphone array (Array1, channel 01)",
+    "duration_seconds": 2911.36,
+    "conditions": {
+      "P": "P1",
+      "O": "O2",
+      "S": "S2",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.115678,
+    "speaker_similarity_max": 0.550493,
+    "speaker_switch_q25": 0.2895,
+    "noise_difficulty": 0.8531294452347084
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000093_part008",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 389.225,
+    "conditions": {
+      "P": "P3",
+      "O": "O0",
+      "S": "S3",
+      "T": "T0",
+      "N": "N3"
+    },
+    "num_speakers": 12,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.860939,
+    "speaker_switch_q25": 0.7575,
+    "noise_difficulty": 0.7606685633001422
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260512-3",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1549.42,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.26249,
+    "speaker_similarity_max": 0.613592,
+    "speaker_switch_q25": 0.11,
+    "noise_difficulty": 0.7435988620199147
+  },
+  {
+    "recording_id": "BenchFilms_ZH::000056_part012",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "English",
+    "scenario": "film",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 390.0,
+    "conditions": {
+      "P": "P2",
+      "O": "O1",
+      "S": "S3",
+      "T": "T0",
+      "N": "N3"
+    },
+    "num_speakers": 5,
+    "overlap_ratio": 0.006008,
+    "speaker_similarity_max": 0.659744,
+    "speaker_switch_q25": 0.454,
+    "noise_difficulty": 0.8229018492176388
+  },
+  {
+    "recording_id": "Real-TSE-Challenge::中国人__20260513上午-5",
+    "source_dataset": "Real-TSE-Challenge",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "high-quality far-field microphone (H1)",
+    "duration_seconds": 1564.209,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.292312,
+    "speaker_similarity_max": 0.542305,
+    "speaker_switch_q25": 0.08,
+    "noise_difficulty": 0.7190611664295875
+  },
+  {
+    "recording_id": "alimeeting_far::R8002_M8002",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 2066.52,
+    "conditions": {
+      "P": "P1",
+      "O": "O3",
+      "S": "S1",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 4,
+    "overlap_ratio": 0.232029,
+    "speaker_similarity_max": 0.40849,
+    "speaker_switch_q25": 0.14,
+    "noise_difficulty": 0.6529160739687055
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-04-387",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1862.65,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N1"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.769313,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.4071834992887624
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-11-193",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 904.7,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S1",
+      "T": "T3",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.340715,
+    "speaker_switch_q25": 0.058,
+    "noise_difficulty": 0.8776671408250356
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-123",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1861.825,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N1"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.889641,
+    "speaker_switch_q25": 0.0345,
+    "noise_difficulty": 0.3051209103840683
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-018-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 701.259,
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.140887,
+    "speaker_similarity_max": 0.501326,
+    "speaker_switch_q25": 0.15,
+    "noise_difficulty": 0.8918918918918919
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Japanese__0435_001_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_2",
+    "language": "Japanese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 925.329,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.576315,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.6283783783783784
+  },
+  {
+    "recording_id": "BenchFilms_ZH::part007_46ed864a",
+    "source_dataset": "BenchFilms_ZH",
+    "language": "Chinese",
+    "scenario": "TV",
+    "recording_device": "media source soundtrack",
+    "duration_seconds": 375.87,
+    "conditions": {
+      "P": "P3",
+      "O": "O0",
+      "S": "S3",
+      "T": "T0",
+      "N": "N0"
+    },
+    "num_speakers": 10,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.696247,
+    "speaker_switch_q25": 0.6535,
+    "noise_difficulty": 0.07361308677098144
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Portuguese__2187_003_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_1",
+    "language": "Portuguese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 934.243,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.803806,
+    "speaker_switch_q25": 0.019052,
+    "noise_difficulty": 0.5864153627311522
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-001-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 403.293,
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.132846,
+    "speaker_similarity_max": 0.373405,
+    "speaker_switch_q25": 0.085,
+    "noise_difficulty": 0.8794452347083926
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Thai__0274_006_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_2",
+    "language": "Thai",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1272.464,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.723057,
+    "speaker_switch_q25": 0.019978,
+    "noise_difficulty": 0.5551209103840683
+  },
+  {
+    "recording_id": "SmoothConv_DuplexConv::1767604747_yZ95W3sEa9_seg91_92_93_active",
+    "source_dataset": "SmoothConv_DuplexConv",
+    "language": "Chinese",
+    "scenario": "live streaming",
+    "recording_device": "multi-channel digital audio capture",
+    "duration_seconds": 108.368,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S0",
+      "T": "T0",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.001922,
+    "speaker_switch_q25": 1.224946,
+    "noise_difficulty": 0.6557610241820768
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Thai__0231_002_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_2",
+    "language": "Thai",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1362.544,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.693993,
+    "speaker_switch_q25": 0.031717,
+    "noise_difficulty": 0.5536984352773826
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Italian__0238_003_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_2",
+    "language": "Italian",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1186.704,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T2",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.901149,
+    "speaker_switch_q25": 0.089401,
+    "noise_difficulty": 0.531294452347084
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval2-001-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 653.645,
+    "conditions": {
+      "P": "P0",
+      "O": "O1",
+      "S": "S0",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.064512,
+    "speaker_similarity_max": 0.166935,
+    "speaker_switch_q25": 0.1,
+    "noise_difficulty": 0.9285206258890469
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_1",
+    "language": "English",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1875.319,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N0"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.751324,
+    "speaker_switch_q25": 0.039717,
+    "noise_difficulty": 0.05049786628733999
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Portuguese__2251_036_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_2",
+    "language": "Portuguese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 919.418,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.522627,
+    "speaker_switch_q25": 0.010526,
+    "noise_difficulty": 0.5953058321479374
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-010-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 735.368,
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S1",
+      "T": "T2",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.116173,
+    "speaker_similarity_max": 0.325747,
+    "speaker_switch_q25": 0.11,
+    "noise_difficulty": 0.9160739687055477
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Spanish__4015_002_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_1",
+    "language": "Spanish",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1809.412,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N1"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.869611,
+    "speaker_switch_q25": 0.033639,
+    "noise_difficulty": 0.36664295874822195
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-11-390",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 927.52,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S2",
+      "T": "T3",
+      "N": "N1"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.548244,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.379800853485064
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Portuguese__2094_015_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_1",
+    "language": "Portuguese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 922.394,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S3",
+      "T": "T3",
+      "N": "N0"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.673403,
+    "speaker_switch_q25": 0.047368,
+    "noise_difficulty": 0.10064011379800852
+  },
+  {
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Japanese__0236_003_phone",
+    "source_dataset": "MLC-SLM_Workshop-Evaluation_Set_1",
+    "language": "Japanese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 989.989,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.643047,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.5135135135135136
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-65",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1886.6,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S0",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.252799,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.6920341394025604
+  },
+  {
+    "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-8",
+    "source_dataset": "MagicData-RAMC_test",
+    "language": "Chinese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "duration_seconds": 1867.7,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S0",
+      "T": "T3",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.188387,
+    "speaker_switch_q25": 0.0,
+    "noise_difficulty": 0.6543385490753912
+  },
+  {
+    "recording_id": "SmoothConv_DuplexConv::1767678865_WjqUr8QfiB_seg7_active",
+    "source_dataset": "SmoothConv_DuplexConv",
+    "language": "Chinese",
+    "scenario": "live streaming",
+    "recording_device": "multi-channel digital audio capture",
+    "duration_seconds": 82.816,
+    "conditions": {
+      "P": "P1",
+      "O": "O0",
+      "S": "S0",
+      "T": "T0",
+      "N": "N2"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.236442,
+    "speaker_switch_q25": 2.425168,
+    "noise_difficulty": 0.7165718349928876
+  },
+  {
+    "recording_id": "aishell5_DX01C01::eval1-012-DX01C01",
+    "source_dataset": "aishell5_DX01C01",
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "duration_seconds": 747.116,
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S0",
+      "T": "T1",
+      "N": "N3"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.165969,
+    "speaker_similarity_max": 0.2989,
+    "speaker_switch_q25": 0.1935,
+    "noise_difficulty": 0.8886913229018492
+  },
+  {
+    "recording_id": "alimeeting_far::R8009_M8026",
+    "source_dataset": "alimeeting_far",
+    "language": "Chinese",
+    "scenario": "meeting",
+    "recording_device": "8-channel far-field microphone array",
+    "duration_seconds": 1983.113,
+    "conditions": {
+      "P": "P0",
+      "O": "O1",
+      "S": "S0",
+      "T": "T1",
+      "N": "N2"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.048079,
+    "speaker_similarity_max": 0.151543,
+    "speaker_switch_q25": 0.16,
+    "noise_difficulty": 0.6041963015647226
+  },
+  {
+    "recording_id": "SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active",
+    "source_dataset": "SmoothConv_DuplexConv",
+    "language": "Chinese",
+    "scenario": "education",
+    "recording_device": "multi-channel digital audio capture",
+    "duration_seconds": 90.768,
+    "conditions": {
+      "P": "P1",
+      "O": "O0",
+      "S": "S0",
+      "T": "T0",
+      "N": "N0"
+    },
+    "num_speakers": 3,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.203782,
+    "speaker_switch_q25": 0.50364,
+    "noise_difficulty": 0.24110953058321472
+  },
+  {
+    "recording_id": "SmoothConv_DuplexConv::1766192821_kwlU9DyXSt_seg38_active",
+    "source_dataset": "SmoothConv_DuplexConv",
+    "language": "Chinese",
+    "scenario": "education",
+    "recording_device": "multi-channel digital audio capture",
+    "duration_seconds": 111.072,
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S0",
+      "T": "T0",
+      "N": "N1"
+    },
+    "num_speakers": 2,
+    "overlap_ratio": 0.0,
+    "speaker_similarity_max": 0.058066,
+    "speaker_switch_q25": 0.663487,
+    "noise_difficulty": 0.3918918918918919
+  }
+]
