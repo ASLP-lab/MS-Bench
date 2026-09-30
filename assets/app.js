@@ -298,15 +298,7 @@ function setupExplorer() {
     });
     renderExplorer();
   });
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) {
-        loadMetadata();
-        observer.disconnect();
-      }
-    }, { rootMargin: "250px" });
-    observer.observe(explorer);
-  } else loadMetadata();
+  loadMetadata();
 }
 
 function setupInteractions() {
