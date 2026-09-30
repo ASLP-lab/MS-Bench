@@ -13,7 +13,7 @@ ASLP@NPU, Northwestern Polytechnical University
 
 \* Equal contribution · † Corresponding author
 
-[![Demo](https://img.shields.io/badge/Interactive_Demo-explore-EA6A47?style=flat-square)](https://aslp-lab.github.io/MS-Bench/)
+[![Demo](https://img.shields.io/badge/Interactive_Demo-explore-2563EB?style=flat-square)](https://aslp-lab.github.io/MS-Bench/demo.html?v=20260930)
 [![Metadata](https://img.shields.io/badge/Benchmark_Metadata-99_recordings-193C35?style=flat-square)](benchmark/metadata.jsonl)
 [![Paper](https://img.shields.io/badge/Paper-submitted-BCA66A?style=flat-square)](#citation)
 
@@ -31,7 +31,7 @@ MS-Bench evaluates multi-speaker ASR systems under five recording-level conditio
 
 The benchmark is **primarily Chinese and English**, with additional Portuguese, Japanese, Thai, Italian, and Spanish samples. It spans meetings, conversations, podcasts, films and television, dinner parties, education, live streaming, in-vehicle interaction, and smart-glasses recordings.
 
-The [interactive demo](https://aslp-lab.github.io/MS-Bench/) lets you filter the complete metadata by condition profile, inspect distribution shifts, compare system accuracy and robustness, and listen to a small set of curated excerpts. It does not preload or expose all 99 recordings.
+The [interactive demo](https://aslp-lab.github.io/MS-Bench/demo.html?v=20260930) lets you filter the complete metadata by condition profile, inspect distribution shifts, compare system accuracy and robustness, and listen to a small set of curated excerpts. It does not preload or expose all 99 recordings.
 
 ## Condition space
 
@@ -122,7 +122,7 @@ python evaluation/score.py \
 - **Speaker transitions mainly affect “who.”** Attribution error rises by 1.51–4.17 points near non-overlapping turn boundaries.
 - **Speaker-number effects require controls.** The reported association is conditioned on dataset identity and overlap; the raw pooled `P0 → P3` trend is not treated as causal.
 
-Explore the per-system plots and methodology notes in the [diagnostics section](https://aslp-lab.github.io/MS-Bench/#diagnostics).
+Explore the per-system plots and methodology notes in the [diagnostics section](https://aslp-lab.github.io/MS-Bench/demo.html?v=20260930#diagnostics).
 
 ## Repository layout
 
