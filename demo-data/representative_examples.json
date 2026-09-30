@@ -3,15 +3,12 @@
     "slug": "meeting",
     "recording_id": "aishell4::M_R003S01C01",
     "title": "Rapid-turn meeting",
-    "eyebrow": "Meeting · Chinese",
-    "description": "A six-speaker far-field meeting with extremely short turn gaps and degraded acoustics.",
+    "description": "A six-speaker far-field meeting with short turn gaps and challenging room acoustics.",
     "audio": "assets/audio/meeting-aishell4.mp3",
-    "clip_duration": "05:00",
-    "source_dataset": "aishell4",
+    "clip_duration_seconds": 90.0,
     "language": "Chinese",
     "scenario": "meeting",
     "recording_device": "8-channel circular microphone array",
-    "duration_seconds": 2282.21,
     "conditions": {
       "P": "P2",
       "O": "O1",
@@ -29,8 +26,8 @@
     "timeline": [
       {
         "speaker": "001-M",
-        "start": 4.08,
-        "end": 6.65,
+        "start": 4.084,
+        "end": 6.655,
         "text": "零零幺幼儿教幼儿校长"
       },
       {
@@ -41,7 +38,7 @@
       },
       {
         "speaker": "003-F",
-        "start": 8.63,
+        "start": 8.625,
         "end": 9.95,
         "text": "零幺幺教师"
       },
@@ -53,45 +50,63 @@
       },
       {
         "speaker": "005-F",
-        "start": 11.52,
-        "end": 12.8,
+        "start": 11.518,
+        "end": 12.803,
         "text": "零幺三保安"
       },
       {
         "speaker": "006-F",
-        "start": 12.82,
-        "end": 14.45,
+        "start": 12.823,
+        "end": 14.448,
         "text": "零幺四招生"
       },
       {
         "speaker": "001-M",
-        "start": 14.5,
-        "end": 22.06,
+        "start": 14.503,
+        "end": 22.064,
         "text": "呃<sil>这次啊我要把大家伙儿都叫过来了，咱们把咱那个幼儿园啊咱那个重新再<sil>"
       },
       {
         "speaker": "001-M",
-        "start": 22.14,
-        "end": 34.86,
+        "start": 22.136,
+        "end": 34.862,
         "text": "咱开一次会因为毕竟<sil>呃<sil>就是。大半年也要呃快过去了，马上这个要呃，接近这个<sil>这个咱那个要放假啦"
       },
       {
         "speaker": "001-M",
-        "start": 34.93,
-        "end": 48.1,
+        "start": 34.934,
+        "end": 48.095,
         "text": "呃<sil>呃<sil>，我这边儿呢因为也是进入冬天了咱把大家伙儿叫过来看看来咱幼儿园还有什么呃安全啊，包括呃<sil>问题也包括。呃，各个方面的"
       },
       {
         "speaker": "001-M",
-        "start": 48.11,
-        "end": 56.78,
+        "start": 48.105,
+        "end": 56.776,
         "text": "呃<sil>，你们呃的幼儿老师们啊对孩子这块儿嘞学习，还有一些这个呃<sil>教育"
       },
       {
         "speaker": "001-M",
-        "start": 56.84,
-        "end": 60,
+        "start": 56.836,
+        "end": 66.562,
         "text": "咱嗯有没有要套探讨的，包括就是<sil>就是那个招生招生，这次就是<$>也是"
+      },
+      {
+        "speaker": "001-M",
+        "start": 66.577,
+        "end": 75.303,
+        "text": "呃，中途咱有的幼儿园以小学有转幼儿园啦，中途咱要招一批呃<sil>"
+      },
+      {
+        "speaker": "001-M",
+        "start": 75.308,
+        "end": 83.529,
+        "text": "招生这块儿也是工作嗯量也不大但是也需要招一部分，因为咱这班级人员都还没有没有满了"
+      },
+      {
+        "speaker": "001-M",
+        "start": 83.681,
+        "end": 90.0,
+        "text": "包括就是咱那个食堂这边儿，呃<sil>，包括呃孩子的一些健康情况"
       }
     ]
   },
@@ -99,15 +114,12 @@
     "slug": "education",
     "recording_id": "SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active",
     "title": "Full-duplex tutoring",
-    "eyebrow": "Education · Chinese",
-    "description": "A clean, low-overlap tutoring exchange that anchors the easier end of the condition space.",
+    "description": "A clean, low-overlap tutoring exchange at the easier end of the condition space.",
     "audio": "assets/audio/education-smoothconv.mp3",
-    "clip_duration": "01:31",
-    "source_dataset": "SmoothConv_DuplexConv",
+    "clip_duration_seconds": 90.0,
     "language": "Chinese",
     "scenario": "education",
     "recording_device": "multi-channel digital audio capture",
-    "duration_seconds": 90.768,
     "conditions": {
       "P": "P1",
       "O": "O0",
@@ -125,39 +137,141 @@
     "timeline": [
       {
         "speaker": "B1",
-        "start": 11.11,
-        "end": 13.72,
+        "start": 0.971,
+        "end": 2.257,
+        "text": "ACB 多少求了没有"
+      },
+      {
+        "speaker": "A1",
+        "start": 5.509,
+        "end": 8.869,
+        "text": "ACB 是<pause>九十减二分之<unclear>"
+      },
+      {
+        "speaker": "B1",
+        "start": 11.105,
+        "end": 13.719,
         "text": "那我这个 BCP 等于多<pause>这个 BCF 多少知不知道"
       },
       {
         "speaker": "A1",
-        "start": 17.78,
-        "end": 18.31,
+        "start": 17.779,
+        "end": 18.311,
         "text": "不知道"
       },
       {
         "speaker": "B1",
-        "start": 30.33,
-        "end": 33.02,
+        "start": 19.222,
+        "end": 25.375,
+        "text": "啧咱们刚强调过八字全等是平行啊平行啊<pause>用平行了没有"
+      },
+      {
+        "speaker": "B1",
+        "start": 30.326,
+        "end": 33.021,
         "text": "CF 咋来的 C 平行 AB 啊用了没有"
       },
       {
         "speaker": "B1",
-        "start": 44.51,
-        "end": 49.7,
-        "text": "我还拿这个题给你举例子这个平行<pause>只有平行它俩才相等才有了全等是不是"
+        "start": 38.792,
+        "end": 43.928,
+        "text": "不是刚强调几遍呢八字全等不仅有全等<pause>还有那个平行必须要用上"
       },
       {
         "speaker": "B1",
-        "start": 57.62,
-        "end": 58.01,
+        "start": 44.512,
+        "end": 49.701,
+        "text": "我还拿这个题给你举例子这个平行<pause>只有平行它俩才相等才有了全等是不是"
+      },
+      {
+        "speaker": "A1",
+        "start": 51.23,
+        "end": 51.787,
+        "text": "嗯"
+      },
+      {
+        "speaker": "B1",
+        "start": 52.526,
+        "end": 56.997,
+        "text": "啊<pause>我这个 CF 咋来的是过点 C 做 AB 的平行线呢"
+      },
+      {
+        "speaker": "B1",
+        "start": 57.616,
+        "end": 58.011,
         "text": "是不是"
       },
       {
         "speaker": "A1",
-        "start": 59.45,
+        "start": 59.455,
         "end": 59.84,
         "text": "嗯"
+      },
+      {
+        "speaker": "B1",
+        "start": 60.734,
+        "end": 62.294,
+        "text": "CF 平行 AB 有没有问题"
+      },
+      {
+        "speaker": "A1",
+        "start": 64.112,
+        "end": 64.52,
+        "text": "没有"
+      },
+      {
+        "speaker": "B1",
+        "start": 64.962,
+        "end": 66.047,
+        "text": "所以 BCF 等于谁"
+      },
+      {
+        "speaker": "A1",
+        "start": 70.392,
+        "end": 71.609,
+        "text": "ABC"
+      },
+      {
+        "speaker": "B1",
+        "start": 72.112,
+        "end": 72.867,
+        "text": "ABC 多少"
+      },
+      {
+        "speaker": "A1",
+        "start": 73.837,
+        "end": 76.304,
+        "text": "<pause>九十减二分之<unclear>"
+      },
+      {
+        "speaker": "B1",
+        "start": 76.48,
+        "end": 77.771,
+        "text": "那答案出来了没有没有"
+      },
+      {
+        "speaker": "A1",
+        "start": 82.595,
+        "end": 82.962,
+        "text": "哦"
+      },
+      {
+        "speaker": "A2",
+        "start": 83.023,
+        "end": 83.725,
+        "text": "爸爸"
+      },
+      {
+        "speaker": "B1",
+        "start": 84.121,
+        "end": 86.006,
+        "text": "啊这有什么难度吗这题我就奇怪了"
+      },
+      {
+        "speaker": "B1",
+        "start": 88.012,
+        "end": 89.781,
+        "text": "刚强调过了平行咋不用呢"
       }
     ]
   },
@@ -165,15 +279,12 @@
     "slug": "podcast",
     "recording_id": "BenchFilms_ZH::part004_e12074b4",
     "title": "Fast podcast exchange",
-    "eyebrow": "Podcast · Chinese",
     "description": "A two-speaker discussion with highly similar voices and rapid conversational turns.",
     "audio": "assets/audio/podcast-benchzh.mp3",
-    "clip_duration": "05:00",
-    "source_dataset": "BenchFilms_ZH",
+    "clip_duration_seconds": 90.0,
     "language": "Chinese",
     "scenario": "podcast",
     "recording_device": "media source soundtrack",
-    "duration_seconds": 373.03,
     "conditions": {
       "P": "P0",
       "O": "O1",
@@ -191,33 +302,99 @@
     "timeline": [
       {
         "speaker": "spk_01",
-        "start": 2.86,
-        "end": 6.58,
+        "start": 0.24,
+        "end": 2.946,
+        "text": "对，我觉得尤其是你看她们之间的关系也是。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 2.864,
+        "end": 6.577,
         "text": "我觉得女性之间的关系背后真正反映的是她们的自我。"
       },
       {
         "speaker": "spk_01",
+        "start": 6.64,
+        "end": 13.666,
+        "text": "因为你讲一个一群人的关系，她们肯定简单粗暴讲就是两个方面，就是我们相亲相爱的部分和我们起冲突的部分，对吧？"
+      },
+      {
+        "speaker": "spk_01",
         "start": 13.83,
-        "end": 21.26,
+        "end": 21.256,
         "text": "但你会发现在阳光姐妹淘里面，她们所有起冲突的部分，是与她的个人成长，她内心的那些东西高度相关的。"
       },
       {
         "speaker": "spk_01",
+        "start": 21.256,
+        "end": 23.706,
+        "text": "比如我是一个外省来的女孩，我很自卑。"
+      },
+      {
+        "speaker": "spk_01",
         "start": 23.75,
-        "end": 29.82,
+        "end": 29.821,
         "text": "比如我家里欠了钱，然后我希望有一天我可以出人头地，所以我想要去当什么什么样的人。"
       },
       {
         "speaker": "spk_01",
+        "start": 30.06,
+        "end": 36.666,
+        "text": "比如我自己背负什么样的创伤，所以我不爱讲话，我也不信任关系，这导致了我们种种之间的彼此的看不起。"
+      },
+      {
+        "speaker": "spk_01",
         "start": 36.7,
-        "end": 45.17,
+        "end": 45.168,
         "text": "它是和你的自卑，你的报复，你在家庭里面的爱的缺失，你所有求而不得，想要获得的那个东西高度相关的。"
       },
       {
         "speaker": "spk_01",
+        "start": 45.36,
+        "end": 54.167,
+        "text": "而你们的相亲相爱，也是因为你们看到了对方身上这一部分，你看到了他的自卑，因而你不再恨他了，不再觉得他是个穷酸的乡下人。"
+      },
+      {
+        "speaker": "spk_01",
         "start": 54.2,
-        "end": 58.99,
+        "end": 58.994,
         "text": "你看到了他承担的背后家庭的不容易，和他如何想要努力的做出改变。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 59.238,
+        "end": 61.766,
+        "text": "所以你想要愿意帮助他，成为他的同路人。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 61.98,
+        "end": 71.653,
+        "text": "人和人的关系的质感，不管是冲突还是相爱，都是因为我在你身上看见了真正的你，你也看见了真正的我，我们是有血有肉的人。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 71.81,
+        "end": 73.881,
+        "text": "所以才能够缔结深刻的连接。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 74.097,
+        "end": 79.665,
+        "text": "但是小时代里面所有的这种，不管是冲突还是相亲相爱，你都会觉得它和你是谁无关。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 79.836,
+        "end": 84.201,
+        "text": "它就是我决定选择你了，成为我的姐妹团的一员，就像皮卡丘一样。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 84.192,
+        "end": 90.0,
+        "text": "那不管你是谁，你就当个皮卡丘一样，我就要给你最好的精灵球，带你住大房子，给你漂亮衣服，出了困难告诉我呀，怎么不找我帮忙？"
       }
     ]
   },
@@ -225,15 +402,12 @@
     "slug": "film",
     "recording_id": "BenchFilms_ZH::000049_part018",
     "title": "Crowded film scene",
-    "eyebrow": "Film · Chinese",
-    "description": "Eight character voices, high pairwise similarity, and degraded media acoustics stress attribution.",
+    "description": "Eight character voices and degraded media acoustics create a difficult attribution case.",
     "audio": "assets/audio/film-benchfilms.mp3",
-    "clip_duration": "04:57",
-    "source_dataset": "BenchFilms_ZH",
+    "clip_duration_seconds": 90.0,
     "language": "Chinese",
     "scenario": "film",
     "recording_device": "media source soundtrack",
-    "duration_seconds": 296.635,
     "conditions": {
       "P": "P2",
       "O": "O1",
@@ -251,32 +425,62 @@
     "timeline": [
       {
         "speaker": "spk_01",
+        "start": 4.459,
+        "end": 5.654,
+        "text": "阿宁。"
+      },
+      {
+        "speaker": "spk_02",
+        "start": 8.681,
+        "end": 10.086,
+        "text": "嘿嘿。"
+      },
+      {
+        "speaker": "spk_01",
         "start": 13.01,
-        "end": 13.84,
+        "end": 13.835,
         "text": "阿宁。"
       },
       {
         "speaker": "spk_03",
-        "start": 26.17,
-        "end": 28.22,
+        "start": 20.965,
+        "end": 22.672,
+        "text": "啊，佳琪。"
+      },
+      {
+        "speaker": "spk_03",
+        "start": 26.173,
+        "end": 28.222,
         "text": "我姐姐还在吗？"
       },
       {
         "speaker": "spk_01",
-        "start": 32.19,
-        "end": 33.88,
+        "start": 29.072,
+        "end": 30.206,
+        "text": "在。"
+      },
+      {
+        "speaker": "spk_01",
+        "start": 32.192,
+        "end": 33.875,
         "text": "没人毁得了她。"
       },
       {
         "speaker": "spk_02",
-        "start": 38.51,
-        "end": 40.02,
+        "start": 38.513,
+        "end": 40.016,
         "text": "老马！"
       },
       {
         "speaker": "spk_02",
-        "start": 48.19,
-        "end": 52.97,
+        "start": 40.995,
+        "end": 47.953,
+        "text": "谢谢你亲手为我送来这么大一个贺礼，可惜你命短，喝不上喜酒喽！"
+      },
+      {
+        "speaker": "spk_02",
+        "start": 48.192,
+        "end": 52.972,
         "text": "吉时已到，哈哈！我得回去洞房花烛夜了。"
       }
     ]
@@ -285,15 +489,12 @@
     "slug": "dinner",
     "recording_id": "dipco_eval_U01_CH1::S06",
     "title": "Dense dinner-party overlap",
-    "eyebrow": "Dinner party · English",
-    "description": "Four distant speakers combine overlap, similar voices, fast turns, and difficult room acoustics.",
+    "description": "Four distant speakers combine overlap, similar voices, fast turns, and room noise.",
     "audio": "assets/audio/dinner-party-dipco.mp3",
-    "clip_duration": "05:00",
-    "source_dataset": "dipco_eval_U01_CH1",
+    "clip_duration_seconds": 90.0,
     "language": "English",
     "scenario": "dinner party",
     "recording_device": "7-microphone far-field array (U01, channel 1)",
-    "duration_seconds": 1204.562,
     "conditions": {
       "P": "P1",
       "O": "O3",
@@ -309,6 +510,30 @@
       "noise_difficulty": 0.8879800853485064
     },
     "timeline": [
+      {
+        "speaker": "P24",
+        "start": 3.47,
+        "end": 12.42,
+        "text": "no uhhh wait i just have another question so do i have to ask questions or when you say one two three four like do i have to just ask"
+      },
+      {
+        "speaker": "P21",
+        "start": 19.1,
+        "end": 20.25,
+        "text": "speaker one"
+      },
+      {
+        "speaker": "P22",
+        "start": 20.08,
+        "end": 21.23,
+        "text": "speaker two"
+      },
+      {
+        "speaker": "P23",
+        "start": 21.29,
+        "end": 23.02,
+        "text": "[noise] speaker three"
+      },
       {
         "speaker": "P24",
         "start": 22.72,
@@ -328,10 +553,28 @@
         "text": "yeah that's good idea"
       },
       {
+        "speaker": "P24",
+        "start": 32.88,
+        "end": 34.89,
+        "text": "ok so"
+      },
+      {
         "speaker": "P21",
         "start": 36.26,
         "end": 40.77,
         "text": "i'm not super hungry but it's in the name of science so i can't resist"
+      },
+      {
+        "speaker": "P23",
+        "start": 36.52,
+        "end": 43.16,
+        "text": "hmmm [noise] hmmm [noise] hmmm ummm [noise] hmmm"
+      },
+      {
+        "speaker": "P21",
+        "start": 43.69,
+        "end": 45.62,
+        "text": "the things we do for science"
       },
       {
         "speaker": "P23",
@@ -340,10 +583,22 @@
         "text": "i want meat"
       },
       {
+        "speaker": "P22",
+        "start": 47.25,
+        "end": 49.12,
+        "text": "ok i was [unintelligible]"
+      },
+      {
         "speaker": "P21",
         "start": 48.29,
         "end": 49.7,
         "text": "including tacos"
+      },
+      {
+        "speaker": "P23",
+        "start": 49.4,
+        "end": 50.29,
+        "text": "meat"
       },
       {
         "speaker": "P24",
@@ -359,15 +614,684 @@
       },
       {
         "speaker": "P21",
+        "start": 53.3,
+        "end": 54.63,
+        "text": "chicken"
+      },
+      {
+        "speaker": "P24",
+        "start": 54.35,
+        "end": 55.28,
+        "text": "chicken"
+      },
+      {
+        "speaker": "P21",
         "start": 54.45,
         "end": 57.49,
         "text": "[noise] pretty sure it's chicken [noise]"
       },
       {
+        "speaker": "P23",
+        "start": 56.46,
+        "end": 57.33,
+        "text": "it's pork"
+      },
+      {
         "speaker": "P22",
         "start": 57.97,
-        "end": 60,
+        "end": 64.24,
         "text": "[noise] ok i should have some cream sour cream on that"
+      },
+      {
+        "speaker": "P24",
+        "start": 62.37,
+        "end": 63.78,
+        "text": "sour cream"
+      },
+      {
+        "speaker": "P23",
+        "start": 63.75,
+        "end": 67.77,
+        "text": "i will wait in line [noise]"
+      },
+      {
+        "speaker": "P24",
+        "start": 67.38,
+        "end": 69.01,
+        "text": "yeah ok"
+      },
+      {
+        "speaker": "P22",
+        "start": 67.77,
+        "end": 70.39,
+        "text": "ahhh what else do i have"
+      },
+      {
+        "speaker": "P21",
+        "start": 69.2,
+        "end": 71.69,
+        "text": "[noise] i will take a very tiny plate [noise]"
+      },
+      {
+        "speaker": "P24",
+        "start": 73.62,
+        "end": 74.36,
+        "text": "ummm hmmm"
+      },
+      {
+        "speaker": "P22",
+        "start": 74.07,
+        "end": 75.52,
+        "text": "i think that's enough"
+      },
+      {
+        "speaker": "P21",
+        "start": 76.02,
+        "end": 77.37,
+        "text": "hmmm"
+      },
+      {
+        "speaker": "P22",
+        "start": 76.22,
+        "end": 78.51,
+        "text": "just sit here"
+      },
+      {
+        "speaker": "P24",
+        "start": 78.53,
+        "end": 84.64,
+        "text": "do you guys have beer as well [noise] beer yeah"
+      },
+      {
+        "speaker": "P21",
+        "start": 81.84,
+        "end": 84.01,
+        "text": "[unintelligible] [noise] yeah we are also"
+      },
+      {
+        "speaker": "P22",
+        "start": 81.88,
+        "end": 83.92,
+        "text": "beer you'll have beer"
+      },
+      {
+        "speaker": "P21",
+        "start": 84.43,
+        "end": 89.1,
+        "text": "it wouldn't be that [unintelligible] it's not even working that wouldn't be bad for taco party [noise]"
+      },
+      {
+        "speaker": "P22",
+        "start": 86.89,
+        "end": 89.58,
+        "text": "it would be good [noise]"
+      },
+      {
+        "speaker": "P24",
+        "start": 88.16,
+        "end": 89.25,
+        "text": "yeah hmmm"
+      },
+      {
+        "speaker": "P23",
+        "start": 88.48,
+        "end": 90.0,
+        "text": "ummm i i i know you have some [noise]"
+      }
+    ]
+  },
+  {
+    "slug": "glasses",
+    "recording_id": "SmartGlassesChallenge::meet_0045",
+    "title": "Smart-glasses gathering",
+    "description": "A wearable-array recording of a multi-speaker social gathering with frequent interaction.",
+    "audio": "assets/audio/smart-glasses.mp3",
+    "clip_duration_seconds": 90.0,
+    "language": "Chinese",
+    "scenario": "smart glasses",
+    "recording_device": "4-channel smart-glasses microphone array",
+    "conditions": {
+      "P": "P2",
+      "O": "O3",
+      "S": "S2",
+      "T": "T2",
+      "N": "N2"
+    },
+    "stats": {
+      "num_speakers": 6,
+      "overlap_ratio": 0.315582,
+      "speaker_similarity_max": 0.623603,
+      "speaker_switch_q25": 0.07,
+      "noise_difficulty": 0.6660739687055477
+    },
+    "timeline": [
+      {
+        "speaker": "spk01",
+        "start": 1.394,
+        "end": 2.324,
+        "text": "行了行了。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 2.414,
+        "end": 3.804,
+        "text": "人总算齐了吧？"
+      },
+      {
+        "speaker": "spk01",
+        "start": 4.074,
+        "end": 7.234,
+        "text": "哎，你迟到了一个小时啊，你就自罚一杯，翻篇了。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 7.654,
+        "end": 11.434,
+        "text": "毕竟咱们毕业这么多年了，难得的团聚。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 11.784,
+        "end": 15.884,
+        "text": "咱们就挨个简单说说自己的现状吧。哎，别给我搞虚的啊。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 16.064,
+        "end": 17.464,
+        "text": "说完咱们说个正事。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 17.774,
+        "end": 20.224,
+        "text": "五年后的同学聚会，咱们。"
+      },
+      {
+        "speaker": "spk01",
+        "start": 20.344,
+        "end": 21.364,
+        "text": "提前弄好策划。"
+      },
+      {
+        "speaker": "spk02",
+        "start": 21.714,
+        "end": 25.474,
+        "text": "哎呀，抱歉抱歉啊，刚才家里有事，实在走不开唉。"
+      },
+      {
+        "speaker": "spk02",
+        "start": 25.574,
+        "end": 27.234,
+        "text": "我都是抽空溜出来的。"
+      },
+      {
+        "speaker": "spk02",
+        "start": 27.544,
+        "end": 29.524,
+        "text": "那那我随意抿一口吧。"
+      },
+      {
+        "speaker": "spk02",
+        "start": 29.614,
+        "end": 30.964,
+        "text": "我实在喝不下。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 31.814,
+        "end": 32.784,
+        "text": "哎。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 33.214,
+        "end": 36.364,
+        "text": "我这两年呢，算是二次创业重启了。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 36.964,
+        "end": 41.704,
+        "text": "前两年做项目，那，然后还有路演啊，跑遍全城了。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 42.024,
+        "end": 47.444,
+        "text": "短暂的休整调整赛道，现在算是稳步落地了，慢慢来，都是过渡期。"
+      },
+      {
+        "speaker": "spk04",
+        "start": 47.964,
+        "end": 50.834,
+        "text": "哎？你刚刚说什么什么项目？"
+      },
+      {
+        "speaker": "spk04",
+        "start": 51.304,
+        "end": 56.074,
+        "text": "你，我们听不懂你说的这个呀，能不能说点我们能听得懂的？说大白话行不行？"
+      },
+      {
+        "speaker": "spk02",
+        "start": 55.814,
+        "end": 57.454,
+        "text": "就是，别搞高级的。"
+      },
+      {
+        "speaker": "spk04",
+        "start": 56.614,
+        "end": 60.054,
+        "text": "你别搁这说这些黑话装高端啊！"
+      },
+      {
+        "speaker": "spk03",
+        "start": 60.214,
+        "end": 63.684,
+        "text": "哎呀，这都不懂，一看就出来，你们就是一些土老帽了。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 63.764,
+        "end": 66.224,
+        "text": "一看就知道工作上肯定啥都干不了。"
+      },
+      {
+        "speaker": "spk05",
+        "start": 64.764,
+        "end": 66.864,
+        "text": "哎呀，怎么能这么说话呢。"
+      },
+      {
+        "speaker": "spk02",
+        "start": 66.494,
+        "end": 69.204,
+        "text": "你咋知道的呢？你是我们领导吗？"
+      },
+      {
+        "speaker": "spk04",
+        "start": 66.624,
+        "end": 67.884,
+        "text": "哎，对啊。"
+      },
+      {
+        "speaker": "spk05",
+        "start": 67.554,
+        "end": 69.704,
+        "text": "你怎么能这么说呢。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 67.574,
+        "end": 68.254,
+        "text": "哎。"
+      },
+      {
+        "speaker": "spk06",
+        "start": 68.784,
+        "end": 70.314,
+        "text": "能不能别阴阳人啊？"
+      },
+      {
+        "speaker": "spk02",
+        "start": 69.634,
+        "end": 70.844,
+        "text": "就是啊。"
+      },
+      {
+        "speaker": "spk06",
+        "start": 70.594,
+        "end": 71.864,
+        "text": "要说就说。"
+      },
+      {
+        "speaker": "spk05",
+        "start": 70.994,
+        "end": 73.354,
+        "text": "你说话怎么这么难听啊。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 71.324,
+        "end": 74.584,
+        "text": "这些都是最简单的东西了呀，这都听不懂。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 74.704,
+        "end": 79.134,
+        "text": "就是商业计划书和项目路演推演。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 79.244,
+        "end": 82.734,
+        "text": "还有啊，就是，嗯，都是这都是一些。"
+      },
+      {
+        "speaker": "spk03",
+        "start": 82.854,
+        "end": 87.534,
+        "text": "创业期间的专用词啊，哎，没装，就是顺口了，知道吗？"
+      },
+      {
+        "speaker": "spk06",
+        "start": 87.544,
+        "end": 90.0,
+        "text": "好呀，那你现在的保险赛道，月底绩效是能提到大概多少档位呀？"
+      }
+    ]
+  },
+  {
+    "slug": "vehicle",
+    "recording_id": "aishell5_DX01C01::eval1-013-DX01C01",
+    "title": "In-vehicle conversation",
+    "description": "A two-speaker conversation captured by a far-field microphone inside a moving vehicle.",
+    "audio": "assets/audio/in-vehicle.mp3",
+    "clip_duration_seconds": 90.0,
+    "language": "Chinese",
+    "scenario": "in-vehicle",
+    "recording_device": "in-car far-field microphone (DX01, channel 1)",
+    "conditions": {
+      "P": "P0",
+      "O": "O2",
+      "S": "S2",
+      "T": "T2",
+      "N": "N3"
+    },
+    "stats": {
+      "num_speakers": 2,
+      "overlap_ratio": 0.141466,
+      "speaker_similarity_max": 0.492309,
+      "speaker_switch_q25": 0.075,
+      "noise_difficulty": 0.9377667140825036
+    },
+    "timeline": [
+      {
+        "speaker": "P0174",
+        "start": 2.156,
+        "end": 2.986,
+        "text": "那聊会儿。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 3.676,
+        "end": 7.996,
+        "text": "最后一次聊天儿，诶，不是最后一次，我读完之后还有一次。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 9.37,
+        "end": 11.31,
+        "text": "这是倒数第二段聊天儿。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 13.02,
+        "end": 14.86,
+        "text": "是吧，对着了吧。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 16.116,
+        "end": 17.596,
+        "text": "哎呀，你歇会吧。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 18.666,
+        "end": 19.496,
+        "text": "聊啥呀。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 19.34,
+        "end": 34.07,
+        "text": "这把我哥，呃把我大爷大娘急的哎呦喂，这这这前几年不是还说这事儿，这闹疫情这几年，过年也不见面儿啦，也不聚餐啦，也不说这事儿了，都好几年没见啦。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 21.486,
+        "end": 24.156,
+        "text": "啊，对，来继续你哥，啊。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 30.3,
+        "end": 30.86,
+        "text": "啊。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 32.78,
+        "end": 33.35,
+        "text": "他这。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 33.96,
+        "end": 38.11,
+        "text": "他就觉得自己过得不是说很那啥呗，就不愿意见你了呗都。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 38.06,
+        "end": 51.39,
+        "text": "都我这一房，我这一房都七八个这像我，就我这，我这一大家子吧，七八个都结婚啦，都结婚啦，就剩他啦，还有我弟，就他俩，你说说这，这叫啥事儿。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 43.49,
+        "end": 44.09,
+        "text": "呃。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 45.07,
+        "end": 45.59,
+        "text": "啊。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 48.64,
+        "end": 49.24,
+        "text": "啊。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 52.09,
+        "end": 55.54,
+        "text": "人家都说叫嗯叫我啊。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 54.29,
+        "end": 56.46,
+        "text": "看看到底是咋回事儿是吧。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 56.54,
+        "end": 59.92,
+        "text": "嗯，去看看呗，然后我妈就嗯。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 60.52,
+        "end": 63.37,
+        "text": "那你就是你老家就是这儿嘞，就是邢台的。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 63.95,
+        "end": 69.09,
+        "text": "我爸那老家在，我爷爷奶奶在那个保定呢，都在那儿呢。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 69.16,
+        "end": 72.5,
+        "text": "能你这算是做生意来这儿了，定居这儿了是吧。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 72.14,
+        "end": 81.74,
+        "text": "呃我爷爷奶奶来这儿啦，来这儿啦，这不是这一家都都定这儿了，然后那老家不是有地呀，能能埋不是，就埋那儿啦。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 80.346,
+        "end": 80.916,
+        "text": "啊。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 81.74,
+        "end": 83.37,
+        "text": "人埋那儿给人上过坟没。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 84.076,
+        "end": 85.676,
+        "text": "你看就说嘞是这呗。"
+      },
+      {
+        "speaker": "P0174",
+        "start": 85.4,
+        "end": 88.72,
+        "text": "你就是啊，你不给，不给人家上坟能让你们下边儿有人儿呗。"
+      },
+      {
+        "speaker": "P0173",
+        "start": 87.426,
+        "end": 90.0,
+        "text": "啊嗯，我那，嗯能让我下边有人呗，就是这。"
+      }
+    ]
+  },
+  {
+    "slug": "japanese",
+    "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Japanese__0435_001_phone",
+    "title": "Japanese phone conversation",
+    "description": "A spontaneous two-speaker Japanese conversation recorded on a mobile phone.",
+    "audio": "assets/audio/conversation-japanese.mp3",
+    "clip_duration_seconds": 90.0,
+    "language": "Japanese",
+    "scenario": "conversation",
+    "recording_device": "mobile phone",
+    "conditions": {
+      "P": "P0",
+      "O": "O0",
+      "S": "S2",
+      "T": "T3",
+      "N": "N2"
+    },
+    "stats": {
+      "num_speakers": 2,
+      "overlap_ratio": 0.0,
+      "speaker_similarity_max": 0.576315,
+      "speaker_switch_q25": 0.0,
+      "noise_difficulty": 0.6283783783783784
+    },
+    "timeline": [
+      {
+        "speaker": "O2",
+        "start": 15.375,
+        "end": 18.0,
+        "text": "著名人について話を始めます"
+      },
+      {
+        "speaker": "O2",
+        "start": 20.955,
+        "end": 23.614,
+        "text": "著名人、有名人、芸能人"
+      },
+      {
+        "speaker": "O2",
+        "start": 25.159,
+        "end": 26.091,
+        "text": "芸能人"
+      },
+      {
+        "speaker": "O1",
+        "start": 26.139,
+        "end": 29.296,
+        "text": "芸能人、芸能人"
+      },
+      {
+        "speaker": "O2",
+        "start": 32.24,
+        "end": 32.705,
+        "text": "へえ"
+      },
+      {
+        "speaker": "O1",
+        "start": 32.705,
+        "end": 34.818,
+        "text": "好きな芸能人いらっしゃいますか?"
+      },
+      {
+        "speaker": "O2",
+        "start": 35.343,
+        "end": 37.668,
+        "text": "ねえ、好きな芸能人"
+      },
+      {
+        "speaker": "O2",
+        "start": 39.364,
+        "end": 46.125,
+        "text": "好きな芸能人っていうか、あでも有名人、あっ音楽にすればよかったのかな、あのう"
+      },
+      {
+        "speaker": "O2",
+        "start": 46.898,
+        "end": 49.818,
+        "text": "サカナクションの山口さんが"
+      },
+      {
+        "speaker": "O2",
+        "start": 51.866,
+        "end": 57.123,
+        "text": "なんだろう好きです、ね有名人、うん"
+      },
+      {
+        "speaker": "O1",
+        "start": 57.125,
+        "end": 61.341,
+        "text": "サカナクションが好きなんじゃなくて、山口さんが好きなんですか?"
+      },
+      {
+        "speaker": "O2",
+        "start": 61.341,
+        "end": 67.114,
+        "text": "ああ、サカナクションの音楽が好き、ですが、山口さんの"
+      },
+      {
+        "speaker": "O2",
+        "start": 67.648,
+        "end": 71.432,
+        "text": "個人的に山口さんの人間が、も好きです"
+      },
+      {
+        "speaker": "O1",
+        "start": 71.432,
+        "end": 75.046,
+        "text": "えー、どういう所がお好きなんですか?"
+      },
+      {
+        "speaker": "O2",
+        "start": 75.046,
+        "end": 82.191,
+        "text": "なんか凄い文学的っていうか凄い作品に、こうなんていうんだろう"
+      },
+      {
+        "speaker": "O2",
+        "start": 82.58,
+        "end": 90.0,
+        "text": "なんか知性っていうかな、なん、凄いなんかもう、本当哲学者ってやっぱ哲学じゃない、なんていうんだろう、本当文学者みたいな"
       }
     ]
   }

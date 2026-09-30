@@ -4,7 +4,7 @@ document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
 const AXES = ["P", "O", "S", "T", "N"];
-const AXIS_NAMES = { P: "Speaker count", O: "Overlap ratio", S: "Speaker similarity", T: "Turn interval", N: "Acoustic difficulty" };
+const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
 const AXIS_COLORS = {
   P: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
   O: ["#eff6ff", "#dbeafe", "#bfdbfe", "#60a5fa", "#2563eb"],
@@ -37,6 +37,12 @@ function titleCase(value) {
 function formatDuration(seconds) {
   const minutes = seconds / 60;
   return minutes >= 60 ? `${(minutes / 60).toFixed(1)} h` : `${minutes.toFixed(minutes < 10 ? 1 : 0)} min`;
+}
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainder = Math.floor(seconds % 60);
+  return `${minutes}:${String(remainder).padStart(2, "0")}`;
 }
 
 function median(values) {
@@ -167,64 +173,63 @@ function renderDiagnostics() {
       }).join("")}</div></section>`).join("")}</div>`;
 }
 
-function caseCard(example, index) {
-  const accent = ["overlap", "similarity", "acoustics", "turn-taking"][index % 4];
-  return `<article class="case-card reveal">
-    <div class="case-number">0${index + 1}</div>
-    <div class="case-art case-art-${index + 1}" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="case-body"><span>${escapeHTML(example.eyebrow)}</span><h3>${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p>${profilePills(example.conditions, true)}
-      <button type="button" class="case-open" data-open-case="${escapeHTML(example.slug)}"><span>Open case</span><small>${escapeHTML(example.clip_duration)} · ${accent}</small><b aria-hidden="true">↗</b></button>
-    </div>
-  </article>`;
-}
-
-function renderCases() {
-  const preferred = ["dinner", "podcast", "film", "meeting"];
-  const examples = preferred.map(slug => state.core.examples.find(example => example.slug === slug)).filter(Boolean);
-  $("[data-case-grid]").innerHTML = examples.map(caseCard).join("");
-  $("[data-case-grid]").querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
-}
-
 function speakerColor(speaker, speakers) {
   const index = speakers.indexOf(speaker);
   return ["#2563eb", "#60a5fa", "#1e40af", "#94a3b8", "#64748b", "#38bdf8"][index % 6];
 }
 
-function openCase(slug) {
-  const example = state.core.examples.find(item => item.slug === slug);
-  if (!example) return;
-  const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
-  const timelineEnd = Math.max(...example.timeline.map(segment => segment.end), 60);
-  const timelineRows = speakers.map(speaker => {
-    const segments = example.timeline.filter(segment => segment.speaker === speaker);
-    return `<div class="timeline-row"><span>${escapeHTML(speaker)}</span><div>${segments.map(segment => `
-      <i style="left:${segment.start / timelineEnd * 100}%;width:${Math.max((segment.end - segment.start) / timelineEnd * 100, .8)}%;--speaker:${speakerColor(speaker, speakers)}" title="${segment.start.toFixed(1)}–${segment.end.toFixed(1)} s"></i>`).join("")}</div></div>`;
-  }).join("");
-
-  $("[data-dialog-content]").innerHTML = `
-    <div class="dialog-head"><span>${escapeHTML(example.eyebrow)}</span><h2 id="case-dialog-title">${escapeHTML(example.title)}</h2><p>${escapeHTML(example.description)}</p>${profilePills(example.conditions)}</div>
-    <div class="case-facts"><div><span>Speakers</span><strong>${example.stats.num_speakers}</strong></div><div><span>Overlap</span><strong>${(example.stats.overlap_ratio * 100).toFixed(1)}%</strong></div><div><span>Voice similarity</span><strong>${example.stats.speaker_similarity_max.toFixed(2)}</strong></div><div><span>Turn q25</span><strong>${Math.round(example.stats.speaker_switch_q25 * 1000)} ms</strong></div></div>
-    <div class="audio-panel"><div><span>Curated excerpt</span><small>${escapeHTML(example.recording_device)}</small></div><audio controls preload="none" src="${escapeHTML(example.audio)}">Your browser does not support audio playback.</audio></div>
-    <div class="timeline-panel"><div class="timeline-head"><span>Reference speaker timeline</span><small>First minute shown</small></div>${timelineRows}<div class="timeline-axis"><span>0 s</span><span>15</span><span>30</span><span>45</span><span>60 s</span></div></div>
-    <div class="transcript-panel"><div class="timeline-head"><span>Reference excerpt</span><small>Scroll to inspect</small></div><div class="transcript-scroll">${example.timeline.map(segment => `
-      <div class="transcript-line"><time>${segment.start.toFixed(1)}–${segment.end.toFixed(1)}</time><b style="--speaker:${speakerColor(segment.speaker, speakers)}">${escapeHTML(segment.speaker)}</b><p>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</p></div>`).join("")}</div></div>`;
-
-  const dialog = $("[data-case-dialog]");
-  dialog.showModal();
-  document.body.classList.add("dialog-open");
+function conditionDetails(conditions) {
+  return `<div class="condition-details">${AXES.map(axis => `<div><span>${axis}</span><p>${AXIS_NAMES[axis]}</p><strong>${escapeHTML(conditions[axis])}</strong></div>`).join("")}</div>`;
 }
 
-function closeCase() {
-  const dialog = $("[data-case-dialog]");
-  const audio = $("audio", dialog);
-  if (audio) {
-    audio.pause();
-    audio.removeAttribute("src");
-    audio.load();
+function caseCard(example, index) {
+  const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
+  return `<article class="sample-card reveal" id="case-${escapeHTML(example.slug)}">
+    <header class="sample-head"><span class="sample-index">${String(index + 1).padStart(2, "0")}</span><div><div class="sample-tags"><span>Scenario · ${escapeHTML(titleCase(example.scenario))}</span><span>Language · ${escapeHTML(example.language)}</span></div><h3>${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></div></header>
+    ${conditionDetails(example.conditions)}
+    <div class="sample-player"><div><strong>Audio excerpt</strong><span>${formatTime(example.clip_duration_seconds)} · ${escapeHTML(example.recording_device)}</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio></div>
+    <div class="caption-heading"><strong>Time-aligned reference</strong><span>Subtitles follow playback</span></div>
+    <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}">${example.timeline.map((segment, segmentIndex) => `
+      <button type="button" class="caption-line" data-caption-index="${segmentIndex}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b style="--speaker:${speakerColor(segment.speaker, speakers)}">${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
+  </article>`;
+}
+
+function updateTranscript(audio) {
+  const transcript = $(`[data-transcript="${audio.dataset.caseAudio}"]`);
+  if (!transcript) return;
+  const lines = $$("[data-start]", transcript);
+  const active = lines.filter(line => audio.currentTime >= Number(line.dataset.start) && audio.currentTime < Number(line.dataset.end));
+  lines.forEach(line => line.classList.toggle("active", active.includes(line)));
+  const first = active[0];
+  if (first && transcript.dataset.activeIndex !== first.dataset.captionIndex) {
+    transcript.dataset.activeIndex = first.dataset.captionIndex;
+    const top = first.offsetTop - transcript.offsetTop - transcript.clientHeight / 2 + first.offsetHeight / 2;
+    transcript.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   }
-  dialog.close();
-  $("[data-dialog-content]").replaceChildren();
-  document.body.classList.remove("dialog-open");
+  if (!first) delete transcript.dataset.activeIndex;
+}
+
+function setupCasePlayers() {
+  const audios = $$('[data-case-audio]');
+  audios.forEach(audio => {
+    audio.addEventListener("play", () => audios.forEach(other => { if (other !== audio) other.pause(); }));
+    audio.addEventListener("timeupdate", () => updateTranscript(audio));
+    audio.addEventListener("seeked", () => updateTranscript(audio));
+  });
+  $("[data-case-grid]").addEventListener("click", event => {
+    const line = event.target.closest("[data-start]");
+    if (!line) return;
+    const card = line.closest(".sample-card");
+    const audio = $("[data-case-audio]", card);
+    audio.currentTime = Number(line.dataset.start);
+    audio.play();
+  });
+}
+
+function renderCases() {
+  $("[data-case-grid]").innerHTML = state.core.examples.map(caseCard).join("");
+  $("[data-case-grid]").querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
+  setupCasePlayers();
 }
 
 async function loadMetadata() {
@@ -250,17 +255,18 @@ function renderExplorer() {
   $("[data-active-profile]").textContent = active.length ? AXES.map(axis => state.filters[axis] || `${axis}*`).join(" · ") : "Any profile";
   $("[data-median-duration]").textContent = matched.length ? formatDuration(median(matched.map(item => item.duration_seconds))) : "—";
   $("[data-average-overlap]").textContent = matched.length ? `${(matched.reduce((sum, item) => sum + item.overlap_ratio, 0) / matched.length * 100).toFixed(1)}%` : "—";
-  const sourceCounts = counts(matched, "source_dataset");
-  $("[data-source-count]").textContent = Object.keys(sourceCounts).length;
-  $("[data-source-summary]").textContent = listSummary(sourceCounts);
-  $("[data-language-summary]").textContent = listSummary(counts(matched, "language"));
-  $("[data-scenario-summary]").textContent = listSummary(counts(matched, "scenario"));
+  const languageCounts = counts(matched, "language");
+  const scenarioCounts = counts(matched, "scenario");
+  $("[data-language-count]").textContent = Object.keys(languageCounts).length;
+  $("[data-scenario-count]").textContent = Object.keys(scenarioCounts).length;
+  $("[data-language-summary]").textContent = listSummary(languageCounts);
+  $("[data-scenario-summary]").textContent = listSummary(scenarioCounts);
 
   const curatedIDs = new Set(matched.map(item => item.recording_id));
   const curated = state.core.examples.filter(example => curatedIDs.has(example.recording_id)).slice(0, 2);
   const representative = $("[data-representatives]");
   if (curated.length) {
-    representative.innerHTML = curated.map(example => `<article><div><span>${escapeHTML(example.eyebrow)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><button type="button" data-open-case="${escapeHTML(example.slug)}">Listen <span aria-hidden="true">→</span></button></article>`).join("");
+    representative.innerHTML = curated.map(example => `<article><div><span>${escapeHTML(titleCase(example.scenario))} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">View sample <span aria-hidden="true">→</span></a></article>`).join("");
   } else if (matched.length) {
     const sample = matched[0];
     representative.innerHTML = `<article class="metadata-only"><div><span>Metadata-only match</span><h4>${escapeHTML(sample.recording_id)}</h4>${profilePills(sample.conditions, true)}</div><small>No curated audio for this profile</small></article>`;
@@ -335,18 +341,6 @@ function setupInteractions() {
     renderDiagnostics();
   });
 
-  document.addEventListener("click", event => {
-    const trigger = event.target.closest("[data-open-case]");
-    if (trigger) openCase(trigger.dataset.openCase);
-  });
-  $("[data-dialog-close]").addEventListener("click", closeCase);
-  $("[data-case-dialog]").addEventListener("click", event => {
-    if (event.target === event.currentTarget) closeCase();
-  });
-  $("[data-case-dialog]").addEventListener("cancel", event => {
-    event.preventDefault();
-    closeCase();
-  });
 }
 
 function setupViewportEffects() {
