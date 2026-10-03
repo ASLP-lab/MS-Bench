@@ -3,17 +3,17 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "2026100306";
+const DATA_VERSION = "2026100307";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
 const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
-const DURATION_COLORS = ["#60a5fa", "#2563eb", "#0891b2", "#0d9488", "#7c3aed", "#d97706"];
+const DURATION_COLORS = ["#9eb7d3", "#789dbc", "#78a9ad", "#83a39b", "#9192b4", "#a292ad"];
 const AXIS_COLORS = {
-  P: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
-  O: ["#eff6ff", "#dbeafe", "#bfdbfe", "#60a5fa", "#2563eb"],
-  S: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
-  T: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"],
-  N: ["#eff6ff", "#dbeafe", "#93c5fd", "#3b82f6"]
+  P: ["#edf2f7", "#d5e0ec", "#b8cadd", "#91aac3"],
+  O: ["#eef4f4", "#d8e7e5", "#bdd8d3", "#98c2ba", "#75a99f"],
+  S: ["#f0f0f6", "#dddded", "#c6c5df", "#a5a4c8"],
+  T: ["#eef3f5", "#d6e2e8", "#b8cdd5", "#92b1be"],
+  N: ["#f1f0f4", "#dfdce6", "#c9c3d4", "#aaa1ba"]
 };
 
 const state = {
@@ -261,6 +261,18 @@ function renderExplorer() {
   if (!state.metadata || !state.core) return;
   const active = Object.entries(state.filters).filter(([, tier]) => tier);
   const matched = state.metadata.filter(item => active.every(([axis, tier]) => item.conditions[axis] === tier));
+  const explorer = $("[data-explorer]");
+  $$("[data-axis]", explorer).forEach(button => {
+    const { axis, value } = button.dataset;
+    const candidate = { ...state.filters, [axis]: value };
+    const count = state.metadata.filter(item => AXES.every(key => !candidate[key] || item.conditions[key] === candidate[key])).length;
+    const selected = state.filters[axis] === value;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+    button.disabled = count === 0 && !selected;
+    button.title = count ? `${count} recordings with the current filters` : "No recording has this combination";
+    button.innerHTML = `<span>${escapeHTML(value)}</span><small>${count}</small>`;
+  });
   $("[data-explorer-status]").textContent = active.length ? "Filtered condition space" : "Complete condition space";
   $("[data-match-count]").textContent = matched.length;
   $("[data-active-profile]").textContent = active.length ? AXES.map(axis => state.filters[axis] || `${axis}*`).join(" · ") : "Any profile";
@@ -277,12 +289,19 @@ function renderExplorer() {
   const curated = state.core.examples.filter(example => curatedIDs.has(example.recording_id)).slice(0, 2);
   const representative = $("[data-representatives]");
   if (curated.length) {
-    representative.innerHTML = curated.map(example => `<article><div><span>${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">View sample <span aria-hidden="true">→</span></a></article>`).join("");
+    representative.innerHTML = curated.map(example => `<article><div><span>Exact playable match · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`).join("");
   } else if (matched.length) {
-    const sample = matched[0];
-    representative.innerHTML = `<article class="metadata-only"><div><span>Metadata-only match</span><h4>${escapeHTML(sample.recording_id)}</h4>${profilePills(sample.conditions, true)}</div><small>No curated audio for this profile</small></article>`;
+    const nearest = state.core.examples.map(example => {
+      const differences = active.filter(([axis, tier]) => example.conditions[axis] !== tier);
+      const distance = differences.reduce((sum, [axis, tier]) => sum + Math.abs(Number(tier.slice(1)) - Number(example.conditions[axis].slice(1))), 0);
+      return { example, differences, distance, score: active.length - differences.length };
+    }).sort((a, b) => a.differences.length - b.differences.length || a.distance - b.distance || a.example.title.localeCompare(b.example.title)).slice(0, 2);
+    representative.innerHTML = `<p class="sample-guidance">${matched.length} recording${matched.length === 1 ? "" : "s"} match the selected metadata, but no public audio matches every selected tier. Closest playable examples:</p>${nearest.map(({ example, differences, score }) => {
+      const differenceText = differences.map(([axis, tier]) => `${axis}: ${tier} → ${example.conditions[axis]}`).join(" · ");
+      return `<article class="nearest-match"><div><span>Nearest playable · ${score}/${active.length} selected tiers</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}<p>Differs on ${escapeHTML(differenceText)}</p></div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`;
+    }).join("")}`;
   } else {
-    representative.innerHTML = `<p class="empty-state">No recording matches this exact combination. Remove one tier to broaden the profile.</p>`;
+    representative.innerHTML = `<p class="empty-state">No recording matches this combination. Unavailable next choices are disabled; reset one active tier to broaden the profile.</p>`;
   }
 }
 
@@ -293,20 +312,11 @@ function setupExplorer() {
     await loadMetadata();
     const { axis, value } = button.dataset;
     state.filters[axis] = state.filters[axis] === value ? null : value;
-    $$(`[data-axis="${axis}"]`, explorer).forEach(option => {
-      const selected = state.filters[axis] === option.dataset.value;
-      option.classList.toggle("active", selected);
-      option.setAttribute("aria-pressed", String(selected));
-    });
     renderExplorer();
   }));
   $("[data-reset-filters]").addEventListener("click", async () => {
     await loadMetadata();
     AXES.forEach(axis => { state.filters[axis] = null; });
-    $$("[data-axis]", explorer).forEach(button => {
-      button.classList.remove("active");
-      button.setAttribute("aria-pressed", "false");
-    });
     renderExplorer();
   });
   loadMetadata();

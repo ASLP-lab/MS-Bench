@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#ffffff">
   <title>MS-Bench · Benchmark Explorer</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=2026100306">
+  <link rel="stylesheet" href="assets/style.css?v=2026100307">
 </head>
 <body class="demo-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -75,7 +75,7 @@
       <div class="shell">
         <div class="section-head light split-head reveal">
           <div><p class="section-index">02 / Explore</p><h2>Condition Explorer</h2></div>
-          <p>Select any combination of tiers. The explorer filters metadata for all 99 recordings; public audio remains limited to hand-picked examples.</p>
+          <p>Select any combination of tiers. Unavailable choices are disabled dynamically; when no exact public audio exists, the closest playable examples are shown.</p>
         </div>
 
         <div class="explorer-layout reveal" data-explorer>
@@ -118,7 +118,7 @@
               <div><span>Languages</span><p data-language-summary>—</p></div>
               <div><span>Scenarios</span><p data-scenario-summary>—</p></div>
             </div>
-            <div class="representative-head"><div><span>Representative matches</span><small>Audio exists only for curated public examples.</small></div></div>
+            <div class="representative-head"><div><span>Playable examples</span><small>Exact matches when available; otherwise nearest condition profiles.</small></div></div>
             <div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Metadata will load when this section enters view.</p></div>
           </div>
         </div>
@@ -184,6 +184,6 @@
   </div>
 
   <noscript><div class="noscript">This interactive report requires JavaScript. Benchmark metadata remains available in <a href="benchmark/metadata.jsonl">JSONL format</a>.</div></noscript>
-  <script src="assets/app.js?v=2026100306" defer></script>
+  <script src="assets/app.js?v=2026100307" defer></script>
 </body>
 </html>

@@ -196,7 +196,7 @@ img { max-width: 100%; }
 .coverage-label b { display: grid; width: 28px; height: 28px; color: var(--blue); background: var(--blue-soft); border-radius: 5px; place-items: center; font-family: var(--mono); font-size: 11px; }
 .coverage-label span { color: var(--muted); font-size: 12px; }
 .coverage-bars { display: flex; overflow: hidden; height: 38px; background: var(--surface-alt); border-radius: 5px; gap: 2px; }
-.coverage-bars > span { display: flex; min-width: 46px; padding: 0 10px; color: #0f2d68; background: var(--tier); align-items: center; justify-content: space-between; }
+.coverage-bars > span { display: flex; min-width: 46px; padding: 0 10px; color: #334155; background: var(--tier); align-items: center; justify-content: space-between; }
 .coverage-bars b { font-family: var(--mono); font-size: 11px; }.coverage-bars small { font-size: 11px; opacity: .75; }
 
 /* Explorer */
@@ -211,8 +211,11 @@ img { max-width: 100%; }
 .filter-label b { display: grid; width: 26px; height: 26px; color: var(--blue); background: var(--blue-soft); border-radius: 5px; place-items: center; font-family: var(--mono); font-size: 10px; }
 .filter-label span { font-size: 13px; font-weight: 600; }.filter-label small { color: var(--muted); font-size: 11px; font-weight: 500; }
 .filter-options { display: grid; margin: 12px 0 0 39px; grid-auto-columns: 1fr; grid-auto-flow: column; gap: 6px; }
-.filter-options button { min-width: 0; padding: 8px 4px; color: #334155; background: #fff; border: 1px solid var(--line-strong); border-radius: 5px; cursor: pointer; font-family: var(--mono); font-size: 11px; font-weight: 600; transition: .15s; }
+.filter-options button { display: flex; min-width: 0; padding: 8px 4px; color: #334155; background: #fff; border: 1px solid var(--line-strong); border-radius: 5px; cursor: pointer; align-items: center; justify-content: center; gap: 4px; font-family: var(--mono); font-size: 11px; font-weight: 600; transition: .15s; }
+.filter-options button small { color: var(--subtle); font-size: 8px; font-weight: 500; }
 .filter-options button:hover { color: var(--blue); border-color: var(--blue); }.filter-options button.active { color: #fff; background: var(--blue); border-color: var(--blue); }
+.filter-options button.active small { color: rgba(255, 255, 255, .82); }
+.filter-options button:disabled { color: #94a3b8; background: #f1f4f7; border-color: #e2e8f0; cursor: not-allowed; opacity: .62; }
 .explorer-results { padding: 36px; color: var(--ink); }
 .match-header { display: flex; padding-bottom: 27px; border-bottom: 1px solid var(--line); align-items: end; justify-content: space-between; }
 .match-header > div:first-child { display: grid; grid-template-columns: auto auto; align-items: end; column-gap: 8px; }
@@ -233,8 +236,10 @@ img { max-width: 100%; }
 .representative-list article { display: flex; min-height: 96px; padding: 17px 19px; background: #fff; border: 1px solid var(--line); border-radius: 6px; align-items: center; justify-content: space-between; }
 .representative-list article > div > span { color: var(--blue); font-size: 10px; font-weight: 600; }
 .representative-list h4 { margin: 3px 0 8px; font-size: 16px; font-weight: 650; }
+.representative-list .sample-guidance { margin: 2px 0 1px; padding: 12px 14px; color: var(--muted); background: #f5f7fa; border-left: 3px solid #91aac3; font-size: 12px; line-height: 1.55; }
+.representative-list .nearest-match { background: #fbfcfd; border-style: dashed; }
+.representative-list .nearest-match p { margin: 8px 0 0; color: var(--muted); font-family: var(--mono); font-size: 10px; line-height: 1.45; }
 .representative-list a { padding: 9px 13px; color: var(--blue); background: #fff; border: 1px solid var(--blue); border-radius: 5px; font-size: 12px; font-weight: 600; }.representative-list a:hover { background: var(--blue-soft); }.representative-list a span { margin-left: 6px; }
-.representative-list .metadata-only > small { max-width: 130px; color: var(--subtle); font-size: 11px; text-align: right; }
 .empty-state { margin: 25px 0; color: var(--muted); font-size: 13px; }
 
 .profile-pills { display: flex; flex-wrap: wrap; gap: 6px; }
