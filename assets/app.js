@@ -198,12 +198,22 @@ function conditionDetails(conditions) {
   return `<div class="condition-details">${AXES.map(axis => `<div><span>${axis}</span><p>${AXIS_NAMES[axis]}</p><strong>${escapeHTML(conditions[axis])}</strong></div>`).join("")}</div>`;
 }
 
-function caseCard(example, index) {
+function caseGalleryCard(example, index) {
+  return `<article class="case-card reveal" id="case-${escapeHTML(example.slug)}">
+    <div class="case-card-number">${String(index + 1).padStart(2, "0")}</div>
+    <div class="sample-tags"><span>${escapeHTML(example.scenario)}</span><span>${escapeHTML(example.language)}</span></div>
+    <h3>${escapeHTML(example.title)}</h3>
+    ${profilePills(example.conditions, true)}
+    <div class="case-card-foot"><span>${formatTime(example.clip_duration_seconds)} excerpt</span><button type="button" data-open-case="${escapeHTML(example.slug)}">Play / View details <span aria-hidden="true">→</span></button></div>
+  </article>`;
+}
+
+function caseDetail(example) {
   const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
   const transcriptStart = example.timeline.length ? Math.min(...example.timeline.map(segment => segment.start)) : 0;
   const transcriptEnd = example.timeline.length ? Math.max(...example.timeline.map(segment => segment.end)) : 0;
-  return `<article class="sample-card reveal" id="case-${escapeHTML(example.slug)}">
-    <header class="sample-head"><span class="sample-index">${String(index + 1).padStart(2, "0")}</span><div><div class="sample-tags"><span>Scenario · ${escapeHTML(example.scenario)}</span><span>Language · ${escapeHTML(example.language)}</span></div><h3>${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></div></header>
+  return `<article>
+    <header class="case-detail-head"><div class="sample-tags"><span>Scenario · ${escapeHTML(example.scenario)}</span><span>Language · ${escapeHTML(example.language)}</span></div><h2 id="case-dialog-title">${escapeHTML(example.title)}</h2><p>${escapeHTML(example.description)}</p><dl><div><dt>Recording device</dt><dd>${escapeHTML(example.recording_device)}</dd></div><div><dt>Clip duration</dt><dd>${formatTime(example.clip_duration_seconds)}</dd></div></dl></header>
     ${conditionDetails(example.conditions)}
     <div class="sample-player"><div><strong>Audio excerpt</strong><span>${formatTime(example.clip_duration_seconds)} · ${escapeHTML(example.recording_device)}</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio></div>
     <div class="caption-heading"><div><strong>Time-aligned reference</strong><span>${example.timeline.length} utterances · ${formatTime(transcriptStart)}–${formatTime(transcriptEnd)} · subtitles follow playback</span></div><a href="${escapeHTML(example.textgrid)}" download>Corrected TextGrid <span aria-hidden="true">↓</span></a></div>
@@ -227,27 +237,45 @@ function updateTranscript(audio) {
   if (!first) delete transcript.dataset.activeIndex;
 }
 
-function setupCasePlayers() {
-  const audios = $$('[data-case-audio]');
-  audios.forEach(audio => {
-    audio.addEventListener("play", () => audios.forEach(other => { if (other !== audio) other.pause(); }));
+function setupCaseDialog() {
+  const dialog = $("[data-case-dialog]");
+  const detail = $("[data-case-detail]", dialog);
+  if (dialog.dataset.ready) return;
+  dialog.dataset.ready = "true";
+
+  document.addEventListener("click", event => {
+    const opener = event.target.closest("[data-open-case]");
+    if (!opener || !state.core) return;
+    const example = state.core.examples.find(item => item.slug === opener.dataset.openCase);
+    if (!example) return;
+    detail.innerHTML = caseDetail(example);
+    const audio = $("[data-case-audio]", detail);
     audio.addEventListener("timeupdate", () => updateTranscript(audio));
     audio.addEventListener("seeked", () => updateTranscript(audio));
+    dialog.showModal();
   });
-  $("[data-case-grid]").addEventListener("click", event => {
+
+  detail.addEventListener("click", event => {
     const line = event.target.closest("[data-start]");
     if (!line) return;
-    const card = line.closest(".sample-card");
-    const audio = $("[data-case-audio]", card);
+    const audio = $("[data-case-audio]", detail);
     audio.currentTime = Number(line.dataset.start);
     audio.play();
+  });
+
+  $("[data-close-case]", dialog).addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => {
+    const audio = $("[data-case-audio]", detail);
+    if (audio) audio.pause();
+    detail.innerHTML = "";
   });
 }
 
 function renderCases() {
-  $("[data-case-grid]").innerHTML = state.core.examples.map(caseCard).join("");
+  $("[data-case-grid]").innerHTML = state.core.examples.map(caseGalleryCard).join("");
   $("[data-case-grid]").querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
-  setupCasePlayers();
+  setupCaseDialog();
 }
 
 async function loadMetadata() {
@@ -301,7 +329,7 @@ function renderExplorer() {
   const curated = state.core.examples.filter(example => curatedIDs.has(example.recording_id)).slice(0, 2);
   const representative = $("[data-representatives]");
   if (curated.length) {
-    representative.innerHTML = curated.map(example => `<article><div><span>Exact curated example · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">View case <span aria-hidden="true">→</span></a></article>`).join("");
+    representative.innerHTML = curated.map(example => `<article><div><span>Exact curated example · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><button class="case-link" type="button" data-open-case="${escapeHTML(example.slug)}">View case <span aria-hidden="true">→</span></button></article>`).join("");
   } else {
     representative.innerHTML = `<div class="no-curated"><p>No curated audio excerpt is available for this exact profile.</p><a href="#cases">Browse representative cases <span aria-hidden="true">→</span></a></div>`;
   }

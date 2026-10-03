@@ -166,8 +166,8 @@
     <section class="cases section-pad" id="cases">
       <div class="shell">
         <div class="section-head split-head reveal">
-          <div><p class="section-index">05 / Audio</p><h2>Representative Cases</h2></div>
-          <p>Eight short excerpts connect condition profiles to real conversational structure. Play any example to follow its time-aligned reference transcript.</p>
+          <div><p class="section-index">05 / Audio</p><h2>Curated Representative Cases</h2></div>
+          <p>Selected excerpts illustrate representative interaction and acoustic conditions; they are not intended to cover every condition combination in MS-Bench.</p>
         </div>
         <div class="case-grid" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases…</p></div>
       </div>
@@ -183,6 +183,13 @@
     <div class="shell footer-base"><span>ASLP@NPU</span><span>Research preview · 2026</span></div>
   </footer>
   </div>
+
+  <dialog class="case-dialog" data-case-dialog aria-labelledby="case-dialog-title">
+    <div class="case-dialog-frame">
+      <button class="case-dialog-close" type="button" data-close-case aria-label="Close case details">Close <span aria-hidden="true">×</span></button>
+      <div class="case-detail" data-case-detail></div>
+    </div>
+  </dialog>
 
   <noscript><div class="noscript">This interactive report requires JavaScript. Benchmark metadata remains available in <a href="benchmark/metadata.jsonl">JSONL format</a>.</div></noscript>
   <script src="assets/app.js?v=2026100307" defer></script>
