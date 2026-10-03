@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "2026100307";
+const DATA_VERSION = "20261003-redesign1";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker Number", hint: "# speakers" },
@@ -179,14 +179,15 @@ function renderDiagnostics() {
   const allValues = data.series.flatMap(series => series.values.filter(value => value != null));
   const maxAbsolute = Math.max(...allValues.map(Math.abs), 0.01);
   $("[data-diagnostic-panel]").innerHTML = `
-    <div class="diagnostic-copy"><span class="diagnostic-tag">Controlled analysis</span><h3>${escapeHTML(data.title)}</h3><p>${escapeHTML(data.description)}</p><blockquote>${escapeHTML(data.note)}</blockquote></div>
+    <div class="diagnostic-copy"><span class="diagnostic-kicker">Key finding</span><h3>${escapeHTML(data.title)}</h3><p>${escapeHTML(data.description)}</p></div>
     <div class="diagnostic-chart">${data.series.map((series, seriesIndex) => `
       <section class="series-block"><div class="series-title"><span>${escapeHTML(series.label)}</span><small>${escapeHTML(series.unit)}</small></div>
       <div class="series-rows">${systems.map((system, index) => {
         const value = series.values[index];
         const width = value == null ? 0 : Math.abs(value) / maxAbsolute * 100;
         return `<div class="series-row"><span>${escapeHTML(system)}</span><div class="bar-track ${value < 0 ? "negative" : ""}"><i style="width:${width}%;--series:${seriesIndex}"></i></div><strong>${diagnosticValue(value, series.unit)}</strong></div>`;
-      }).join("")}</div></section>`).join("")}</div>`;
+      }).join("")}</div></section>`).join("")}</div>
+    <aside class="diagnostic-note"><span>Analysis note</span><p>${escapeHTML(data.note)}</p></aside>`;
 }
 
 function speakerColor(speaker, speakers) {
