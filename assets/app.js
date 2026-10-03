@@ -3,18 +3,24 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "2026100307";
+const DATA_VERSION = "20261004-paper1";
 const AXES = ["P", "O", "S", "T", "N"];
-const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
-const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
-const DURATION_COLORS = ["#9eb7d3", "#789dbc", "#78a9ad", "#83a39b", "#9192b4", "#a292ad"];
-const AXIS_COLORS = {
-  P: ["#edf2f7", "#d5e0ec", "#b8cadd", "#91aac3"],
-  O: ["#eef4f4", "#d8e7e5", "#bdd8d3", "#98c2ba", "#75a99f"],
-  S: ["#f0f0f6", "#dddded", "#c6c5df", "#a5a4c8"],
-  T: ["#eef3f5", "#d6e2e8", "#b8cdd5", "#92b1be"],
-  N: ["#f1f0f4", "#dfdce6", "#c9c3d4", "#aaa1ba"]
+const AXIS_META = {
+  P: { name: "Speaker number", hint: "number of valid reference speakers" },
+  O: { name: "Overlap ratio", hint: "concurrent-speech duration ratio" },
+  S: { name: "Speaker similarity", hint: "maximum pairwise cosine similarity" },
+  T: { name: "Speaker turn interval", hint: "25th percentile of turn intervals" },
+  N: { name: "Acoustic quality", hint: "larger d_N = poorer quality" }
 };
+const AXIS_NAMES = Object.fromEntries(AXES.map(axis => [axis, AXIS_META[axis].name]));
+const CONDITION_RANGES = {
+  P0: "2 speakers", P1: "3–4 speakers", P2: "5–8 speakers", P3: "≥9 speakers",
+  O0: "0.00", O1: "(0.00, 0.10)", O2: "[0.10, 0.20)", O3: "[0.20, 0.40)", O4: "[0.40, 1.00]",
+  S0: "0.00 ≤ S < 0.32", S1: "0.32 ≤ S < 0.49", S2: "0.49 ≤ S < 0.65", S3: "0.65 ≤ S ≤ 1.00",
+  T0: "q25 ≥ 0.45 s", T1: "0.15 ≤ q25 < 0.45 s", T2: "0.06 ≤ q25 < 0.15 s", T3: "0.00 ≤ q25 < 0.06 s",
+  N0: "0.00 ≤ d_N < 0.27", N1: "0.27 ≤ d_N < 0.51", N2: "0.51 ≤ d_N < 0.74", N3: "0.74 ≤ d_N ≤ 1.00"
+};
+const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
 
 const state = {
   core: null,
@@ -115,24 +121,25 @@ function renderOverview(summary) {
     <div><span>${escapeHTML(name)}</span><i><b style="width:${count / maxScenario * 100}%;--bar:${OVERVIEW_COLORS[index % OVERVIEW_COLORS.length]}"></b></i><strong>${count}</strong></div>`).join("")}</div>`;
 
   const duration = $("[data-overview-duration]");
-  const durationBins = Object.entries(summary.duration_distribution);
-  const maxDurationBin = Math.max(...durationBins.map(([, count]) => count));
   duration.classList.remove("loading-block");
-  duration.innerHTML = `
-    <div class="duration-summary"><strong>${summary.median_duration_minutes.toFixed(1)} min</strong><span>median recording duration</span></div>
-    <div class="duration-chart" aria-label="Recording duration distribution">${durationBins.map(([label, count], index) => `
-      <div class="duration-column" title="${escapeHTML(label)}: ${count} recordings"><strong>${count}</strong><div><i style="height:${count / maxDurationBin * 100}%;--duration:${DURATION_COLORS[index % DURATION_COLORS.length]}"></i></div><span>${escapeHTML(label)}</span></div>`).join("")}</div>`;
+  duration.innerHTML = `<strong>Median ${summary.median_duration_minutes.toFixed(1)} min</strong><span>·</span><strong>${summary.total_hours.toFixed(2)} h total</strong><span>·</span><small>${summary.recordings} recordings</small>`;
 
   const coverage = $("[data-condition-coverage]");
   coverage.classList.remove("loading-block");
   coverage.innerHTML = AXES.map(axis => {
     const tiers = Object.entries(summary.condition_distribution[axis]);
-    return `<div class="coverage-row">
-      <div class="coverage-label"><b>${axis}</b><span>${AXIS_NAMES[axis]}</span></div>
-      <div class="coverage-bars" aria-label="${AXIS_NAMES[axis]} distribution">${tiers.map(([tier, count], index) =>
-        `<span style="width:${count / total * 100}%;--tier:${AXIS_COLORS[axis][index]}" title="${tier}: ${count} recordings"><b>${tier}</b><small>${count}</small></span>`
-      ).join("")}</div>
-    </div>`;
+    return `<section class="matrix-row axis-${axis.toLowerCase()}">
+      <header><b>${axis}</b><div><strong>${AXIS_META[axis].name}</strong><small>${AXIS_META[axis].hint}</small></div></header>
+      <div class="matrix-tiles" style="--columns:${tiers.length}" aria-label="${AXIS_META[axis].name} distribution">${tiers.map(([tier, count]) => {
+        const percentage = count / total * 100;
+        return `<button type="button" class="condition-tile" data-coverage-axis="${axis}" data-coverage-tier="${tier}" title="Filter the benchmark by ${tier}">
+          <span><b>${tier}</b><small>${percentage.toFixed(1)}%</small></span>
+          <strong>${escapeHTML(CONDITION_RANGES[tier])}</strong>
+          <p><b>${count}</b> recordings</p>
+          <i aria-hidden="true"><b style="width:${percentage}%"></b></i>
+        </button>`;
+      }).join("")}</div>
+    </section>`;
   }).join("");
 }
 
@@ -141,7 +148,7 @@ function leaderboardTable(systems) {
     const rows = systems.map(system => ({ ...system, scoreable: 99 - system.excluded })).sort((a, b) => b.scoreable - a.scoreable || a.soft_degradation - b.soft_degradation);
     const bestExcluded = Math.min(...rows.map(row => row.excluded));
     const bestSoft = Math.min(...rows.map(row => row.soft_degradation));
-    return `<table class="results-table"><thead><tr><th>System</th><th>Scoreable</th><th>Coverage</th><th>Excluded ↓</th><th>Soft degradation ↓</th></tr></thead><tbody>${rows.map(row => `
+    return `<table class="results-table"><thead><tr><th>System</th><th>Scoreable</th><th>Coverage</th><th>Excluded ↓</th><th>Soft Deg. Units ↓</th></tr></thead><tbody>${rows.map(row => `
       <tr><th><span>${escapeHTML(row.system)}</span></th><td>${row.scoreable} / 99</td><td><div class="coverage-meter"><i style="width:${row.scoreable / 99 * 100}%"></i></div><span>${(row.scoreable / 99 * 100).toFixed(1)}%</span></td><td class="${row.excluded === bestExcluded ? "best" : ""}">${row.excluded}</td><td class="${row.soft_degradation === bestSoft ? "best" : ""}">${row.soft_degradation}</td></tr>`).join("")}</tbody></table>`;
   }
 
@@ -155,8 +162,8 @@ function renderLeaderboard() {
   if (!state.core) return;
   $("[data-leaderboard]").innerHTML = leaderboardTable(state.core.leaderboard);
   $("[data-leaderboard-note]").textContent = state.boardView === "overall"
-    ? "Lower error is better. Best result in each column is highlighted."
-    : "Coverage is the share of recordings with structurally scoreable output.";
+    ? "Lower error is better; metrics are reported in %. Best result in each column is highlighted."
+    : "Coverage is the share of units retained for metric computation.";
 }
 
 function diagnosticValue(value, unit) {
@@ -172,14 +179,15 @@ function renderDiagnostics() {
   const allValues = data.series.flatMap(series => series.values.filter(value => value != null));
   const maxAbsolute = Math.max(...allValues.map(Math.abs), 0.01);
   $("[data-diagnostic-panel]").innerHTML = `
-    <div class="diagnostic-copy"><span class="diagnostic-tag">Controlled analysis</span><h3>${escapeHTML(data.title)}</h3><p>${escapeHTML(data.description)}</p><blockquote>${escapeHTML(data.note)}</blockquote></div>
+    <div class="diagnostic-copy"><span class="diagnostic-kicker">Key finding</span><h3>${escapeHTML(data.title)}</h3><p>${escapeHTML(data.description)}</p></div>
     <div class="diagnostic-chart">${data.series.map((series, seriesIndex) => `
       <section class="series-block"><div class="series-title"><span>${escapeHTML(series.label)}</span><small>${escapeHTML(series.unit)}</small></div>
       <div class="series-rows">${systems.map((system, index) => {
         const value = series.values[index];
         const width = value == null ? 0 : Math.abs(value) / maxAbsolute * 100;
         return `<div class="series-row"><span>${escapeHTML(system)}</span><div class="bar-track ${value < 0 ? "negative" : ""}"><i style="width:${width}%;--series:${seriesIndex}"></i></div><strong>${diagnosticValue(value, series.unit)}</strong></div>`;
-      }).join("")}</div></section>`).join("")}</div>`;
+      }).join("")}</div></section>`).join("")}</div>
+    <aside class="diagnostic-note"><span>Analysis note</span><p>${escapeHTML(data.note)}</p></aside>`;
 }
 
 function speakerColor(speaker, speakers) {
@@ -191,12 +199,22 @@ function conditionDetails(conditions) {
   return `<div class="condition-details">${AXES.map(axis => `<div><span>${axis}</span><p>${AXIS_NAMES[axis]}</p><strong>${escapeHTML(conditions[axis])}</strong></div>`).join("")}</div>`;
 }
 
-function caseCard(example, index) {
+function caseGalleryCard(example, index) {
+  return `<article class="case-card reveal" id="case-${escapeHTML(example.slug)}">
+    <div class="case-card-number">${String(index + 1).padStart(2, "0")}</div>
+    <div class="sample-tags"><span>${escapeHTML(example.scenario)}</span><span>${escapeHTML(example.language)}</span></div>
+    <h3>${escapeHTML(example.title)}</h3>
+    ${profilePills(example.conditions, true)}
+    <div class="case-card-foot"><span>${formatTime(example.clip_duration_seconds)} excerpt</span><button type="button" data-open-case="${escapeHTML(example.slug)}">Play / View details <span aria-hidden="true">→</span></button></div>
+  </article>`;
+}
+
+function caseDetail(example) {
   const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
   const transcriptStart = example.timeline.length ? Math.min(...example.timeline.map(segment => segment.start)) : 0;
   const transcriptEnd = example.timeline.length ? Math.max(...example.timeline.map(segment => segment.end)) : 0;
-  return `<article class="sample-card reveal" id="case-${escapeHTML(example.slug)}">
-    <header class="sample-head"><span class="sample-index">${String(index + 1).padStart(2, "0")}</span><div><div class="sample-tags"><span>Scenario · ${escapeHTML(example.scenario)}</span><span>Language · ${escapeHTML(example.language)}</span></div><h3>${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></div></header>
+  return `<article>
+    <header class="case-detail-head"><div class="sample-tags"><span>Scenario · ${escapeHTML(example.scenario)}</span><span>Language · ${escapeHTML(example.language)}</span></div><h2 id="case-dialog-title">${escapeHTML(example.title)}</h2><p>${escapeHTML(example.description)}</p><dl><div><dt>Recording device</dt><dd>${escapeHTML(example.recording_device)}</dd></div><div><dt>Clip duration</dt><dd>${formatTime(example.clip_duration_seconds)}</dd></div></dl></header>
     ${conditionDetails(example.conditions)}
     <div class="sample-player"><div><strong>Audio excerpt</strong><span>${formatTime(example.clip_duration_seconds)} · ${escapeHTML(example.recording_device)}</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio></div>
     <div class="caption-heading"><div><strong>Time-aligned reference</strong><span>${example.timeline.length} utterances · ${formatTime(transcriptStart)}–${formatTime(transcriptEnd)} · subtitles follow playback</span></div><a href="${escapeHTML(example.textgrid)}" download>Corrected TextGrid <span aria-hidden="true">↓</span></a></div>
@@ -220,27 +238,45 @@ function updateTranscript(audio) {
   if (!first) delete transcript.dataset.activeIndex;
 }
 
-function setupCasePlayers() {
-  const audios = $$('[data-case-audio]');
-  audios.forEach(audio => {
-    audio.addEventListener("play", () => audios.forEach(other => { if (other !== audio) other.pause(); }));
+function setupCaseDialog() {
+  const dialog = $("[data-case-dialog]");
+  const detail = $("[data-case-detail]", dialog);
+  if (dialog.dataset.ready) return;
+  dialog.dataset.ready = "true";
+
+  document.addEventListener("click", event => {
+    const opener = event.target.closest("[data-open-case]");
+    if (!opener || !state.core) return;
+    const example = state.core.examples.find(item => item.slug === opener.dataset.openCase);
+    if (!example) return;
+    detail.innerHTML = caseDetail(example);
+    const audio = $("[data-case-audio]", detail);
     audio.addEventListener("timeupdate", () => updateTranscript(audio));
     audio.addEventListener("seeked", () => updateTranscript(audio));
+    dialog.showModal();
   });
-  $("[data-case-grid]").addEventListener("click", event => {
+
+  detail.addEventListener("click", event => {
     const line = event.target.closest("[data-start]");
     if (!line) return;
-    const card = line.closest(".sample-card");
-    const audio = $("[data-case-audio]", card);
+    const audio = $("[data-case-audio]", detail);
     audio.currentTime = Number(line.dataset.start);
     audio.play();
+  });
+
+  $("[data-close-case]", dialog).addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener("close", () => {
+    const audio = $("[data-case-audio]", detail);
+    if (audio) audio.pause();
+    detail.innerHTML = "";
   });
 }
 
 function renderCases() {
-  $("[data-case-grid]").innerHTML = state.core.examples.map(caseCard).join("");
+  $("[data-case-grid]").innerHTML = state.core.examples.map(caseGalleryCard).join("");
   $("[data-case-grid]").querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
-  setupCasePlayers();
+  setupCaseDialog();
 }
 
 async function loadMetadata() {
@@ -273,6 +309,11 @@ function renderExplorer() {
     button.title = count ? `${count} recordings with the current filters` : "No recording has this combination";
     button.innerHTML = `<span>${escapeHTML(value)}</span><small>${count}</small>`;
   });
+  $$('[data-coverage-tier]').forEach(tile => {
+    const selected = state.filters[tile.dataset.coverageAxis] === tile.dataset.coverageTier;
+    tile.classList.toggle("active", selected);
+    tile.setAttribute("aria-pressed", String(selected));
+  });
   $("[data-explorer-status]").textContent = active.length ? "Filtered condition space" : "Complete condition space";
   $("[data-match-count]").textContent = matched.length;
   $("[data-active-profile]").textContent = active.length ? AXES.map(axis => state.filters[axis] || `${axis}*`).join(" · ") : "Any profile";
@@ -289,19 +330,9 @@ function renderExplorer() {
   const curated = state.core.examples.filter(example => curatedIDs.has(example.recording_id)).slice(0, 2);
   const representative = $("[data-representatives]");
   if (curated.length) {
-    representative.innerHTML = curated.map(example => `<article><div><span>Exact playable match · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`).join("");
-  } else if (matched.length) {
-    const nearest = state.core.examples.map(example => {
-      const differences = active.filter(([axis, tier]) => example.conditions[axis] !== tier);
-      const distance = differences.reduce((sum, [axis, tier]) => sum + Math.abs(Number(tier.slice(1)) - Number(example.conditions[axis].slice(1))), 0);
-      return { example, differences, distance, score: active.length - differences.length };
-    }).sort((a, b) => a.differences.length - b.differences.length || a.distance - b.distance || a.example.title.localeCompare(b.example.title)).slice(0, 2);
-    representative.innerHTML = `<p class="sample-guidance">${matched.length} recording${matched.length === 1 ? "" : "s"} match the selected metadata, but no public audio matches every selected tier. Closest playable examples:</p>${nearest.map(({ example, differences, score }) => {
-      const differenceText = differences.map(([axis, tier]) => `${axis}: ${tier} → ${example.conditions[axis]}`).join(" · ");
-      return `<article class="nearest-match"><div><span>Nearest playable · ${score}/${active.length} selected tiers</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}<p>Differs on ${escapeHTML(differenceText)}</p></div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`;
-    }).join("")}`;
+    representative.innerHTML = curated.map(example => `<article><div><span>Exact curated example · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><button class="case-link" type="button" data-open-case="${escapeHTML(example.slug)}">View case <span aria-hidden="true">→</span></button></article>`).join("");
   } else {
-    representative.innerHTML = `<p class="empty-state">No recording matches this combination. Unavailable next choices are disabled; reset one active tier to broaden the profile.</p>`;
+    representative.innerHTML = `<div class="no-curated"><p>No curated audio excerpt is available for this exact profile.</p><a href="#cases">Browse representative cases <span aria-hidden="true">→</span></a></div>`;
   }
 }
 
@@ -333,6 +364,16 @@ function setupInteractions() {
     menu.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
   }));
+
+  $("[data-condition-coverage]").addEventListener("click", async event => {
+    const tile = event.target.closest("[data-coverage-tier]");
+    if (!tile) return;
+    await loadMetadata();
+    AXES.forEach(axis => { state.filters[axis] = null; });
+    state.filters[tile.dataset.coverageAxis] = tile.dataset.coverageTier;
+    renderExplorer();
+    $("#explore").scrollIntoView({ behavior: "smooth" });
+  });
 
   $("[data-board-toggle]").addEventListener("click", event => {
     const button = event.target.closest("[data-view]");
