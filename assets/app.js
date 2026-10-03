@@ -40,8 +40,9 @@ function formatDuration(seconds) {
 }
 
 function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainder = Math.floor(seconds % 60);
+  const rounded = Math.round(seconds);
+  const minutes = Math.floor(rounded / 60);
+  const remainder = rounded % 60;
   return `${minutes}:${String(remainder).padStart(2, "0")}`;
 }
 
@@ -113,6 +114,15 @@ function renderOverview(summary) {
   scenarios.classList.remove("loading-block");
   scenarios.innerHTML = `<div class="rank-bars">${Object.entries(summary.scenario_distribution).map(([name, count]) => `
     <div><span>${escapeHTML(name)}</span><i><b style="width:${count / maxScenario * 100}%"></b></i><strong>${count}</strong></div>`).join("")}</div>`;
+
+  const duration = $("[data-overview-duration]");
+  const durationBins = Object.entries(summary.duration_distribution);
+  const maxDurationBin = Math.max(...durationBins.map(([, count]) => count));
+  duration.classList.remove("loading-block");
+  duration.innerHTML = `
+    <div class="duration-summary"><strong>${summary.median_duration_minutes.toFixed(1)} min</strong><span>median recording duration</span></div>
+    <div class="duration-chart" aria-label="Recording duration distribution">${durationBins.map(([label, count]) => `
+      <div class="duration-column" title="${escapeHTML(label)}: ${count} recordings"><strong>${count}</strong><div><i style="height:${count / maxDurationBin * 100}%"></i></div><span>${escapeHTML(label)}</span></div>`).join("")}</div>`;
 
   const coverage = $("[data-condition-coverage]");
   coverage.classList.remove("loading-block");
