@@ -301,19 +301,9 @@ function renderExplorer() {
   const curated = state.core.examples.filter(example => curatedIDs.has(example.recording_id)).slice(0, 2);
   const representative = $("[data-representatives]");
   if (curated.length) {
-    representative.innerHTML = curated.map(example => `<article><div><span>Exact playable match · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`).join("");
-  } else if (matched.length) {
-    const nearest = state.core.examples.map(example => {
-      const differences = active.filter(([axis, tier]) => example.conditions[axis] !== tier);
-      const distance = differences.reduce((sum, [axis, tier]) => sum + Math.abs(Number(tier.slice(1)) - Number(example.conditions[axis].slice(1))), 0);
-      return { example, differences, distance, score: active.length - differences.length };
-    }).sort((a, b) => a.differences.length - b.differences.length || a.distance - b.distance || a.example.title.localeCompare(b.example.title)).slice(0, 2);
-    representative.innerHTML = `<p class="sample-guidance">${matched.length} recording${matched.length === 1 ? "" : "s"} match the selected metadata, but no public audio matches every selected tier. Closest playable examples:</p>${nearest.map(({ example, differences, score }) => {
-      const differenceText = differences.map(([axis, tier]) => `${axis}: ${tier} → ${example.conditions[axis]}`).join(" · ");
-      return `<article class="nearest-match"><div><span>Nearest playable · ${score}/${active.length} selected tiers</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}<p>Differs on ${escapeHTML(differenceText)}</p></div><a href="#case-${escapeHTML(example.slug)}">Play sample <span aria-hidden="true">→</span></a></article>`;
-    }).join("")}`;
+    representative.innerHTML = curated.map(example => `<article><div><span>Exact curated example · ${escapeHTML(example.scenario)} · ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4>${profilePills(example.conditions, true)}</div><a href="#case-${escapeHTML(example.slug)}">View case <span aria-hidden="true">→</span></a></article>`).join("");
   } else {
-    representative.innerHTML = `<p class="empty-state">No recording matches this combination. Unavailable next choices are disabled; reset one active tier to broaden the profile.</p>`;
+    representative.innerHTML = `<div class="no-curated"><p>No curated audio excerpt is available for this exact profile.</p><a href="#cases">Browse representative cases <span aria-hidden="true">→</span></a></div>`;
   }
 }
 
