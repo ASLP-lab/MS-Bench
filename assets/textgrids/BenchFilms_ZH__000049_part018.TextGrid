@@ -1,0 +1,324 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000
+xmax = 296.635000
+tiers? <exists>
+size = 8
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 11
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 4.459000
+                text = ""
+            intervals [2]:
+                xmin = 4.459000
+                xmax = 5.654000
+                text = "阿妮。"
+            intervals [3]:
+                xmin = 5.654000
+                xmax = 13.010000
+                text = ""
+            intervals [4]:
+                xmin = 13.010000
+                xmax = 13.835000
+                text = "阿妮。"
+            intervals [5]:
+                xmin = 13.835000
+                xmax = 29.072000
+                text = ""
+            intervals [6]:
+                xmin = 29.072000
+                xmax = 30.206000
+                text = "在。"
+            intervals [7]:
+                xmin = 30.206000
+                xmax = 32.192000
+                text = ""
+            intervals [8]:
+                xmin = 32.192000
+                xmax = 33.875000
+                text = "没人毁得了它。"
+            intervals [9]:
+                xmin = 33.875000
+                xmax = 197.000000
+                text = ""
+            intervals [10]:
+                xmin = 197.000000
+                xmax = 198.000000
+                text = "跑！"
+            intervals [11]:
+                xmin = 198.000000
+                xmax = 296.635000
+                text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 24
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 8.681000
+                text = ""
+            intervals [2]:
+                xmin = 8.681000
+                xmax = 10.086000
+                text = "嘿嘿。"
+            intervals [3]:
+                xmin = 10.086000
+                xmax = 38.513000
+                text = ""
+            intervals [4]:
+                xmin = 38.513000
+                xmax = 40.016000
+                text = "老马！"
+            intervals [5]:
+                xmin = 40.016000
+                xmax = 40.995000
+                text = ""
+            intervals [6]:
+                xmin = 40.995000
+                xmax = 47.953000
+                text = "谢谢你亲手为我送来这么大一个贺礼，可惜你命短，喝不上喜酒喽！"
+            intervals [7]:
+                xmin = 47.953000
+                xmax = 48.192000
+                text = ""
+            intervals [8]:
+                xmin = 48.192000
+                xmax = 52.972000
+                text = "吉时已到，哈哈！我得回去洞房花烛夜了。"
+            intervals [9]:
+                xmin = 52.972000
+                xmax = 110.741000
+                text = ""
+            intervals [10]:
+                xmin = 110.741000
+                xmax = 116.453000
+                text = "哦吼！哈哈哈哈，阿努，让他们见识一下本可汗的实力。"
+            intervals [11]:
+                xmin = 116.453000
+                xmax = 232.270000
+                text = ""
+            intervals [12]:
+                xmin = 232.270000
+                xmax = 238.836000
+                text = "小唯将军，加冕大漠可汗之位，可是你叔父亲口许诺的，你这是意欲何为啊？"
+            intervals [13]:
+                xmin = 238.836000
+                xmax = 247.203000
+                text = ""
+            intervals [14]:
+                xmin = 247.203000
+                xmax = 248.136000
+                text = "哼！"
+            intervals [15]:
+                xmin = 248.136000
+                xmax = 249.734000
+                text = ""
+            intervals [16]:
+                xmin = 249.734000
+                xmax = 258.143000
+                text = "在军帐对你那是客气。在此地，本可汗还怕你？还愣着，给我宰了他！"
+            intervals [17]:
+                xmin = 258.143000
+                xmax = 262.164000
+                text = ""
+            intervals [18]:
+                xmin = 262.164000
+                xmax = 263.587000
+                text = "快！"
+            intervals [19]:
+                xmin = 263.587000
+                xmax = 265.153000
+                text = "给本可汗杀了他！"
+            intervals [20]:
+                xmin = 265.153000
+                xmax = 269.109000
+                text = ""
+            intervals [21]:
+                xmin = 269.109000
+                xmax = 271.084000
+                text = "想出人头地的就给我上！"
+            intervals [22]:
+                xmin = 271.084000
+                xmax = 271.134000
+                text = ""
+            intervals [23]:
+                xmin = 271.134000
+                xmax = 274.633000
+                text = "拿到他的首级，赏一百金币！"
+            intervals [24]:
+                xmin = 274.633000
+                xmax = 296.635000
+                text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "spk_03"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 5
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 20.965000
+                text = ""
+            intervals [2]:
+                xmin = 20.965000
+                xmax = 22.672000
+                text = "莫家集。"
+            intervals [3]:
+                xmin = 22.672000
+                xmax = 26.173000
+                text = ""
+            intervals [4]:
+                xmin = 26.173000
+                xmax = 28.222000
+                text = "莫家集还在吗？"
+            intervals [5]:
+                xmin = 28.222000
+                xmax = 296.635000
+                text = ""
+    item [4]:
+        class = "IntervalTier"
+        name = "spk_04"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 103.450000
+                text = ""
+            intervals [2]:
+                xmin = 103.450000
+                xmax = 105.489000
+                text = "呀！"
+            intervals [3]:
+                xmin = 105.489000
+                xmax = 296.635000
+                text = ""
+    item [5]:
+        class = "IntervalTier"
+        name = "spk_05"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 11
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 127.016000
+                text = ""
+            intervals [2]:
+                xmin = 127.016000
+                xmax = 131.184000
+                text = "时机已到，传令下去，即刻开拔焉支山。"
+            intervals [3]:
+                xmin = 131.184000
+                xmax = 135.391000
+                text = ""
+            intervals [4]:
+                xmin = 135.391000
+                xmax = 136.850000
+                text = "你留下。"
+            intervals [5]:
+                xmin = 136.850000
+                xmax = 137.770000
+                text = ""
+            intervals [6]:
+                xmin = 137.770000
+                xmax = 139.327000
+                text = "想做什么就做什么。"
+            intervals [7]:
+                xmin = 139.327000
+                xmax = 140.744000
+                text = ""
+            intervals [8]:
+                xmin = 140.744000
+                xmax = 142.948000
+                text = "记住，除去甲胄，"
+            intervals [9]:
+                xmin = 142.948000
+                xmax = 143.613000
+                text = ""
+            intervals [10]:
+                xmin = 143.613000
+                xmax = 145.105000
+                text = "你就是你。"
+            intervals [11]:
+                xmin = 145.105000
+                xmax = 296.635000
+                text = ""
+    item [6]:
+        class = "IntervalTier"
+        name = "spk_06"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 116.493000
+                text = ""
+            intervals [2]:
+                xmin = 116.493000
+                xmax = 118.521000
+                text = "阿杜南！阿乐！"
+            intervals [3]:
+                xmin = 118.521000
+                xmax = 296.635000
+                text = ""
+    item [7]:
+        class = "IntervalTier"
+        name = "spk_07"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 7
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 131.202000
+                text = ""
+            intervals [2]:
+                xmin = 131.202000
+                xmax = 135.390000
+                text = "莫家军正在激战，我们全军却在此时撤离，是不是？"
+            intervals [3]:
+                xmin = 135.390000
+                xmax = 229.968000
+                text = ""
+            intervals [4]:
+                xmin = 229.968000
+                xmax = 232.251000
+                text = "滥杀无辜不是可汗之为。"
+            intervals [5]:
+                xmin = 232.251000
+                xmax = 239.110000
+                text = ""
+            intervals [6]:
+                xmin = 239.110000
+                xmax = 247.121000
+                text = "大军已开拔焉支山。我此刻无甲在身，只是一介百姓。这些老幼妇孺，无碍你可汗之位。"
+            intervals [7]:
+                xmin = 247.121000
+                xmax = 296.635000
+                text = ""
+    item [8]:
+        class = "IntervalTier"
+        name = "spk_08"
+        xmin = 0.000000
+        xmax = 296.635000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 195.824000
+                text = ""
+            intervals [2]:
+                xmin = 195.824000
+                xmax = 196.942000
+                text = "被围了！"
+            intervals [3]:
+                xmin = 196.942000
+                xmax = 296.635000
+                text = ""

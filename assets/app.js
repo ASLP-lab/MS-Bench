@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "2026100302";
+const DATA_VERSION = "2026100303";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
 const AXIS_COLORS = {
@@ -195,11 +195,13 @@ function conditionDetails(conditions) {
 
 function caseCard(example, index) {
   const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
+  const transcriptStart = example.timeline.length ? Math.min(...example.timeline.map(segment => segment.start)) : 0;
+  const transcriptEnd = example.timeline.length ? Math.max(...example.timeline.map(segment => segment.end)) : 0;
   return `<article class="sample-card reveal" id="case-${escapeHTML(example.slug)}">
     <header class="sample-head"><span class="sample-index">${String(index + 1).padStart(2, "0")}</span><div><div class="sample-tags"><span>Scenario · ${escapeHTML(titleCase(example.scenario))}</span><span>Language · ${escapeHTML(example.language)}</span></div><h3>${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></div></header>
     ${conditionDetails(example.conditions)}
     <div class="sample-player"><div><strong>Audio excerpt</strong><span>${formatTime(example.clip_duration_seconds)} · ${escapeHTML(example.recording_device)}</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio></div>
-    <div class="caption-heading"><strong>Time-aligned reference</strong><span>Subtitles follow playback</span></div>
+    <div class="caption-heading"><div><strong>Time-aligned reference</strong><span>${example.timeline.length} utterances · ${formatTime(transcriptStart)}–${formatTime(transcriptEnd)} · subtitles follow playback</span></div><a href="${escapeHTML(example.textgrid)}" download>Corrected TextGrid <span aria-hidden="true">↓</span></a></div>
     <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}">${example.timeline.map((segment, segmentIndex) => `
       <button type="button" class="caption-line" data-caption-index="${segmentIndex}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b style="--speaker:${speakerColor(segment.speaker, speakers)}">${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
   </article>`;

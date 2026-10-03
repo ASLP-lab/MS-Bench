@@ -1,0 +1,218 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 89.781193809
+tiers? <exists>
+size = 3
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "B1"
+        xmin = 0
+        xmax = 89.781193809
+        intervals: size = 28
+        intervals [1]:
+            xmin = 0.0
+            xmax = 0.970914525
+            text = ""
+        intervals [2]:
+            xmin = 0.970914525
+            xmax = 2.257133027
+            text = "ACB 多少求了没有"
+        intervals [3]:
+            xmin = 2.257133027
+            xmax = 11.105142347
+            text = ""
+        intervals [4]:
+            xmin = 11.105142347
+            xmax = 13.71890364
+            text = "那我这个 BCP 等于多<pause>这个 BCF 多少知不知道"
+        intervals [5]:
+            xmin = 13.71890364
+            xmax = 19.222046344
+            text = ""
+        intervals [6]:
+            xmin = 19.222046344
+            xmax = 25.374835025
+            text = "啧咱们刚强调过八字全等是平行啊平行啊<pause>用平行了没有"
+        intervals [7]:
+            xmin = 25.374835025
+            xmax = 30.325753442
+            text = ""
+        intervals [8]:
+            xmin = 30.325753442
+            xmax = 33.0214713
+            text = "CF 咋来的 C 平行 AB 啊用了没有"
+        intervals [9]:
+            xmin = 33.0214713
+            xmax = 38.792188603
+            text = ""
+        intervals [10]:
+            xmin = 38.792188603
+            xmax = 43.927693395
+            text = "不是刚强调几遍呢八字全等不仅有全等<pause>还有那个平行必须要用上"
+        intervals [11]:
+            xmin = 43.927693395
+            xmax = 44.512253964
+            text = ""
+        intervals [12]:
+            xmin = 44.512253964
+            xmax = 49.700524411
+            text = "我还拿这个题给你举例子这个平行<pause>只有平行它俩才相等才有了全等是不是"
+        intervals [13]:
+            xmin = 49.700524411
+            xmax = 52.525916321
+            text = ""
+        intervals [14]:
+            xmin = 52.525916321
+            xmax = 56.997489408
+            text = "啊<pause>我这个 CF 咋来的是过点 C 做 AB 的平行线呢"
+        intervals [15]:
+            xmin = 56.997489408
+            xmax = 57.616095018
+            text = ""
+        intervals [16]:
+            xmin = 57.616095018
+            xmax = 58.011258533
+            text = "是不是"
+        intervals [17]:
+            xmin = 58.011258533
+            xmax = 60.733882014
+            text = ""
+        intervals [18]:
+            xmin = 60.733882014
+            xmax = 62.293873932
+            text = "CF 平行 AB 有没有问题"
+        intervals [19]:
+            xmin = 62.293873932
+            xmax = 64.961885228
+            text = ""
+        intervals [20]:
+            xmin = 64.961885228
+            xmax = 66.04664782
+            text = "所以 BCF 等于谁"
+        intervals [21]:
+            xmin = 66.04664782
+            xmax = 72.112441922
+            text = ""
+        intervals [22]:
+            xmin = 72.112441922
+            xmax = 72.8666102
+            text = "ABC 多少"
+        intervals [23]:
+            xmin = 72.8666102
+            xmax = 76.479926485
+            text = ""
+        intervals [24]:
+            xmin = 76.479926485
+            xmax = 77.771310523
+            text = "那答案出来了没有没有"
+        intervals [25]:
+            xmin = 77.771310523
+            xmax = 84.12063977
+            text = ""
+        intervals [26]:
+            xmin = 84.12063977
+            xmax = 86.006060466
+            text = "啊这有什么难度吗这题我就奇怪了"
+        intervals [27]:
+            xmin = 86.006060466
+            xmax = 88.011997677
+            text = ""
+        intervals [28]:
+            xmin = 88.011997677
+            xmax = 89.781193809
+            text = "刚强调过了平行咋不用呢"
+    item [2]:
+        class = "IntervalTier"
+        name = "A1"
+        xmin = 0
+        xmax = 89.781193809
+        intervals: size = 17
+        intervals [1]:
+            xmin = 0.0
+            xmax = 5.50943771
+            text = ""
+        intervals [2]:
+            xmin = 5.50943771
+            xmax = 8.869412705
+            text = "ACB 是<pause>九十减二分之阿尔法"
+        intervals [3]:
+            xmin = 8.869412705
+            xmax = 17.779412858
+            text = ""
+        intervals [4]:
+            xmin = 17.779412858
+            xmax = 18.311463082
+            text = "不知道"
+        intervals [5]:
+            xmin = 18.311463082
+            xmax = 51.229534986
+            text = ""
+        intervals [6]:
+            xmin = 51.229534986
+            xmax = 51.78741289
+            text = "嗯"
+        intervals [7]:
+            xmin = 51.78741289
+            xmax = 59.454877452
+            text = ""
+        intervals [8]:
+            xmin = 59.454877452
+            xmax = 59.839709895
+            text = "嗯"
+        intervals [9]:
+            xmin = 59.839709895
+            xmax = 64.112154531
+            text = ""
+        intervals [10]:
+            xmin = 64.112154531
+            xmax = 64.520231887
+            text = "没有"
+        intervals [11]:
+            xmin = 64.520231887
+            xmax = 70.392318383
+            text = ""
+        intervals [12]:
+            xmin = 70.392318383
+            xmax = 71.608802147
+            text = "ABC"
+        intervals [13]:
+            xmin = 71.608802147
+            xmax = 73.837006632
+            text = ""
+        intervals [14]:
+            xmin = 73.837006632
+            xmax = 76.303550145
+            text = "<pause>九十减二分之阿尔法"
+        intervals [15]:
+            xmin = 76.303550145
+            xmax = 82.595482566
+            text = ""
+        intervals [16]:
+            xmin = 82.595482566
+            xmax = 82.962235633
+            text = "哦"
+        intervals [17]:
+            xmin = 82.962235633
+            xmax = 89.781193809
+            text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "A2"
+        xmin = 0
+        xmax = 89.781193809
+        intervals: size = 3
+        intervals [1]:
+            xmin = 0.0
+            xmax = 83.022901986
+            text = ""
+        intervals [2]:
+            xmin = 83.022901986
+            xmax = 83.725282849
+            text = "爸爸"
+        intervals [3]:
+            xmin = 83.725282849
+            xmax = 89.781193809
+            text = ""

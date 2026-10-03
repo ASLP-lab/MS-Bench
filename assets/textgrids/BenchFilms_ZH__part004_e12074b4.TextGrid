@@ -1,0 +1,604 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000
+xmax = 373.030000
+tiers? <exists>
+size = 2
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0.000000
+        xmax = 373.030000
+        intervals: size = 80
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 0.383000
+                text = ""
+            intervals [2]:
+                xmin = 0.383000
+                xmax = 2.946000
+                text = "对，我觉得尤其是你看她们之间的关系也是。"
+            intervals [3]:
+                xmin = 2.946000
+                xmax = 2.950000
+                text = ""
+            intervals [4]:
+                xmin = 2.950000
+                xmax = 6.577000
+                text = "我觉得女性之间的关系背后真正反映的是她们的自我。"
+            intervals [5]:
+                xmin = 6.577000
+                xmax = 6.640000
+                text = ""
+            intervals [6]:
+                xmin = 6.640000
+                xmax = 13.666000
+                text = "因为你讲一个一群人的关系，她们肯定简单粗暴讲就是两个方面，就是我们相亲相爱的部分和我们起冲突的部分，对吧？"
+            intervals [7]:
+                xmin = 13.666000
+                xmax = 13.927000
+                text = ""
+            intervals [8]:
+                xmin = 13.927000
+                xmax = 21.256000
+                text = "但你会发现在阳光姐妹淘里面，她们所有起冲突的部分，是与她的个人成长，她内心的那些东西高度相关的。"
+            intervals [9]:
+                xmin = 21.256000
+                xmax = 23.706000
+                text = "比如我是一个外省来的女孩，我很自卑。"
+            intervals [10]:
+                xmin = 23.706000
+                xmax = 23.836000
+                text = ""
+            intervals [11]:
+                xmin = 23.836000
+                xmax = 29.821000
+                text = "比如我家里欠了钱，然后我希望有一天我可以出人头地，所以我想要去当什么什么样的人。"
+            intervals [12]:
+                xmin = 29.821000
+                xmax = 30.135000
+                text = ""
+            intervals [13]:
+                xmin = 30.135000
+                xmax = 36.666000
+                text = "比如我自己背负什么样的创伤，所以我不爱讲话，我也不信任关系，这导致了我们种种之间的彼此的看不起。"
+            intervals [14]:
+                xmin = 36.666000
+                xmax = 36.700000
+                text = ""
+            intervals [15]:
+                xmin = 36.700000
+                xmax = 45.168000
+                text = "它是和你的自卑，你的报复，你在家庭里面的爱的缺失，你所有求而不得，想要获得的那个东西高度相关的。"
+            intervals [16]:
+                xmin = 45.168000
+                xmax = 45.452000
+                text = ""
+            intervals [17]:
+                xmin = 45.452000
+                xmax = 54.167000
+                text = "而你们的相亲相爱，也是因为你们看到了对方身上这一部分，你看到了他的自卑，因而你不再恨他了，不再觉得他是个穷酸的乡下人。"
+            intervals [18]:
+                xmin = 54.167000
+                xmax = 54.200000
+                text = ""
+            intervals [19]:
+                xmin = 54.200000
+                xmax = 58.994000
+                text = "你看到了他承担的背后家庭的不容易，和他如何想要努力的做出改变。"
+            intervals [20]:
+                xmin = 58.994000
+                xmax = 59.238000
+                text = ""
+            intervals [21]:
+                xmin = 59.238000
+                xmax = 61.766000
+                text = "所以你想要愿意帮助他，成为他的同路人。"
+            intervals [22]:
+                xmin = 61.766000
+                xmax = 61.980000
+                text = ""
+            intervals [23]:
+                xmin = 61.980000
+                xmax = 71.653000
+                text = "人和人的关系的质感，不管是冲突还是相爱，都是因为我在你身上看见了真正的你，你也看见了真正的我，我们是有血有肉的人。"
+            intervals [24]:
+                xmin = 71.653000
+                xmax = 71.810000
+                text = ""
+            intervals [25]:
+                xmin = 71.810000
+                xmax = 73.881000
+                text = "所以才能够缔结深刻的连接。"
+            intervals [26]:
+                xmin = 73.881000
+                xmax = 74.097000
+                text = ""
+            intervals [27]:
+                xmin = 74.097000
+                xmax = 79.665000
+                text = "但是小时代里面所有的这种，不管是冲突还是相亲相爱，你都会觉得它和你是谁无关。"
+            intervals [28]:
+                xmin = 79.665000
+                xmax = 79.836000
+                text = ""
+            intervals [29]:
+                xmin = 79.836000
+                xmax = 84.201000
+                text = "它就是我决定选择你了，成为我的姐妹团的一员，就像皮卡丘一样。"
+            intervals [30]:
+                xmin = 84.201000
+                xmax = 93.021000
+                text = "那不管你是谁，你就当个皮卡丘一样，我就要给你最好的精灵球，带你住大房子，给你漂亮衣服，出了困难告诉我呀，怎么不找我帮忙？"
+            intervals [31]:
+                xmin = 93.021000
+                xmax = 96.530000
+                text = "就是所有的一切就好像是搭在一个空中楼阁之上。"
+            intervals [32]:
+                xmin = 96.530000
+                xmax = 104.582000
+                text = ""
+            intervals [33]:
+                xmin = 104.582000
+                xmax = 104.956000
+                text = "对。"
+            intervals [34]:
+                xmin = 104.956000
+                xmax = 116.680000
+                text = ""
+            intervals [35]:
+                xmin = 116.680000
+                xmax = 121.391000
+                text = "是我是谁，以及你是谁决定了我们是朋友还是敌人还是陌生人。"
+            intervals [36]:
+                xmin = 121.391000
+                xmax = 131.810000
+                text = ""
+            intervals [37]:
+                xmin = 131.810000
+                xmax = 137.558000
+                text = "哪怕你不一定要讲述你们成为朋友这个过程，但你至少应该让观众看来是有说服力的。"
+            intervals [38]:
+                xmin = 137.558000
+                xmax = 137.570000
+                text = ""
+            intervals [39]:
+                xmin = 137.570000
+                xmax = 142.418000
+                text = "至少的一个前提是观众应该能看出来你是一个怎样的人，他是一个怎样的人。"
+            intervals [40]:
+                xmin = 142.418000
+                xmax = 142.624000
+                text = ""
+            intervals [41]:
+                xmin = 142.624000
+                xmax = 149.537000
+                text = "这个怎样的人并不仅仅指的是说我是一个万千少女中平凡的人，他是一个有钱又厉害的人，这是远远不够的。"
+            intervals [42]:
+                xmin = 149.537000
+                xmax = 164.976000
+                text = ""
+            intervals [43]:
+                xmin = 164.976000
+                xmax = 171.144000
+                text = "对，因为他们的关系的递进，是伴随着我们对于这个人的了解，以及他们自己对自我的了解。"
+            intervals [44]:
+                xmin = 171.144000
+                xmax = 172.349000
+                text = "但是小时代相反。"
+            intervals [45]:
+                xmin = 172.349000
+                xmax = 172.601000
+                text = ""
+            intervals [46]:
+                xmin = 172.601000
+                xmax = 182.423000
+                text = "你会觉得他们关系的递进，还有所有冲突的产生，与我是谁无关，而往往只能借助于一些最经典和更加刻板的戏剧冲突，那就是爱情。"
+            intervals [47]:
+                xmin = 182.423000
+                xmax = 182.690000
+                text = ""
+            intervals [48]:
+                xmin = 182.690000
+                xmax = 199.934000
+                text = "而且和男人的关系，你就会发现，为什么时代姐妹花这个名字，以及塑料闺蜜塑料姐妹长期以来被污名，它往往是因为被刻画成围绕一个男性的关系。一群女生在一起，不管是两个还是两个以上，她们所有的争夺，勾心斗角，一定是围绕着男人而起的。"
+            intervals [49]:
+                xmin = 199.934000
+                xmax = 221.320000
+                text = ""
+            intervals [50]:
+                xmin = 221.320000
+                xmax = 222.074000
+                text = "失恋。"
+            intervals [51]:
+                xmin = 222.074000
+                xmax = 230.360000
+                text = ""
+            intervals [52]:
+                xmin = 230.360000
+                xmax = 230.578000
+                text = "嗯。"
+            intervals [53]:
+                xmin = 230.578000
+                xmax = 233.631000
+                text = ""
+            intervals [54]:
+                xmin = 233.631000
+                xmax = 234.055000
+                text = "嗯。"
+            intervals [55]:
+                xmin = 234.055000
+                xmax = 249.123000
+                text = ""
+            intervals [56]:
+                xmin = 249.123000
+                xmax = 249.602000
+                text = "嗯。"
+            intervals [57]:
+                xmin = 249.602000
+                xmax = 255.595000
+                text = "我觉得他能够在当时青春期的时候，就淡淡的处理这件事，也是因为他能够看见。"
+            intervals [58]:
+                xmin = 255.595000
+                xmax = 255.602000
+                text = ""
+            intervals [59]:
+                xmin = 255.602000
+                xmax = 265.469000
+                text = "她姐妹，就是我喜欢的这个男孩，喜欢上的另一个对象，是一个我知道她是谁的人，她是一个这样的女孩，她怎么怎么样，你就会能够理解这件事。"
+            intervals [60]:
+                xmin = 265.469000
+                xmax = 265.719000
+                text = ""
+            intervals [61]:
+                xmin = 265.719000
+                xmax = 269.965000
+                text = "但是你不觉得，当顾里和南湘去抢一个男人的时候。"
+            intervals [62]:
+                xmin = 269.965000
+                xmax = 270.200000
+                text = ""
+            intervals [63]:
+                xmin = 270.200000
+                xmax = 274.656000
+                text = "顾里其实根本不知道南湘是谁嘛，就是你觉得顾里眼中，她看到过南湘是谁吗？"
+            intervals [64]:
+                xmin = 274.656000
+                xmax = 275.822000
+                text = "我觉得从来没有看到过。"
+            intervals [65]:
+                xmin = 275.822000
+                xmax = 277.267000
+                text = ""
+            intervals [66]:
+                xmin = 277.267000
+                xmax = 282.646000
+                text = "你根本南湘就是太刻板印象了，就是一个壳在那里，我觉得顾里看到的南湘并不比我们看到的更多。"
+            intervals [67]:
+                xmin = 282.646000
+                xmax = 283.090000
+                text = ""
+            intervals [68]:
+                xmin = 283.090000
+                xmax = 288.051000
+                text = "所以她的愤怒和她们关系的纠葛，也只是基于一个空壳对空壳的纠葛。"
+            intervals [69]:
+                xmin = 288.051000
+                xmax = 298.746000
+                text = ""
+            intervals [70]:
+                xmin = 298.746000
+                xmax = 302.008000
+                text = "有一些变化，比如我印象很深刻的是七月与安生。"
+            intervals [71]:
+                xmin = 302.008000
+                xmax = 302.268000
+                text = ""
+            intervals [72]:
+                xmin = 302.268000
+                xmax = 310.593000
+                text = "我觉得可能是我自己在院线上看到的第一部以双女主为核心的，而且是真正的双女主，不是那种假模假式。"
+            intervals [73]:
+                xmin = 310.593000
+                xmax = 311.926000
+                text = ""
+            intervals [74]:
+                xmin = 311.926000
+                xmax = 315.936000
+                text = "我也不知道，因为后面后面又出了太多奇怪的工业产品。"
+            intervals [75]:
+                xmin = 315.936000
+                xmax = 316.028000
+                text = ""
+            intervals [76]:
+                xmin = 316.028000
+                xmax = 322.911000
+                text = "但是我觉得七月与安生，你能看到七月是谁，你也能看到安生是谁，七月和安生也知道彼此是谁，这已经很难得了。"
+            intervals [77]:
+                xmin = 322.911000
+                xmax = 330.225000
+                text = ""
+            intervals [78]:
+                xmin = 330.225000
+                xmax = 330.669000
+                text = "嗯。"
+            intervals [79]:
+                xmin = 330.669000
+                xmax = 372.479000
+                text = ""
+            intervals [80]:
+                xmin = 372.479000
+                xmax = 373.030000
+                text = "安生。"
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0.000000
+        xmax = 373.030000
+        intervals: size = 66
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 96.520000
+                text = ""
+            intervals [2]:
+                xmin = 96.520000
+                xmax = 101.525000
+                text = "对，这是我在看小时代时候，一直以来一个困惑，就是她们这几个人是怎么玩到一块去的。"
+            intervals [3]:
+                xmin = 101.525000
+                xmax = 101.745000
+                text = ""
+            intervals [4]:
+                xmin = 101.745000
+                xmax = 104.593000
+                text = "因为故事的开场，她们就是时代姐妹花了。"
+            intervals [5]:
+                xmin = 104.593000
+                xmax = 104.952000
+                text = ""
+            intervals [6]:
+                xmin = 104.952000
+                xmax = 112.036000
+                text = "她们就住在一个大房子里面了，就像我们在大学的时候从来没有住在一个合租的大 house 里面，但是她们就这样住在了一起。"
+            intervals [7]:
+                xmin = 112.036000
+                xmax = 112.170000
+                text = ""
+            intervals [8]:
+                xmin = 112.170000
+                xmax = 116.718000
+                text = "因为我觉得对我来说非常重要的是人物的关系，首先是人物的关系是怎么建立的。"
+            intervals [9]:
+                xmin = 116.718000
+                xmax = 121.140000
+                text = ""
+            intervals [10]:
+                xmin = 121.140000
+                xmax = 128.015000
+                text = "对，因为我们并不是李冰冰和李雪，我们并不是打娘胎里面就认识的，就是你们之所以从陌生人变成朋友，一定是。"
+            intervals [11]:
+                xmin = 128.015000
+                xmax = 128.278000
+                text = ""
+            intervals [12]:
+                xmin = 128.278000
+                xmax = 131.816000
+                text = "你们之间发现了彼此身上相似的地方，或说彼此可以承诺的地方。"
+            intervals [13]:
+                xmin = 131.816000
+                xmax = 149.740000
+                text = ""
+            intervals [14]:
+                xmin = 149.740000
+                xmax = 155.704000
+                text = "对，所以像阳光姐妹淘里面，主人公娜美，她就是从乡下过来，她非常的敏感，非常的自卑。"
+            intervals [15]:
+                xmin = 155.704000
+                xmax = 155.869000
+                text = ""
+            intervals [16]:
+                xmin = 155.869000
+                xmax = 162.897000
+                text = "然后她对于这样的小群体，她其实也是一直保持一个远远观望的态度，但是直到这个小群体以自己的方式逐步接纳了她。"
+            intervals [17]:
+                xmin = 162.897000
+                xmax = 163.048000
+                text = ""
+            intervals [18]:
+                xmin = 163.048000
+                xmax = 164.914000
+                text = "像这样的过程，对我们来说就是自然的嘛。"
+            intervals [19]:
+                xmin = 164.914000
+                xmax = 182.643000
+                text = ""
+            intervals [20]:
+                xmin = 182.643000
+                xmax = 183.014000
+                text = "对。"
+            intervals [21]:
+                xmin = 183.014000
+                xmax = 200.130000
+                text = ""
+            intervals [22]:
+                xmin = 200.130000
+                xmax = 213.837000
+                text = "是的，其实阳光姐妹淘也有同样的情节，就是主人公暗恋上的那个男孩，其实后来是跟那个女神在一起嘛，并且她亲眼撞见了他们在一起，那它也很容易倒向了那个撒狗血的情节，但是他并没有这么处理，他其实处理是很淡淡的。"
+            intervals [23]:
+                xmin = 213.837000
+                xmax = 214.000000
+                text = ""
+            intervals [24]:
+                xmin = 214.000000
+                xmax = 218.334000
+                text = "主人公发现这一点，但是长年来，他一直把这个秘密有点像藏在自己的心里。"
+            intervals [25]:
+                xmin = 218.334000
+                xmax = 218.340000
+                text = ""
+            intervals [26]:
+                xmin = 218.340000
+                xmax = 221.115000
+                text = "他就像可能很多女孩在青春期都会经历的一次。"
+            intervals [27]:
+                xmin = 221.115000
+                xmax = 222.080000
+                text = ""
+            intervals [28]:
+                xmin = 222.080000
+                xmax = 224.507000
+                text = "对，只属于自己的盛大的暗恋和失恋。"
+            intervals [29]:
+                xmin = 224.507000
+                xmax = 225.547000
+                text = "然后对方完全不知道。"
+            intervals [30]:
+                xmin = 225.547000
+                xmax = 225.700000
+                text = ""
+            intervals [31]:
+                xmin = 225.700000
+                xmax = 230.354000
+                text = "然后我就很喜欢这个电影最后结尾的处理吧，因为很多年之后，他们再一次相逢了。"
+            intervals [32]:
+                xmin = 230.354000
+                xmax = 230.563000
+                text = ""
+            intervals [33]:
+                xmin = 230.563000
+                xmax = 232.376000
+                text = "他就看到自己青春期的那个男神，他就已经。"
+            intervals [34]:
+                xmin = 232.376000
+                xmax = 232.676000
+                text = ""
+            intervals [35]:
+                xmin = 232.676000
+                xmax = 234.052000
+                text = "发福了，长胖了。"
+            intervals [36]:
+                xmin = 234.052000
+                xmax = 234.070000
+                text = ""
+            intervals [37]:
+                xmin = 234.070000
+                xmax = 236.670000
+                text = "然后他就惊讶地发现，对方对他一点印象都没有。"
+            intervals [38]:
+                xmin = 236.670000
+                xmax = 236.969000
+                text = ""
+            intervals [39]:
+                xmin = 236.969000
+                xmax = 238.629000
+                text = "这件事情最终的结局就是这样。"
+            intervals [40]:
+                xmin = 238.629000
+                xmax = 239.004000
+                text = ""
+            intervals [41]:
+                xmin = 239.004000
+                xmax = 241.739000
+                text = "然后他其实也是在那一刻，我觉得他是恍然大悟了。"
+            intervals [42]:
+                xmin = 241.739000
+                xmax = 249.110000
+                text = "哦，那真正的对他来说念念不忘的，其实并不是这个男性，而是说他和他的姐妹淘共同构筑的那一段青春记忆。"
+            intervals [43]:
+                xmin = 249.110000
+                xmax = 275.602000
+                text = ""
+            intervals [44]:
+                xmin = 275.602000
+                xmax = 277.603000
+                text = "我们观众其实也很难看到。"
+            intervals [45]:
+                xmin = 277.603000
+                xmax = 282.557000
+                text = ""
+            intervals [46]:
+                xmin = 282.557000
+                xmax = 282.901000
+                text = "是。"
+            intervals [47]:
+                xmin = 282.901000
+                xmax = 288.235000
+                text = ""
+            intervals [48]:
+                xmin = 288.235000
+                xmax = 298.854000
+                text = "对，但其实这种围绕着同一个男性来争夺某一段感情的女性关系，除了小时代，后面我们还是在很多文艺作品中反复看到，但同时我们也看到了它进步的地方。"
+            intervals [49]:
+                xmin = 298.854000
+                xmax = 310.213000
+                text = ""
+            intervals [50]:
+                xmin = 310.213000
+                xmax = 311.884000
+                text = "什么是假模假样的双女主？"
+            intervals [51]:
+                xmin = 311.884000
+                xmax = 315.937000
+                text = ""
+            intervals [52]:
+                xmin = 315.937000
+                xmax = 316.567000
+                text = "嗯嗯。"
+            intervals [53]:
+                xmin = 316.567000
+                xmax = 322.915000
+                text = ""
+            intervals [54]:
+                xmin = 322.915000
+                xmax = 330.226000
+                text = "对，而且我觉得那是我第一次好像在文艺作品中看到，就两个女性，她们有一点点互为镜像的关系。"
+            intervals [55]:
+                xmin = 330.226000
+                xmax = 330.500000
+                text = ""
+            intervals [56]:
+                xmin = 330.500000
+                xmax = 339.322000
+                text = "因为后来非常戳我的其实是这个片子，它最后的算是一个戏剧反转嘛，就是七月和安生到最后她们有点像互换了一样人生的那种感觉。"
+            intervals [57]:
+                xmin = 339.322000
+                xmax = 339.408000
+                text = ""
+            intervals [58]:
+                xmin = 339.408000
+                xmax = 349.093000
+                text = "比如说安生平时表现出来的是比较的张扬跋扈的，但其实她内心对于那种传统的家庭，对她是很渴望爱，渴望家庭，渴望联系的。"
+            intervals [59]:
+                xmin = 349.093000
+                xmax = 349.321000
+                text = ""
+            intervals [60]:
+                xmin = 349.321000
+                xmax = 357.702000
+                text = "但是你看七月，她平时表现的是那样的一个好像乖乖女的形象，但其实她内心一直有叛逆的那一面，对对于自由那种向往。"
+            intervals [61]:
+                xmin = 357.702000
+                xmax = 357.865000
+                text = ""
+            intervals [62]:
+                xmin = 357.865000
+                xmax = 363.830000
+                text = "但是随着她们关系的递进，以及随着她们两个个人成长阶段的变化，你就会发现她们逐步发生了这样一个调转。"
+            intervals [63]:
+                xmin = 363.830000
+                xmax = 364.015000
+                text = ""
+            intervals [64]:
+                xmin = 364.015000
+                xmax = 368.379000
+                text = "所以最后片子我记得有个台词嘛，就说这句话有点咯噔，但是我一直都很喜欢这句话。"
+            intervals [65]:
+                xmin = 368.379000
+                xmax = 368.610000
+                text = ""
+            intervals [66]:
+                xmin = 368.610000
+                xmax = 373.030000
+                text = "安生变成了安稳了的七月，七月变成了流浪者的安生。"

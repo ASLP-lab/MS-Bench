@@ -270,7 +270,8 @@
         "end": 299.9,
         "text": "这个家长他没见到他肯定他他人家不能光听宣传，然后就叫他们带着孩子来学校。呃体验一下，看看咱学校的环境"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/aishell4__M_R003S01C01.TextGrid"
   },
   {
     "slug": "education",
@@ -435,7 +436,8 @@
         "end": 89.781,
         "text": "刚强调过了平行咋不用呢"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/SmoothConv_DuplexConv__1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active.TextGrid"
   },
   {
     "slug": "podcast",
@@ -840,7 +842,8 @@
         "end": 299.9,
         "text": "有一些变化，比如我印象很深刻的是七月与安生。"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/BenchFilms_ZH__part004_e12074b4.TextGrid"
   },
   {
     "slug": "film",
@@ -1047,7 +1050,8 @@
         "end": 274.633,
         "text": "拿到他的首级，赏一百金币！"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/BenchFilms_ZH__000049_part018.TextGrid"
   },
   {
     "slug": "dinner",
@@ -1860,7 +1864,8 @@
         "end": 299.9,
         "text": "yeah i went to disneyland in two thousand fifteen the december christmas"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/dipco_eval_U01_CH1__S06.TextGrid"
   },
   {
     "slug": "glasses",
@@ -2793,7 +2798,8 @@
         "end": 299.764,
         "text": "二次。"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/SmartGlassesChallenge__meet_0045.TextGrid"
   },
   {
     "slug": "vehicle",
@@ -3264,7 +3270,8 @@
         "end": 299.9,
         "text": "搞了好几年，得两三年吧，都谈到结婚了都，俺妈这都认可了都，就说就把这房子就给他你知道呗，就说了，就说你要是毕业了咋给你找工作，都给你就给你给你交钱儿找工作呗，就给你。"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/aishell5_DX01C01__eval1-013-DX01C01.TextGrid"
   },
   {
     "slug": "japanese",
@@ -3621,6 +3628,7 @@
         "end": 298.922,
         "text": "なんで、なんかちっちゃい頃割とトリック見てて"
       }
-    ]
+    ],
+    "textgrid": "assets/textgrids/MLC-SLM_Workshop-Evaluation_Set_2__Japanese__0435_001_phone.TextGrid"
   }
 ]

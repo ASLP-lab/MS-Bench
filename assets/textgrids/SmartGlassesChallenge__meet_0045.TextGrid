@@ -1,0 +1,4392 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 1057.924
+tiers? <exists>
+size = 6
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk01"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 199
+        intervals [1]:
+            xmin = 0.0
+            xmax = 1.394
+            text = ""
+        intervals [2]:
+            xmin = 1.394
+            xmax = 2.324
+            text = "行了行了。"
+        intervals [3]:
+            xmin = 2.324
+            xmax = 2.4140000000000006
+            text = ""
+        intervals [4]:
+            xmin = 2.4140000000000006
+            xmax = 3.8040000000000003
+            text = "人总算齐了吧？"
+        intervals [5]:
+            xmin = 3.8040000000000003
+            xmax = 4.074
+            text = ""
+        intervals [6]:
+            xmin = 4.074
+            xmax = 7.234000000000001
+            text = "哎，你迟到了一个小时啊，你就自罚一杯，翻篇了。"
+        intervals [7]:
+            xmin = 7.234000000000001
+            xmax = 7.654000000000001
+            text = ""
+        intervals [8]:
+            xmin = 7.654000000000001
+            xmax = 11.434
+            text = "毕竟咱们毕业这么多年了，难得的团聚。"
+        intervals [9]:
+            xmin = 11.434
+            xmax = 11.783999999999999
+            text = ""
+        intervals [10]:
+            xmin = 11.783999999999999
+            xmax = 15.884
+            text = "咱们就挨个简单说说自己的现状吧。哎，别给我搞虚的啊。"
+        intervals [11]:
+            xmin = 15.884
+            xmax = 16.064
+            text = ""
+        intervals [12]:
+            xmin = 16.064
+            xmax = 17.464
+            text = "说完咱们说个正事。"
+        intervals [13]:
+            xmin = 17.464
+            xmax = 17.774
+            text = ""
+        intervals [14]:
+            xmin = 17.774
+            xmax = 20.224
+            text = "五年后的同学聚会，咱们。"
+        intervals [15]:
+            xmin = 20.224
+            xmax = 20.343999999999998
+            text = ""
+        intervals [16]:
+            xmin = 20.343999999999998
+            xmax = 21.364
+            text = "提前弄好策划。"
+        intervals [17]:
+            xmin = 21.364
+            xmax = 95.214
+            text = ""
+        intervals [18]:
+            xmin = 95.214
+            xmax = 98.064
+            text = "哎，行了行了，别追问这些细节了。"
+        intervals [19]:
+            xmin = 98.064
+            xmax = 98.204
+            text = ""
+        intervals [20]:
+            xmin = 98.204
+            xmax = 102.08399999999999
+            text = "哎，你现在的金融赛道稳步发展了。哎，不对不对。"
+        intervals [21]:
+            xmin = 102.08399999999999
+            xmax = 102.39399999999999
+            text = ""
+        intervals [22]:
+            xmin = 102.39399999999999
+            xmax = 104.064
+            text = "你是民生服务赛道吧？"
+        intervals [23]:
+            xmin = 104.064
+            xmax = 104.11399999999999
+            text = ""
+        intervals [24]:
+            xmin = 104.11399999999999
+            xmax = 108.75399999999999
+            text = "转型稳打稳扎的，你还非常不错，挺，干的挺好的，这这几年。"
+        intervals [25]:
+            xmin = 108.75399999999999
+            xmax = 177.174
+            text = ""
+        intervals [26]:
+            xmin = 177.174
+            xmax = 178.484
+            text = "就爱吹牛。"
+        intervals [27]:
+            xmin = 178.484
+            xmax = 178.604
+            text = ""
+        intervals [28]:
+            xmin = 178.604
+            xmax = 181.204
+            text = "就爱装，说自己家多多多有钱。"
+        intervals [29]:
+            xmin = 181.204
+            xmax = 181.894
+            text = ""
+        intervals [30]:
+            xmin = 181.894
+            xmax = 185.544
+            text = "啊，现在知道谁了吧？上学就爱装的那个人。"
+        intervals [31]:
+            xmin = 185.544
+            xmax = 185.614
+            text = ""
+        intervals [32]:
+            xmin = 185.614
+            xmax = 187.324
+            text = "哎，别聊别人了，别聊别人的。"
+        intervals [33]:
+            xmin = 187.324
+            xmax = 187.38400000000001
+            text = ""
+        intervals [34]:
+            xmin = 187.38400000000001
+            xmax = 189.154
+            text = "咱们都聊聊自己吧。"
+        intervals [35]:
+            xmin = 189.154
+            xmax = 189.204
+            text = ""
+        intervals [36]:
+            xmin = 189.204
+            xmax = 192.63400000000001
+            text = "嗯，都简单过一遍，你就抓紧了切入五年重点。"
+        intervals [37]:
+            xmin = 192.63400000000001
+            xmax = 192.91400000000002
+            text = ""
+        intervals [38]:
+            xmin = 192.91400000000002
+            xmax = 194.88400000000001
+            text = "就是五年你们干了干了干了啥？"
+        intervals [39]:
+            xmin = 194.88400000000001
+            xmax = 195.024
+            text = ""
+        intervals [40]:
+            xmin = 195.024
+            xmax = 195.904
+            text = "怎么样了？"
+        intervals [41]:
+            xmin = 195.904
+            xmax = 217.62400000000002
+            text = ""
+        intervals [42]:
+            xmin = 217.62400000000002
+            xmax = 220.214
+            text = "也挺好的了，我混的也挺好的了。"
+        intervals [43]:
+            xmin = 220.214
+            xmax = 239.174
+            text = ""
+        intervals [44]:
+            xmin = 239.174
+            xmax = 241.104
+            text = "哎呦，别吵了别吵了。"
+        intervals [45]:
+            xmin = 241.104
+            xmax = 246.47400000000002
+            text = ""
+        intervals [46]:
+            xmin = 246.47400000000002
+            xmax = 247.91400000000002
+            text = "哎，要不我提议吧。"
+        intervals [47]:
+            xmin = 247.91400000000002
+            xmax = 248.03400000000002
+            text = ""
+        intervals [48]:
+            xmin = 248.03400000000002
+            xmax = 249.97400000000002
+            text = "要不咱们就五年后。"
+        intervals [49]:
+            xmin = 249.97400000000002
+            xmax = 250.024
+            text = ""
+        intervals [50]:
+            xmin = 250.024
+            xmax = 251.484
+            text = "聚会直接搞波大的。"
+        intervals [51]:
+            xmin = 251.484
+            xmax = 251.834
+            text = ""
+        intervals [52]:
+            xmin = 251.834
+            xmax = 254.38400000000001
+            text = "去海外包一个独栋别墅。"
+        intervals [53]:
+            xmin = 254.38400000000001
+            xmax = 254.574
+            text = ""
+        intervals [54]:
+            xmin = 254.574
+            xmax = 255.92400000000004
+            text = "全员度假聚式。"
+        intervals [55]:
+            xmin = 255.92400000000004
+            xmax = 256.05400000000003
+            text = ""
+        intervals [56]:
+            xmin = 256.05400000000003
+            xmax = 256.784
+            text = "模式。"
+        intervals [57]:
+            xmin = 256.784
+            xmax = 256.974
+            text = ""
+        intervals [58]:
+            xmin = 256.974
+            xmax = 258.284
+            text = "就是彻底放松。"
+        intervals [59]:
+            xmin = 258.284
+            xmax = 258.36400000000003
+            text = ""
+        intervals [60]:
+            xmin = 258.36400000000003
+            xmax = 260.024
+            text = "咱不留遗憾行不行？"
+        intervals [61]:
+            xmin = 260.024
+            xmax = 273.504
+            text = ""
+        intervals [62]:
+            xmin = 273.504
+            xmax = 276.904
+            text = "哎，你搞科研的，格局大，要不你说句话。"
+        intervals [63]:
+            xmin = 276.904
+            xmax = 279.384
+            text = ""
+        intervals [64]:
+            xmin = 279.384
+            xmax = 281.154
+            text = "就是海蓝方案到底行不行？"
+        intervals [65]:
+            xmin = 281.154
+            xmax = 281.30400000000003
+            text = ""
+        intervals [66]:
+            xmin = 281.30400000000003
+            xmax = 281.904
+            text = "你搞。"
+        intervals [67]:
+            xmin = 281.904
+            xmax = 292.98400000000004
+            text = ""
+        intervals [68]:
+            xmin = 292.98400000000004
+            xmax = 295.314
+            text = "哎，你搞科研的格局大一点啊。"
+        intervals [69]:
+            xmin = 295.314
+            xmax = 344.564
+            text = ""
+        intervals [70]:
+            xmin = 344.564
+            xmax = 345.474
+            text = "啊，哈哈哈。"
+        intervals [71]:
+            xmin = 345.474
+            xmax = 346.254
+            text = ""
+        intervals [72]:
+            xmin = 346.254
+            xmax = 347.794
+            text = "我觉得那个海岛。"
+        intervals [73]:
+            xmin = 347.794
+            xmax = 347.844
+            text = ""
+        intervals [74]:
+            xmin = 347.844
+            xmax = 350.264
+            text = "海岛度假觉得完全可以啊。"
+        intervals [75]:
+            xmin = 350.264
+            xmax = 371.604
+            text = ""
+        intervals [76]:
+            xmin = 371.604
+            xmax = 372.074
+            text = "不是。"
+        intervals [77]:
+            xmin = 372.074
+            xmax = 372.42400000000004
+            text = ""
+        intervals [78]:
+            xmin = 372.42400000000004
+            xmax = 375.034
+            text = "我觉得海岛我没什么意见啊。"
+        intervals [79]:
+            xmin = 375.034
+            xmax = 390.334
+            text = ""
+        intervals [80]:
+            xmin = 390.334
+            xmax = 392.764
+            text = "那要不费用大家A A。"
+        intervals [81]:
+            xmin = 392.764
+            xmax = 393.774
+            text = ""
+        intervals [82]:
+            xmin = 393.774
+            xmax = 396.194
+            text = "哎，我随便你，你说你说吧，你先说吧。"
+        intervals [83]:
+            xmin = 396.194
+            xmax = 414.084
+            text = ""
+        intervals [84]:
+            xmin = 414.084
+            xmax = 415.144
+            text = "什么？"
+        intervals [85]:
+            xmin = 415.144
+            xmax = 415.17400000000004
+            text = ""
+        intervals [86]:
+            xmin = 415.17400000000004
+            xmax = 417.494
+            text = "哎呦，我没有防备没有防备。"
+        intervals [87]:
+            xmin = 417.494
+            xmax = 417.564
+            text = ""
+        intervals [88]:
+            xmin = 417.564
+            xmax = 420.434
+            text = "我只是单纯的在家里收拾家务啊就是。"
+        intervals [89]:
+            xmin = 420.434
+            xmax = 420.474
+            text = ""
+        intervals [90]:
+            xmin = 420.474
+            xmax = 423.074
+            text = "正常工作调整而已，没有什么。"
+        intervals [91]:
+            xmin = 423.074
+            xmax = 424.36400000000003
+            text = ""
+        intervals [92]:
+            xmin = 424.36400000000003
+            xmax = 426.704
+            text = "你去你去我公司看看呀。"
+        intervals [93]:
+            xmin = 426.704
+            xmax = 431.354
+            text = ""
+        intervals [94]:
+            xmin = 431.354
+            xmax = 433.994
+            text = "对呀对呀，你不要多想了。"
+        intervals [95]:
+            xmin = 433.994
+            xmax = 446.724
+            text = ""
+        intervals [96]:
+            xmin = 446.724
+            xmax = 447.98400000000004
+            text = "你说你说。"
+        intervals [97]:
+            xmin = 447.98400000000004
+            xmax = 452.524
+            text = ""
+        intervals [98]:
+            xmin = 452.524
+            xmax = 454.134
+            text = "我觉得也可以啊。"
+        intervals [99]:
+            xmin = 454.134
+            xmax = 493.55400000000003
+            text = ""
+        intervals [100]:
+            xmin = 493.55400000000003
+            xmax = 496.48400000000004
+            text = "那你不能把我们的聚会当成你的流量呀！"
+        intervals [101]:
+            xmin = 496.48400000000004
+            xmax = 512.264
+            text = ""
+        intervals [102]:
+            xmin = 512.264
+            xmax = 518.154
+            text = "她她孩子她孩子家不是也要钱吗？她老公不是给她钱吗？她老公不是有钱吗？"
+        intervals [103]:
+            xmin = 518.154
+            xmax = 519.164
+            text = ""
+        intervals [104]:
+            xmin = 519.164
+            xmax = 521.794
+            text = "把她孩子带了，孩子一起带了。"
+        intervals [105]:
+            xmin = 521.794
+            xmax = 525.7040000000001
+            text = ""
+        intervals [106]:
+            xmin = 525.7040000000001
+            xmax = 527.294
+            text = "把孩子给他奶奶带啊。"
+        intervals [107]:
+            xmin = 527.294
+            xmax = 527.354
+            text = ""
+        intervals [108]:
+            xmin = 527.354
+            xmax = 529.804
+            text = "你婆婆呢？你婆婆在不在家？给你婆婆带。"
+        intervals [109]:
+            xmin = 529.804
+            xmax = 533.784
+            text = ""
+        intervals [110]:
+            xmin = 533.784
+            xmax = 537.714
+            text = "那就把你孩子一起带到国外去啊，带到海南一起度假呀。"
+        intervals [111]:
+            xmin = 537.714
+            xmax = 553.554
+            text = ""
+        intervals [112]:
+            xmin = 553.554
+            xmax = 556.804
+            text = "那你请，那你怎，你老公有钱怎么不请个保姆啊？"
+        intervals [113]:
+            xmin = 556.804
+            xmax = 557.524
+            text = ""
+        intervals [114]:
+            xmin = 557.524
+            xmax = 560.154
+            text = "老公有钱怎么不请个保姆在家给你带孩子呢？"
+        intervals [115]:
+            xmin = 560.154
+            xmax = 561.614
+            text = ""
+        intervals [116]:
+            xmin = 561.614
+            xmax = 563.994
+            text = "那你就跟我们一起去海南呀，去度假呀。"
+        intervals [117]:
+            xmin = 563.994
+            xmax = 567.094
+            text = ""
+        intervals [118]:
+            xmin = 567.094
+            xmax = 570.234
+            text = "我们是坐飞机，又不是坐大巴车。"
+        intervals [119]:
+            xmin = 570.234
+            xmax = 570.644
+            text = ""
+        intervals [120]:
+            xmin = 570.644
+            xmax = 573.434
+            text = "我们是去国外，是坐飞机的。"
+        intervals [121]:
+            xmin = 573.434
+            xmax = 611.404
+            text = ""
+        intervals [122]:
+            xmin = 611.404
+            xmax = 612.644
+            text = "那你去，那你看。"
+        intervals [123]:
+            xmin = 612.644
+            xmax = 612.844
+            text = ""
+        intervals [124]:
+            xmin = 612.844
+            xmax = 617.474
+            text = "你看你去国外的话火了怎么办？国外国外的比国内环境还要好啊。"
+        intervals [125]:
+            xmin = 617.474
+            xmax = 621.324
+            text = ""
+        intervals [126]:
+            xmin = 621.324
+            xmax = 624.474
+            text = "去直播带货啊，你不是流量吗？直播带货呢。"
+        intervals [127]:
+            xmin = 624.474
+            xmax = 649.664
+            text = ""
+        intervals [128]:
+            xmin = 649.664
+            xmax = 650.714
+            text = "再找一个。"
+        intervals [129]:
+            xmin = 650.714
+            xmax = 650.784
+            text = ""
+        intervals [130]:
+            xmin = 650.784
+            xmax = 653.594
+            text = "她不是开公司的吗？去她公司好了。"
+        intervals [131]:
+            xmin = 653.594
+            xmax = 670.304
+            text = ""
+        intervals [132]:
+            xmin = 670.304
+            xmax = 671.974
+            text = "我们情谊到底在哪？"
+        intervals [133]:
+            xmin = 671.974
+            xmax = 672.004
+            text = ""
+        intervals [134]:
+            xmin = 672.004
+            xmax = 673.414
+            text = "有没有情谊了？"
+        intervals [135]:
+            xmin = 673.414
+            xmax = 706.034
+            text = ""
+        intervals [136]:
+            xmin = 706.034
+            xmax = 710.4540000000001
+            text = "你自己看看大学，天天谈恋爱，也不上课，天天逃课。"
+        intervals [137]:
+            xmin = 710.4540000000001
+            xmax = 710.504
+            text = ""
+        intervals [138]:
+            xmin = 710.504
+            xmax = 711.904
+            text = "谁要你呀？"
+        intervals [139]:
+            xmin = 711.904
+            xmax = 748.514
+            text = ""
+        intervals [140]:
+            xmin = 748.514
+            xmax = 753.644
+            text = "她可怜，不是她自己作的吗？非让她别结婚别结婚，结婚了又生了个孩子。"
+        intervals [141]:
+            xmin = 753.644
+            xmax = 753.894
+            text = ""
+        intervals [142]:
+            xmin = 753.894
+            xmax = 760.3340000000001
+            text = "天天还离不开婆婆也不带你照顾，老公也不管，还是个家庭主妇，你有什么价值啊？"
+        intervals [143]:
+            xmin = 760.3340000000001
+            xmax = 764.044
+            text = ""
+        intervals [144]:
+            xmin = 764.044
+            xmax = 765.024
+            text = "哈哈哈。"
+        intervals [145]:
+            xmin = 765.024
+            xmax = 804.654
+            text = ""
+        intervals [146]:
+            xmin = 804.654
+            xmax = 807.014
+            text = "哎呦，行了行了，别吵了。"
+        intervals [147]:
+            xmin = 807.014
+            xmax = 836.744
+            text = ""
+        intervals [148]:
+            xmin = 836.744
+            xmax = 838.094
+            text = "哎，行了行了。"
+        intervals [149]:
+            xmin = 838.094
+            xmax = 838.374
+            text = ""
+        intervals [150]:
+            xmin = 838.374
+            xmax = 839.774
+            text = "那既然就是。"
+        intervals [151]:
+            xmin = 839.774
+            xmax = 839.854
+            text = ""
+        intervals [152]:
+            xmin = 839.854
+            xmax = 842.554
+            text = "定了东南亚，咱们统一要求呗。"
+        intervals [153]:
+            xmin = 842.554
+            xmax = 842.824
+            text = ""
+        intervals [154]:
+            xmin = 842.824
+            xmax = 845.184
+            text = "五年后的酒店配套啊。"
+        intervals [155]:
+            xmin = 845.184
+            xmax = 845.254
+            text = ""
+        intervals [156]:
+            xmin = 845.254
+            xmax = 846.654
+            text = "海景视野。"
+        intervals [157]:
+            xmin = 846.654
+            xmax = 846.724
+            text = ""
+        intervals [158]:
+            xmin = 846.724
+            xmax = 847.864
+            text = "必须统一啊！"
+        intervals [159]:
+            xmin = 847.864
+            xmax = 871.594
+            text = ""
+        intervals [160]:
+            xmin = 871.594
+            xmax = 873.594
+            text = "不是啊，你什么意思啊？"
+        intervals [161]:
+            xmin = 873.594
+            xmax = 873.7040000000001
+            text = ""
+        intervals [162]:
+            xmin = 873.7040000000001
+            xmax = 875.494
+            text = "谁凑不出今晚的饭钱啊？"
+        intervals [163]:
+            xmin = 875.494
+            xmax = 875.594
+            text = ""
+        intervals [164]:
+            xmin = 875.594
+            xmax = 877.424
+            text = "哎，你是说没人带钱吗？"
+        intervals [165]:
+            xmin = 877.424
+            xmax = 877.484
+            text = ""
+        intervals [166]:
+            xmin = 877.484
+            xmax = 878.104
+            text = "啊？"
+        intervals [167]:
+            xmin = 878.104
+            xmax = 882.844
+            text = ""
+        intervals [168]:
+            xmin = 882.844
+            xmax = 884.624
+            text = "哎，这倒不至于吧。"
+        intervals [169]:
+            xmin = 884.624
+            xmax = 886.404
+            text = ""
+        intervals [170]:
+            xmin = 886.404
+            xmax = 888.144
+            text = "哎呦，算了算了算了。"
+        intervals [171]:
+            xmin = 888.144
+            xmax = 888.214
+            text = ""
+        intervals [172]:
+            xmin = 888.214
+            xmax = 894.354
+            text = "哎，我不想跟你们吵了，你就当我的策划全都扯淡吧，五年后再说，五年后我不筹了，随便你们。"
+        intervals [173]:
+            xmin = 894.354
+            xmax = 921.0840000000001
+            text = ""
+        intervals [174]:
+            xmin = 921.0840000000001
+            xmax = 921.684
+            text = "啥？"
+        intervals [175]:
+            xmin = 921.684
+            xmax = 921.744
+            text = ""
+        intervals [176]:
+            xmin = 921.744
+            xmax = 922.614
+            text = "什么什么？"
+        intervals [177]:
+            xmin = 922.614
+            xmax = 922.814
+            text = ""
+        intervals [178]:
+            xmin = 922.814
+            xmax = 923.284
+            text = "再。"
+        intervals [179]:
+            xmin = 923.284
+            xmax = 923.414
+            text = ""
+        intervals [180]:
+            xmin = 923.414
+            xmax = 923.914
+            text = "再。"
+        intervals [181]:
+            xmin = 923.914
+            xmax = 924.054
+            text = ""
+        intervals [182]:
+            xmin = 924.054
+            xmax = 926.674
+            text = "再说吧，我不急我不急我不急。"
+        intervals [183]:
+            xmin = 926.674
+            xmax = 973.614
+            text = ""
+        intervals [184]:
+            xmin = 973.614
+            xmax = 981.784
+            text = "当然有格调了，你要你要有流量了，要想想你的vlog又想你的vlog聚会天天想你的vlog。"
+        intervals [185]:
+            xmin = 981.784
+            xmax = 1013.574
+            text = ""
+        intervals [186]:
+            xmin = 1013.574
+            xmax = 1014.474
+            text = "哈哈哈。"
+        intervals [187]:
+            xmin = 1014.474
+            xmax = 1026.7839999999999
+            text = ""
+        intervals [188]:
+            xmin = 1026.7839999999999
+            xmax = 1028.414
+            text = "把你孩子给你老公带。"
+        intervals [189]:
+            xmin = 1028.414
+            xmax = 1030.5739999999998
+            text = ""
+        intervals [190]:
+            xmin = 1030.5739999999998
+            xmax = 1034.3239999999998
+            text = "啊，行那行，就这么定了啊，就这个模糊备案，五年后。"
+        intervals [191]:
+            xmin = 1034.3239999999998
+            xmax = 1034.414
+            text = ""
+        intervals [192]:
+            xmin = 1034.414
+            xmax = 1036.0339999999999
+            text = "海内国宾重聚。"
+        intervals [193]:
+            xmin = 1036.0339999999999
+            xmax = 1036.144
+            text = ""
+        intervals [194]:
+            xmin = 1036.144
+            xmax = 1036.924
+            text = "一切随缘。"
+        intervals [195]:
+            xmin = 1036.924
+            xmax = 1037.0839999999998
+            text = ""
+        intervals [196]:
+            xmin = 1037.0839999999998
+            xmax = 1040.5839999999998
+            text = "情谊优先行不行？不要吵了，下次别见面不要吵架了啊。"
+        intervals [197]:
+            xmin = 1040.5839999999998
+            xmax = 1053.5539999999999
+            text = ""
+        intervals [198]:
+            xmin = 1053.5539999999999
+            xmax = 1057.434
+            text = "啊，别说了别说了，干杯干杯干杯，好好好好好。"
+        intervals [199]:
+            xmin = 1057.434
+            xmax = 1057.924
+            text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk02"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 179
+        intervals [1]:
+            xmin = 0.0
+            xmax = 21.714
+            text = ""
+        intervals [2]:
+            xmin = 21.714
+            xmax = 25.474
+            text = "哎呀，抱歉抱歉啊，刚才家里有事，实在走不开唉。"
+        intervals [3]:
+            xmin = 25.474
+            xmax = 25.573999999999998
+            text = ""
+        intervals [4]:
+            xmin = 25.573999999999998
+            xmax = 27.233999999999998
+            text = "我都是抽空溜出来的。"
+        intervals [5]:
+            xmin = 27.233999999999998
+            xmax = 27.544
+            text = ""
+        intervals [6]:
+            xmin = 27.544
+            xmax = 29.524
+            text = "那那我随意抿一口吧。"
+        intervals [7]:
+            xmin = 29.524
+            xmax = 29.614
+            text = ""
+        intervals [8]:
+            xmin = 29.614
+            xmax = 30.964000000000002
+            text = "我实在喝不下。"
+        intervals [9]:
+            xmin = 30.964000000000002
+            xmax = 55.814
+            text = ""
+        intervals [10]:
+            xmin = 55.814
+            xmax = 57.454
+            text = "就是，别搞高级的。"
+        intervals [11]:
+            xmin = 57.454
+            xmax = 66.494
+            text = ""
+        intervals [12]:
+            xmin = 66.494
+            xmax = 69.204
+            text = "你咋知道的呢？你是我们领导吗？"
+        intervals [13]:
+            xmin = 69.204
+            xmax = 69.634
+            text = ""
+        intervals [14]:
+            xmin = 69.634
+            xmax = 70.844
+            text = "就是啊。"
+        intervals [15]:
+            xmin = 70.844
+            xmax = 114.61399999999999
+            text = ""
+        intervals [16]:
+            xmin = 114.61399999999999
+            xmax = 115.094
+            text = "爽死了。"
+        intervals [17]:
+            xmin = 115.094
+            xmax = 195.88400000000001
+            text = ""
+        intervals [18]:
+            xmin = 195.88400000000001
+            xmax = 196.91400000000002
+            text = "额，行。"
+        intervals [19]:
+            xmin = 196.91400000000002
+            xmax = 196.97400000000002
+            text = ""
+        intervals [20]:
+            xmin = 196.97400000000002
+            xmax = 197.94400000000002
+            text = "好，都可以。"
+        intervals [21]:
+            xmin = 197.94400000000002
+            xmax = 215.16400000000002
+            text = ""
+        intervals [22]:
+            xmin = 215.16400000000002
+            xmax = 216.56400000000002
+            text = "对呀，就是的呀。"
+        intervals [23]:
+            xmin = 216.56400000000002
+            xmax = 219.104
+            text = ""
+        intervals [24]:
+            xmin = 219.104
+            xmax = 223.28400000000002
+            text = "哪有那个人厉害啊？那是二二次创业的，人家是大老板。"
+        intervals [25]:
+            xmin = 223.28400000000002
+            xmax = 223.354
+            text = ""
+        intervals [26]:
+            xmin = 223.354
+            xmax = 225.19400000000002
+            text = "大老板。"
+        intervals [27]:
+            xmin = 225.19400000000002
+            xmax = 225.434
+            text = ""
+        intervals [28]:
+            xmin = 225.434
+            xmax = 229.37400000000002
+            text = "哎呀，那我们这些小小民小平民能去你那干吗？"
+        intervals [29]:
+            xmin = 229.37400000000002
+            xmax = 232.494
+            text = ""
+        intervals [30]:
+            xmin = 232.494
+            xmax = 235.294
+            text = "我去，那你不也是这个学历上去的吗？"
+        intervals [31]:
+            xmin = 235.294
+            xmax = 258.664
+            text = ""
+        intervals [32]:
+            xmin = 258.664
+            xmax = 261.644
+            text = "这太不现实了吧！这啥呀？"
+        intervals [33]:
+            xmin = 261.644
+            xmax = 265.244
+            text = ""
+        intervals [34]:
+            xmin = 265.244
+            xmax = 266.444
+            text = "就是啊。"
+        intervals [35]:
+            xmin = 266.444
+            xmax = 271.564
+            text = ""
+        intervals [36]:
+            xmin = 271.564
+            xmax = 275.494
+            text = "哎，俺比不来，你带着她们几个去吧，我们去不了。"
+        intervals [37]:
+            xmin = 275.494
+            xmax = 283.224
+            text = ""
+        intervals [38]:
+            xmin = 283.224
+            xmax = 284.98400000000004
+            text = "你体制内的，你为什么不行？"
+        intervals [39]:
+            xmin = 284.98400000000004
+            xmax = 298.414
+            text = ""
+        intervals [40]:
+            xmin = 298.414
+            xmax = 300.074
+            text = "那你们刚才说你去不了。"
+        intervals [41]:
+            xmin = 300.074
+            xmax = 300.184
+            text = ""
+        intervals [42]:
+            xmin = 300.184
+            xmax = 301.534
+            text = "那你刚才说你去不了。"
+        intervals [43]:
+            xmin = 301.534
+            xmax = 306.774
+            text = ""
+        intervals [44]:
+            xmin = 306.774
+            xmax = 307.61400000000003
+            text = "我说。"
+        intervals [45]:
+            xmin = 307.61400000000003
+            xmax = 327.98400000000004
+            text = ""
+        intervals [46]:
+            xmin = 327.98400000000004
+            xmax = 331.144
+            text = "我去，那你自己去吧，你这么有钱你自己去吧。"
+        intervals [47]:
+            xmin = 331.144
+            xmax = 346.514
+            text = ""
+        intervals [48]:
+            xmin = 346.514
+            xmax = 348.794
+            text = "不是，哎哎哎，就你。"
+        intervals [49]:
+            xmin = 348.794
+            xmax = 358.544
+            text = ""
+        intervals [50]:
+            xmin = 358.544
+            xmax = 360.05400000000003
+            text = "对啊，就是呀。"
+        intervals [51]:
+            xmin = 360.05400000000003
+            xmax = 376.104
+            text = ""
+        intervals [52]:
+            xmin = 376.104
+            xmax = 377.294
+            text = "哎，行吧。"
+        intervals [53]:
+            xmin = 377.294
+            xmax = 415.624
+            text = ""
+        intervals [54]:
+            xmin = 415.624
+            xmax = 417.204
+            text = "你要破产了呀！"
+        intervals [55]:
+            xmin = 417.204
+            xmax = 458.544
+            text = ""
+        intervals [56]:
+            xmin = 458.544
+            xmax = 460.524
+            text = "二次创业，老板你愿意吗？"
+        intervals [57]:
+            xmin = 460.524
+            xmax = 503.894
+            text = ""
+        intervals [58]:
+            xmin = 503.894
+            xmax = 506.42400000000004
+            text = "你就想去海岛，你知道吗？你就想去海岛。"
+        intervals [59]:
+            xmin = 506.42400000000004
+            xmax = 507.494
+            text = ""
+        intervals [60]:
+            xmin = 507.494
+            xmax = 508.624
+            text = "就是啊。"
+        intervals [61]:
+            xmin = 508.624
+            xmax = 531.114
+            text = ""
+        intervals [62]:
+            xmin = 531.114
+            xmax = 532.714
+            text = "对啊，自己不放心啊。"
+        intervals [63]:
+            xmin = 532.714
+            xmax = 532.764
+            text = ""
+        intervals [64]:
+            xmin = 532.764
+            xmax = 534.504
+            text = "我很疼爱我的孩子的。"
+        intervals [65]:
+            xmin = 534.504
+            xmax = 535.984
+            text = ""
+        intervals [66]:
+            xmin = 535.984
+            xmax = 539.244
+            text = "他这么小我怎么带啊？他这么小我怎么带啊？"
+        intervals [67]:
+            xmin = 539.244
+            xmax = 539.994
+            text = ""
+        intervals [68]:
+            xmin = 539.994
+            xmax = 541.014
+            text = "对啊。"
+        intervals [69]:
+            xmin = 541.014
+            xmax = 547.384
+            text = ""
+        intervals [70]:
+            xmin = 547.384
+            xmax = 548.594
+            text = "就是啊。"
+        intervals [71]:
+            xmin = 548.594
+            xmax = 549.464
+            text = ""
+        intervals [72]:
+            xmin = 549.464
+            xmax = 553.684
+            text = "他上班呀，我是全，我是主妇，你知道吗？他上班呀。"
+        intervals [73]:
+            xmin = 553.684
+            xmax = 560.214
+            text = ""
+        intervals [74]:
+            xmin = 560.214
+            xmax = 561.874
+            text = "我来玩了呀，我出来玩了呀。"
+        intervals [75]:
+            xmin = 561.874
+            xmax = 563.754
+            text = ""
+        intervals [76]:
+            xmin = 563.754
+            xmax = 566.784
+            text = "我没钱，那太远了，你知道吗？我还晕车。"
+        intervals [77]:
+            xmin = 566.784
+            xmax = 569.804
+            text = ""
+        intervals [78]:
+            xmin = 569.804
+            xmax = 571.234
+            text = "我都晕。"
+        intervals [79]:
+            xmin = 571.234
+            xmax = 575.394
+            text = ""
+        intervals [80]:
+            xmin = 575.394
+            xmax = 579.254
+            text = "而且我也没说去东南亚呀，我也没说去海岛呀，我没同意呀。"
+        intervals [81]:
+            xmin = 579.254
+            xmax = 623.534
+            text = ""
+        intervals [82]:
+            xmin = 623.534
+            xmax = 625.714
+            text = "老板你不资助一点我们吗？"
+        intervals [83]:
+            xmin = 625.714
+            xmax = 627.074
+            text = ""
+        intervals [84]:
+            xmin = 627.074
+            xmax = 629.604
+            text = "老同学了，资助来一点。"
+        intervals [85]:
+            xmin = 629.604
+            xmax = 629.7040000000001
+            text = ""
+        intervals [86]:
+            xmin = 629.7040000000001
+            xmax = 631.034
+            text = "什么？你说什么？"
+        intervals [87]:
+            xmin = 631.034
+            xmax = 663.3340000000001
+            text = ""
+        intervals [88]:
+            xmin = 663.3340000000001
+            xmax = 665.664
+            text = "她不要我们呀，她不要。"
+        intervals [89]:
+            xmin = 665.664
+            xmax = 672.764
+            text = ""
+        intervals [90]:
+            xmin = 672.764
+            xmax = 676.134
+            text = "就是，你别装高大上，我跟你说你啥意思啊？"
+        intervals [91]:
+            xmin = 676.134
+            xmax = 705.044
+            text = ""
+        intervals [92]:
+            xmin = 705.044
+            xmax = 709.364
+            text = "这不是聚会吗？怎么变成吐槽了呀？我真服了你们了。"
+        intervals [93]:
+            xmin = 709.364
+            xmax = 713.414
+            text = ""
+        intervals [94]:
+            xmin = 713.414
+            xmax = 715.104
+            text = "你又知道上了？"
+        intervals [95]:
+            xmin = 715.104
+            xmax = 718.044
+            text = ""
+        intervals [96]:
+            xmin = 718.044
+            xmax = 721.254
+            text = "不是，你什么体制内呀？你是什么呀？你是公务员还是什么呀？"
+        intervals [97]:
+            xmin = 721.254
+            xmax = 724.2040000000001
+            text = ""
+        intervals [98]:
+            xmin = 724.2040000000001
+            xmax = 726.394
+            text = "那你就应该别说话，你知道吗？"
+        intervals [99]:
+            xmin = 726.394
+            xmax = 739.784
+            text = ""
+        intervals [100]:
+            xmin = 739.784
+            xmax = 743.634
+            text = "那能跟体制内的人比啊？我那能跟体制内的人比啊？"
+        intervals [101]:
+            xmin = 743.634
+            xmax = 764.554
+            text = ""
+        intervals [102]:
+            xmin = 764.554
+            xmax = 765.264
+            text = "哈哈。"
+        intervals [103]:
+            xmin = 765.264
+            xmax = 769.8340000000001
+            text = ""
+        intervals [104]:
+            xmin = 769.8340000000001
+            xmax = 771.874
+            text = "你去当助理吧，你去当她助理吧。"
+        intervals [105]:
+            xmin = 771.874
+            xmax = 775.234
+            text = ""
+        intervals [106]:
+            xmin = 775.234
+            xmax = 778.484
+            text = "而且她第二次了，她会有第三次，我跟你讲，她马上就倒闭了。"
+        intervals [107]:
+            xmin = 778.484
+            xmax = 786.384
+            text = ""
+        intervals [108]:
+            xmin = 786.384
+            xmax = 786.994
+            text = "不是。"
+        intervals [109]:
+            xmin = 786.994
+            xmax = 787.134
+            text = ""
+        intervals [110]:
+            xmin = 787.134
+            xmax = 794.144
+            text = "你别贬低我们这些人，我跟你讲，你那个公司里面肯定啥些人也都有，就你这个公司拉这个劲，我看你哎，也倒闭的多，我跟你讲。"
+        intervals [111]:
+            xmin = 794.144
+            xmax = 796.024
+            text = ""
+        intervals [112]:
+            xmin = 796.024
+            xmax = 800.7040000000001
+            text = "那你开始第三次吧，第四次，第五次，第六次我跟你说，店你马上就倒闭了，我跟你讲。"
+        intervals [113]:
+            xmin = 800.7040000000001
+            xmax = 802.994
+            text = ""
+        intervals [114]:
+            xmin = 802.994
+            xmax = 805.384
+            text = "我不去啊，我不会去她的公司的，我跟你说。"
+        intervals [115]:
+            xmin = 805.384
+            xmax = 817.094
+            text = ""
+        intervals [116]:
+            xmin = 817.094
+            xmax = 820.154
+            text = "看，你就是想去那个地方我真服了你了。"
+        intervals [117]:
+            xmin = 820.154
+            xmax = 820.504
+            text = ""
+        intervals [118]:
+            xmin = 820.504
+            xmax = 821.524
+            text = "哎，等一下等一下。"
+        intervals [119]:
+            xmin = 821.524
+            xmax = 821.594
+            text = ""
+        intervals [120]:
+            xmin = 821.594
+            xmax = 822.544
+            text = "我问你一个事。"
+        intervals [121]:
+            xmin = 822.544
+            xmax = 822.574
+            text = ""
+        intervals [122]:
+            xmin = 822.574
+            xmax = 824.714
+            text = "你刚才说你换的那个新能源电车。"
+        intervals [123]:
+            xmin = 824.714
+            xmax = 824.884
+            text = ""
+        intervals [124]:
+            xmin = 824.884
+            xmax = 827.994
+            text = "你这是日常开销呢？还是家里预算呀？"
+        intervals [125]:
+            xmin = 827.994
+            xmax = 830.324
+            text = ""
+        intervals [126]:
+            xmin = 830.324
+            xmax = 834.874
+            text = "哇塞！体制内就是不一样呀！厉害厉害！"
+        intervals [127]:
+            xmin = 834.874
+            xmax = 855.924
+            text = ""
+        intervals [128]:
+            xmin = 855.924
+            xmax = 859.504
+            text = "就是啊，只有她，你，只有你两个说了，你们两个去吧。"
+        intervals [129]:
+            xmin = 859.504
+            xmax = 875.614
+            text = ""
+        intervals [130]:
+            xmin = 875.614
+            xmax = 876.974
+            text = "我带钱了呀！"
+        intervals [131]:
+            xmin = 876.974
+            xmax = 883.514
+            text = ""
+        intervals [132]:
+            xmin = 883.514
+            xmax = 884.964
+            text = "不至于吧？"
+        intervals [133]:
+            xmin = 884.964
+            xmax = 886.304
+            text = ""
+        intervals [134]:
+            xmin = 886.304
+            xmax = 887.824
+            text = "真的假的呀？"
+        intervals [135]:
+            xmin = 887.824
+            xmax = 894.534
+            text = ""
+        intervals [136]:
+            xmin = 894.534
+            xmax = 899.034
+            text = "哎，我真服了。我原本以为今年的实验室项目能够顺利结束的。"
+        intervals [137]:
+            xmin = 899.034
+            xmax = 899.114
+            text = ""
+        intervals [138]:
+            xmin = 899.114
+            xmax = 899.574
+            text = "哎不。"
+        intervals [139]:
+            xmin = 899.574
+            xmax = 899.724
+            text = ""
+        intervals [140]:
+            xmin = 899.724
+            xmax = 901.044
+            text = "这周刚调整。"
+        intervals [141]:
+            xmin = 901.044
+            xmax = 901.124
+            text = ""
+        intervals [142]:
+            xmin = 901.124
+            xmax = 902.344
+            text = "那个延期了。"
+        intervals [143]:
+            xmin = 902.344
+            xmax = 902.384
+            text = ""
+        intervals [144]:
+            xmin = 902.384
+            xmax = 907.664
+            text = "如果导师卡进度呢，外协单位不对接。哎，那你们说我能正常出国吗？"
+        intervals [145]:
+            xmin = 907.664
+            xmax = 907.744
+            text = ""
+        intervals [146]:
+            xmin = 907.744
+            xmax = 911.614
+            text = "我能空出时间来赴约时间吗？是不是还要往半后拖半年呀？"
+        intervals [147]:
+            xmin = 911.614
+            xmax = 911.674
+            text = ""
+        intervals [148]:
+            xmin = 911.674
+            xmax = 912.964
+            text = "真服了你们了。"
+        intervals [149]:
+            xmin = 912.964
+            xmax = 921.014
+            text = ""
+        intervals [150]:
+            xmin = 921.014
+            xmax = 923.304
+            text = "哎呀，体制内要帮忙啦。"
+        intervals [151]:
+            xmin = 923.304
+            xmax = 942.964
+            text = ""
+        intervals [152]:
+            xmin = 942.964
+            xmax = 943.904
+            text = "哎，说的对。"
+        intervals [153]:
+            xmin = 943.904
+            xmax = 962.604
+            text = ""
+        intervals [154]:
+            xmin = 962.604
+            xmax = 963.774
+            text = "就是啊。"
+        intervals [155]:
+            xmin = 963.774
+            xmax = 1001.444
+            text = ""
+        intervals [156]:
+            xmin = 1001.444
+            xmax = 1004.184
+            text = "体制内的你不要这样说行不行？"
+        intervals [157]:
+            xmin = 1004.184
+            xmax = 1004.364
+            text = ""
+        intervals [158]:
+            xmin = 1004.364
+            xmax = 1005.634
+            text = "你啥意思啊？"
+        intervals [159]:
+            xmin = 1005.634
+            xmax = 1005.674
+            text = ""
+        intervals [160]:
+            xmin = 1005.674
+            xmax = 1007.904
+            text = "你什么意思啊？那你什么意思呢？"
+        intervals [161]:
+            xmin = 1007.904
+            xmax = 1008.604
+            text = ""
+        intervals [162]:
+            xmin = 1008.604
+            xmax = 1012.7040000000001
+            text = "你别看不起我们，我跟你说，你总有一天也会结婚，也会带小孩的，我跟你说。"
+        intervals [163]:
+            xmin = 1012.7040000000001
+            xmax = 1019.644
+            text = ""
+        intervals [164]:
+            xmin = 1019.644
+            xmax = 1021.474
+            text = "哎呀，行了行了行了。"
+        intervals [165]:
+            xmin = 1021.474
+            xmax = 1021.574
+            text = ""
+        intervals [166]:
+            xmin = 1021.574
+            xmax = 1023.574
+            text = "哎，就这样吧，都行啊。"
+        intervals [167]:
+            xmin = 1023.574
+            xmax = 1023.6339999999999
+            text = ""
+        intervals [168]:
+            xmin = 1023.6339999999999
+            xmax = 1026.6239999999998
+            text = "到时候我看看吧，我要腾出时间，我一定去，行了吧？"
+        intervals [169]:
+            xmin = 1026.6239999999998
+            xmax = 1028.484
+            text = ""
+        intervals [170]:
+            xmin = 1028.484
+            xmax = 1029.3639999999998
+            text = "O K。 。"
+        intervals [171]:
+            xmin = 1029.3639999999998
+            xmax = 1030.7839999999999
+            text = ""
+        intervals [172]:
+            xmin = 1030.7839999999999
+            xmax = 1031.5739999999998
+            text = "那。"
+        intervals [173]:
+            xmin = 1031.5739999999998
+            xmax = 1036.7939999999999
+            text = ""
+        intervals [174]:
+            xmin = 1036.7939999999999
+            xmax = 1037.8139999999999
+            text = "可以可以。"
+        intervals [175]:
+            xmin = 1037.8139999999999
+            xmax = 1040.504
+            text = ""
+        intervals [176]:
+            xmin = 1040.504
+            xmax = 1041.274
+            text = "可以。"
+        intervals [177]:
+            xmin = 1041.274
+            xmax = 1052.224
+            text = ""
+        intervals [178]:
+            xmin = 1052.224
+            xmax = 1056.774
+            text = "啊，对对对，那五年之后不见不散。"
+        intervals [179]:
+            xmin = 1056.774
+            xmax = 1057.924
+            text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "spk03"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 153
+        intervals [1]:
+            xmin = 0.0
+            xmax = 31.813999999999997
+            text = ""
+        intervals [2]:
+            xmin = 31.813999999999997
+            xmax = 32.784000000000006
+            text = "哎。"
+        intervals [3]:
+            xmin = 32.784000000000006
+            xmax = 33.214000000000006
+            text = ""
+        intervals [4]:
+            xmin = 33.214000000000006
+            xmax = 36.364000000000004
+            text = "我这两年呢，算是二次创业重启了。"
+        intervals [5]:
+            xmin = 36.364000000000004
+            xmax = 36.964000000000006
+            text = ""
+        intervals [6]:
+            xmin = 36.964000000000006
+            xmax = 41.704
+            text = "前两年做项目，那，然后还有路演啊，跑遍全城了。"
+        intervals [7]:
+            xmin = 41.704
+            xmax = 42.024
+            text = ""
+        intervals [8]:
+            xmin = 42.024
+            xmax = 47.444
+            text = "短暂的休整调整赛道，现在算是稳步落地了，慢慢来，都是过渡期。"
+        intervals [9]:
+            xmin = 47.444
+            xmax = 60.214000000000006
+            text = ""
+        intervals [10]:
+            xmin = 60.214000000000006
+            xmax = 63.684000000000005
+            text = "哎呀，这都不懂，一看就出来，你们就是一些土老帽了。"
+        intervals [11]:
+            xmin = 63.684000000000005
+            xmax = 63.764
+            text = ""
+        intervals [12]:
+            xmin = 63.764
+            xmax = 66.22399999999999
+            text = "一看就知道工作上肯定啥都干不了。"
+        intervals [13]:
+            xmin = 66.22399999999999
+            xmax = 67.574
+            text = ""
+        intervals [14]:
+            xmin = 67.574
+            xmax = 68.25399999999999
+            text = "哎。"
+        intervals [15]:
+            xmin = 68.25399999999999
+            xmax = 71.324
+            text = ""
+        intervals [16]:
+            xmin = 71.324
+            xmax = 74.58399999999999
+            text = "这些都是最简单的东西了呀，这都听不懂。"
+        intervals [17]:
+            xmin = 74.58399999999999
+            xmax = 74.704
+            text = ""
+        intervals [18]:
+            xmin = 74.704
+            xmax = 79.134
+            text = "就是商业计划书和项目路演推演。"
+        intervals [19]:
+            xmin = 79.134
+            xmax = 79.244
+            text = ""
+        intervals [20]:
+            xmin = 79.244
+            xmax = 82.734
+            text = "还有啊，就是，嗯，都是这都是一些。"
+        intervals [21]:
+            xmin = 82.734
+            xmax = 82.854
+            text = ""
+        intervals [22]:
+            xmin = 82.854
+            xmax = 87.53399999999999
+            text = "创业期间的专用词啊，哎，没装，就是顺口了，知道吗？"
+        intervals [23]:
+            xmin = 87.53399999999999
+            xmax = 143.63400000000001
+            text = ""
+        intervals [24]:
+            xmin = 143.63400000000001
+            xmax = 144.84400000000002
+            text = "啊，知道。"
+        intervals [25]:
+            xmin = 144.84400000000002
+            xmax = 165.854
+            text = ""
+        intervals [26]:
+            xmin = 165.854
+            xmax = 166.734
+            text = "哎呀我。"
+        intervals [27]:
+            xmin = 166.734
+            xmax = 168.604
+            text = ""
+        intervals [28]:
+            xmin = 168.604
+            xmax = 175.354
+            text = "我知道她最装了，上学时候我就装，现在出社会了还是装，一点事都干不了。"
+        intervals [29]:
+            xmin = 175.354
+            xmax = 215.854
+            text = ""
+        intervals [30]:
+            xmin = 215.854
+            xmax = 216.704
+            text = "我也是。"
+        intervals [31]:
+            xmin = 216.704
+            xmax = 223.25400000000002
+            text = ""
+        intervals [32]:
+            xmin = 223.25400000000002
+            xmax = 226.50400000000002
+            text = "对呀，就是厉害，就是比你们厉害啊。"
+        intervals [33]:
+            xmin = 226.50400000000002
+            xmax = 229.364
+            text = ""
+        intervals [34]:
+            xmin = 229.364
+            xmax = 233.524
+            text = "看不上你知道吗？你这个学历太低了，你进不了我的公司。"
+        intervals [35]:
+            xmin = 233.524
+            xmax = 235.144
+            text = ""
+        intervals [36]:
+            xmin = 235.144
+            xmax = 239.744
+            text = "你的工，你这啥都不会，你们啥都不会，你们我的公司你们进不去啊。"
+        intervals [37]:
+            xmin = 239.744
+            xmax = 241.084
+            text = ""
+        intervals [38]:
+            xmin = 241.084
+            xmax = 244.25400000000002
+            text = "体制内你就干你的体制内呀，要不了你。"
+        intervals [39]:
+            xmin = 244.25400000000002
+            xmax = 302.874
+            text = ""
+        intervals [40]:
+            xmin = 302.874
+            xmax = 305.30400000000003
+            text = "就你自私，就你最自私，我看出来了。"
+        intervals [41]:
+            xmin = 305.30400000000003
+            xmax = 308.914
+            text = ""
+        intervals [42]:
+            xmin = 308.914
+            xmax = 311.334
+            text = "哎呀，反正呢我是支持这个海岛。"
+        intervals [43]:
+            xmin = 311.334
+            xmax = 311.394
+            text = ""
+        intervals [44]:
+            xmin = 311.394
+            xmax = 313.874
+            text = "高端局的，我跟你讲，肯定好玩。"
+        intervals [45]:
+            xmin = 313.874
+            xmax = 313.974
+            text = ""
+        intervals [46]:
+            xmin = 313.974
+            xmax = 317.344
+            text = "上次呢我团建还租过同类型的别墅呢。"
+        intervals [47]:
+            xmin = 317.344
+            xmax = 317.604
+            text = ""
+        intervals [48]:
+            xmin = 317.604
+            xmax = 321.104
+            text = "嗯~~，单日租金我感觉也就四千吧吧。"
+        intervals [49]:
+            xmin = 321.104
+            xmax = 321.224
+            text = ""
+        intervals [50]:
+            xmin = 321.224
+            xmax = 324.774
+            text = "嗯，旺季上浮百分之二十，杂费另算。"
+        intervals [51]:
+            xmin = 324.774
+            xmax = 325.324
+            text = ""
+        intervals [52]:
+            xmin = 325.324
+            xmax = 328.344
+            text = "你们自己谈一谈，我觉得完全能够接受呀。"
+        intervals [53]:
+            xmin = 328.344
+            xmax = 330.594
+            text = ""
+        intervals [54]:
+            xmin = 330.594
+            xmax = 333.444
+            text = "好好，我这点钱都出不起。"
+        intervals [55]:
+            xmin = 333.444
+            xmax = 338.344
+            text = ""
+        intervals [56]:
+            xmin = 338.344
+            xmax = 344.284
+            text = "哎，这么点钱都出不起，往自己身上好好想想，是不是自己不够努力啊？"
+        intervals [57]:
+            xmin = 344.284
+            xmax = 390.724
+            text = ""
+        intervals [58]:
+            xmin = 390.724
+            xmax = 391.814
+            text = "那要不。"
+        intervals [59]:
+            xmin = 391.814
+            xmax = 391.884
+            text = ""
+        intervals [60]:
+            xmin = 391.884
+            xmax = 395.744
+            text = "不富裕多承担点呗。哎呦，反正我随便，你定你定你定。"
+        intervals [61]:
+            xmin = 395.744
+            xmax = 413.204
+            text = ""
+        intervals [62]:
+            xmin = 413.204
+            xmax = 415.974
+            text = "其实就是要破产了，还听不清楚吗？"
+        intervals [63]:
+            xmin = 415.974
+            xmax = 480.394
+            text = ""
+        intervals [64]:
+            xmin = 480.394
+            xmax = 483.404
+            text = "我看你就是想当网红，想蹭流量。"
+        intervals [65]:
+            xmin = 483.404
+            xmax = 483.474
+            text = ""
+        intervals [66]:
+            xmin = 483.474
+            xmax = 485.414
+            text = "当了网红赚大钱。"
+        intervals [67]:
+            xmin = 485.414
+            xmax = 485.504
+            text = ""
+        intervals [68]:
+            xmin = 485.504
+            xmax = 488.724
+            text = "当了网红之后还知道我们，直接忘本我看。"
+        intervals [69]:
+            xmin = 488.724
+            xmax = 491.444
+            text = ""
+        intervals [70]:
+            xmin = 491.444
+            xmax = 496.36400000000003
+            text = "我看你就有私心的，其实。你自己那个抖音号，你自己那我看不出来吗？"
+        intervals [71]:
+            xmin = 496.36400000000003
+            xmax = 511.73400000000004
+            text = ""
+        intervals [72]:
+            xmin = 511.73400000000004
+            xmax = 515.104
+            text = "她自己非要早结婚，关我啥事啊？她不是不结婚吗？"
+        intervals [73]:
+            xmin = 515.104
+            xmax = 547.744
+            text = ""
+        intervals [74]:
+            xmin = 547.744
+            xmax = 551.184
+            text = "那她老公呢？她老公不在家吗？就让她一个人带吗？"
+        intervals [75]:
+            xmin = 551.184
+            xmax = 553.474
+            text = ""
+        intervals [76]:
+            xmin = 553.474
+            xmax = 557.574
+            text = "那我那时候让你别结婚，你非要结婚这么早，非要嫁给爱情是吧？"
+        intervals [77]:
+            xmin = 557.574
+            xmax = 566.544
+            text = ""
+        intervals [78]:
+            xmin = 566.544
+            xmax = 568.324
+            text = "要玩就好好的玩。"
+        intervals [79]:
+            xmin = 568.324
+            xmax = 571.594
+            text = ""
+        intervals [80]:
+            xmin = 571.594
+            xmax = 575.314
+            text = "那你就别跟我们出来玩，然后你就自己跑去，你别跟我们出来玩了。"
+        intervals [81]:
+            xmin = 575.314
+            xmax = 582.654
+            text = ""
+        intervals [82]:
+            xmin = 582.654
+            xmax = 586.374
+            text = "那你说那就对了吗？我看你看你那个小流量。"
+        intervals [83]:
+            xmin = 586.374
+            xmax = 586.4540000000001
+            text = ""
+        intervals [84]:
+            xmin = 586.4540000000001
+            xmax = 593.634
+            text = "那个别人就给你点个几个点赞，还都是我们给你点赞的，好意思吗？想现在趁机拍vlog让你大火，然后变成大网红。"
+        intervals [85]:
+            xmin = 593.634
+            xmax = 593.694
+            text = ""
+        intervals [86]:
+            xmin = 593.694
+            xmax = 600.984
+            text = "直接忘本，还认识我们吗？到时候说哎呀，谁认识他们呀，那么穷，我都不想跟他们说话，就跟你那网红大咖一般。"
+        intervals [87]:
+            xmin = 600.984
+            xmax = 625.104
+            text = ""
+        intervals [88]:
+            xmin = 625.104
+            xmax = 627.624
+            text = "我凭啥资助你啊？凭啥资助你啊？"
+        intervals [89]:
+            xmin = 627.624
+            xmax = 649.024
+            text = ""
+        intervals [90]:
+            xmin = 649.024
+            xmax = 651.974
+            text = "往往你自己身上去找原因。"
+        intervals [91]:
+            xmin = 651.974
+            xmax = 654.034
+            text = ""
+        intervals [92]:
+            xmin = 654.034
+            xmax = 660.014
+            text = "我可不想要她，这个都干不好，干了那么多年了还是个小职员，一看就是啥都干不好。"
+        intervals [93]:
+            xmin = 660.014
+            xmax = 661.694
+            text = ""
+        intervals [94]:
+            xmin = 661.694
+            xmax = 665.054
+            text = "我那公司可不是什么鸡鸭狗都能要的。"
+        intervals [95]:
+            xmin = 665.054
+            xmax = 672.814
+            text = ""
+        intervals [96]:
+            xmin = 672.814
+            xmax = 674.634
+            text = "毕业了那么多年了。"
+        intervals [97]:
+            xmin = 674.634
+            xmax = 674.994
+            text = ""
+        intervals [98]:
+            xmin = 674.994
+            xmax = 679.354
+            text = "毕业了那么多年的你还是个小员工还不说你吗自己自己不行啊。"
+        intervals [99]:
+            xmin = 679.354
+            xmax = 685.464
+            text = ""
+        intervals [100]:
+            xmin = 685.464
+            xmax = 686.544
+            text = "学历不好。"
+        intervals [101]:
+            xmin = 686.544
+            xmax = 686.604
+            text = ""
+        intervals [102]:
+            xmin = 686.604
+            xmax = 691.884
+            text = "我们都是一个同学，都学历不好，为什么人家是什么公务员？为什么我是老板？"
+        intervals [103]:
+            xmin = 691.884
+            xmax = 691.924
+            text = ""
+        intervals [104]:
+            xmin = 691.924
+            xmax = 699.4540000000001
+            text = "人家为什么开大厂？为什么只有你还是个小员工呀？往自己身上找找，找找自己的原因好吗？不要再说归别人。"
+        intervals [105]:
+            xmin = 699.4540000000001
+            xmax = 704.104
+            text = ""
+        intervals [106]:
+            xmin = 704.104
+            xmax = 707.824
+            text = "她不努力怪我吗？我我就抨击她了。"
+        intervals [107]:
+            xmin = 707.824
+            xmax = 727.164
+            text = ""
+        intervals [108]:
+            xmin = 727.164
+            xmax = 731.294
+            text = "恋爱脑还不知道吗？那时候让她别结婚别结婚，现在好了，嫁到大山里面。"
+        intervals [109]:
+            xmin = 731.294
+            xmax = 731.354
+            text = ""
+        intervals [110]:
+            xmin = 731.354
+            xmax = 734.074
+            text = "出来旅游还得出来，还要没钱，要问老公要。"
+        intervals [111]:
+            xmin = 734.074
+            xmax = 734.124
+            text = ""
+        intervals [112]:
+            xmin = 734.124
+            xmax = 736.984
+            text = "出来聚会都要偷溜，让你别结婚非要结婚。"
+        intervals [113]:
+            xmin = 736.984
+            xmax = 747.914
+            text = ""
+        intervals [114]:
+            xmin = 747.914
+            xmax = 749.4540000000001
+            text = "哎呀，好了好了，别吵别吵。"
+        intervals [115]:
+            xmin = 749.4540000000001
+            xmax = 777.004
+            text = ""
+        intervals [116]:
+            xmin = 777.004
+            xmax = 783.504
+            text = "我说到底了，我可不想要一个来上班还得带着孩子当一个拖油瓶的人，我跟你讲，不要她，我也不要这个。"
+        intervals [117]:
+            xmin = 783.504
+            xmax = 783.664
+            text = ""
+        intervals [118]:
+            xmin = 783.664
+            xmax = 787.9540000000001
+            text = "什么都干了那么多年，还是个小员工，一个人啥都不会干，只会打印东西。"
+        intervals [119]:
+            xmin = 787.9540000000001
+            xmax = 794.094
+            text = ""
+        intervals [120]:
+            xmin = 794.094
+            xmax = 799.2040000000001
+            text = "那我倒闭多单，我也是创业成功了呀！不要你，只会找我结婚，啥都干不上。"
+        intervals [121]:
+            xmin = 799.2040000000001
+            xmax = 807.744
+            text = ""
+        intervals [122]:
+            xmin = 807.744
+            xmax = 809.014
+            text = "哎呦，我就说啊。"
+        intervals [123]:
+            xmin = 809.014
+            xmax = 809.074
+            text = ""
+        intervals [124]:
+            xmin = 809.074
+            xmax = 811.634
+            text = "我现在给一个折中的方案吧，你们都别再吵了。"
+        intervals [125]:
+            xmin = 811.634
+            xmax = 811.784
+            text = ""
+        intervals [126]:
+            xmin = 811.784
+            xmax = 814.964
+            text = "五年后就去那个东南亚的海岛，性价比高。"
+        intervals [127]:
+            xmin = 814.964
+            xmax = 815.004
+            text = ""
+        intervals [128]:
+            xmin = 815.004
+            xmax = 817.184
+            text = "档次也够，就这么定，我反正我就这么定了。"
+        intervals [129]:
+            xmin = 817.184
+            xmax = 818.744
+            text = ""
+        intervals [130]:
+            xmin = 818.744
+            xmax = 820.134
+            text = "哎，我就要去，就要去啊。"
+        intervals [131]:
+            xmin = 820.134
+            xmax = 871.514
+            text = ""
+        intervals [132]:
+            xmin = 871.514
+            xmax = 875.784
+            text = "我也觉得，肯定，上次那个偷溜出来，然后小员工肯定没钱。"
+        intervals [133]:
+            xmin = 875.784
+            xmax = 939.534
+            text = ""
+        intervals [134]:
+            xmin = 939.534
+            xmax = 940.484
+            text = "哎呀。"
+        intervals [135]:
+            xmin = 940.484
+            xmax = 942.864
+            text = ""
+        intervals [136]:
+            xmin = 942.864
+            xmax = 946.174
+            text = "其实去哪真的不太重要呀，主要是我们。"
+        intervals [137]:
+            xmin = 946.174
+            xmax = 946.244
+            text = ""
+        intervals [138]:
+            xmin = 946.244
+            xmax = 953.3340000000001
+            text = "这么多年老情谊老同学的情谊了。五年时间呢，变化太大了，现在定太死我感觉也不是很现实呀。"
+        intervals [139]:
+            xmin = 953.3340000000001
+            xmax = 975.234
+            text = ""
+        intervals [140]:
+            xmin = 975.234
+            xmax = 977.574
+            text = "毕竟你想要当网红呀。"
+        intervals [141]:
+            xmin = 977.574
+            xmax = 977.614
+            text = ""
+        intervals [142]:
+            xmin = 977.614
+            xmax = 982.174
+            text = "你事业是完成了，肯定可以呀，又当大网红了呢。"
+        intervals [143]:
+            xmin = 982.174
+            xmax = 997.514
+            text = ""
+        intervals [144]:
+            xmin = 997.514
+            xmax = 1003.544
+            text = "凭啥理解她呀我出来玩还要理解她，谁能理解我呀？我上班的时候天天搞大活，我不累吗？"
+        intervals [145]:
+            xmin = 1003.544
+            xmax = 1006.684
+            text = ""
+        intervals [146]:
+            xmin = 1006.684
+            xmax = 1009.524
+            text = "我看你就想当大网红，知道吗？所以。"
+        intervals [147]:
+            xmin = 1009.524
+            xmax = 1019.444
+            text = ""
+        intervals [148]:
+            xmin = 1019.444
+            xmax = 1022.064
+            text = "哎呀，好的，未来的大网红。"
+        intervals [149]:
+            xmin = 1022.064
+            xmax = 1052.524
+            text = ""
+        intervals [150]:
+            xmin = 1052.524
+            xmax = 1053.3739999999998
+            text = "好。"
+        intervals [151]:
+            xmin = 1053.3739999999998
+            xmax = 1053.474
+            text = ""
+        intervals [152]:
+            xmin = 1053.474
+            xmax = 1056.1139999999998
+            text = "行，五年后不见不散。"
+        intervals [153]:
+            xmin = 1056.1139999999998
+            xmax = 1057.924
+            text = ""
+    item [4]:
+        class = "IntervalTier"
+        name = "spk04"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 211
+        intervals [1]:
+            xmin = 0.0
+            xmax = 47.964000000000006
+            text = ""
+        intervals [2]:
+            xmin = 47.964000000000006
+            xmax = 50.834
+            text = "哎？你刚刚说什么什么项目？"
+        intervals [3]:
+            xmin = 50.834
+            xmax = 51.304
+            text = ""
+        intervals [4]:
+            xmin = 51.304
+            xmax = 56.074000000000005
+            text = "你，我们听不懂你说的这个呀，能不能说点我们能听得懂的？说大白话行不行？"
+        intervals [5]:
+            xmin = 56.074000000000005
+            xmax = 56.614000000000004
+            text = ""
+        intervals [6]:
+            xmin = 56.614000000000004
+            xmax = 60.054
+            text = "你别搁这说这些黑话装高端啊！"
+        intervals [7]:
+            xmin = 60.054
+            xmax = 66.624
+            text = ""
+        intervals [8]:
+            xmin = 66.624
+            xmax = 67.884
+            text = "哎，对啊。"
+        intervals [9]:
+            xmin = 67.884
+            xmax = 136.304
+            text = ""
+        intervals [10]:
+            xmin = 136.304
+            xmax = 137.38400000000001
+            text = "稳定？"
+        intervals [11]:
+            xmin = 137.38400000000001
+            xmax = 137.56400000000002
+            text = ""
+        intervals [12]:
+            xmin = 137.56400000000002
+            xmax = 139.56400000000002
+            text = "我看也未必吧。"
+        intervals [13]:
+            xmin = 139.56400000000002
+            xmax = 139.72400000000002
+            text = ""
+        intervals [14]:
+            xmin = 139.72400000000002
+            xmax = 144.13400000000001
+            text = "你看上次聚会高调升职的那个那个谁，你们知道吧？"
+        intervals [15]:
+            xmin = 144.13400000000001
+            xmax = 144.464
+            text = ""
+        intervals [16]:
+            xmin = 144.464
+            xmax = 145.174
+            text = "啊。"
+        intervals [17]:
+            xmin = 145.174
+            xmax = 145.264
+            text = ""
+        intervals [18]:
+            xmin = 145.264
+            xmax = 147.954
+            text = "你你你上次没来，你不知道吗？"
+        intervals [19]:
+            xmin = 147.954
+            xmax = 148.264
+            text = ""
+        intervals [20]:
+            xmin = 148.264
+            xmax = 151.864
+            text = "杨妍他上次说的，杨妍说下次请请客。"
+        intervals [21]:
+            xmin = 151.864
+            xmax = 152.074
+            text = ""
+        intervals [22]:
+            xmin = 152.074
+            xmax = 154.50400000000002
+            text = "结果呢这次人来都没有来。"
+        intervals [23]:
+            xmin = 154.50400000000002
+            xmax = 154.66400000000002
+            text = ""
+        intervals [24]:
+            xmin = 154.66400000000002
+            xmax = 158.59400000000002
+            text = "我们这次说要一起来聚会啥的，她在群里都不说话。"
+        intervals [25]:
+            xmin = 158.59400000000002
+            xmax = 158.714
+            text = ""
+        intervals [26]:
+            xmin = 158.714
+            xmax = 160.50400000000002
+            text = "连节日红包也不发。"
+        intervals [27]:
+            xmin = 160.50400000000002
+            xmax = 160.614
+            text = ""
+        intervals [28]:
+            xmin = 160.614
+            xmax = 163.264
+            text = "你们自己好好想一想，细品一下。"
+        intervals [29]:
+            xmin = 163.264
+            xmax = 163.41400000000002
+            text = ""
+        intervals [30]:
+            xmin = 163.41400000000002
+            xmax = 165.854
+            text = "她呀是真升职还是硬撑啊？"
+        intervals [31]:
+            xmin = 165.854
+            xmax = 165.964
+            text = ""
+        intervals [32]:
+            xmin = 165.964
+            xmax = 168.94400000000002
+            text = "我们大家心里都有数，她装什么装啊？"
+        intervals [33]:
+            xmin = 168.94400000000002
+            xmax = 173.964
+            text = ""
+        intervals [34]:
+            xmin = 173.964
+            xmax = 174.684
+            text = "对啊。"
+        intervals [35]:
+            xmin = 174.684
+            xmax = 174.764
+            text = ""
+        intervals [36]:
+            xmin = 174.764
+            xmax = 179.994
+            text = "上学的时候就那啥，跟个那个小痞子一样，现在还在这装。"
+        intervals [37]:
+            xmin = 179.994
+            xmax = 215.47400000000002
+            text = ""
+        intervals [38]:
+            xmin = 215.47400000000002
+            xmax = 220.114
+            text = "小白领也够可以了呀，小白领你还不知足啊？"
+        intervals [39]:
+            xmin = 220.114
+            xmax = 223.09400000000002
+            text = ""
+        intervals [40]:
+            xmin = 223.09400000000002
+            xmax = 228.394
+            text = "啊，是呀，一来就在这说行业黑话，净说一些我们听不懂的。"
+        intervals [41]:
+            xmin = 228.394
+            xmax = 232.144
+            text = ""
+        intervals [42]:
+            xmin = 232.144
+            xmax = 236.984
+            text = "像这种自己创业的都是有想法的，有野心有头脑的。"
+        intervals [43]:
+            xmin = 236.984
+            xmax = 238.074
+            text = ""
+        intervals [44]:
+            xmin = 238.074
+            xmax = 240.03400000000002
+            text = "羡慕羡慕呀。"
+        intervals [45]:
+            xmin = 240.03400000000002
+            xmax = 255.144
+            text = ""
+        intervals [46]:
+            xmin = 255.144
+            xmax = 255.69400000000002
+            text = "你。"
+        intervals [47]:
+            xmin = 255.69400000000002
+            xmax = 256.094
+            text = ""
+        intervals [48]:
+            xmin = 256.094
+            xmax = 258.044
+            text = "你你在这闹呢？"
+        intervals [49]:
+            xmin = 258.044
+            xmax = 261.044
+            text = ""
+        intervals [50]:
+            xmin = 261.044
+            xmax = 266.284
+            text = "海，我境外海岛独栋别墅，你知道要多少钱吗？啊，算了，你当。"
+        intervals [51]:
+            xmin = 266.284
+            xmax = 266.574
+            text = ""
+        intervals [52]:
+            xmin = 266.574
+            xmax = 273.044
+            text = "你当我没说吧。毕竟这还有自己创业的，还有体制内的，像这种我们比不来的，肯定。"
+        intervals [53]:
+            xmin = 273.044
+            xmax = 273.194
+            text = ""
+        intervals [54]:
+            xmin = 273.194
+            xmax = 276.444
+            text = "一个月收入多少W我们也不知道。"
+        intervals [55]:
+            xmin = 276.444
+            xmax = 290.604
+            text = ""
+        intervals [56]:
+            xmin = 290.604
+            xmax = 293.36400000000003
+            text = "大几千的你也能承担的了啊。"
+        intervals [57]:
+            xmin = 293.36400000000003
+            xmax = 328.374
+            text = ""
+        intervals [58]:
+            xmin = 328.374
+            xmax = 333.024
+            text = "那必须的呀！你是那个什么，自己创业的，肯定有钱啊！"
+        intervals [59]:
+            xmin = 333.024
+            xmax = 333.604
+            text = ""
+        intervals [60]:
+            xmin = 333.604
+            xmax = 335.144
+            text = "你肯定有钱啊！"
+        intervals [61]:
+            xmin = 335.144
+            xmax = 376.604
+            text = ""
+        intervals [62]:
+            xmin = 376.604
+            xmax = 380.584
+            text = "哎，对对对对对对，就按你这抠预算来。"
+        intervals [63]:
+            xmin = 380.584
+            xmax = 380.67400000000004
+            text = ""
+        intervals [64]:
+            xmin = 380.67400000000004
+            xmax = 383.904
+            text = "咱们五年后聚会直接街边小摊凑合凑合呗。"
+        intervals [65]:
+            xmin = 383.904
+            xmax = 383.98400000000004
+            text = ""
+        intervals [66]:
+            xmin = 383.98400000000004
+            xmax = 385.834
+            text = "就主打一个寒酸节俭。"
+        intervals [67]:
+            xmin = 385.834
+            xmax = 385.98400000000004
+            text = ""
+        intervals [68]:
+            xmin = 385.98400000000004
+            xmax = 390.05400000000003
+            text = "要我说，后半辈子我就靠这同学聚会的笑话就出圈了呗。"
+        intervals [69]:
+            xmin = 390.05400000000003
+            xmax = 438.014
+            text = ""
+        intervals [70]:
+            xmin = 438.014
+            xmax = 439.074
+            text = "反正。"
+        intervals [71]:
+            xmin = 439.074
+            xmax = 439.194
+            text = ""
+        intervals [72]:
+            xmin = 439.194
+            xmax = 442.104
+            text = "对，反正我呀，我是不赞同海岛。"
+        intervals [73]:
+            xmin = 442.104
+            xmax = 442.184
+            text = ""
+        intervals [74]:
+            xmin = 442.184
+            xmax = 444.244
+            text = "我也不赞同那个什么街边摊。"
+        intervals [75]:
+            xmin = 444.244
+            xmax = 444.504
+            text = ""
+        intervals [76]:
+            xmin = 444.504
+            xmax = 446.834
+            text = "我就觉得吧，我有个提议，你们听听啊。"
+        intervals [77]:
+            xmin = 446.834
+            xmax = 446.964
+            text = ""
+        intervals [78]:
+            xmin = 446.964
+            xmax = 450.524
+            text = "我就觉得选那种小众网红文艺城市。"
+        intervals [79]:
+            xmin = 450.524
+            xmax = 450.604
+            text = ""
+        intervals [80]:
+            xmin = 450.604
+            xmax = 452.524
+            text = "去那种城市去玩一玩可以。"
+        intervals [81]:
+            xmin = 452.524
+            xmax = 452.604
+            text = ""
+        intervals [82]:
+            xmin = 452.604
+            xmax = 457.294
+            text = "那种城市去的话格调直接拉满了，而且人少，然后也容易出片。"
+        intervals [83]:
+            xmin = 457.294
+            xmax = 457.324
+            text = ""
+        intervals [84]:
+            xmin = 457.324
+            xmax = 462.61400000000003
+            text = "我都打算，我就打算全程拍那种同学重聚的那种vlog。"
+        intervals [85]:
+            xmin = 462.61400000000003
+            xmax = 462.794
+            text = ""
+        intervals [86]:
+            xmin = 462.794
+            xmax = 467.644
+            text = "像这种选题直接就爆火了，咱们全员蹭热度，蹭一波热度的话。"
+        intervals [87]:
+            xmin = 467.644
+            xmax = 468.154
+            text = ""
+        intervals [88]:
+            xmin = 468.154
+            xmax = 469.80400000000003
+            text = "嗯，肯定能爆火。"
+        intervals [89]:
+            xmin = 469.80400000000003
+            xmax = 469.874
+            text = ""
+        intervals [90]:
+            xmin = 469.874
+            xmax = 471.014
+            text = "但是。"
+        intervals [91]:
+            xmin = 471.014
+            xmax = 471.144
+            text = ""
+        intervals [92]:
+            xmin = 471.144
+            xmax = 475.624
+            text = "相懂的，像这种啊，舒适舒适度的话，可能会稍微牺牲一下了。"
+        intervals [93]:
+            xmin = 475.624
+            xmax = 475.724
+            text = ""
+        intervals [94]:
+            xmin = 475.724
+            xmax = 479.294
+            text = "但是我觉得吧，质感和流量是最重要的，这些都不重要，对吧？"
+        intervals [95]:
+            xmin = 479.294
+            xmax = 485.164
+            text = ""
+        intervals [96]:
+            xmin = 485.164
+            xmax = 486.224
+            text = "那我就是。"
+        intervals [97]:
+            xmin = 486.224
+            xmax = 488.474
+            text = ""
+        intervals [98]:
+            xmin = 488.474
+            xmax = 493.604
+            text = "那我们就是，那我就干这个自媒体赚钱的呀，我就是做自媒体工作的呀。"
+        intervals [99]:
+            xmin = 493.604
+            xmax = 496.954
+            text = ""
+        intervals [100]:
+            xmin = 496.954
+            xmax = 503.98400000000004
+            text = "那你那我想请问一下，你你说我把这个当成流量了啊，现在又来说我的不是了。你刚刚提议去什么境外的什么海。"
+        intervals [101]:
+            xmin = 503.98400000000004
+            xmax = 504.05400000000003
+            text = ""
+        intervals [102]:
+            xmin = 504.05400000000003
+            xmax = 506.23400000000004
+            text = "海岛租那个独栋别墅。"
+        intervals [103]:
+            xmin = 506.23400000000004
+            xmax = 506.334
+            text = ""
+        intervals [104]:
+            xmin = 506.334
+            xmax = 513.424
+            text = "我想请问一下，你有考虑一下你有考虑一下这个带孩子的人吗？你刚刚没看到她吗？她一直在手机上。"
+        intervals [105]:
+            xmin = 513.424
+            xmax = 516.664
+            text = ""
+        intervals [106]:
+            xmin = 516.664
+            xmax = 519.314
+            text = "那你有没有看到她有多关心她的孩子？"
+        intervals [107]:
+            xmin = 519.314
+            xmax = 519.354
+            text = ""
+        intervals [108]:
+            xmin = 519.354
+            xmax = 525.664
+            text = "她一直在看它的手机，她手机上面有监控，她要一直看监控。现在她刚刚还说她自己是偷溜出来的。"
+        intervals [109]:
+            xmin = 525.664
+            xmax = 525.934
+            text = ""
+        intervals [110]:
+            xmin = 525.934
+            xmax = 527.434
+            text = "有多可怜啊！"
+        intervals [111]:
+            xmin = 527.434
+            xmax = 529.694
+            text = ""
+        intervals [112]:
+            xmin = 529.694
+            xmax = 536.164
+            text = "她自己能放心吗？她都说了她自己出来玩，她都是偷溜出来的，她能放心自己两个孩子在家吗？"
+        intervals [113]:
+            xmin = 536.164
+            xmax = 540.854
+            text = ""
+        intervals [114]:
+            xmin = 540.854
+            xmax = 548.184
+            text = "哎呀，你没生过孩子你不知道呀！你说你把孩子放在家里，她自己能她自己能，你自己能不担心吗？你说。"
+        intervals [115]:
+            xmin = 548.184
+            xmax = 578.094
+            text = ""
+        intervals [116]:
+            xmin = 578.094
+            xmax = 579.434
+            text = "都理解一下吧。"
+        intervals [117]:
+            xmin = 579.434
+            xmax = 579.514
+            text = ""
+        intervals [118]:
+            xmin = 579.514
+            xmax = 584.964
+            text = "她要带孩子她要带孩子，她肯定不放心她的孩子自己在家呀。"
+        intervals [119]:
+            xmin = 584.964
+            xmax = 589.7040000000001
+            text = ""
+        intervals [120]:
+            xmin = 589.7040000000001
+            xmax = 591.544
+            text = "你这话什么意思呀？"
+        intervals [121]:
+            xmin = 591.544
+            xmax = 598.394
+            text = ""
+        intervals [122]:
+            xmin = 598.394
+            xmax = 599.744
+            text = "你可得了吧！"
+        intervals [123]:
+            xmin = 599.744
+            xmax = 599.814
+            text = ""
+        intervals [124]:
+            xmin = 599.814
+            xmax = 608.564
+            text = "我告诉你，我知道我这个人是什么德行，我其实是是是挺那个，平常是挺那个什么阴阳怪气你们，但是我我人是好的呀！我问你。"
+        intervals [125]:
+            xmin = 608.564
+            xmax = 608.634
+            text = ""
+        intervals [126]:
+            xmin = 608.634
+            xmax = 614.324
+            text = "我现在还没火呢，我肯定会火的呀！我以后火了，我能忘本吗？我能忘了你们吗？"
+        intervals [127]:
+            xmin = 614.324
+            xmax = 616.594
+            text = ""
+        intervals [128]:
+            xmin = 616.594
+            xmax = 622.694
+            text = "关键我现在要去国外，我现在没这个钱，没这个资资源去支撑我去呀，没这个资金呀。"
+        intervals [129]:
+            xmin = 622.694
+            xmax = 624.374
+            text = ""
+        intervals [130]:
+            xmin = 624.374
+            xmax = 628.764
+            text = "我没流量呀，她不是说吗？她，我几个赞都是她给我点的。"
+        intervals [131]:
+            xmin = 628.764
+            xmax = 643.914
+            text = ""
+        intervals [132]:
+            xmin = 643.914
+            xmax = 647.764
+            text = "你都说了你是个小职员，反正你在那也不挣钱，你直接辞职得了呗。"
+        intervals [133]:
+            xmin = 647.764
+            xmax = 649.724
+            text = ""
+        intervals [134]:
+            xmin = 649.724
+            xmax = 651.094
+            text = "再找一个呀。"
+        intervals [135]:
+            xmin = 651.094
+            xmax = 655.354
+            text = ""
+        intervals [136]:
+            xmin = 655.354
+            xmax = 658.004
+            text = "啊，你去跟她，你去给她当。"
+        intervals [137]:
+            xmin = 658.004
+            xmax = 658.224
+            text = ""
+        intervals [138]:
+            xmin = 658.224
+            xmax = 659.784
+            text = "你去给她当员工去，。"
+        intervals [139]:
+            xmin = 659.784
+            xmax = 659.854
+            text = ""
+        intervals [140]:
+            xmin = 659.854
+            xmax = 662.194
+            text = "她不是开公司吗？你去她公司上班。"
+        intervals [141]:
+            xmin = 662.194
+            xmax = 665.244
+            text = ""
+        intervals [142]:
+            xmin = 665.244
+            xmax = 671.9540000000001
+            text = "这不是同学聚会吗？她说你是什么鸡鸭狗他都不要的。你说这话什么意思？我问你，你还把她当朋友吗？"
+        intervals [143]:
+            xmin = 671.9540000000001
+            xmax = 677.884
+            text = ""
+        intervals [144]:
+            xmin = 677.884
+            xmax = 681.784
+            text = "要我说呀要我说呀，她那公司。"
+        intervals [145]:
+            xmin = 681.784
+            xmax = 697.924
+            text = ""
+        intervals [146]:
+            xmin = 697.924
+            xmax = 704.304
+            text = "你们现在很成功，你们现在很成功，但是你们不应该来抨击她呀，她没成功，她也努力过了呀。"
+        intervals [147]:
+            xmin = 704.304
+            xmax = 704.374
+            text = ""
+        intervals [148]:
+            xmin = 704.374
+            xmax = 708.844
+            text = "她肯定也是努力过了，少了那么一点点运气而已啊。"
+        intervals [149]:
+            xmin = 708.844
+            xmax = 718.054
+            text = ""
+        intervals [150]:
+            xmin = 718.054
+            xmax = 719.194
+            text = "我问，成。"
+        intervals [151]:
+            xmin = 719.194
+            xmax = 719.254
+            text = ""
+        intervals [152]:
+            xmin = 719.254
+            xmax = 720.634
+            text = "难道成绩好。"
+        intervals [153]:
+            xmin = 720.634
+            xmax = 720.944
+            text = ""
+        intervals [154]:
+            xmin = 720.944
+            xmax = 727.354
+            text = "成绩好就有用了吗？你看那成绩好的，你看那成绩好的，还这么早就结婚生孩子了呢。"
+        intervals [155]:
+            xmin = 727.354
+            xmax = 738.814
+            text = ""
+        intervals [156]:
+            xmin = 738.814
+            xmax = 742.714
+            text = "我们不是同学吗？我们几个人不是玩的很好吗？"
+        intervals [157]:
+            xmin = 742.714
+            xmax = 742.8340000000001
+            text = ""
+        intervals [158]:
+            xmin = 742.8340000000001
+            xmax = 744.3340000000001
+            text = "她，她有有。"
+        intervals [159]:
+            xmin = 744.3340000000001
+            xmax = 744.404
+            text = ""
+        intervals [160]:
+            xmin = 744.404
+            xmax = 747.754
+            text = "虽然我们心里都知道她有点可怜了，就不应该说她呀。"
+        intervals [161]:
+            xmin = 747.754
+            xmax = 753.184
+            text = ""
+        intervals [162]:
+            xmin = 753.184
+            xmax = 755.2040000000001
+            text = "能不能多点包容啊？"
+        intervals [163]:
+            xmin = 755.2040000000001
+            xmax = 759.774
+            text = ""
+        intervals [164]:
+            xmin = 759.774
+            xmax = 764.634
+            text = "我早知道呀，我就把我们今天这个场面给拍下来，当那个vlog了，肯定能火。"
+        intervals [165]:
+            xmin = 764.634
+            xmax = 764.784
+            text = ""
+        intervals [166]:
+            xmin = 764.784
+            xmax = 767.274
+            text = "你看我们吵的，这还像同学吗？"
+        intervals [167]:
+            xmin = 767.274
+            xmax = 770.044
+            text = ""
+        intervals [168]:
+            xmin = 770.044
+            xmax = 777.114
+            text = "我让她去她的那个什么公司去，我看啊，她不让你去就是因为她是个包皮公司，她就是根本没啥用。"
+        intervals [169]:
+            xmin = 777.114
+            xmax = 784.994
+            text = ""
+        intervals [170]:
+            xmin = 784.994
+            xmax = 786.164
+            text = "你竟然。"
+        intervals [171]:
+            xmin = 786.164
+            xmax = 818.814
+            text = ""
+        intervals [172]:
+            xmin = 818.814
+            xmax = 820.644
+            text = "是你自己想去吧？"
+        intervals [173]:
+            xmin = 820.644
+            xmax = 847.7040000000001
+            text = ""
+        intervals [174]:
+            xmin = 847.7040000000001
+            xmax = 849.814
+            text = "你得了吧你啊，你得了吧！"
+        intervals [175]:
+            xmin = 849.814
+            xmax = 849.914
+            text = ""
+        intervals [176]:
+            xmin = 849.914
+            xmax = 856.104
+            text = "谁说要订订那个叫什么东南亚了？谁说要去了呀？你别在这做梦画大饼了行不行？"
+        intervals [177]:
+            xmin = 856.104
+            xmax = 856.164
+            text = ""
+        intervals [178]:
+            xmin = 856.164
+            xmax = 859.434
+            text = "你先别想五年后的高端酒店了。"
+        intervals [179]:
+            xmin = 859.434
+            xmax = 859.494
+            text = ""
+        intervals [180]:
+            xmin = 859.494
+            xmax = 865.394
+            text = "你先不要想五年后的高端什么酒店了，你先想一想今天这顿晚上晚上咱们吃的饭。"
+        intervals [181]:
+            xmin = 865.394
+            xmax = 865.484
+            text = ""
+        intervals [182]:
+            xmin = 865.484
+            xmax = 871.674
+            text = "几百块钱，咱们A是不是有人？肯定，我觉得吧，肯定有人是要勉强凑一凑才能凑的出来的。"
+        intervals [183]:
+            xmin = 871.674
+            xmax = 880.314
+            text = ""
+        intervals [184]:
+            xmin = 880.314
+            xmax = 883.114
+            text = "反正肯定是有人要凑一凑才能凑的出来的吧？"
+        intervals [185]:
+            xmin = 883.114
+            xmax = 883.644
+            text = ""
+        intervals [186]:
+            xmin = 883.644
+            xmax = 885.044
+            text = "我就不说谁了。"
+        intervals [187]:
+            xmin = 885.044
+            xmax = 886.424
+            text = ""
+        intervals [188]:
+            xmin = 886.424
+            xmax = 888.234
+            text = "你看，怎么就不能？"
+        intervals [189]:
+            xmin = 888.234
+            xmax = 922.974
+            text = ""
+        intervals [190]:
+            xmin = 922.974
+            xmax = 924.654
+            text = "现在又要帮忙了。"
+        intervals [191]:
+            xmin = 924.654
+            xmax = 924.764
+            text = ""
+        intervals [192]:
+            xmin = 924.764
+            xmax = 926.344
+            text = "在装什么好人啊？"
+        intervals [193]:
+            xmin = 926.344
+            xmax = 959.444
+            text = ""
+        intervals [194]:
+            xmin = 959.444
+            xmax = 960.564
+            text = "这可以这可以。"
+        intervals [195]:
+            xmin = 960.564
+            xmax = 967.544
+            text = ""
+        intervals [196]:
+            xmin = 967.544
+            xmax = 974.984
+            text = "行行行行行，这个我满意，这个我我觉得可以。滨海城市又可以出片，然后又有格调。反正我的vlog选题。"
+        intervals [197]:
+            xmin = 974.984
+            xmax = 978.414
+            text = ""
+        intervals [198]:
+            xmin = 978.414
+            xmax = 979.604
+            text = "我。"
+        intervals [199]:
+            xmin = 979.604
+            xmax = 981.484
+            text = ""
+        intervals [200]:
+            xmin = 981.484
+            xmax = 987.644
+            text = "我就算是想当网红，我就算是想火，想要有流量，那我也不会不考虑我身边人感受啊。"
+        intervals [201]:
+            xmin = 987.644
+            xmax = 987.7040000000001
+            text = ""
+        intervals [202]:
+            xmin = 987.7040000000001
+            xmax = 990.744
+            text = "你像是你刚刚提议的什么东南亚度假，我就问你。"
+        intervals [203]:
+            xmin = 990.744
+            xmax = 990.794
+            text = ""
+        intervals [204]:
+            xmin = 990.794
+            xmax = 997.514
+            text = "像那种带带两个孩子的，天天出来还要被偷溜着出来的，像这种，你你你理解她吗？你啊你。"
+        intervals [205]:
+            xmin = 997.514
+            xmax = 1003.424
+            text = ""
+        intervals [206]:
+            xmin = 1003.424
+            xmax = 1012.074
+            text = "谁能理解你啊？没有人能跟你感同身受，因为你公司做的这么大，你公司做的这么大，谁能跟你感同身受啊？"
+        intervals [207]:
+            xmin = 1012.074
+            xmax = 1013.9540000000001
+            text = ""
+        intervals [208]:
+            xmin = 1013.9540000000001
+            xmax = 1019.594
+            text = "你这么有钱，我们这么穷，怎么能跟你感同身受？谁能理解你啊？理解你过好日子啊？"
+        intervals [209]:
+            xmin = 1019.594
+            xmax = 1041.244
+            text = ""
+        intervals [210]:
+            xmin = 1041.244
+            xmax = 1043.734
+            text = "哎，没人想吵架呀，这话说的。"
+        intervals [211]:
+            xmin = 1043.734
+            xmax = 1057.924
+            text = ""
+    item [5]:
+        class = "IntervalTier"
+        name = "spk05"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 118
+        intervals [1]:
+            xmin = 0.0
+            xmax = 64.764
+            text = ""
+        intervals [2]:
+            xmin = 64.764
+            xmax = 66.86399999999999
+            text = "哎呀，怎么能这么说话呢。"
+        intervals [3]:
+            xmin = 66.86399999999999
+            xmax = 67.554
+            text = ""
+        intervals [4]:
+            xmin = 67.554
+            xmax = 69.704
+            text = "你怎么能这么说呢。"
+        intervals [5]:
+            xmin = 69.704
+            xmax = 70.994
+            text = ""
+        intervals [6]:
+            xmin = 70.994
+            xmax = 73.354
+            text = "你说话怎么这么难听啊。"
+        intervals [7]:
+            xmin = 73.354
+            xmax = 126.854
+            text = ""
+        intervals [8]:
+            xmin = 126.854
+            xmax = 132.56400000000002
+            text = "哎呀哎呀，这样稳定点的也是挺好的呀那平平淡淡的那总没有风险啊。"
+        intervals [9]:
+            xmin = 132.56400000000002
+            xmax = 132.654
+            text = ""
+        intervals [10]:
+            xmin = 132.654
+            xmax = 136.214
+            text = "你这比我们这些天天紧绷着的强多了。"
+        intervals [11]:
+            xmin = 136.214
+            xmax = 143.31400000000002
+            text = ""
+        intervals [12]:
+            xmin = 143.31400000000002
+            xmax = 145.244
+            text = "那个谁谁呀？"
+        intervals [13]:
+            xmin = 145.244
+            xmax = 147.464
+            text = ""
+        intervals [14]:
+            xmin = 147.464
+            xmax = 149.554
+            text = "嗯~~，也许吧。"
+        intervals [15]:
+            xmin = 149.554
+            xmax = 178.454
+            text = ""
+        intervals [16]:
+            xmin = 178.454
+            xmax = 179.56400000000002
+            text = "哦~。"
+        intervals [17]:
+            xmin = 179.56400000000002
+            xmax = 179.854
+            text = ""
+        intervals [18]:
+            xmin = 179.854
+            xmax = 183.524
+            text = "哦是哦是那个人呀嗯。"
+        intervals [19]:
+            xmin = 183.524
+            xmax = 183.91400000000002
+            text = ""
+        intervals [20]:
+            xmin = 183.91400000000002
+            xmax = 185.78400000000002
+            text = "好我知道了。"
+        intervals [21]:
+            xmin = 185.78400000000002
+            xmax = 199.31400000000002
+            text = ""
+        intervals [22]:
+            xmin = 199.31400000000002
+            xmax = 200.174
+            text = "那。"
+        intervals [23]:
+            xmin = 200.174
+            xmax = 200.294
+            text = ""
+        intervals [24]:
+            xmin = 200.294
+            xmax = 200.834
+            text = "内。"
+        intervals [25]:
+            xmin = 200.834
+            xmax = 201.174
+            text = ""
+        intervals [26]:
+            xmin = 201.174
+            xmax = 209.934
+            text = "行啊，那我最近也里面没干什么事呀就是在公司里做做我自己的工作也没什么升迁，也没给我掉下去。"
+        intervals [27]:
+            xmin = 209.934
+            xmax = 210.044
+            text = ""
+        intervals [28]:
+            xmin = 210.044
+            xmax = 215.19400000000002
+            text = "那就是一个稳定的平白平平无奇的小白领而已。"
+        intervals [29]:
+            xmin = 215.19400000000002
+            xmax = 216.78400000000002
+            text = ""
+        intervals [30]:
+            xmin = 216.78400000000002
+            xmax = 217.804
+            text = "对啊。"
+        intervals [31]:
+            xmin = 217.804
+            xmax = 218.614
+            text = ""
+        intervals [32]:
+            xmin = 218.614
+            xmax = 219.604
+            text = "嗯。"
+        intervals [33]:
+            xmin = 219.604
+            xmax = 224.144
+            text = ""
+        intervals [34]:
+            xmin = 224.144
+            xmax = 226.59400000000002
+            text = "哎哎那。"
+        intervals [35]:
+            xmin = 226.59400000000002
+            xmax = 229.364
+            text = ""
+        intervals [36]:
+            xmin = 229.364
+            xmax = 230.294
+            text = "那。"
+        intervals [37]:
+            xmin = 230.294
+            xmax = 303.474
+            text = ""
+        intervals [38]:
+            xmin = 303.474
+            xmax = 308.844
+            text = "哎呀，那确实，我的资金也不是太能支持吗？"
+        intervals [39]:
+            xmin = 308.844
+            xmax = 346.144
+            text = ""
+        intervals [40]:
+            xmin = 346.144
+            xmax = 347.994
+            text = "就是不是。"
+        intervals [41]:
+            xmin = 347.994
+            xmax = 350.844
+            text = ""
+        intervals [42]:
+            xmin = 350.844
+            xmax = 352.11400000000003
+            text = "哎，不是不是。"
+        intervals [43]:
+            xmin = 352.11400000000003
+            xmax = 352.17400000000004
+            text = ""
+        intervals [44]:
+            xmin = 352.17400000000004
+            xmax = 357.004
+            text = "那我也我没什么太大的经济经济来源支撑呀。"
+        intervals [45]:
+            xmin = 357.004
+            xmax = 357.05400000000003
+            text = ""
+        intervals [46]:
+            xmin = 357.05400000000003
+            xmax = 362.164
+            text = "我只是一个小职员，我没有我没有人事上的上调呀。"
+        intervals [47]:
+            xmin = 362.164
+            xmax = 363.584
+            text = ""
+        intervals [48]:
+            xmin = 363.584
+            xmax = 371.134
+            text = "那我，不是你们在提议吗？我只是哎呀不要管哎，算了算了别管我了，你们自己想吧。"
+        intervals [49]:
+            xmin = 371.134
+            xmax = 371.494
+            text = ""
+        intervals [50]:
+            xmin = 371.494
+            xmax = 372.074
+            text = "那。"
+        intervals [51]:
+            xmin = 372.074
+            xmax = 372.584
+            text = ""
+        intervals [52]:
+            xmin = 372.584
+            xmax = 373.254
+            text = "现在。"
+        intervals [53]:
+            xmin = 373.254
+            xmax = 424.284
+            text = ""
+        intervals [54]:
+            xmin = 424.284
+            xmax = 425.544
+            text = "哎呀哎呀。"
+        intervals [55]:
+            xmin = 425.544
+            xmax = 425.974
+            text = ""
+        intervals [56]:
+            xmin = 425.974
+            xmax = 427.714
+            text = "哎呀，好了好了。"
+        intervals [57]:
+            xmin = 427.714
+            xmax = 428.324
+            text = ""
+        intervals [58]:
+            xmin = 428.324
+            xmax = 434.204
+            text = "这都这都是职场的正常变动而已，你们就不要多想了呀别去多想。"
+        intervals [59]:
+            xmin = 434.204
+            xmax = 434.244
+            text = ""
+        intervals [60]:
+            xmin = 434.244
+            xmax = 440.004
+            text = "我们还是要好好商量一下，五年后重聚的地方的，你不要再提这些啊。"
+        intervals [61]:
+            xmin = 440.004
+            xmax = 457.064
+            text = ""
+        intervals [62]:
+            xmin = 457.064
+            xmax = 459.064
+            text = "哦，这也挺好的。"
+        intervals [63]:
+            xmin = 459.064
+            xmax = 574.194
+            text = ""
+        intervals [64]:
+            xmin = 574.194
+            xmax = 576.304
+            text = "哎呀，那是不行的。"
+        intervals [65]:
+            xmin = 576.304
+            xmax = 576.924
+            text = ""
+        intervals [66]:
+            xmin = 576.924
+            xmax = 577.524
+            text = "这。"
+        intervals [67]:
+            xmin = 577.524
+            xmax = 578.004
+            text = ""
+        intervals [68]:
+            xmin = 578.004
+            xmax = 580.814
+            text = "这个是我们的同学聚会啊。"
+        intervals [69]:
+            xmin = 580.814
+            xmax = 621.344
+            text = ""
+        intervals [70]:
+            xmin = 621.344
+            xmax = 622.644
+            text = "对呀。"
+        intervals [71]:
+            xmin = 622.644
+            xmax = 630.274
+            text = ""
+        intervals [72]:
+            xmin = 630.274
+            xmax = 631.694
+            text = "你们你们要。"
+        intervals [73]:
+            xmin = 631.694
+            xmax = 631.774
+            text = ""
+        intervals [74]:
+            xmin = 631.774
+            xmax = 638.624
+            text = "考虑一下我呀，去国外我那个工作我现在只是一个小职员，我请那么久的假去国外。"
+        intervals [75]:
+            xmin = 638.624
+            xmax = 638.664
+            text = ""
+        intervals [76]:
+            xmin = 638.664
+            xmax = 643.914
+            text = "那公司回来把我裁了我以后的生活怎么办呀？那你要考虑一下呀。"
+        intervals [77]:
+            xmin = 643.914
+            xmax = 647.294
+            text = ""
+        intervals [78]:
+            xmin = 647.294
+            xmax = 649.524
+            text = "那我以后的生活怎么办呢？"
+        intervals [79]:
+            xmin = 649.524
+            xmax = 650.374
+            text = ""
+        intervals [80]:
+            xmin = 650.374
+            xmax = 652.564
+            text = "我找不到呀。"
+        intervals [81]:
+            xmin = 652.564
+            xmax = 653.924
+            text = ""
+        intervals [82]:
+            xmin = 653.924
+            xmax = 655.094
+            text = "我我。"
+        intervals [83]:
+            xmin = 655.094
+            xmax = 655.394
+            text = ""
+        intervals [84]:
+            xmin = 655.394
+            xmax = 658.9540000000001
+            text = "你看看她都不想要我。"
+        intervals [85]:
+            xmin = 658.9540000000001
+            xmax = 661.444
+            text = ""
+        intervals [86]:
+            xmin = 661.444
+            xmax = 663.844
+            text = "她不想要我呀。"
+        intervals [87]:
+            xmin = 663.844
+            xmax = 670.544
+            text = ""
+        intervals [88]:
+            xmin = 670.544
+            xmax = 675.234
+            text = "就是，你什么意思啊？什么叫她嫌弃我。"
+        intervals [89]:
+            xmin = 675.234
+            xmax = 677.734
+            text = ""
+        intervals [90]:
+            xmin = 677.734
+            xmax = 678.554
+            text = "那。"
+        intervals [91]:
+            xmin = 678.554
+            xmax = 679.254
+            text = ""
+        intervals [92]:
+            xmin = 679.254
+            xmax = 687.094
+            text = "底下小员工多累呀！那我学你也说了我学历不好呀学历不好有高学历人家肯定要高学历的人呀这能怪我吗？"
+        intervals [93]:
+            xmin = 687.094
+            xmax = 704.3340000000001
+            text = ""
+        intervals [94]:
+            xmin = 704.3340000000001
+            xmax = 709.5840000000001
+            text = "怎么能叫我不努力呢，怎么能说我不努力。"
+        intervals [95]:
+            xmin = 709.5840000000001
+            xmax = 712.154
+            text = ""
+        intervals [96]:
+            xmin = 712.154
+            xmax = 718.734
+            text = "我哪，我哪又逃课我明明在哪坐呢明明是你们逃课啊。"
+        intervals [97]:
+            xmin = 718.734
+            xmax = 926.594
+            text = ""
+        intervals [98]:
+            xmin = 926.594
+            xmax = 930.7040000000001
+            text = "哎呀，好了别吵了这刚吵得那么激烈都没个结果。"
+        intervals [99]:
+            xmin = 930.7040000000001
+            xmax = 930.764
+            text = ""
+        intervals [100]:
+            xmin = 930.764
+            xmax = 935.674
+            text = "大家都是老同学，那有钱有有钱的过法，没钱有没钱的聚法。"
+        intervals [101]:
+            xmin = 935.674
+            xmax = 935.7040000000001
+            text = ""
+        intervals [102]:
+            xmin = 935.7040000000001
+            xmax = 939.244
+            text = "那我们五年后能凑到一起才是真才是对的呀。"
+        intervals [103]:
+            xmin = 939.244
+            xmax = 939.524
+            text = ""
+        intervals [104]:
+            xmin = 939.524
+            xmax = 942.714
+            text = "这都吵什么呀？吵成什么样子了都。"
+        intervals [105]:
+            xmin = 942.714
+            xmax = 953.164
+            text = ""
+        intervals [106]:
+            xmin = 953.164
+            xmax = 954.354
+            text = "对呀。"
+        intervals [107]:
+            xmin = 954.354
+            xmax = 960.744
+            text = ""
+        intervals [108]:
+            xmin = 960.744
+            xmax = 961.524
+            text = "行。"
+        intervals [109]:
+            xmin = 961.524
+            xmax = 1029.984
+            text = ""
+        intervals [110]:
+            xmin = 1029.984
+            xmax = 1031.984
+            text = "好，那那也行。"
+        intervals [111]:
+            xmin = 1031.984
+            xmax = 1038.684
+            text = ""
+        intervals [112]:
+            xmin = 1038.684
+            xmax = 1039.744
+            text = "啊，对。"
+        intervals [113]:
+            xmin = 1039.744
+            xmax = 1040.154
+            text = ""
+        intervals [114]:
+            xmin = 1040.154
+            xmax = 1047.254
+            text = "对呀，对呀，现在最好的安排就是顺其自然呀，我们这吵来吵去也没什么也没一个定法呀。"
+        intervals [115]:
+            xmin = 1047.254
+            xmax = 1047.3039999999999
+            text = ""
+        intervals [116]:
+            xmin = 1047.3039999999999
+            xmax = 1048.7939999999999
+            text = "我们五年后再说。"
+        intervals [117]:
+            xmin = 1048.7939999999999
+            xmax = 1048.8339999999998
+            text = ""
+        intervals [118]:
+            xmin = 1048.8339999999998
+            xmax = 1057.924
+            text = "五年五年的时间我们肯定会比以前更好的你们说是不是对吧？好了好了好了好了好好。"
+    item [6]:
+        class = "IntervalTier"
+        name = "spk06"
+        xmin = 0
+        xmax = 1057.924
+        intervals: size = 227
+        intervals [1]:
+            xmin = 0.0
+            xmax = 68.78399999999999
+            text = ""
+        intervals [2]:
+            xmin = 68.78399999999999
+            xmax = 70.314
+            text = "能不能别阴阳人啊？"
+        intervals [3]:
+            xmin = 70.314
+            xmax = 70.594
+            text = ""
+        intervals [4]:
+            xmin = 70.594
+            xmax = 71.86399999999999
+            text = "要说就说。"
+        intervals [5]:
+            xmin = 71.86399999999999
+            xmax = 87.544
+            text = ""
+        intervals [6]:
+            xmin = 87.544
+            xmax = 92.554
+            text = "好呀，那你现在的保险赛道，月底绩效是能提到大概多少档位呀？"
+        intervals [7]:
+            xmin = 92.554
+            xmax = 92.814
+            text = ""
+        intervals [8]:
+            xmin = 92.814
+            xmax = 95.054
+            text = "客户资源好不好做呀？跟我说说呗。"
+        intervals [9]:
+            xmin = 95.054
+            xmax = 108.83399999999999
+            text = ""
+        intervals [10]:
+            xmin = 108.83399999999999
+            xmax = 110.054
+            text = "哎呀，我呀。"
+        intervals [11]:
+            xmin = 110.054
+            xmax = 110.384
+            text = ""
+        intervals [12]:
+            xmin = 110.384
+            xmax = 113.734
+            text = "我就一眼望到头的体制内日子呗，枯燥的很。"
+        intervals [13]:
+            xmin = 113.734
+            xmax = 113.97399999999999
+            text = ""
+        intervals [14]:
+            xmin = 113.97399999999999
+            xmax = 116.904
+            text = "还要上兴趣班，单科单次一百八呢。"
+        intervals [15]:
+            xmin = 116.904
+            xmax = 117.104
+            text = ""
+        intervals [16]:
+            xmin = 117.104
+            xmax = 122.22399999999999
+            text = "一周两次，新换的新能源车，十天充一次电，两年换一次电池。"
+        intervals [17]:
+            xmin = 122.22399999999999
+            xmax = 122.934
+            text = ""
+        intervals [18]:
+            xmin = 122.934
+            xmax = 126.86399999999999
+            text = "你们自己算算，我每个月固定开销要压多少钱啊？你自己想想。"
+        intervals [19]:
+            xmin = 126.86399999999999
+            xmax = 144.574
+            text = ""
+        intervals [20]:
+            xmin = 144.574
+            xmax = 145.63400000000001
+            text = "啊，知道啊。"
+        intervals [21]:
+            xmin = 145.63400000000001
+            xmax = 170.56400000000002
+            text = ""
+        intervals [22]:
+            xmin = 170.56400000000002
+            xmax = 171.574
+            text = "就是。"
+        intervals [23]:
+            xmin = 171.574
+            xmax = 177.69400000000002
+            text = ""
+        intervals [24]:
+            xmin = 177.69400000000002
+            xmax = 178.75400000000002
+            text = "就爱装。"
+        intervals [25]:
+            xmin = 178.75400000000002
+            xmax = 184.31400000000002
+            text = ""
+        intervals [26]:
+            xmin = 184.31400000000002
+            xmax = 185.37400000000002
+            text = "想起来了。"
+        intervals [27]:
+            xmin = 185.37400000000002
+            xmax = 199.464
+            text = ""
+        intervals [28]:
+            xmin = 199.464
+            xmax = 200.50400000000002
+            text = "那就行啊。"
+        intervals [29]:
+            xmin = 200.50400000000002
+            xmax = 215.214
+            text = ""
+        intervals [30]:
+            xmin = 215.214
+            xmax = 216.16400000000002
+            text = "我也是啊。"
+        intervals [31]:
+            xmin = 216.16400000000002
+            xmax = 222.09400000000002
+            text = ""
+        intervals [32]:
+            xmin = 222.09400000000002
+            xmax = 223.744
+            text = "就是多牛呀！"
+        intervals [33]:
+            xmin = 223.744
+            xmax = 227.364
+            text = ""
+        intervals [34]:
+            xmin = 227.364
+            xmax = 228.41400000000002
+            text = "就是呀。"
+        intervals [35]:
+            xmin = 228.41400000000002
+            xmax = 239.53400000000002
+            text = ""
+        intervals [36]:
+            xmin = 239.53400000000002
+            xmax = 241.404
+            text = "我好歹还是体制内呢。"
+        intervals [37]:
+            xmin = 241.404
+            xmax = 242.684
+            text = ""
+        intervals [38]:
+            xmin = 242.684
+            xmax = 246.104
+            text = "对呀，我也挺好的呀，我现在日子过得挺好的呀，多舒坦。"
+        intervals [39]:
+            xmin = 246.104
+            xmax = 257.954
+            text = ""
+        intervals [40]:
+            xmin = 257.954
+            xmax = 259.144
+            text = "闹什么呢你？"
+        intervals [41]:
+            xmin = 259.144
+            xmax = 261.644
+            text = ""
+        intervals [42]:
+            xmin = 261.644
+            xmax = 262.374
+            text = "说什么呢？"
+        intervals [43]:
+            xmin = 262.374
+            xmax = 265.904
+            text = ""
+        intervals [44]:
+            xmin = 265.904
+            xmax = 266.86400000000003
+            text = "就是呀。"
+        intervals [45]:
+            xmin = 266.86400000000003
+            xmax = 272.404
+            text = ""
+        intervals [46]:
+            xmin = 272.404
+            xmax = 273.394
+            text = "就是呀。"
+        intervals [47]:
+            xmin = 273.394
+            xmax = 275.814
+            text = ""
+        intervals [48]:
+            xmin = 275.814
+            xmax = 276.824
+            text = "你画什么。"
+        intervals [49]:
+            xmin = 276.824
+            xmax = 277.274
+            text = ""
+        intervals [50]:
+            xmin = 277.274
+            xmax = 279.544
+            text = "你画什么饼啊你？你太不现实了吧。"
+        intervals [51]:
+            xmin = 279.544
+            xmax = 281.42400000000004
+            text = ""
+        intervals [52]:
+            xmin = 281.42400000000004
+            xmax = 282.394
+            text = "不行不行。"
+        intervals [53]:
+            xmin = 282.394
+            xmax = 282.584
+            text = ""
+        intervals [54]:
+            xmin = 282.584
+            xmax = 283.654
+            text = "太不现实了。"
+        intervals [55]:
+            xmin = 283.654
+            xmax = 284.664
+            text = ""
+        intervals [56]:
+            xmin = 284.664
+            xmax = 287.874
+            text = "你想想，境外机票、住宿、杂费。"
+        intervals [57]:
+            xmin = 287.874
+            xmax = 288.074
+            text = ""
+        intervals [58]:
+            xmin = 288.074
+            xmax = 290.98400000000004
+            text = "杂七杂八堆起来，人均大几千起步。"
+        intervals [59]:
+            xmin = 290.98400000000004
+            xmax = 291.204
+            text = ""
+        intervals [60]:
+            xmin = 291.204
+            xmax = 292.86400000000003
+            text = "肯定有人承担不起啊。"
+        intervals [61]:
+            xmin = 292.86400000000003
+            xmax = 293.30400000000003
+            text = ""
+        intervals [62]:
+            xmin = 293.30400000000003
+            xmax = 298.394
+            text = "聚会不能搞贫富分化呀，有的人不，有的人没钱，不像我们。"
+        intervals [63]:
+            xmin = 298.394
+            xmax = 298.784
+            text = ""
+        intervals [64]:
+            xmin = 298.784
+            xmax = 299.764
+            text = "二次。"
+        intervals [65]:
+            xmin = 299.764
+            xmax = 301.05400000000003
+            text = ""
+        intervals [66]:
+            xmin = 301.05400000000003
+            xmax = 302.514
+            text = "你能不能想想别人啊？"
+        intervals [67]:
+            xmin = 302.514
+            xmax = 303.944
+            text = ""
+        intervals [68]:
+            xmin = 303.944
+            xmax = 304.944
+            text = "就是啊。"
+        intervals [69]:
+            xmin = 304.944
+            xmax = 331.974
+            text = ""
+        intervals [70]:
+            xmin = 331.974
+            xmax = 334.694
+            text = "这是同学聚会，你能不能好好商量一下？"
+        intervals [71]:
+            xmin = 334.694
+            xmax = 334.894
+            text = ""
+        intervals [72]:
+            xmin = 334.894
+            xmax = 337.064
+            text = "别动不动自啥，自己去自己去。"
+        intervals [73]:
+            xmin = 337.064
+            xmax = 346.704
+            text = ""
+        intervals [74]:
+            xmin = 346.704
+            xmax = 347.854
+            text = "就是啊。"
+        intervals [75]:
+            xmin = 347.854
+            xmax = 361.724
+            text = ""
+        intervals [76]:
+            xmin = 361.724
+            xmax = 363.784
+            text = "那你来给一个办法呗，到底去哪呀？"
+        intervals [77]:
+            xmin = 363.784
+            xmax = 374.824
+            text = ""
+        intervals [78]:
+            xmin = 374.824
+            xmax = 375.914
+            text = "我也没意见啊。"
+        intervals [79]:
+            xmin = 375.914
+            xmax = 395.714
+            text = ""
+        intervals [80]:
+            xmin = 395.714
+            xmax = 396.80400000000003
+            text = "哎，你们都别说了。"
+        intervals [81]:
+            xmin = 396.80400000000003
+            xmax = 396.964
+            text = ""
+        intervals [82]:
+            xmin = 396.964
+            xmax = 399.204
+            text = "你先不说五年之后了，你就说现在吧。"
+        intervals [83]:
+            xmin = 399.204
+            xmax = 399.544
+            text = ""
+        intervals [84]:
+            xmin = 399.544
+            xmax = 403.784
+            text = "你们大厂最近大面积的裁员，你们部门没有裁人吗？"
+        intervals [85]:
+            xmin = 403.784
+            xmax = 404.074
+            text = ""
+        intervals [86]:
+            xmin = 404.074
+            xmax = 407.764
+            text = "但是你上个月年假全部都清零了，没有出去游玩。"
+        intervals [87]:
+            xmin = 407.764
+            xmax = 407.844
+            text = ""
+        intervals [88]:
+            xmin = 407.844
+            xmax = 410.064
+            text = "私人物品全部都搬回家了。"
+        intervals [89]:
+            xmin = 410.064
+            xmax = 410.094
+            text = ""
+        intervals [90]:
+            xmin = 410.094
+            xmax = 411.024
+            text = "你跟我说说。"
+        intervals [91]:
+            xmin = 411.024
+            xmax = 411.204
+            text = ""
+        intervals [92]:
+            xmin = 411.204
+            xmax = 415.124
+            text = "你到底在提前防备什么东西啊？"
+        intervals [93]:
+            xmin = 415.124
+            xmax = 415.754
+            text = ""
+        intervals [94]:
+            xmin = 415.754
+            xmax = 418.654
+            text = "哎，原来是这样呀，原来我懂了我懂了。"
+        intervals [95]:
+            xmin = 418.654
+            xmax = 422.974
+            text = ""
+        intervals [96]:
+            xmin = 422.974
+            xmax = 424.124
+            text = "谁能证明啊？"
+        intervals [97]:
+            xmin = 424.124
+            xmax = 426.564
+            text = ""
+        intervals [98]:
+            xmin = 426.564
+            xmax = 429.224
+            text = "我自己还有工作呢，我为什么要去你公司啊？"
+        intervals [99]:
+            xmin = 429.224
+            xmax = 479.30400000000003
+            text = ""
+        intervals [100]:
+            xmin = 479.30400000000003
+            xmax = 480.754
+            text = "对呀，我赞同你的说法。"
+        intervals [101]:
+            xmin = 480.754
+            xmax = 488.11400000000003
+            text = ""
+        intervals [102]:
+            xmin = 488.11400000000003
+            xmax = 491.294
+            text = "那你这个二次创业可以打开名声呀。"
+        intervals [103]:
+            xmin = 491.294
+            xmax = 506.684
+            text = ""
+        intervals [104]:
+            xmin = 506.684
+            xmax = 507.794
+            text = "你就想去国外？"
+        intervals [105]:
+            xmin = 507.794
+            xmax = 511.024
+            text = ""
+        intervals [106]:
+            xmin = 511.024
+            xmax = 513.614
+            text = "就是呀，没看到人家吗？"
+        intervals [107]:
+            xmin = 513.614
+            xmax = 517.644
+            text = ""
+        intervals [108]:
+            xmin = 517.644
+            xmax = 519.684
+            text = "也不能手心朝上呀。"
+        intervals [109]:
+            xmin = 519.684
+            xmax = 532.114
+            text = ""
+        intervals [110]:
+            xmin = 532.114
+            xmax = 532.864
+            text = "对啊。"
+        intervals [111]:
+            xmin = 532.864
+            xmax = 537.474
+            text = ""
+        intervals [112]:
+            xmin = 537.474
+            xmax = 541.304
+            text = "这孩子那么小，路程那么远，孩子又受不了。"
+        intervals [113]:
+            xmin = 541.304
+            xmax = 549.754
+            text = ""
+        intervals [114]:
+            xmin = 549.754
+            xmax = 551.554
+            text = "她老公上班。"
+        intervals [115]:
+            xmin = 551.554
+            xmax = 574.224
+            text = ""
+        intervals [116]:
+            xmin = 574.224
+            xmax = 574.984
+            text = "哎呀。"
+        intervals [117]:
+            xmin = 574.984
+            xmax = 575.074
+            text = ""
+        intervals [118]:
+            xmin = 575.074
+            xmax = 576.694
+            text = "都别落下一个人。"
+        intervals [119]:
+            xmin = 576.694
+            xmax = 628.114
+            text = ""
+        intervals [120]:
+            xmin = 628.114
+            xmax = 629.5840000000001
+            text = "问你老公要钱去。"
+        intervals [121]:
+            xmin = 629.5840000000001
+            xmax = 630.794
+            text = ""
+        intervals [122]:
+            xmin = 630.794
+            xmax = 632.194
+            text = "问你老公要钱去。"
+        intervals [123]:
+            xmin = 632.194
+            xmax = 642.734
+            text = ""
+        intervals [124]:
+            xmin = 642.734
+            xmax = 644.724
+            text = "那你能不能说一个，你想去哪？"
+        intervals [125]:
+            xmin = 644.724
+            xmax = 647.424
+            text = ""
+        intervals [126]:
+            xmin = 647.424
+            xmax = 648.114
+            text = "呵呵呵呵。"
+        intervals [127]:
+            xmin = 648.114
+            xmax = 648.964
+            text = ""
+        intervals [128]:
+            xmin = 648.964
+            xmax = 650.694
+            text = "再找一份工作不就行了？"
+        intervals [129]:
+            xmin = 650.694
+            xmax = 651.224
+            text = ""
+        intervals [130]:
+            xmin = 651.224
+            xmax = 654.7040000000001
+            text = "别说了，她以后大网红了，你去给他当助理行吗？"
+        intervals [131]:
+            xmin = 654.7040000000001
+            xmax = 672.214
+            text = ""
+        intervals [132]:
+            xmin = 672.214
+            xmax = 673.984
+            text = "别瞧不起老同学。"
+        intervals [133]:
+            xmin = 673.984
+            xmax = 690.744
+            text = ""
+        intervals [134]:
+            xmin = 690.744
+            xmax = 693.974
+            text = "人家体制内呢？你自己不努力学习好吗？"
+        intervals [135]:
+            xmin = 693.974
+            xmax = 694.104
+            text = ""
+        intervals [136]:
+            xmin = 694.104
+            xmax = 696.0840000000001
+            text = "上学时候就知道在那玩。"
+        intervals [137]:
+            xmin = 696.0840000000001
+            xmax = 702.694
+            text = ""
+        intervals [138]:
+            xmin = 702.694
+            xmax = 704.724
+            text = "她自己不努力怪谁呀？"
+        intervals [139]:
+            xmin = 704.724
+            xmax = 705.904
+            text = ""
+        intervals [140]:
+            xmin = 705.904
+            xmax = 707.894
+            text = "上学的时候就知道玩。"
+        intervals [141]:
+            xmin = 707.894
+            xmax = 710.354
+            text = ""
+        intervals [142]:
+            xmin = 710.354
+            xmax = 712.064
+            text = "就是啊，上课也不知道玩。"
+        intervals [143]:
+            xmin = 712.064
+            xmax = 712.174
+            text = ""
+        intervals [144]:
+            xmin = 712.174
+            xmax = 713.734
+            text = "下课也不知道学习。"
+        intervals [145]:
+            xmin = 713.734
+            xmax = 715.324
+            text = ""
+        intervals [146]:
+            xmin = 715.324
+            xmax = 718.534
+            text = "我是体制内啊，我当然知道了，我努力学习啊。"
+        intervals [147]:
+            xmin = 718.534
+            xmax = 721.384
+            text = ""
+        intervals [148]:
+            xmin = 721.384
+            xmax = 724.064
+            text = "就是啊，我就是很好呀，比你好多了。"
+        intervals [149]:
+            xmin = 724.064
+            xmax = 726.184
+            text = ""
+        intervals [150]:
+            xmin = 726.184
+            xmax = 727.194
+            text = "凭什么不说话？"
+        intervals [151]:
+            xmin = 727.194
+            xmax = 730.194
+            text = ""
+        intervals [152]:
+            xmin = 730.194
+            xmax = 730.994
+            text = "就是啊。"
+        intervals [153]:
+            xmin = 730.994
+            xmax = 731.064
+            text = ""
+        intervals [154]:
+            xmin = 731.064
+            xmax = 732.824
+            text = "现在伸手问老公要钱吧？"
+        intervals [155]:
+            xmin = 732.824
+            xmax = 735.5840000000001
+            text = ""
+        intervals [156]:
+            xmin = 735.5840000000001
+            xmax = 736.514
+            text = "就是啊。"
+        intervals [157]:
+            xmin = 736.514
+            xmax = 736.654
+            text = ""
+        intervals [158]:
+            xmin = 736.654
+            xmax = 739.554
+            text = "我们那多爽呀，想出来就出来，请个假就行了呗。"
+        intervals [159]:
+            xmin = 739.554
+            xmax = 739.674
+            text = ""
+        intervals [160]:
+            xmin = 739.674
+            xmax = 741.824
+            text = "你还要偷偷溜了溜出来呢。"
+        intervals [161]:
+            xmin = 741.824
+            xmax = 756.464
+            text = ""
+        intervals [162]:
+            xmin = 756.464
+            xmax = 758.314
+            text = "你就想当网红，你别说了。"
+        intervals [163]:
+            xmin = 758.314
+            xmax = 765.174
+            text = ""
+        intervals [164]:
+            xmin = 765.174
+            xmax = 766.484
+            text = "那你现在拍呗。"
+        intervals [165]:
+            xmin = 766.484
+            xmax = 766.564
+            text = ""
+        intervals [166]:
+            xmin = 766.564
+            xmax = 768.224
+            text = "你火了，正好她辞职你给。"
+        intervals [167]:
+            xmin = 768.224
+            xmax = 768.284
+            text = ""
+        intervals [168]:
+            xmin = 768.284
+            xmax = 771.094
+            text = "她给你当助理不就行了吗？我们就全部都能出去玩了。"
+        intervals [169]:
+            xmin = 771.094
+            xmax = 801.444
+            text = ""
+        intervals [170]:
+            xmin = 801.444
+            xmax = 803.414
+            text = "倒闭也比家家庭主妇好。"
+        intervals [171]:
+            xmin = 803.414
+            xmax = 828.154
+            text = ""
+        intervals [172]:
+            xmin = 828.154
+            xmax = 831.114
+            text = "你管呢？反正都是小事呗，我有的是钱。"
+        intervals [173]:
+            xmin = 831.114
+            xmax = 831.194
+            text = ""
+        intervals [174]:
+            xmin = 831.194
+            xmax = 833.604
+            text = "现在是五，聊的是五年聚会。"
+        intervals [175]:
+            xmin = 833.604
+            xmax = 833.934
+            text = ""
+        intervals [176]:
+            xmin = 833.934
+            xmax = 836.614
+            text = "现在聊的是五年后聚会，你管这么多干啥？"
+        intervals [177]:
+            xmin = 836.614
+            xmax = 856.754
+            text = ""
+        intervals [178]:
+            xmin = 856.754
+            xmax = 857.574
+            text = "就是啊。"
+        intervals [179]:
+            xmin = 857.574
+            xmax = 871.574
+            text = ""
+        intervals [180]:
+            xmin = 871.574
+            xmax = 873.424
+            text = "就是，我也觉得。"
+        intervals [181]:
+            xmin = 873.424
+            xmax = 878.634
+            text = ""
+        intervals [182]:
+            xmin = 878.634
+            xmax = 879.9540000000001
+            text = "带多少钱啊？你啊？"
+        intervals [183]:
+            xmin = 879.9540000000001
+            xmax = 883.104
+            text = ""
+        intervals [184]:
+            xmin = 883.104
+            xmax = 883.904
+            text = "就是啊。"
+        intervals [185]:
+            xmin = 883.904
+            xmax = 884.034
+            text = ""
+        intervals [186]:
+            xmin = 884.034
+            xmax = 885.744
+            text = "真有人手头这么紧吗？"
+        intervals [187]:
+            xmin = 885.744
+            xmax = 911.594
+            text = ""
+        intervals [188]:
+            xmin = 911.594
+            xmax = 912.874
+            text = "哎呀，你管呢。"
+        intervals [189]:
+            xmin = 912.874
+            xmax = 912.9540000000001
+            text = ""
+        intervals [190]:
+            xmin = 912.9540000000001
+            xmax = 913.504
+            text = "对了。"
+        intervals [191]:
+            xmin = 913.504
+            xmax = 913.604
+            text = ""
+        intervals [192]:
+            xmin = 913.604
+            xmax = 917.414
+            text = "你上次说要把那个东西处理掉，后来挂在平台上卖了吗？"
+        intervals [193]:
+            xmin = 917.414
+            xmax = 917.644
+            text = ""
+        intervals [194]:
+            xmin = 917.644
+            xmax = 922.254
+            text = "你如果没卖的话，我有熟人专门做这个，我可以帮你忙哦。大人不计小人过。"
+        intervals [195]:
+            xmin = 922.254
+            xmax = 923.054
+            text = ""
+        intervals [196]:
+            xmin = 923.054
+            xmax = 923.934
+            text = "对呀。"
+        intervals [197]:
+            xmin = 923.934
+            xmax = 953.324
+            text = ""
+        intervals [198]:
+            xmin = 953.324
+            xmax = 954.854
+            text = "就是啊，也不算现实呀。"
+        intervals [199]:
+            xmin = 954.854
+            xmax = 955.134
+            text = ""
+        intervals [200]:
+            xmin = 955.134
+            xmax = 956.894
+            text = "那就模糊折中呗。"
+        intervals [201]:
+            xmin = 956.894
+            xmax = 956.984
+            text = ""
+        intervals [202]:
+            xmin = 956.984
+            xmax = 959.374
+            text = "暂定国内滨海城市轻度假。"
+        intervals [203]:
+            xmin = 959.374
+            xmax = 959.644
+            text = ""
+        intervals [204]:
+            xmin = 959.644
+            xmax = 964.054
+            text = "不追高端，也不搞攀比，预算人均控制在可控范围之内。"
+        intervals [205]:
+            xmin = 964.054
+            xmax = 964.194
+            text = ""
+        intervals [206]:
+            xmin = 964.194
+            xmax = 967.9540000000001
+            text = "五年前提前三个月再细化不就行了？别搞这些了。"
+        intervals [207]:
+            xmin = 967.9540000000001
+            xmax = 987.694
+            text = ""
+        intervals [208]:
+            xmin = 987.694
+            xmax = 988.564
+            text = "那好呀。"
+        intervals [209]:
+            xmin = 988.564
+            xmax = 998.884
+            text = ""
+        intervals [210]:
+            xmin = 998.884
+            xmax = 1000.814
+            text = "她自己不努力怎么办？"
+        intervals [211]:
+            xmin = 1000.814
+            xmax = 1003.464
+            text = ""
+        intervals [212]:
+            xmin = 1003.464
+            xmax = 1004.814
+            text = "我就贬低你。"
+        intervals [213]:
+            xmin = 1004.814
+            xmax = 1005.044
+            text = ""
+        intervals [214]:
+            xmin = 1005.044
+            xmax = 1006.594
+            text = "我就这个意思呗。"
+        intervals [215]:
+            xmin = 1006.594
+            xmax = 1006.754
+            text = ""
+        intervals [216]:
+            xmin = 1006.754
+            xmax = 1008.964
+            text = "我就这个意思啊，怎么了？"
+        intervals [217]:
+            xmin = 1008.964
+            xmax = 1012.314
+            text = ""
+        intervals [218]:
+            xmin = 1012.314
+            xmax = 1015.024
+            text = "我以后不结婚不生小孩行了吗？我不跟你一样。"
+        intervals [219]:
+            xmin = 1015.024
+            xmax = 1040.004
+            text = ""
+        intervals [220]:
+            xmin = 1040.004
+            xmax = 1041.174
+            text = "行行行。"
+        intervals [221]:
+            xmin = 1041.174
+            xmax = 1052.1039999999998
+            text = ""
+        intervals [222]:
+            xmin = 1052.1039999999998
+            xmax = 1052.8339999999998
+            text = "好。"
+        intervals [223]:
+            xmin = 1052.8339999999998
+            xmax = 1052.954
+            text = ""
+        intervals [224]:
+            xmin = 1052.954
+            xmax = 1055.894
+            text = "好，五年后不见不散。"
+        intervals [225]:
+            xmin = 1055.894
+            xmax = 1056.8339999999998
+            text = ""
+        intervals [226]:
+            xmin = 1056.8339999999998
+            xmax = 1057.8539999999998
+            text = "好好。"
+        intervals [227]:
+            xmin = 1057.8539999999998
+            xmax = 1057.924
+            text = ""
