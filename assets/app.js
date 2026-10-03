@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "2026100303";
+const DATA_VERSION = "2026100304";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
 const AXIS_COLORS = {
@@ -144,13 +144,13 @@ function leaderboardTable(systems) {
     const bestExcluded = Math.min(...rows.map(row => row.excluded));
     const bestSoft = Math.min(...rows.map(row => row.soft_degradation));
     return `<table class="results-table"><thead><tr><th>System</th><th>Scoreable</th><th>Coverage</th><th>Excluded ↓</th><th>Soft degradation ↓</th></tr></thead><tbody>${rows.map(row => `
-      <tr><th><span>${escapeHTML(row.system)}</span><small>${escapeHTML(row.short)}</small></th><td>${row.scoreable} / 99</td><td><div class="coverage-meter"><i style="width:${row.scoreable / 99 * 100}%"></i></div><span>${(row.scoreable / 99 * 100).toFixed(1)}%</span></td><td class="${row.excluded === bestExcluded ? "best" : ""}">${row.excluded}</td><td class="${row.soft_degradation === bestSoft ? "best" : ""}">${row.soft_degradation}</td></tr>`).join("")}</tbody></table>`;
+      <tr><th><span>${escapeHTML(row.system)}</span></th><td>${row.scoreable} / 99</td><td><div class="coverage-meter"><i style="width:${row.scoreable / 99 * 100}%"></i></div><span>${(row.scoreable / 99 * 100).toFixed(1)}%</span></td><td class="${row.excluded === bestExcluded ? "best" : ""}">${row.excluded}</td><td class="${row.soft_degradation === bestSoft ? "best" : ""}">${row.soft_degradation}</td></tr>`).join("")}</tbody></table>`;
   }
 
   const metrics = ["der", "cpwer", "tcpwer", "wer"];
   const best = Object.fromEntries(metrics.map(metric => [metric, Math.min(...systems.map(system => system[metric]))]));
-  return `<table class="results-table"><thead><tr><th>System</th><th>DER ↓</th><th>cpWER ↓</th><th>tcpWER ↓</th><th>WER ↓</th></tr></thead><tbody>${systems.map((system, index) => `
-    <tr><th><span>${escapeHTML(system.system)}</span><small>${index === 0 ? "best tcpWER" : escapeHTML(system.short)}</small></th>${metrics.map(metric => `<td class="${system[metric] === best[metric] ? "best" : ""}">${system[metric].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  return `<table class="results-table"><thead><tr><th>System</th><th>DER ↓</th><th>cpWER ↓</th><th>tcpWER ↓</th><th>WER ↓</th></tr></thead><tbody>${systems.map(system => `
+    <tr><th><span>${escapeHTML(system.system)}</span></th>${metrics.map(metric => `<td class="${system[metric] === best[metric] ? "best" : ""}">${system[metric].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
 }
 
 function renderLeaderboard() {
@@ -367,7 +367,7 @@ function setupViewportEffects() {
   }
 
   const sections = $$('main section[id]:not(#top)');
-  const navLinks = $$('.site-nav a[href^="#"]');
+  const navLinks = $$('.side-nav a[href^="#"]');
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (!entry.isIntersecting) return;

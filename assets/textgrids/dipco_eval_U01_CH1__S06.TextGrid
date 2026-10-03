@@ -8,7 +8,7 @@ size = 8
 item []:
     item [1]:
         class = "IntervalTier"
-        name = "P24"
+        name = "spk_01"
         xmin = 0
         xmax = 1203.52
         intervals: size = 127
@@ -522,7 +522,7 @@ item []:
             text = ""
     item [2]:
         class = "IntervalTier"
-        name = "P24"
+        name = "spk_01"
         xmin = 0
         xmax = 1203.52
         intervals: size = 4
@@ -544,7 +544,7 @@ item []:
             text = "like a uhhh six hundred dollar seven hundred dollar"
     item [3]:
         class = "IntervalTier"
-        name = "P21"
+        name = "spk_02"
         xmin = 0
         xmax = 1203.52
         intervals: size = 265
@@ -1610,7 +1610,7 @@ item []:
             text = ""
     item [4]:
         class = "IntervalTier"
-        name = "P21"
+        name = "spk_02"
         xmin = 0
         xmax = 1203.52
         intervals: size = 27
@@ -1724,7 +1724,7 @@ item []:
             text = ""
     item [5]:
         class = "IntervalTier"
-        name = "P22"
+        name = "spk_03"
         xmin = 0
         xmax = 1203.52
         intervals: size = 333
@@ -3062,7 +3062,7 @@ item []:
             text = ""
     item [6]:
         class = "IntervalTier"
-        name = "P22"
+        name = "spk_03"
         xmin = 0
         xmax = 1203.52
         intervals: size = 13
@@ -3120,7 +3120,7 @@ item []:
             text = ""
     item [7]:
         class = "IntervalTier"
-        name = "P23"
+        name = "spk_04"
         xmin = 0
         xmax = 1203.52
         intervals: size = 155
@@ -3746,7 +3746,7 @@ item []:
             text = ""
     item [8]:
         class = "IntervalTier"
-        name = "P23"
+        name = "spk_04"
         xmin = 0
         xmax = 1203.52
         intervals: size = 7

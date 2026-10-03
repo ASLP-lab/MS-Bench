@@ -8,7 +8,7 @@ size = 6
 item []:
     item [1]:
         class = "IntervalTier"
-        name = "spk01"
+        name = "spk_01"
         xmin = 0
         xmax = 1057.924
         intervals: size = 199
@@ -810,7 +810,7 @@ item []:
             text = ""
     item [2]:
         class = "IntervalTier"
-        name = "spk02"
+        name = "spk_02"
         xmin = 0
         xmax = 1057.924
         intervals: size = 179
@@ -1532,7 +1532,7 @@ item []:
             text = ""
     item [3]:
         class = "IntervalTier"
-        name = "spk03"
+        name = "spk_03"
         xmin = 0
         xmax = 1057.924
         intervals: size = 153
@@ -2150,7 +2150,7 @@ item []:
             text = ""
     item [4]:
         class = "IntervalTier"
-        name = "spk04"
+        name = "spk_04"
         xmin = 0
         xmax = 1057.924
         intervals: size = 211
@@ -3000,7 +3000,7 @@ item []:
             text = ""
     item [5]:
         class = "IntervalTier"
-        name = "spk05"
+        name = "spk_05"
         xmin = 0
         xmax = 1057.924
         intervals: size = 118
@@ -3478,7 +3478,7 @@ item []:
             text = "五年五年的时间我们肯定会比以前更好的你们说是不是对吧？好了好了好了好了好好。"
     item [6]:
         class = "IntervalTier"
-        name = "spk06"
+        name = "spk_06"
         xmin = 0
         xmax = 1057.924
         intervals: size = 227

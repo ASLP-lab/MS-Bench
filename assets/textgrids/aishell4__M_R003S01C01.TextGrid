@@ -8,7 +8,7 @@ size = 6
 item []:
     item [1]:
         class = "IntervalTier"
-        name = "001-M"
+        name = "spk_01_M"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 544
@@ -2190,7 +2190,7 @@ item []:
             text = "啊好嘞，今天会就到此"
     item [2]:
         class = "IntervalTier"
-        name = "002-M"
+        name = "spk_02_M"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 89
@@ -2552,7 +2552,7 @@ item []:
             text = ""
     item [3]:
         class = "IntervalTier"
-        name = "003-F"
+        name = "spk_03_F"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 43
@@ -2730,7 +2730,7 @@ item []:
             text = ""
     item [4]:
         class = "IntervalTier"
-        name = "004-F"
+        name = "spk_04_F"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 213
@@ -3588,7 +3588,7 @@ item []:
             text = ""
     item [5]:
         class = "IntervalTier"
-        name = "005-F"
+        name = "spk_05_F"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 153
@@ -4206,7 +4206,7 @@ item []:
             text = ""
     item [6]:
         class = "IntervalTier"
-        name = "006-F"
+        name = "spk_06_F"
         xmin = 0
         xmax = 2247.8433
         intervals: size = 251

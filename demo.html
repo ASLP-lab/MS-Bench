@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#ffffff">
   <title>MS-Bench · Interactive Demo</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=2026100303">
+  <link rel="stylesheet" href="assets/style.css?v=2026100304">
 </head>
 <body class="demo-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,17 +18,20 @@
         <img src="assets/mark.svg" alt="" width="34" height="34">
         <span>MS-Bench</span><small>demo</small>
       </a>
-      <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" data-menu aria-label="Main navigation">
-        <a href="#overview">Overview</a>
-        <a href="#explore">Explore</a>
-        <a href="#leaderboard">Leaderboard</a>
-        <a href="#diagnostics">Diagnostics</a>
-        <a href="#cases">Cases</a>
-        <a class="nav-pill" href="https://github.com/ASLP-lab/MS-Bench">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
+      <div class="header-actions"><a class="nav-pill header-github" href="https://github.com/ASLP-lab/MS-Bench">GitHub <span aria-hidden="true">↗</span></a><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">On this page</button></div>
     </div>
   </header>
+
+  <aside class="side-nav" id="site-nav" data-menu aria-label="On this page">
+    <p>On this page</p>
+    <nav>
+      <a href="#overview"><span>01</span>Overview</a>
+      <a href="#explore"><span>02</span>Condition Explorer</a>
+      <a href="#leaderboard"><span>03</span>Leaderboard</a>
+      <a href="#diagnostics"><span>04</span>Diagnostic Analysis</a>
+      <a href="#cases"><span>05</span>Representative Cases</a>
+    </nav>
+  </aside>
 
   <main id="main">
     <section class="demo-hero shell" id="top">
@@ -143,7 +146,7 @@
     <section class="diagnostics section-pad" id="diagnostics">
       <div class="shell">
         <div class="section-head light split-head reveal">
-          <div><p class="section-index">04 / Analysis</p><h2>Diagnostic Findings</h2></div>
+          <div><p class="section-index">04 / Analysis</p><h2>Diagnostic Analysis</h2></div>
           <p>Switch between controlled analyses to separate lexical recognition from speaker-attribution failure.</p>
         </div>
         <div class="diagnostic-shell reveal">
@@ -180,6 +183,6 @@
   </footer>
 
   <noscript><div class="noscript">This interactive report requires JavaScript. Benchmark metadata remains available in <a href="benchmark/metadata.jsonl">JSONL format</a>.</div></noscript>
-  <script src="assets/app.js?v=2026100303" defer></script>
+  <script src="assets/app.js?v=2026100304" defer></script>
 </body>
 </html>

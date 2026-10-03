@@ -8,7 +8,7 @@ size = 2
 item []:
     item [1]:
         class = "IntervalTier"
-        name = "P0174"
+        name = "spk_01"
         xmin = 0
         xmax = 665.03
         intervals: size = 218
@@ -886,7 +886,7 @@ item []:
             text = "你看我们聊挺嗨吧嗯。"
     item [2]:
         class = "IntervalTier"
-        name = "P0173"
+        name = "spk_02"
         xmin = 0
         xmax = 665.03
         intervals: size = 173

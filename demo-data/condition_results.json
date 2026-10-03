@@ -1,5 +1,5 @@
 {
-  "systems": ["MOSS-Pro", "MOSS", "Qwen-Omni", "VibeVoice", "pyannote+Qwen", "Doubao", "SoulX"],
+  "systems": ["MOSS-Transcribe-Diarize-Pro", "MOSS-Transcribe-Diarize", "Qwen3.8-Omni-Flash", "VibeVoice-ASR", "pyannote speaker-diarization-community-1 + Qwen3-ASR", "Doubao-ASR 2.0", "SoulX-Transcriber"],
   "overlap": {
     "title": "Overlap damages both content and attribution.",
     "description": "Within-recording penalty for utterances with at least 50% overlap exposure versus non-overlapped utterances.",
@@ -40,6 +40,6 @@
     "series": [
       {"label": "ρ(attr | dataset, overlap)", "unit": "ρ", "values": [0.403, 0.350, 0.257, 0.054, 0.438, 0.281, null]}
     ],
-    "note": "Controlled analysis—not a raw P0→P3 trend. SoulX is excluded because its 5-minute units do not always contain every recording-level speaker."
+    "note": "Controlled analysis—not a raw P0→P3 trend. SoulX-Transcriber is excluded because its 5-minute units do not always contain every recording-level speaker."
   }
 }

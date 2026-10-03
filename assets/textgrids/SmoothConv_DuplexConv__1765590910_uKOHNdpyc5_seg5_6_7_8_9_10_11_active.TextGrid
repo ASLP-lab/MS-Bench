@@ -8,7 +8,7 @@ size = 3
 item []:
     item [1]:
         class = "IntervalTier"
-        name = "B1"
+        name = "spk_01"
         xmin = 0
         xmax = 89.781193809
         intervals: size = 28
@@ -126,7 +126,7 @@ item []:
             text = "刚强调过了平行咋不用呢"
     item [2]:
         class = "IntervalTier"
-        name = "A1"
+        name = "spk_02"
         xmin = 0
         xmax = 89.781193809
         intervals: size = 17
@@ -200,7 +200,7 @@ item []:
             text = ""
     item [3]:
         class = "IntervalTier"
-        name = "A2"
+        name = "spk_03"
         xmin = 0
         xmax = 89.781193809
         intervals: size = 3
