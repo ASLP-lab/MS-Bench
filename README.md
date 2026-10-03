@@ -4,7 +4,7 @@
 
 <h2>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</h2>
 
-[**🎧 Demo**](https://aslp-lab.github.io/MS-Bench/demo.html?v=2026100304) · [**💻 Project Page**](https://github.com/ASLP-lab/MS-Bench)
+[**🎧 Demo**](https://aslp-lab.github.io/MS-Bench/demo.html?v=2026100305) · [**💻 Project Page**](https://github.com/ASLP-lab/MS-Bench)
 
 </div>
 
