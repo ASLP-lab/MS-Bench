@@ -5,16 +5,22 @@ document.documentElement.classList.add("js");
 const DATA_ROOT = "demo-data";
 const DATA_VERSION = "2026100307";
 const AXES = ["P", "O", "S", "T", "N"];
-const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
-const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
-const DURATION_COLORS = ["#9eb7d3", "#789dbc", "#78a9ad", "#83a39b", "#9192b4", "#a292ad"];
-const AXIS_COLORS = {
-  P: ["#edf2f7", "#d5e0ec", "#b8cadd", "#91aac3"],
-  O: ["#eef4f4", "#d8e7e5", "#bdd8d3", "#98c2ba", "#75a99f"],
-  S: ["#f0f0f6", "#dddded", "#c6c5df", "#a5a4c8"],
-  T: ["#eef3f5", "#d6e2e8", "#b8cdd5", "#92b1be"],
-  N: ["#f1f0f4", "#dfdce6", "#c9c3d4", "#aaa1ba"]
+const AXIS_META = {
+  P: { name: "Speaker Number", hint: "# speakers" },
+  O: { name: "Overlap Ratio", hint: "speech overlap" },
+  S: { name: "Speaker Similarity", hint: "max pairwise cosine" },
+  T: { name: "Speaker Turn Interval", hint: "smaller q25 = faster turns" },
+  N: { name: "Acoustic Quality", hint: "larger dN = poorer quality" }
 };
+const AXIS_NAMES = Object.fromEntries(AXES.map(axis => [axis, AXIS_META[axis].name]));
+const CONDITION_RANGES = {
+  P0: "2 speakers", P1: "3–4 speakers", P2: "5–8 speakers", P3: "≥9 speakers",
+  O0: "OR = 0", O1: "0 < OR < 0.10", O2: "0.10 ≤ OR < 0.20", O3: "0.20 ≤ OR < 0.40", O4: "OR ≥ 0.40",
+  S0: "S < 0.32", S1: "0.32 ≤ S < 0.49", S2: "0.49 ≤ S < 0.65", S3: "S ≥ 0.65",
+  T0: "q25 ≥ 0.45 s", T1: "0.15 ≤ q25 < 0.45 s", T2: "0.06 ≤ q25 < 0.15 s", T3: "q25 < 0.06 s",
+  N0: "dN < 0.27", N1: "0.27 ≤ dN < 0.51", N2: "0.51 ≤ dN < 0.74", N3: "dN ≥ 0.74"
+};
+const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
 
 const state = {
   core: null,
@@ -115,24 +121,25 @@ function renderOverview(summary) {
     <div><span>${escapeHTML(name)}</span><i><b style="width:${count / maxScenario * 100}%;--bar:${OVERVIEW_COLORS[index % OVERVIEW_COLORS.length]}"></b></i><strong>${count}</strong></div>`).join("")}</div>`;
 
   const duration = $("[data-overview-duration]");
-  const durationBins = Object.entries(summary.duration_distribution);
-  const maxDurationBin = Math.max(...durationBins.map(([, count]) => count));
   duration.classList.remove("loading-block");
-  duration.innerHTML = `
-    <div class="duration-summary"><strong>${summary.median_duration_minutes.toFixed(1)} min</strong><span>median recording duration</span></div>
-    <div class="duration-chart" aria-label="Recording duration distribution">${durationBins.map(([label, count], index) => `
-      <div class="duration-column" title="${escapeHTML(label)}: ${count} recordings"><strong>${count}</strong><div><i style="height:${count / maxDurationBin * 100}%;--duration:${DURATION_COLORS[index % DURATION_COLORS.length]}"></i></div><span>${escapeHTML(label)}</span></div>`).join("")}</div>`;
+  duration.innerHTML = `<strong>Median ${summary.median_duration_minutes.toFixed(1)} min</strong><span>·</span><strong>${summary.total_hours.toFixed(2)} h total</strong><span>·</span><small>${summary.recordings} recordings</small>`;
 
   const coverage = $("[data-condition-coverage]");
   coverage.classList.remove("loading-block");
   coverage.innerHTML = AXES.map(axis => {
     const tiers = Object.entries(summary.condition_distribution[axis]);
-    return `<div class="coverage-row">
-      <div class="coverage-label"><b>${axis}</b><span>${AXIS_NAMES[axis]}</span></div>
-      <div class="coverage-bars" aria-label="${AXIS_NAMES[axis]} distribution">${tiers.map(([tier, count], index) =>
-        `<span style="width:${count / total * 100}%;--tier:${AXIS_COLORS[axis][index]}" title="${tier}: ${count} recordings"><b>${tier}</b><small>${count}</small></span>`
-      ).join("")}</div>
-    </div>`;
+    return `<section class="matrix-row axis-${axis.toLowerCase()}">
+      <header><b>${axis}</b><div><strong>${AXIS_META[axis].name}</strong><small>${AXIS_META[axis].hint}</small></div></header>
+      <div class="matrix-tiles" style="--columns:${tiers.length}" aria-label="${AXIS_META[axis].name} distribution">${tiers.map(([tier, count]) => {
+        const percentage = count / total * 100;
+        return `<button type="button" class="condition-tile" data-coverage-axis="${axis}" data-coverage-tier="${tier}" title="Filter the benchmark by ${tier}">
+          <span><b>${tier}</b><small>${percentage.toFixed(1)}%</small></span>
+          <strong>${escapeHTML(CONDITION_RANGES[tier])}</strong>
+          <p><b>${count}</b> recordings</p>
+          <i aria-hidden="true"><b style="width:${percentage}%"></b></i>
+        </button>`;
+      }).join("")}</div>
+    </section>`;
   }).join("");
 }
 
@@ -273,6 +280,11 @@ function renderExplorer() {
     button.title = count ? `${count} recordings with the current filters` : "No recording has this combination";
     button.innerHTML = `<span>${escapeHTML(value)}</span><small>${count}</small>`;
   });
+  $$('[data-coverage-tier]').forEach(tile => {
+    const selected = state.filters[tile.dataset.coverageAxis] === tile.dataset.coverageTier;
+    tile.classList.toggle("active", selected);
+    tile.setAttribute("aria-pressed", String(selected));
+  });
   $("[data-explorer-status]").textContent = active.length ? "Filtered condition space" : "Complete condition space";
   $("[data-match-count]").textContent = matched.length;
   $("[data-active-profile]").textContent = active.length ? AXES.map(axis => state.filters[axis] || `${axis}*`).join(" · ") : "Any profile";
@@ -333,6 +345,16 @@ function setupInteractions() {
     menu.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
   }));
+
+  $("[data-condition-coverage]").addEventListener("click", async event => {
+    const tile = event.target.closest("[data-coverage-tier]");
+    if (!tile) return;
+    await loadMetadata();
+    AXES.forEach(axis => { state.filters[axis] = null; });
+    state.filters[tile.dataset.coverageAxis] = tile.dataset.coverageTier;
+    renderExplorer();
+    $("#explore").scrollIntoView({ behavior: "smooth" });
+  });
 
   $("[data-board-toggle]").addEventListener("click", event => {
     const button = event.target.closest("[data-view]");

@@ -45,7 +45,16 @@
           <p>MS-Bench is primarily Chinese and English, with additional multilingual samples across real meeting, media, conversational, wearable, and in-vehicle settings.</p>
         </div>
 
-        <div class="overview-grid">
+        <div class="condition-matrix-block reveal">
+          <div class="condition-matrix-head">
+            <div><p class="card-kicker"><span>Condition coverage</span></p><h3>Condition Distribution Matrix</h3></div>
+            <p>Each tile is an operating range. Tile width is fixed; the small meter shows its share of the 99 recordings.</p>
+          </div>
+          <div data-condition-coverage class="condition-matrix loading-block" aria-live="polite">Loading condition distributions…</div>
+        </div>
+
+        <div class="overview-subhead reveal"><h3>Benchmark Composition</h3><p>Languages and real-world recording scenarios represented in MS-Bench.</p></div>
+        <div class="overview-grid composition-grid">
           <article class="data-card reveal">
             <div class="card-kicker"><span>Language</span><small>99 recordings</small></div>
             <div data-overview-language class="loading-block" aria-live="polite">Loading composition…</div>
@@ -56,18 +65,10 @@
           </article>
         </div>
 
-        <article class="data-card duration-card reveal">
-          <div class="card-kicker"><span>Recording duration</span><small>99 recordings · 32.72 hours</small></div>
-          <div data-overview-duration class="loading-block" aria-live="polite">Loading duration distribution…</div>
-        </article>
-
-        <article class="condition-card reveal">
-          <div class="condition-card-head">
-            <div><p class="card-kicker"><span>Condition coverage</span></p><h3>Every recording is labeled on five independent axes.</h3></div>
-            <p>Tier labels describe operating ranges—not a guaranteed difficulty ordering.</p>
-          </div>
-          <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions…</div>
-        </article>
+        <div class="duration-compact reveal">
+          <p class="card-kicker"><span>Recording duration</span></p>
+          <div data-overview-duration class="loading-block" aria-live="polite">Loading duration summary…</div>
+        </div>
       </div>
     </section>
 
