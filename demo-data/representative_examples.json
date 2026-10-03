@@ -7,7 +7,7 @@
     "audio": "assets/audio/meeting-aishell4.mp3",
     "clip_duration_seconds": 299.9,
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "conditions": {
       "P": "P2",
@@ -281,7 +281,7 @@
     "audio": "assets/audio/education-smoothconv.mp3",
     "clip_duration_seconds": 90.768,
     "language": "Chinese",
-    "scenario": "education",
+    "scenario": "Educational content",
     "recording_device": "multi-channel digital audio capture",
     "conditions": {
       "P": "P1",
@@ -447,7 +447,7 @@
     "audio": "assets/audio/podcast-benchzh.mp3",
     "clip_duration_seconds": 299.9,
     "language": "Chinese",
-    "scenario": "podcast",
+    "scenario": "Podcasts",
     "recording_device": "media source soundtrack",
     "conditions": {
       "P": "P0",
@@ -853,7 +853,7 @@
     "audio": "assets/audio/film-benchfilms.mp3",
     "clip_duration_seconds": 296.635,
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "conditions": {
       "P": "P2",
@@ -1061,7 +1061,7 @@
     "audio": "assets/audio/dinner-party-dipco.mp3",
     "clip_duration_seconds": 299.9,
     "language": "English",
-    "scenario": "dinner party",
+    "scenario": "Dinner-party conversations",
     "recording_device": "7-microphone far-field array (U01, channel 1)",
     "conditions": {
       "P": "P1",
@@ -1875,7 +1875,7 @@
     "audio": "assets/audio/smart-glasses.mp3",
     "clip_duration_seconds": 299.9,
     "language": "Chinese",
-    "scenario": "smart glasses",
+    "scenario": "Smart-glasses interactions",
     "recording_device": "4-channel smart-glasses microphone array",
     "conditions": {
       "P": "P2",
@@ -2809,7 +2809,7 @@
     "audio": "assets/audio/in-vehicle.mp3",
     "clip_duration_seconds": 299.9,
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "conditions": {
       "P": "P0",
@@ -3281,7 +3281,7 @@
     "audio": "assets/audio/conversation-japanese.mp3",
     "clip_duration_seconds": 299.9,
     "language": "Japanese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "conditions": {
       "P": "P0",

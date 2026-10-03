@@ -28,13 +28,13 @@
   "scenario_distribution": {
     "Meeting": 51,
     "Conversation": 16,
-    "Films / TV": 13,
-    "In Vehicle": 7,
-    "Dinner Party": 4,
-    "Podcast": 2,
-    "Smart Glasses": 2,
-    "Live Streaming": 2,
-    "Education": 2
+    "Films and television content": 13,
+    "In-vehicle interactions": 7,
+    "Dinner-party conversations": 4,
+    "Podcasts": 2,
+    "Smart-glasses interactions": 2,
+    "Live-streaming content": 2,
+    "Educational content": 2
   },
   "duration_distribution": {
     "< 5 min": 6,

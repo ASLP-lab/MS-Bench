@@ -2,7 +2,7 @@
   {
     "recording_id": "aishell4::M_R003S01C01",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2282.21,
     "conditions": {
@@ -21,7 +21,7 @@
   {
     "recording_id": "aishell4::M_R003S05C01",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2341.215,
     "conditions": {
@@ -40,7 +40,7 @@
   {
     "recording_id": "chime6::S01",
     "language": "English",
-    "scenario": "dinner party",
+    "scenario": "Dinner-party conversations",
     "recording_device": "far-field microphone array (U01, channel 1)",
     "duration_seconds": 9544.141,
     "conditions": {
@@ -59,7 +59,7 @@
   {
     "recording_id": "dipco_eval_U01_CH1::S06",
     "language": "English",
-    "scenario": "dinner party",
+    "scenario": "Dinner-party conversations",
     "recording_device": "7-microphone far-field array (U01, channel 1)",
     "duration_seconds": 1204.562,
     "conditions": {
@@ -78,7 +78,7 @@
   {
     "recording_id": "aishell4::S_R004S04C01",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2299.396,
     "conditions": {
@@ -97,7 +97,7 @@
   {
     "recording_id": "aishell4::M_R003S02C01",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2321.259,
     "conditions": {
@@ -116,7 +116,7 @@
   {
     "recording_id": "notsofar_1::MTG_32054",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 360.318,
     "conditions": {
@@ -135,7 +135,7 @@
   {
     "recording_id": "aishell4::S_R003S04C01",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2393.927,
     "conditions": {
@@ -154,7 +154,7 @@
   {
     "recording_id": "BenchFilms_ZH::part003_92c4be65",
     "language": "Chinese",
-    "scenario": "podcast",
+    "scenario": "Podcasts",
     "recording_device": "media source soundtrack",
     "duration_seconds": 260.74,
     "conditions": {
@@ -173,7 +173,7 @@
   {
     "recording_id": "notsofar_1::MTG_32047",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 381.763,
     "conditions": {
@@ -192,7 +192,7 @@
   {
     "recording_id": "aishell4::L_R003S04C02",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel circular microphone array",
     "duration_seconds": 2324.984,
     "conditions": {
@@ -211,7 +211,7 @@
   {
     "recording_id": "notsofar_1::MTG_32052",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 360.628,
     "conditions": {
@@ -230,7 +230,7 @@
   {
     "recording_id": "BenchFilms_ZH::000049_part018",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 296.635,
     "conditions": {
@@ -249,7 +249,7 @@
   {
     "recording_id": "notsofar_1::MTG_32110",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 478.703,
     "conditions": {
@@ -268,7 +268,7 @@
   {
     "recording_id": "notsofar_1::MTG_32190",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 359.333,
     "conditions": {
@@ -287,7 +287,7 @@
   {
     "recording_id": "dipco_eval_U01_CH1::S03",
     "language": "English",
-    "scenario": "dinner party",
+    "scenario": "Dinner-party conversations",
     "recording_device": "7-microphone far-field array (U01, channel 1)",
     "duration_seconds": 2796.5,
     "conditions": {
@@ -306,7 +306,7 @@
   {
     "recording_id": "dipco_eval_U01_CH1::S07",
     "language": "English",
-    "scenario": "dinner party",
+    "scenario": "Dinner-party conversations",
     "recording_device": "7-microphone far-field array (U01, channel 1)",
     "duration_seconds": 1575.25,
     "conditions": {
@@ -325,7 +325,7 @@
   {
     "recording_id": "notsofar_1::MTG_32106",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 478.338,
     "conditions": {
@@ -344,7 +344,7 @@
   {
     "recording_id": "alimeeting_far::R8005_M8007",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1869.669,
     "conditions": {
@@ -363,7 +363,7 @@
   {
     "recording_id": "BenchFilms_ZH::000028_part018",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 373.77,
     "conditions": {
@@ -382,7 +382,7 @@
   {
     "recording_id": "notsofar_1::MTG_32041",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 363.803,
     "conditions": {
@@ -401,7 +401,7 @@
   {
     "recording_id": "notsofar_1::MTG_32093",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 356.268,
     "conditions": {
@@ -420,7 +420,7 @@
   {
     "recording_id": "notsofar_1::MTG_32092",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 358.478,
     "conditions": {
@@ -439,7 +439,7 @@
   {
     "recording_id": "notsofar_1::MTG_32050",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 360.583,
     "conditions": {
@@ -458,7 +458,7 @@
   {
     "recording_id": "notsofar_1::MTG_32048",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 358.468,
     "conditions": {
@@ -477,7 +477,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260511下午-4",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1510.99,
     "conditions": {
@@ -496,7 +496,7 @@
   {
     "recording_id": "ami_array1-01::EN2002b",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "tabletop microphone array (Array1, channel 01)",
     "duration_seconds": 1786.848,
     "conditions": {
@@ -515,7 +515,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260407-5",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1330.605,
     "conditions": {
@@ -534,7 +534,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260512-4",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1639.877,
     "conditions": {
@@ -553,7 +553,7 @@
   {
     "recording_id": "notsofar_1::MTG_32086",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 358.023,
     "conditions": {
@@ -572,7 +572,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260512-5",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1431.379,
     "conditions": {
@@ -591,7 +591,7 @@
   {
     "recording_id": "SmartGlassesChallenge::meet_0045",
     "language": "Chinese",
-    "scenario": "smart glasses",
+    "scenario": "Smart-glasses interactions",
     "recording_device": "4-channel smart-glasses microphone array",
     "duration_seconds": 1061.525,
     "conditions": {
@@ -610,7 +610,7 @@
   {
     "recording_id": "SmartGlassesChallenge::meet_0040",
     "language": "Chinese",
-    "scenario": "smart glasses",
+    "scenario": "Smart-glasses interactions",
     "recording_device": "4-channel smart-glasses microphone array",
     "duration_seconds": 884.242,
     "conditions": {
@@ -629,7 +629,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260407-8",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1218.678,
     "conditions": {
@@ -648,7 +648,7 @@
   {
     "recording_id": "notsofar_1::MTG_32088",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 358.348,
     "conditions": {
@@ -667,7 +667,7 @@
   {
     "recording_id": "BenchFilms_ZH::000102_part014",
     "language": "English",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 365.03,
     "conditions": {
@@ -686,7 +686,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260417-4",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1210.028,
     "conditions": {
@@ -705,7 +705,7 @@
   {
     "recording_id": "notsofar_1::MTG_32081",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 357.873,
     "conditions": {
@@ -724,7 +724,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260511下午-2",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1652.646,
     "conditions": {
@@ -743,7 +743,7 @@
   {
     "recording_id": "Real-TSE-Challenge::外国人__20260507-6",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1209.07,
     "conditions": {
@@ -762,7 +762,7 @@
   {
     "recording_id": "ami_array1-01::EN2002d",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "tabletop microphone array (Array1, channel 01)",
     "duration_seconds": 2209.899,
     "conditions": {
@@ -781,7 +781,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260407-7",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1768.232,
     "conditions": {
@@ -800,7 +800,7 @@
   {
     "recording_id": "Real-TSE-Challenge::外国人__20260423-1",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1213.084,
     "conditions": {
@@ -819,7 +819,7 @@
   {
     "recording_id": "BenchFilms_ZH::000046_part003",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 390.0,
     "conditions": {
@@ -838,7 +838,7 @@
   {
     "recording_id": "notsofar_1::MTG_32089",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 358.133,
     "conditions": {
@@ -857,7 +857,7 @@
   {
     "recording_id": "BenchFilms_ZH::part004_e12074b4",
     "language": "Chinese",
-    "scenario": "podcast",
+    "scenario": "Podcasts",
     "recording_device": "media source soundtrack",
     "duration_seconds": 373.03,
     "conditions": {
@@ -876,7 +876,7 @@
   {
     "recording_id": "alimeeting_far::R8005_M8009",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1776.99,
     "conditions": {
@@ -895,7 +895,7 @@
   {
     "recording_id": "alimeeting_far::R8004_M8006",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1965.215,
     "conditions": {
@@ -914,7 +914,7 @@
   {
     "recording_id": "alimeeting_far::R8005_M8008",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1960.822,
     "conditions": {
@@ -933,7 +933,7 @@
   {
     "recording_id": "notsofar_1::MTG_32046",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "commercial far-field single-channel meeting device",
     "duration_seconds": 359.553,
     "conditions": {
@@ -952,7 +952,7 @@
   {
     "recording_id": "Real-TSE-Challenge::外国人__20260418-4",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1270.239,
     "conditions": {
@@ -971,7 +971,7 @@
   {
     "recording_id": "ami_array1-01::IS1009c",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "tabletop microphone array (Array1, channel 01)",
     "duration_seconds": 1820.843,
     "conditions": {
@@ -990,7 +990,7 @@
   {
     "recording_id": "BenchFilms_ZH::000040_part015",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 302.13,
     "conditions": {
@@ -1009,7 +1009,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260407-2",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1306.112,
     "conditions": {
@@ -1028,7 +1028,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-013-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 665.741,
     "conditions": {
@@ -1047,7 +1047,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__260411-3",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1360.681,
     "conditions": {
@@ -1066,7 +1066,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-017-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 643.186,
     "conditions": {
@@ -1085,7 +1085,7 @@
   {
     "recording_id": "BenchFilms_ZH::000052_part015",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 329.43,
     "conditions": {
@@ -1104,7 +1104,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260511下午-3",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1554.077,
     "conditions": {
@@ -1123,7 +1123,7 @@
   {
     "recording_id": "alimeeting_far::R8004_M8005",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 2093.014,
     "conditions": {
@@ -1142,7 +1142,7 @@
   {
     "recording_id": "BenchFilms_ZH::part019_ceba9ecb",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 390.0,
     "conditions": {
@@ -1161,7 +1161,7 @@
   {
     "recording_id": "BenchFilms_ZH::part007_1ef423a7",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 390.0,
     "conditions": {
@@ -1180,7 +1180,7 @@
   {
     "recording_id": "BenchFilms_ZH::part012_ceba9ecb",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 368.82,
     "conditions": {
@@ -1199,7 +1199,7 @@
   {
     "recording_id": "BenchFilms_ZH::part005_ad51a3ea",
     "language": "Chinese",
-    "scenario": "TV",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 358.26,
     "conditions": {
@@ -1218,7 +1218,7 @@
   {
     "recording_id": "alimeeting_far::R8008_M8015",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1896.185,
     "conditions": {
@@ -1237,7 +1237,7 @@
   {
     "recording_id": "alimeeting_far::R8006_M8012",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1832.183,
     "conditions": {
@@ -1256,7 +1256,7 @@
   {
     "recording_id": "ami_array1-01::ES2014d",
     "language": "English",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "tabletop microphone array (Array1, channel 01)",
     "duration_seconds": 2911.36,
     "conditions": {
@@ -1275,7 +1275,7 @@
   {
     "recording_id": "BenchFilms_ZH::000093_part008",
     "language": "Chinese",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 389.225,
     "conditions": {
@@ -1294,7 +1294,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260512-3",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1549.42,
     "conditions": {
@@ -1313,7 +1313,7 @@
   {
     "recording_id": "BenchFilms_ZH::000056_part012",
     "language": "English",
-    "scenario": "film",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 390.0,
     "conditions": {
@@ -1332,7 +1332,7 @@
   {
     "recording_id": "Real-TSE-Challenge::中国人__20260513上午-5",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "high-quality far-field microphone (H1)",
     "duration_seconds": 1564.209,
     "conditions": {
@@ -1351,7 +1351,7 @@
   {
     "recording_id": "alimeeting_far::R8002_M8002",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 2066.52,
     "conditions": {
@@ -1370,7 +1370,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-04-387",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1862.65,
     "conditions": {
@@ -1389,7 +1389,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-11-193",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 904.7,
     "conditions": {
@@ -1408,7 +1408,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-123",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1861.825,
     "conditions": {
@@ -1427,7 +1427,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-018-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 701.259,
     "conditions": {
@@ -1446,7 +1446,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Japanese__0435_001_phone",
     "language": "Japanese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 925.329,
     "conditions": {
@@ -1465,7 +1465,7 @@
   {
     "recording_id": "BenchFilms_ZH::part007_46ed864a",
     "language": "Chinese",
-    "scenario": "TV",
+    "scenario": "Films and television content",
     "recording_device": "media source soundtrack",
     "duration_seconds": 375.87,
     "conditions": {
@@ -1484,7 +1484,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Portuguese__2187_003_phone",
     "language": "Portuguese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 934.243,
     "conditions": {
@@ -1503,7 +1503,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-001-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 403.293,
     "conditions": {
@@ -1522,7 +1522,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Thai__0274_006_phone",
     "language": "Thai",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1272.464,
     "conditions": {
@@ -1541,7 +1541,7 @@
   {
     "recording_id": "SmoothConv_DuplexConv::1767604747_yZ95W3sEa9_seg91_92_93_active",
     "language": "Chinese",
-    "scenario": "live streaming",
+    "scenario": "Live-streaming content",
     "recording_device": "multi-channel digital audio capture",
     "duration_seconds": 108.368,
     "conditions": {
@@ -1560,7 +1560,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Thai__0231_002_phone",
     "language": "Thai",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1362.544,
     "conditions": {
@@ -1579,7 +1579,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Italian__0238_003_phone",
     "language": "Italian",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1186.704,
     "conditions": {
@@ -1598,7 +1598,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval2-001-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 653.645,
     "conditions": {
@@ -1617,7 +1617,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone",
     "language": "English",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1875.319,
     "conditions": {
@@ -1636,7 +1636,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_2::Portuguese__2251_036_phone",
     "language": "Portuguese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 919.418,
     "conditions": {
@@ -1655,7 +1655,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-010-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 735.368,
     "conditions": {
@@ -1674,7 +1674,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Spanish__4015_002_phone",
     "language": "Spanish",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1809.412,
     "conditions": {
@@ -1693,7 +1693,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-11-390",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 927.52,
     "conditions": {
@@ -1712,7 +1712,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Portuguese__2094_015_phone",
     "language": "Portuguese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 922.394,
     "conditions": {
@@ -1731,7 +1731,7 @@
   {
     "recording_id": "MLC-SLM_Workshop-Evaluation_Set_1::Japanese__0236_003_phone",
     "language": "Japanese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 989.989,
     "conditions": {
@@ -1750,7 +1750,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-65",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1886.6,
     "conditions": {
@@ -1769,7 +1769,7 @@
   {
     "recording_id": "MagicData-RAMC_test::CTS-CN-F2F-2019-11-15-8",
     "language": "Chinese",
-    "scenario": "conversation",
+    "scenario": "Conversation",
     "recording_device": "mobile phone",
     "duration_seconds": 1867.7,
     "conditions": {
@@ -1788,7 +1788,7 @@
   {
     "recording_id": "SmoothConv_DuplexConv::1767678865_WjqUr8QfiB_seg7_active",
     "language": "Chinese",
-    "scenario": "live streaming",
+    "scenario": "Live-streaming content",
     "recording_device": "multi-channel digital audio capture",
     "duration_seconds": 82.816,
     "conditions": {
@@ -1807,7 +1807,7 @@
   {
     "recording_id": "aishell5_DX01C01::eval1-012-DX01C01",
     "language": "Chinese",
-    "scenario": "in-vehicle",
+    "scenario": "In-vehicle interactions",
     "recording_device": "in-car far-field microphone (DX01, channel 1)",
     "duration_seconds": 747.116,
     "conditions": {
@@ -1826,7 +1826,7 @@
   {
     "recording_id": "alimeeting_far::R8009_M8026",
     "language": "Chinese",
-    "scenario": "meeting",
+    "scenario": "Meeting",
     "recording_device": "8-channel far-field microphone array",
     "duration_seconds": 1983.113,
     "conditions": {
@@ -1845,7 +1845,7 @@
   {
     "recording_id": "SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active",
     "language": "Chinese",
-    "scenario": "education",
+    "scenario": "Educational content",
     "recording_device": "multi-channel digital audio capture",
     "duration_seconds": 90.768,
     "conditions": {
@@ -1864,7 +1864,7 @@
   {
     "recording_id": "SmoothConv_DuplexConv::1766192821_kwlU9DyXSt_seg38_active",
     "language": "Chinese",
-    "scenario": "education",
+    "scenario": "Educational content",
     "recording_device": "multi-channel digital audio capture",
     "duration_seconds": 111.072,
     "conditions": {
