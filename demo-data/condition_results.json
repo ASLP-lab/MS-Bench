@@ -1,5 +1,5 @@
 {
-  "systems": ["MOSS-Transcribe-Diarize-Pro", "MOSS-Transcribe-Diarize", "Qwen3.8-Omni-Flash", "VibeVoice-ASR", "PyanoteASR", "Doubao-ASR 2.0", "SoulX-Transcriber"],
+  "systems": ["MOSS-Transcribe-Diarize-Pro", "MOSS-Transcribe-Diarize", "Qwen3.8-Omni-Flash", "VibeVoice-ASR", "pyannote+Qwen3-ASR", "Doubao-ASR 2.0", "SoulX-Transcriber"],
   "overlap": {
     "title": "Overlap degrades both lexical recognition and speaker attribution.",
     "description": "Within-inference-unit comparison between non-overlapped utterances and utterances with at least 50% overlap exposure.",
