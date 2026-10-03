@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "data_version": "20261004-demo-v2",
+  "paper_version_label": "Author-confirmed draft, 2026-10-04",
+  "updated_at": "2026-10-04",
+  "availability": {
+    "paper": {"status":"coming_soon","url":null},
+    "metadata": {"status":"available","url":"benchmark/metadata.jsonl"},
+    "audio_excerpts": {"status":"available","url":"#cases"},
+    "full_benchmark": {"status":"coming_soon","url":null},
+    "evaluation_code": {"status":"coming_soon","url":null},
+    "repository": {"status":"available","url":"https://github.com/ASLP-lab/MS-Bench"}
+  },
+  "metric_protocol": {
+    "der_collar_seconds": 0.5,
+    "tcpwer_collar_seconds": 5.0,
+    "normalization": null,
+    "tokenization": null,
+    "aggregation": null
+  },
+  "open_items": [
+    "The exact weighting behind the paper's 21.87% overlap statistic is not yet verified.",
+    "Per-system inference-unit totals are unavailable, so retained-unit rates are not reported.",
+    "Case-level model predictions are not yet available."
+  ]
+}
