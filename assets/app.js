@@ -3,6 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
+const DATA_VERSION = "2026100302";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_NAMES = { P: "Speaker Number", O: "Overlap Ratio", S: "Speaker Similarity", T: "Speaker Turn Interval", N: "Acoustic Quality" };
 const AXIS_COLORS = {
@@ -73,7 +74,7 @@ function listSummary(object, limit = 4) {
 }
 
 async function fetchJSON(path) {
-  const response = await fetch(path);
+  const response = await fetch(`${path}${path.includes("?") ? "&" : "?"}v=${DATA_VERSION}`);
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.json();
 }
