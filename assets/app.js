@@ -3,22 +3,22 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261004-compact1";
+const DATA_VERSION = "20261004-paper1";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
-  P: { name: "Speaker Number", hint: "# speakers" },
-  O: { name: "Overlap Ratio", hint: "speech overlap" },
-  S: { name: "Speaker Similarity", hint: "max pairwise cosine" },
-  T: { name: "Speaker Turn Interval", hint: "smaller q25 = faster turns" },
-  N: { name: "Acoustic Quality", hint: "larger dN = poorer quality" }
+  P: { name: "Speaker number", hint: "number of valid reference speakers" },
+  O: { name: "Overlap ratio", hint: "concurrent-speech duration ratio" },
+  S: { name: "Speaker similarity", hint: "maximum pairwise cosine similarity" },
+  T: { name: "Speaker turn interval", hint: "25th percentile of turn intervals" },
+  N: { name: "Acoustic quality", hint: "larger d_N = poorer quality" }
 };
 const AXIS_NAMES = Object.fromEntries(AXES.map(axis => [axis, AXIS_META[axis].name]));
 const CONDITION_RANGES = {
   P0: "2 speakers", P1: "3–4 speakers", P2: "5–8 speakers", P3: "≥9 speakers",
-  O0: "OR = 0", O1: "0 < OR < 0.10", O2: "0.10 ≤ OR < 0.20", O3: "0.20 ≤ OR < 0.40", O4: "OR ≥ 0.40",
-  S0: "S < 0.32", S1: "0.32 ≤ S < 0.49", S2: "0.49 ≤ S < 0.65", S3: "S ≥ 0.65",
-  T0: "q25 ≥ 0.45 s", T1: "0.15 ≤ q25 < 0.45 s", T2: "0.06 ≤ q25 < 0.15 s", T3: "q25 < 0.06 s",
-  N0: "dN < 0.27", N1: "0.27 ≤ dN < 0.51", N2: "0.51 ≤ dN < 0.74", N3: "dN ≥ 0.74"
+  O0: "0.00", O1: "(0.00, 0.10)", O2: "[0.10, 0.20)", O3: "[0.20, 0.40)", O4: "[0.40, 1.00]",
+  S0: "0.00 ≤ S < 0.32", S1: "0.32 ≤ S < 0.49", S2: "0.49 ≤ S < 0.65", S3: "0.65 ≤ S ≤ 1.00",
+  T0: "q25 ≥ 0.45 s", T1: "0.15 ≤ q25 < 0.45 s", T2: "0.06 ≤ q25 < 0.15 s", T3: "0.00 ≤ q25 < 0.06 s",
+  N0: "0.00 ≤ d_N < 0.27", N1: "0.27 ≤ d_N < 0.51", N2: "0.51 ≤ d_N < 0.74", N3: "0.74 ≤ d_N ≤ 1.00"
 };
 const OVERVIEW_COLORS = ["#2563eb", "#0891b2", "#0d9488", "#4f46e5", "#7c3aed", "#d97706", "#64748b", "#be5b78", "#0284c7"];
 
@@ -148,7 +148,7 @@ function leaderboardTable(systems) {
     const rows = systems.map(system => ({ ...system, scoreable: 99 - system.excluded })).sort((a, b) => b.scoreable - a.scoreable || a.soft_degradation - b.soft_degradation);
     const bestExcluded = Math.min(...rows.map(row => row.excluded));
     const bestSoft = Math.min(...rows.map(row => row.soft_degradation));
-    return `<table class="results-table"><thead><tr><th>System</th><th>Scoreable</th><th>Coverage</th><th>Excluded ↓</th><th>Soft degradation ↓</th></tr></thead><tbody>${rows.map(row => `
+    return `<table class="results-table"><thead><tr><th>System</th><th>Scoreable</th><th>Coverage</th><th>Excluded ↓</th><th>Soft Deg. Units ↓</th></tr></thead><tbody>${rows.map(row => `
       <tr><th><span>${escapeHTML(row.system)}</span></th><td>${row.scoreable} / 99</td><td><div class="coverage-meter"><i style="width:${row.scoreable / 99 * 100}%"></i></div><span>${(row.scoreable / 99 * 100).toFixed(1)}%</span></td><td class="${row.excluded === bestExcluded ? "best" : ""}">${row.excluded}</td><td class="${row.soft_degradation === bestSoft ? "best" : ""}">${row.soft_degradation}</td></tr>`).join("")}</tbody></table>`;
   }
 
@@ -162,8 +162,8 @@ function renderLeaderboard() {
   if (!state.core) return;
   $("[data-leaderboard]").innerHTML = leaderboardTable(state.core.leaderboard);
   $("[data-leaderboard-note]").textContent = state.boardView === "overall"
-    ? "Lower error is better. Best result in each column is highlighted."
-    : "Coverage is the share of recordings with structurally scoreable output.";
+    ? "Lower error is better; metrics are reported in %. Best result in each column is highlighted."
+    : "Coverage is the share of units retained for metric computation.";
 }
 
 function diagnosticValue(value, unit) {
