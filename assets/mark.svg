@@ -1,23 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
   <title id="title">MS-Bench</title>
-  <desc id="desc">Two overlapping speaker bubbles surrounding a five-bar speech signal.</desc>
-  <defs>
-    <linearGradient id="background" x1="18" y1="12" x2="110" y2="116" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1d4ed8"/>
-      <stop offset="1" stop-color="#2563eb"/>
-    </linearGradient>
-  </defs>
-  <rect x="4" y="4" width="120" height="120" rx="30" fill="url(#background)"/>
-  <path d="M25 32h49a13 13 0 0 1 13 13v22a13 13 0 0 1-13 13H49L33 92V80h-8a13 13 0 0 1-13-13V45a13 13 0 0 1 13-13Z" fill="#fff" opacity=".98"/>
-  <path d="M64 45h39a13 13 0 0 1 13 13v22a13 13 0 0 1-13 13h-6v11L83 93H64a13 13 0 0 1-13-13V58a13 13 0 0 1 13-13Z" fill="#bfdbfe" stroke="#fff" stroke-width="4"/>
-  <g fill="#1d4ed8">
-    <rect x="61" y="64" width="6" height="14" rx="3"/>
-    <rect x="71" y="57" width="6" height="28" rx="3"/>
-    <rect x="81" y="52" width="6" height="38" rx="3"/>
-    <rect x="91" y="59" width="6" height="24" rx="3"/>
-    <rect x="101" y="65" width="6" height="12" rx="3"/>
-  </g>
-  <circle cx="29" cy="49" r="6" fill="#2563eb"/>
-  <circle cx="46" cy="49" r="6" fill="#60a5fa"/>
-  <path d="M22 65c3-6 8-9 15-9s12 3 16 9" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+  <desc id="desc">Three separate speech tracks aligned to a shared benchmark axis.</desc>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#184a7c"/>
+  <path d="M28 31h13l7 13 10-26 12 33 9-20h21" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 64h18l7-13 11 27 10-14h26" fill="none" stroke="#bfdbfe" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 97h12l8-18 11 31 12-26 8 13h21" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M105 25v78" fill="none" stroke="#7db6ed" stroke-width="5" stroke-linecap="round"/>
 </svg>

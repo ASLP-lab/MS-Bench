@@ -19,32 +19,34 @@
   "language_distribution": {
     "Chinese": 60,
     "English": 30,
-    "Portuguese": 3,
     "Japanese": 2,
+    "Portuguese": 3,
     "Thai": 2,
     "Italian": 1,
     "Spanish": 1
   },
   "scenario_distribution": {
     "Meeting": 51,
-    "Conversation": 16,
-    "Films and television content": 13,
-    "In-vehicle interactions": 7,
     "Dinner-party conversations": 4,
     "Podcasts": 2,
+    "Films and television content": 13,
     "Smart-glasses interactions": 2,
+    "In-vehicle interactions": 7,
+    "Conversation": 16,
     "Live-streaming content": 2,
     "Educational content": 2
   },
   "duration_distribution": {
     "< 5 min": 6,
-    "5–10 min": 30,
-    "10–20 min": 16,
-    "20–30 min": 22,
-    "30–60 min": 24,
-    "≥ 60 min": 1
+    "5-10 min": 30,
+    "10-20 min": 16,
+    "20-30 min": 22,
+    "30-60 min": 24,
+    ">= 60 min": 1
   },
   "median_duration_minutes": 16.5,
+  "minimum_duration_minutes": 1.38,
+  "maximum_duration_minutes": 159.07,
   "condition_distribution": {
     "P": {
       "P0": 27,

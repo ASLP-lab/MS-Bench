@@ -4,208 +4,204 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MS-Bench is a condition-stratified benchmark for fine-grained multi-speaker ASR evaluation.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f4f6f8">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261004-paper2">
+  <link rel="stylesheet" href="assets/style.css?v=20261007-demo-v2">
 </head>
-<body class="demo-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" data-header>
-    <div class="shell nav-wrap">
+    <div class="header-inner">
       <a class="brand" href="#top" aria-label="MS-Bench home">
-        <img src="assets/mark.svg" alt="" width="34" height="34">
+        <img src="assets/mark.svg" alt="" width="32" height="32">
         <span>MS-Bench</span>
       </a>
-      <div class="header-actions"><a class="nav-pill header-github" href="https://github.com/ASLP-lab/MS-Bench">GitHub <span aria-hidden="true">↗</span></a><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">Menu</button></div>
+      <div class="header-actions">
+        <a class="text-link desktop-link" href="https://github.com/ASLP-lab/MS-Bench">GitHub</a>
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">Sections</button>
+      </div>
     </div>
   </header>
 
-  <aside class="side-nav" id="site-nav" data-menu aria-label="Section navigation">
-    <nav>
-      <a href="#overview"><span>01</span>Overview</a>
-      <a href="#explore"><span>02</span>Condition Explorer</a>
-      <a href="#leaderboard"><span>03</span>Leaderboard</a>
-      <a href="#diagnostics"><span>04</span>Diagnostic Analysis</a>
-      <a href="#cases"><span>05</span>Representative Cases</a>
-    </nav>
-  </aside>
+  <div class="page-frame">
+    <aside class="side-nav" id="site-nav" data-menu aria-label="Section navigation">
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#explore">Explorer</a>
+        <a href="#leaderboard">Results</a>
+        <a href="#diagnostics">Diagnostics</a>
+        <a href="#cases">Cases</a>
+      </nav>
+    </aside>
 
-  <div class="paper-shell">
-  <main id="main">
-    <section class="demo-hero shell" id="top">
-      <div class="demo-hero-copy reveal">
-        <h1><span>MS-Bench</span><small>A Condition-Stratified Multi-Speaker ASR Benchmark</small></h1>
-        <p class="hero-lede">Fine-grained evaluation of multi-speaker ASR across speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#explore">Explore Benchmark</a>
-          <span class="button button-secondary button-disabled" aria-disabled="true" title="Paper link will be added when available">Paper</span>
-          <a class="button button-secondary" href="https://github.com/ASLP-lab/MS-Bench">GitHub <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="stat-strip" aria-label="Benchmark headline statistics">
-          <div><strong>32.72 h</strong><span>Total duration</span></div>
-          <div><strong>99</strong><span>Recordings</span></div>
-          <div><strong>5</strong><span>Condition dimensions</span></div>
-          <div><strong>2–14</strong><span>Speakers</span></div>
-          <div><strong>Chinese / English</strong><span>Dominant languages</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="overview section-pad" id="overview">
-      <div class="shell">
-        <div class="section-head reveal">
-          <div><p class="section-index">01 / Overview</p><h2>Benchmark Overview</h2></div>
-        </div>
-
-        <div class="condition-matrix-block reveal">
-          <div class="condition-matrix-head">
-            <div><p class="card-kicker"><span>Condition coverage</span></p><h3>Condition Distribution Matrix</h3></div>
-            <p>Each tile represents a predefined condition range; the meter shows its share of the 99 recordings.</p>
+    <div class="paper-shell">
+      <main id="main">
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <img class="hero-logo" src="assets/mark.svg" alt="" width="104" height="104">
+            <h1><strong>MS-Bench</strong><span>A Condition-Stratified Multi-Speaker ASR Benchmark</span></h1>
+            <p class="hero-lede">Beyond aggregate scores: evaluate who spoke what and when across five multi-speaker conditions.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#cases">Listen to examples</a>
+              <a class="button button-secondary" href="#explore">Explore conditions</a>
+              <span class="paper-status">Paper coming soon</span>
+            </div>
           </div>
-          <div data-condition-coverage class="condition-matrix loading-block" aria-live="polite">Loading condition distributions…</div>
-        </div>
+          <div class="stat-strip" aria-label="Benchmark headline statistics">
+            <div><strong>32.72 h</strong><span>Total duration</span></div>
+            <div><strong>99</strong><span>Recordings</span></div>
+            <div><strong>5</strong><span>Condition dimensions</span></div>
+            <div><strong>7</strong><span>Evaluated systems</span></div>
+            <div><strong>2-14</strong><span>Speakers</span></div>
+          </div>
+        </section>
 
-        <div class="overview-subhead reveal"><h3>Benchmark Composition</h3><p>Application scenarios and languages represented in MS-Bench.</p></div>
-        <div class="overview-grid composition-grid">
-          <article class="data-card reveal">
-            <div class="card-kicker"><span>Language</span></div>
-            <div data-overview-language class="loading-block" aria-live="polite">Loading composition…</div>
+        <section class="findings section-pad" aria-labelledby="findings-title">
+          <header class="section-head compact">
+            <h2 id="findings-title">What aggregate scores hide</h2>
+            <p>MS-Bench isolates condition-specific behavior instead of reducing each system to one number.</p>
+          </header>
+          <div class="finding-grid">
+            <a href="#diagnostics" data-analysis-link="overlap"><strong>Overlap</strong><span>increases both lexical and speaker-attribution errors.</span></a>
+            <a href="#diagnostics" data-analysis-link="similarity"><strong>Speaker interaction</strong><span>similarity and turn transitions challenge attribution.</span></a>
+            <a href="#diagnostics" data-analysis-link="acoustic"><strong>Acoustic quality</strong><span>is associated with lexical errors and shorter predicted speech timelines.</span></a>
+          </div>
+        </section>
+
+        <section class="overview section-pad" id="overview">
+          <header class="section-head">
+            <h2>Benchmark overview</h2>
+            <p>The five axes describe different interaction and acoustic properties. Higher tier numbers are not a universal difficulty scale.</p>
+          </header>
+
+          <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions...</div>
+
+          <div class="composition-layout">
+            <article class="composition-panel">
+              <h3>Language</h3>
+              <div data-overview-language class="loading-block" aria-live="polite">Loading language composition...</div>
+            </article>
+            <article class="composition-panel">
+              <h3>Scenario</h3>
+              <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenario composition...</div>
+            </article>
+          </div>
+
+          <article class="duration-panel">
+            <div><h3>Recording duration</h3><p>Count-based distribution over complete recordings.</p></div>
+            <div data-overview-duration class="loading-block" aria-live="polite">Loading duration distribution...</div>
           </article>
-          <article class="data-card reveal">
-            <div class="card-kicker"><span>Scenario</span></div>
-            <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenarios…</div>
-          </article>
-        </div>
 
-        <div class="duration-compact reveal">
-          <p class="card-kicker"><span>Recording duration</span></p>
-          <div data-overview-duration class="loading-block" aria-live="polite">Loading duration summary…</div>
-        </div>
-      </div>
-    </section>
+          <details class="pipeline-disclosure">
+            <summary>View data construction pipeline</summary>
+            <figure>
+              <a href="assets/data-construction-pipeline.png" target="_blank"><img src="assets/data-construction-pipeline.png" alt="MS-Bench construction pipeline from data sourcing through characterization, condition space, candidate pool, and subset selection."></a>
+              <figcaption>Data sourcing, characterization, condition-space definition, candidate pooling, and subset selection.</figcaption>
+            </figure>
+          </details>
+        </section>
 
-    <section class="explorer section-pad" id="explore">
-      <div class="shell">
-        <div class="section-head light split-head reveal">
-          <div><p class="section-index">02 / Explore</p><h2>Condition Explorer</h2></div>
-          <p>Select any combination of tiers. Unavailable choices are disabled dynamically; curated audio appears only when an exact representative case exists.</p>
-        </div>
+        <section class="explorer section-pad" id="explore">
+          <header class="section-head">
+            <h2>Condition explorer</h2>
+            <p>Select one tier per axis. Filters combine with AND; unavailable tiers show why they cannot be selected.</p>
+          </header>
 
-        <div class="explorer-layout reveal" data-explorer>
-          <aside class="filter-panel" aria-label="Condition filters">
-            <div class="filter-head"><span>Condition filters</span><button type="button" data-reset-filters>Reset</button></div>
-            <div class="filter-group">
-              <div class="filter-label"><b>P</b><span>Speaker number</span><small>2 → ≥9</small></div>
-              <div class="filter-options" role="group" aria-label="Speaker number"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div>
+          <div class="explorer-shell module-state" data-module="metadata" data-explorer>
+            <div class="filter-panel" aria-label="Condition filters">
+              <div class="filter-toolbar"><div data-active-filters class="active-filters" aria-live="polite"><span>No active filters</span></div><button type="button" data-reset-filters>Reset</button></div>
+              <div class="filter-grid">
+                <fieldset class="filter-group"><legend><b>P</b> Speaker number</legend><div class="filter-options"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>O</b> Overlap ratio</legend><div class="filter-options"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>S</b> Speaker similarity</legend><div class="filter-options"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>T</b> Speaker turn interval</legend><div class="filter-options"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>N</b> Acoustic quality</legend><div class="filter-options"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div></fieldset>
+              </div>
             </div>
-            <div class="filter-group">
-              <div class="filter-label"><b>O</b><span>Overlap ratio</span><small>0 → ≥0.40</small></div>
-              <div class="filter-options" role="group" aria-label="Overlap ratio"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div>
-            </div>
-            <div class="filter-group">
-              <div class="filter-label"><b>S</b><span>Speaker similarity</span><small>0.00 → ≥0.65</small></div>
-              <div class="filter-options" role="group" aria-label="Speaker similarity"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div>
-            </div>
-            <div class="filter-group">
-              <div class="filter-label"><b>T</b><span>Speaker turn interval</span><small>≥0.45 s → &lt;0.06 s</small></div>
-              <div class="filter-options" role="group" aria-label="Speaker turn interval"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div>
-            </div>
-            <div class="filter-group">
-              <div class="filter-label"><b>N</b><span>Acoustic quality</span><small>high → poor quality</small></div>
-              <div class="filter-options" role="group" aria-label="Acoustic quality"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div>
-            </div>
-          </aside>
 
-          <div class="explorer-results">
-            <div class="match-header">
-              <div><span data-explorer-status>Preparing metadata…</span><strong><b data-match-count>—</b> / 99</strong><small>recordings match</small></div>
-              <div class="active-profile" data-active-profile>Any profile</div>
+            <div class="explorer-results">
+              <div class="match-summary">
+                <div><span data-explorer-status>Preparing metadata...</span><strong><b data-match-count>-</b> / 99 recordings</strong></div>
+                <dl>
+                  <div><dt>Total duration</dt><dd data-total-duration>-</dd></div>
+                  <div><dt>Median duration</dt><dd data-median-duration>-</dd></div>
+                  <div><dt>Mean recording overlap</dt><dd data-average-overlap>-</dd></div>
+                  <div><dt>Languages</dt><dd data-language-count>-</dd></div>
+                  <div><dt>Scenarios</dt><dd data-scenario-count>-</dd></div>
+                </dl>
+              </div>
+              <div class="result-actions"><button type="button" data-toggle-recordings aria-expanded="false">Show matching recordings</button><button type="button" data-export-recordings>Export filtered JSON</button><button type="button" data-copy-link>Copy filter link</button><span data-copy-status aria-live="polite"></span></div>
+              <div class="recording-list" data-recording-list hidden></div>
+              <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
             </div>
-            <div class="match-stats">
-              <div><span>Median duration</span><strong data-median-duration>—</strong></div>
-              <div><span>Average overlap ratio</span><strong data-average-overlap>—</strong></div>
-              <div><span>Languages</span><strong data-language-count>—</strong></div>
-              <div><span>Scenarios</span><strong data-scenario-count>—</strong></div>
-            </div>
-            <div class="match-breakdown">
-              <div><span>Languages</span><p data-language-summary>—</p></div>
-              <div><span>Scenarios</span><p data-scenario-summary>—</p></div>
-            </div>
-            <div class="representative-head"><div><span>Related representative case</span><small>Curated audio is shown only for an exact metadata match.</small></div></div>
-            <div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Metadata will load when this section enters view.</p></div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="leaderboard section-pad" id="leaderboard">
-      <div class="shell">
-        <div class="section-head split-head reveal">
-          <div><p class="section-index">03 / Results</p><h2>Overall Performance and Robustness</h2></div>
-          <p>DER, cpWER, tcpWER, and WER evaluate speaker diarization, speaker-attributed transcription, and speaker-agnostic recognition.</p>
-        </div>
-        <div class="board-toolbar reveal">
-          <div class="segmented" role="group" aria-label="Leaderboard view" data-board-toggle>
-            <button type="button" class="active" data-view="overall" aria-pressed="true">Overall performance</button>
-            <button type="button" data-view="robustness" aria-pressed="false">Output robustness</button>
+        <section class="leaderboard section-pad" id="leaderboard">
+          <header class="section-head">
+            <h2>Overall performance</h2>
+            <p>Seven systems from the paper. Lower is better for every error metric.</p>
+          </header>
+          <div class="board-toolbar">
+            <div class="segmented" role="group" aria-label="Results view" data-board-toggle>
+              <button type="button" class="active" data-view="overall" aria-pressed="true">Error metrics</button>
+              <button type="button" data-view="robustness" aria-pressed="false">Output robustness</button>
+            </div>
+            <p data-leaderboard-note>Best and second-best values are marked by column.</p>
           </div>
-          <p data-leaderboard-note>Lower error is better. Best result in each column is highlighted.</p>
-        </div>
-        <div class="table-wrap reveal" data-leaderboard aria-live="polite"><p class="loading-block">Loading system results…</p></div>
-        <p class="table-footnote reveal">“Excluded” denotes units omitted from metric computation due to invalid or unparsable outputs; “Soft Deg. Units” denotes units with degraded but still parsable outputs.</p>
-      </div>
-    </section>
+          <div class="table-wrap module-state" data-module="leaderboard" data-leaderboard aria-live="polite"><p class="loading-block">Loading system results...</p></div>
+          <details class="method-note">
+            <summary>Metric and scoring protocol</summary>
+            <div>
+              <p><b>DER</b>: diarization error with a 0.5-second collar. <b>cpWER</b>: speaker-attributed transcription error under optimal speaker permutation. <b>tcpWER</b>: time-constrained cpWER with a 5-second collar. <b>WER</b>: speaker-agnostic lexical error.</p>
+              <p>Metrics use each system's scoreable inference units, so valid subsets may differ. Excluded units cannot be scored reliably. Soft-degradation units remain parseable and are retained.</p>
+            </div>
+          </details>
+        </section>
 
-    <section class="diagnostics section-pad" id="diagnostics">
-      <div class="shell">
-        <div class="section-head light split-head reveal">
-          <div><p class="section-index">04 / Analysis</p><h2>Diagnostic Analysis</h2></div>
-          <p>Switch between controlled analyses to separate lexical recognition from speaker-attribution failure.</p>
-        </div>
-        <div class="diagnostic-shell reveal">
-          <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic analysis" data-diagnostic-tabs>
-            <button type="button" role="tab" aria-selected="true" data-diagnostic="overlap"><b>01</b> Overlap</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="similarity"><b>02</b> Speaker similarity</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="acoustic"><b>03</b> Acoustic quality</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="turn"><b>04</b> Speaker turn interval</button>
-            <button type="button" role="tab" aria-selected="false" data-diagnostic="speaker"><b>05</b> Speaker number</button>
+        <section class="diagnostics section-pad" id="diagnostics">
+          <header class="section-head">
+            <h2>Condition-wise analysis</h2>
+            <p>Point estimates, direction, significance, controls, and limitations are shown together.</p>
+          </header>
+          <div class="diagnostic-shell module-state" data-module="diagnostics">
+            <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic dimension" data-diagnostic-tabs>
+              <button id="tab-overlap" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="true" tabindex="0" data-diagnostic="overlap">Overlap</button>
+              <button id="tab-similarity" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="similarity">Speaker similarity</button>
+              <button id="tab-acoustic" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="acoustic">Acoustic quality</button>
+              <button id="tab-turn" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="turn">Speaker turn interval</button>
+              <button id="tab-speaker" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="speaker">Speaker number</button>
+            </div>
+            <div id="diagnostic-panel" class="diagnostic-panel" data-diagnostic-panel role="tabpanel" aria-labelledby="tab-overlap" aria-live="polite"><p class="loading-block">Loading diagnostic findings...</p></div>
           </div>
-          <div class="diagnostic-panel" data-diagnostic-panel role="tabpanel" aria-live="polite"><p class="loading-block">Loading diagnostic findings…</p></div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="cases section-pad" id="cases">
-      <div class="shell">
-        <div class="section-head split-head reveal">
-          <div><p class="section-index">05 / Audio</p><h2>Curated Representative Cases</h2></div>
-          <p>Selected excerpts illustrate representative interaction and acoustic conditions; they are not intended to cover every condition combination in MS-Bench.</p>
-        </div>
-        <div class="case-grid" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases…</p></div>
-      </div>
-    </section>
-  </main>
+        <section class="cases section-pad" id="cases">
+          <header class="section-head">
+            <h2>Reference audio cases</h2>
+            <p>Eight curated excerpts span meetings, conversations, education, media, and mobile settings. Listen directly or open the aligned reference.</p>
+          </header>
+          <div class="case-grid module-state" data-module="cases" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases...</p></div>
+        </section>
+      </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div><a class="brand" href="#top"><img src="assets/mark.svg" alt="" width="34" height="34"><span>MS-Bench</span></a><p>A condition-stratified multi-speaker ASR benchmark.</p></div>
-      <div><span>Resources</span><a href="benchmark/metadata.jsonl">Metadata</a><a href="README.md">Documentation</a><a href="https://github.com/ASLP-lab/MS-Bench">GitHub</a></div>
-      <div><span>Navigate</span><a href="#explore">Explorer</a><a href="#leaderboard">Leaderboard</a><a href="#diagnostics">Diagnostics</a></div>
+      <footer class="site-footer">
+        <div><a class="brand" href="#top"><img src="assets/mark.svg" alt="" width="30" height="30"><span>MS-Bench</span></a><p>Condition-stratified evaluation for multi-speaker ASR.</p></div>
+        <div><a href="https://github.com/ASLP-lab/MS-Bench">GitHub repository</a><span>ASLP Lab, Northwestern Polytechnical University</span></div>
+      </footer>
     </div>
-    <div class="shell footer-base"><span>ASLP@NPU</span><span>Research preview · 2026</span></div>
-  </footer>
   </div>
 
   <dialog class="case-dialog" data-case-dialog aria-labelledby="case-dialog-title">
     <div class="case-dialog-frame">
-      <button class="case-dialog-close" type="button" data-close-case aria-label="Close case details">Close <span aria-hidden="true">×</span></button>
+      <button class="case-dialog-close" type="button" data-close-case aria-label="Close case details">Close</button>
       <div class="case-detail" data-case-detail></div>
     </div>
   </dialog>
 
-  <noscript><div class="noscript">This interactive report requires JavaScript. Benchmark metadata remains available in <a href="benchmark/metadata.jsonl">JSONL format</a>.</div></noscript>
-  <script src="assets/app.js?v=20261004-paper2" defer></script>
+  <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
+  <script src="assets/app.js?v=20261007-demo-v2" defer></script>
 </body>
 </html>
