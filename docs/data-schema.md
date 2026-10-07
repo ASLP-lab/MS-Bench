@@ -27,7 +27,12 @@ Higher T tiers contain shorter turn intervals. Higher N tiers indicate poorer ac
 
 `demo-data/representative_examples.json` links a recording to a local audio excerpt, corrected TextGrid, full-recording condition profile, and reference segments on the excerpt clock. Excerpts are no longer than five minutes. Multiple reference segments may overlap.
 
-Optional `focus_windows` entries may contain `start`, `end`, `label`, and `note`, but only after manual listening confirms the description.
+The gallery contains ten excerpts, including a P3 (nine-speaker) case and an O4 meeting. `scripts/build_demo_cases.py` rebuilds their annotations from the parent workspace's `challenge100_v2_textgrids` and `OpenSource-TestSets`; add `--encode-audio` to encode the three newly selected excerpts. The generated assets themselves are sufficient to serve the demo without that workspace.
+
+- `overlap_regions` identifies intervals with at least two distinct reference speakers. `clip_stats` reports the union duration of these intervals, their fraction of reference speech time, and peak concurrent speakers. These excerpt measurements are separate from the canonical full-recording condition values.
+- `speaker_similarity.maximum` retains the source recording's maximum cosine similarity and original speaker labels. Source labels are aligned to corrected reference tracks by dominant interval intersection, not matching speaker numbers. `speaker_mapping` records that alignment and its interval agreement.
+- `speaker_similarity.distinct_reference_pair` identifies the highest source pair that maps confidently to two different corrected speakers. When the source maximum's labels map to the same revised speaker, the demo explicitly notes the discrepancy and labels the separate distinct-speaker score. Source embeddings are not recomputed from the excerpt.
+- `focus_windows` provides annotation-derived shortcuts to overlap intervals and utterances of the highlighted speaker pair. Any additional semantic listening descriptions should be confirmed by manual listening.
 
 ## Prediction interface
 

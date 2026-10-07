@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261007-demo-v2";
+const DATA_VERSION = "20261008-demo-cases";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", hint: "valid reference speakers" },
@@ -244,15 +244,38 @@ function timelineSVG(example, speakers) {
   const height = speakers.length * rowHeight + 28;
   const duration = example.clip_duration_seconds;
   const ticks = [0, .25, .5, .75, 1];
+  const pair = example.speaker_similarity?.distinct_reference_pair?.speakers || [];
+  const overlap = example.overlap_regions || [];
   return `<div class="timeline-svg-wrap"><svg class="timeline-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Reference speaker timeline for ${escapeHTML(example.title)}">
+    <g class="timeline-overlap-bands" aria-label="Reference overlap regions">${overlap.map(region => `<rect class="timeline-overlap-region" x="${labelWidth + region.start / duration * plotWidth}" y="0" width="${Math.max(.5, (region.end - region.start) / duration * plotWidth)}" height="${height - 20}"><title>Overlap: ${region.start.toFixed(2)}-${region.end.toFixed(2)} s; ${escapeHTML(region.speakers.join(', '))}</title></rect>`).join("")}</g>
     ${ticks.map(fraction => `<line x1="${labelWidth + fraction * plotWidth}" y1="0" x2="${labelWidth + fraction * plotWidth}" y2="${height - 20}" class="timeline-grid"></line><text x="${labelWidth + fraction * plotWidth}" y="${height - 4}" text-anchor="${fraction === 0 ? "start" : fraction === 1 ? "end" : "middle"}" class="timeline-tick">${formatTime(fraction * duration)}</text>`).join("")}
-    ${speakers.map((speaker, row) => `<text x="${labelWidth - 10}" y="${row * rowHeight + 19}" text-anchor="end" class="timeline-label">${escapeHTML(speaker)}</text>${example.timeline.filter(segment => segment.speaker === speaker).map(segment => {
+    ${speakers.map((speaker, row) => `<text x="${labelWidth - 10}" y="${row * rowHeight + 19}" text-anchor="end" class="timeline-label${pair.includes(speaker) ? ' timeline-similarity-label' : ''}">${escapeHTML(speaker)}</text>${example.timeline.filter(segment => segment.speaker === speaker).map(segment => {
       const x = labelWidth + segment.start / duration * plotWidth;
       const segmentWidth = Math.max(2, (segment.end - segment.start) / duration * plotWidth);
-      return `<rect x="${x}" y="${row * rowHeight + 6}" width="${segmentWidth}" height="18" rx="2" fill="${speakerColor(speaker, speakers)}" tabindex="0" role="button" data-timeline-start="${segment.start}" aria-label="${escapeHTML(speaker)}, ${formatTime(segment.start)} to ${formatTime(segment.end)}"></rect>`;
+      return `<rect class="timeline-speech${pair.includes(speaker) ? ' timeline-similar-speaker' : ''}" x="${x}" y="${row * rowHeight + 6}" width="${segmentWidth}" height="18" rx="2" fill="${speakerColor(speaker, speakers)}" tabindex="0" role="button" data-timeline-start="${segment.start}" aria-label="${escapeHTML(speaker)}, ${formatTime(segment.start)} to ${formatTime(segment.end)}${pair.includes(speaker) ? ', highlighted similarity pair' : ''}"></rect>`;
     }).join("")}`).join("")}
     <line x1="${labelWidth}" y1="0" x2="${labelWidth}" y2="${height - 20}" class="timeline-playhead" data-timeline-cursor data-origin="${labelWidth}" data-width="${plotWidth}"></line>
   </svg></div>`;
+}
+
+function caseEvidence(example) {
+  const clip = example.clip_stats;
+  const similarity = example.speaker_similarity;
+  if (!clip || !similarity) return "";
+  const maximum = similarity.maximum;
+  const pair = similarity.distinct_reference_pair;
+  const names = pair ? pair.speakers.map(escapeHTML).join(" + ") : "No verified distinct-speaker mapping";
+  const sourceNames = maximum.source_speakers.map(escapeHTML).join(" + ");
+  const sameReference = maximum.mapping_status === "merged";
+  const pairNote = sameReference
+    ? `<p class="source-annotation-note"><b>Source annotation note:</b> ${sourceNames} align mainly with the same revised reference speaker, ${escapeHTML(maximum.reference_speakers[0])}. The source maximum is not a distinct-speaker pair in this reference.</p>`
+    : maximum.mapping_status === "unmapped"
+      ? `<p class="source-annotation-note">Source labels ${sourceNames} could not be mapped confidently to two revised reference speakers.</p>`
+      : "";
+  return `<div class="case-evidence">
+    <section><h3>Overlap in this excerpt</h3><div class="evidence-value"><strong>${clip.overlap_seconds.toFixed(1)} s</strong><span>overlapping reference speech</span></div><p><b>${(clip.overlap_ratio * 100).toFixed(1)}%</b> of reference speech; up to <b>${clip.peak_concurrent_speakers}</b> concurrent speakers. Full-recording overlap: <b>${(example.stats.overlap_ratio * 100).toFixed(1)}%</b>.</p><p>${clip.overlap_seconds > 0 ? "Shaded timeline bands mark intervals with two or more reference speakers." : "No overlapping reference speech occurs in this excerpt."}</p></section>
+    <section><h3>Maximum speaker similarity</h3><div class="evidence-value"><strong>${maximum.cosine_similarity.toFixed(4)}</strong><span>full-recording source cosine similarity</span></div>${pairNote}<p><b>${maximum.mapping_status === "distinct" ? "Reference speaker pair" : "Highest mapped distinct-speaker pair"}:</b> ${names}${pair && maximum.mapping_status !== "distinct" ? ` (source cosine: ${pair.cosine_similarity.toFixed(4)})` : ""}.</p><p>Outlined tracks identify this pair; use the speaker shortcuts above to compare their voices.</p><details class="source-pair-provenance"><summary>Source speaker labels</summary><p>Source maximum: ${sourceNames}.${pair ? `<br>Highlighted pair: ${pair.source_speakers.map(escapeHTML).join(' + ')} → ${names}.` : ""}<br>Source labels are mapped by interval alignment with the revised benchmark TextGrid. Similarities come from source recording embeddings, not this excerpt.</p></details></section>
+  </div>`;
 }
 
 function caseDetail(example) {
@@ -264,7 +287,9 @@ function caseDetail(example) {
     ${conditionDetails(example.conditions)}
     <div class="sample-player"><div><strong>Reference audio excerpt</strong><span>At most five minutes; no model prediction is shown</span></div><audio controls preload="metadata" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio></div><p class="player-error" data-audio-error hidden></p>
     ${focusWindows.length ? `<div class="focus-windows">${focusWindows.map(window => `<button type="button" data-seek="${window.start}">${escapeHTML(window.label)} at ${formatTime(window.start)}</button>`).join("")}</div>` : ""}
+    ${caseEvidence(example)}
     <div class="timeline-head"><div><h3>Reference speaker timeline</h3><p>Concurrent blocks across tracks indicate overlap. Select a block to seek.</p></div></div>
+    <div class="timeline-legend"><span><i class="overlap-swatch" aria-hidden="true"></i>Overlap: two or more reference speakers</span><span><i class="similarity-swatch" aria-hidden="true"></i>Outlined tracks: highlighted similarity pair</span></div>
     ${timelineSVG(example, speakers)}
     <div class="caption-heading"><div><strong>Time-aligned reference</strong><span>${example.timeline.length} utterances; overlapping active segments remain highlighted</span></div><div class="caption-controls"><label><input type="checkbox" data-follow-playback checked> Follow playback</label><button type="button" data-resume-follow hidden>Resume follow</button><a href="${escapeHTML(example.textgrid)}" download>Download TextGrid</a></div></div>
     <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}">${example.timeline.map((segment, index) => `<button type="button" class="caption-line" data-caption-index="${index}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b style="--speaker:${speakerColor(segment.speaker, speakers)}">${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
@@ -355,6 +380,8 @@ function setupCaseDialog() {
       const audio = $("[data-case-audio]", detail);
       audio.currentTime = Number(seekTarget.dataset.start ?? seekTarget.dataset.timelineStart ?? seekTarget.dataset.seek);
       audio.play().catch(error => {
+        // Pausing, closing, or selecting another segment can cancel a pending play.
+        if (error.name === "AbortError") return;
         console.error(error);
         const message = $("[data-audio-error]", detail);
         message.hidden = false;
@@ -440,12 +467,6 @@ function renderActiveFilters() {
   container.innerHTML = active.length ? active.map(axis => `<button type="button" data-remove-axis="${axis}" title="Remove ${escapeHTML(AXIS_META[axis].name)} filter">${state.filters[axis]}: ${escapeHTML(CONDITION_RANGES[state.filters[axis]])} x</button>`).join("") : "<span>No active filters</span>";
 }
 
-function recordingTable(items) {
-  if (!items.length) return `<p class="empty-state">No recordings match this profile.</p>`;
-  const curatedIDs = new Set((state.examples || []).map(example => example.recording_id));
-  return `<table><thead><tr><th>Recording ID</th><th>Source dataset</th><th>Language</th><th>Scenario</th><th>Duration</th><th>Profile</th><th>Reference excerpt</th></tr></thead><tbody>${items.map(item => `<tr><td>${escapeHTML(item.recording_id)}</td><td>${escapeHTML(item.source_dataset)}</td><td>${escapeHTML(item.language)}</td><td>${escapeHTML(item.scenario)}</td><td>${formatDuration(item.duration_seconds, true)}</td><td>${AXES.map(axis => item.conditions[axis]).join(" ")}</td><td>${curatedIDs.has(item.recording_id) ? "Available" : "Not curated"}</td></tr>`).join("")}</tbody></table>`;
-}
-
 function renderExplorer() {
   if (!state.metadata) return;
   const active = AXES.filter(axis => state.filters[axis]);
@@ -471,12 +492,11 @@ function renderExplorer() {
   $("[data-average-overlap]").textContent = matched.length ? `${(matched.reduce((sum, item) => sum + item.overlap_ratio, 0) / matched.length * 100).toFixed(1)}%` : "-";
   $("[data-language-count]").textContent = new Set(matched.map(item => item.language)).size;
   $("[data-scenario-count]").textContent = new Set(matched.map(item => item.scenario)).size;
-  $("[data-recording-list]").innerHTML = recordingTable(matched);
 
   const matchedIDs = new Set(matched.map(item => item.recording_id));
   const curated = (state.examples || []).filter(example => matchedIDs.has(example.recording_id));
   const representative = $("[data-representatives]");
-  representative.innerHTML = curated.length ? curated.map(example => `<article><div><span>${escapeHTML(example.scenario)}, ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4></div><button class="case-link" type="button" data-open-case="${escapeHTML(example.slug)}">Open example</button></article>`).join("") : `<div class="no-curated"><b>${matched.length} recordings match</b>, but no curated excerpt is available for this selection. The complete recording list remains available above.</div>`;
+  representative.innerHTML = curated.length ? curated.map(example => `<article><div><span>${escapeHTML(example.scenario)}, ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4></div><button class="case-link" type="button" data-open-case="${escapeHTML(example.slug)}">Open example</button></article>`).join("") : `<div class="no-curated"><b>${matched.length} recordings match</b>, but no curated excerpt is available for this selection. Try a different condition profile to find a reference excerpt.</div>`;
   updateFilterURL();
 }
 
@@ -634,31 +654,6 @@ function setupInteractions() {
   });
   $$('[data-analysis-link]').forEach(link => link.addEventListener("click", () => activateDiagnostic(link.dataset.analysisLink)));
 
-  $("[data-toggle-recordings]").addEventListener("click", event => {
-    const list = $("[data-recording-list]");
-    list.hidden = !list.hidden;
-    event.currentTarget.setAttribute("aria-expanded", String(!list.hidden));
-    event.currentTarget.textContent = list.hidden ? "Show matching recordings" : "Hide matching recordings";
-  });
-  $("[data-export-recordings]").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify(state.matched, null, 2)], { type: "application/json" });
-    const anchor = document.createElement("a");
-    anchor.href = URL.createObjectURL(blob);
-    anchor.download = "ms-bench-filtered-recordings.json";
-    anchor.click();
-    setTimeout(() => URL.revokeObjectURL(anchor.href), 0);
-  });
-  $("[data-copy-link]").addEventListener("click", async () => {
-    const status = $("[data-copy-status]");
-    try {
-      await navigator.clipboard.writeText(location.href);
-      status.textContent = "Link copied";
-    } catch (error) {
-      console.warn(error);
-      status.textContent = location.href;
-    }
-    setTimeout(() => { status.textContent = ""; }, 3000);
-  });
 }
 
 function setupSectionObserver() {

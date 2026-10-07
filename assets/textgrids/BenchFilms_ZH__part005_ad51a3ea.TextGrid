@@ -1,0 +1,826 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000
+xmax = 358.260000
+tiers? <exists>
+size = 9
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 11
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 7.744000
+                text = ""
+            intervals [2]:
+                xmin = 7.744000
+                xmax = 10.464000
+                text = "不谈呀，我是没什么好谈的，不跟你谈呀，我不谈。"
+            intervals [3]:
+                xmin = 10.464000
+                xmax = 11.703000
+                text = ""
+            intervals [4]:
+                xmin = 11.703000
+                xmax = 13.075000
+                text = "采访，哎，你好。"
+            intervals [5]:
+                xmin = 13.075000
+                xmax = 19.570000
+                text = ""
+            intervals [6]:
+                xmin = 19.570000
+                xmax = 20.964000
+                text = "呃，他说事故车就事故车啊？"
+            intervals [7]:
+                xmin = 20.964000
+                xmax = 21.104000
+                text = ""
+            intervals [8]:
+                xmin = 21.104000
+                xmax = 21.977000
+                text = "不接受采访好吗？"
+            intervals [9]:
+                xmin = 21.977000
+                xmax = 25.097000
+                text = "我已经让他去法院去去去起诉了，好吗？"
+            intervals [10]:
+                xmin = 25.097000
+                xmax = 26.158000
+                text = "我不需要媒体的介入。"
+            intervals [11]:
+                xmin = 26.158000
+                xmax = 358.260000
+                text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 6.284000
+                text = ""
+            intervals [2]:
+                xmin = 6.284000
+                xmax = 7.225000
+                text = "找你谈谈咯。"
+            intervals [3]:
+                xmin = 7.225000
+                xmax = 358.260000
+                text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "spk_03"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 5
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 26.510000
+                text = ""
+            intervals [2]:
+                xmin = 26.510000
+                xmax = 32.291000
+                text = "记者从属地市场监管部门了解到，案件正在调查中，会联系安徽那边协助配合。"
+            intervals [3]:
+                xmin = 32.291000
+                xmax = 32.524000
+                text = ""
+            intervals [4]:
+                xmin = 32.524000
+                xmax = 34.444000
+                text = "幺八幺八黄金眼记者报道。"
+            intervals [5]:
+                xmin = 34.444000
+                xmax = 358.260000
+                text = ""
+    item [4]:
+        class = "IntervalTier"
+        name = "spk_04"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 7
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 10.590000
+                text = ""
+            intervals [2]:
+                xmin = 10.590000
+                xmax = 11.732000
+                text = "哎，喂，沈老板。"
+            intervals [3]:
+                xmin = 11.732000
+                xmax = 12.523000
+                text = ""
+            intervals [4]:
+                xmin = 12.523000
+                xmax = 18.357000
+                text = "沈老板你好，那个我这边是浙江电视台幺八幺八黄金眼的，我们想问一下，因为他说他，你卖给他事故车。"
+            intervals [5]:
+                xmin = 18.357000
+                xmax = 19.370000
+                text = ""
+            intervals [6]:
+                xmin = 19.370000
+                xmax = 19.570000
+                text = "对。"
+            intervals [7]:
+                xmin = 19.570000
+                xmax = 358.260000
+                text = ""
+    item [5]:
+        class = "IntervalTier"
+        name = "spk_05"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 47
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 49.531000
+                text = ""
+            intervals [2]:
+                xmin = 49.531000
+                xmax = 58.460000
+                text = "脸上有一点点斑嘛，然后呃因为生小孩嘛，然后小孩生完以后，脸上那个色素好像加重了一点。"
+            intervals [3]:
+                xmin = 58.460000
+                xmax = 58.820000
+                text = ""
+            intervals [4]:
+                xmin = 58.820000
+                xmax = 66.110000
+                text = "然后我想着嘛嗯，小孩已经，现在已经大了一点了嘛，然后我想着考虑就先把这个斑去掉。"
+            intervals [5]:
+                xmin = 66.110000
+                xmax = 66.350000
+                text = ""
+            intervals [6]:
+                xmin = 66.350000
+                xmax = 71.838000
+                text = "我也，医院呢我也去过，医院说是慢慢退，然后我就想着尽快把它弄掉嘛。"
+            intervals [7]:
+                xmin = 71.838000
+                xmax = 79.491000
+                text = ""
+            intervals [8]:
+                xmin = 79.491000
+                xmax = 81.159000
+                text = "呃，我保证帮你搞好。"
+            intervals [9]:
+                xmin = 81.159000
+                xmax = 82.316000
+                text = ""
+            intervals [10]:
+                xmin = 82.316000
+                xmax = 87.765000
+                text = "呃，就包括产品加一次提取，手法提取。"
+            intervals [11]:
+                xmin = 87.765000
+                xmax = 91.445000
+                text = "应该就是他手操作，蘸个棉签，嗯，点在上面的。"
+            intervals [12]:
+                xmin = 91.445000
+                xmax = 92.349000
+                text = ""
+            intervals [13]:
+                xmin = 92.349000
+                xmax = 95.871000
+                text = "不不是药，药膏就是他们美容院里面的一种产品吧。"
+            intervals [14]:
+                xmin = 95.871000
+                xmax = 100.861000
+                text = "然后有点火辣辣的感觉，然后第二天就，反正就也"
+            intervals [15]:
+                xmin = 100.861000
+                xmax = 101.260000
+                text = ""
+            intervals [16]:
+                xmin = 101.260000
+                xmax = 102.348000
+                text = "状况差不多吧。"
+            intervals [17]:
+                xmin = 102.348000
+                xmax = 118.469000
+                text = ""
+            intervals [18]:
+                xmin = 118.469000
+                xmax = 124.666000
+                text = "痂不是没掉玩吗，她就给我弄弄了一个面膜给我敷上去，然后她把面膜揭掉以后啊，她就直接。"
+            intervals [19]:
+                xmin = 124.666000
+                xmax = 124.966000
+                text = ""
+            intervals [20]:
+                xmin = 124.966000
+                xmax = 129.686000
+                text = "拿一个镊子夹子把我皮肤全都夹夹，那个没掉痂的地方全夹掉了。"
+            intervals [21]:
+                xmin = 129.686000
+                xmax = 132.340000
+                text = "去完之后给我，给了一瓶那东西，什么液？"
+            intervals [22]:
+                xmin = 132.340000
+                xmax = 133.060000
+                text = ""
+            intervals [23]:
+                xmin = 133.060000
+                xmax = 134.724000
+                text = "他让我视频跟他。"
+            intervals [24]:
+                xmin = 134.724000
+                xmax = 135.316000
+                text = ""
+            intervals [25]:
+                xmin = 135.316000
+                xmax = 139.180000
+                text = "她手手把手教我，拿一个棉签蘸着，这样这样这样刷上去。"
+            intervals [26]:
+                xmin = 139.180000
+                xmax = 140.229000
+                text = ""
+            intervals [27]:
+                xmin = 140.229000
+                xmax = 142.037000
+                text = "啊对，就这样这样刷上去。"
+            intervals [28]:
+                xmin = 142.037000
+                xmax = 142.869000
+                text = ""
+            intervals [29]:
+                xmin = 142.869000
+                xmax = 149.725000
+                text = "刷上去当时我就脸就不行了，脸就好痛好痛好痛好疼啊，真的是那种刺痛，钻心的刺痛。"
+            intervals [30]:
+                xmin = 149.725000
+                xmax = 175.740000
+                text = ""
+            intervals [31]:
+                xmin = 175.740000
+                xmax = 178.116000
+                text = "嗯，一直强调是正常现象，那我就忍了呗。"
+            intervals [32]:
+                xmin = 178.116000
+                xmax = 186.088000
+                text = "第二天，第二，他他说你实在是，他叫我补救的方法就是涂了东一一支的那东西，在家又涂了一下，涂了一下又不行。"
+            intervals [33]:
+                xmin = 186.088000
+                xmax = 186.100000
+                text = ""
+            intervals [34]:
+                xmin = 186.100000
+                xmax = 192.384000
+                text = "然后后面我又来了一次，来了一次又给我敷同样的方法，就是和换各种各样的产品给我抹，就好像当我小白鼠一样。"
+            intervals [35]:
+                xmin = 192.384000
+                xmax = 206.750000
+                text = ""
+            intervals [36]:
+                xmin = 206.750000
+                xmax = 214.178000
+                text = "不接受啊，我脸红肿胀痛刺痛，我还没好，我怎么知道我脸是是怎么样子，能不能治得好，或者是怎么样，对不对？"
+            intervals [37]:
+                xmin = 214.178000
+                xmax = 214.252000
+                text = ""
+            intervals [38]:
+                xmin = 214.252000
+                xmax = 217.242000
+                text = "那我肯定，我的诉求肯定是呃退一赔三。"
+            intervals [39]:
+                xmin = 217.242000
+                xmax = 218.699000
+                text = ""
+            intervals [40]:
+                xmin = 218.699000
+                xmax = 222.041000
+                text = "因为他他这种产品，我还不知道是不是三无产品，对不对？"
+            intervals [41]:
+                xmin = 222.041000
+                xmax = 222.170000
+                text = ""
+            intervals [42]:
+                xmin = 222.170000
+                xmax = 224.165000
+                text = "我的小孩现在突然无缘无故的。"
+            intervals [43]:
+                xmin = 224.165000
+                xmax = 224.380000
+                text = ""
+            intervals [44]:
+                xmin = 224.380000
+                xmax = 239.210000
+                text = "高烧不退，那我是不是因为已经这个这个药已经这个东西已经吸到我皮肤里面，导致我母乳是，母母母乳喂给小孩，是不是他是不是这个药，他涂的这个东西产生的，我们也不知道。"
+            intervals [45]:
+                xmin = 239.210000
+                xmax = 342.176000
+                text = ""
+            intervals [46]:
+                xmin = 342.176000
+                xmax = 342.817000
+                text = "司法程序。"
+            intervals [47]:
+                xmin = 342.817000
+                xmax = 358.260000
+                text = ""
+    item [6]:
+        class = "IntervalTier"
+        name = "spk_06"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 47
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 72.076000
+                text = ""
+            intervals [2]:
+                xmin = 72.076000
+                xmax = 79.390000
+                text = "纪女士说，经人介绍，三月十三号，她来到了杭州临平区秋山大街上的吴耀美门店，付了三千块钱祛痘。"
+            intervals [3]:
+                xmin = 79.390000
+                xmax = 102.399000
+                text = ""
+            intervals [4]:
+                xmin = 102.399000
+                xmax = 107.100000
+                text = "纪女士提供了做完项目后的照片，脸颊处都是密密麻麻的褐色斑点。"
+            intervals [5]:
+                xmin = 107.100000
+                xmax = 107.420000
+                text = ""
+            intervals [6]:
+                xmin = 107.420000
+                xmax = 112.260000
+                text = "纪女士说，店里告诉她十天左右会掉痂，这期间脸部不能碰水。"
+            intervals [7]:
+                xmin = 112.260000
+                xmax = 112.730000
+                text = ""
+            intervals [8]:
+                xmin = 112.730000
+                xmax = 116.330000
+                text = "她照做了，没什么异样，就是结痂时有些发痒。"
+            intervals [9]:
+                xmin = 116.330000
+                xmax = 116.610000
+                text = ""
+            intervals [10]:
+                xmin = 116.610000
+                xmax = 118.330000
+                text = "十天过后，她回到了店里。"
+            intervals [11]:
+                xmin = 118.330000
+                xmax = 139.313000
+                text = ""
+            intervals [12]:
+                xmin = 139.313000
+                xmax = 140.293000
+                text = "舒元那那瓶吗？"
+            intervals [13]:
+                xmin = 140.293000
+                xmax = 149.798000
+                text = ""
+            intervals [14]:
+                xmin = 149.798000
+                xmax = 153.466000
+                text = "金女士带来了一瓶产品，叫舒云草本调肤液。"
+            intervals [15]:
+                xmin = 153.466000
+                xmax = 153.940000
+                text = ""
+            intervals [16]:
+                xmin = 153.940000
+                xmax = 158.212000
+                text = "她说当时从店里带回了很多小瓶的产品，都没有包装盒。"
+            intervals [17]:
+                xmin = 158.212000
+                xmax = 158.928000
+                text = ""
+            intervals [18]:
+                xmin = 158.928000
+                xmax = 164.880000
+                text = "三月二十六号，纪女士给店老板发了一张皮肤状态的照片，可以看到有明显的泛红。"
+            intervals [19]:
+                xmin = 164.880000
+                xmax = 165.680000
+                text = ""
+            intervals [20]:
+                xmin = 165.680000
+                xmax = 170.440000
+                text = "老板发语音消息让金女士把产品带到店里，他再教一遍。"
+            intervals [21]:
+                xmin = 170.440000
+                xmax = 171.179000
+                text = ""
+            intervals [22]:
+                xmin = 171.179000
+                xmax = 175.440000
+                text = "还提到刷的话有点红或者刺痛都是正常的。"
+            intervals [23]:
+                xmin = 175.440000
+                xmax = 192.378000
+                text = ""
+            intervals [24]:
+                xmin = 192.378000
+                xmax = 194.062000
+                text = "纪女士受不了，去了医院。"
+            intervals [25]:
+                xmin = 194.062000
+                xmax = 194.510000
+                text = ""
+            intervals [26]:
+                xmin = 194.510000
+                xmax = 197.568000
+                text = "三月三十号的诊断记录是接触性皮炎。"
+            intervals [27]:
+                xmin = 197.568000
+                xmax = 197.870000
+                text = ""
+            intervals [28]:
+                xmin = 197.870000
+                xmax = 202.630000
+                text = "她说治疗花了三百多块钱，因为还在哺乳期，只用了外敷的药。"
+            intervals [29]:
+                xmin = 202.630000
+                xmax = 203.328000
+                text = ""
+            intervals [30]:
+                xmin = 203.328000
+                xmax = 206.728000
+                text = "后来店里说是可以全额退款并赔偿医药费。"
+            intervals [31]:
+                xmin = 206.728000
+                xmax = 254.380000
+                text = ""
+            intervals [32]:
+                xmin = 254.380000
+                xmax = 264.860000
+                text = "蔡老板提供了一份 VIP 客户信息档案表，上面写着三月十三号的消费项目，包括冻干粉、小金瓶、礼芙霜等等，还有手写的一行文字。"
+            intervals [33]:
+                xmin = 264.860000
+                xmax = 265.417000
+                text = ""
+            intervals [34]:
+                xmin = 265.417000
+                xmax = 268.040000
+                text = "祛斑期间红肿痒反应正常。"
+            intervals [35]:
+                xmin = 268.040000
+                xmax = 282.610000
+                text = ""
+            intervals [36]:
+                xmin = 282.610000
+                xmax = 285.770000
+                text = "蔡老板拿出了一盒舒元悦心草本调肤液。"
+            intervals [37]:
+                xmin = 285.770000
+                xmax = 286.147000
+                text = ""
+            intervals [38]:
+                xmin = 286.147000
+                xmax = 290.250000
+                text = "成分有水、甘油、乙醇、丹参根提取物等等。"
+            intervals [39]:
+                xmin = 290.250000
+                xmax = 290.850000
+                text = ""
+            intervals [40]:
+                xmin = 290.850000
+                xmax = 296.610000
+                text = "她还提供了一份检测报告，样品是韩圣娜精宠焕颜调肤液。"
+            intervals [41]:
+                xmin = 296.610000
+                xmax = 332.240000
+                text = ""
+            intervals [42]:
+                xmin = 332.240000
+                xmax = 336.374000
+                text = "蔡老板说，他开店十几年了，从来没有遇到过这种过敏的情况。"
+            intervals [43]:
+                xmin = 336.374000
+                xmax = 336.940000
+                text = ""
+            intervals [44]:
+                xmin = 336.940000
+                xmax = 340.424000
+                text = "之前店里提出可以全额退款并支付医药费。"
+            intervals [45]:
+                xmin = 340.424000
+                xmax = 344.740000
+                text = ""
+            intervals [46]:
+                xmin = 344.740000
+                xmax = 346.460000
+                text = "幺八幺八黄金眼记者报道。"
+            intervals [47]:
+                xmin = 346.460000
+                xmax = 358.260000
+                text = ""
+    item [7]:
+        class = "IntervalTier"
+        name = "spk_07"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 31
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 81.235000
+                text = ""
+            intervals [2]:
+                xmin = 81.235000
+                xmax = 82.308000
+                text = "包括什么内容？"
+            intervals [3]:
+                xmin = 82.308000
+                xmax = 91.496000
+                text = ""
+            intervals [4]:
+                xmin = 91.496000
+                xmax = 92.345000
+                text = "点了什么东西？"
+            intervals [5]:
+                xmin = 92.345000
+                xmax = 132.660000
+                text = ""
+            intervals [6]:
+                xmin = 132.660000
+                xmax = 132.795000
+                text = "嗯。"
+            intervals [7]:
+                xmin = 132.795000
+                xmax = 142.316000
+                text = ""
+            intervals [8]:
+                xmin = 142.316000
+                xmax = 142.653000
+                text = "嗯。"
+            intervals [9]:
+                xmin = 142.653000
+                xmax = 214.015000
+                text = ""
+            intervals [10]:
+                xmin = 214.015000
+                xmax = 214.275000
+                text = "嗯。"
+            intervals [11]:
+                xmin = 214.275000
+                xmax = 217.421000
+                text = ""
+            intervals [12]:
+                xmin = 217.421000
+                xmax = 218.732000
+                text = "为什么要退一赔三呢？"
+            intervals [13]:
+                xmin = 218.732000
+                xmax = 247.177000
+                text = ""
+            intervals [14]:
+                xmin = 247.177000
+                xmax = 247.430000
+                text = "嗯。"
+            intervals [15]:
+                xmin = 247.430000
+                xmax = 268.210000
+                text = ""
+            intervals [16]:
+                xmin = 268.210000
+                xmax = 271.514000
+                text = "她说什么很刺痛，就是为什么会有这种感觉呢？"
+            intervals [17]:
+                xmin = 271.514000
+                xmax = 275.930000
+                text = ""
+            intervals [18]:
+                xmin = 275.930000
+                xmax = 277.754000
+                text = "那它为什么会有辣辣的这种感觉呢？"
+            intervals [19]:
+                xmin = 277.754000
+                xmax = 305.660000
+                text = ""
+            intervals [20]:
+                xmin = 305.660000
+                xmax = 309.638000
+                text = "也没有看到有什么成分啊，只是看到就检测什么汞啊铅啊。"
+            intervals [21]:
+                xmin = 309.638000
+                xmax = 315.067000
+                text = ""
+            intervals [22]:
+                xmin = 315.067000
+                xmax = 316.070000
+                text = "看着还是有一点痕。"
+            intervals [23]:
+                xmin = 316.070000
+                xmax = 319.810000
+                text = ""
+            intervals [24]:
+                xmin = 319.810000
+                xmax = 321.087000
+                text = "那为什么会结痂呢？"
+            intervals [25]:
+                xmin = 321.087000
+                xmax = 324.720000
+                text = ""
+            intervals [26]:
+                xmin = 324.720000
+                xmax = 325.200000
+                text = "为什么？"
+            intervals [27]:
+                xmin = 325.200000
+                xmax = 325.520000
+                text = ""
+            intervals [28]:
+                xmin = 325.520000
+                xmax = 326.924000
+                text = "它它是会伤到一些。"
+            intervals [29]:
+                xmin = 326.924000
+                xmax = 340.443000
+                text = ""
+            intervals [30]:
+                xmin = 340.443000
+                xmax = 340.990000
+                text = "那您考虑吗？"
+            intervals [31]:
+                xmin = 340.990000
+                xmax = 358.260000
+                text = ""
+    item [8]:
+        class = "IntervalTier"
+        name = "spk_08"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 31
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 239.200000
+                text = ""
+            intervals [2]:
+                xmin = 239.200000
+                xmax = 241.960000
+                text = "她说我把她脸做坏了啊，她说她脸哪里坏了？"
+            intervals [3]:
+                xmin = 241.960000
+                xmax = 242.883000
+                text = ""
+            intervals [4]:
+                xmin = 242.883000
+                xmax = 248.766000
+                text = "因为我们祛斑上面写了啊，写的是比如说祛斑期间会红肿痒，这种反应都有，她都签过字。"
+            intervals [5]:
+                xmin = 248.766000
+                xmax = 251.870000
+                text = "然后她第一天来做斑，然后把她婆婆，把她妈妈也带来做了。"
+            intervals [6]:
+                xmin = 251.870000
+                xmax = 252.136000
+                text = ""
+            intervals [7]:
+                xmin = 252.136000
+                xmax = 254.040000
+                text = "叫我两个都免费给她做，一分钱都没收。"
+            intervals [8]:
+                xmin = 254.040000
+                xmax = 271.650000
+                text = ""
+            intervals [9]:
+                xmin = 271.650000
+                xmax = 275.850000
+                text = "这种感觉我们就是用这个霜做的呢，没有仪器，我们就是手涂涂抹抹的。"
+            intervals [10]:
+                xmin = 275.850000
+                xmax = 277.683000
+                text = ""
+            intervals [11]:
+                xmin = 277.683000
+                xmax = 282.483000
+                text = "它就是一个霜，因为你它就是一个霜，反正你说里面什么成分，反正检测报告都发给你们了嘛。"
+            intervals [12]:
+                xmin = 282.483000
+                xmax = 296.763000
+                text = ""
+            intervals [13]:
+                xmin = 296.763000
+                xmax = 300.690000
+                text = "他们两个是一样的，等于说我们有的时候产品不是有新包装和老包装嘛。"
+            intervals [14]:
+                xmin = 300.690000
+                xmax = 301.647000
+                text = "就是就是检测报告。"
+            intervals [15]:
+                xmin = 301.647000
+                xmax = 303.180000
+                text = ""
+            intervals [16]:
+                xmin = 303.180000
+                xmax = 305.360000
+                text = "呐，你看一下，他就对得上号就可以了啊。"
+            intervals [17]:
+                xmin = 305.360000
+                xmax = 309.650000
+                text = ""
+            intervals [18]:
+                xmin = 309.650000
+                xmax = 312.787000
+                text = "对呀，它本来就是只要检测这些很过过检的就行了嘛。"
+            intervals [19]:
+                xmin = 312.787000
+                xmax = 312.983000
+                text = ""
+            intervals [20]:
+                xmin = 312.983000
+                xmax = 315.023000
+                text = "假如说我帮你做了斑，那你斑是不是没有了？"
+            intervals [21]:
+                xmin = 315.023000
+                xmax = 316.056000
+                text = ""
+            intervals [22]:
+                xmin = 316.056000
+                xmax = 319.817000
+                text = "还是有一点，她才十来天，那我店是三无产品，我能在店里做的下去吗？"
+            intervals [23]:
+                xmin = 319.817000
+                xmax = 321.090000
+                text = ""
+            intervals [24]:
+                xmin = 321.090000
+                xmax = 324.450000
+                text = "那你长了痘痘，比如说你像这个膏，它涂上去它就会结痂的。"
+            intervals [25]:
+                xmin = 324.450000
+                xmax = 326.920000
+                text = ""
+            intervals [26]:
+                xmin = 326.920000
+                xmax = 332.044000
+                text = "没有伤到，啊，那没有，那那那那这个都不会，我们做的它又不破皮，又不又没有机器。"
+            intervals [27]:
+                xmin = 332.044000
+                xmax = 340.983000
+                text = ""
+            intervals [28]:
+                xmin = 340.983000
+                xmax = 342.304000
+                text = "对，反正其他的一分钱。"
+            intervals [29]:
+                xmin = 342.304000
+                xmax = 342.813000
+                text = ""
+            intervals [30]:
+                xmin = 342.813000
+                xmax = 344.340000
+                text = "哎，对，让她走司法程序好了。"
+            intervals [31]:
+                xmin = 344.340000
+                xmax = 358.260000
+                text = ""
+    item [9]:
+        class = "IntervalTier"
+        name = "spk_09"
+        xmin = 0.000000
+        xmax = 358.260000
+        intervals: size = 9
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 37.500000
+                text = ""
+            intervals [2]:
+                xmin = 37.500000
+                xmax = 43.254000
+                text = "纪女士反映，她在一家美容店祛斑，涂了一瓶产品之后，脸上火辣辣的疼。"
+            intervals [3]:
+                xmin = 43.254000
+                xmax = 43.540000
+                text = ""
+            intervals [4]:
+                xmin = 43.540000
+                xmax = 47.575000
+                text = "店里换了各种产品补救，她感觉被当成了小白鼠。"
+            intervals [5]:
+                xmin = 47.575000
+                xmax = 348.360000
+                text = ""
+            intervals [6]:
+                xmin = 348.360000
+                xmax = 352.590000
+                text = "刘先生反映，妻子前两天开车被一辆变道的车给撞了。"
+            intervals [7]:
+                xmin = 352.590000
+                xmax = 352.870000
+                text = ""
+            intervals [8]:
+                xmin = 352.870000
+                xmax = 357.150000
+                text = "作为事故无责方，他们反而遭到了全责方的质问。"
+            intervals [9]:
+                xmin = 357.150000
+                xmax = 358.260000
+                text = ""

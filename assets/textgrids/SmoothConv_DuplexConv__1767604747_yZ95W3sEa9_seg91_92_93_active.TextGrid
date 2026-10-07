@@ -1,0 +1,216 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 102.318337673
+tiers? <exists>
+size = 2
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0
+        xmax = 102.318337673
+        intervals: size = 30
+        intervals [1]:
+            xmin = 0.0
+            xmax = 4.180844931
+            text = ""
+        intervals [2]:
+            xmin = 4.180844931
+            xmax = 8.667047081
+            text = "爱的勇气我不回忆回忆珍惜<唱歌>"
+        intervals [3]:
+            xmin = 8.667047081
+            xmax = 9.493817793
+            text = ""
+        intervals [4]:
+            xmin = 9.493817793
+            xmax = 10.20961257
+            text = "我要握住你的<唱歌>"
+        intervals [5]:
+            xmin = 10.20961257
+            xmax = 11.416475858
+            text = ""
+        intervals [6]:
+            xmin = 11.416475858
+            xmax = 14.887248208
+            text = "最美的梦给未来的自己<唱歌>"
+        intervals [7]:
+            xmin = 14.887248208
+            xmax = 22.029433727
+            text = ""
+        intervals [8]:
+            xmin = 22.029433727
+            xmax = 22.602809388
+            text = "好听吗"
+        intervals [9]:
+            xmin = 22.602809388
+            xmax = 26.641871003
+            text = ""
+        intervals [10]:
+            xmin = 26.641871003
+            xmax = 27.089242739
+            text = "哪个啊"
+        intervals [11]:
+            xmin = 27.089242739
+            xmax = 29.984599292
+            text = ""
+        intervals [12]:
+            xmin = 29.984599292
+            xmax = 33.212149386
+            text = "是吧<pause>我就我就是跟你说我说这个框好好看"
+        intervals [13]:
+            xmin = 33.212149386
+            xmax = 41.818333103
+            text = ""
+        intervals [14]:
+            xmin = 41.818333103
+            xmax = 42.400956759
+            text = "对呀"
+        intervals [15]:
+            xmin = 42.400956759
+            xmax = 47.311641859
+            text = ""
+        intervals [16]:
+            xmin = 47.311641859
+            xmax = 48.143961367
+            text = "没有人干啥"
+        intervals [17]:
+            xmin = 48.143961367
+            xmax = 53.169216508
+            text = ""
+        intervals [18]:
+            xmin = 53.169216508
+            xmax = 54.18187191
+            text = "对呀"
+        intervals [19]:
+            xmin = 54.18187191
+            xmax = 60.130879754
+            text = ""
+        intervals [20]:
+            xmin = 60.130879754
+            xmax = 63.095217696
+            text = "但是能刷的人还是挺多的"
+        intervals [21]:
+            xmin = 63.095217696
+            xmax = 81.735420724
+            text = ""
+        intervals [22]:
+            xmin = 81.735420724
+            xmax = 86.354793996
+            text = "就我上次跟你说的那个他大哥<pause>嗯就是在"
+        intervals [23]:
+            xmin = 86.354793996
+            xmax = 88.020389017
+            text = ""
+        intervals [24]:
+            xmin = 88.020389017
+            xmax = 89.629540067
+            text = "反正就是给他刷<pause>只刷了"
+        intervals [25]:
+            xmin = 89.629540067
+            xmax = 90.780915387
+            text = ""
+        intervals [26]:
+            xmin = 90.780915387
+            xmax = 92.944946109
+            text = "两天<pause>两天还是三天啊"
+        intervals [27]:
+            xmin = 92.944946109
+            xmax = 93.666289683
+            text = ""
+        intervals [28]:
+            xmin = 93.666289683
+            xmax = 95.067360855
+            text = "给他直刷了二十多万"
+        intervals [29]:
+            xmin = 95.067360855
+            xmax = 99.188816321
+            text = ""
+        intervals [30]:
+            xmin = 99.188816321
+            xmax = 102.318337673
+            text = "直刷啊<pause>可不是贼狗啊<pause>直刷"
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0
+        xmax = 102.318337673
+        intervals: size = 19
+        intervals [1]:
+            xmin = 0.0
+            xmax = 23.380375192
+            text = ""
+        intervals [2]:
+            xmin = 23.380375192
+            xmax = 25.097034178
+            text = "这个还<pause>框还挺好看的"
+        intervals [3]:
+            xmin = 25.097034178
+            xmax = 27.846892326
+            text = ""
+        intervals [4]:
+            xmin = 27.846892326
+            xmax = 29.141611561
+            text = "你发我看看"
+        intervals [5]:
+            xmin = 29.141611561
+            xmax = 38.443540953
+            text = ""
+        intervals [6]:
+            xmin = 38.443540953
+            xmax = 39.470068347
+            text = "不过已经没有人了"
+        intervals [7]:
+            xmin = 39.470068347
+            xmax = 44.449717063
+            text = ""
+        intervals [8]:
+            xmin = 44.449717063
+            xmax = 45.531732424
+            text = "没有人存在了"
+        intervals [9]:
+            xmin = 45.531732424
+            xmax = 48.536405849
+            text = ""
+        intervals [10]:
+            xmin = 48.536405849
+            xmax = 50.250984037
+            text = "没有人了没有人玩了"
+        intervals [11]:
+            xmin = 50.250984037
+            xmax = 57.400662661
+            text = ""
+        intervals [12]:
+            xmin = 57.400662661
+            xmax = 58.778613847
+            text = "这地方<pause>确实没人"
+        intervals [13]:
+            xmin = 58.778613847
+            xmax = 64.632693476
+            text = ""
+        intervals [14]:
+            xmin = 64.632693476
+            xmax = 65.335541061
+            text = "真的有吗"
+        intervals [15]:
+            xmin = 65.335541061
+            xmax = 68.163775962
+            text = ""
+        intervals [16]:
+            xmin = 68.163775962
+            xmax = 69.936616515
+            text = "真的有吗"
+        intervals [17]:
+            xmin = 69.936616515
+            xmax = 97.00249093
+            text = ""
+        intervals [18]:
+            xmin = 97.00249093
+            xmax = 97.335418734
+            text = "六"
+        intervals [19]:
+            xmin = 97.335418734
+            xmax = 102.318337673
+            text = ""

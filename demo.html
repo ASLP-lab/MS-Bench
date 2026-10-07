@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MS-Bench is a condition-stratified benchmark for fine-grained multi-speaker ASR evaluation.">
-  <meta name="theme-color" content="#f4f6f8">
+  <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261007-demo-v2">
+  <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css?v=20261008-demo-cases">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -15,7 +15,7 @@
   <header class="site-header" data-header>
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="MS-Bench home">
-        <img src="assets/mark.svg" alt="" width="32" height="32">
+        <img src="assets/mark.svg?v=20261007-demo-layout" alt="" width="32" height="32">
         <span>MS-Bench</span>
       </a>
       <div class="header-actions">
@@ -40,9 +40,11 @@
       <main id="main">
         <section class="hero" id="top">
           <div class="hero-copy">
-            <img class="hero-logo" src="assets/mark.svg" alt="" width="104" height="104">
+            <img class="hero-logo" src="assets/mark.svg?v=20261007-demo-layout" alt="" width="104" height="104">
             <h1><strong>MS-Bench</strong><span>A Condition-Stratified Multi-Speaker ASR Benchmark</span></h1>
-            <p class="hero-lede">Beyond aggregate scores: evaluate who spoke what and when across five multi-speaker conditions.</p>
+            <div class="paper-abstract">
+              <p>Multi-speaker automatic speech recognition (MSASR) has advanced rapidly with end-to-end speech large language models. However, existing benchmarks cover limited ranges of specific multi-speaker conditions and scenarios, making it difficult to reveal system limitations under diverse conditions and scenarios. We introduce MS-Bench, a condition-stratified benchmark for fine-grained MSASR evaluation. MS-Bench integrates both public and internal benchmarks and characterizes each recording along five dimensions: speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality. We stratify these dimensions into condition ranges and construct MS-Bench with broad coverage of conditions, scenarios, languages, and recording devices. Evaluating representative commercial, open-source, and cascaded systems, we find that overlap affects both lexical recognition and speaker attribution, while other factors exhibit more task-specific effects on recognition, attribution, or temporal prediction. These results demonstrate that aggregate metrics alone obscure important MSASR failure modes and highlight the value of condition-stratified evaluation. MS-Bench aims to reveal condition-specific limitations of current MSASR systems and guide future improvements.</p>
+            </div>
             <div class="hero-actions">
               <a class="button button-primary" href="#cases">Listen to examples</a>
               <a class="button button-secondary" href="#explore">Explore conditions</a>
@@ -51,29 +53,17 @@
           </div>
           <div class="stat-strip" aria-label="Benchmark headline statistics">
             <div><strong>32.72 h</strong><span>Total duration</span></div>
-            <div><strong>99</strong><span>Recordings</span></div>
             <div><strong>5</strong><span>Condition dimensions</span></div>
-            <div><strong>7</strong><span>Evaluated systems</span></div>
             <div><strong>2-14</strong><span>Speakers</span></div>
-          </div>
-        </section>
-
-        <section class="findings section-pad" aria-labelledby="findings-title">
-          <header class="section-head compact">
-            <h2 id="findings-title">What aggregate scores hide</h2>
-            <p>MS-Bench isolates condition-specific behavior instead of reducing each system to one number.</p>
-          </header>
-          <div class="finding-grid">
-            <a href="#diagnostics" data-analysis-link="overlap"><strong>Overlap</strong><span>increases both lexical and speaker-attribution errors.</span></a>
-            <a href="#diagnostics" data-analysis-link="similarity"><strong>Speaker interaction</strong><span>similarity and turn transitions challenge attribution.</span></a>
-            <a href="#diagnostics" data-analysis-link="acoustic"><strong>Acoustic quality</strong><span>is associated with lexical errors and shorter predicted speech timelines.</span></a>
+            <div><strong>21.87%</strong><span>Duration-weighted overlap</span></div>
+            <div><strong>7</strong><span>Evaluated systems</span></div>
           </div>
         </section>
 
         <section class="overview section-pad" id="overview">
           <header class="section-head">
             <h2>Benchmark overview</h2>
-            <p>The five axes describe different interaction and acoustic properties. Higher tier numbers are not a universal difficulty scale.</p>
+            <p class="section-note"><strong>Note:</strong> The five axes describe different interaction and acoustic properties. Higher tier numbers are not a universal difficulty scale.</p>
           </header>
 
           <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions...</div>
@@ -106,7 +96,7 @@
         <section class="explorer section-pad" id="explore">
           <header class="section-head">
             <h2>Condition explorer</h2>
-            <p>Select one tier per axis. Filters combine with AND; unavailable tiers show why they cannot be selected.</p>
+            <p class="section-note"><strong>Note:</strong> Select up to one tier per axis. Recordings must match all selected tiers. Use Reset to clear the filters; unavailable tiers show why they cannot be selected.</p>
           </header>
 
           <div class="explorer-shell module-state" data-module="metadata" data-explorer>
@@ -132,8 +122,6 @@
                   <div><dt>Scenarios</dt><dd data-scenario-count>-</dd></div>
                 </dl>
               </div>
-              <div class="result-actions"><button type="button" data-toggle-recordings aria-expanded="false">Show matching recordings</button><button type="button" data-export-recordings>Export filtered JSON</button><button type="button" data-copy-link>Copy filter link</button><span data-copy-status aria-live="polite"></span></div>
-              <div class="recording-list" data-recording-list hidden></div>
               <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
             </div>
           </div>
@@ -142,7 +130,7 @@
         <section class="leaderboard section-pad" id="leaderboard">
           <header class="section-head">
             <h2>Overall performance</h2>
-            <p>Seven systems from the paper. Lower is better for every error metric.</p>
+            <p class="section-note"><strong>Note:</strong> Seven systems from the paper. Lower is better for every error metric. DER uses a 0.5-second collar; tcpWER uses a 5-second collar.</p>
           </header>
           <div class="board-toolbar">
             <div class="segmented" role="group" aria-label="Results view" data-board-toggle>
@@ -164,7 +152,7 @@
         <section class="diagnostics section-pad" id="diagnostics">
           <header class="section-head">
             <h2>Condition-wise analysis</h2>
-            <p>Point estimates, direction, significance, controls, and limitations are shown together.</p>
+            <p class="section-note"><strong>Note:</strong> Point estimates, direction, significance, controls, and limitations are shown together.</p>
           </header>
           <div class="diagnostic-shell module-state" data-module="diagnostics">
             <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic dimension" data-diagnostic-tabs>
@@ -181,14 +169,14 @@
         <section class="cases section-pad" id="cases">
           <header class="section-head">
             <h2>Reference audio cases</h2>
-            <p>Eight curated excerpts span meetings, conversations, education, media, and mobile settings. Listen directly or open the aligned reference.</p>
+            <p class="section-note"><strong>Note:</strong> Ten curated excerpts cover representative speaker counts, overlap levels, acoustic conditions, and scenarios. Open an aligned reference to inspect highlighted overlap regions and the most similar speaker pair.</p>
           </header>
           <div class="case-grid module-state" data-module="cases" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases...</p></div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <div><a class="brand" href="#top"><img src="assets/mark.svg" alt="" width="30" height="30"><span>MS-Bench</span></a><p>Condition-stratified evaluation for multi-speaker ASR.</p></div>
+        <div><a class="brand" href="#top"><img src="assets/mark.svg?v=20261007-demo-layout" alt="" width="30" height="30"><span>MS-Bench</span></a><p>Condition-stratified evaluation for multi-speaker ASR.</p></div>
         <div><a href="https://github.com/ASLP-lab/MS-Bench">GitHub repository</a><span>ASLP Lab, Northwestern Polytechnical University</span></div>
       </footer>
     </div>
@@ -202,6 +190,6 @@
   </dialog>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261007-demo-v2" defer></script>
+  <script src="assets/app.js?v=20261008-demo-cases" defer></script>
 </body>
 </html>

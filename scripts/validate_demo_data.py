@@ -63,6 +63,14 @@ def main() -> None:
         fail("Acoustic diagnostics must include lexical, attribution, and R_time series")
 
     examples = json.loads((ROOT / "demo-data/representative_examples.json").read_text(encoding="utf-8"))
+    if len(examples) != 10 or len({example["recording_id"] for example in examples}) != 10:
+        fail("Reference gallery must contain ten unique recordings")
+    if len({example["slug"] for example in examples}) != 10:
+        fail("Reference gallery slugs must be unique")
+    if any(example["slug"] == "japanese" for example in examples):
+        fail("Japanese phone conversation must not appear in the reference gallery")
+    if not any(example["conditions"]["P"] == "P3" for example in examples):
+        fail("Reference gallery must include a P3 case")
     canonical = {row["recording_id"]: row for row in rows}
     for example in examples:
         recording_id = example["recording_id"]
@@ -79,6 +87,57 @@ def main() -> None:
         for segment in example["timeline"]:
             if segment["start"] < 0 or segment["end"] < segment["start"] or segment["end"] > example["clip_duration_seconds"] + 0.5:
                 fail(f"{recording_id}: invalid timeline interval {segment}")
+        clip = example["clip_stats"]
+        speakers = {segment["speaker"] for segment in example["timeline"]}
+        if clip["speakers"] != len(speakers):
+            fail(f"{recording_id}: excerpt speaker count does not match timeline")
+        regions = example["overlap_regions"]
+        boundaries = sorted({time for segment in example["timeline"]
+                             for time in (segment["start"], segment["end"])})
+        expected_overlap = reference_speech = 0.0
+        peak_speakers = 0
+        for start, end in zip(boundaries, boundaries[1:]):
+            midpoint = (start + end) / 2
+            active = {segment["speaker"] for segment in example["timeline"]
+                      if segment["start"] <= midpoint < segment["end"]}
+            peak_speakers = max(peak_speakers, len(active))
+            if active:
+                reference_speech += end - start
+            if len(active) >= 2:
+                expected_overlap += end - start
+        if not math.isclose(reference_speech, clip["reference_speech_seconds"], abs_tol=1e-5):
+            fail(f"{recording_id}: excerpt reference speech duration is inconsistent")
+        if not math.isclose(expected_overlap, clip["overlap_seconds"], abs_tol=1e-5):
+            fail(f"{recording_id}: excerpt overlap annotations omit or duplicate reference overlap")
+        if clip["peak_concurrent_speakers"] != peak_speakers:
+            fail(f"{recording_id}: peak concurrent speakers is inconsistent")
+        expected_ratio = expected_overlap / reference_speech if reference_speech else 0.0
+        if not math.isclose(expected_ratio, clip["overlap_ratio"], abs_tol=1e-6):
+            fail(f"{recording_id}: excerpt overlap ratio is inconsistent")
+        if any(first["end"] > second["start"] for first, second in zip(regions, regions[1:])):
+            fail(f"{recording_id}: overlap regions must be sorted and disjoint")
+        for region in regions:
+            if not (0 <= region["start"] < region["end"] <= example["clip_duration_seconds"]):
+                fail(f"{recording_id}: invalid overlap region")
+            midpoint = (region["start"] + region["end"]) / 2
+            active = {segment["speaker"] for segment in example["timeline"]
+                      if segment["start"] <= midpoint < segment["end"]}
+            if len(active) < 2 or active != set(region["speakers"]):
+                fail(f"{recording_id}: overlap band is inconsistent with reference speakers")
+        overlap_duration = sum(region["end"] - region["start"] for region in regions)
+        if not math.isclose(overlap_duration, clip["overlap_seconds"], abs_tol=1e-5):
+            fail(f"{recording_id}: excerpt overlap duration does not match highlighted bands")
+        maximum = example["speaker_similarity"]["maximum"]
+        if not math.isclose(maximum["cosine_similarity"], canonical[recording_id]["speaker_similarity_max"], abs_tol=1e-6):
+            fail(f"{recording_id}: source similarity maximum differs from benchmark metadata")
+        if maximum["mapping_status"] == "merged" and len(set(maximum["reference_speakers"])) != 1:
+            fail(f"{recording_id}: merged source pair must refer to the same corrected speaker")
+        pair = example["speaker_similarity"]["distinct_reference_pair"]
+        if pair and (len(set(pair["speakers"])) != 2 or not set(pair["speakers"]).issubset(speakers)):
+            fail(f"{recording_id}: highlighted similarity pair must be two reference speakers in the excerpt")
+        for window in example.get("focus_windows", []):
+            if not (0 <= window["start"] < window["end"] <= example["clip_duration_seconds"]):
+                fail(f"{recording_id}: invalid listening shortcut interval")
 
     print(f"Validated {len(rows)} recordings, {len(leaderboard)} systems, and {len(examples)} representative cases.")
 

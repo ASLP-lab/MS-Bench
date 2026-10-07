@@ -1,5 +1,14 @@
 # Demo implementation status
 
+## Current reference-case update (2026-10-08, main)
+
+- The gallery now contains ten corrected reference excerpts. Japanese phone conversation is removed from the gallery; Full-duplex tutoring is renamed Tutoring conversation. New cases cover nine speakers (P3), high-overlap far-field conversation (O4), and low-similarity live-streaming speech.
+- Case details mark reference overlap with shaded timeline bands and highlight the mapped similarity pair with outlined tracks. Timestamp shortcuts support overlap listening and comparing the pair. Similarity provenance distinguishes the original full-recording maximum from revised reference speaker identities, including two source-label merge cases.
+- Condition Explorer retains filters, counts, URL state, and curated examples. The matching-recordings list, JSON export, and copy-link buttons have been removed.
+- Verified all ten MP3s by full decoding and browser playback; verified all ten detail dialogs, overlap/caption alignment, similarity labels, P3/O4 filters, seeking, and no horizontal page/dialog overflow at 1440 px and 390 px in light and dark modes. Dialog text contrast checks passed. Data validation covers all 99 recordings, seven systems, and ten cases; rebuilding case annotations is idempotent.
+
+## Original implementation tracking
+
 This file tracks the implementation plan against the `improve/msbench-demo-v2` branch. Status is based on repository code and validation, not on the public GitHub Pages deployment.
 
 | Task | Status | Main files | Verification or blocker |
