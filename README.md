@@ -1,59 +1,42 @@
-# MS-Bench 项目交接说明
+<div align="center">
 
-MS-Bench 是一个面向多说话人自动语音识别（Multi-Speaker ASR）的条件分层评测基准。
+<img src="assets/mark.svg" alt="MS-Bench icon" width="104">
 
-## 分支说明
+<h2>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</h2>
 
-- `main`：当前 GitHub Pages 使用的正式分支，保存旧版 Demo 页面。
-- `improve/msbench-demo-v2`：新版 Demo 页面分支，包含新的页面布局、与论文一致的实验结果、条件诊断分析、Condition Explorer、参考音频案例、数据校验脚本和相关文档。
+[**🎧 Demo**](https://aslp-lab.github.io/MS-Bench/demo.html?v=20261004-paper2) · [**💻 Project Page**](https://github.com/ASLP-lab/MS-Bench)
 
-V2 页面使用 **Taste-Skill** 重新设计，对应安装后的 Skill 名称为 `design-taste-frontend`。设计方向是简洁、清晰的学术项目页面，重点改善字体层级、颜色对比、响应式布局和信息密度，并减少不必要的动画。
+</div>
 
-## 重要数据路径
 
-- 完整且权威的 metadata：[`benchmark/metadata.jsonl`](benchmark/metadata.jsonl)
-- 从完整 metadata 派生的前端数据：[`demo-data/sample_metadata.json`](demo-data/sample_metadata.json)
-- Benchmark 汇总统计：[`demo-data/summary.json`](demo-data/summary.json)
-- Demo 使用的 TextGrid：[`assets/textgrids/`](assets/textgrids/)
-- 8 个 Demo 案例的音频、TextGrid 和字幕映射：[`demo-data/representative_examples.json`](demo-data/representative_examples.json)
-- Demo 使用的音频片段：[`assets/audio/`](assets/audio/)
+**MS-Bench** is a condition-stratified benchmark for fine-grained multi-speaker automatic speech recognition evaluation. It integrates both public and internal benchmarks and characterizes each recording along five dimensions: **speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality**. These dimensions are stratified into condition ranges to provide broad coverage of conditions, application scenarios, languages, and recording devices, enabling systematic analysis of system performance under different conditions.
 
-`benchmark/metadata.jsonl` 中每一行对应一条录音，主要包含：
+## Data Construction Pipeline
 
-- 录音 ID 和来源数据集
-- 语言、场景和录音设备
-- 录音时长
-- 五个条件维度的档位：`P`、`O`、`S`、`T`、`N`
-- 说话人数、重叠率、说话人相似度、说话人切换间隔和声学质量等统计信息
+<p align="center">
+  <img src="assets/data-construction-pipeline.png" alt="MS-Bench data construction pipeline: sourcing and characterization, condition-space construction, candidate-pool construction, and benchmark-subset selection" width="100%">
+</p>
 
-## 本地运行 V2 页面
+<p align="center"><sub>The MS-Bench construction pipeline consists of sourcing and characterization, condition-space construction, candidate-pool construction, and benchmark-subset selection.</sub></p>
 
-```bash
-git switch improve/msbench-demo-v2
-python -m http.server 8765
-```
+## Benchmark Overview
 
-浏览器打开：
+| Total duration | Recording duration | Speakers | Average overlap | Condition dimensions |
+|:--:|:--:|:--:|:--:|:--:|
+| **32.72 h** | **1.38–159.07 min** | **2–14** | **21.87%** | **5** |
 
-```text
-http://127.0.0.1:8765/demo.html?v=20261007-demo-v2
-```
+MS-Bench covers meetings, spontaneous conversations, films and television, podcasts, dinner-party conversations, educational and live-streaming content, in-vehicle interactions, and smart-glasses interactions. The recordings are primarily in Chinese and English, with additional Portuguese, Japanese, Thai, Italian, and Spanish samples. They span heterogeneous capture setups, including microphone arrays, in-cabin recording systems, media soundtracks, and mobile or wearable devices.
 
-## 校验数据
+## Condition Space
 
-运行下面的命令，检查 99 条录音、论文结果、条件分档、案例映射和本地资源：
+Each recording is assigned a compact condition profile such as `P2-O3-S2-T3-N3`.
 
-```bash
-python scripts/validate_demo_data.py
-```
+| Axis | Recording-level statistic | Condition ranges |
+|---|---|---|
+| **P · Speaker number** | Number of valid reference speakers | `P0`: 2 · `P1`: 3–4 · `P2`: 5–8 · `P3`: ≥9 |
+| **O · Overlap ratio** | Concurrent-speech duration / total reference-speech duration | `O0`: 0 · `O1`: (0, 0.10) · `O2`: [0.10, 0.20) · `O3`: [0.20, 0.40) · `O4`: [0.40, 1.00] |
+| **S · Speaker similarity** | Maximum pairwise cosine similarity of speaker embeddings | `S0`: [0.00, 0.32) · `S1`: [0.32, 0.49) · `S2`: [0.49, 0.65) · `S3`: [0.65, 1.00] |
+| **T · Speaker turn interval** | 25th percentile of non-overlapping speaker-turn intervals | `T0`: ≥0.45 s · `T1`: [0.15, 0.45) · `T2`: [0.06, 0.15) · `T3`: [0.00, 0.06) |
+| **N · Acoustic quality** | `d_N = 1 − mean(percentile(DNSMOS), percentile(NISQA))` | `N0`: [0.00, 0.27) · `N1`: [0.27, 0.51) · `N2`: [0.51, 0.74) · `N3`: [0.74, 1.00] |
 
-如果修改了 `benchmark/metadata.jsonl`，可以重新生成前端 metadata 和汇总数据：
-
-```bash
-python scripts/build_demo_data.py --write
-```
-
-更详细的评测协议和数据结构说明位于：
-
-- [`docs/evaluation-protocol.md`](docs/evaluation-protocol.md)
-- [`docs/data-schema.md`](docs/data-schema.md)
+The condition labels describe operating ranges rather than a universal ordering of difficulty. Together, they provide an interpretable space for comparing MSASR systems under controlled interaction and acoustic conditions.
