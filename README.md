@@ -36,7 +36,7 @@ python -m http.server 8765
 浏览器打开：
 
 ```text
-http://127.0.0.1:8765/demo.html?v=20261004-demo-v2
+http://127.0.0.1:8765/demo.html?v=20261007-demo-v2
 ```
 
 ## 校验数据

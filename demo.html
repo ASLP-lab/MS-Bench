@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f4f6f8">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261004-demo-v2">
+  <link rel="stylesheet" href="assets/style.css?v=20261007-demo-v2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,11 +29,10 @@
     <aside class="side-nav" id="site-nav" data-menu aria-label="Section navigation">
       <nav>
         <a href="#overview">Overview</a>
+        <a href="#explore">Explorer</a>
         <a href="#leaderboard">Results</a>
         <a href="#diagnostics">Diagnostics</a>
         <a href="#cases">Cases</a>
-        <a href="#explore">Explorer</a>
-        <a href="#resources">Resources</a>
       </nav>
     </aside>
 
@@ -41,8 +40,8 @@
       <main id="main">
         <section class="hero" id="top">
           <div class="hero-copy">
+            <img class="hero-logo" src="assets/mark.svg" alt="" width="104" height="104">
             <h1><strong>MS-Bench</strong><span>A Condition-Stratified Multi-Speaker ASR Benchmark</span></h1>
-            <p class="authors">Chunjiang He*, Zheng Zi*, Bingshen Mu, Yurun Li, Jingyi Wang, Zhonghua Fu, Lei Xie<br><span>ASLP Lab, Northwestern Polytechnical University</span></p>
             <p class="hero-lede">Beyond aggregate scores: evaluate who spoke what and when across five multi-speaker conditions.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#cases">Listen to examples</a>
@@ -50,8 +49,6 @@
               <span class="paper-status">Paper coming soon</span>
             </div>
           </div>
-          <div class="hero-mark" aria-hidden="true"><img src="assets/mark.svg" alt="" width="180" height="180"></div>
-          <p class="author-note">* Equal contribution. Lei Xie is the corresponding author.</p>
           <div class="stat-strip" aria-label="Benchmark headline statistics">
             <div><strong>32.72 h</strong><span>Total duration</span></div>
             <div><strong>99</strong><span>Recordings</span></div>
@@ -106,6 +103,42 @@
           </details>
         </section>
 
+        <section class="explorer section-pad" id="explore">
+          <header class="section-head">
+            <h2>Condition explorer</h2>
+            <p>Select one tier per axis. Filters combine with AND; unavailable tiers show why they cannot be selected.</p>
+          </header>
+
+          <div class="explorer-shell module-state" data-module="metadata" data-explorer>
+            <div class="filter-panel" aria-label="Condition filters">
+              <div class="filter-toolbar"><div data-active-filters class="active-filters" aria-live="polite"><span>No active filters</span></div><button type="button" data-reset-filters>Reset</button></div>
+              <div class="filter-grid">
+                <fieldset class="filter-group"><legend><b>P</b> Speaker number</legend><div class="filter-options"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>O</b> Overlap ratio</legend><div class="filter-options"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>S</b> Speaker similarity</legend><div class="filter-options"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>T</b> Speaker turn interval</legend><div class="filter-options"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div></fieldset>
+                <fieldset class="filter-group"><legend><b>N</b> Acoustic quality</legend><div class="filter-options"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div></fieldset>
+              </div>
+            </div>
+
+            <div class="explorer-results">
+              <div class="match-summary">
+                <div><span data-explorer-status>Preparing metadata...</span><strong><b data-match-count>-</b> / 99 recordings</strong></div>
+                <dl>
+                  <div><dt>Total duration</dt><dd data-total-duration>-</dd></div>
+                  <div><dt>Median duration</dt><dd data-median-duration>-</dd></div>
+                  <div><dt>Mean recording overlap</dt><dd data-average-overlap>-</dd></div>
+                  <div><dt>Languages</dt><dd data-language-count>-</dd></div>
+                  <div><dt>Scenarios</dt><dd data-scenario-count>-</dd></div>
+                </dl>
+              </div>
+              <div class="result-actions"><button type="button" data-toggle-recordings aria-expanded="false">Show matching recordings</button><button type="button" data-export-recordings>Export filtered JSON</button><button type="button" data-copy-link>Copy filter link</button><span data-copy-status aria-live="polite"></span></div>
+              <div class="recording-list" data-recording-list hidden></div>
+              <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
+            </div>
+          </div>
+        </section>
+
         <section class="leaderboard section-pad" id="leaderboard">
           <header class="section-head">
             <h2>Overall performance</h2>
@@ -148,54 +181,9 @@
         <section class="cases section-pad" id="cases">
           <header class="section-head">
             <h2>Reference audio cases</h2>
-            <p>Eight curated excerpts connect the five condition labels to time-aligned reference speech. Cases illustrate conditions, not model ranking.</p>
+            <p>Eight curated excerpts span meetings, conversations, education, media, and mobile settings. Listen directly or open the aligned reference.</p>
           </header>
           <div class="case-grid module-state" data-module="cases" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases...</p></div>
-        </section>
-
-        <section class="explorer section-pad" id="explore">
-          <header class="section-head">
-            <h2>Condition explorer</h2>
-            <p>Select one tier per axis. Filters combine with AND; unavailable tiers show why they cannot be selected.</p>
-          </header>
-
-          <div class="explorer-shell module-state" data-module="metadata" data-explorer>
-            <div class="filter-panel" aria-label="Condition filters">
-              <div class="filter-toolbar"><div data-active-filters class="active-filters" aria-live="polite"><span>No active filters</span></div><button type="button" data-reset-filters>Reset</button></div>
-              <div class="filter-grid">
-                <fieldset class="filter-group"><legend><b>P</b> Speaker number</legend><div class="filter-options"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>O</b> Overlap ratio</legend><div class="filter-options"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>S</b> Speaker similarity</legend><div class="filter-options"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>T</b> Speaker turn interval</legend><div class="filter-options"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>N</b> Acoustic quality</legend><div class="filter-options"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div></fieldset>
-              </div>
-            </div>
-
-            <div class="explorer-results">
-              <div class="match-summary">
-                <div><span data-explorer-status>Preparing metadata...</span><strong><b data-match-count>-</b> / 99 recordings</strong></div>
-                <dl>
-                  <div><dt>Total duration</dt><dd data-total-duration>-</dd></div>
-                  <div><dt>Median duration</dt><dd data-median-duration>-</dd></div>
-                  <div><dt>Mean recording overlap</dt><dd data-average-overlap>-</dd></div>
-                  <div><dt>Languages</dt><dd data-language-count>-</dd></div>
-                  <div><dt>Scenarios</dt><dd data-scenario-count>-</dd></div>
-                </dl>
-              </div>
-              <div class="result-actions"><button type="button" data-toggle-recordings aria-expanded="false">Show matching recordings</button><button type="button" data-export-recordings>Export filtered JSON</button><button type="button" data-copy-link>Copy filter link</button><span data-copy-status aria-live="polite"></span></div>
-              <div class="recording-list" data-recording-list hidden></div>
-              <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="resources section-pad" id="resources">
-          <header class="section-head">
-            <h2>Resources and release status</h2>
-            <p>Availability is stated per artifact so a preview is not mistaken for the complete benchmark release.</p>
-          </header>
-          <div class="resource-list module-state" data-module="release" data-resources aria-live="polite"><p class="loading-block">Loading release status...</p></div>
-          <div class="documentation-links"><a href="docs/evaluation-protocol.md">Evaluation protocol</a><a href="docs/data-schema.md">Data schema</a><a href="benchmark/metadata.jsonl" download>Download metadata JSONL</a></div>
         </section>
       </main>
 
@@ -214,6 +202,6 @@
   </dialog>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261004-demo-v2" defer></script>
+  <script src="assets/app.js?v=20261007-demo-v2" defer></script>
 </body>
 </html>

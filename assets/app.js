@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261004-demo-v2";
+const DATA_VERSION = "20261007-demo-v2";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", hint: "valid reference speakers" },
@@ -21,22 +21,12 @@ const CONDITION_RANGES = {
 };
 const CHART_COLORS = ["#58799b", "#668f84", "#9a8154", "#9a6e79", "#7c7398", "#6f8792", "#8a765f", "#687a92", "#8e7784"];
 const SPEAKER_COLORS = ["#245f93", "#8a5b65", "#507c70", "#8a744a", "#655c86", "#5e7484", "#8b6750", "#526b92", "#6f7960", "#80627e", "#4e7c83", "#7c6c58", "#596d5e", "#77647f"];
-const RESOURCE_COPY = {
-  paper: ["Paper", "Manuscript link will be added after public release."],
-  metadata: ["Recording metadata", "Canonical JSONL metadata for all 99 recordings."],
-  audio_excerpts: ["Curated audio excerpts", "Eight local excerpts with corrected time-aligned references."],
-  full_benchmark: ["Full benchmark", "Access instructions are not yet public."],
-  evaluation_code: ["Evaluation code", "Scoring implementation and exact reproduction command are not yet public."],
-  repository: ["Repository", "Static demo, metadata, and documentation source."]
-};
-
 const state = {
   summary: null,
   leaderboard: null,
   diagnostics: null,
   examples: null,
   predictions: null,
-  release: null,
   metadata: null,
   metadataPromise: null,
   filters: { P: null, O: null, S: null, T: null, N: null },
@@ -241,7 +231,8 @@ function caseGalleryCard(example) {
     <h3>${escapeHTML(example.title)}</h3>
     <p><b>What to listen for:</b> ${escapeHTML(example.description)}</p>
     ${profilePills(example.conditions)}
-    <div class="case-card-foot"><span>${escapeHTML(example.recording_device)}</span><button type="button" data-open-case="${escapeHTML(example.slug)}">Open example</button></div>
+    <audio class="case-preview-audio" controls preload="metadata" src="${escapeHTML(example.audio)}" data-preview-audio="${escapeHTML(example.slug)}">Your browser does not support audio playback.</audio>
+    <div class="case-card-foot"><span>${escapeHTML(example.recording_device)}</span><button type="button" data-open-case="${escapeHTML(example.slug)}">Open aligned reference</button></div>
   </article>`;
 }
 
@@ -400,7 +391,12 @@ function setupCaseDialog() {
 
 function renderCases() {
   if (!state.examples) return;
-  $("[data-case-grid]").innerHTML = state.examples.map(caseGalleryCard).join("");
+  const gallery = $("[data-case-grid]");
+  gallery.innerHTML = state.examples.map(caseGalleryCard).join("");
+  $$('[data-preview-audio]', gallery).forEach(audio => {
+    audio.addEventListener("play", () => pauseActiveAudio(audio));
+    audio.addEventListener("pause", () => { if (state.activeAudio === audio) state.activeAudio = null; });
+  });
   renderExplorer();
   const slug = new URL(location.href).searchParams.get("case");
   if (slug && state.examples.some(example => example.slug === slug) && !$("[data-case-dialog]").open) openCase(slug, false);
@@ -505,16 +501,6 @@ async function loadMetadata() {
   return state.metadataPromise;
 }
 
-function renderResources(release) {
-  const resources = $("[data-resources]");
-  resources.innerHTML = Object.entries(release.availability).map(([key, item]) => {
-    const [name, description] = RESOURCE_COPY[key] || [key, ""];
-    const status = item.status === "available" ? "Available" : "Coming soon";
-    const nameHTML = item.status === "available" && item.url ? `<a href="${escapeHTML(item.url)}">${escapeHTML(name)}</a>` : escapeHTML(name);
-    return `<div class="resource-row"><strong>${nameHTML}</strong><p>${escapeHTML(description)}</p><span class="resource-status ${item.status === "available" ? "available" : ""}">${status}</span></div>`;
-  }).join("");
-}
-
 const loaders = {
   summary: async () => {
     try { state.summary = await fetchJSON(`${DATA_ROOT}/summary.json`); renderOverview(state.summary); }
@@ -541,10 +527,6 @@ const loaders = {
   predictions: async () => {
     try { state.predictions = await fetchJSON(`${DATA_ROOT}/case_predictions.json`); }
     catch (error) { console.warn("Prediction interface unavailable", error); }
-  },
-  release: async () => {
-    try { state.release = await fetchJSON(`${DATA_ROOT}/release.json`); renderResources(state.release); }
-    catch (error) { moduleError($("[data-resources]"), error, "release"); }
   },
   metadata: async () => loadMetadata()
 };
