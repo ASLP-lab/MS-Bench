@@ -1,5 +1,25 @@
 # Demo implementation status
 
+## Four scenario categories (2026-10-14)
+
+- Overview, Explorer setting counts, and sample labels now use Meetings, Conversational speech, Media content, and Classroom interactions.
+- Conversational speech includes dinner-party, in-vehicle, smart-glasses, and other everyday conversations. Media content includes podcasts, films/television, and live streams. Classroom interactions covers educational speech.
+- All 99 recordings are assigned once: Meetings 51, Conversational speech 29, Media content 17, and Classroom interactions 2. Original source metadata is retained for provenance.
+
+## Condition-first overview and inline sample browser (2026-10-14)
+
+- Condition coverage now precedes scenarios, languages, and recording duration. Restored the original Speaker number, Overlap ratio, Speaker similarity, Speaker turn interval, and Acoustic quality names and the original five-axis colors.
+- Measurement definitions contain no icons and enumerate all 21 source tier ranges. The overlap definition explicitly uses the full recording duration; excerpt evidence retains its separate speech-time denominator. Scenario descriptions distinguish organized discussion, informal social interaction, audience-facing content, teaching, and device-specific capture contexts.
+- Replaced the case gallery and modal with a vertical sample browser. Audio and aligned text are visible immediately. A sample sidebar, native scroll snapping, keyboard navigation, and cyclic Previous / Next controls select samples. Loop audio repeats the selected excerpt; selecting another sample pauses previous playback. Transcript clicks seek and play; following playback scrolls only the transcript. Optional overlap, similarity, and timeline details remain available below the browser.
+- Verified all ten samples and audio sources, actual audio looping, click-to-play captions, exclusive playback, manual/follow transcript scrolling, wheel/keyboard/sidebar navigation, timeline seeking, old case/filter links, Explorer links, and browser history. Checked 320, 390, 768, 1024, 1440, and 1920 px in light/dark modes with visible audio/transcript and no page overflow. Overview/filter/sample-browser accessibility checks pass. Canonical validation passes for 99 recordings, seven systems, and ten cases.
+
+## Readable conditions and scenario descriptions (2026-10-14)
+
+- Replaced language and scenario charts with prose. Scenarios now form five presentation groups: meetings and discussions, everyday and social conversations, media and entertainment, learning and tutoring, and in-vehicle and wearable interactions. Conversation and dinner-party conversations share the social group.
+- Replaced prominent P/O/S/T/N codes with full condition names, locally bundled Tabler icons, and readable ranges throughout coverage, filters, diagnostic tabs, and audio cases. Exact measurements and source codes remain in a collapsed disclosure; canonical metadata and existing filter URLs remain compatible.
+- The Explorer counts the same five setting groups used in overview and case labels. Mobile coverage uses a two-column layout without horizontal scrolling.
+- Verified all 21 condition ranges, combined filters, disabled ranges, reset, and existing deep links. All ten audio dialogs load valid audio metadata. Checked 320, 390, 768, 1024, 1440, and 1920 px in both light and dark modes with no page/dialog overflow or clipped range labels. Accessibility checks passed for overview, filters, case profiles, and open dialog condition details in both themes. Browser playback advances normally. Canonical data validation still passes for 99 recordings, seven systems, and ten cases.
+
 ## Current reference-case update (2026-10-08, main)
 
 - The gallery now contains ten corrected reference excerpts. Japanese phone conversation is removed from the gallery; Full-duplex tutoring is renamed Tutoring conversation. New cases cover nine speakers (P3), high-overlap far-field conversation (O4), and low-similarity live-streaming speech.

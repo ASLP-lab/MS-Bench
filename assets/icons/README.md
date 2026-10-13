@@ -1,0 +1,1 @@
+Five outline icons from @tabler/icons 3.49.0 (https://github.com/tabler/tabler-icons), used under the included MIT license. SVGs are unmodified and rendered as CSS masks so they follow the page theme.

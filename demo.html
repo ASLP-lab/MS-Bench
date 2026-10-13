@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261008-demo-cases">
+  <link rel="stylesheet" href="assets/style.css?v=20261014-four-scenarios">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -63,19 +63,27 @@
         <section class="overview section-pad" id="overview">
           <header class="section-head">
             <h2>Benchmark overview</h2>
-            <p class="section-note"><strong>Note:</strong> The five axes describe different interaction and acoustic properties. Higher tier numbers are not a universal difficulty scale.</p>
+            <p class="section-note"><strong>Note:</strong> The five conditions describe different interaction and acoustic properties. Their ranges do not form a single difficulty scale.</p>
           </header>
+
+          <div class="coverage-heading"><h3>Recording conditions</h3><p>Choose a range to explore matching recordings. Each tile shows a recording count and its share of the benchmark.</p></div>
 
           <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions...</div>
 
+
+          <details class="condition-disclosure">
+            <summary>Measurement definitions and source tier codes</summary>
+            <div data-condition-definitions></div>
+          </details>
+
           <div class="composition-layout">
-            <article class="composition-panel">
-              <h3>Language</h3>
-              <div data-overview-language class="loading-block" aria-live="polite">Loading language composition...</div>
+            <article class="composition-panel scenario-panel">
+              <h3>Scenarios</h3>
+              <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenario descriptions...</div>
             </article>
-            <article class="composition-panel">
-              <h3>Scenario</h3>
-              <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenario composition...</div>
+            <article class="composition-panel language-panel">
+              <h3>Languages</h3>
+              <div data-overview-language class="loading-block" aria-live="polite">Loading language description...</div>
             </article>
           </div>
 
@@ -96,18 +104,18 @@
         <section class="explorer section-pad" id="explore">
           <header class="section-head">
             <h2>Condition explorer</h2>
-            <p class="section-note"><strong>Note:</strong> Select up to one tier per axis. Recordings must match all selected tiers. Use Reset to clear the filters; unavailable tiers show why they cannot be selected.</p>
+            <p class="section-note"><strong>Note:</strong> Select one range per condition. Recordings must match all selected ranges. Counts show matches with your current filters; unavailable ranges are disabled. Use Reset to clear the filters.</p>
           </header>
 
           <div class="explorer-shell module-state" data-module="metadata" data-explorer>
             <div class="filter-panel" aria-label="Condition filters">
               <div class="filter-toolbar"><div data-active-filters class="active-filters" aria-live="polite"><span>No active filters</span></div><button type="button" data-reset-filters>Reset</button></div>
               <div class="filter-grid">
-                <fieldset class="filter-group"><legend><b>P</b> Speaker number</legend><div class="filter-options"><button data-axis="P" data-value="P0">P0</button><button data-axis="P" data-value="P1">P1</button><button data-axis="P" data-value="P2">P2</button><button data-axis="P" data-value="P3">P3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>O</b> Overlap ratio</legend><div class="filter-options"><button data-axis="O" data-value="O0">O0</button><button data-axis="O" data-value="O1">O1</button><button data-axis="O" data-value="O2">O2</button><button data-axis="O" data-value="O3">O3</button><button data-axis="O" data-value="O4">O4</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>S</b> Speaker similarity</legend><div class="filter-options"><button data-axis="S" data-value="S0">S0</button><button data-axis="S" data-value="S1">S1</button><button data-axis="S" data-value="S2">S2</button><button data-axis="S" data-value="S3">S3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>T</b> Speaker turn interval</legend><div class="filter-options"><button data-axis="T" data-value="T0">T0</button><button data-axis="T" data-value="T1">T1</button><button data-axis="T" data-value="T2">T2</button><button data-axis="T" data-value="T3">T3</button></div></fieldset>
-                <fieldset class="filter-group"><legend><b>N</b> Acoustic quality</legend><div class="filter-options"><button data-axis="N" data-value="N0">N0</button><button data-axis="N" data-value="N1">N1</button><button data-axis="N" data-value="N2">N2</button><button data-axis="N" data-value="N3">N3</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="P"><legend>Speaker number</legend><div class="filter-options"><button type="button" data-axis="P" data-value="P0">2 speakers</button><button type="button" data-axis="P" data-value="P1">3-4 speakers</button><button type="button" data-axis="P" data-value="P2">5-8 speakers</button><button type="button" data-axis="P" data-value="P3">9+ speakers</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="O"><legend>Overlap ratio</legend><div class="filter-options"><button type="button" data-axis="O" data-value="O0">No overlap</button><button type="button" data-axis="O" data-value="O1">&gt;0 to &lt;10%</button><button type="button" data-axis="O" data-value="O2">10 to &lt;20%</button><button type="button" data-axis="O" data-value="O3">20 to &lt;40%</button><button type="button" data-axis="O" data-value="O4">40 to 100%</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="S"><legend>Speaker similarity</legend><div class="filter-options"><button type="button" data-axis="S" data-value="S0">0 to &lt;0.32</button><button type="button" data-axis="S" data-value="S1">0.32 to &lt;0.49</button><button type="button" data-axis="S" data-value="S2">0.49 to &lt;0.65</button><button type="button" data-axis="S" data-value="S3">0.65 to 1</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="T"><legend>Speaker turn interval</legend><div class="filter-options"><button type="button" data-axis="T" data-value="T0">450+ ms</button><button type="button" data-axis="T" data-value="T1">150 to &lt;450 ms</button><button type="button" data-axis="T" data-value="T2">60 to &lt;150 ms</button><button type="button" data-axis="T" data-value="T3">0 to &lt;60 ms</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="N"><legend>Acoustic quality</legend><div class="filter-options"><button type="button" data-axis="N" data-value="N0">Least degraded</button><button type="button" data-axis="N" data-value="N1">Less degraded</button><button type="button" data-axis="N" data-value="N2">More degraded</button><button type="button" data-axis="N" data-value="N3">Most degraded</button></div></fieldset>
               </div>
             </div>
 
@@ -119,7 +127,7 @@
                   <div><dt>Median duration</dt><dd data-median-duration>-</dd></div>
                   <div><dt>Mean recording overlap</dt><dd data-average-overlap>-</dd></div>
                   <div><dt>Languages</dt><dd data-language-count>-</dd></div>
-                  <div><dt>Scenarios</dt><dd data-scenario-count>-</dd></div>
+                  <div><dt>Settings</dt><dd data-scenario-count>-</dd></div>
                 </dl>
               </div>
               <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
@@ -156,7 +164,7 @@
           </header>
           <div class="diagnostic-shell module-state" data-module="diagnostics">
             <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic dimension" data-diagnostic-tabs>
-              <button id="tab-overlap" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="true" tabindex="0" data-diagnostic="overlap">Overlap</button>
+              <button id="tab-overlap" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="true" tabindex="0" data-diagnostic="overlap">Overlap ratio</button>
               <button id="tab-similarity" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="similarity">Speaker similarity</button>
               <button id="tab-acoustic" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="acoustic">Acoustic quality</button>
               <button id="tab-turn" type="button" role="tab" aria-controls="diagnostic-panel" aria-selected="false" tabindex="-1" data-diagnostic="turn">Speaker turn interval</button>
@@ -169,9 +177,9 @@
         <section class="cases section-pad" id="cases">
           <header class="section-head">
             <h2>Reference audio cases</h2>
-            <p class="section-note"><strong>Note:</strong> Ten curated excerpts cover representative speaker counts, overlap levels, acoustic conditions, and scenarios. Open an aligned reference to inspect highlighted overlap regions and the most similar speaker pair.</p>
+            <p class="section-note"><strong>Note:</strong> Play an excerpt and read its aligned reference directly below. Scroll between samples, use Previous / Next, or choose a sample from the list. Loop repeats the current audio.</p>
           </header>
-          <div class="case-grid module-state" data-module="cases" data-case-grid aria-live="polite"><p class="loading-block">Loading representative cases...</p></div>
+          <div class="sample-browser module-state" data-module="cases" data-case-grid><p class="loading-block">Loading representative cases...</p></div>
         </section>
       </main>
 
@@ -182,14 +190,7 @@
     </div>
   </div>
 
-  <dialog class="case-dialog" data-case-dialog aria-labelledby="case-dialog-title">
-    <div class="case-dialog-frame">
-      <button class="case-dialog-close" type="button" data-close-case aria-label="Close case details">Close</button>
-      <div class="case-detail" data-case-detail></div>
-    </div>
-  </dialog>
-
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261008-demo-cases" defer></script>
+  <script src="assets/app.js?v=20261014-four-scenarios" defer></script>
 </body>
 </html>

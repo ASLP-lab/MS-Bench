@@ -23,11 +23,28 @@
 
 Higher T tiers contain shorter turn intervals. Higher N tiers indicate poorer acoustic quality. Tier numbers are not a universal difficulty ranking across all five axes.
 
+## Demo presentation
+
+The UI uses icons and full names: **Speaker number**, **Overlap ratio**, **Speaker similarity**, **Speaker turn interval**, and **Acoustic quality**. Visible range labels use percentages for overlap and milliseconds for turn intervals. Acoustic labels describe relative degradation within this benchmark, rather than calibrated perceptual quality ratings. The overview begins with condition coverage using the original five-axis palette, followed by scenario, language, and duration descriptions. The measurement disclosure has no icons and lists the definition and exact range of every tier. Recording overlap is time with at least two active reference speakers divided by the entire recording duration, including silence. Canonical P/O/S/T/N IDs and existing URL filter parameters are preserved.
+
+Scenario descriptions and case labels use four presentation groups. The Explorer's **Settings** count counts these groups; canonical scenario metadata remains unchanged.
+
+| Presentation group | Canonical scenarios |
+|---|---|
+| Meetings | Meeting |
+| Conversational speech | Conversation; Dinner-party conversations; In-vehicle interactions; Smart-glasses interactions |
+| Media content | Films and television content; Podcasts; Live-streaming content |
+| Classroom interactions | Educational content |
+
+Smart-glasses conversations are included under everyday conversational speech. All nine source labels map to exactly one of the four groups.
+
+Languages are described in prose using the summary's primary and additional language lists.
+
 ## Representative examples
 
 `demo-data/representative_examples.json` links a recording to a local audio excerpt, corrected TextGrid, full-recording condition profile, and reference segments on the excerpt clock. Excerpts are no longer than five minutes. Multiple reference segments may overlap.
 
-The gallery contains ten excerpts, including a P3 (nine-speaker) case and an O4 meeting. `scripts/build_demo_cases.py` rebuilds their annotations from the parent workspace's `challenge100_v2_textgrids` and `OpenSource-TestSets`; add `--encode-audio` to encode the three newly selected excerpts. The generated assets themselves are sufficient to serve the demo without that workspace.
+The sample browser contains ten excerpts, including a P3 (nine-speaker) case and an O4 meeting. Each sample presents audio and an aligned reference inline. Vertical scroll snapping, a sample sidebar, and cyclic Previous / Next controls select the sample; Loop audio repeats the current excerpt. Selecting another sample pauses previous playback. Transcript clicks seek and play; playback follow scrolls only the transcript. Existing case URLs select the sample directly. Overlap, similarity provenance, and the interactive timeline are retained in an optional disclosure beneath the browser. `scripts/build_demo_cases.py` rebuilds their annotations from the parent workspace's `challenge100_v2_textgrids` and `OpenSource-TestSets`; add `--encode-audio` to encode the three newly selected excerpts. The generated assets themselves are sufficient to serve the demo without that workspace.
 
 - `overlap_regions` identifies intervals with at least two distinct reference speakers. `clip_stats` reports the union duration of these intervals, their fraction of reference speech time, and peak concurrent speakers. These excerpt measurements are separate from the canonical full-recording condition values.
 - `speaker_similarity.maximum` retains the source recording's maximum cosine similarity and original speaker labels. Source labels are aligned to corrected reference tracks by dominant interval intersection, not matching speaker numbers. `speaker_mapping` records that alignment and its interval agreement.
