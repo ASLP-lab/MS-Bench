@@ -3,14 +3,14 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261014-four-scenarios";
+const DATA_VERSION = "20261014-model-comparison";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
-  P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of valid reference speakers in the full recording." },
+  P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
   O: { name: "Overlap ratio", icon: "layers-intersect", hint: "How much speech happens at once", definition: "Total time with at least two simultaneously active reference speakers divided by the full recording duration, including silence. The UI displays this ratio as a percentage." },
-  S: { name: "Speaker similarity", icon: "wave-sine", hint: "How similar the closest voices are", definition: "Maximum pairwise cosine similarity between speaker embeddings in the full recording." },
-  T: { name: "Speaker turn interval", icon: "arrows-exchange", hint: "How quickly speakers take turns", definition: "25th percentile of non-overlapping speaker turn intervals. Higher source tiers indicate shorter gaps." },
-  N: { name: "Acoustic quality", icon: "volume", hint: "How degraded the recording sounds", definition: "Acoustic degradation d_N = 1 - (p_D + p_N) / 2, where p_D and p_N are the percentile ranks of DNSMOS P.835 and NISQA scores in the characterization pool. Higher values indicate poorer quality; labels compare tiers within this benchmark." }
+  S: { name: "Speaker similarity", icon: "voice-similarity", hint: "How similar the closest voices are", definition: "For each speaker, CAM++ embeddings are extracted from 3–5 non-overlapping segments longer than 2 seconds. Pairwise cosine similarities are computed, and the maximum within each recording represents the most confusable speaker pair. Ranges are based on empirical quantiles." },
+  T: { name: "Speaker turn interval", icon: "arrows-exchange", hint: "How quickly speakers take turns", definition: "Intervals between consecutive non-overlapping turns by different speakers. Each recording is represented by the 25th percentile to capture rapid transitions while reducing the influence of long pauses and extreme values. Ranges are based on empirical quantiles; higher tiers indicate shorter intervals." },
+  N: { name: "Acoustic quality", icon: "volume", hint: "How degraded the recording sounds", definition: "DNSMOS P.835 and NISQA scores are converted to percentile ranks p_D and p_N, then combined as Q = (p_D + p_N) / 2. Acoustic degradation is d_N = 1 − Q: larger values indicate poorer quality. Ranges are based on empirical quantiles." }
 };
 const CONDITION_RANGES = {
   P0: "2 speakers", P1: "3-4 speakers", P2: "5-8 speakers", P3: ">=9 speakers",
@@ -20,10 +20,13 @@ const CONDITION_RANGES = {
   N0: "[0, 0.27)", N1: "[0.27, 0.51)", N2: "[0.51, 0.74)", N3: "[0.74, 1]"
 };
 const CONDITION_LABELS = {
-  P0: "2 speakers", P1: "3-4 speakers", P2: "5-8 speakers", P3: "9+ speakers",
-  O0: "No overlap", O1: ">0 to <10%", O2: "10 to <20%", O3: "20 to <40%", O4: "40 to 100%",
-  S0: "0 to <0.32", S1: "0.32 to <0.49", S2: "0.49 to <0.65", S3: "0.65 to 1",
-  T0: "450+ ms", T1: "150 to <450 ms", T2: "60 to <150 ms", T3: "0 to <60 ms",
+  P0: "2 speakers", P1: "3-4 speakers", P2: "5-8 speakers", P3: "≥9 speakers",
+  O0: "0%", O1: "(0%, 10%)", O2: "[10%, 20%)", O3: "[20%, 40%)", O4: "[40%, 100%]",
+  S0: "[0.00, 0.32)", S1: "[0.32, 0.49)", S2: "[0.49, 0.65)", S3: "[0.65, 1.00]",
+  T0: "≥450 ms", T1: "[150, 450) ms", T2: "[60, 150) ms", T3: "[0, 60) ms",
+  N0: "[0.00, 0.27)", N1: "[0.27, 0.51)", N2: "[0.51, 0.74)", N3: "[0.74, 1.00]"
+};
+const ACOUSTIC_LABELS = {
   N0: "Least degraded", N1: "Less degraded", N2: "More degraded", N3: "Most degraded"
 };
 // Presentation groups only; canonical scenario labels and condition IDs remain stable.
@@ -31,7 +34,7 @@ const SCENARIO_GROUPS = [
   { name: "Meetings", sources: ["Meeting"], description: "Meeting discussions." },
   { name: "Conversational speech", sources: ["Conversation", "Dinner-party conversations", "In-vehicle interactions", "Smart-glasses interactions"], description: "Dinner-party conversations, in-vehicle exchanges, and other everyday dialogue." },
   { name: "Media content", sources: ["Films and television content", "Podcasts", "Live-streaming content"], description: "Podcasts, films and television, and live-streaming content." },
-  { name: "Classroom interactions", sources: ["Educational content"], description: "Teacher instruction, teacher-student questions and answers, and classroom exchanges." }
+  { name: "Classroom interactions", sources: ["Educational content"], description: "Classroom teaching, tutoring, and teacher-student dialogue." }
 ];
 const SPEAKER_COLORS = ["#245f93", "#8a5b65", "#507c70", "#8a744a", "#655c86", "#5e7484", "#8b6750", "#526b92", "#6f7960", "#80627e", "#4e7c83", "#7c6c58", "#596d5e", "#77647f"];
 const state = {
@@ -40,12 +43,14 @@ const state = {
   diagnostics: null,
   examples: null,
   predictions: null,
+  comparison: { left: "moss_pro", right: "moss", start: 0 },
   metadata: null,
   metadataPromise: null,
   filters: { P: null, O: null, S: null, T: null, N: null },
   boardView: "overall",
   sort: { key: "cpwer", direction: "asc" },
   diagnostic: "overlap",
+  diagnosticAnimation: null,
   matched: [],
   activeAudio: null,
   currentSampleSlug: null,
@@ -143,10 +148,7 @@ function renderOverview(summary) {
 
   const scenario = $("[data-overview-scenarios]");
   scenario.classList.remove("loading-block");
-  const knownScenarios = new Set(SCENARIO_GROUPS.flatMap(group => group.sources));
-  const groups = SCENARIO_GROUPS.filter(group => group.sources.some(source => summary.scenario_distribution[source]));
-  const otherScenarios = Object.keys(summary.scenario_distribution).filter(name => !knownScenarios.has(name));
-  scenario.innerHTML = `<p class="scenario-intro">Recordings cover four types of multi-speaker speech.</p><dl class="scenario-descriptions">${groups.map(group => `<div><dt>${escapeHTML(group.name)}</dt><dd>${escapeHTML(group.description)}</dd></div>`).join("")}${otherScenarios.length ? `<div><dt>Other settings</dt><dd>${escapeHTML(otherScenarios.join(", "))}.</dd></div>` : ""}</dl>`;
+  scenario.innerHTML = `<p>Meetings; conversational speech, including dinner-party conversations, in-vehicle conversations, and other everyday dialogue; media content, including podcasts, films and television, and live streams; and classroom interactions, including teaching and teacher–student dialogue.</p>`;
 
   const duration = $("[data-overview-duration]");
   const durationEntries = Object.entries(summary.duration_distribution);
@@ -170,12 +172,12 @@ function renderOverview(summary) {
       <div class="tier-strip" style="--columns:${tiers.length}" aria-label="${escapeHTML(AXIS_META[axis].name)} distribution">
         ${tiers.map(([tier, count]) => {
           const percentage = count / total * 100;
-          return `<button type="button" class="tier-button" data-coverage-axis="${axis}" data-coverage-tier="${tier}" aria-pressed="false" title="Filter by ${escapeHTML(AXIS_META[axis].name)}: ${escapeHTML(CONDITION_RANGES[tier])}"><b>${escapeHTML(conditionLabel(tier))}</b>${axis === "N" ? `<small>Degradation ${escapeHTML(CONDITION_RANGES[tier])}</small>` : ""}<em>${count} recordings · ${percentage.toFixed(1)}%</em></button>`;
+          return `<button type="button" class="tier-button" data-coverage-axis="${axis}" data-coverage-tier="${tier}" aria-pressed="false" title="Filter by ${escapeHTML(AXIS_META[axis].name)}: ${escapeHTML(CONDITION_RANGES[tier])}"><b>${escapeHTML(conditionLabel(tier))}</b>${axis === "N" ? `<small>${escapeHTML(ACOUSTIC_LABELS[tier])}</small>` : ""}<em>${count} recordings · ${percentage.toFixed(1)}%</em></button>`;
         }).join("")}
       </div>
     </section>`;
   }).join("");
-  $("[data-condition-definitions]").innerHTML = `<div class="definition-convention">Intervals written as [a, b) include a and exclude b. Tier numbers describe ranges within each condition, not a common difficulty scale.</div><dl class="condition-definitions">${AXES.map(axis => `<div><dt>${escapeHTML(AXIS_META[axis].name)} (${axis})</dt><dd><p>${escapeHTML(AXIS_META[axis].definition)}</p><ul class="source-tiers">${Object.keys(summary.condition_distribution[axis]).map(tier => `<li><code>${tier}</code><span>${escapeHTML(CONDITION_RANGES[tier])}</span></li>`).join("")}</ul></dd></div>`).join("")}</dl>`;
+  $("[data-condition-definitions]").innerHTML = `<div class="definition-convention">Speaker number uses predefined ranges; overlap ranges are chosen for interpretability. Speaker similarity, speaker turn interval, and acoustic quality are partitioned by empirical quantiles.</div><dl class="condition-definitions">${AXES.map(axis => `<div><dt>${escapeHTML(AXIS_META[axis].name)} (${axis})</dt><dd><p>${escapeHTML(AXIS_META[axis].definition)}</p><ul class="source-tiers">${Object.keys(summary.condition_distribution[axis]).map(tier => `<li><code>${tier}</code><span>${escapeHTML(CONDITION_RANGES[tier])}</span></li>`).join("")}</ul></dd></div>`).join("")}</dl>`;
   syncCoverageSelection();
 }
 
@@ -208,12 +210,12 @@ function leaderboardTable(rows) {
   if (state.boardView === "robustness") {
     const excludedRank = rankedValues(rows, "excluded");
     const softRank = rankedValues(rows, "soft_degradation");
-    const policies = { moss_pro: "<=90 min", vibevoice: "<=60 min", soulx: "<=5 min segments" };
+    const policies = { moss_pro: "≤90 min", moss: "≤90 min", vibevoice: "≤60 min", soulx: "≤5 min" };
     return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("Excluded units", "excluded")}${sortHeader("Soft-degradation units", "soft_degradation")}<th>Input policy</th></tr></thead><tbody>${sorted.map(row => `<tr><th>${escapeHTML(row.system)}</th><td class="${tableCellClass(row.excluded, excludedRank)}">${row.excluded}</td><td class="${tableCellClass(row.soft_degradation, softRank)}">${row.soft_degradation}</td><td>${escapeHTML(policies[row.system_id] || "Complete recording")}</td></tr>`).join("")}</tbody></table>`;
   }
   const metrics = ["der", "cpwer", "tcpwer", "wer"];
   const ranking = Object.fromEntries(metrics.map(metric => [metric, rankedValues(rows, metric)]));
-  return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("DER (%)", "der")}${sortHeader("cpWER (%)", "cpwer")}${sortHeader("tcpWER (%)", "tcpwer")}${sortHeader("WER (%)", "wer")}${sortHeader("Excluded", "excluded")}${sortHeader("Soft Deg.", "soft_degradation")}</tr></thead><tbody>${sorted.map(row => `<tr><th>${escapeHTML(row.system)}</th>${metrics.map(metric => `<td class="${tableCellClass(row[metric], ranking[metric])}">${row[metric].toFixed(2)}</td>`).join("")}<td>${row.excluded}</td><td>${row.soft_degradation}</td></tr>`).join("")}</tbody></table>`;
+  return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("DER (%)", "der")}${sortHeader("cpWER (%)", "cpwer")}${sortHeader("tcpWER (%)", "tcpwer")}${sortHeader("WER (%)", "wer")}</tr></thead><tbody>${sorted.map(row => `<tr><th>${escapeHTML(row.system)}</th>${metrics.map(metric => `<td class="${tableCellClass(row[metric], ranking[metric])}">${row[metric].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
 }
 
 function renderLeaderboard() {
@@ -224,35 +226,66 @@ function renderLeaderboard() {
     : "Counts are inference-unit counts. Total unit denominators are unavailable, so no coverage percentage is shown.";
 }
 
+function scientificNotation(value) {
+  return escapeHTML(value).replace(/\b(E|I|D|R|T|d|r)_(lex|seg|attr|time|hyp|ref|N|ov)\b|ρ_(lex|attr|time|sim)/g, (_, base, subscript, rhoSubscript) => `${rhoSubscript ? "ρ" : base}<sub>${rhoSubscript || subscript}</sub>`);
+}
+
 function diagnosticValue(value, unit) {
   if (value == null) return "Not evaluated";
   if (unit === "pp") return `${value > 0 ? "+" : ""}${value.toFixed(Math.abs(value) < 10 ? 2 : 1)} pp`;
   return `${value >= 0 ? "+" : "−"}${Math.abs(value).toFixed(3)}`;
 }
 
-function diagnosticTable(data, systems) {
-  return `<div class="table-wrap"><table class="results-table"><thead><tr><th>System</th>${data.series.map(series => `<th>${escapeHTML(series.label)}</th>`).join("")}</tr></thead><tbody>${systems.map((system, index) => `<tr><th>${escapeHTML(system.name)}</th>${data.series.map(series => `<td>${escapeHTML(diagnosticValue(series.values[index], series.unit))}${series.significant[index] === true ? "*" : ""}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+function animateDiagnosticValues(panel) {
+  const values = $$("[data-diagnostic-value]", panel);
+  const bars = $$("[data-diagnostic-bar]", panel);
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const started = performance.now();
+  function draw(now) {
+    const progress = reducedMotion ? 1 : Math.min(1, (now - started) / 650);
+    const eased = 1 - (1 - progress) ** 3;
+    values.forEach(element => {
+      const target = Number(element.dataset.target);
+      const value = target * eased;
+      const decimals = element.dataset.unit === "rho" ? 3 : Math.abs(target) < 10 ? 2 : 1;
+      const sign = target < 0 ? "−" : "+";
+      element.textContent = progress === 1 ? diagnosticValue(target, element.dataset.unit) : `${sign}${Math.abs(value).toFixed(decimals)}${element.dataset.unit === "pp" ? " pp" : ""}`;
+    });
+    bars.forEach(element => { element.style.width = `${Number(element.dataset.finalWidth) * eased}%`; });
+    state.diagnosticAnimation = progress < 1 ? requestAnimationFrame(draw) : null;
+  }
+  draw(started);
 }
 
 function renderDiagnostics() {
   if (!state.diagnostics) return;
+  if (state.diagnosticAnimation != null) cancelAnimationFrame(state.diagnosticAnimation);
   const data = state.diagnostics[state.diagnostic];
   const systems = state.diagnostics.systems;
   const selectedTab = $(`[data-diagnostic="${state.diagnostic}"]`);
+  const tabStrip = selectedTab.parentElement;
+  const tabBounds = selectedTab.getBoundingClientRect();
+  const stripBounds = tabStrip.getBoundingClientRect();
+  if (tabBounds.left < stripBounds.left) tabStrip.scrollLeft -= stripBounds.left - tabBounds.left + 14;
+  else if (tabBounds.right > stripBounds.right) tabStrip.scrollLeft += tabBounds.right - stripBounds.right + 14;
   $("[data-diagnostic-panel]").setAttribute("aria-labelledby", selectedTab.id);
   $("[data-diagnostic-panel]").innerHTML = `
-    <div class="diagnostic-copy"><h3>${escapeHTML(data.title)}</h3><p>${escapeHTML(data.description)}</p></div>
+    <aside class="diagnostic-metrics" aria-labelledby="diagnostic-metrics-title">
+      <h3 id="diagnostic-metrics-title">Note: Metrics for ${escapeHTML(data.title)}</h3>
+      <dl class="diagnostic-metric-key">${data.metrics.map(metric => `<div><dt>${scientificNotation(metric.symbol)}</dt><dd>${scientificNotation(metric.definition)}</dd></div>`).join("")}</dl>
+      <p data-diagnostic-note>${scientificNotation(data.note)} * indicates p &lt; 0.05 as reported in paper Table 2.</p>
+    </aside>
+    <div class="diagnostic-copy"><h3>Key finding</h3><p>${escapeHTML(data.description)}</p></div>
     <div class="diagnostic-chart">${data.series.map(series => {
       const domain = series.unit === "rho" ? 1 : Math.ceil(Math.max(...series.values.filter(value => value != null).map(Math.abs)) / 5) * 5;
-      return `<section class="series-block"><div class="series-title"><span>${escapeHTML(series.label)}</span><small>${series.unit === "rho" ? "fixed domain [-1, 1]" : `percentage points, domain [-${domain}, ${domain}]`}</small></div><div class="series-axis"><span>−${domain}</span><span>+${domain}</span></div><div class="series-rows">${systems.map((system, index) => {
+      return `<section class="series-block"><div class="series-title"><span>${scientificNotation(series.label.replace(/^Delta /, "Δ").replace(/rho/g, "ρ"))}</span><small>${series.unit === "rho" ? "fixed domain [-1, 1]" : `percentage points, domain [-${domain}, ${domain}]`}</small></div><div class="series-axis"><span>−${domain}</span><span>+${domain}</span></div><div class="series-rows">${systems.map((system, index) => {
         const value = series.values[index];
         const width = value == null ? 0 : Math.min(50, Math.abs(value) / domain * 50);
         const significance = series.significant[index] === true ? `<span class="significance" aria-label="significant as reported in paper">*</span>` : "";
-        return `<div class="series-row"><span>${escapeHTML(system.name)}</span><div class="diverging-track" aria-hidden="true">${value == null ? "" : `<i class="${value < 0 ? "negative" : "positive"}" style="width:${width}%"></i>`}</div><strong>${escapeHTML(diagnosticValue(value, series.unit))}${significance}</strong></div>`;
+        return `<div class="series-row"><span>${escapeHTML(system.name)}</span><div class="diverging-track" aria-hidden="true">${value == null ? "" : `<i class="${value < 0 ? "negative" : "positive"}" data-diagnostic-bar data-final-width="${width}" style="width:0%"></i>`}</div><strong aria-label="${escapeHTML(diagnosticValue(value, series.unit))}${series.significant[index] === true ? "; significant" : ""}">${value == null ? "Not evaluated" : `<span aria-hidden="true" data-diagnostic-value data-target="${value}" data-unit="${series.unit}">${escapeHTML(diagnosticValue(0, series.unit))}</span>`}${significance}</strong></div>`;
       }).join("")}</div></section>`;
-    }).join("")}</div>
-    <aside class="diagnostic-note"><strong>Control and limitation</strong><p>${escapeHTML(data.control)} Asterisk: significant as reported in paper Table 2. No confidence intervals are available.</p></aside>
-    <details class="numeric-table"><summary>View exact values</summary>${diagnosticTable(data, systems)}</details>`;
+    }).join("")}</div>`;
+  animateDiagnosticValues($("[data-diagnostic-panel]"));
 }
 
 function speakerColor(speaker, speakers) {
@@ -260,7 +293,7 @@ function speakerColor(speaker, speakers) {
 }
 
 function conditionDetails(conditions) {
-  return `<dl class="condition-details" aria-label="Full-recording conditions">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(conditionLabel(conditions[axis]))}<small>${axis === "N" ? "Degradation " : "Range: "}${escapeHTML(CONDITION_RANGES[conditions[axis]])}</small></dd></div>`).join("")}</dl>`;
+  return `<dl class="condition-details" aria-label="Full-recording conditions">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(conditionLabel(conditions[axis]))}<small>${axis === "N" ? escapeHTML(ACOUSTIC_LABELS[conditions[axis]]) : `Range: ${escapeHTML(CONDITION_RANGES[conditions[axis]])}`}</small></dd></div>`).join("")}</dl>`;
 }
 
 function timelineSVG(example, speakers) {
@@ -319,6 +352,10 @@ function caseDetail(example, index) {
 
 function updateCasePlayback(audio) {
   if (audio.dataset.caseAudio !== state.currentSampleSlug) return;
+  const playbackButton = $("[data-compare-play]");
+  if (playbackButton) playbackButton.textContent = audio.paused ? "Play audio" : "Pause audio";
+  const playbackTime = $("[data-compare-time]");
+  if (playbackTime) playbackTime.textContent = formatTime(audio.currentTime);
   const detail = audio.closest("[data-sample-panel]");
   const transcript = $(`[data-transcript="${audio.dataset.caseAudio}"]`, detail);
   if (!transcript) return;
@@ -363,12 +400,46 @@ function syncSampleNavigation() {
   });
 }
 
+function comparisonColumn(title, segments, start, end, output = null) {
+  const statusNames = { available: "Output available", partial: "Partial or incomplete output", invalid: "Output has timestamp or model-identity issues", missing: "No output available", unmapped: "Excerpt timing unavailable" };
+  const status = output ? statusNames[output.status] || "Output unavailable" : "Reference transcript";
+  const selected = segments.filter(segment => segment.valid_timing === false
+    ? segment.start >= start && segment.start < end || segment.end >= start && segment.end < end
+    : segment.end > start && segment.start < end);
+  return `<article class="comparison-column"><h4>${escapeHTML(title)}</h4><p class="comparison-status">${escapeHTML(status)}</p>${output?.warnings?.length ? `<p class="comparison-warning">${output.warnings.map(escapeHTML).join(" ")}</p>` : ""}<div class="comparison-lines" tabindex="0" role="region" aria-label="${escapeHTML(title)} transcript">${selected.length ? selected.map(segment => {
+    const body = `<time>${formatTime(segment.start)}–${formatTime(segment.end)}</time><b>${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span>`;
+    return segment.valid_timing === false
+      ? `<div class="comparison-line invalid">${body}<em>Invalid interval</em></div>`
+      : `<button type="button" class="comparison-line" data-start="${Math.max(0, segment.start)}">${body}</button>`;
+  }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterance overlaps this time window."}</p>`}</div></article>`;
+}
+
+function renderModelComparison() {
+  const container = $("[data-model-comparison]");
+  if (!container || !state.examples || !state.currentSampleSlug) return;
+  if (!state.predictions) { container.innerHTML = '<p class="loading-block">Loading model outputs...</p>'; return; }
+  const example = state.examples.find(item => item.slug === state.currentSampleSlug);
+  const data = state.predictions.cases.find(item => item.recording_id === example.recording_id);
+  if (!data || !state.predictions.systems) { container.innerHTML = '<p>No model outputs are available for this sample.</p>'; return; }
+  const systems = state.predictions.systems;
+  const maxStart = Math.floor((example.clip_duration_seconds - .001) / 30) * 30;
+  state.comparison.start = Math.min(Math.max(0, state.comparison.start), maxStart);
+  const start = state.comparison.start;
+  const end = Math.min(start + 30, example.clip_duration_seconds);
+  const options = selected => systems.map(system => `<option value="${escapeHTML(system.id)}"${system.id === selected ? " selected" : ""}>${escapeHTML(system.name)}</option>`).join("");
+  const outputFor = id => data.outputs.find(output => output.system_id === id);
+  const nameFor = id => systems.find(system => system.id === id).name;
+  container.innerHTML = `<header class="comparison-heading"><h3>Compare model outputs</h3><p>${escapeHTML(example.title)} · ${formatTime(start)}–${formatTime(end)}</p></header><div class="comparison-controls"><label>Model A<select data-compare-model="left">${options(state.comparison.left)}</select></label><label>Model B<select data-compare-model="right">${options(state.comparison.right)}</select></label><label>Time window<select data-compare-window>${Array.from({length: Math.ceil(example.clip_duration_seconds / 30)}, (_, i) => i * 30).map(time => `<option value="${time}"${time === start ? " selected" : ""}>${formatTime(time)}–${formatTime(Math.min(time + 30, example.clip_duration_seconds))}</option>`).join("")}</select></label></div><div class="comparison-action"><p>Click a line to play the same audio from its timestamp.</p><div class="comparison-playback"><button type="button" data-compare-play>Play audio</button><span data-compare-time>${formatTime($("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`)).currentTime)}</span><button type="button" data-compare-current>Use current audio position</button></div></div><div class="comparison-grid">${comparisonColumn("Reference", example.timeline, start, end)}${comparisonColumn(nameFor(state.comparison.left), outputFor(state.comparison.left)?.segments || [], start, end, outputFor(state.comparison.left))}${comparisonColumn(nameFor(state.comparison.right), outputFor(state.comparison.right)?.segments || [], start, end, outputFor(state.comparison.right))}</div><p class="comparison-footnote">Speaker labels are local to each model input. Utterances crossing a time-window boundary are shown in full.</p>`;
+  updateCasePlayback($("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`)));
+}
+
 function selectSample(slug, scroll = true, historyMode = "replace") {
   const panel = $(`[data-sample-panel="${slug}"]`);
   if (!panel || !state.examples) return;
   const changed = state.currentSampleSlug !== slug;
   if (changed) pauseActiveAudio();
   state.currentSampleSlug = slug;
+  if (changed) state.comparison.start = 0;
   $$('[data-sample-panel]').forEach(item => { item.inert = item !== panel; });
   $$('[data-select-sample]').forEach(button => {
     const selected = button.dataset.selectSample === slug;
@@ -376,6 +447,7 @@ function selectSample(slug, scroll = true, historyMode = "replace") {
     if (selected) button.setAttribute("aria-current", "true"); else button.removeAttribute("aria-current");
   });
   syncSampleNavigation();
+  renderModelComparison();
   if (changed) {
     const example = state.examples.find(item => item.slug === slug);
     const full = state.metadata?.find(item => item.recording_id === example.recording_id);
@@ -404,10 +476,6 @@ function moveSample(step) {
 
 function setupSampleBrowser() {
   const browser = $("[data-case-grid]");
-  document.addEventListener("click", event => {
-    const opener = event.target.closest("[data-open-case]");
-    if (opener) openCase(opener.dataset.openCase);
-  });
   browser.addEventListener("click", event => {
     const selection = event.target.closest("[data-select-sample]");
     if (selection) selectSample(selection.dataset.selectSample);
@@ -416,6 +484,15 @@ function setupSampleBrowser() {
     const panel = event.target.closest("[data-sample-panel]") || $(`[data-sample-panel="${state.currentSampleSlug}"]`);
     if (!panel) return;
     const audio = $("[data-case-audio]", panel);
+    if (event.target.closest("[data-compare-play]")) {
+      if (audio.paused) audio.play().catch(() => { $("[data-audio-error]", panel).hidden = false; $("[data-audio-error]", panel).textContent = "Audio could not play. Try the sample player's play control."; });
+      else audio.pause();
+    }
+    if (event.target.closest("[data-compare-current]")) {
+      state.comparison.start = Math.floor(audio.currentTime / 30) * 30;
+      renderModelComparison();
+      $("[data-compare-current]", browser).focus();
+    }
     const seekTarget = event.target.closest("[data-start], [data-timeline-start], [data-seek]");
     if (seekTarget) {
       audio.currentTime = Number(seekTarget.dataset.start ?? seekTarget.dataset.timelineStart ?? seekTarget.dataset.seek);
@@ -435,6 +512,20 @@ function setupSampleBrowser() {
     }
   });
   browser.addEventListener("change", event => {
+    if (event.target.matches("[data-compare-model]")) {
+      const side = event.target.dataset.compareModel;
+      const previous = state.comparison[side];
+      state.comparison[side] = event.target.value;
+      const other = side === "left" ? "right" : "left";
+      if (state.comparison[side] === state.comparison[other]) state.comparison[other] = previous;
+      renderModelComparison();
+      $(`[data-compare-model="${side}"]`, browser).focus();
+    }
+    if (event.target.matches("[data-compare-window]")) {
+      state.comparison.start = Number(event.target.value);
+      renderModelComparison();
+      $("[data-compare-window]", browser).focus();
+    }
     if (event.target.matches("[data-loop-sample]")) {
       state.loopSample = event.target.checked;
       $$("[data-case-audio]", browser).forEach(audio => { audio.loop = state.loopSample; });
@@ -474,13 +565,13 @@ function renderCases() {
   state.sampleNavObserver?.disconnect();
   pauseActiveAudio();
   const browser = $("[data-case-grid]");
-  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong><span>Scroll between samples; scroll within the transcript to read.</span></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHTML(example.title)}</strong><small>${escapeHTML(example.language)} · ${formatTime(example.clip_duration_seconds)}</small></div></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>View overlap, speaker similarity, and timeline for this sample</summary><div data-sample-analysis-content></div></details>`;
+  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong><span>Scroll between samples; scroll within the transcript to read.</span></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHTML(example.title)}</strong><small>${escapeHTML(example.language)} · ${formatTime(example.clip_duration_seconds)}</small></div></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>View overlap, speaker similarity, and timeline for this sample</summary><div data-sample-analysis-content></div></details><section class="sample-comparison" id="model-comparison" data-model-comparison aria-live="polite"><p class="loading-block">Loading model outputs...</p></section>`;
   const stage = $("[data-sample-stage]", browser);
   $$('[data-case-audio]', browser).forEach(audio => {
     const panel = audio.closest("[data-sample-panel]");
     const transcript = $("[data-transcript]", panel);
-    audio.addEventListener("play", () => { pauseActiveAudio(audio); audio.loop = state.loopSample; });
-    audio.addEventListener("pause", () => { if (state.activeAudio === audio) state.activeAudio = null; });
+    audio.addEventListener("play", () => { pauseActiveAudio(audio); audio.loop = state.loopSample; updateCasePlayback(audio); });
+    audio.addEventListener("pause", () => { if (state.activeAudio === audio) state.activeAudio = null; updateCasePlayback(audio); });
     audio.addEventListener("timeupdate", () => updateCasePlayback(audio));
     audio.addEventListener("seeked", () => updateCasePlayback(audio));
     audio.addEventListener("error", () => {
@@ -519,7 +610,7 @@ function parseURLState() {
   const analysis = params.get("analysis");
   if (["overlap", "similarity", "acoustic", "turn", "speaker"].includes(analysis)) state.diagnostic = analysis;
   const sort = params.get("sort");
-  if (["system", "der", "cpwer", "tcpwer", "wer", "excluded", "soft_degradation"].includes(sort)) state.sort.key = sort;
+  if (["system", "der", "cpwer", "tcpwer", "wer"].includes(sort)) state.sort.key = sort;
 }
 
 function updateFilterURL() {
@@ -553,6 +644,7 @@ function renderExplorer() {
   const active = AXES.filter(axis => state.filters[axis]);
   const matched = state.metadata.filter(item => active.every(axis => item.conditions[axis] === state.filters[axis]));
   state.matched = matched;
+  const matchedSeconds = matched.reduce((sum, item) => sum + item.duration_seconds, 0);
   $$('[data-axis]').forEach(button => {
     const { axis, value } = button.dataset;
     const candidate = { ...state.filters, [axis]: value };
@@ -569,16 +661,17 @@ function renderExplorer() {
   syncCoverageSelection();
   $("[data-explorer-status]").textContent = active.length ? "Filtered condition space" : "Complete condition space";
   $("[data-match-count]").textContent = matched.length;
-  $("[data-total-duration]").textContent = matched.length ? formatDuration(matched.reduce((sum, item) => sum + item.duration_seconds, 0), true) : "-";
+  $("[data-total-duration]").textContent = matched.length ? formatDuration(matchedSeconds, true) : "-";
   $("[data-median-duration]").textContent = matched.length ? formatDuration(median(matched.map(item => item.duration_seconds)), true) : "-";
-  $("[data-average-overlap]").textContent = matched.length ? `${(matched.reduce((sum, item) => sum + item.overlap_ratio, 0) / matched.length * 100).toFixed(1)}%` : "-";
+  // Use the paper-reported benchmark aggregate; weight filtered subsets by duration.
+  const overlap = active.length
+    ? (matchedSeconds ? matched.reduce((sum, item) => sum + item.overlap_ratio * item.duration_seconds, 0) / matchedSeconds : null)
+    : 0.2187;
+  $("[data-average-overlap]").textContent = overlap == null ? "-" : `${(overlap * 100).toFixed(2)}%`;
+  $("[data-average-overlap]").title = active.length ? "Weighted by recording duration for the selected recordings" : "Benchmark value reported in the paper";
   $("[data-language-count]").textContent = new Set(matched.map(item => item.language)).size;
   $("[data-scenario-count]").textContent = new Set(matched.map(item => scenarioGroup(item.scenario))).size;
 
-  const matchedIDs = new Set(matched.map(item => item.recording_id));
-  const curated = (state.examples || []).filter(example => matchedIDs.has(example.recording_id));
-  const representative = $("[data-representatives]");
-  representative.innerHTML = curated.length ? curated.map(example => `<article><div><span>${escapeHTML(scenarioGroup(example.scenario))}, ${escapeHTML(example.language)}</span><h4>${escapeHTML(example.title)}</h4></div><button class="case-link" type="button" data-open-case="${escapeHTML(example.slug)}">Listen & read</button></article>`).join("") : `<div class="no-curated"><b>${matched.length} recordings match</b>, but no curated excerpt is available for this selection. Try a different condition profile to find a reference excerpt.</div>`;
   updateFilterURL();
 }
 
@@ -629,8 +722,8 @@ const loaders = {
     } catch (error) { moduleError($("[data-case-grid]"), error, "cases"); }
   },
   predictions: async () => {
-    try { state.predictions = await fetchJSON(`${DATA_ROOT}/case_predictions.json`); }
-    catch (error) { console.warn("Prediction interface unavailable", error); }
+    try { state.predictions = await fetchJSON(`${DATA_ROOT}/case_predictions.json`); renderModelComparison(); }
+    catch (error) { console.warn("Prediction interface unavailable", error); const container = $("[data-model-comparison]"); if (container) container.innerHTML = "<p>Model outputs could not be loaded. Reload to try again.</p>"; }
   },
   metadata: async () => loadMetadata()
 };
@@ -700,7 +793,7 @@ function setupInteractions() {
     if (!button) return;
     state.boardView = button.dataset.view;
     if (state.boardView === "robustness" && !["excluded", "soft_degradation", "system"].includes(state.sort.key)) state.sort = { key: "excluded", direction: "asc" };
-    if (state.boardView === "overall" && !["der", "cpwer", "tcpwer", "wer", "excluded", "soft_degradation", "system"].includes(state.sort.key)) state.sort = { key: "cpwer", direction: "asc" };
+    if (state.boardView === "overall" && !["der", "cpwer", "tcpwer", "wer", "system"].includes(state.sort.key)) state.sort = { key: "cpwer", direction: "asc" };
     $$('[data-view]', event.currentTarget).forEach(option => {
       const active = option === button;
       option.classList.toggle("active", active);

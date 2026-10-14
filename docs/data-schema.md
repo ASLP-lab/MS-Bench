@@ -25,7 +25,7 @@ Higher T tiers contain shorter turn intervals. Higher N tiers indicate poorer ac
 
 ## Demo presentation
 
-The UI uses icons and full names: **Speaker number**, **Overlap ratio**, **Speaker similarity**, **Speaker turn interval**, and **Acoustic quality**. Visible range labels use percentages for overlap and milliseconds for turn intervals. Acoustic labels describe relative degradation within this benchmark, rather than calibrated perceptual quality ratings. The overview begins with condition coverage using the original five-axis palette, followed by scenario, language, and duration descriptions. The measurement disclosure has no icons and lists the definition and exact range of every tier. Recording overlap is time with at least two active reference speakers divided by the entire recording duration, including silence. Canonical P/O/S/T/N IDs and existing URL filter parameters are preserved.
+The UI uses icons and full names: **Speaker number**, **Overlap ratio**, **Speaker similarity**, **Speaker turn interval**, and **Acoustic quality**. Visible range labels use percentages for overlap and milliseconds for turn intervals. Continuous-condition range labels use interval notation with explicit inclusion/exclusion of endpoints; overlap uses percentages and turn intervals use milliseconds. Acoustic range subtitles describe relative degradation within this benchmark, rather than calibrated perceptual quality ratings. Speaker similarity uses a composite icon of two Tabler wave-sine glyphs and an approximately-equal sign. Overview groups the full Abstract and the visible Construction pipeline figure, following the presentation hierarchy of MINT-Bench Demo. Benchmark composition then presents condition coverage using the original five-axis palette, followed by scenario, language, and duration descriptions. Navigation uses #introduction for Overview; existing #overview links still address the composition section. The measurement disclosure has no icons and lists the definition and exact range of every tier. Recording overlap is time with at least two active reference speakers divided by the entire recording duration, including silence. Canonical P/O/S/T/N IDs and existing URL filter parameters are preserved.
 
 Scenario descriptions and case labels use four presentation groups. The Explorer's **Settings** count counts these groups; canonical scenario metadata remains unchanged.
 
@@ -38,7 +38,19 @@ Scenario descriptions and case labels use four presentation groups. The Explorer
 
 Smart-glasses conversations are included under everyday conversational speech. All nine source labels map to exactly one of the four groups.
 
-Languages are described in prose using the summary's primary and additional language lists.
+Languages are described in prose using the summary's primary and additional language lists. The scenario overview is a single paragraph covering the four presentation groups and their examples, including classroom teaching and teacher–student dialogue. The Explorer retains filters and summary statistics; the matching-reference-excerpts list has been removed.
+
+The composition layout groups condition distributions in a full-width panel, followed by a shared Scenarios/Languages panel beside the recording-duration panel. Scenarios use the user-provided prose, and the disclosure is titled Condition definitions and ranges. Smaller viewports stack the panels; container queries handle sidebar-constrained widths. The Explorer labels its overlap statistic Duration-weighted overlap: the complete benchmark uses the paper-reported 21.87%, and filtered subsets use the recording-duration-weighted mean of selected metadata rows.
+
+## Result presentation and diagnostics
+
+The error-metrics view shows System, DER, cpWER, tcpWER, and WER. Excluded and soft-degradation inference-unit counts appear in Output robustness only. Both MOSS systems use inputs up to 90 minutes; VibeVoice-ASR up to 60 minutes; SoulX-Transcriber up to 5 minutes. System display names omit segmentation suffixes.
+
+Each condition-results block has a concise paper-based conclusion in `description`, a `note` describing its comparison and controls, and a `metrics` list of symbols and definitions. A Note panel directly below the dimension tabs shows the current metrics and their definitions, with scientific subscripts. It follows mouse selection, keyboard navigation, and URL restoration; narrow tab strips keep the selected dimension visible. Numerical series and significance flags are unchanged; the duplicate exact-values disclosure is removed.
+
+Overall performance retains concise paper-based accuracy/robustness findings and links to the same-audio model comparison. The WER decomposition feature is removed. Diagnostic numeric values and bars animate from zero to the selected condition’s paper values over 650 ms; changing tabs cancels the previous animation. Reduced-motion preferences show the final values immediately. The blue Note gives short metric definitions and comparison context, followed by a Key finding paragraph.
+
+The range-count and click-to-filter Note appears directly beneath Condition distributions. Measurement definitions follow paper Sections 2.1–2.2 and retain the original tier IDs and endpoints.
 
 ## Representative examples
 
@@ -53,4 +65,8 @@ The sample browser contains ten excerpts, including a P3 (nine-speaker) case and
 
 ## Prediction interface
 
-`demo-data/case_predictions.json` reserves an empty, versioned interface for verified case predictions. A future case entry must include the recording ID, excerpt source offset, excerpt duration, system IDs, inference-unit spans, raw and display speaker IDs, mapping scope, status, segments, and sourced annotations. Unknown offsets use `null`, not zero. Invalid raw intervals remain artifacts and are never silently repaired into valid predictions.
+`demo-data/case_predictions.json` (schema 1.1.0) now contains traceable display exports for ten excerpts and seven model slots. `scripts/build_case_predictions.py` reads `100_results` manifests and normalized result segments, Qwen token streams, and the verified SoulX split-time manifest. It exports raw text and speaker labels, original timestamps relative to the excerpt clock, source segment/unit indices, SHA-256 hashes, and known input offsets. Unknown offsets remain `null`; such split outputs are labelled `unmapped` rather than assigned invented excerpt times. Status is for the imported display artifact, not the paper’s scoring decision.
+
+The comparison appears below the audio browser, with a direct link from Overall performance. Users select two models and a 30-second window, then inspect Reference/Model A/Model B side by side. The original audio element is shared: row clicks seek/play, Play audio toggles playback, and Use current audio position selects its window. Model speaker IDs remain local to each input. Entire utterance text is retained across window boundaries.
+
+The current export has 63 available, three partial/incomplete, and four unaligned model slots; the unaligned slots are SoulX split results with unavailable source offsets. All 3,735 exported segments were verified against source text, raw speaker IDs, timestamps, and hashes. Invalid intervals are never repaired; they remain non-playable rows with an explicit status when present.

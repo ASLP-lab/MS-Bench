@@ -9,46 +9,69 @@
     {"id":"soulx","name":"SoulX-Transcriber"}
   ],
   "overlap": {
-    "title": "Overlap increases lexical and speaker-attribution errors.",
-    "description": "Within-unit comparison of non-overlapped utterances and utterances with at least 50% overlap exposure.",
+    "title": "Overlap ratio",
+    "description": "Heavy overlap increases lexical recognition error by 27.2–38.6 percentage points and speaker-attribution error by 4.2–19.1 points across all seven systems.",
     "control": "Only inference units containing both classes are retained.",
+    "note": "Heavy overlap (at least 50% of an utterance) is compared with no overlap within the same inference unit. Only units containing both conditions are retained.",
+    "metrics": [
+      {"symbol":"ΔE_lex","definition":"Change in lexical recognition error, in percentage points."},
+      {"symbol":"ΔE_attr","definition":"Change in speaker-attribution error, in percentage points."}
+    ],
     "series": [
       {"label":"Delta E_lex","unit":"pp","values":[27.3,27.3,28.7,34.3,38.6,27.2,35.2],"significant":[true,true,true,true,true,true,true]},
       {"label":"Delta E_attr","unit":"pp","values":[10.6,10.9,10.5,4.2,19.1,6.3,8.7],"significant":[true,true,true,true,true,true,true]}
     ]
   },
   "similarity": {
-    "title": "Speaker similarity is associated with pairwise confusion.",
-    "description": "Spearman correlation between pairwise speaker similarity and pairwise confusion.",
+    "title": "Speaker similarity",
+    "description": "Similar voices increase speaker confusion even without overlap. The association is significant for all seven systems (Spearman ρ = 0.248–0.323).",
     "control": "Computed on completely non-overlapping utterances.",
+    "note": "Analysis uses completely non-overlapping utterances. Directional confusion is the fraction of aligned tokens from one speaker attributed to the other.",
+    "metrics": [
+      {"symbol":"ρ_sim","definition":"Spearman correlation between pairwise speaker similarity and directional speaker confusion."}
+    ],
     "series": [
       {"label":"Spearman rho","unit":"rho","values":[0.311,0.312,0.323,0.297,0.248,0.268,0.319],"significant":[true,true,true,true,true,true,true]}
     ]
   },
   "acoustic": {
-    "title": "Poor acoustic quality is associated with lexical errors and shorter predicted speech timelines.",
-    "description": "Correlation of acoustic degradation d_N with lexical error, attribution error, and hypothesized-to-reference speech duration ratio R_time.",
+    "title": "Acoustic quality",
+    "description": "Acoustic degradation primarily increases lexical recognition errors. It is also associated with shorter predicted speech timelines in six of seven systems; its association with attribution error is weak.",
     "control": "Computed on non-overlapping utterances away from speaker switches. R_time measures duration contraction, not boundary displacement.",
+    "note": "Analysis uses non-overlapping utterances away from speaker switches. R_time = T_hyp / T_ref measures predicted-to-reference speech duration, rather than timestamp-boundary displacement.",
+    "metrics": [
+      {"symbol":"ρ_lex","definition":"Correlation of acoustic degradation with lexical recognition error."},
+      {"symbol":"ρ_attr","definition":"Correlation of acoustic degradation with speaker-attribution error."},
+      {"symbol":"ρ_time","definition":"Correlation of acoustic degradation with the predicted-to-reference speech duration ratio R_time."}
+    ],
     "series": [
-      {"label":"rho(d_N, E_lex)","unit":"rho","values":[0.392,0.480,0.364,0.569,0.392,0.304,0.181],"significant":[true,true,true,true,true,true,true]},
-      {"label":"rho(d_N, E_attr)","unit":"rho","values":[-0.060,-0.121,-0.063,0.081,0.030,-0.057,-0.174],"significant":[false,false,false,false,false,false,true]},
-      {"label":"rho(d_N, R_time)","unit":"rho","values":[-0.350,-0.405,-0.335,-0.436,-0.437,-0.145,-0.246],"significant":[true,true,true,true,true,false,true]}
+      {"label":"rho(d_N, E_lex)","unit":"rho","values":[0.392,0.48,0.364,0.569,0.392,0.304,0.181],"significant":[true,true,true,true,true,true,true]},
+      {"label":"rho(d_N, E_attr)","unit":"rho","values":[-0.06,-0.121,-0.063,0.081,0.03,-0.057,-0.174],"significant":[false,false,false,false,false,false,true]},
+      {"label":"rho(d_N, R_time)","unit":"rho","values":[-0.35,-0.405,-0.335,-0.436,-0.437,-0.145,-0.246],"significant":[true,true,true,true,true,false,true]}
     ]
   },
   "turn": {
-    "title": "Speaker transitions primarily disrupt attribution.",
-    "description": "Within-unit attribution penalty in a +/-0.5 s neighborhood around non-overlapping speaker switches.",
+    "title": "Speaker turn interval",
+    "description": "Near speaker switches, attribution error rises by 1.51–4.17 percentage points across all systems. Lexical recognition and segmentation errors show no significant change.",
     "control": "E_lex and E_seg were not significant for any evaluated system.",
+    "note": "Within each inference unit, compare utterances near non-overlapping speaker switches (±0.5 seconds) with those far from all switches.",
+    "metrics": [
+      {"symbol":"ΔE_attr","definition":"Change in speaker-attribution error near speaker switches, in percentage points."}
+    ],
     "series": [
       {"label":"Delta E_attr","unit":"pp","values":[2.49,2.48,2.74,3.07,3.43,4.17,1.51],"significant":[true,true,true,true,true,true,true]}
     ]
   },
   "speaker": {
-    "title": "Speaker number is associated with attribution difficulty after controls.",
-    "description": "Partial correlation of speaker number and E_attr after controlling for dataset identity and overlap ratio.",
+    "title": "Speaker number",
+    "description": "More speakers are associated with greater attribution difficulty after controlling for dataset and overlap. The association is positive in all six evaluated systems and significant in four.",
     "control": "P3 is excluded to reduce dataset-specific bias. Association does not imply causation; SoulX is not evaluated.",
+    "note": "Center both variables by dataset and remove overlap effects. Exclude P3 (≥9 speakers) and SoulX-Transcriber’s 5-minute inputs. Association does not imply causation.",
+    "metrics": [
+      {"symbol":"ρ_attr | D,O","definition":"Correlation of speaker number with speaker-attribution error after controlling for dataset and overlap."}
+    ],
     "series": [
-      {"label":"rho_attr | D,O","unit":"rho","values":[0.403,0.350,0.257,0.054,0.438,0.281,null],"significant":[true,true,false,false,true,true,null]}
+      {"label":"rho_attr | D,O","unit":"rho","values":[0.403,0.35,0.257,0.054,0.438,0.281,null],"significant":[true,true,false,false,true,true,null]}
     ]
   }
 }

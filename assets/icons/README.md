@@ -1,1 +1,1 @@
-Five outline icons from @tabler/icons 3.49.0 (https://github.com/tabler/tabler-icons), used under the included MIT license. SVGs are unmodified and rendered as CSS masks so they follow the page theme.
+Icons use @tabler/icons 3.49.0 (https://github.com/tabler/tabler-icons) under the included MIT license. The original five outline SVGs are unmodified. voice-similarity.svg composes two original wave-sine glyphs with the approximately-equal symbol to indicate voice comparison. All icons are rendered as CSS masks to follow the page theme.

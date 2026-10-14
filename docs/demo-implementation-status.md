@@ -1,5 +1,80 @@
 # Demo implementation status
 
+## Raw model comparison and animated condition results (2026-10-14)
+
+- Remove Where transcription errors arise and its exported figure. Retain useful overall accuracy/robustness findings and add a direct link to same-audio model-output comparison.
+- Add Reference/Model A/Model B comparison below the audio browser. Users choose two of seven models and a 30-second window; the shared sample audio supports play/pause, transcript-line seeking, and selection of its current window. Sample changes reset the comparison window.
+- Export ten cases from 100_results with a reproducible stdlib script. Preserve text, speaker IDs local to each input, timestamps, source indices, and source hashes. Show imported availability/incomplete states; explicitly mark four SoulX slots without verified split offsets as unaligned. No scoring or speaker matching is fabricated.
+- Shorten the blue metric Note and use a distinct Key finding paragraph beneath it. Clicking a dimension animates numbers and bars from zero to the corresponding paper values in 650 ms, including overlap’s 27.3. Rapid switches cancel earlier animation; reduced-motion settings show final values immediately. Accessible labels expose final numeric values.
+- Verified all 3,735 exported segments against raw source text, speaker IDs, timestamp offsets, and SHA-256 hashes. Tested numeric motion, rapid switches, reduced motion, seven model options, all ten samples, window selection, unaligned/partial states, actual audio playback and seeking, 320/390/768/1101/1440 px in light/dark modes, and accessibility. Canonical metadata validation still passes.
+
+## Overall findings and visible dynamic metrics (2026-10-14)
+
+- Reviewed raw result layouts in 100_results and corresponding intermediate score summaries. Several older summaries differ from the current paper; keep the established paper leaderboard and use the verified paper Figure 2 for error composition.
+- Add short accuracy/robustness findings and the original vector WER decomposition figure, with explanations of lexical recognition and speech segmentation components. All seven WER totals match the leaderboard after the figure’s one-decimal rounding.
+- Figure provenance: vector export of icassp_2027/MS-Bench/fig2.pdf using pdftocairo; source SHA-256 ab27aa481a17431d73259a84db08ead020fbfc29fb9c9d733a86230763f13c93. No component values are estimated or reconstructed.
+- Move the condition Note beneath the tabs. Each dimension now exposes an explicit metric-symbol/definition list with scientific subscripts, alongside its analysis method. Mouse, keyboard, and deep-link restoration update the same panel. Mobile tab strips keep the selected dimension visible without moving the page vertically.
+- Verified all five metric sets, notes, keyboard/deep-link behavior, SVG loading, paper/table consistency, and unchanged condition series. Checked 320, 390, 768, 1101, and 1440 px in light/dark modes; accessibility checks pass. The figure scrolls horizontally within its frame on phones. Canonical validation passes for 99 recordings, seven systems, and ten cases.
+
+## Scenario prose and shared panel (2026-10-14)
+
+- Replace the four scenario definition items with the supplied single-paragraph description, retaining all four scenario groups and their examples.
+- Combine Scenarios and Languages in one bordered panel with a subtle internal divider, alongside Recording duration; stack the panels on smaller screens. Preserve existing theme colors and filtering categories.
+- Rename the measurement disclosure to Condition definitions and ranges; retain all 21 source tiers and their paper-based definitions.
+- Checked 390, 1101, and 1440 px in light/dark modes for overflow and accessibility, and reviewed desktop/mobile screenshots. JavaScript syntax and whitespace checks pass.
+
+## Composition layout and overlap aggregate (2026-10-14)
+
+- Taste-Skill preservation pass: retain the academic blue-gray tokens, existing five-axis colors, 1100 px content width, navigation, and filtering behavior. Give condition distributions an independent full-width panel; group four scenarios in a two-column definition list; place language and duration panels side by side below. Use consistent inset spacing, borders, and headings. Mobile layouts stack these blocks; container queries prevent compressed tiles when the sidebar narrows the content column.
+- Replace Mean recording overlap with Duration-weighted overlap. The complete-benchmark display uses the paper-reported 21.87%; filtered selections compute sum(duration × overlap ratio) / sum(duration), shown to two decimal places. Tooltips identify the aggregate source.
+- Data provenance: weighting the current canonical per-recording fields produces 21.8194%, while the paper reports 21.87%. The paper-reported display is explicit rather than altering canonical metadata; filtered values remain computed from the selected metadata rows.
+- Verified paper aggregate, filtered weighting, and reset; checked 320, 390, 768, 900, 1101, 1440, and 1920 px in light/dark modes with no horizontal overflow. Composition and Explorer accessibility checks pass. Reviewed wide, narrow-sidebar, and mobile layouts.
+
+## Result tables and condition analysis refinement (2026-10-14)
+
+- Remove exclusion and soft-degradation columns from Error metrics; retain them in Output robustness. Correct both MOSS input policies to ≤90 min and simplify the SoulX display name. Returning from robustness restores sorting by a visible error metric.
+- Remove View exact values. Each of the five dimensions now presents a short conclusion based on the current paper analysis; the section Note updates with metrics, units, comparison design, controls, and significance. Keyboard navigation and analysis URL restoration follow the same update path. Numeric results and significance flags remain unchanged.
+- Update measurement definitions using paper Sections 2.1–2.2, including CAM++ segments, maximum pairwise cosine similarity, turn-interval quantiles, and acoustic score percentile ranks. Preserve all 21 tier definitions.
+- Move the range-count and filter guidance beneath Condition distributions with a Note prefix.
+- Verified table headings and sorting, both MOSS policies, system naming, all five dynamic notes, keyboard/deep-link behavior, all source tiers, and numerical-data preservation. Canonical data validation passes for 99 recordings, seven systems, and ten cases. Tested 390, 768, 1101, and 1440 px in light/dark modes; accessibility checks pass after improving chart-axis text contrast.
+
+## Caption panel and condition copy cleanup (2026-10-14)
+
+- Present the construction pipeline description in a bordered blue-gray panel, using existing light/dark theme colors. Remove the sentence-ending manual-validation clause from the description.
+- Remove the duplicated five-dimension characterization sentence from the Benchmark composition note and the interval-bracket explanation above the distribution tiles. Preserve the original Abstract and the click-to-filter guidance.
+- Rename Recording conditions to Condition distributions and retain spacing above the tiles.
+- Reviewed desktop and mobile caption screenshots in light/dark modes; Overview and composition accessibility checks pass at 390 and 1440 px, with no page overflow. JavaScript syntax and whitespace checks pass.
+
+## Paper-width layout and pipeline summary (2026-10-14)
+
+- Match the reference MINT-Bench Overview container width with a 1100 px maximum white content column; cap the combined sidebar and content frame at 1340 px. Header alignment follows the same frame.
+- Enlarge the pipeline image by about 10% on wide screens, increasing its figure cap to 1040 px and reducing frame padding to 10 px. Keep fluid mobile sizing and the full-size image link.
+- Replace the short stage-list caption with a concise description grounded in icassp_2027/MS-Bench/Template.tex, Sections 2.1–2.4: characterize recordings, define condition ranges, construct the candidate pool, select for coverage and diversity, and manually validate audio and annotations.
+- Verified 320, 390, 768, 1024, 1100, 1101, 1440, and 1920 px in light/dark modes, including the navigation breakpoint, with no horizontal overflow. Reviewed desktop/mobile Overview and composition screenshots. JavaScript syntax and whitespace checks pass.
+
+## Overview spacing refinement (2026-10-14)
+
+- Cap the centered construction figure at 960 px to keep its embedded lettering proportional to surrounding text on wide screens; retain its full-size link and responsive image proportions.
+- Increase spacing between the hero logo, title, example buttons, and statistics, plus the gap between each statistic and its description. Use smaller spacing adjustments on phones.
+- Verified 320, 390, 768, 1440, and 1920 px in light and dark modes, with no horizontal overflow; reviewed desktop and mobile screenshots. JavaScript syntax and whitespace checks pass.
+
+## Overview chapter experiment (2026-10-14, preview/overview-layout)
+
+- Following the MINT-Bench Demo hierarchy, the new Overview chapter contains Abstract and Construction pipeline. The full abstract is moved out of the hero without rewriting it, and the construction figure is visible rather than collapsed.
+- The original Benchmark overview is renamed Benchmark composition. It continues to contain condition distributions, scenarios, languages, and recording duration. The title and headline statistics remain in the compact hero.
+- Sidebar navigation adds Overview at #introduction and labels the existing #overview section Composition, preserving old composition links. The construction image has intrinsic dimensions and a full-size link.
+- This experiment is developed in the separate MS-Bench-overview-layout worktree on preview/overview-layout; the original working directory's files are preserved.
+- Verified exact abstract preservation, visible image loading, chapter order, all six navigation items and active states, mobile menu, existing composition/case/filter links, and filter operation. Checked 320, 390, 768, and 1440 px in light/dark modes for overflow; Overview and composition accessibility checks pass. Data validation still passes for 99 recordings, seven systems, and ten cases.
+
+## Overview copy, range labels, and similarity icon (2026-10-14)
+
+- Speaker similarity now uses two original Tabler wave-sine glyphs with an approximately-equal sign, consistently in overview, filters, diagnostics, active filters, and sample profiles. The original axis palette is preserved.
+- Removed Matching reference excerpts from the Explorer, along with its renderer and styles. Filters and recording statistics remain available; the inline audio sample browser is unchanged.
+- The overview Note quotes the exact five-dimension characterization sentence from the existing paper abstract. A separate paragraph explains recording counts, benchmark percentages, and clicking a range to filter the Explorer.
+- Continuous dimensions use interval notation, including [10%, 20%) and [150, 450) ms, with a bracket convention beneath Recording conditions. Acoustic range subtitles retain their relative-degradation descriptions. Discrete speaker-number ranges remain explicit.
+- Removed the scenario introduction and tightened spacing. Classroom interactions is described as classroom teaching, tutoring, and teacher-student dialogue.
+- Verified all 21 filters, the original-source sentence, range labels, removed excerpt list, four scenarios, retained case/filter links, and inline audio playback. Checked 320, 390, 768, and 1440 px in light and dark modes for overflow/clipped labels; overview and Explorer accessibility checks pass. Canonical data validation still passes for 99 recordings, seven systems, and ten cases.
+
 ## Four scenario categories (2026-10-14)
 
 - Overview, Explorer setting counts, and sample labels now use Meetings, Conversational speech, Media content, and Classroom interactions.
