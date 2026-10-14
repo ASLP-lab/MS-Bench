@@ -1,5 +1,12 @@
 # Demo implementation status
 
+## Full-example transcript playback and clearer comparison entry (2026-10-14)
+
+- Edit main directly. Replace the 30-second comparison selector with shared Play/Pause and progress controls for the entire existing example excerpt. Render all exported utterances and independently highlight/scroll Reference, Model A, and Model B with playback; Follow subtitles can pause scrolling while retaining highlights. Model changes follow the current playback time.
+- Put the comparison entry beneath the Overall performance table in a subtle blue panel, with a prominent Listen & compare button and no underline.
+- Rename the listening section Audio examples and model comparison. Remove the TextGrid download button, redundant condition/transcript headings, and timestamp instruction. Match speaker IDs and utterance text colors, with accessible light/dark theme adjustments. Keep raw data, original excerpt boundaries, and local speaker identity unchanged.
+- Validate actual playback, seeking, all three transcript panes, model changes during playback, follow controls, five viewport widths in both themes, accessibility, and unchanged independent README edits.
+
 ## Raw model comparison and animated condition results (2026-10-14)
 
 - Remove Where transcription errors arise and its exported figure. Retain useful overall accuracy/robustness findings and add a direct link to same-audio model-output comparison.

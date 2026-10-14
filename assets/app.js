@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261014-model-comparison";
+const DATA_VERSION = "20261014-full-subtitle-sync";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
@@ -43,7 +43,7 @@ const state = {
   diagnostics: null,
   examples: null,
   predictions: null,
-  comparison: { left: "moss_pro", right: "moss", start: 0 },
+  comparison: { left: "moss_pro", right: "moss", follow: true },
   metadata: null,
   metadataPromise: null,
   filters: { P: null, O: null, S: null, T: null, N: null },
@@ -293,7 +293,7 @@ function speakerColor(speaker, speakers) {
 }
 
 function conditionDetails(conditions) {
-  return `<dl class="condition-details" aria-label="Full-recording conditions">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(conditionLabel(conditions[axis]))}<small>${axis === "N" ? escapeHTML(ACOUSTIC_LABELS[conditions[axis]]) : `Range: ${escapeHTML(CONDITION_RANGES[conditions[axis]])}`}</small></dd></div>`).join("")}</dl>`;
+  return `<dl class="condition-details" tabindex="0" aria-label="Recording condition values">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(conditionLabel(conditions[axis]))}<small>${axis === "N" ? escapeHTML(ACOUSTIC_LABELS[conditions[axis]]) : `Range: ${escapeHTML(CONDITION_RANGES[conditions[axis]])}`}</small></dd></div>`).join("")}</dl>`;
 }
 
 function timelineSVG(example, speakers) {
@@ -342,10 +342,10 @@ function caseDetail(example, index) {
   const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
   return `<article class="sample-panel" data-sample-panel="${escapeHTML(example.slug)}" aria-labelledby="sample-title-${escapeHTML(example.slug)}">
     <header class="sample-head"><div class="case-meta"><span>Sample ${index + 1}</span><span>${escapeHTML(scenarioGroup(example.scenario))}</span><span>${escapeHTML(example.language)}</span></div><h3 id="sample-title-${escapeHTML(example.slug)}">${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></header>
-    <div class="sample-condition-heading">Full-recording conditions</div>${conditionDetails(example.conditions)}
+    ${conditionDetails(example.conditions)}
     <div class="sample-player"><div><strong>Reference audio</strong><span>${formatTime(example.clip_duration_seconds)} excerpt</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}" aria-label="Play ${escapeHTML(example.title)}">Your browser does not support audio playback.</audio></div><p class="player-error" data-audio-error hidden></p>
-    <div class="caption-heading"><div><strong id="reference-title-${escapeHTML(example.slug)}">Time-aligned reference</strong><span>Click a line to play from that timestamp.</span></div><div class="caption-controls"><label><input type="checkbox" data-follow-playback checked> Follow playback</label><button type="button" data-resume-follow hidden>Resume follow</button><a href="${escapeHTML(example.textgrid)}" download>TextGrid</a></div></div>
-    <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}" role="region" aria-labelledby="reference-title-${escapeHTML(example.slug)}" tabindex="0">${example.timeline.map((segment, i) => `<button type="button" class="caption-line" data-caption-index="${i}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b style="--speaker:${speakerColor(segment.speaker, speakers)}">${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
+    <div class="caption-heading"><div class="caption-controls"><label><input type="checkbox" data-follow-playback checked> Follow playback</label><button type="button" data-resume-follow hidden>Resume follow</button></div></div>
+    <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}" role="region" aria-label="${escapeHTML(example.title)} reference transcript" tabindex="0">${example.timeline.map((segment, i) => `<button type="button" class="caption-line" style="--speaker:${speakerColor(segment.speaker, speakers)}" data-caption-index="${i}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b>${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
 
   </article>`;
 }
@@ -355,7 +355,10 @@ function updateCasePlayback(audio) {
   const playbackButton = $("[data-compare-play]");
   if (playbackButton) playbackButton.textContent = audio.paused ? "Play audio" : "Pause audio";
   const playbackTime = $("[data-compare-time]");
-  if (playbackTime) playbackTime.textContent = formatTime(audio.currentTime);
+  if (playbackTime) playbackTime.textContent = `${formatTime(audio.currentTime)} / ${formatTime(state.examples.find(example => example.slug === state.currentSampleSlug).clip_duration_seconds)}`;
+  const seek = $("[data-compare-seek]");
+  if (seek && !(document.activeElement === seek && seek.matches(":active"))) seek.value = audio.currentTime;
+  updateComparisonPlayback(audio);
   const detail = audio.closest("[data-sample-panel]");
   const transcript = $(`[data-transcript="${audio.dataset.caseAudio}"]`, detail);
   if (!transcript) return;
@@ -400,18 +403,31 @@ function syncSampleNavigation() {
   });
 }
 
-function comparisonColumn(title, segments, start, end, output = null) {
+function comparisonColumn(title, segments, output = null) {
   const statusNames = { available: "Output available", partial: "Partial or incomplete output", invalid: "Output has timestamp or model-identity issues", missing: "No output available", unmapped: "Excerpt timing unavailable" };
   const status = output ? statusNames[output.status] || "Output unavailable" : "Reference transcript";
-  const selected = segments.filter(segment => segment.valid_timing === false
-    ? segment.start >= start && segment.start < end || segment.end >= start && segment.end < end
-    : segment.end > start && segment.start < end);
-  return `<article class="comparison-column"><h4>${escapeHTML(title)}</h4><p class="comparison-status">${escapeHTML(status)}</p>${output?.warnings?.length ? `<p class="comparison-warning">${output.warnings.map(escapeHTML).join(" ")}</p>` : ""}<div class="comparison-lines" tabindex="0" role="region" aria-label="${escapeHTML(title)} transcript">${selected.length ? selected.map(segment => {
+  const speakerKey = segment => `${segment.source_unit ?? "reference"}:${segment.speaker}`;
+  const speakers = [...new Set(segments.map(speakerKey))];
+  return `<article class="comparison-column"><h4>${escapeHTML(title)}</h4><p class="comparison-status">${escapeHTML(status)}</p>${output?.warnings?.length ? `<p class="comparison-warning">${output.warnings.map(escapeHTML).join(" ")}</p>` : ""}<div class="comparison-lines" data-comparison-transcript tabindex="0" role="region" aria-label="${escapeHTML(title)} transcript">${segments.length ? segments.map((segment, index) => {
     const body = `<time>${formatTime(segment.start)}–${formatTime(segment.end)}</time><b>${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span>`;
+    const color = speakerColor(speakerKey(segment), speakers);
     return segment.valid_timing === false
-      ? `<div class="comparison-line invalid">${body}<em>Invalid interval</em></div>`
-      : `<button type="button" class="comparison-line" data-start="${Math.max(0, segment.start)}">${body}</button>`;
-  }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterance overlaps this time window."}</p>`}</div></article>`;
+      ? `<div class="comparison-line invalid" style="--speaker:${color}">${body}<em>Invalid interval</em></div>`
+      : `<button type="button" class="comparison-line" style="--speaker:${color}" data-comparison-index="${index}" data-start="${Math.max(0, segment.start)}" data-end="${segment.end}">${body}</button>`;
+  }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterances are available in this audio example."}</p>`}</div></article>`;
+}
+
+function updateComparisonPlayback(audio) {
+  $$('[data-comparison-transcript]').forEach(transcript => {
+    const lines = $$('[data-start][data-end]', transcript);
+    const active = lines.filter(line => audio.currentTime >= Number(line.dataset.start) && audio.currentTime < Number(line.dataset.end));
+    lines.forEach(line => line.classList.toggle("active", active.includes(line)));
+    const anchor = active[0] || lines.filter(line => Number(line.dataset.start) <= audio.currentTime).at(-1) || lines[0];
+    if (state.comparison.follow && anchor && transcript.dataset.activeIndex !== anchor.dataset.comparisonIndex) {
+      transcript.dataset.activeIndex = anchor.dataset.comparisonIndex;
+      transcript.scrollTo({ top: anchor.offsetTop - transcript.clientHeight / 2 + anchor.clientHeight / 2, behavior: "auto" });
+    }
+  });
 }
 
 function renderModelComparison() {
@@ -422,15 +438,12 @@ function renderModelComparison() {
   const data = state.predictions.cases.find(item => item.recording_id === example.recording_id);
   if (!data || !state.predictions.systems) { container.innerHTML = '<p>No model outputs are available for this sample.</p>'; return; }
   const systems = state.predictions.systems;
-  const maxStart = Math.floor((example.clip_duration_seconds - .001) / 30) * 30;
-  state.comparison.start = Math.min(Math.max(0, state.comparison.start), maxStart);
-  const start = state.comparison.start;
-  const end = Math.min(start + 30, example.clip_duration_seconds);
   const options = selected => systems.map(system => `<option value="${escapeHTML(system.id)}"${system.id === selected ? " selected" : ""}>${escapeHTML(system.name)}</option>`).join("");
   const outputFor = id => data.outputs.find(output => output.system_id === id);
   const nameFor = id => systems.find(system => system.id === id).name;
-  container.innerHTML = `<header class="comparison-heading"><h3>Compare model outputs</h3><p>${escapeHTML(example.title)} · ${formatTime(start)}–${formatTime(end)}</p></header><div class="comparison-controls"><label>Model A<select data-compare-model="left">${options(state.comparison.left)}</select></label><label>Model B<select data-compare-model="right">${options(state.comparison.right)}</select></label><label>Time window<select data-compare-window>${Array.from({length: Math.ceil(example.clip_duration_seconds / 30)}, (_, i) => i * 30).map(time => `<option value="${time}"${time === start ? " selected" : ""}>${formatTime(time)}–${formatTime(Math.min(time + 30, example.clip_duration_seconds))}</option>`).join("")}</select></label></div><div class="comparison-action"><p>Click a line to play the same audio from its timestamp.</p><div class="comparison-playback"><button type="button" data-compare-play>Play audio</button><span data-compare-time>${formatTime($("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`)).currentTime)}</span><button type="button" data-compare-current>Use current audio position</button></div></div><div class="comparison-grid">${comparisonColumn("Reference", example.timeline, start, end)}${comparisonColumn(nameFor(state.comparison.left), outputFor(state.comparison.left)?.segments || [], start, end, outputFor(state.comparison.left))}${comparisonColumn(nameFor(state.comparison.right), outputFor(state.comparison.right)?.segments || [], start, end, outputFor(state.comparison.right))}</div><p class="comparison-footnote">Speaker labels are local to each model input. Utterances crossing a time-window boundary are shown in full.</p>`;
-  updateCasePlayback($("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`)));
+  const audio = $("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`));
+  container.innerHTML = `<header class="comparison-heading"><h3>Compare model outputs</h3><p role="status">${escapeHTML(example.title)} · ${formatTime(example.clip_duration_seconds)}</p></header><div class="comparison-controls"><label>Model A<select data-compare-model="left">${options(state.comparison.left)}</select></label><label>Model B<select data-compare-model="right">${options(state.comparison.right)}</select></label></div><div class="comparison-playback"><button type="button" class="button button-primary" data-compare-play>Play audio</button><input type="range" data-compare-seek min="0" max="${example.clip_duration_seconds}" step="0.1" value="${audio.currentTime}" aria-label="Seek within the complete audio example"><span data-compare-time role="timer">${formatTime(audio.currentTime)} / ${formatTime(example.clip_duration_seconds)}</span><label><input type="checkbox" data-compare-follow${state.comparison.follow ? " checked" : ""}> Follow subtitles</label></div><div class="comparison-grid">${comparisonColumn("Reference", example.timeline)}${comparisonColumn(nameFor(state.comparison.left), outputFor(state.comparison.left)?.segments || [], outputFor(state.comparison.left))}${comparisonColumn(nameFor(state.comparison.right), outputFor(state.comparison.right)?.segments || [], outputFor(state.comparison.right))}</div><p class="comparison-footnote">Speaker labels are local to each model input.</p>`;
+  updateCasePlayback(audio);
 }
 
 function selectSample(slug, scroll = true, historyMode = "replace") {
@@ -439,7 +452,6 @@ function selectSample(slug, scroll = true, historyMode = "replace") {
   const changed = state.currentSampleSlug !== slug;
   if (changed) pauseActiveAudio();
   state.currentSampleSlug = slug;
-  if (changed) state.comparison.start = 0;
   $$('[data-sample-panel]').forEach(item => { item.inert = item !== panel; });
   $$('[data-select-sample]').forEach(button => {
     const selected = button.dataset.selectSample === slug;
@@ -488,11 +500,6 @@ function setupSampleBrowser() {
       if (audio.paused) audio.play().catch(() => { $("[data-audio-error]", panel).hidden = false; $("[data-audio-error]", panel).textContent = "Audio could not play. Try the sample player's play control."; });
       else audio.pause();
     }
-    if (event.target.closest("[data-compare-current]")) {
-      state.comparison.start = Math.floor(audio.currentTime / 30) * 30;
-      renderModelComparison();
-      $("[data-compare-current]", browser).focus();
-    }
     const seekTarget = event.target.closest("[data-start], [data-timeline-start], [data-seek]");
     if (seekTarget) {
       audio.currentTime = Number(seekTarget.dataset.start ?? seekTarget.dataset.timelineStart ?? seekTarget.dataset.seek);
@@ -511,6 +518,13 @@ function setupSampleBrowser() {
       updateCasePlayback(audio);
     }
   });
+  browser.addEventListener("input", event => {
+    if (event.target.matches("[data-compare-seek]")) {
+      const audio = $("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`));
+      audio.currentTime = Number(event.target.value);
+      updateCasePlayback(audio);
+    }
+  });
   browser.addEventListener("change", event => {
     if (event.target.matches("[data-compare-model]")) {
       const side = event.target.dataset.compareModel;
@@ -521,10 +535,10 @@ function setupSampleBrowser() {
       renderModelComparison();
       $(`[data-compare-model="${side}"]`, browser).focus();
     }
-    if (event.target.matches("[data-compare-window]")) {
-      state.comparison.start = Number(event.target.value);
-      renderModelComparison();
-      $("[data-compare-window]", browser).focus();
+    if (event.target.matches("[data-compare-follow]")) {
+      state.comparison.follow = event.target.checked;
+      $$('[data-comparison-transcript]', browser).forEach(transcript => delete transcript.dataset.activeIndex);
+      updateCasePlayback($("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`)));
     }
     if (event.target.matches("[data-loop-sample]")) {
       state.loopSample = event.target.checked;
@@ -565,7 +579,7 @@ function renderCases() {
   state.sampleNavObserver?.disconnect();
   pauseActiveAudio();
   const browser = $("[data-case-grid]");
-  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong><span>Scroll between samples; scroll within the transcript to read.</span></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHTML(example.title)}</strong><small>${escapeHTML(example.language)} · ${formatTime(example.clip_duration_seconds)}</small></div></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>View overlap, speaker similarity, and timeline for this sample</summary><div data-sample-analysis-content></div></details><section class="sample-comparison" id="model-comparison" data-model-comparison aria-live="polite"><p class="loading-block">Loading model outputs...</p></section>`;
+  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong><span>Scroll between samples; scroll within the transcript to read.</span></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHTML(example.title)}</strong><small>${escapeHTML(example.language)} · ${formatTime(example.clip_duration_seconds)}</small></div></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>View overlap, speaker similarity, and timeline for this sample</summary><div data-sample-analysis-content></div></details><section class="sample-comparison" id="model-comparison" data-model-comparison><p class="loading-block">Loading model outputs...</p></section>`;
   const stage = $("[data-sample-stage]", browser);
   $$('[data-case-audio]', browser).forEach(audio => {
     const panel = audio.closest("[data-sample-panel]");

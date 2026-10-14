@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261014-model-comparison">
+  <link rel="stylesheet" href="assets/style.css?v=20261014-full-subtitle-sync">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -153,7 +153,6 @@
             <p><strong>Accuracy across tasks.</strong> MOSS-Transcribe-Diarize-Pro has the lowest error on all four metrics. Similar diarization scores can still hide large transcription differences: Qwen3.8-Omni-Flash and pyannote+Qwen3-ASR have DERs of 17.97% and 17.35%, but cpWERs of 29.43% and 43.25%.</p>
             <p><strong>Accuracy and robustness.</strong> MOSS-Transcribe-Diarize and the cascaded system have no excluded inference units. MOSS-Transcribe-Diarize-Pro has 15 excluded units despite its lower error rates, so accuracy and output robustness should be read together.</p>
           </div>
-          <p class="comparison-entry"><a href="#model-comparison">Compare model transcripts and timing on the same audio →</a></p>
           <div class="board-toolbar">
             <div class="segmented" role="group" aria-label="Results view" data-board-toggle>
               <button type="button" class="active" data-view="overall" aria-pressed="true">Error metrics</button>
@@ -162,6 +161,10 @@
             <p data-leaderboard-note>Best and second-best values are marked by column.</p>
           </div>
           <div class="table-wrap module-state" data-module="leaderboard" data-leaderboard aria-live="polite"><p class="loading-block">Loading system results...</p></div>
+          <aside class="comparison-entry">
+            <div><strong>Compare model transcripts and timing on the same audio</strong><p>Listen to an example and follow the reference alongside two model outputs.</p></div>
+            <a class="button button-primary" href="#model-comparison">Listen &amp; compare</a>
+          </aside>
           <details class="method-note">
             <summary>Metric and scoring protocol</summary>
             <div>
@@ -189,8 +192,8 @@
 
         <section class="cases section-pad" id="cases">
           <header class="section-head">
-            <h2>Reference audio cases</h2>
-            <p class="section-note"><strong>Note:</strong> Play an excerpt and read its aligned reference directly below. Scroll between samples, use Previous / Next, or choose a sample from the list. Loop repeats the current audio. Compare two model outputs against the reference below the browser.</p>
+            <h2>Audio examples and model comparison</h2>
+            <p class="section-note"><strong>Note:</strong> Choose an audio example and two models. Play the audio to follow their transcripts alongside the reference.</p>
           </header>
           <div class="sample-browser module-state" data-module="cases" data-case-grid><p class="loading-block">Loading representative cases...</p></div>
         </section>
@@ -204,6 +207,6 @@
   </div>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261014-model-comparison" defer></script>
+  <script src="assets/app.js?v=20261014-full-subtitle-sync" defer></script>
 </body>
 </html>
