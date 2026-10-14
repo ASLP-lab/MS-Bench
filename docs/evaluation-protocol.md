@@ -13,7 +13,7 @@ The reported values are percentages. Lower is better.
 
 ## Inference policies
 
-- MOSS-Transcribe-Diarize-Pro accepts inputs up to 90 minutes.
+- Both MOSS-Transcribe-Diarize-Pro and MOSS-Transcribe-Diarize use inputs up to 90 minutes.
 - VibeVoice-ASR accepts inputs up to 60 minutes.
 - SoulX-Transcriber is evaluated on segments up to 5 minutes.
 - Other systems process complete recordings according to the current paper draft.

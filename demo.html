@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261014-four-scenarios">
+  <link rel="stylesheet" href="assets/style.css?v=20261014-model-comparison">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,7 +28,8 @@
   <div class="page-frame">
     <aside class="side-nav" id="site-nav" data-menu aria-label="Section navigation">
       <nav>
-        <a href="#overview">Overview</a>
+        <a href="#introduction">Overview</a>
+        <a href="#overview">Composition</a>
         <a href="#explore">Explorer</a>
         <a href="#leaderboard">Results</a>
         <a href="#diagnostics">Diagnostics</a>
@@ -42,9 +43,6 @@
           <div class="hero-copy">
             <img class="hero-logo" src="assets/mark.svg?v=20261007-demo-layout" alt="" width="104" height="104">
             <h1><strong>MS-Bench</strong><span>A Condition-Stratified Multi-Speaker ASR Benchmark</span></h1>
-            <div class="paper-abstract">
-              <p>Multi-speaker automatic speech recognition (MSASR) has advanced rapidly with end-to-end speech large language models. However, existing benchmarks cover limited ranges of specific multi-speaker conditions and scenarios, making it difficult to reveal system limitations under diverse conditions and scenarios. We introduce MS-Bench, a condition-stratified benchmark for fine-grained MSASR evaluation. MS-Bench integrates both public and internal benchmarks and characterizes each recording along five dimensions: speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality. We stratify these dimensions into condition ranges and construct MS-Bench with broad coverage of conditions, scenarios, languages, and recording devices. Evaluating representative commercial, open-source, and cascaded systems, we find that overlap affects both lexical recognition and speaker attribution, while other factors exhibit more task-specific effects on recognition, attribution, or temporal prediction. These results demonstrate that aggregate metrics alone obscure important MSASR failure modes and highlight the value of condition-stratified evaluation. MS-Bench aims to reveal condition-specific limitations of current MSASR systems and guide future improvements.</p>
-            </div>
             <div class="hero-actions">
               <a class="button button-primary" href="#cases">Listen to examples</a>
               <a class="button button-secondary" href="#explore">Explore conditions</a>
@@ -60,45 +58,57 @@
           </div>
         </section>
 
+        <section class="benchmark-introduction section-pad" id="introduction">
+          <header class="section-head"><h2>Overview</h2></header>
+          <article class="paper-abstract">
+            <h3>Abstract</h3>
+            <p>Multi-speaker automatic speech recognition (MSASR) has advanced rapidly with end-to-end speech large language models. However, existing benchmarks cover limited ranges of specific multi-speaker conditions and scenarios, making it difficult to reveal system limitations under diverse conditions and scenarios. We introduce MS-Bench, a condition-stratified benchmark for fine-grained MSASR evaluation. MS-Bench integrates both public and internal benchmarks and characterizes each recording along five dimensions: speaker number, overlap ratio, speaker similarity, speaker turn interval, and acoustic quality. We stratify these dimensions into condition ranges and construct MS-Bench with broad coverage of conditions, scenarios, languages, and recording devices. Evaluating representative commercial, open-source, and cascaded systems, we find that overlap affects both lexical recognition and speaker attribution, while other factors exhibit more task-specific effects on recognition, attribution, or temporal prediction. These results demonstrate that aggregate metrics alone obscure important MSASR failure modes and highlight the value of condition-stratified evaluation. MS-Bench aims to reveal condition-specific limitations of current MSASR systems and guide future improvements.</p>
+          </article>
+
+          <article class="construction-pipeline">
+            <h3>Construction pipeline</h3>
+            <figure class="pipeline-figure">
+              <a href="assets/data-construction-pipeline.png" target="_blank" rel="noopener noreferrer" aria-label="View the construction pipeline at full size"><img src="assets/data-construction-pipeline.png" alt="MS-Bench construction pipeline from data sourcing through characterization, condition space, candidate pool, and subset selection." width="3921" height="1463"></a>
+              <figcaption><strong>MS-Bench construction pipeline.</strong> Recordings from public and internal benchmarks are characterized along five condition dimensions and grouped into ranges. A candidate pool is built from these condition profiles to limit over-representation and preserve source diversity. The final subset is selected for condition coverage, multi-factor co-occurrence, condition-profile diversity, and source diversity.</figcaption>
+            </figure>
+          </article>
+        </section>
+
         <section class="overview section-pad" id="overview">
           <header class="section-head">
-            <h2>Benchmark overview</h2>
-            <p class="section-note"><strong>Note:</strong> The five conditions describe different interaction and acoustic properties. Their ranges do not form a single difficulty scale.</p>
+            <h2>Benchmark composition</h2>
           </header>
 
-          <div class="coverage-heading"><h3>Recording conditions</h3><p>Choose a range to explore matching recordings. Each tile shows a recording count and its share of the benchmark.</p></div>
-
-          <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions...</div>
-
-
-          <details class="condition-disclosure">
-            <summary>Measurement definitions and source tier codes</summary>
-            <div data-condition-definitions></div>
-          </details>
+          <article class="condition-panel composition-panel" aria-labelledby="condition-distributions-title">
+            <div class="coverage-heading">
+              <h3 id="condition-distributions-title">Condition distributions</h3>
+              <p class="coverage-note"><strong>Note:</strong> Each range shows its recording count and percentage of the benchmark. Click a range to filter recordings in the Condition Explorer.</p>
+            </div>
+            <div data-condition-coverage class="condition-coverage loading-block" aria-live="polite">Loading condition distributions...</div>
+            <details class="condition-disclosure">
+              <summary>Condition definitions and ranges</summary>
+              <div data-condition-definitions></div>
+            </details>
+          </article>
 
           <div class="composition-layout">
-            <article class="composition-panel scenario-panel">
-              <h3>Scenarios</h3>
-              <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenario descriptions...</div>
+            <article class="composition-panel context-panel">
+              <section class="scenario-section" aria-labelledby="scenarios-title">
+                <h3 id="scenarios-title">Scenarios</h3>
+                <div data-overview-scenarios class="loading-block" aria-live="polite">Loading scenario description...</div>
+              </section>
+              <section class="language-section" aria-labelledby="languages-title">
+                <h3 id="languages-title">Languages</h3>
+                <div data-overview-language class="loading-block" aria-live="polite">Loading language description...</div>
+              </section>
             </article>
-            <article class="composition-panel language-panel">
-              <h3>Languages</h3>
-              <div data-overview-language class="loading-block" aria-live="polite">Loading language description...</div>
+            <article class="composition-panel duration-panel">
+              <h3>Recording duration</h3>
+              <p class="duration-description">Count-based distribution over complete recordings.</p>
+              <div data-overview-duration class="loading-block" aria-live="polite">Loading duration distribution...</div>
             </article>
           </div>
 
-          <article class="duration-panel">
-            <div><h3>Recording duration</h3><p>Count-based distribution over complete recordings.</p></div>
-            <div data-overview-duration class="loading-block" aria-live="polite">Loading duration distribution...</div>
-          </article>
-
-          <details class="pipeline-disclosure">
-            <summary>View data construction pipeline</summary>
-            <figure>
-              <a href="assets/data-construction-pipeline.png" target="_blank"><img src="assets/data-construction-pipeline.png" alt="MS-Bench construction pipeline from data sourcing through characterization, condition space, candidate pool, and subset selection."></a>
-              <figcaption>Data sourcing, characterization, condition-space definition, candidate pooling, and subset selection.</figcaption>
-            </figure>
-          </details>
         </section>
 
         <section class="explorer section-pad" id="explore">
@@ -111,11 +121,11 @@
             <div class="filter-panel" aria-label="Condition filters">
               <div class="filter-toolbar"><div data-active-filters class="active-filters" aria-live="polite"><span>No active filters</span></div><button type="button" data-reset-filters>Reset</button></div>
               <div class="filter-grid">
-                <fieldset class="filter-group" data-filter-axis="P"><legend>Speaker number</legend><div class="filter-options"><button type="button" data-axis="P" data-value="P0">2 speakers</button><button type="button" data-axis="P" data-value="P1">3-4 speakers</button><button type="button" data-axis="P" data-value="P2">5-8 speakers</button><button type="button" data-axis="P" data-value="P3">9+ speakers</button></div></fieldset>
-                <fieldset class="filter-group" data-filter-axis="O"><legend>Overlap ratio</legend><div class="filter-options"><button type="button" data-axis="O" data-value="O0">No overlap</button><button type="button" data-axis="O" data-value="O1">&gt;0 to &lt;10%</button><button type="button" data-axis="O" data-value="O2">10 to &lt;20%</button><button type="button" data-axis="O" data-value="O3">20 to &lt;40%</button><button type="button" data-axis="O" data-value="O4">40 to 100%</button></div></fieldset>
-                <fieldset class="filter-group" data-filter-axis="S"><legend>Speaker similarity</legend><div class="filter-options"><button type="button" data-axis="S" data-value="S0">0 to &lt;0.32</button><button type="button" data-axis="S" data-value="S1">0.32 to &lt;0.49</button><button type="button" data-axis="S" data-value="S2">0.49 to &lt;0.65</button><button type="button" data-axis="S" data-value="S3">0.65 to 1</button></div></fieldset>
-                <fieldset class="filter-group" data-filter-axis="T"><legend>Speaker turn interval</legend><div class="filter-options"><button type="button" data-axis="T" data-value="T0">450+ ms</button><button type="button" data-axis="T" data-value="T1">150 to &lt;450 ms</button><button type="button" data-axis="T" data-value="T2">60 to &lt;150 ms</button><button type="button" data-axis="T" data-value="T3">0 to &lt;60 ms</button></div></fieldset>
-                <fieldset class="filter-group" data-filter-axis="N"><legend>Acoustic quality</legend><div class="filter-options"><button type="button" data-axis="N" data-value="N0">Least degraded</button><button type="button" data-axis="N" data-value="N1">Less degraded</button><button type="button" data-axis="N" data-value="N2">More degraded</button><button type="button" data-axis="N" data-value="N3">Most degraded</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="P"><legend>Speaker number</legend><div class="filter-options"><button type="button" data-axis="P" data-value="P0">2 speakers</button><button type="button" data-axis="P" data-value="P1">3-4 speakers</button><button type="button" data-axis="P" data-value="P2">5-8 speakers</button><button type="button" data-axis="P" data-value="P3">≥9 speakers</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="O"><legend>Overlap ratio</legend><div class="filter-options"><button type="button" data-axis="O" data-value="O0">0%</button><button type="button" data-axis="O" data-value="O1">(0%, 10%)</button><button type="button" data-axis="O" data-value="O2">[10%, 20%)</button><button type="button" data-axis="O" data-value="O3">[20%, 40%)</button><button type="button" data-axis="O" data-value="O4">[40%, 100%]</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="S"><legend>Speaker similarity</legend><div class="filter-options"><button type="button" data-axis="S" data-value="S0">[0.00, 0.32)</button><button type="button" data-axis="S" data-value="S1">[0.32, 0.49)</button><button type="button" data-axis="S" data-value="S2">[0.49, 0.65)</button><button type="button" data-axis="S" data-value="S3">[0.65, 1.00]</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="T"><legend>Speaker turn interval</legend><div class="filter-options"><button type="button" data-axis="T" data-value="T0">≥450 ms</button><button type="button" data-axis="T" data-value="T1">[150, 450) ms</button><button type="button" data-axis="T" data-value="T2">[60, 150) ms</button><button type="button" data-axis="T" data-value="T3">[0, 60) ms</button></div></fieldset>
+                <fieldset class="filter-group" data-filter-axis="N"><legend>Acoustic quality</legend><div class="filter-options"><button type="button" data-axis="N" data-value="N0">[0.00, 0.27)</button><button type="button" data-axis="N" data-value="N1">[0.27, 0.51)</button><button type="button" data-axis="N" data-value="N2">[0.51, 0.74)</button><button type="button" data-axis="N" data-value="N3">[0.74, 1.00]</button></div></fieldset>
               </div>
             </div>
 
@@ -125,12 +135,11 @@
                 <dl>
                   <div><dt>Total duration</dt><dd data-total-duration>-</dd></div>
                   <div><dt>Median duration</dt><dd data-median-duration>-</dd></div>
-                  <div><dt>Mean recording overlap</dt><dd data-average-overlap>-</dd></div>
+                  <div><dt>Duration-weighted overlap</dt><dd data-average-overlap>-</dd></div>
                   <div><dt>Languages</dt><dd data-language-count>-</dd></div>
                   <div><dt>Settings</dt><dd data-scenario-count>-</dd></div>
                 </dl>
               </div>
-              <div class="curated-block"><h3>Matching reference excerpts</h3><div class="representative-list" data-representatives aria-live="polite"><p class="empty-state">Loading curated matches...</p></div></div>
             </div>
           </div>
         </section>
@@ -140,6 +149,11 @@
             <h2>Overall performance</h2>
             <p class="section-note"><strong>Note:</strong> Seven systems from the paper. Lower is better for every error metric. DER uses a 0.5-second collar; tcpWER uses a 5-second collar.</p>
           </header>
+          <div class="performance-findings">
+            <p><strong>Accuracy across tasks.</strong> MOSS-Transcribe-Diarize-Pro has the lowest error on all four metrics. Similar diarization scores can still hide large transcription differences: Qwen3.8-Omni-Flash and pyannote+Qwen3-ASR have DERs of 17.97% and 17.35%, but cpWERs of 29.43% and 43.25%.</p>
+            <p><strong>Accuracy and robustness.</strong> MOSS-Transcribe-Diarize and the cascaded system have no excluded inference units. MOSS-Transcribe-Diarize-Pro has 15 excluded units despite its lower error rates, so accuracy and output robustness should be read together.</p>
+          </div>
+          <p class="comparison-entry"><a href="#model-comparison">Compare model transcripts and timing on the same audio →</a></p>
           <div class="board-toolbar">
             <div class="segmented" role="group" aria-label="Results view" data-board-toggle>
               <button type="button" class="active" data-view="overall" aria-pressed="true">Error metrics</button>
@@ -160,7 +174,6 @@
         <section class="diagnostics section-pad" id="diagnostics">
           <header class="section-head">
             <h2>Condition-wise analysis</h2>
-            <p class="section-note"><strong>Note:</strong> Point estimates, direction, significance, controls, and limitations are shown together.</p>
           </header>
           <div class="diagnostic-shell module-state" data-module="diagnostics">
             <div class="diagnostic-tabs" role="tablist" aria-label="Diagnostic dimension" data-diagnostic-tabs>
@@ -177,7 +190,7 @@
         <section class="cases section-pad" id="cases">
           <header class="section-head">
             <h2>Reference audio cases</h2>
-            <p class="section-note"><strong>Note:</strong> Play an excerpt and read its aligned reference directly below. Scroll between samples, use Previous / Next, or choose a sample from the list. Loop repeats the current audio.</p>
+            <p class="section-note"><strong>Note:</strong> Play an excerpt and read its aligned reference directly below. Scroll between samples, use Previous / Next, or choose a sample from the list. Loop repeats the current audio. Compare two model outputs against the reference below the browser.</p>
           </header>
           <div class="sample-browser module-state" data-module="cases" data-case-grid><p class="loading-block">Loading representative cases...</p></div>
         </section>
@@ -191,6 +204,6 @@
   </div>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261014-four-scenarios" defer></script>
+  <script src="assets/app.js?v=20261014-model-comparison" defer></script>
 </body>
 </html>
