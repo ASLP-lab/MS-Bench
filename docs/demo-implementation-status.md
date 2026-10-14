@@ -1,5 +1,10 @@
 # Demo implementation status
 
+## Shorter audio title and continuous reference following (2026-10-14)
+
+- Shorten the section title to Audio examples. Keep the main reference transcript following playback after wheel, touch, and keyboard interactions, rather than silently disabling the checkbox. Retain explicit pause/resume controls for readers.
+- Follow the nearest reference utterance during pauses, and recenter on playback start. Model comparison panes continue to follow the same shared audio.
+
 ## Full-example transcript playback and clearer comparison entry (2026-10-14)
 
 - Edit main directly. Replace the 30-second comparison selector with shared Play/Pause and progress controls for the entire existing example excerpt. Render all exported utterances and independently highlight/scroll Reference, Model A, and Model B with playback; Follow subtitles can pause scrolling while retaining highlights. Model changes follow the current playback time.

@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261014-full-subtitle-sync";
+const DATA_VERSION = "20261014-audio-follow";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
@@ -373,7 +373,7 @@ function updateCasePlayback(audio) {
     cursor.setAttribute("x1", x);
     cursor.setAttribute("x2", x);
   }
-  const first = active[0];
+  const first = active[0] || lines.filter(line => Number(line.dataset.start) <= audio.currentTime).at(-1) || lines[0];
   const follow = $("[data-follow-playback]", detail);
   if (first && follow?.checked && transcript.dataset.activeIndex !== first.dataset.captionIndex) {
     transcript.dataset.activeIndex = first.dataset.captionIndex;
@@ -584,7 +584,7 @@ function renderCases() {
   $$('[data-case-audio]', browser).forEach(audio => {
     const panel = audio.closest("[data-sample-panel]");
     const transcript = $("[data-transcript]", panel);
-    audio.addEventListener("play", () => { pauseActiveAudio(audio); audio.loop = state.loopSample; updateCasePlayback(audio); });
+    audio.addEventListener("play", () => { pauseActiveAudio(audio); audio.loop = state.loopSample; delete transcript.dataset.activeIndex; updateCasePlayback(audio); });
     audio.addEventListener("pause", () => { if (state.activeAudio === audio) state.activeAudio = null; updateCasePlayback(audio); });
     audio.addEventListener("timeupdate", () => updateCasePlayback(audio));
     audio.addEventListener("seeked", () => updateCasePlayback(audio));
@@ -593,13 +593,6 @@ function renderCases() {
       error.hidden = false;
       error.textContent = "This audio could not load. Try another sample or reload the page.";
     });
-    const stopFollow = () => {
-      const follow = $("[data-follow-playback]", panel);
-      if (follow.checked) { follow.checked = false; $("[data-resume-follow]", panel).hidden = false; }
-    };
-    transcript.addEventListener("wheel", stopFollow, { passive: true });
-    transcript.addEventListener("touchstart", stopFollow, { passive: true });
-    transcript.addEventListener("keydown", event => { if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End"].includes(event.key)) stopFollow(); });
   });
   const requested = new URL(location.href).searchParams.get("case") || state.currentSampleSlug;
   const initial = state.examples.some(example => example.slug === requested) ? requested : state.examples[0].slug;
