@@ -1,5 +1,39 @@
 # Demo implementation status
 
+## Natural Chinese copy and free transcript seeking (2026-10-18)
+
+- Rename samples 8 and 10 to Meeting. Use Podcast / 播客 for sample 3, Film / 影视剧 for samples 4 and 11, and Natural conversation / 自然交谈 for sample 12; canonical scenarios and audio remain unchanged. Replace sample 7 with AMI ES2014d, a four-speaker English meeting with 11.57% overlap and a longer turn interval. Retire the old film sample's slug rather than attaching different audio to its old result identity.
+- Rewrite the Chinese abstract, pipeline caption, condition explanations, results commentary, diagnostic notes/findings, and playback instructions for Chinese readers. Preserve numerical results, analysis assumptions, and source transcript wording. Use shorter controls such as 边听边看 and 恢复自动跟随.
+- Allow manual browsing while audio continues. Pointer interaction pauses automatic following before a row can move; wheel and keyboard browsing pause following too. Clicking any valid reference/model caption seeks, starts playback, and resumes following in all panes. Metadata-aware seeking handles a cold audio load, and only the latest seek request is applied. Keep the follow-control height stable so showing the resume button cannot move a row during a click.
+
+
+- Verified actual nested-text clicks in reference and both model columns across all twelve cases, scrolling while playback continues, resume controls, keyboard activation, metadata-not-ready playback, and touch taps. Source text is unchanged across language switches. Checked five viewport widths in light/dark Chinese layouts and accessibility. Verified all 6,073 model utterances against source text, speaker IDs, timestamps, and SHA-256 hashes; canonical data validation passes.
+
+## English/Chinese interface and compact audio details (2026-10-18)
+
+- Apply Taste-Skill as a preservation pass (design variance 3, motion intensity 2, visual density 5). Add a compact header language button using existing colors, borders, radii, and focus styles; retain navigation anchors and the page structure. Chinese layout uses the existing system font stack.
+- Translate navigation, abstract, pipeline caption, condition definitions, results, analysis notes/findings, sample metadata, and playback controls. Keep English model/metric identifiers and source transcripts unchanged. The explicit catalog supports dynamic controls, accessible labels, scientific subscripts, saved preference, and locale URLs without rebuilding audio or resetting application state.
+- Merge audio instructions into one Note. Simplify the five requested example titles and provide Chinese equivalents. Remove source speaker labels, overlap summary, and recording-device details from the optional panel, preserving underlying provenance and timeline annotations.
+
+
+- Verified language switching during real playback without changing the selected sample, models, filters, or analysis dimension. Confirmed source transcript text is identical across languages, all five diagnostic notes retain scientific subscripts, locale URL/preference restoration, requested names and removed details, five viewport widths in both themes/languages, and accessibility. Replaced invalid numeric aria-label usage with visually hidden final values so animated diagnostics remain readable to assistive technology. Canonical validation passes for 99 recordings, seven systems, and twelve examples.
+
+## Move sample context into the audio list (2026-10-16)
+
+- Move Sample number, normalized scenario, and language into each left-hand audio entry, alongside its title. Keep duration out of the list. Remove the duplicate metadata row from the right-hand detail header.
+- Use a compact three-line hierarchy and preserve mobile horizontal navigation, selection, focus states, and the current palette.
+
+## Curated audio examples and exact condition values (2026-10-16)
+
+- Apply Taste-Skill as a focused preservation pass (design variance 3, motion intensity 2, visual density 5): keep the blue-gray palette, original five-axis colors, and established layout. Use a quieter index/title sidebar and give concrete condition measurements stronger type, with ranges secondary. Existing viewport, focus, contrast, and playback-follow behavior remain part of validation.
+- Remove the former Sample 06 (smart-glasses gathering); add three English examples spanning an overlapping workplace meeting, multi-character film dialogue, and a clear everyday conversation. Twelve examples now cover all four normalized scenario groups. Rename retained examples by content type.
+- Play sources shorter than ten minutes in full. The former Fast podcast exchange is Podcast discussion, with its complete 373.03-second recording. Rebuild the extended audio, corrected transcript timelines, overlap annotations, and model display exports together.
+- Keep the currently followed line visible after viewport reflow; resize observation updates reference and model panes. Version audio URLs alongside data to refresh extended recordings.
+- Show exact condition values above ranges. Check continuous values against the requested metrics JSONL; retain corrected-reference speaker numbers and established acoustic degradation. Keep source speaker-number discrepancies in provenance. NOTSOFAR's missing source-pair labels remain explicitly unavailable.
+
+
+- Verified all 6,061 exported model utterances against raw text, speaker IDs, source offsets, and SHA-256 hashes. Confirmed deterministic rebuilds, all twelve audio durations, playback beyond the podcast's former cutoff, all reference/model panes, five viewport widths in both themes, accessible contrast/focus, and active-line visibility after resize. Canonical validation passes for 99 recordings and seven systems.
+
 ## Shorter audio title and continuous reference following (2026-10-14)
 
 - Shorten the section title to Audio examples. Keep the main reference transcript following playback after wheel, touch, and keyboard interactions, rather than silently disabling the checkbox. Retain explicit pause/resume controls for readers.

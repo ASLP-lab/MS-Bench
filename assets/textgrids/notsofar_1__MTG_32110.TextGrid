@@ -1,0 +1,5726 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 474.93
+tiers? <exists>
+size = 7
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 202
+        intervals [1]:
+            xmin = 0.0
+            xmax = 6.28
+            text = ""
+        intervals [2]:
+            xmin = 6.28
+            xmax = 8.71
+            text = "OK guys, uh, thank you for joining today."
+        intervals [3]:
+            xmin = 8.71
+            xmax = 9.2
+            text = ""
+        intervals [4]:
+            xmin = 9.2
+            xmax = 14.84
+            text = "Uh we're gonna talk about some <FILL/> issues that have come up in the amusement park with uh complaints."
+        intervals [5]:
+            xmin = 14.84
+            xmax = 15.26
+            text = ""
+        intervals [6]:
+            xmin = 15.26
+            xmax = 16.21
+            text = "Um <ST/>"
+        intervals [7]:
+            xmin = 16.21
+            xmax = 17.25
+            text = ""
+        intervals [8]:
+            xmin = 17.25
+            xmax = 18.16
+            text = "So <ST/>"
+        intervals [9]:
+            xmin = 18.16
+            xmax = 21.13
+            text = ""
+        intervals [10]:
+            xmin = 21.13
+            xmax = 23.33
+            text = "Wait wait wait I haven't talked about it."
+        intervals [11]:
+            xmin = 23.33
+            xmax = 25.21
+            text = ""
+        intervals [12]:
+            xmin = 25.21
+            xmax = 25.59
+            text = "<BA/>"
+        intervals [13]:
+            xmin = 25.59
+            xmax = 31.41
+            text = "<FILL/> A big part of the company is customer support. We need to make sure that our clients are satisfied."
+        intervals [14]:
+            xmin = 31.41
+            xmax = 31.67
+            text = ""
+        intervals [15]:
+            xmin = 31.67
+            xmax = 33.18
+            text = "We want them to come back."
+        intervals [16]:
+            xmin = 33.18
+            xmax = 33.57
+            text = ""
+        intervals [17]:
+            xmin = 33.57
+            xmax = 34.17
+            text = "OK."
+        intervals [18]:
+            xmin = 34.17
+            xmax = 34.49
+            text = ""
+        intervals [19]:
+            xmin = 34.49
+            xmax = 42.3
+            text = "It's very important, even if we have people that are unhappy we need to give them, um, free food, we need to give them, uh, vouchers, anything."
+        intervals [20]:
+            xmin = 42.3
+            xmax = 42.82
+            text = ""
+        intervals [21]:
+            xmin = 42.82
+            xmax = 45.29
+            text = "Of course we're gonna come across people that are very annoying <ST/>"
+        intervals [22]:
+            xmin = 45.29
+            xmax = 45.59
+            text = ""
+        intervals [23]:
+            xmin = 45.59
+            xmax = 48.0
+            text = "<ST/> people we don't wanna deal with but that's part of the business."
+        intervals [24]:
+            xmin = 48.0
+            xmax = 48.82
+            text = ""
+        intervals [25]:
+            xmin = 48.82
+            xmax = 49.37
+            text = "OK."
+        intervals [26]:
+            xmin = 49.37
+            xmax = 51.37
+            text = ""
+        intervals [27]:
+            xmin = 51.37
+            xmax = 54.99
+            text = "The problem is <ST/> is people saying the lines are too long. They're saying it's too hot."
+        intervals [28]:
+            xmin = 54.99
+            xmax = 55.31
+            text = ""
+        intervals [29]:
+            xmin = 55.31
+            xmax = 59.15
+            text = "They're saying that they're waiting to get water and then those lines are too hot."
+        intervals [30]:
+            xmin = 59.15
+            xmax = 65.68
+            text = ""
+        intervals [31]:
+            xmin = 65.68
+            xmax = 69.39
+            text = "So right now on the team we have twenty people, but that's still not even enough, so we need to <ST/>"
+        intervals [32]:
+            xmin = 69.39
+            xmax = 70.44
+            text = ""
+        intervals [33]:
+            xmin = 70.44
+            xmax = 71.89
+            text = "Twenty people on the phone lines."
+        intervals [34]:
+            xmin = 71.89
+            xmax = 73.46
+            text = ""
+        intervals [35]:
+            xmin = 73.46
+            xmax = 73.91
+            text = "Mmm."
+        intervals [36]:
+            xmin = 73.91
+            xmax = 76.9
+            text = ""
+        intervals [37]:
+            xmin = 76.9
+            xmax = 77.62
+            text = "The queues."
+        intervals [38]:
+            xmin = 77.62
+            xmax = 79.97
+            text = ""
+        intervals [39]:
+            xmin = 79.97
+            xmax = 84.96
+            text = "So that's what I wanna talk about I wanna talk about how we should give service to people that are waiting in the sun."
+        intervals [40]:
+            xmin = 84.96
+            xmax = 85.06
+            text = ""
+        intervals [41]:
+            xmin = 85.06
+            xmax = 88.32
+            text = "You shouldn't have to be suffering for two hours to wait to get on a ride."
+        intervals [42]:
+            xmin = 88.32
+            xmax = 94.56
+            text = ""
+        intervals [43]:
+            xmin = 94.56
+            xmax = 95.49
+            text = "Portable shade."
+        intervals [44]:
+            xmin = 95.49
+            xmax = 100.97
+            text = ""
+        intervals [45]:
+            xmin = 100.97
+            xmax = 102.829
+            text = "We <FILL/> <ST/> We can give one at the entrance."
+        intervals [46]:
+            xmin = 102.829
+            xmax = 103.46
+            text = ""
+        intervals [47]:
+            xmin = 103.46
+            xmax = 106.33
+            text = "Well maybe we can charge them money <ST/> it's a way to make more marketing."
+        intervals [48]:
+            xmin = 106.33
+            xmax = 110.43
+            text = ""
+        intervals [49]:
+            xmin = 110.43
+            xmax = 110.85
+            text = "Yeah."
+        intervals [50]:
+            xmin = 110.85
+            xmax = 117.09
+            text = ""
+        intervals [51]:
+            xmin = 117.09
+            xmax = 117.52
+            text = "Yeah."
+        intervals [52]:
+            xmin = 117.52
+            xmax = 117.63
+            text = ""
+        intervals [53]:
+            xmin = 117.63
+            xmax = 118.7
+            text = "These are the great ideas."
+        intervals [54]:
+            xmin = 118.7
+            xmax = 122.52
+            text = ""
+        intervals [55]:
+            xmin = 122.52
+            xmax = 122.87
+            text = "Mmm."
+        intervals [56]:
+            xmin = 122.87
+            xmax = 124.03
+            text = ""
+        intervals [57]:
+            xmin = 124.03
+            xmax = 124.35
+            text = "<UNKNOWN/>"
+        intervals [58]:
+            xmin = 124.35
+            xmax = 126.74
+            text = ""
+        intervals [59]:
+            xmin = 126.74
+            xmax = 128.45
+            text = "Another problem <ST/> Another <ST/>"
+        intervals [60]:
+            xmin = 128.45
+            xmax = 132.98
+            text = ""
+        intervals [61]:
+            xmin = 132.98
+            xmax = 133.49
+            text = "Right."
+        intervals [62]:
+            xmin = 133.49
+            xmax = 134.62
+            text = ""
+        intervals [63]:
+            xmin = 134.62
+            xmax = 135.43
+            text = "Uh, correct."
+        intervals [64]:
+            xmin = 135.43
+            xmax = 137.22
+            text = ""
+        intervals [65]:
+            xmin = 137.22
+            xmax = 137.78
+            text = "Yes."
+        intervals [66]:
+            xmin = 137.78
+            xmax = 138.65
+            text = ""
+        intervals [67]:
+            xmin = 138.65
+            xmax = 139.47
+            text = "A hundred percent."
+        intervals [68]:
+            xmin = 139.47
+            xmax = 139.7
+            text = ""
+        intervals [69]:
+            xmin = 139.7
+            xmax = 143.07
+            text = "Another issue they have is space, people feel claustrophobic."
+        intervals [70]:
+            xmin = 143.07
+            xmax = 143.68
+            text = ""
+        intervals [71]:
+            xmin = 143.68
+            xmax = 144.64
+            text = "In the lines."
+        intervals [72]:
+            xmin = 144.64
+            xmax = 145.24
+            text = ""
+        intervals [73]:
+            xmin = 145.24
+            xmax = 147.71
+            text = "Also on the rides, people get uncomfortable."
+        intervals [74]:
+            xmin = 147.71
+            xmax = 148.03
+            text = ""
+        intervals [75]:
+            xmin = 148.03
+            xmax = 148.76
+            text = "Now <ST/>"
+        intervals [76]:
+            xmin = 148.76
+            xmax = 149.17
+            text = ""
+        intervals [77]:
+            xmin = 149.17
+            xmax = 150.46
+            text = "There's so much we can do."
+        intervals [78]:
+            xmin = 150.46
+            xmax = 161.36
+            text = ""
+        intervals [79]:
+            xmin = 161.36
+            xmax = 164.44
+            text = "The <ST/> The problem with scheduling is that it's not good for us."
+        intervals [80]:
+            xmin = 164.44
+            xmax = 164.54
+            text = ""
+        intervals [81]:
+            xmin = 164.54
+            xmax = 169.73
+            text = "We want as many people as possible. For them it's convenient, for us it's not 'cause we don't care if there's lines."
+        intervals [82]:
+            xmin = 169.73
+            xmax = 170.98
+            text = ""
+        intervals [83]:
+            xmin = 170.98
+            xmax = 171.49
+            text = "Yeah."
+        intervals [84]:
+            xmin = 171.49
+            xmax = 176.72
+            text = ""
+        intervals [85]:
+            xmin = 176.72
+            xmax = 178.76
+            text = "We can do that but that's also a lot of money."
+        intervals [86]:
+            xmin = 178.76
+            xmax = 182.37
+            text = ""
+        intervals [87]:
+            xmin = 182.37
+            xmax = 185.21
+            text = "The fast pass, but not everyone has money for that, that's the issue."
+        intervals [88]:
+            xmin = 185.21
+            xmax = 185.49
+            text = ""
+        intervals [89]:
+            xmin = 185.49
+            xmax = 188.51
+            text = "We don't wanna seclude it and be like OK if you have money <ST/>"
+        intervals [90]:
+            xmin = 188.51
+            xmax = 205.93
+            text = ""
+        intervals [91]:
+            xmin = 205.93
+            xmax = 206.47
+            text = "Yeah."
+        intervals [92]:
+            xmin = 206.47
+            xmax = 206.73
+            text = ""
+        intervals [93]:
+            xmin = 206.73
+            xmax = 207.84
+            text = "Mm-hmm, yeah."
+        intervals [94]:
+            xmin = 207.84
+            xmax = 213.97
+            text = ""
+        intervals [95]:
+            xmin = 213.97
+            xmax = 214.5
+            text = "We'll get <ST/>"
+        intervals [96]:
+            xmin = 214.5
+            xmax = 215.01
+            text = ""
+        intervals [97]:
+            xmin = 215.01
+            xmax = 215.58
+            text = "Yes."
+        intervals [98]:
+            xmin = 215.58
+            xmax = 226.49
+            text = ""
+        intervals [99]:
+            xmin = 226.49
+            xmax = 227.0
+            text = "Yes."
+        intervals [100]:
+            xmin = 227.0
+            xmax = 232.12
+            text = ""
+        intervals [101]:
+            xmin = 232.12
+            xmax = 232.49
+            text = "Right."
+        intervals [102]:
+            xmin = 232.49
+            xmax = 233.69
+            text = ""
+        intervals [103]:
+            xmin = 233.69
+            xmax = 238.67
+            text = "So another problem is our security. I'm seeing people are bringing in and <FILL/> <ST/> and sneaking in people."
+        intervals [104]:
+            xmin = 238.67
+            xmax = 238.91
+            text = ""
+        intervals [105]:
+            xmin = 238.91
+            xmax = 241.44
+            text = "That seems very difficult but people are able to it <ST/>"
+        intervals [106]:
+            xmin = 241.44
+            xmax = 241.69
+            text = ""
+        intervals [107]:
+            xmin = 241.69
+            xmax = 242.21
+            text = "<ST/> because <ST/>"
+        intervals [108]:
+            xmin = 242.21
+            xmax = 243.23
+            text = ""
+        intervals [109]:
+            xmin = 243.23
+            xmax = 247.06
+            text = "Uh, no, they're walking in. People are jumping over the fences when people aren't looking."
+        intervals [110]:
+            xmin = 247.06
+            xmax = 254.86
+            text = ""
+        intervals [111]:
+            xmin = 254.86
+            xmax = 255.15
+            text = "<UNKNOWN/> <UNKNOWN/>"
+        intervals [112]:
+            xmin = 255.15
+            xmax = 255.47
+            text = ""
+        intervals [113]:
+            xmin = 255.47
+            xmax = 256.59
+            text = "That's also a problem."
+        intervals [114]:
+            xmin = 256.59
+            xmax = 257.96
+            text = ""
+        intervals [115]:
+            xmin = 257.96
+            xmax = 258.34
+            text = "Yeah."
+        intervals [116]:
+            xmin = 258.34
+            xmax = 273.03
+            text = ""
+        intervals [117]:
+            xmin = 273.03
+            xmax = 273.55
+            text = "Yes."
+        intervals [118]:
+            xmin = 273.55
+            xmax = 274.81
+            text = ""
+        intervals [119]:
+            xmin = 274.81
+            xmax = 282.09
+            text = "Our problem is on <ST/> on Google Chrome it has no bugs, on in <ST/> on Explorer it lags. So we still need to talk about that and fix it <ST/>"
+        intervals [120]:
+            xmin = 282.09
+            xmax = 282.19
+            text = ""
+        intervals [121]:
+            xmin = 282.19
+            xmax = 288.24
+            text = "<ST/> 'cause that's part of the experience. People will go onto the website, if they don't like what they see and it's uncomfortable, they will leave."
+        intervals [122]:
+            xmin = 288.24
+            xmax = 293.92
+            text = ""
+        intervals [123]:
+            xmin = 293.92
+            xmax = 294.44
+            text = "Yeah."
+        intervals [124]:
+            xmin = 294.44
+            xmax = 297.33
+            text = ""
+        intervals [125]:
+            xmin = 297.33
+            xmax = 297.81
+            text = "Yes."
+        intervals [126]:
+            xmin = 297.81
+            xmax = 302.82
+            text = ""
+        intervals [127]:
+            xmin = 302.82
+            xmax = 303.23
+            text = "Mm-hmm."
+        intervals [128]:
+            xmin = 303.23
+            xmax = 305.16
+            text = ""
+        intervals [129]:
+            xmin = 305.16
+            xmax = 305.66
+            text = "Yes."
+        intervals [130]:
+            xmin = 305.66
+            xmax = 308.39
+            text = ""
+        intervals [131]:
+            xmin = 308.39
+            xmax = 309.07
+            text = "Yes."
+        intervals [132]:
+            xmin = 309.07
+            xmax = 311.7
+            text = ""
+        intervals [133]:
+            xmin = 311.7
+            xmax = 312.08
+            text = "Right."
+        intervals [134]:
+            xmin = 312.08
+            xmax = 318.01
+            text = ""
+        intervals [135]:
+            xmin = 318.01
+            xmax = 319.5
+            text = "Great. Yes, yeah."
+        intervals [136]:
+            xmin = 319.5
+            xmax = 320.19
+            text = ""
+        intervals [137]:
+            xmin = 320.19
+            xmax = 320.84
+            text = "Yes."
+        intervals [138]:
+            xmin = 320.84
+            xmax = 322.18
+            text = ""
+        intervals [139]:
+            xmin = 322.18
+            xmax = 322.6
+            text = "Yeah."
+        intervals [140]:
+            xmin = 322.6
+            xmax = 323.83
+            text = ""
+        intervals [141]:
+            xmin = 323.83
+            xmax = 324.42
+            text = "Yeah."
+        intervals [142]:
+            xmin = 324.42
+            xmax = 329.2
+            text = ""
+        intervals [143]:
+            xmin = 329.2
+            xmax = 331.05
+            text = "Also the claustrophobic part."
+        intervals [144]:
+            xmin = 331.05
+            xmax = 332.06
+            text = ""
+        intervals [145]:
+            xmin = 332.06
+            xmax = 334.32
+            text = "Very important now 'cause people wanna be comfortable."
+        intervals [146]:
+            xmin = 334.32
+            xmax = 341.85
+            text = ""
+        intervals [147]:
+            xmin = 341.85
+            xmax = 344.98
+            text = "And sneaking people in, sneaking people in. 'Cause then we lose <ST/>"
+        intervals [148]:
+            xmin = 344.98
+            xmax = 351.62
+            text = ""
+        intervals [149]:
+            xmin = 351.62
+            xmax = 352.35
+            text = "OK so <ST/>"
+        intervals [150]:
+            xmin = 352.35
+            xmax = 354.86
+            text = ""
+        intervals [151]:
+            xmin = 354.86
+            xmax = 355.34
+            text = "Yeah."
+        intervals [152]:
+            xmin = 355.34
+            xmax = 356.96
+            text = ""
+        intervals [153]:
+            xmin = 356.96
+            xmax = 361.84
+            text = "<PName> Donald </PName> , I want you to check please, for a company that can, uh, help us with our security."
+        intervals [154]:
+            xmin = 361.84
+            xmax = 362.27
+            text = ""
+        intervals [155]:
+            xmin = 362.27
+            xmax = 365.07
+            text = "And to check the website and get it back to me with that on Tuesday."
+        intervals [156]:
+            xmin = 365.07
+            xmax = 369.44
+            text = ""
+        intervals [157]:
+            xmin = 369.44
+            xmax = 369.85
+            text = "Great."
+        intervals [158]:
+            xmin = 369.85
+            xmax = 371.23
+            text = ""
+        intervals [159]:
+            xmin = 371.23
+            xmax = 371.76
+            text = "Perfect."
+        intervals [160]:
+            xmin = 371.76
+            xmax = 371.91
+            text = ""
+        intervals [161]:
+            xmin = 371.91
+            xmax = 374.7
+            text = "Come back with the numbers, get a quote for me, and then let me know."
+        intervals [162]:
+            xmin = 374.7
+            xmax = 376.24
+            text = ""
+        intervals [163]:
+            xmin = 376.24
+            xmax = 377.07
+            text = "OK, that's great."
+        intervals [164]:
+            xmin = 377.07
+            xmax = 390.65
+            text = ""
+        intervals [165]:
+            xmin = 390.65
+            xmax = 391.08
+            text = "Yeah."
+        intervals [166]:
+            xmin = 391.08
+            xmax = 394.28
+            text = ""
+        intervals [167]:
+            xmin = 394.28
+            xmax = 394.92
+            text = "Yes."
+        intervals [168]:
+            xmin = 394.92
+            xmax = 395.5
+            text = ""
+        intervals [169]:
+            xmin = 395.5
+            xmax = 396.38
+            text = "We can do that."
+        intervals [170]:
+            xmin = 396.38
+            xmax = 405.04
+            text = ""
+        intervals [171]:
+            xmin = 405.04
+            xmax = 408.18
+            text = "We need more recruitment for people even to listen to the recordings."
+        intervals [172]:
+            xmin = 408.18
+            xmax = 409.32
+            text = ""
+        intervals [173]:
+            xmin = 409.32
+            xmax = 409.85
+            text = "OK."
+        intervals [174]:
+            xmin = 409.85
+            xmax = 411.15
+            text = ""
+        intervals [175]:
+            xmin = 411.15
+            xmax = 416.37
+            text = "Yes so I'm gonna <ST/> I'm gonna now sit with uh <ST/> with <PName> Donald </PName> and we're gonna have a conversation."
+        intervals [176]:
+            xmin = 416.37
+            xmax = 416.73
+            text = ""
+        intervals [177]:
+            xmin = 416.73
+            xmax = 421.04
+            text = "We're gonna see where we're at. We're gonna see who we're gonna bring into our team to help us move forward."
+        intervals [178]:
+            xmin = 421.04
+            xmax = 424.4
+            text = ""
+        intervals [179]:
+            xmin = 424.4
+            xmax = 424.86
+            text = "Yeah."
+        intervals [180]:
+            xmin = 424.86
+            xmax = 426.89
+            text = ""
+        intervals [181]:
+            xmin = 426.89
+            xmax = 427.27
+            text = "Yeah."
+        intervals [182]:
+            xmin = 427.27
+            xmax = 428.07
+            text = ""
+        intervals [183]:
+            xmin = 428.07
+            xmax = 428.5
+            text = "Yeah."
+        intervals [184]:
+            xmin = 428.5
+            xmax = 435.63
+            text = ""
+        intervals [185]:
+            xmin = 435.63
+            xmax = 436.55
+            text = "Uh <ST/> Uh <ST/> Uh <ST/>"
+        intervals [186]:
+            xmin = 436.55
+            xmax = 448.43
+            text = ""
+        intervals [187]:
+            xmin = 448.43
+            xmax = 449.53
+            text = "Yeah, yeah."
+        intervals [188]:
+            xmin = 449.53
+            xmax = 451.93
+            text = ""
+        intervals [189]:
+            xmin = 451.93
+            xmax = 456.29
+            text = "Another small thing maybe is, um, people say there's not enough finger food <ST/>"
+        intervals [190]:
+            xmin = 456.29
+            xmax = 456.76
+            text = ""
+        intervals [191]:
+            xmin = 456.76
+            xmax = 458.99
+            text = "<ST/> on the street, like not by the food court."
+        intervals [192]:
+            xmin = 458.99
+            xmax = 460.46
+            text = ""
+        intervals [193]:
+            xmin = 460.46
+            xmax = 464.76
+            text = "But we don't want people getting sick just before the rides that's also something."
+        intervals [194]:
+            xmin = 464.76
+            xmax = 468.05
+            text = ""
+        intervals [195]:
+            xmin = 468.05
+            xmax = 468.85
+            text = "Yes."
+        intervals [196]:
+            xmin = 468.85
+            xmax = 470.1
+            text = ""
+        intervals [197]:
+            xmin = 470.1
+            xmax = 471.09
+            text = "Like guacamole."
+        intervals [198]:
+            xmin = 471.09
+            xmax = 473.13
+            text = ""
+        intervals [199]:
+            xmin = 473.13
+            xmax = 473.61
+            text = "Yeah."
+        intervals [200]:
+            xmin = 473.61
+            xmax = 474.07
+            text = ""
+        intervals [201]:
+            xmin = 474.07
+            xmax = 474.57
+            text = "That's good."
+        intervals [202]:
+            xmin = 474.57
+            xmax = 474.93
+            text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 264
+        intervals [1]:
+            xmin = 0.0
+            xmax = 7.61
+            text = ""
+        intervals [2]:
+            xmin = 7.61
+            xmax = 8.06
+            text = "<BA/>"
+        intervals [3]:
+            xmin = 8.06
+            xmax = 15.17
+            text = ""
+        intervals [4]:
+            xmin = 15.17
+            xmax = 15.88
+            text = "<BA/>"
+        intervals [5]:
+            xmin = 15.88
+            xmax = 17.02
+            text = ""
+        intervals [6]:
+            xmin = 17.02
+            xmax = 21.5
+            text = "The last time we had this <ST/> What <ST/> What happened this time?"
+        intervals [7]:
+            xmin = 21.5
+            xmax = 28.5
+            text = ""
+        intervals [8]:
+            xmin = 28.5
+            xmax = 29.38
+            text = "Mm-hmm."
+        intervals [9]:
+            xmin = 29.38
+            xmax = 32.73
+            text = ""
+        intervals [10]:
+            xmin = 32.73
+            xmax = 33.47
+            text = "Yeah."
+        intervals [11]:
+            xmin = 33.47
+            xmax = 33.65
+            text = ""
+        intervals [12]:
+            xmin = 33.65
+            xmax = 34.28
+            text = "Mmm."
+        intervals [13]:
+            xmin = 34.28
+            xmax = 34.39
+            text = ""
+        intervals [14]:
+            xmin = 34.39
+            xmax = 34.93
+            text = "Mmm."
+        intervals [15]:
+            xmin = 34.93
+            xmax = 35.6
+            text = ""
+        intervals [16]:
+            xmin = 35.6
+            xmax = 36.18
+            text = "Mm-hmm."
+        intervals [17]:
+            xmin = 36.18
+            xmax = 38.07
+            text = ""
+        intervals [18]:
+            xmin = 38.07
+            xmax = 38.74
+            text = "Uh-huh."
+        intervals [19]:
+            xmin = 38.74
+            xmax = 40.79
+            text = ""
+        intervals [20]:
+            xmin = 40.79
+            xmax = 41.46
+            text = "Mm-hmm."
+        intervals [21]:
+            xmin = 41.46
+            xmax = 41.8
+            text = ""
+        intervals [22]:
+            xmin = 41.8
+            xmax = 42.86
+            text = "Mmm, mm-hmm."
+        intervals [23]:
+            xmin = 42.86
+            xmax = 45.14
+            text = ""
+        intervals [24]:
+            xmin = 45.14
+            xmax = 45.8
+            text = "Mm-hmm."
+        intervals [25]:
+            xmin = 45.8
+            xmax = 47.78
+            text = ""
+        intervals [26]:
+            xmin = 47.78
+            xmax = 48.46
+            text = "Yeah."
+        intervals [27]:
+            xmin = 48.46
+            xmax = 50.15
+            text = ""
+        intervals [28]:
+            xmin = 50.15
+            xmax = 51.2
+            text = "So what's the real problem?"
+        intervals [29]:
+            xmin = 51.2
+            xmax = 53.72
+            text = ""
+        intervals [30]:
+            xmin = 53.72
+            xmax = 54.44
+            text = "Mmm."
+        intervals [31]:
+            xmin = 54.44
+            xmax = 54.96
+            text = ""
+        intervals [32]:
+            xmin = 54.96
+            xmax = 55.71
+            text = "Mmm."
+        intervals [33]:
+            xmin = 55.71
+            xmax = 57.44
+            text = ""
+        intervals [34]:
+            xmin = 57.44
+            xmax = 58.16
+            text = "Mmm."
+        intervals [35]:
+            xmin = 58.16
+            xmax = 59.72
+            text = ""
+        intervals [36]:
+            xmin = 59.72
+            xmax = 60.37
+            text = "Mmm."
+        intervals [37]:
+            xmin = 60.37
+            xmax = 62.07
+            text = ""
+        intervals [38]:
+            xmin = 62.07
+            xmax = 62.65
+            text = "Yeah."
+        intervals [39]:
+            xmin = 62.65
+            xmax = 65.7
+            text = ""
+        intervals [40]:
+            xmin = 65.7
+            xmax = 66.35
+            text = "Mmm."
+        intervals [41]:
+            xmin = 66.35
+            xmax = 68.89
+            text = ""
+        intervals [42]:
+            xmin = 68.89
+            xmax = 70.54
+            text = "<ST/> twenty people on the queues alone."
+        intervals [43]:
+            xmin = 70.54
+            xmax = 72.3
+            text = ""
+        intervals [44]:
+            xmin = 72.3
+            xmax = 74.21
+            text = "Oh, you mean for customer support. OK."
+        intervals [45]:
+            xmin = 74.21
+            xmax = 74.38
+            text = ""
+        intervals [46]:
+            xmin = 74.38
+            xmax = 81.01
+            text = "And I want to know how many people are on the queues, servicing the queues because we need to give water, we can give those free ice lollies."
+        intervals [47]:
+            xmin = 81.01
+            xmax = 81.63
+            text = ""
+        intervals [48]:
+            xmin = 81.63
+            xmax = 82.26
+            text = "OK."
+        intervals [49]:
+            xmin = 82.26
+            xmax = 83.66
+            text = ""
+        intervals [50]:
+            xmin = 83.66
+            xmax = 84.47
+            text = "Mm-hmm."
+        intervals [51]:
+            xmin = 84.47
+            xmax = 87.51
+            text = ""
+        intervals [52]:
+            xmin = 87.51
+            xmax = 89.6
+            text = "Maybe we need more pergolas."
+        intervals [53]:
+            xmin = 89.6
+            xmax = 89.77
+            text = ""
+        intervals [54]:
+            xmin = 89.77
+            xmax = 90.42
+            text = "<PName> Ron </PName> ."
+        intervals [55]:
+            xmin = 90.42
+            xmax = 94.16
+            text = ""
+        intervals [56]:
+            xmin = 94.16
+            xmax = 94.85
+            text = "Mm-hmm."
+        intervals [57]:
+            xmin = 94.85
+            xmax = 102.7
+            text = ""
+        intervals [58]:
+            xmin = 102.7
+            xmax = 104.2
+            text = "Mm-hmm. Mm-hmm."
+        intervals [59]:
+            xmin = 104.2
+            xmax = 106.66
+            text = ""
+        intervals [60]:
+            xmin = 106.66
+            xmax = 107.82
+            text = "Mmm."
+        intervals [61]:
+            xmin = 107.82
+            xmax = 110.84
+            text = ""
+        intervals [62]:
+            xmin = 110.84
+            xmax = 111.64
+            text = "Mm-hmm."
+        intervals [63]:
+            xmin = 111.64
+            xmax = 116.02
+            text = ""
+        intervals [64]:
+            xmin = 116.02
+            xmax = 116.62
+            text = "Mm-hmm."
+        intervals [65]:
+            xmin = 116.62
+            xmax = 121.84
+            text = ""
+        intervals [66]:
+            xmin = 121.84
+            xmax = 122.37
+            text = "Mmm."
+        intervals [67]:
+            xmin = 122.37
+            xmax = 122.59
+            text = ""
+        intervals [68]:
+            xmin = 122.59
+            xmax = 123.36
+            text = "Mm-hmm."
+        intervals [69]:
+            xmin = 123.36
+            xmax = 123.84
+            text = ""
+        intervals [70]:
+            xmin = 123.84
+            xmax = 127.01
+            text = "And those spray <ST/> the spray <ST/> there's vapor water spray."
+        intervals [71]:
+            xmin = 127.01
+            xmax = 128.06
+            text = ""
+        intervals [72]:
+            xmin = 128.06
+            xmax = 128.97
+            text = "Mm-hmm."
+        intervals [73]:
+            xmin = 128.97
+            xmax = 132.02
+            text = ""
+        intervals [74]:
+            xmin = 132.02
+            xmax = 132.74
+            text = "<FILLlaugh/>"
+        intervals [75]:
+            xmin = 132.74
+            xmax = 139.28
+            text = ""
+        intervals [76]:
+            xmin = 139.28
+            xmax = 140.06
+            text = "Mm-hmm."
+        intervals [77]:
+            xmin = 140.06
+            xmax = 142.94
+            text = ""
+        intervals [78]:
+            xmin = 142.94
+            xmax = 143.67
+            text = "Where?"
+        intervals [79]:
+            xmin = 143.67
+            xmax = 143.8
+            text = ""
+        intervals [80]:
+            xmin = 143.8
+            xmax = 144.19
+            text = "Mmm."
+        intervals [81]:
+            xmin = 144.19
+            xmax = 144.69
+            text = ""
+        intervals [82]:
+            xmin = 144.69
+            xmax = 145.69
+            text = "Aw."
+        intervals [83]:
+            xmin = 145.69
+            xmax = 147.66
+            text = ""
+        intervals [84]:
+            xmin = 147.66
+            xmax = 148.7
+            text = "Wow."
+        intervals [85]:
+            xmin = 148.7
+            xmax = 155.06
+            text = ""
+        intervals [86]:
+            xmin = 155.06
+            xmax = 155.87
+            text = "Mm-hmm."
+        intervals [87]:
+            xmin = 155.87
+            xmax = 164.58
+            text = ""
+        intervals [88]:
+            xmin = 164.58
+            xmax = 165.23
+            text = "Mmm."
+        intervals [89]:
+            xmin = 165.23
+            xmax = 168.72
+            text = ""
+        intervals [90]:
+            xmin = 168.72
+            xmax = 171.46
+            text = "You know even waiting is part of the experience."
+        intervals [91]:
+            xmin = 171.46
+            xmax = 175.32
+            text = ""
+        intervals [92]:
+            xmin = 175.32
+            xmax = 176.1
+            text = "Mm-hmm."
+        intervals [93]:
+            xmin = 176.1
+            xmax = 182.64
+            text = ""
+        intervals [94]:
+            xmin = 182.64
+            xmax = 183.26
+            text = "Mmm."
+        intervals [95]:
+            xmin = 183.26
+            xmax = 185.25
+            text = ""
+        intervals [96]:
+            xmin = 185.25
+            xmax = 186.04
+            text = "Mmm."
+        intervals [97]:
+            xmin = 186.04
+            xmax = 188.25
+            text = ""
+        intervals [98]:
+            xmin = 188.25
+            xmax = 194.25
+            text = "What if we gave like every <FILL/> <ST/> twentieth <ST/> twenty <ST/> <FILL/> every twenty, um <ST/>"
+        intervals [99]:
+            xmin = 194.25
+            xmax = 194.35
+            text = ""
+        intervals [100]:
+            xmin = 194.35
+            xmax = 196.59
+            text = "<ST/> clients we actually give them fast pass just <ST/>"
+        intervals [101]:
+            xmin = 196.59
+            xmax = 196.76
+            text = ""
+        intervals [102]:
+            xmin = 196.76
+            xmax = 197.9
+            text = "<ST/> as a benefit."
+        intervals [103]:
+            xmin = 197.9
+            xmax = 203.2
+            text = ""
+        intervals [104]:
+            xmin = 203.2
+            xmax = 204.0
+            text = "Uh-huh."
+        intervals [105]:
+            xmin = 204.0
+            xmax = 209.69
+            text = ""
+        intervals [106]:
+            xmin = 209.69
+            xmax = 212.27
+            text = "Well that will do the <ST/> do that at the ticket office."
+        intervals [107]:
+            xmin = 212.27
+            xmax = 215.2
+            text = ""
+        intervals [108]:
+            xmin = 215.2
+            xmax = 215.96
+            text = "Uh-huh."
+        intervals [109]:
+            xmin = 215.96
+            xmax = 219.57
+            text = ""
+        intervals [110]:
+            xmin = 219.57
+            xmax = 220.31
+            text = "Yeah."
+        intervals [111]:
+            xmin = 220.31
+            xmax = 221.16
+            text = ""
+        intervals [112]:
+            xmin = 221.16
+            xmax = 221.87
+            text = "Mmm."
+        intervals [113]:
+            xmin = 221.87
+            xmax = 223.08
+            text = ""
+        intervals [114]:
+            xmin = 223.08
+            xmax = 223.96
+            text = "Mm-hmm."
+        intervals [115]:
+            xmin = 223.96
+            xmax = 225.98
+            text = ""
+        intervals [116]:
+            xmin = 225.98
+            xmax = 227.11
+            text = "Mm-hmm."
+        intervals [117]:
+            xmin = 227.11
+            xmax = 229.37
+            text = ""
+        intervals [118]:
+            xmin = 229.37
+            xmax = 230.0
+            text = "Yeah."
+        intervals [119]:
+            xmin = 230.0
+            xmax = 231.57
+            text = ""
+        intervals [120]:
+            xmin = 231.57
+            xmax = 232.26
+            text = "Yeah."
+        intervals [121]:
+            xmin = 232.26
+            xmax = 233.14
+            text = ""
+        intervals [122]:
+            xmin = 233.14
+            xmax = 233.81
+            text = "Yeah."
+        intervals [123]:
+            xmin = 233.81
+            xmax = 235.36
+            text = ""
+        intervals [124]:
+            xmin = 235.36
+            xmax = 236.02
+            text = "Mm-hmm."
+        intervals [125]:
+            xmin = 236.02
+            xmax = 238.36
+            text = ""
+        intervals [126]:
+            xmin = 238.36
+            xmax = 239.25
+            text = "Oh <UNKNOWN/> ."
+        intervals [127]:
+            xmin = 239.25
+            xmax = 240.62
+            text = ""
+        intervals [128]:
+            xmin = 240.62
+            xmax = 241.47
+            text = "Mm-hmm."
+        intervals [129]:
+            xmin = 241.47
+            xmax = 243.43
+            text = ""
+        intervals [130]:
+            xmin = 243.43
+            xmax = 244.23
+            text = "<FILLlaugh/>"
+        intervals [131]:
+            xmin = 244.23
+            xmax = 244.85
+            text = ""
+        intervals [132]:
+            xmin = 244.85
+            xmax = 246.5
+            text = "Mmm, mmm."
+        intervals [133]:
+            xmin = 246.5
+            xmax = 246.87
+            text = ""
+        intervals [134]:
+            xmin = 246.87
+            xmax = 247.94
+            text = "Mmm."
+        intervals [135]:
+            xmin = 247.94
+            xmax = 252.8
+            text = ""
+        intervals [136]:
+            xmin = 252.8
+            xmax = 253.56
+            text = "Mm-hmm."
+        intervals [137]:
+            xmin = 253.56
+            xmax = 256.67
+            text = ""
+        intervals [138]:
+            xmin = 256.67
+            xmax = 257.5
+            text = "OK."
+        intervals [139]:
+            xmin = 257.5
+            xmax = 263.2
+            text = ""
+        intervals [140]:
+            xmin = 263.2
+            xmax = 263.81
+            text = "Yeah."
+        intervals [141]:
+            xmin = 263.81
+            xmax = 265.26
+            text = ""
+        intervals [142]:
+            xmin = 265.26
+            xmax = 266.02
+            text = "Like, what?"
+        intervals [143]:
+            xmin = 266.02
+            xmax = 273.18
+            text = ""
+        intervals [144]:
+            xmin = 273.18
+            xmax = 274.43
+            text = "Mmm."
+        intervals [145]:
+            xmin = 274.43
+            xmax = 277.1
+            text = ""
+        intervals [146]:
+            xmin = 277.1
+            xmax = 277.87
+            text = "Mmm."
+        intervals [147]:
+            xmin = 277.87
+            xmax = 278.05
+            text = ""
+        intervals [148]:
+            xmin = 278.05
+            xmax = 278.66
+            text = "Mmm."
+        intervals [149]:
+            xmin = 278.66
+            xmax = 279.43
+            text = ""
+        intervals [150]:
+            xmin = 279.43
+            xmax = 280.11
+            text = "Mmm."
+        intervals [151]:
+            xmin = 280.11
+            xmax = 281.64
+            text = ""
+        intervals [152]:
+            xmin = 281.64
+            xmax = 282.28
+            text = "Mmm."
+        intervals [153]:
+            xmin = 282.28
+            xmax = 285.1
+            text = ""
+        intervals [154]:
+            xmin = 285.1
+            xmax = 285.72
+            text = "Mmm."
+        intervals [155]:
+            xmin = 285.72
+            xmax = 288.06
+            text = ""
+        intervals [156]:
+            xmin = 288.06
+            xmax = 288.87
+            text = "Mmm."
+        intervals [157]:
+            xmin = 288.87
+            xmax = 289.62
+            text = ""
+        intervals [158]:
+            xmin = 289.62
+            xmax = 292.43
+            text = "But let's deal with one problem at a time, we're talking about the queues."
+        intervals [159]:
+            xmin = 292.43
+            xmax = 292.74
+            text = ""
+        intervals [160]:
+            xmin = 292.74
+            xmax = 293.48
+            text = "Mm-hmm."
+        intervals [161]:
+            xmin = 293.48
+            xmax = 298.25
+            text = ""
+        intervals [162]:
+            xmin = 298.25
+            xmax = 301.85
+            text = "Well, why don't we do a pilot? How about if we look into doing a pilot of the <ST/>"
+        intervals [163]:
+            xmin = 301.85
+            xmax = 302.07
+            text = ""
+        intervals [164]:
+            xmin = 302.07
+            xmax = 305.61
+            text = "<ST/> fast pass? See if that alleviates the numbers <FILL/> <ST/> in the queues."
+        intervals [165]:
+            xmin = 305.61
+            xmax = 307.52
+            text = ""
+        intervals [166]:
+            xmin = 307.52
+            xmax = 308.29
+            text = "Uh-huh."
+        intervals [167]:
+            xmin = 308.29
+            xmax = 310.32
+            text = ""
+        intervals [168]:
+            xmin = 310.32
+            xmax = 311.04
+            text = "Yeah."
+        intervals [169]:
+            xmin = 311.04
+            xmax = 311.47
+            text = ""
+        intervals [170]:
+            xmin = 311.47
+            xmax = 312.19
+            text = "OK."
+        intervals [171]:
+            xmin = 312.19
+            xmax = 316.11
+            text = ""
+        intervals [172]:
+            xmin = 316.11
+            xmax = 316.71
+            text = "Mm-hmm."
+        intervals [173]:
+            xmin = 316.71
+            xmax = 317.42
+            text = ""
+        intervals [174]:
+            xmin = 317.42
+            xmax = 317.99
+            text = "Mmm."
+        intervals [175]:
+            xmin = 317.99
+            xmax = 321.14
+            text = ""
+        intervals [176]:
+            xmin = 321.14
+            xmax = 328.85
+            text = "OK so we gonna prioritize queues and then we prioritizing uh the experience on <ST/> on the <ST/> on the browser, browser experience."
+        intervals [177]:
+            xmin = 328.85
+            xmax = 333.3
+            text = ""
+        intervals [178]:
+            xmin = 333.3
+            xmax = 337.24
+            text = "Uh-huh, but I don't know that so much in our hands."
+        intervals [179]:
+            xmin = 337.24
+            xmax = 340.97
+            text = ""
+        intervals [180]:
+            xmin = 340.97
+            xmax = 341.89
+            text = "Mm-hmm."
+        intervals [181]:
+            xmin = 341.89
+            xmax = 349.12
+            text = ""
+        intervals [182]:
+            xmin = 349.12
+            xmax = 349.69
+            text = "Mmm."
+        intervals [183]:
+            xmin = 349.69
+            xmax = 350.16
+            text = ""
+        intervals [184]:
+            xmin = 350.16
+            xmax = 350.91
+            text = "Mm-hmm."
+        intervals [185]:
+            xmin = 350.91
+            xmax = 351.16
+            text = ""
+        intervals [186]:
+            xmin = 351.16
+            xmax = 351.9
+            text = "Mm-hmm."
+        intervals [187]:
+            xmin = 351.9
+            xmax = 359.08
+            text = ""
+        intervals [188]:
+            xmin = 359.08
+            xmax = 359.72
+            text = "Mm-hmm."
+        intervals [189]:
+            xmin = 359.72
+            xmax = 360.26
+            text = ""
+        intervals [190]:
+            xmin = 360.26
+            xmax = 360.79
+            text = "Mmm."
+        intervals [191]:
+            xmin = 360.79
+            xmax = 361.69
+            text = ""
+        intervals [192]:
+            xmin = 361.69
+            xmax = 362.38
+            text = "Mm-hmm."
+        intervals [193]:
+            xmin = 362.38
+            xmax = 365.03
+            text = ""
+        intervals [194]:
+            xmin = 365.03
+            xmax = 365.67
+            text = "Mm-hmm."
+        intervals [195]:
+            xmin = 365.67
+            xmax = 369.52
+            text = ""
+        intervals [196]:
+            xmin = 369.52
+            xmax = 370.24
+            text = "Mm-hmm."
+        intervals [197]:
+            xmin = 370.24
+            xmax = 371.39
+            text = ""
+        intervals [198]:
+            xmin = 371.39
+            xmax = 372.63
+            text = "Yeah yeah yeah."
+        intervals [199]:
+            xmin = 372.63
+            xmax = 373.1
+            text = ""
+        intervals [200]:
+            xmin = 373.1
+            xmax = 373.75
+            text = "Uh-huh."
+        intervals [201]:
+            xmin = 373.75
+            xmax = 374.44
+            text = ""
+        intervals [202]:
+            xmin = 374.44
+            xmax = 375.08
+            text = "Awesome."
+        intervals [203]:
+            xmin = 375.08
+            xmax = 376.5
+            text = ""
+        intervals [204]:
+            xmin = 376.5
+            xmax = 376.94
+            text = "<FILLlaugh/>"
+        intervals [205]:
+            xmin = 376.94
+            xmax = 376.99
+            text = ""
+        intervals [206]:
+            xmin = 376.99
+            xmax = 377.34
+            text = "K ."
+        intervals [207]:
+            xmin = 377.34
+            xmax = 377.61
+            text = ""
+        intervals [208]:
+            xmin = 377.61
+            xmax = 378.45
+            text = "Oh."
+        intervals [209]:
+            xmin = 378.45
+            xmax = 379.45
+            text = ""
+        intervals [210]:
+            xmin = 379.45
+            xmax = 379.72
+            text = "<BA/>"
+        intervals [211]:
+            xmin = 379.72
+            xmax = 379.87
+            text = ""
+        intervals [212]:
+            xmin = 379.87
+            xmax = 381.99
+            text = "That's cool, ten days OK."
+        intervals [213]:
+            xmin = 381.99
+            xmax = 383.24
+            text = ""
+        intervals [214]:
+            xmin = 383.24
+            xmax = 384.01
+            text = "It's a bit long."
+        intervals [215]:
+            xmin = 384.01
+            xmax = 386.41
+            text = ""
+        intervals [216]:
+            xmin = 386.41
+            xmax = 387.04
+            text = "Mmm."
+        intervals [217]:
+            xmin = 387.04
+            xmax = 388.96
+            text = ""
+        intervals [218]:
+            xmin = 388.96
+            xmax = 390.03
+            text = "<ST/> or collapsing."
+        intervals [219]:
+            xmin = 390.03
+            xmax = 394.27
+            text = ""
+        intervals [220]:
+            xmin = 394.27
+            xmax = 395.26
+            text = "OK."
+        intervals [221]:
+            xmin = 395.26
+            xmax = 396.68
+            text = ""
+        intervals [222]:
+            xmin = 396.68
+            xmax = 398.5
+            text = "So that's <PName> John </PName> 's arena."
+        intervals [223]:
+            xmin = 398.5
+            xmax = 399.85
+            text = ""
+        intervals [224]:
+            xmin = 399.85
+            xmax = 400.49
+            text = "Mmm."
+        intervals [225]:
+            xmin = 400.49
+            xmax = 401.71
+            text = ""
+        intervals [226]:
+            xmin = 401.71
+            xmax = 402.18
+            text = "<FILLlaugh/>"
+        intervals [227]:
+            xmin = 402.18
+            xmax = 402.74
+            text = ""
+        intervals [228]:
+            xmin = 402.74
+            xmax = 403.06
+            text = "<UNKNOWN/>"
+        intervals [229]:
+            xmin = 403.06
+            xmax = 407.04
+            text = ""
+        intervals [230]:
+            xmin = 407.04
+            xmax = 409.14
+            text = "Yeah, yeah, yeah, yeah, yeah."
+        intervals [231]:
+            xmin = 409.14
+            xmax = 409.31
+            text = ""
+        intervals [232]:
+            xmin = 409.31
+            xmax = 411.76
+            text = "So <PName> John </PName> , have you got a plan for that coming? This is your <ST/>"
+        intervals [233]:
+            xmin = 411.76
+            xmax = 412.54
+            text = ""
+        intervals [234]:
+            xmin = 412.54
+            xmax = 413.07
+            text = "Yeah."
+        intervals [235]:
+            xmin = 413.07
+            xmax = 414.88
+            text = ""
+        intervals [236]:
+            xmin = 414.88
+            xmax = 415.51
+            text = "Mm-hmm."
+        intervals [237]:
+            xmin = 415.51
+            xmax = 416.34
+            text = ""
+        intervals [238]:
+            xmin = 416.34
+            xmax = 416.99
+            text = "Mm-hmm."
+        intervals [239]:
+            xmin = 416.99
+            xmax = 419.96
+            text = ""
+        intervals [240]:
+            xmin = 419.96
+            xmax = 420.52
+            text = "OK."
+        intervals [241]:
+            xmin = 420.52
+            xmax = 420.94
+            text = ""
+        intervals [242]:
+            xmin = 420.94
+            xmax = 427.72
+            text = "And then the security issues, I think, <PName> Linda </PName> needs to relook the security, uh, with jumping the lines. Uh-huh."
+        intervals [243]:
+            xmin = 427.72
+            xmax = 428.74
+            text = ""
+        intervals [244]:
+            xmin = 428.74
+            xmax = 431.81
+            text = "Uh, start giving, uh <ST/>"
+        intervals [245]:
+            xmin = 431.81
+            xmax = 432.14
+            text = ""
+        intervals [246]:
+            xmin = 432.14
+            xmax = 433.23
+            text = "What's it called?"
+        intervals [247]:
+            xmin = 433.23
+            xmax = 434.25
+            text = ""
+        intervals [248]:
+            xmin = 434.25
+            xmax = 436.27
+            text = "Fines. Fines. <FILLlaugh/>"
+        intervals [249]:
+            xmin = 436.27
+            xmax = 437.4
+            text = "<FILLlaugh/>"
+        intervals [250]:
+            xmin = 437.4
+            xmax = 439.63
+            text = ""
+        intervals [251]:
+            xmin = 439.63
+            xmax = 443.72
+            text = "For <ST/> For the jumping the lines and for coming through <ST/> over <UNKNOWN/> <ST/>"
+        intervals [252]:
+            xmin = 443.72
+            xmax = 448.24
+            text = ""
+        intervals [253]:
+            xmin = 448.24
+            xmax = 448.93
+            text = "Yeah."
+        intervals [254]:
+            xmin = 448.93
+            xmax = 449.64
+            text = ""
+        intervals [255]:
+            xmin = 449.64
+            xmax = 452.76
+            text = "Did I hear right? Yeah. <FILLlaugh/> OK."
+        intervals [256]:
+            xmin = 452.76
+            xmax = 458.25
+            text = ""
+        intervals [257]:
+            xmin = 458.25
+            xmax = 458.96
+            text = "You mean street <ST/>"
+        intervals [258]:
+            xmin = 458.96
+            xmax = 461.33
+            text = ""
+        intervals [259]:
+            xmin = 461.33
+            xmax = 461.94
+            text = "All the <ST/>"
+        intervals [260]:
+            xmin = 461.94
+            xmax = 466.32
+            text = ""
+        intervals [261]:
+            xmin = 466.32
+            xmax = 468.56
+            text = "Well that's <PName> Rachel </PName> , that's <PName> Rachel </PName> ."
+        intervals [262]:
+            xmin = 468.56
+            xmax = 469.71
+            text = ""
+        intervals [263]:
+            xmin = 469.71
+            xmax = 473.29
+            text = "<PName> Rachel </PName> , we need to like maybe another <FILL/> kiosk or two."
+        intervals [264]:
+            xmin = 473.29
+            xmax = 474.93
+            text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "spk_03"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 141
+        intervals [1]:
+            xmin = 0.0
+            xmax = 15.91
+            text = ""
+        intervals [2]:
+            xmin = 15.91
+            xmax = 16.55
+            text = "Yeah."
+        intervals [3]:
+            xmin = 16.55
+            xmax = 17.24
+            text = ""
+        intervals [4]:
+            xmin = 17.24
+            xmax = 17.82
+            text = "Yeah."
+        intervals [5]:
+            xmin = 17.82
+            xmax = 21.22
+            text = ""
+        intervals [6]:
+            xmin = 21.22
+            xmax = 22.29
+            text = "What happened this time?"
+        intervals [7]:
+            xmin = 22.29
+            xmax = 28.22
+            text = ""
+        intervals [8]:
+            xmin = 28.22
+            xmax = 29.06
+            text = "Mm-hmm."
+        intervals [9]:
+            xmin = 29.06
+            xmax = 32.84
+            text = ""
+        intervals [10]:
+            xmin = 32.84
+            xmax = 33.58
+            text = "Yeah."
+        intervals [11]:
+            xmin = 33.58
+            xmax = 37.68
+            text = ""
+        intervals [12]:
+            xmin = 37.68
+            xmax = 38.38
+            text = "Yeah."
+        intervals [13]:
+            xmin = 38.38
+            xmax = 40.6
+            text = ""
+        intervals [14]:
+            xmin = 40.6
+            xmax = 41.28
+            text = "Mm-hmm."
+        intervals [15]:
+            xmin = 41.28
+            xmax = 55.25
+            text = ""
+        intervals [16]:
+            xmin = 55.25
+            xmax = 55.84
+            text = "Yeah."
+        intervals [17]:
+            xmin = 55.84
+            xmax = 59.87
+            text = ""
+        intervals [18]:
+            xmin = 59.87
+            xmax = 60.59
+            text = "Mm-hmm."
+        intervals [19]:
+            xmin = 60.59
+            xmax = 61.61
+            text = ""
+        intervals [20]:
+            xmin = 61.61
+            xmax = 62.38
+            text = "<BA/>"
+        intervals [21]:
+            xmin = 62.38
+            xmax = 72.84
+            text = ""
+        intervals [22]:
+            xmin = 72.84
+            xmax = 73.66
+            text = "Hmm."
+        intervals [23]:
+            xmin = 73.66
+            xmax = 73.8
+            text = ""
+        intervals [24]:
+            xmin = 73.8
+            xmax = 74.44
+            text = "Yeah."
+        intervals [25]:
+            xmin = 74.44
+            xmax = 84.52
+            text = ""
+        intervals [26]:
+            xmin = 84.52
+            xmax = 85.27
+            text = "Uh-huh."
+        intervals [27]:
+            xmin = 85.27
+            xmax = 87.73
+            text = ""
+        intervals [28]:
+            xmin = 87.73
+            xmax = 89.45
+            text = "I've also <ST/> I've also <ST/>"
+        intervals [29]:
+            xmin = 89.45
+            xmax = 90.46
+            text = ""
+        intervals [30]:
+            xmin = 90.46
+            xmax = 90.93
+            text = "<UNKNOWN/>"
+        intervals [31]:
+            xmin = 90.93
+            xmax = 98.14
+            text = ""
+        intervals [32]:
+            xmin = 98.14
+            xmax = 102.07
+            text = "It doesn't even have to be portable, it can just be shade <FILL/> <ST/> We can <UNKNOWN/> <ST/>"
+        intervals [33]:
+            xmin = 102.07
+            xmax = 106.11
+            text = ""
+        intervals [34]:
+            xmin = 106.11
+            xmax = 106.64
+            text = "Yeah."
+        intervals [35]:
+            xmin = 106.64
+            xmax = 110.6
+            text = ""
+        intervals [36]:
+            xmin = 110.6
+            xmax = 111.17
+            text = "Yeah."
+        intervals [37]:
+            xmin = 111.17
+            xmax = 113.11
+            text = ""
+        intervals [38]:
+            xmin = 113.11
+            xmax = 113.89
+            text = "Mm-hmm."
+        intervals [39]:
+            xmin = 113.89
+            xmax = 117.14
+            text = ""
+        intervals [40]:
+            xmin = 117.14
+            xmax = 117.77
+            text = "Yeah."
+        intervals [41]:
+            xmin = 117.77
+            xmax = 121.65
+            text = ""
+        intervals [42]:
+            xmin = 121.65
+            xmax = 122.32
+            text = "Mm-hmm."
+        intervals [43]:
+            xmin = 122.32
+            xmax = 122.48
+            text = ""
+        intervals [44]:
+            xmin = 122.48
+            xmax = 123.07
+            text = "Yeah."
+        intervals [45]:
+            xmin = 123.07
+            xmax = 139.54
+            text = ""
+        intervals [46]:
+            xmin = 139.54
+            xmax = 140.92
+            text = "Yeah."
+        intervals [47]:
+            xmin = 140.92
+            xmax = 149.62
+            text = ""
+        intervals [48]:
+            xmin = 149.62
+            xmax = 155.34
+            text = "I think I know uh um <ST/> From other competitors, I know that they've had a solution of scheduling rides."
+        intervals [49]:
+            xmin = 155.34
+            xmax = 155.56
+            text = ""
+        intervals [50]:
+            xmin = 155.56
+            xmax = 161.67
+            text = "So that way you're scheduled let's say at one thirty PM and you show up at that time and that way your lines don't become <ST/>"
+        intervals [51]:
+            xmin = 161.67
+            xmax = 164.6
+            text = ""
+        intervals [52]:
+            xmin = 164.6
+            xmax = 165.34
+            text = "Why not?"
+        intervals [53]:
+            xmin = 165.34
+            xmax = 175.13
+            text = ""
+        intervals [54]:
+            xmin = 175.13
+            xmax = 175.86
+            text = "Yeah."
+        intervals [55]:
+            xmin = 175.86
+            xmax = 176.76
+            text = ""
+        intervals [56]:
+            xmin = 176.76
+            xmax = 177.46
+            text = "Mm-hmm."
+        intervals [57]:
+            xmin = 177.46
+            xmax = 187.49
+            text = ""
+        intervals [58]:
+            xmin = 187.49
+            xmax = 192.06
+            text = "We can build longer <FILL/> <ST/> like, a longer line structure."
+        intervals [59]:
+            xmin = 192.06
+            xmax = 199.54
+            text = ""
+        intervals [60]:
+            xmin = 199.54
+            xmax = 203.28
+            text = "So what would be the <ST/> what would be the added value for someone to buy one? They would just <ST/>"
+        intervals [61]:
+            xmin = 203.28
+            xmax = 203.48
+            text = ""
+        intervals [62]:
+            xmin = 203.48
+            xmax = 206.69
+            text = "<ST/> try to count twenty people and then just <FILL/> stand in line."
+        intervals [63]:
+            xmin = 206.69
+            xmax = 209.74
+            text = ""
+        intervals [64]:
+            xmin = 209.74
+            xmax = 210.91
+            text = "I don't know but <ST/>"
+        intervals [65]:
+            xmin = 210.91
+            xmax = 211.59
+            text = ""
+        intervals [66]:
+            xmin = 211.59
+            xmax = 214.88
+            text = "I know that another issue that customers had is that <ST/>"
+        intervals [67]:
+            xmin = 214.88
+            xmax = 215.36
+            text = ""
+        intervals [68]:
+            xmin = 215.36
+            xmax = 219.79
+            text = "<ST/> we've had um issue with <ST/> issues uh with purchasing tickets on the website <ST/>"
+        intervals [69]:
+            xmin = 219.79
+            xmax = 219.93
+            text = ""
+        intervals [70]:
+            xmin = 219.93
+            xmax = 221.4
+            text = "<ST/> and then when people call in <ST/>"
+        intervals [71]:
+            xmin = 221.4
+            xmax = 221.57
+            text = ""
+        intervals [72]:
+            xmin = 221.57
+            xmax = 228.15
+            text = "<ST/> um either there's no answer or uh the website is frozen and no one's uh helping them so that's another issue."
+        intervals [73]:
+            xmin = 228.15
+            xmax = 248.26
+            text = ""
+        intervals [74]:
+            xmin = 248.26
+            xmax = 250.61
+            text = "Scanning a same ticket twice."
+        intervals [75]:
+            xmin = 250.61
+            xmax = 258.74
+            text = ""
+        intervals [76]:
+            xmin = 258.74
+            xmax = 263.39
+            text = "I think that can be <ST/> that can <ST/> has a <FILL/> <ST/> that can have a simple solution."
+        intervals [77]:
+            xmin = 263.39
+            xmax = 266.61
+            text = ""
+        intervals [78]:
+            xmin = 266.61
+            xmax = 272.88
+            text = "I <ST/> I mean a big problem is the website. The website freezes and people cannot purchase, uh, tickets."
+        intervals [79]:
+            xmin = 272.88
+            xmax = 273.09
+            text = ""
+        intervals [80]:
+            xmin = 273.09
+            xmax = 274.67
+            text = "That's a big problem."
+        intervals [81]:
+            xmin = 274.67
+            xmax = 286.41
+            text = ""
+        intervals [82]:
+            xmin = 286.41
+            xmax = 287.32
+            text = "Yeah."
+        intervals [83]:
+            xmin = 287.32
+            xmax = 288.03
+            text = ""
+        intervals [84]:
+            xmin = 288.03
+            xmax = 289.17
+            text = "Yeah, yeah."
+        intervals [85]:
+            xmin = 289.17
+            xmax = 291.27
+            text = ""
+        intervals [86]:
+            xmin = 291.27
+            xmax = 292.16
+            text = "Yeah."
+        intervals [87]:
+            xmin = 292.16
+            xmax = 292.32
+            text = ""
+        intervals [88]:
+            xmin = 292.32
+            xmax = 292.83
+            text = "Yeah."
+        intervals [89]:
+            xmin = 292.83
+            xmax = 297.84
+            text = ""
+        intervals [90]:
+            xmin = 297.84
+            xmax = 300.88
+            text = "I think security can be solved pretty easily."
+        intervals [91]:
+            xmin = 300.88
+            xmax = 304.57
+            text = ""
+        intervals [92]:
+            xmin = 304.57
+            xmax = 309.61
+            text = "Security I think can be solved pretty easily just through hiring uh <ST/> uh <ST/> uh two or more."
+        intervals [93]:
+            xmin = 309.61
+            xmax = 313.24
+            text = ""
+        intervals [94]:
+            xmin = 313.24
+            xmax = 320.88
+            text = "I mean with the <FILL/> <FL/> I think that our biggest problem is the website. That's the hardest <FILL/> <ST/> That's the hardest solution to find."
+        intervals [95]:
+            xmin = 320.88
+            xmax = 327.7
+            text = ""
+        intervals [96]:
+            xmin = 327.7
+            xmax = 328.47
+            text = "Yeah."
+        intervals [97]:
+            xmin = 328.47
+            xmax = 337.47
+            text = ""
+        intervals [98]:
+            xmin = 337.47
+            xmax = 338.27
+            text = "Yeah."
+        intervals [99]:
+            xmin = 338.27
+            xmax = 340.77
+            text = ""
+        intervals [100]:
+            xmin = 340.77
+            xmax = 341.73
+            text = "I agree."
+        intervals [101]:
+            xmin = 341.73
+            xmax = 341.87
+            text = ""
+        intervals [102]:
+            xmin = 341.87
+            xmax = 342.63
+            text = "I agree."
+        intervals [103]:
+            xmin = 342.63
+            xmax = 344.57
+            text = ""
+        intervals [104]:
+            xmin = 344.57
+            xmax = 347.82
+            text = "How do you <ST/> How you guys think we can solve the IT issue?"
+        intervals [105]:
+            xmin = 347.82
+            xmax = 372.16
+            text = ""
+        intervals [106]:
+            xmin = 372.16
+            xmax = 373.29
+            text = "Perfect."
+        intervals [107]:
+            xmin = 373.29
+            xmax = 376.87
+            text = ""
+        intervals [108]:
+            xmin = 376.87
+            xmax = 379.04
+            text = "That's again, yeah, it's a good plan."
+        intervals [109]:
+            xmin = 379.04
+            xmax = 381.64
+            text = ""
+        intervals [110]:
+            xmin = 381.64
+            xmax = 387.98
+            text = "Now regarding uh <ST/> uh the website I know that a lot of people call in and our support <ST/>"
+        intervals [111]:
+            xmin = 387.98
+            xmax = 388.08
+            text = ""
+        intervals [112]:
+            xmin = 388.08
+            xmax = 390.17
+            text = "<ST/> uh team <ST/> our phone support team <ST/>"
+        intervals [113]:
+            xmin = 390.17
+            xmax = 390.27
+            text = ""
+        intervals [114]:
+            xmin = 390.27
+            xmax = 394.58
+            text = "<ST/> they're collapsing or they're don't know how to deal with this, so I think we need to retrain them."
+        intervals [115]:
+            xmin = 394.58
+            xmax = 395.04
+            text = ""
+        intervals [116]:
+            xmin = 395.04
+            xmax = 395.83
+            text = "Um <ST/>"
+        intervals [117]:
+            xmin = 395.83
+            xmax = 400.22
+            text = ""
+        intervals [118]:
+            xmin = 400.22
+            xmax = 405.36
+            text = "We have those, but again I think we just need to retrain because they're not, uh <ST/>"
+        intervals [119]:
+            xmin = 405.36
+            xmax = 407.6
+            text = ""
+        intervals [120]:
+            xmin = 407.6
+            xmax = 408.36
+            text = "Yeah."
+        intervals [121]:
+            xmin = 408.36
+            xmax = 426.73
+            text = ""
+        intervals [122]:
+            xmin = 426.73
+            xmax = 427.42
+            text = "Yeah."
+        intervals [123]:
+            xmin = 427.42
+            xmax = 427.92
+            text = ""
+        intervals [124]:
+            xmin = 427.92
+            xmax = 429.05
+            text = "Mm-hmm."
+        intervals [125]:
+            xmin = 429.05
+            xmax = 434.08
+            text = ""
+        intervals [126]:
+            xmin = 434.08
+            xmax = 435.84
+            text = "Reports, yeah."
+        intervals [127]:
+            xmin = 435.84
+            xmax = 443.03
+            text = ""
+        intervals [128]:
+            xmin = 443.03
+            xmax = 445.35
+            text = "Finding different solutions, yeah."
+        intervals [129]:
+            xmin = 445.35
+            xmax = 445.95
+            text = ""
+        intervals [130]:
+            xmin = 445.95
+            xmax = 446.71
+            text = "Mm-hmm."
+        intervals [131]:
+            xmin = 446.71
+            xmax = 447.11
+            text = ""
+        intervals [132]:
+            xmin = 447.11
+            xmax = 447.94
+            text = "Yeah, yeah."
+        intervals [133]:
+            xmin = 447.94
+            xmax = 458.08
+            text = ""
+        intervals [134]:
+            xmin = 458.08
+            xmax = 461.27
+            text = "Oh, that can <FILL/> be easily solved, adding stuff to the menu."
+        intervals [135]:
+            xmin = 461.27
+            xmax = 463.54
+            text = ""
+        intervals [136]:
+            xmin = 463.54
+            xmax = 465.52
+            text = "Yeah that's true. Yeah yeah."
+        intervals [137]:
+            xmin = 465.52
+            xmax = 470.13
+            text = ""
+        intervals [138]:
+            xmin = 470.13
+            xmax = 470.74
+            text = "Mm-hmm."
+        intervals [139]:
+            xmin = 470.74
+            xmax = 473.1
+            text = ""
+        intervals [140]:
+            xmin = 473.1
+            xmax = 473.68
+            text = "Yeah."
+        intervals [141]:
+            xmin = 473.68
+            xmax = 474.93
+            text = ""
+    item [4]:
+        class = "IntervalTier"
+        name = "spk_04"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 202
+        intervals [1]:
+            xmin = 0.0
+            xmax = 16.07
+            text = ""
+        intervals [2]:
+            xmin = 16.07
+            xmax = 17.2
+            text = "Uh-oh."
+        intervals [3]:
+            xmin = 17.2
+            xmax = 33.42
+            text = ""
+        intervals [4]:
+            xmin = 33.42
+            xmax = 34.89
+            text = "OK. Yeah OK."
+        intervals [5]:
+            xmin = 34.89
+            xmax = 40.82
+            text = ""
+        intervals [6]:
+            xmin = 40.82
+            xmax = 41.46
+            text = "Hmm."
+        intervals [7]:
+            xmin = 41.46
+            xmax = 42.87
+            text = ""
+        intervals [8]:
+            xmin = 42.87
+            xmax = 43.4
+            text = "OK."
+        intervals [9]:
+            xmin = 43.4
+            xmax = 46.4
+            text = ""
+        intervals [10]:
+            xmin = 46.4
+            xmax = 47.6
+            text = "Inevitably."
+        intervals [11]:
+            xmin = 47.6
+            xmax = 47.91
+            text = ""
+        intervals [12]:
+            xmin = 47.91
+            xmax = 48.57
+            text = "Mm-hmm."
+        intervals [13]:
+            xmin = 48.57
+            xmax = 60.8
+            text = ""
+        intervals [14]:
+            xmin = 60.8
+            xmax = 62.0
+            text = "OK that's legitimate."
+        intervals [15]:
+            xmin = 62.0
+            xmax = 73.83
+            text = ""
+        intervals [16]:
+            xmin = 73.83
+            xmax = 75.45
+            text = "Uh, on <ST/> on the phone lines, OK."
+        intervals [17]:
+            xmin = 75.45
+            xmax = 85.13
+            text = ""
+        intervals [18]:
+            xmin = 85.13
+            xmax = 85.54
+            text = "OK."
+        intervals [19]:
+            xmin = 85.54
+            xmax = 88.11
+            text = ""
+        intervals [20]:
+            xmin = 88.11
+            xmax = 88.65
+            text = "Right."
+        intervals [21]:
+            xmin = 88.65
+            xmax = 100.85
+            text = ""
+        intervals [22]:
+            xmin = 100.85
+            xmax = 101.69
+            text = "Can it just be <ST/>"
+        intervals [23]:
+            xmin = 101.69
+            xmax = 102.19
+            text = ""
+        intervals [24]:
+            xmin = 102.19
+            xmax = 104.78
+            text = "<ST/> awnings, yeah. Or <ST/> Or can it be awnings?"
+        intervals [25]:
+            xmin = 104.78
+            xmax = 113.85
+            text = ""
+        intervals [26]:
+            xmin = 113.85
+            xmax = 114.46
+            text = "OK."
+        intervals [27]:
+            xmin = 114.46
+            xmax = 116.14
+            text = ""
+        intervals [28]:
+            xmin = 116.14
+            xmax = 117.75
+            text = "OK that's <ST/> that's <ST/> that's fine."
+        intervals [29]:
+            xmin = 117.75
+            xmax = 117.91
+            text = ""
+        intervals [30]:
+            xmin = 117.91
+            xmax = 123.08
+            text = "But <ST/> But can <ST/> But can they <ST/> The places where the lines are forming, can they <FILL/> <ST/> they <ST/> can they have, uh, awnings over them?"
+        intervals [31]:
+            xmin = 123.08
+            xmax = 123.53
+            text = ""
+        intervals [32]:
+            xmin = 123.53
+            xmax = 124.04
+            text = "OK."
+        intervals [33]:
+            xmin = 124.04
+            xmax = 127.21
+            text = ""
+        intervals [34]:
+            xmin = 127.21
+            xmax = 129.48
+            text = "Oh, that's right, yeah. The humidity sprays, yeah."
+        intervals [35]:
+            xmin = 129.48
+            xmax = 130.78
+            text = ""
+        intervals [36]:
+            xmin = 130.78
+            xmax = 131.47
+            text = "Mm-hmm."
+        intervals [37]:
+            xmin = 131.47
+            xmax = 140.14
+            text = ""
+        intervals [38]:
+            xmin = 140.14
+            xmax = 141.31
+            text = "OK that's a good point."
+        intervals [39]:
+            xmin = 141.31
+            xmax = 143.1
+            text = ""
+        intervals [40]:
+            xmin = 143.1
+            xmax = 143.62
+            text = "Mm-hmm."
+        intervals [41]:
+            xmin = 143.62
+            xmax = 144.49
+            text = ""
+        intervals [42]:
+            xmin = 144.49
+            xmax = 145.0
+            text = "Mm-hmm."
+        intervals [43]:
+            xmin = 145.0
+            xmax = 160.72
+            text = ""
+        intervals [44]:
+            xmin = 160.72
+            xmax = 161.94
+            text = "Does that work well?"
+        intervals [45]:
+            xmin = 161.94
+            xmax = 184.67
+            text = ""
+        intervals [46]:
+            xmin = 184.67
+            xmax = 185.22
+            text = "Right."
+        intervals [47]:
+            xmin = 185.22
+            xmax = 185.89
+            text = ""
+        intervals [48]:
+            xmin = 185.89
+            xmax = 186.33
+            text = "Yeah."
+        intervals [49]:
+            xmin = 186.33
+            xmax = 187.07
+            text = ""
+        intervals [50]:
+            xmin = 187.07
+            xmax = 187.5
+            text = "Mm-hmm."
+        intervals [51]:
+            xmin = 187.5
+            xmax = 203.62
+            text = ""
+        intervals [52]:
+            xmin = 203.62
+            xmax = 204.04
+            text = "Mmm."
+        intervals [53]:
+            xmin = 204.04
+            xmax = 206.31
+            text = ""
+        intervals [54]:
+            xmin = 206.31
+            xmax = 207.64
+            text = "Uh <ST/>"
+        intervals [55]:
+            xmin = 207.64
+            xmax = 209.34
+            text = ""
+        intervals [56]:
+            xmin = 209.34
+            xmax = 209.91
+            text = "Right."
+        intervals [57]:
+            xmin = 209.91
+            xmax = 211.82
+            text = ""
+        intervals [58]:
+            xmin = 211.82
+            xmax = 212.44
+            text = "Mm-hmm."
+        intervals [59]:
+            xmin = 212.44
+            xmax = 220.04
+            text = ""
+        intervals [60]:
+            xmin = 220.04
+            xmax = 220.55
+            text = "Mm-hmm."
+        intervals [61]:
+            xmin = 220.55
+            xmax = 225.69
+            text = ""
+        intervals [62]:
+            xmin = 225.69
+            xmax = 226.48
+            text = "Yeah that's <ST/>"
+        intervals [63]:
+            xmin = 226.48
+            xmax = 227.25
+            text = ""
+        intervals [64]:
+            xmin = 227.25
+            xmax = 228.98
+            text = "That's <FILL/> <ST/> That's really annoying."
+        intervals [65]:
+            xmin = 228.98
+            xmax = 233.85
+            text = ""
+        intervals [66]:
+            xmin = 233.85
+            xmax = 234.28
+            text = "Yeah."
+        intervals [67]:
+            xmin = 234.28
+            xmax = 240.07
+            text = ""
+        intervals [68]:
+            xmin = 240.07
+            xmax = 240.76
+            text = "Uh."
+        intervals [69]:
+            xmin = 240.76
+            xmax = 243.16
+            text = ""
+        intervals [70]:
+            xmin = 243.16
+            xmax = 243.56
+            text = "Yeah."
+        intervals [71]:
+            xmin = 243.56
+            xmax = 243.68
+            text = ""
+        intervals [72]:
+            xmin = 243.68
+            xmax = 244.34
+            text = "Well, no, no."
+        intervals [73]:
+            xmin = 244.34
+            xmax = 245.24
+            text = ""
+        intervals [74]:
+            xmin = 245.24
+            xmax = 246.26
+            text = "Yeah. Mm-hmm."
+        intervals [75]:
+            xmin = 246.26
+            xmax = 247.38
+            text = ""
+        intervals [76]:
+            xmin = 247.38
+            xmax = 248.37
+            text = "<UNKNOWN/>"
+        intervals [77]:
+            xmin = 248.37
+            xmax = 254.48
+            text = ""
+        intervals [78]:
+            xmin = 254.48
+            xmax = 255.82
+            text = "Oh that's a real problem."
+        intervals [79]:
+            xmin = 255.82
+            xmax = 256.41
+            text = ""
+        intervals [80]:
+            xmin = 256.41
+            xmax = 256.81
+            text = "Yeah."
+        intervals [81]:
+            xmin = 256.81
+            xmax = 269.96
+            text = ""
+        intervals [82]:
+            xmin = 269.96
+            xmax = 273.77
+            text = "The website is a big problem. The gate jumping is a big problem, yeah."
+        intervals [83]:
+            xmin = 273.77
+            xmax = 274.7
+            text = ""
+        intervals [84]:
+            xmin = 274.7
+            xmax = 275.13
+            text = "Mm-hmm."
+        intervals [85]:
+            xmin = 275.13
+            xmax = 282.11
+            text = ""
+        intervals [86]:
+            xmin = 282.11
+            xmax = 282.66
+            text = "OK."
+        intervals [87]:
+            xmin = 282.66
+            xmax = 283.4
+            text = ""
+        intervals [88]:
+            xmin = 283.4
+            xmax = 286.2
+            text = "Well, that's <ST/> that's for the IT department to <FILL/> work on."
+        intervals [89]:
+            xmin = 286.2
+            xmax = 286.55
+            text = ""
+        intervals [90]:
+            xmin = 286.55
+            xmax = 287.01
+            text = "Yeah."
+        intervals [91]:
+            xmin = 287.01
+            xmax = 288.14
+            text = ""
+        intervals [92]:
+            xmin = 288.14
+            xmax = 288.58
+            text = "Yeah."
+        intervals [93]:
+            xmin = 288.58
+            xmax = 288.74
+            text = ""
+        intervals [94]:
+            xmin = 288.74
+            xmax = 289.71
+            text = "<FILL/> Yeah, yeah."
+        intervals [95]:
+            xmin = 289.71
+            xmax = 291.23
+            text = ""
+        intervals [96]:
+            xmin = 291.23
+            xmax = 291.62
+            text = "Right."
+        intervals [97]:
+            xmin = 291.62
+            xmax = 292.78
+            text = ""
+        intervals [98]:
+            xmin = 292.78
+            xmax = 293.15
+            text = "Yeah."
+        intervals [99]:
+            xmin = 293.15
+            xmax = 293.61
+            text = ""
+        intervals [100]:
+            xmin = 293.61
+            xmax = 294.67
+            text = "Let's get back to the queue."
+        intervals [101]:
+            xmin = 294.67
+            xmax = 299.03
+            text = ""
+        intervals [102]:
+            xmin = 299.03
+            xmax = 299.56
+            text = "Mm-hmm."
+        intervals [103]:
+            xmin = 299.56
+            xmax = 306.06
+            text = ""
+        intervals [104]:
+            xmin = 306.06
+            xmax = 306.83
+            text = "OK."
+        intervals [105]:
+            xmin = 306.83
+            xmax = 307.55
+            text = ""
+        intervals [106]:
+            xmin = 307.55
+            xmax = 308.33
+            text = "Alright."
+        intervals [107]:
+            xmin = 308.33
+            xmax = 310.37
+            text = ""
+        intervals [108]:
+            xmin = 310.37
+            xmax = 310.82
+            text = "Yeah."
+        intervals [109]:
+            xmin = 310.82
+            xmax = 311.0
+            text = ""
+        intervals [110]:
+            xmin = 311.0
+            xmax = 311.94
+            text = "Right. Yeah."
+        intervals [111]:
+            xmin = 311.94
+            xmax = 312.34
+            text = ""
+        intervals [112]:
+            xmin = 312.34
+            xmax = 312.71
+            text = "Yeah."
+        intervals [113]:
+            xmin = 312.71
+            xmax = 313.67
+            text = ""
+        intervals [114]:
+            xmin = 313.67
+            xmax = 314.16
+            text = "OK."
+        intervals [115]:
+            xmin = 314.16
+            xmax = 318.78
+            text = ""
+        intervals [116]:
+            xmin = 318.78
+            xmax = 320.25
+            text = "That's definitely."
+        intervals [117]:
+            xmin = 320.25
+            xmax = 320.45
+            text = ""
+        intervals [118]:
+            xmin = 320.45
+            xmax = 320.99
+            text = "Mm-hmm."
+        intervals [119]:
+            xmin = 320.99
+            xmax = 321.95
+            text = ""
+        intervals [120]:
+            xmin = 321.95
+            xmax = 322.47
+            text = "Yeah."
+        intervals [121]:
+            xmin = 322.47
+            xmax = 326.45
+            text = ""
+        intervals [122]:
+            xmin = 326.45
+            xmax = 326.96
+            text = "Yeah."
+        intervals [123]:
+            xmin = 326.96
+            xmax = 331.56
+            text = ""
+        intervals [124]:
+            xmin = 331.56
+            xmax = 332.49
+            text = "Yeah, OK."
+        intervals [125]:
+            xmin = 332.49
+            xmax = 333.18
+            text = ""
+        intervals [126]:
+            xmin = 333.18
+            xmax = 334.09
+            text = "OK. Yeah."
+        intervals [127]:
+            xmin = 334.09
+            xmax = 341.79
+            text = ""
+        intervals [128]:
+            xmin = 341.79
+            xmax = 342.9
+            text = "Yeah."
+        intervals [129]:
+            xmin = 342.9
+            xmax = 349.47
+            text = ""
+        intervals [130]:
+            xmin = 349.47
+            xmax = 349.88
+            text = "We've <ST/>"
+        intervals [131]:
+            xmin = 349.88
+            xmax = 350.41
+            text = ""
+        intervals [132]:
+            xmin = 350.41
+            xmax = 351.64
+            text = "<ST/> We have <ST/> Yeah we have to <ST/>"
+        intervals [133]:
+            xmin = 351.64
+            xmax = 353.35
+            text = ""
+        intervals [134]:
+            xmin = 353.35
+            xmax = 354.07
+            text = "We need uh <ST/>"
+        intervals [135]:
+            xmin = 354.07
+            xmax = 355.56
+            text = ""
+        intervals [136]:
+            xmin = 355.56
+            xmax = 357.67
+            text = "We need to really look at the IT department."
+        intervals [137]:
+            xmin = 357.67
+            xmax = 371.33
+            text = ""
+        intervals [138]:
+            xmin = 371.33
+            xmax = 371.84
+            text = "Great."
+        intervals [139]:
+            xmin = 371.84
+            xmax = 373.9
+            text = ""
+        intervals [140]:
+            xmin = 373.9
+            xmax = 374.41
+            text = "Great."
+        intervals [141]:
+            xmin = 374.41
+            xmax = 374.99
+            text = ""
+        intervals [142]:
+            xmin = 374.99
+            xmax = 375.45
+            text = "Mm-hmm."
+        intervals [143]:
+            xmin = 375.45
+            xmax = 377.57
+            text = ""
+        intervals [144]:
+            xmin = 377.57
+            xmax = 378.32
+            text = "OK."
+        intervals [145]:
+            xmin = 378.32
+            xmax = 379.87
+            text = ""
+        intervals [146]:
+            xmin = 379.87
+            xmax = 380.57
+            text = "Alright."
+        intervals [147]:
+            xmin = 380.57
+            xmax = 382.42
+            text = ""
+        intervals [148]:
+            xmin = 382.42
+            xmax = 384.72
+            text = "It's a bit <ST/> It's a bit much, but it's <FILL/> <ST/> but it's reasonable."
+        intervals [149]:
+            xmin = 384.72
+            xmax = 389.07
+            text = ""
+        intervals [150]:
+            xmin = 389.07
+            xmax = 389.54
+            text = "Yeah."
+        intervals [151]:
+            xmin = 389.54
+            xmax = 394.38
+            text = ""
+        intervals [152]:
+            xmin = 394.38
+            xmax = 396.34
+            text = "Do <ST/> Do <ST/> Do we have recordings?"
+        intervals [153]:
+            xmin = 396.34
+            xmax = 397.21
+            text = ""
+        intervals [154]:
+            xmin = 397.21
+            xmax = 399.77
+            text = "Do we have recordings of the customer service calls?"
+        intervals [155]:
+            xmin = 399.77
+            xmax = 402.2
+            text = ""
+        intervals [156]:
+            xmin = 402.2
+            xmax = 404.34
+            text = "'Cause then we could <ST/> then we could analyze."
+        intervals [157]:
+            xmin = 404.34
+            xmax = 405.23
+            text = ""
+        intervals [158]:
+            xmin = 405.23
+            xmax = 405.56
+            text = "Mm-hmm."
+        intervals [159]:
+            xmin = 405.56
+            xmax = 407.59
+            text = ""
+        intervals [160]:
+            xmin = 407.59
+            xmax = 409.62
+            text = "<FILL/> Oh, that's true. Yeah, that's true."
+        intervals [161]:
+            xmin = 409.62
+            xmax = 411.36
+            text = ""
+        intervals [162]:
+            xmin = 411.36
+            xmax = 411.7
+            text = "Mm-hmm."
+        intervals [163]:
+            xmin = 411.7
+            xmax = 415.37
+            text = ""
+        intervals [164]:
+            xmin = 415.37
+            xmax = 416.24
+            text = "OK."
+        intervals [165]:
+            xmin = 416.24
+            xmax = 416.45
+            text = ""
+        intervals [166]:
+            xmin = 416.45
+            xmax = 417.39
+            text = "OK, great."
+        intervals [167]:
+            xmin = 417.39
+            xmax = 417.74
+            text = ""
+        intervals [168]:
+            xmin = 417.74
+            xmax = 418.12
+            text = "Great."
+        intervals [169]:
+            xmin = 418.12
+            xmax = 419.7
+            text = ""
+        intervals [170]:
+            xmin = 419.7
+            xmax = 420.22
+            text = "Yeah."
+        intervals [171]:
+            xmin = 420.22
+            xmax = 420.51
+            text = ""
+        intervals [172]:
+            xmin = 420.51
+            xmax = 422.63
+            text = "Yeah, yeah ah OK."
+        intervals [173]:
+            xmin = 422.63
+            xmax = 424.17
+            text = ""
+        intervals [174]:
+            xmin = 424.17
+            xmax = 425.54
+            text = "OK."
+        intervals [175]:
+            xmin = 425.54
+            xmax = 434.11
+            text = ""
+        intervals [176]:
+            xmin = 434.11
+            xmax = 435.04
+            text = "<FILLlaugh/> What was it called?"
+        intervals [177]:
+            xmin = 435.04
+            xmax = 435.72
+            text = ""
+        intervals [178]:
+            xmin = 435.72
+            xmax = 437.4
+            text = "Yeah, OK, OK."
+        intervals [179]:
+            xmin = 437.4
+            xmax = 442.13
+            text = ""
+        intervals [180]:
+            xmin = 442.13
+            xmax = 443.47
+            text = "Ah, OK. Yeah."
+        intervals [181]:
+            xmin = 443.47
+            xmax = 444.35
+            text = ""
+        intervals [182]:
+            xmin = 444.35
+            xmax = 444.78
+            text = "Yeah."
+        intervals [183]:
+            xmin = 444.78
+            xmax = 447.74
+            text = ""
+        intervals [184]:
+            xmin = 447.74
+            xmax = 448.5
+            text = "It should be."
+        intervals [185]:
+            xmin = 448.5
+            xmax = 448.93
+            text = ""
+        intervals [186]:
+            xmin = 448.93
+            xmax = 449.4
+            text = "Yeah."
+        intervals [187]:
+            xmin = 449.4
+            xmax = 451.36
+            text = ""
+        intervals [188]:
+            xmin = 451.36
+            xmax = 451.71
+            text = "Yeah."
+        intervals [189]:
+            xmin = 451.71
+            xmax = 452.16
+            text = ""
+        intervals [190]:
+            xmin = 452.16
+            xmax = 452.47
+            text = "Yeah."
+        intervals [191]:
+            xmin = 452.47
+            xmax = 453.43
+            text = ""
+        intervals [192]:
+            xmin = 453.43
+            xmax = 453.86
+            text = "Yeah."
+        intervals [193]:
+            xmin = 453.86
+            xmax = 459.83
+            text = ""
+        intervals [194]:
+            xmin = 459.83
+            xmax = 461.3
+            text = "Oh yeah the <FILL/> <ST/> yeah."
+        intervals [195]:
+            xmin = 461.3
+            xmax = 463.08
+            text = ""
+        intervals [196]:
+            xmin = 463.08
+            xmax = 465.3
+            text = "That's an easy one. Well, that's <ST/> that's true, yeah."
+        intervals [197]:
+            xmin = 465.3
+            xmax = 465.54
+            text = ""
+        intervals [198]:
+            xmin = 465.54
+            xmax = 465.88
+            text = "Yeah."
+        intervals [199]:
+            xmin = 465.88
+            xmax = 469.05
+            text = ""
+        intervals [200]:
+            xmin = 469.05
+            xmax = 469.36
+            text = "Yeah."
+        intervals [201]:
+            xmin = 469.36
+            xmax = 473.08
+            text = ""
+        intervals [202]:
+            xmin = 473.08
+            xmax = 474.93
+            text = "Yeah. Uh-huh especially for drinks."
+    item [5]:
+        class = "IntervalTier"
+        name = "spk_05"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 199
+        intervals [1]:
+            xmin = 0.0
+            xmax = 16.49
+            text = ""
+        intervals [2]:
+            xmin = 16.49
+            xmax = 17.12
+            text = "Mmm."
+        intervals [3]:
+            xmin = 17.12
+            xmax = 18.59
+            text = ""
+        intervals [4]:
+            xmin = 18.59
+            xmax = 19.51
+            text = "Uh-huh."
+        intervals [5]:
+            xmin = 19.51
+            xmax = 21.41
+            text = ""
+        intervals [6]:
+            xmin = 21.41
+            xmax = 21.95
+            text = "Yeah."
+        intervals [7]:
+            xmin = 21.95
+            xmax = 28.7
+            text = ""
+        intervals [8]:
+            xmin = 28.7
+            xmax = 30.15
+            text = "OK. Mm-hmm."
+        intervals [9]:
+            xmin = 30.15
+            xmax = 32.73
+            text = ""
+        intervals [10]:
+            xmin = 32.73
+            xmax = 33.21
+            text = "Yeah."
+        intervals [11]:
+            xmin = 33.21
+            xmax = 33.39
+            text = ""
+        intervals [12]:
+            xmin = 33.39
+            xmax = 34.0
+            text = "Mm-hmm."
+        intervals [13]:
+            xmin = 34.0
+            xmax = 35.06
+            text = ""
+        intervals [14]:
+            xmin = 35.06
+            xmax = 36.28
+            text = "Of course, yeah."
+        intervals [15]:
+            xmin = 36.28
+            xmax = 38.22
+            text = ""
+        intervals [16]:
+            xmin = 38.22
+            xmax = 38.66
+            text = "Right."
+        intervals [17]:
+            xmin = 38.66
+            xmax = 39.9
+            text = ""
+        intervals [18]:
+            xmin = 39.9
+            xmax = 40.37
+            text = "Mm-hmm."
+        intervals [19]:
+            xmin = 40.37
+            xmax = 42.24
+            text = ""
+        intervals [20]:
+            xmin = 42.24
+            xmax = 43.51
+            text = "OK. Uh-huh."
+        intervals [21]:
+            xmin = 43.51
+            xmax = 45.29
+            text = ""
+        intervals [22]:
+            xmin = 45.29
+            xmax = 47.17
+            text = "Hmm. <UNKNOWN/> ."
+        intervals [23]:
+            xmin = 47.17
+            xmax = 47.88
+            text = ""
+        intervals [24]:
+            xmin = 47.88
+            xmax = 48.55
+            text = "Yeah."
+        intervals [25]:
+            xmin = 48.55
+            xmax = 53.81
+            text = ""
+        intervals [26]:
+            xmin = 53.81
+            xmax = 56.11
+            text = "Oh, mmm, yeah, mmm."
+        intervals [27]:
+            xmin = 56.11
+            xmax = 59.03
+            text = ""
+        intervals [28]:
+            xmin = 59.03
+            xmax = 60.05
+            text = "Right, yeah."
+        intervals [29]:
+            xmin = 60.05
+            xmax = 62.17
+            text = ""
+        intervals [30]:
+            xmin = 62.17
+            xmax = 62.75
+            text = "Mm-hmm."
+        intervals [31]:
+            xmin = 62.75
+            xmax = 69.0
+            text = ""
+        intervals [32]:
+            xmin = 69.0
+            xmax = 69.6
+            text = "Mmm."
+        intervals [33]:
+            xmin = 69.6
+            xmax = 73.99
+            text = ""
+        intervals [34]:
+            xmin = 73.99
+            xmax = 74.53
+            text = "Mmm."
+        intervals [35]:
+            xmin = 74.53
+            xmax = 85.06
+            text = ""
+        intervals [36]:
+            xmin = 85.06
+            xmax = 85.81
+            text = "OK."
+        intervals [37]:
+            xmin = 85.81
+            xmax = 88.25
+            text = ""
+        intervals [38]:
+            xmin = 88.25
+            xmax = 90.3
+            text = "That's right. Well, we can <UNKNOWN/> <ST/>"
+        intervals [39]:
+            xmin = 90.3
+            xmax = 90.63
+            text = ""
+        intervals [40]:
+            xmin = 90.63
+            xmax = 94.06
+            text = "Yeah. <FILL/> Well, let's <ST/> let's think about a portable shade."
+        intervals [41]:
+            xmin = 94.06
+            xmax = 94.48
+            text = ""
+        intervals [42]:
+            xmin = 94.48
+            xmax = 99.96
+            text = "You know that we have people going around with umbrellas and uh <ST/> and shading the people that are just <ST/>"
+        intervals [43]:
+            xmin = 99.96
+            xmax = 100.44
+            text = ""
+        intervals [44]:
+            xmin = 100.44
+            xmax = 100.87
+            text = "Yes."
+        intervals [45]:
+            xmin = 100.87
+            xmax = 102.86
+            text = ""
+        intervals [46]:
+            xmin = 102.86
+            xmax = 103.49
+            text = "Mm-hmm."
+        intervals [47]:
+            xmin = 103.49
+            xmax = 106.29
+            text = ""
+        intervals [48]:
+            xmin = 106.29
+            xmax = 107.17
+            text = "That's right."
+        intervals [49]:
+            xmin = 107.17
+            xmax = 107.7
+            text = ""
+        intervals [50]:
+            xmin = 107.7
+            xmax = 113.07
+            text = "If they wanna keep the umbrella and buy it, uh, then there <ST/> there's a ten dollar, uh, right <ST/> right there."
+        intervals [51]:
+            xmin = 113.07
+            xmax = 117.56
+            text = ""
+        intervals [52]:
+            xmin = 117.56
+            xmax = 118.1
+            text = "Right."
+        intervals [53]:
+            xmin = 118.1
+            xmax = 118.22
+            text = ""
+        intervals [54]:
+            xmin = 118.22
+            xmax = 118.91
+            text = "OK."
+        intervals [55]:
+            xmin = 118.91
+            xmax = 123.21
+            text = ""
+        intervals [56]:
+            xmin = 123.21
+            xmax = 123.94
+            text = "OK."
+        intervals [57]:
+            xmin = 123.94
+            xmax = 125.33
+            text = ""
+        intervals [58]:
+            xmin = 125.33
+            xmax = 125.98
+            text = "Mm-hmm."
+        intervals [59]:
+            xmin = 125.98
+            xmax = 127.18
+            text = ""
+        intervals [60]:
+            xmin = 127.18
+            xmax = 128.47
+            text = "Yeah, that's right."
+        intervals [61]:
+            xmin = 128.47
+            xmax = 129.12
+            text = ""
+        intervals [62]:
+            xmin = 129.12
+            xmax = 133.02
+            text = "Those portable air conditioning machines that they have, uh, as well, mm-hmm."
+        intervals [63]:
+            xmin = 133.02
+            xmax = 143.24
+            text = ""
+        intervals [64]:
+            xmin = 143.24
+            xmax = 143.76
+            text = "Hmm."
+        intervals [65]:
+            xmin = 143.76
+            xmax = 144.68
+            text = ""
+        intervals [66]:
+            xmin = 144.68
+            xmax = 145.54
+            text = "In the lines."
+        intervals [67]:
+            xmin = 145.54
+            xmax = 148.45
+            text = ""
+        intervals [68]:
+            xmin = 148.45
+            xmax = 148.86
+            text = "<BA/>"
+        intervals [69]:
+            xmin = 148.86
+            xmax = 149.07
+            text = ""
+        intervals [70]:
+            xmin = 149.07
+            xmax = 149.61
+            text = "Yeah."
+        intervals [71]:
+            xmin = 149.61
+            xmax = 155.16
+            text = ""
+        intervals [72]:
+            xmin = 155.16
+            xmax = 156.22
+            text = "Mm-hmm, yeah."
+        intervals [73]:
+            xmin = 156.22
+            xmax = 163.13
+            text = ""
+        intervals [74]:
+            xmin = 163.13
+            xmax = 163.65
+            text = "Mmm."
+        intervals [75]:
+            xmin = 163.65
+            xmax = 164.56
+            text = ""
+        intervals [76]:
+            xmin = 164.56
+            xmax = 165.49
+            text = "Right, yeah."
+        intervals [77]:
+            xmin = 165.49
+            xmax = 171.3
+            text = ""
+        intervals [78]:
+            xmin = 171.3
+            xmax = 171.9
+            text = "Mm-hmm."
+        intervals [79]:
+            xmin = 171.9
+            xmax = 176.3
+            text = ""
+        intervals [80]:
+            xmin = 176.3
+            xmax = 177.92
+            text = "Well that's good idea. Mm-hmm."
+        intervals [81]:
+            xmin = 177.92
+            xmax = 179.08
+            text = ""
+        intervals [82]:
+            xmin = 179.08
+            xmax = 179.49
+            text = "Right."
+        intervals [83]:
+            xmin = 179.49
+            xmax = 185.18
+            text = ""
+        intervals [84]:
+            xmin = 185.18
+            xmax = 185.59
+            text = "Right."
+        intervals [85]:
+            xmin = 185.59
+            xmax = 185.79
+            text = ""
+        intervals [86]:
+            xmin = 185.79
+            xmax = 186.34
+            text = "Mm-hmm."
+        intervals [87]:
+            xmin = 186.34
+            xmax = 203.11
+            text = ""
+        intervals [88]:
+            xmin = 203.11
+            xmax = 203.7
+            text = "Uh-huh."
+        intervals [89]:
+            xmin = 203.7
+            xmax = 207.48
+            text = ""
+        intervals [90]:
+            xmin = 207.48
+            xmax = 208.2
+            text = "Yeah."
+        intervals [91]:
+            xmin = 208.2
+            xmax = 212.53
+            text = ""
+        intervals [92]:
+            xmin = 212.53
+            xmax = 215.4
+            text = "It's right. Interns, interns with clickers."
+        intervals [93]:
+            xmin = 215.4
+            xmax = 220.62
+            text = ""
+        intervals [94]:
+            xmin = 220.62
+            xmax = 221.32
+            text = "Mm-hmm."
+        intervals [95]:
+            xmin = 221.32
+            xmax = 225.68
+            text = ""
+        intervals [96]:
+            xmin = 225.68
+            xmax = 226.33
+            text = "Yeah."
+        intervals [97]:
+            xmin = 226.33
+            xmax = 226.86
+            text = ""
+        intervals [98]:
+            xmin = 226.86
+            xmax = 227.36
+            text = "That's <ST/>"
+        intervals [99]:
+            xmin = 227.36
+            xmax = 234.44
+            text = ""
+        intervals [100]:
+            xmin = 234.44
+            xmax = 235.53
+            text = "Yeah, I think so."
+        intervals [101]:
+            xmin = 235.53
+            xmax = 241.52
+            text = ""
+        intervals [102]:
+            xmin = 241.52
+            xmax = 244.08
+            text = "Like, in their overcoats or how <ST/> how are they doing that?"
+        intervals [103]:
+            xmin = 244.08
+            xmax = 246.89
+            text = ""
+        intervals [104]:
+            xmin = 246.89
+            xmax = 248.23
+            text = "Oh, mm-hmm."
+        intervals [105]:
+            xmin = 248.23
+            xmax = 255.16
+            text = ""
+        intervals [106]:
+            xmin = 255.16
+            xmax = 256.11
+            text = "Oh, I see."
+        intervals [107]:
+            xmin = 256.11
+            xmax = 256.49
+            text = ""
+        intervals [108]:
+            xmin = 256.49
+            xmax = 257.55
+            text = "Mm-hmm. Yeah"
+        intervals [109]:
+            xmin = 257.55
+            xmax = 264.34
+            text = ""
+        intervals [110]:
+            xmin = 264.34
+            xmax = 265.68
+            text = "BB guns."
+        intervals [111]:
+            xmin = 265.68
+            xmax = 285.35
+            text = ""
+        intervals [112]:
+            xmin = 285.35
+            xmax = 285.95
+            text = "Mm-hmm."
+        intervals [113]:
+            xmin = 285.95
+            xmax = 288.1
+            text = ""
+        intervals [114]:
+            xmin = 288.1
+            xmax = 288.68
+            text = "Yeah."
+        intervals [115]:
+            xmin = 288.68
+            xmax = 288.87
+            text = ""
+        intervals [116]:
+            xmin = 288.87
+            xmax = 289.33
+            text = "Yeah."
+        intervals [117]:
+            xmin = 289.33
+            xmax = 293.1
+            text = ""
+        intervals [118]:
+            xmin = 293.1
+            xmax = 293.59
+            text = "OK."
+        intervals [119]:
+            xmin = 293.59
+            xmax = 302.98
+            text = ""
+        intervals [120]:
+            xmin = 302.98
+            xmax = 303.7
+            text = "Mm-hmm."
+        intervals [121]:
+            xmin = 303.7
+            xmax = 305.4
+            text = ""
+        intervals [122]:
+            xmin = 305.4
+            xmax = 305.99
+            text = "Yeah."
+        intervals [123]:
+            xmin = 305.99
+            xmax = 306.19
+            text = ""
+        intervals [124]:
+            xmin = 306.19
+            xmax = 306.61
+            text = "Uh."
+        intervals [125]:
+            xmin = 306.61
+            xmax = 308.49
+            text = ""
+        intervals [126]:
+            xmin = 308.49
+            xmax = 309.15
+            text = "OK."
+        intervals [127]:
+            xmin = 309.15
+            xmax = 311.18
+            text = ""
+        intervals [128]:
+            xmin = 311.18
+            xmax = 311.73
+            text = "Mm-hmm."
+        intervals [129]:
+            xmin = 311.73
+            xmax = 321.24
+            text = ""
+        intervals [130]:
+            xmin = 321.24
+            xmax = 322.46
+            text = "Alright, mm-hmm."
+        intervals [131]:
+            xmin = 322.46
+            xmax = 331.33
+            text = ""
+        intervals [132]:
+            xmin = 331.33
+            xmax = 331.88
+            text = "Mm-hmm."
+        intervals [133]:
+            xmin = 331.88
+            xmax = 333.49
+            text = ""
+        intervals [134]:
+            xmin = 333.49
+            xmax = 334.25
+            text = "OK."
+        intervals [135]:
+            xmin = 334.25
+            xmax = 341.81
+            text = ""
+        intervals [136]:
+            xmin = 341.81
+            xmax = 343.57
+            text = "IT is important, yeah."
+        intervals [137]:
+            xmin = 343.57
+            xmax = 343.79
+            text = ""
+        intervals [138]:
+            xmin = 343.79
+            xmax = 344.33
+            text = "Mm-hmm."
+        intervals [139]:
+            xmin = 344.33
+            xmax = 350.84
+            text = ""
+        intervals [140]:
+            xmin = 350.84
+            xmax = 351.54
+            text = "Wider."
+        intervals [141]:
+            xmin = 351.54
+            xmax = 351.71
+            text = ""
+        intervals [142]:
+            xmin = 351.71
+            xmax = 357.32
+            text = "We need wider pipes on the broadband and if we have <FILL/> <ST/> if we have better broadband, you know, up <ST/>"
+        intervals [143]:
+            xmin = 357.32
+            xmax = 370.79
+            text = ""
+        intervals [144]:
+            xmin = 370.79
+            xmax = 371.4
+            text = "Mm-hmm."
+        intervals [145]:
+            xmin = 371.4
+            xmax = 372.55
+            text = ""
+        intervals [146]:
+            xmin = 372.55
+            xmax = 373.13
+            text = "OK."
+        intervals [147]:
+            xmin = 373.13
+            xmax = 377.1
+            text = ""
+        intervals [148]:
+            xmin = 377.1
+            xmax = 378.65
+            text = "Well, that's good. OK."
+        intervals [149]:
+            xmin = 378.65
+            xmax = 379.18
+            text = ""
+        intervals [150]:
+            xmin = 379.18
+            xmax = 379.74
+            text = "Alright."
+        intervals [151]:
+            xmin = 379.74
+            xmax = 388.0
+            text = ""
+        intervals [152]:
+            xmin = 388.0
+            xmax = 388.55
+            text = "Yeah."
+        intervals [153]:
+            xmin = 388.55
+            xmax = 395.59
+            text = ""
+        intervals [154]:
+            xmin = 395.59
+            xmax = 395.98
+            text = "<UNKNOWN/>"
+        intervals [155]:
+            xmin = 395.98
+            xmax = 397.5
+            text = ""
+        intervals [156]:
+            xmin = 397.5
+            xmax = 398.16
+            text = "Uh <ST/>"
+        intervals [157]:
+            xmin = 398.16
+            xmax = 400.18
+            text = ""
+        intervals [158]:
+            xmin = 400.18
+            xmax = 400.76
+            text = "Hmm."
+        intervals [159]:
+            xmin = 400.76
+            xmax = 408.17
+            text = ""
+        intervals [160]:
+            xmin = 408.17
+            xmax = 408.7
+            text = "Alright."
+        intervals [161]:
+            xmin = 408.7
+            xmax = 409.97
+            text = ""
+        intervals [162]:
+            xmin = 409.97
+            xmax = 410.63
+            text = "OK."
+        intervals [163]:
+            xmin = 410.63
+            xmax = 415.67
+            text = ""
+        intervals [164]:
+            xmin = 415.67
+            xmax = 416.83
+            text = "Great, OK."
+        intervals [165]:
+            xmin = 416.83
+            xmax = 417.13
+            text = ""
+        intervals [166]:
+            xmin = 417.13
+            xmax = 417.6
+            text = "Yeah."
+        intervals [167]:
+            xmin = 417.6
+            xmax = 420.0
+            text = ""
+        intervals [168]:
+            xmin = 420.0
+            xmax = 420.47
+            text = "Yeah."
+        intervals [169]:
+            xmin = 420.47
+            xmax = 420.59
+            text = ""
+        intervals [170]:
+            xmin = 420.59
+            xmax = 421.51
+            text = "Very important."
+        intervals [171]:
+            xmin = 421.51
+            xmax = 421.73
+            text = ""
+        intervals [172]:
+            xmin = 421.73
+            xmax = 422.32
+            text = "Mm-hmm."
+        intervals [173]:
+            xmin = 422.32
+            xmax = 427.44
+            text = ""
+        intervals [174]:
+            xmin = 427.44
+            xmax = 427.88
+            text = "Mm-hmm."
+        intervals [175]:
+            xmin = 427.88
+            xmax = 430.35
+            text = ""
+        intervals [176]:
+            xmin = 430.35
+            xmax = 430.93
+            text = "Yeah."
+        intervals [177]:
+            xmin = 430.93
+            xmax = 436.71
+            text = ""
+        intervals [178]:
+            xmin = 436.71
+            xmax = 439.23
+            text = "Fines for <FILL/> <ST/> Fines for what exactly?"
+        intervals [179]:
+            xmin = 439.23
+            xmax = 441.68
+            text = ""
+        intervals [180]:
+            xmin = 441.68
+            xmax = 443.36
+            text = "Ah, for jumping the lines."
+        intervals [181]:
+            xmin = 443.36
+            xmax = 444.38
+            text = ""
+        intervals [182]:
+            xmin = 444.38
+            xmax = 445.06
+            text = "That's right."
+        intervals [183]:
+            xmin = 445.06
+            xmax = 447.9
+            text = ""
+        intervals [184]:
+            xmin = 447.9
+            xmax = 448.37
+            text = "Yeah."
+        intervals [185]:
+            xmin = 448.37
+            xmax = 453.09
+            text = ""
+        intervals [186]:
+            xmin = 453.09
+            xmax = 453.64
+            text = "Yeah."
+        intervals [187]:
+            xmin = 453.64
+            xmax = 460.08
+            text = ""
+        intervals [188]:
+            xmin = 460.08
+            xmax = 460.58
+            text = "Right."
+        intervals [189]:
+            xmin = 460.58
+            xmax = 463.97
+            text = ""
+        intervals [190]:
+            xmin = 463.97
+            xmax = 464.73
+            text = "That's right."
+        intervals [191]:
+            xmin = 464.73
+            xmax = 465.45
+            text = ""
+        intervals [192]:
+            xmin = 465.45
+            xmax = 465.95
+            text = "Yeah."
+        intervals [193]:
+            xmin = 465.95
+            xmax = 466.26
+            text = ""
+        intervals [194]:
+            xmin = 466.26
+            xmax = 468.29
+            text = "Something dry like crackers."
+        intervals [195]:
+            xmin = 468.29
+            xmax = 470.71
+            text = ""
+        intervals [196]:
+            xmin = 470.71
+            xmax = 472.94
+            text = "Have like a cracker <FILL/> dispenser."
+        intervals [197]:
+            xmin = 472.94
+            xmax = 473.18
+            text = ""
+        intervals [198]:
+            xmin = 473.18
+            xmax = 474.04
+            text = "You know, in front."
+        intervals [199]:
+            xmin = 474.04
+            xmax = 474.93
+            text = ""
+    item [6]:
+        class = "IntervalTier"
+        name = "spk_06"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 103
+        intervals [1]:
+            xmin = 0.0
+            xmax = 18.11
+            text = ""
+        intervals [2]:
+            xmin = 18.11
+            xmax = 21.02
+            text = "<ST/> complaints, who could be <ST/> who could <FILL/> make a complaint?"
+        intervals [3]:
+            xmin = 21.02
+            xmax = 22.32
+            text = ""
+        intervals [4]:
+            xmin = 22.32
+            xmax = 25.22
+            text = "<FILL/> It's a fun company, how can they be <FILL/> <ST/> Yeah."
+        intervals [5]:
+            xmin = 25.22
+            xmax = 25.33
+            text = ""
+        intervals [6]:
+            xmin = 25.33
+            xmax = 26.47
+            text = "Right, complaints."
+        intervals [7]:
+            xmin = 26.47
+            xmax = 49.38
+            text = ""
+        intervals [8]:
+            xmin = 49.38
+            xmax = 50.22
+            text = "Yeah sure."
+        intervals [9]:
+            xmin = 50.22
+            xmax = 69.32
+            text = ""
+        intervals [10]:
+            xmin = 69.32
+            xmax = 71.22
+            text = "Twenty people is nothing, nothing."
+        intervals [11]:
+            xmin = 71.22
+            xmax = 99.17
+            text = ""
+        intervals [12]:
+            xmin = 99.17
+            xmax = 100.33
+            text = "Sure, absolutely."
+        intervals [13]:
+            xmin = 100.33
+            xmax = 100.67
+            text = ""
+        intervals [14]:
+            xmin = 100.67
+            xmax = 101.32
+            text = "Absolutely."
+        intervals [15]:
+            xmin = 101.32
+            xmax = 102.09
+            text = ""
+        intervals [16]:
+            xmin = 102.09
+            xmax = 102.7
+            text = "The <UNKNOWN/> <ST/>"
+        intervals [17]:
+            xmin = 102.7
+            xmax = 103.47
+            text = ""
+        intervals [18]:
+            xmin = 103.47
+            xmax = 104.05
+            text = "That's right."
+        intervals [19]:
+            xmin = 104.05
+            xmax = 104.34
+            text = ""
+        intervals [20]:
+            xmin = 104.34
+            xmax = 104.94
+            text = "Yeah."
+        intervals [21]:
+            xmin = 104.94
+            xmax = 105.08
+            text = ""
+        intervals [22]:
+            xmin = 105.08
+            xmax = 105.69
+            text = "Yeah."
+        intervals [23]:
+            xmin = 105.69
+            xmax = 106.28
+            text = ""
+        intervals [24]:
+            xmin = 106.28
+            xmax = 110.57
+            text = "Yeah right when they come in they get <ST/> get uh <FILL/> amusement uh parasol."
+        intervals [25]:
+            xmin = 110.57
+            xmax = 123.64
+            text = ""
+        intervals [26]:
+            xmin = 123.64
+            xmax = 124.08
+            text = "Sure."
+        intervals [27]:
+            xmin = 124.08
+            xmax = 127.08
+            text = ""
+        intervals [28]:
+            xmin = 127.08
+            xmax = 130.3
+            text = "When <ST/> When <FILL/> <ST/> When <ST/> When <ST/> When they buy <ST/> buy their admission ticket <ST/>"
+        intervals [29]:
+            xmin = 130.3
+            xmax = 130.58
+            text = ""
+        intervals [30]:
+            xmin = 130.58
+            xmax = 133.65
+            text = "<ST/> they get one of these little fans or paper parasols <ST/>"
+        intervals [31]:
+            xmin = 133.65
+            xmax = 133.77
+            text = ""
+        intervals [32]:
+            xmin = 133.77
+            xmax = 134.77
+            text = "<ST/> as a giveaway <ST/>"
+        intervals [33]:
+            xmin = 134.77
+            xmax = 134.97
+            text = ""
+        intervals [34]:
+            xmin = 134.97
+            xmax = 135.93
+            text = "<ST/> and it's uh <ST/>"
+        intervals [35]:
+            xmin = 135.93
+            xmax = 136.04
+            text = ""
+        intervals [36]:
+            xmin = 136.04
+            xmax = 139.53
+            text = "<ST/> pennies to us, but to them it might be worth thousands."
+        intervals [37]:
+            xmin = 139.53
+            xmax = 171.34
+            text = ""
+        intervals [38]:
+            xmin = 171.34
+            xmax = 172.53
+            text = "Well, they <ST/> they spread <ST/>"
+        intervals [39]:
+            xmin = 172.53
+            xmax = 178.77
+            text = ""
+        intervals [40]:
+            xmin = 178.77
+            xmax = 181.79
+            text = "Scheduling be the same thing <ST/> same thing as fast pass."
+        intervals [41]:
+            xmin = 181.79
+            xmax = 186.52
+            text = ""
+        intervals [42]:
+            xmin = 186.52
+            xmax = 187.13
+            text = "Yeah."
+        intervals [43]:
+            xmin = 187.13
+            xmax = 187.27
+            text = ""
+        intervals [44]:
+            xmin = 187.27
+            xmax = 187.72
+            text = "Yeah."
+        intervals [45]:
+            xmin = 187.72
+            xmax = 189.43
+            text = ""
+        intervals [46]:
+            xmin = 189.43
+            xmax = 189.82
+            text = "Yeah."
+        intervals [47]:
+            xmin = 189.82
+            xmax = 206.74
+            text = ""
+        intervals [48]:
+            xmin = 206.74
+            xmax = 208.71
+            text = "Yeah, right. Who's gonna be the one counting?"
+        intervals [49]:
+            xmin = 208.71
+            xmax = 227.04
+            text = ""
+        intervals [50]:
+            xmin = 227.04
+            xmax = 229.41
+            text = "And suppose <ST/> suppose the twentieth person <ST/>"
+        intervals [51]:
+            xmin = 229.41
+            xmax = 229.88
+            text = ""
+        intervals [52]:
+            xmin = 229.88
+            xmax = 233.13
+            text = "<ST/> is in a group of five or six. Do you let them all go?"
+        intervals [53]:
+            xmin = 233.13
+            xmax = 247.38
+            text = ""
+        intervals [54]:
+            xmin = 247.38
+            xmax = 252.99
+            text = "They'll have one person in line and the other ten people are staying somewhere else in the shade. When they get closer front of the line <ST/>"
+        intervals [55]:
+            xmin = 252.99
+            xmax = 253.13
+            text = ""
+        intervals [56]:
+            xmin = 253.13
+            xmax = 255.1
+            text = "<ST/> then the other ten people come and jump in front."
+        intervals [57]:
+            xmin = 255.1
+            xmax = 267.13
+            text = ""
+        intervals [58]:
+            xmin = 267.13
+            xmax = 269.02
+            text = "Yeah, right, BB guns."
+        intervals [59]:
+            xmin = 269.02
+            xmax = 281.64
+            text = ""
+        intervals [60]:
+            xmin = 281.64
+            xmax = 283.36
+            text = "Yes, absolutely. Uh-huh."
+        intervals [61]:
+            xmin = 283.36
+            xmax = 306.3
+            text = ""
+        intervals [62]:
+            xmin = 306.3
+            xmax = 307.45
+            text = "We could <ST/> We <ST/>"
+        intervals [63]:
+            xmin = 307.45
+            xmax = 308.06
+            text = ""
+        intervals [64]:
+            xmin = 308.06
+            xmax = 311.36
+            text = "Well we'll try that on some of the more popular rides the fast pass."
+        intervals [65]:
+            xmin = 311.36
+            xmax = 326.84
+            text = ""
+        intervals [66]:
+            xmin = 326.84
+            xmax = 328.75
+            text = "Absolutely. Yeah, yeah."
+        intervals [67]:
+            xmin = 328.75
+            xmax = 328.98
+            text = ""
+        intervals [68]:
+            xmin = 328.98
+            xmax = 329.42
+            text = "Right."
+        intervals [69]:
+            xmin = 329.42
+            xmax = 335.52
+            text = ""
+        intervals [70]:
+            xmin = 335.52
+            xmax = 337.58
+            text = "I don't know about the claustrophobic part."
+        intervals [71]:
+            xmin = 337.58
+            xmax = 358.76
+            text = ""
+        intervals [72]:
+            xmin = 358.76
+            xmax = 359.2
+            text = "Yeah."
+        intervals [73]:
+            xmin = 359.2
+            xmax = 361.96
+            text = ""
+        intervals [74]:
+            xmin = 361.96
+            xmax = 362.63
+            text = "OK."
+        intervals [75]:
+            xmin = 362.63
+            xmax = 364.62
+            text = ""
+        intervals [76]:
+            xmin = 364.62
+            xmax = 369.61
+            text = "Uh it <ST/> There <ST/> There's several companies that I'm familiar with that are working with other <ST/> other uh parks."
+        intervals [77]:
+            xmin = 369.61
+            xmax = 369.84
+            text = ""
+        intervals [78]:
+            xmin = 369.84
+            xmax = 372.79
+            text = "I'll see what they can offer us that is better than what we have now."
+        intervals [79]:
+            xmin = 372.79
+            xmax = 375.03
+            text = ""
+        intervals [80]:
+            xmin = 375.03
+            xmax = 376.47
+            text = "I'll have that within ten days."
+        intervals [81]:
+            xmin = 376.47
+            xmax = 395.0
+            text = ""
+        intervals [82]:
+            xmin = 395.0
+            xmax = 395.64
+            text = "Yeah."
+        intervals [83]:
+            xmin = 395.64
+            xmax = 396.16
+            text = ""
+        intervals [84]:
+            xmin = 396.16
+            xmax = 397.17
+            text = "Yes, right."
+        intervals [85]:
+            xmin = 397.17
+            xmax = 415.28
+            text = ""
+        intervals [86]:
+            xmin = 415.28
+            xmax = 415.9
+            text = "Uh-huh."
+        intervals [87]:
+            xmin = 415.9
+            xmax = 416.94
+            text = ""
+        intervals [88]:
+            xmin = 416.94
+            xmax = 417.4
+            text = "Right."
+        intervals [89]:
+            xmin = 417.4
+            xmax = 425.99
+            text = ""
+        intervals [90]:
+            xmin = 425.99
+            xmax = 426.85
+            text = "Absolutely."
+        intervals [91]:
+            xmin = 426.85
+            xmax = 427.27
+            text = ""
+        intervals [92]:
+            xmin = 427.27
+            xmax = 427.87
+            text = "Uh-huh."
+        intervals [93]:
+            xmin = 427.87
+            xmax = 443.15
+            text = ""
+        intervals [94]:
+            xmin = 443.15
+            xmax = 443.67
+            text = "Yes, uh <ST/>"
+        intervals [95]:
+            xmin = 443.67
+            xmax = 444.14
+            text = ""
+        intervals [96]:
+            xmin = 444.14
+            xmax = 446.82
+            text = "<ST/> a <FILL/> <ST/> a penalty for that I circumstantially hope so."
+        intervals [97]:
+            xmin = 446.82
+            xmax = 464.06
+            text = ""
+        intervals [98]:
+            xmin = 464.06
+            xmax = 464.61
+            text = "Yeah."
+        intervals [99]:
+            xmin = 464.61
+            xmax = 464.96
+            text = ""
+        intervals [100]:
+            xmin = 464.96
+            xmax = 465.93
+            text = "Yeah absolutely."
+        intervals [101]:
+            xmin = 465.93
+            xmax = 466.11
+            text = ""
+        intervals [102]:
+            xmin = 466.11
+            xmax = 468.83
+            text = "Well, they're getting sick from heat. Heatstroke is what's causing them."
+        intervals [103]:
+            xmin = 468.83
+            xmax = 474.93
+            text = ""
+    item [7]:
+        class = "IntervalTier"
+        name = "spk_07"
+        xmin = 0
+        xmax = 474.93
+        intervals: size = 308
+        intervals [1]:
+            xmin = 0.0
+            xmax = 32.48
+            text = ""
+        intervals [2]:
+            xmin = 32.48
+            xmax = 33.01
+            text = "Yeah."
+        intervals [3]:
+            xmin = 33.01
+            xmax = 33.47
+            text = ""
+        intervals [4]:
+            xmin = 33.47
+            xmax = 34.97
+            text = "OK, I understand."
+        intervals [5]:
+            xmin = 34.97
+            xmax = 35.23
+            text = ""
+        intervals [6]:
+            xmin = 35.23
+            xmax = 35.9
+            text = "Yes."
+        intervals [7]:
+            xmin = 35.9
+            xmax = 38.58
+            text = ""
+        intervals [8]:
+            xmin = 38.58
+            xmax = 39.18
+            text = "<UNKNOWN/>"
+        intervals [9]:
+            xmin = 39.18
+            xmax = 41.06
+            text = ""
+        intervals [10]:
+            xmin = 41.06
+            xmax = 42.41
+            text = "Yes, <UNKNOWN/> <ST/>"
+        intervals [11]:
+            xmin = 42.41
+            xmax = 42.69
+            text = ""
+        intervals [12]:
+            xmin = 42.69
+            xmax = 43.63
+            text = "What about <ST/>"
+        intervals [13]:
+            xmin = 43.63
+            xmax = 45.16
+            text = ""
+        intervals [14]:
+            xmin = 45.16
+            xmax = 45.78
+            text = "Yes."
+        intervals [15]:
+            xmin = 45.78
+            xmax = 48.83
+            text = ""
+        intervals [16]:
+            xmin = 48.83
+            xmax = 50.47
+            text = "And we uh <ST/> uh <ST/>"
+        intervals [17]:
+            xmin = 50.47
+            xmax = 58.83
+            text = ""
+        intervals [18]:
+            xmin = 58.83
+            xmax = 61.57
+            text = "We should have a <ST/> so maybe we should have a <ST/>"
+        intervals [19]:
+            xmin = 61.57
+            xmax = 62.04
+            text = ""
+        intervals [20]:
+            xmin = 62.04
+            xmax = 66.05
+            text = "Yes, yes, we do. How many people do we have taking care of, uh, the, uh <ST/>"
+        intervals [21]:
+            xmin = 66.05
+            xmax = 66.21
+            text = ""
+        intervals [22]:
+            xmin = 66.21
+            xmax = 67.12
+            text = "<ST/> customers right now?"
+        intervals [23]:
+            xmin = 67.12
+            xmax = 67.74
+            text = ""
+        intervals [24]:
+            xmin = 67.74
+            xmax = 68.27
+            text = "Yes."
+        intervals [25]:
+            xmin = 68.27
+            xmax = 68.39
+            text = ""
+        intervals [26]:
+            xmin = 68.39
+            xmax = 69.05
+            text = "Uh <ST/>"
+        intervals [27]:
+            xmin = 69.05
+            xmax = 71.62
+            text = ""
+        intervals [28]:
+            xmin = 71.62
+            xmax = 72.42
+            text = "Uh <ST/> Uh <ST/>"
+        intervals [29]:
+            xmin = 72.42
+            xmax = 72.43
+            text = ""
+        intervals [30]:
+            xmin = 72.43
+            xmax = 73.04
+            text = "Yes."
+        intervals [31]:
+            xmin = 73.04
+            xmax = 74.29
+            text = ""
+        intervals [32]:
+            xmin = 74.29
+            xmax = 74.81
+            text = "Oh."
+        intervals [33]:
+            xmin = 74.81
+            xmax = 77.89
+            text = ""
+        intervals [34]:
+            xmin = 77.89
+            xmax = 78.42
+            text = "Yes."
+        intervals [35]:
+            xmin = 78.42
+            xmax = 81.38
+            text = ""
+        intervals [36]:
+            xmin = 81.38
+            xmax = 81.99
+            text = "Yes."
+        intervals [37]:
+            xmin = 81.99
+            xmax = 85.17
+            text = ""
+        intervals [38]:
+            xmin = 85.17
+            xmax = 85.8
+            text = "OK."
+        intervals [39]:
+            xmin = 85.8
+            xmax = 111.57
+            text = ""
+        intervals [40]:
+            xmin = 111.57
+            xmax = 114.5
+            text = "Or little uh <ST/> uh, <FILL/> you know, a little uh <ST/>"
+        intervals [41]:
+            xmin = 114.5
+            xmax = 114.78
+            text = ""
+        intervals [42]:
+            xmin = 114.78
+            xmax = 117.55
+            text = "<ST/> fan that they can, uh <ST/> hand fan that they can use."
+        intervals [43]:
+            xmin = 117.55
+            xmax = 122.01
+            text = ""
+        intervals [44]:
+            xmin = 122.01
+            xmax = 122.61
+            text = "Uh <ST/>"
+        intervals [45]:
+            xmin = 122.61
+            xmax = 122.79
+            text = ""
+        intervals [46]:
+            xmin = 122.79
+            xmax = 124.64
+            text = "Mm-hmm but is that <ST/>"
+        intervals [47]:
+            xmin = 124.64
+            xmax = 125.05
+            text = ""
+        intervals [48]:
+            xmin = 125.05
+            xmax = 125.81
+            text = "Would that be <ST/>"
+        intervals [49]:
+            xmin = 125.81
+            xmax = 126.84
+            text = ""
+        intervals [50]:
+            xmin = 126.84
+            xmax = 127.38
+            text = "Are we <ST/>"
+        intervals [51]:
+            xmin = 127.38
+            xmax = 129.59
+            text = ""
+        intervals [52]:
+            xmin = 129.59
+            xmax = 130.29
+            text = "Uh <ST/>"
+        intervals [53]:
+            xmin = 130.29
+            xmax = 131.64
+            text = ""
+        intervals [54]:
+            xmin = 131.64
+            xmax = 132.89
+            text = "Uh <ST/> Uh but uh <ST/>"
+        intervals [55]:
+            xmin = 132.89
+            xmax = 133.32
+            text = ""
+        intervals [56]:
+            xmin = 133.32
+            xmax = 133.69
+            text = "Yeah."
+        intervals [57]:
+            xmin = 133.69
+            xmax = 135.48
+            text = ""
+        intervals [58]:
+            xmin = 135.48
+            xmax = 135.99
+            text = "Mmm."
+        intervals [59]:
+            xmin = 135.99
+            xmax = 136.26
+            text = ""
+        intervals [60]:
+            xmin = 136.26
+            xmax = 136.86
+            text = "Yes."
+        intervals [61]:
+            xmin = 136.86
+            xmax = 136.99
+            text = ""
+        intervals [62]:
+            xmin = 136.99
+            xmax = 137.5
+            text = "Mmm."
+        intervals [63]:
+            xmin = 137.5
+            xmax = 138.03
+            text = ""
+        intervals [64]:
+            xmin = 138.03
+            xmax = 139.23
+            text = "Hmm. Uh-huh. Yeah."
+        intervals [65]:
+            xmin = 139.23
+            xmax = 139.44
+            text = ""
+        intervals [66]:
+            xmin = 139.44
+            xmax = 139.89
+            text = "Yeah."
+        intervals [67]:
+            xmin = 139.89
+            xmax = 145.61
+            text = ""
+        intervals [68]:
+            xmin = 145.61
+            xmax = 146.54
+            text = "Oh."
+        intervals [69]:
+            xmin = 146.54
+            xmax = 147.62
+            text = ""
+        intervals [70]:
+            xmin = 147.62
+            xmax = 149.92
+            text = "OK so I guess we <ST/> yeah."
+        intervals [71]:
+            xmin = 149.92
+            xmax = 150.31
+            text = ""
+        intervals [72]:
+            xmin = 150.31
+            xmax = 150.86
+            text = "Yeah."
+        intervals [73]:
+            xmin = 150.86
+            xmax = 155.33
+            text = ""
+        intervals [74]:
+            xmin = 155.33
+            xmax = 155.97
+            text = "Yes."
+        intervals [75]:
+            xmin = 155.97
+            xmax = 156.55
+            text = ""
+        intervals [76]:
+            xmin = 156.55
+            xmax = 157.4
+            text = "No."
+        intervals [77]:
+            xmin = 157.4
+            xmax = 158.23
+            text = ""
+        intervals [78]:
+            xmin = 158.23
+            xmax = 159.14
+            text = "Eh."
+        intervals [79]:
+            xmin = 159.14
+            xmax = 159.98
+            text = ""
+        intervals [80]:
+            xmin = 159.98
+            xmax = 160.61
+            text = "<UNKNOWN/>"
+        intervals [81]:
+            xmin = 160.61
+            xmax = 164.33
+            text = ""
+        intervals [82]:
+            xmin = 164.33
+            xmax = 165.34
+            text = "May I suggest <ST/>"
+        intervals [83]:
+            xmin = 165.34
+            xmax = 166.25
+            text = ""
+        intervals [84]:
+            xmin = 166.25
+            xmax = 166.97
+            text = "Yes."
+        intervals [85]:
+            xmin = 166.97
+            xmax = 167.69
+            text = ""
+        intervals [86]:
+            xmin = 167.69
+            xmax = 169.38
+            text = "May I suggest like a <ST/>"
+        intervals [87]:
+            xmin = 169.38
+            xmax = 169.68
+            text = ""
+        intervals [88]:
+            xmin = 169.68
+            xmax = 170.7
+            text = "During, uh <FILL/> <ST/>"
+        intervals [89]:
+            xmin = 170.7
+            xmax = 171.1
+            text = ""
+        intervals [90]:
+            xmin = 171.1
+            xmax = 175.5
+            text = "May I suggest that during COVID we put on the floor the mark for the feet <FILL/> and <ST/>"
+        intervals [91]:
+            xmin = 175.5
+            xmax = 175.63
+            text = ""
+        intervals [92]:
+            xmin = 175.63
+            xmax = 177.35
+            text = "<ST/> and separate that would be uh <ST/>"
+        intervals [93]:
+            xmin = 177.35
+            xmax = 177.96
+            text = ""
+        intervals [94]:
+            xmin = 177.96
+            xmax = 178.41
+            text = "Yeah."
+        intervals [95]:
+            xmin = 178.41
+            xmax = 179.25
+            text = ""
+        intervals [96]:
+            xmin = 179.25
+            xmax = 180.83
+            text = "No, I was just painting."
+        intervals [97]:
+            xmin = 180.83
+            xmax = 181.89
+            text = ""
+        intervals [98]:
+            xmin = 181.89
+            xmax = 182.54
+            text = "Yes."
+        intervals [99]:
+            xmin = 182.54
+            xmax = 185.24
+            text = ""
+        intervals [100]:
+            xmin = 185.24
+            xmax = 185.86
+            text = "Yes."
+        intervals [101]:
+            xmin = 185.86
+            xmax = 186.48
+            text = "Hmm."
+        intervals [102]:
+            xmin = 186.48
+            xmax = 186.8
+            text = ""
+        intervals [103]:
+            xmin = 186.8
+            xmax = 188.0
+            text = "Mm-hmm, yeah."
+        intervals [104]:
+            xmin = 188.0
+            xmax = 188.99
+            text = ""
+        intervals [105]:
+            xmin = 188.99
+            xmax = 189.56
+            text = "Yeah."
+        intervals [106]:
+            xmin = 189.56
+            xmax = 196.38
+            text = ""
+        intervals [107]:
+            xmin = 196.38
+            xmax = 196.95
+            text = "Yeah."
+        intervals [108]:
+            xmin = 196.95
+            xmax = 197.07
+            text = ""
+        intervals [109]:
+            xmin = 197.07
+            xmax = 197.58
+            text = "But it <ST/>"
+        intervals [110]:
+            xmin = 197.58
+            xmax = 197.88
+            text = ""
+        intervals [111]:
+            xmin = 197.88
+            xmax = 201.28
+            text = "<ST/> that will not, uh, solve the problem. I think there is a spot."
+        intervals [112]:
+            xmin = 201.28
+            xmax = 202.43
+            text = ""
+        intervals [113]:
+            xmin = 202.43
+            xmax = 203.39
+            text = "Yeah, yeah."
+        intervals [114]:
+            xmin = 203.39
+            xmax = 205.83
+            text = ""
+        intervals [115]:
+            xmin = 205.83
+            xmax = 206.27
+            text = "Yeah."
+        intervals [116]:
+            xmin = 206.27
+            xmax = 206.4
+            text = ""
+        intervals [117]:
+            xmin = 206.4
+            xmax = 207.17
+            text = "Yeah yeah yeah."
+        intervals [118]:
+            xmin = 207.17
+            xmax = 208.86
+            text = ""
+        intervals [119]:
+            xmin = 208.86
+            xmax = 209.43
+            text = "Yes."
+        intervals [120]:
+            xmin = 209.43
+            xmax = 211.34
+            text = ""
+        intervals [121]:
+            xmin = 211.34
+            xmax = 211.79
+            text = "Yeah."
+        intervals [122]:
+            xmin = 211.79
+            xmax = 212.16
+            text = ""
+        intervals [123]:
+            xmin = 212.16
+            xmax = 212.66
+            text = "Yeah."
+        intervals [124]:
+            xmin = 212.66
+            xmax = 225.67
+            text = ""
+        intervals [125]:
+            xmin = 225.67
+            xmax = 227.98
+            text = "Yes, yes, yes. Mmm. Mmm."
+        intervals [126]:
+            xmin = 227.98
+            xmax = 228.69
+            text = ""
+        intervals [127]:
+            xmin = 228.69
+            xmax = 229.51
+            text = "Uh <UNKNOWN/> ."
+        intervals [128]:
+            xmin = 229.51
+            xmax = 229.82
+            text = ""
+        intervals [129]:
+            xmin = 229.82
+            xmax = 230.23
+            text = "Yeah."
+        intervals [130]:
+            xmin = 230.23
+            xmax = 231.37
+            text = ""
+        intervals [131]:
+            xmin = 231.37
+            xmax = 232.08
+            text = "Yes."
+        intervals [132]:
+            xmin = 232.08
+            xmax = 233.29
+            text = ""
+        intervals [133]:
+            xmin = 233.29
+            xmax = 234.48
+            text = "Yes, yes."
+        intervals [134]:
+            xmin = 234.48
+            xmax = 234.87
+            text = ""
+        intervals [135]:
+            xmin = 234.87
+            xmax = 235.38
+            text = "Mmm."
+        intervals [136]:
+            xmin = 235.38
+            xmax = 236.89
+            text = ""
+        intervals [137]:
+            xmin = 236.89
+            xmax = 237.67
+            text = "Mmm, mmm."
+        intervals [138]:
+            xmin = 237.67
+            xmax = 237.9
+            text = ""
+        intervals [139]:
+            xmin = 237.9
+            xmax = 238.39
+            text = "Yeah."
+        intervals [140]:
+            xmin = 238.39
+            xmax = 238.43
+            text = ""
+        intervals [141]:
+            xmin = 238.43
+            xmax = 239.66
+            text = "Uh <ST/>"
+        intervals [142]:
+            xmin = 239.66
+            xmax = 240.28
+            text = ""
+        intervals [143]:
+            xmin = 240.28
+            xmax = 240.72
+            text = "Yeah."
+        intervals [144]:
+            xmin = 240.72
+            xmax = 241.23
+            text = ""
+        intervals [145]:
+            xmin = 241.23
+            xmax = 241.77
+            text = "<FILL/> Yeah."
+        intervals [146]:
+            xmin = 241.77
+            xmax = 242.8
+            text = ""
+        intervals [147]:
+            xmin = 242.8
+            xmax = 243.26
+            text = "Yeah."
+        intervals [148]:
+            xmin = 243.26
+            xmax = 244.8
+            text = ""
+        intervals [149]:
+            xmin = 244.8
+            xmax = 245.42
+            text = "No no."
+        intervals [150]:
+            xmin = 245.42
+            xmax = 256.82
+            text = ""
+        intervals [151]:
+            xmin = 256.82
+            xmax = 259.78
+            text = "Is there <ST/> Is there another, uh <ST/> uh, subject?"
+        intervals [152]:
+            xmin = 259.78
+            xmax = 260.1
+            text = ""
+        intervals [153]:
+            xmin = 260.1
+            xmax = 260.68
+            text = "We could <ST/>"
+        intervals [154]:
+            xmin = 260.68
+            xmax = 260.86
+            text = ""
+        intervals [155]:
+            xmin = 260.86
+            xmax = 262.82
+            text = "I think all these are small problems."
+        intervals [156]:
+            xmin = 262.82
+            xmax = 263.61
+            text = ""
+        intervals [157]:
+            xmin = 263.61
+            xmax = 268.27
+            text = "I think those are small problems. I'm <FILL/> <ST/> I think we had, uh <ST/> You told me once about <ST/>"
+        intervals [158]:
+            xmin = 268.27
+            xmax = 269.28
+            text = ""
+        intervals [159]:
+            xmin = 269.28
+            xmax = 270.56
+            text = "<FILL/> Yes."
+        intervals [160]:
+            xmin = 270.56
+            xmax = 271.53
+            text = ""
+        intervals [161]:
+            xmin = 271.53
+            xmax = 272.52
+            text = "That told us <ST/>"
+        intervals [162]:
+            xmin = 272.52
+            xmax = 272.99
+            text = ""
+        intervals [163]:
+            xmin = 272.99
+            xmax = 276.11
+            text = "<ST/> that <ST/> that was the main, uh <ST/> that was the main, uh, concern."
+        intervals [164]:
+            xmin = 276.11
+            xmax = 281.09
+            text = ""
+        intervals [165]:
+            xmin = 281.09
+            xmax = 283.26
+            text = "And part Firefox <ST/> and Firefox."
+        intervals [166]:
+            xmin = 283.26
+            xmax = 287.26
+            text = ""
+        intervals [167]:
+            xmin = 287.26
+            xmax = 288.23
+            text = "Yes, mmm."
+        intervals [168]:
+            xmin = 288.23
+            xmax = 288.42
+            text = ""
+        intervals [169]:
+            xmin = 288.42
+            xmax = 289.51
+            text = "Yeah yeah yeah."
+        intervals [170]:
+            xmin = 289.51
+            xmax = 291.25
+            text = ""
+        intervals [171]:
+            xmin = 291.25
+            xmax = 291.8
+            text = "Yes."
+        intervals [172]:
+            xmin = 291.8
+            xmax = 292.86
+            text = ""
+        intervals [173]:
+            xmin = 292.86
+            xmax = 293.37
+            text = "Yes."
+        intervals [174]:
+            xmin = 293.37
+            xmax = 293.53
+            text = ""
+        intervals [175]:
+            xmin = 293.53
+            xmax = 299.12
+            text = "No uh we can <ST/> we can <ST/> we can do it you know we have to solve all the problems this is why we're all <ST/>"
+        intervals [176]:
+            xmin = 299.12
+            xmax = 302.86
+            text = ""
+        intervals [177]:
+            xmin = 302.86
+            xmax = 303.43
+            text = "Yes."
+        intervals [178]:
+            xmin = 303.43
+            xmax = 305.04
+            text = ""
+        intervals [179]:
+            xmin = 305.04
+            xmax = 305.69
+            text = "Yes."
+        intervals [180]:
+            xmin = 305.69
+            xmax = 307.18
+            text = ""
+        intervals [181]:
+            xmin = 307.18
+            xmax = 307.89
+            text = "Yes."
+        intervals [182]:
+            xmin = 307.89
+            xmax = 309.12
+            text = ""
+        intervals [183]:
+            xmin = 309.12
+            xmax = 309.56
+            text = "<UNKNOWN/> <UNKNOWN/>"
+        intervals [184]:
+            xmin = 309.56
+            xmax = 310.44
+            text = ""
+        intervals [185]:
+            xmin = 310.44
+            xmax = 310.98
+            text = "Yes."
+        intervals [186]:
+            xmin = 310.98
+            xmax = 312.69
+            text = ""
+        intervals [187]:
+            xmin = 312.69
+            xmax = 313.2
+            text = "OK."
+        intervals [188]:
+            xmin = 313.2
+            xmax = 313.34
+            text = ""
+        intervals [189]:
+            xmin = 313.34
+            xmax = 314.09
+            text = "We can do."
+        intervals [190]:
+            xmin = 314.09
+            xmax = 315.16
+            text = ""
+        intervals [191]:
+            xmin = 315.16
+            xmax = 315.73
+            text = "Yeah."
+        intervals [192]:
+            xmin = 315.73
+            xmax = 317.72
+            text = ""
+        intervals [193]:
+            xmin = 317.72
+            xmax = 318.23
+            text = "Yeah."
+        intervals [194]:
+            xmin = 318.23
+            xmax = 318.47
+            text = ""
+        intervals [195]:
+            xmin = 318.47
+            xmax = 319.32
+            text = "That's the main <ST/>"
+        intervals [196]:
+            xmin = 319.32
+            xmax = 319.51
+            text = ""
+        intervals [197]:
+            xmin = 319.51
+            xmax = 319.9
+            text = "Yeah."
+        intervals [198]:
+            xmin = 319.9
+            xmax = 320.99
+            text = ""
+        intervals [199]:
+            xmin = 320.99
+            xmax = 321.29
+            text = "Yeah."
+        intervals [200]:
+            xmin = 321.29
+            xmax = 323.68
+            text = ""
+        intervals [201]:
+            xmin = 323.68
+            xmax = 324.32
+            text = "Yes."
+        intervals [202]:
+            xmin = 324.32
+            xmax = 326.45
+            text = ""
+        intervals [203]:
+            xmin = 326.45
+            xmax = 327.52
+            text = "But the IT <ST/>"
+        intervals [204]:
+            xmin = 327.52
+            xmax = 327.67
+            text = ""
+        intervals [205]:
+            xmin = 327.67
+            xmax = 331.15
+            text = "But the IT problem is the uh <ST/> is the main problem. Yeah."
+        intervals [206]:
+            xmin = 331.15
+            xmax = 331.89
+            text = ""
+        intervals [207]:
+            xmin = 331.89
+            xmax = 332.39
+            text = "Yeah."
+        intervals [208]:
+            xmin = 332.39
+            xmax = 333.14
+            text = ""
+        intervals [209]:
+            xmin = 333.14
+            xmax = 335.04
+            text = "Yeah, but not <ST/> but <UNKNOWN/> <ST/>"
+        intervals [210]:
+            xmin = 335.04
+            xmax = 337.07
+            text = ""
+        intervals [211]:
+            xmin = 337.07
+            xmax = 341.13
+            text = "No, <FILL/> <ST/> I think the most important is the IT problem with the website."
+        intervals [212]:
+            xmin = 341.13
+            xmax = 341.36
+            text = ""
+        intervals [213]:
+            xmin = 341.36
+            xmax = 342.69
+            text = "We have to fix that."
+        intervals [214]:
+            xmin = 342.69
+            xmax = 343.93
+            text = ""
+        intervals [215]:
+            xmin = 343.93
+            xmax = 345.17
+            text = "Yes, yes."
+        intervals [216]:
+            xmin = 345.17
+            xmax = 347.73
+            text = ""
+        intervals [217]:
+            xmin = 347.73
+            xmax = 351.45
+            text = "Well we can <ST/> We're gonna have to hire somebody better than the one we have now."
+        intervals [218]:
+            xmin = 351.45
+            xmax = 352.05
+            text = ""
+        intervals [219]:
+            xmin = 352.05
+            xmax = 352.99
+            text = "That's, uh <ST/> Yeah."
+        intervals [220]:
+            xmin = 352.99
+            xmax = 354.39
+            text = ""
+        intervals [221]:
+            xmin = 354.39
+            xmax = 354.87
+            text = "Yeah."
+        intervals [222]:
+            xmin = 354.87
+            xmax = 359.12
+            text = ""
+        intervals [223]:
+            xmin = 359.12
+            xmax = 359.739
+            text = "Yes."
+        intervals [224]:
+            xmin = 359.739
+            xmax = 361.74
+            text = ""
+        intervals [225]:
+            xmin = 361.74
+            xmax = 362.35
+            text = "Yes."
+        intervals [226]:
+            xmin = 362.35
+            xmax = 364.81
+            text = ""
+        intervals [227]:
+            xmin = 364.81
+            xmax = 365.47
+            text = "Yes."
+        intervals [228]:
+            xmin = 365.47
+            xmax = 371.28
+            text = ""
+        intervals [229]:
+            xmin = 371.28
+            xmax = 371.85
+            text = "Yes."
+        intervals [230]:
+            xmin = 371.85
+            xmax = 372.0
+            text = ""
+        intervals [231]:
+            xmin = 372.0
+            xmax = 372.52
+            text = "Yes."
+        intervals [232]:
+            xmin = 372.52
+            xmax = 374.88
+            text = ""
+        intervals [233]:
+            xmin = 374.88
+            xmax = 375.83
+            text = "We can do that."
+        intervals [234]:
+            xmin = 375.83
+            xmax = 376.55
+            text = ""
+        intervals [235]:
+            xmin = 376.55
+            xmax = 377.48
+            text = "We can do that."
+        intervals [236]:
+            xmin = 377.48
+            xmax = 377.92
+            text = ""
+        intervals [237]:
+            xmin = 377.92
+            xmax = 380.22
+            text = "Yeah, yeah, yeah, yeah, yeah. Oh, yeah."
+        intervals [238]:
+            xmin = 380.22
+            xmax = 386.87
+            text = ""
+        intervals [239]:
+            xmin = 386.87
+            xmax = 387.53
+            text = "Uh."
+        intervals [240]:
+            xmin = 387.53
+            xmax = 387.71
+            text = ""
+        intervals [241]:
+            xmin = 387.71
+            xmax = 388.29
+            text = "Uh-huh."
+        intervals [242]:
+            xmin = 388.29
+            xmax = 389.3
+            text = ""
+        intervals [243]:
+            xmin = 389.3
+            xmax = 392.17
+            text = "Uh-huh uh-huh that's exactly this, yes."
+        intervals [244]:
+            xmin = 392.17
+            xmax = 393.39
+            text = ""
+        intervals [245]:
+            xmin = 393.39
+            xmax = 393.83
+            text = "Mmm."
+        intervals [246]:
+            xmin = 393.83
+            xmax = 394.81
+            text = ""
+        intervals [247]:
+            xmin = 394.81
+            xmax = 395.22
+            text = "Yeah."
+        intervals [248]:
+            xmin = 395.22
+            xmax = 397.64
+            text = ""
+        intervals [249]:
+            xmin = 397.64
+            xmax = 398.03
+            text = "Yeah."
+        intervals [250]:
+            xmin = 398.03
+            xmax = 399.96
+            text = ""
+        intervals [251]:
+            xmin = 399.96
+            xmax = 400.91
+            text = "Yeah, yeah."
+        intervals [252]:
+            xmin = 400.91
+            xmax = 401.26
+            text = ""
+        intervals [253]:
+            xmin = 401.26
+            xmax = 401.84
+            text = "Yeah yeah."
+        intervals [254]:
+            xmin = 401.84
+            xmax = 402.64
+            text = ""
+        intervals [255]:
+            xmin = 402.64
+            xmax = 403.12
+            text = "Uh how <ST/>"
+        intervals [256]:
+            xmin = 403.12
+            xmax = 403.46
+            text = ""
+        intervals [257]:
+            xmin = 403.46
+            xmax = 403.84
+            text = "Yeah."
+        intervals [258]:
+            xmin = 403.84
+            xmax = 404.25
+            text = ""
+        intervals [259]:
+            xmin = 404.25
+            xmax = 404.79
+            text = "Yeah."
+        intervals [260]:
+            xmin = 404.79
+            xmax = 405.57
+            text = ""
+        intervals [261]:
+            xmin = 405.57
+            xmax = 405.94
+            text = "Huh."
+        intervals [262]:
+            xmin = 405.94
+            xmax = 406.96
+            text = ""
+        intervals [263]:
+            xmin = 406.96
+            xmax = 407.67
+            text = "Yes."
+        intervals [264]:
+            xmin = 407.67
+            xmax = 407.94
+            text = ""
+        intervals [265]:
+            xmin = 407.94
+            xmax = 409.79
+            text = "Yeah yeah yeah yeah yeah yeah yeah."
+        intervals [266]:
+            xmin = 409.79
+            xmax = 410.95
+            text = ""
+        intervals [267]:
+            xmin = 410.95
+            xmax = 411.53
+            text = "Yes."
+        intervals [268]:
+            xmin = 411.53
+            xmax = 414.82
+            text = ""
+        intervals [269]:
+            xmin = 414.82
+            xmax = 415.35
+            text = "Yeah."
+        intervals [270]:
+            xmin = 415.35
+            xmax = 422.74
+            text = ""
+        intervals [271]:
+            xmin = 422.74
+            xmax = 423.43
+            text = "<FILLlaugh/>"
+        intervals [272]:
+            xmin = 423.43
+            xmax = 427.21
+            text = ""
+        intervals [273]:
+            xmin = 427.21
+            xmax = 428.47
+            text = "Yes, uh-huh."
+        intervals [274]:
+            xmin = 428.47
+            xmax = 428.97
+            text = ""
+        intervals [275]:
+            xmin = 428.97
+            xmax = 429.6
+            text = "Uh-huh."
+        intervals [276]:
+            xmin = 429.6
+            xmax = 430.2
+            text = ""
+        intervals [277]:
+            xmin = 430.2
+            xmax = 430.95
+            text = "<FILLlaugh/>"
+        intervals [278]:
+            xmin = 430.95
+            xmax = 432.35
+            text = ""
+        intervals [279]:
+            xmin = 432.35
+            xmax = 432.93
+            text = "Yes."
+        intervals [280]:
+            xmin = 432.93
+            xmax = 433.52
+            text = ""
+        intervals [281]:
+            xmin = 433.52
+            xmax = 435.36
+            text = "Yeah, yeah, yeah."
+        intervals [282]:
+            xmin = 435.36
+            xmax = 436.08
+            text = ""
+        intervals [283]:
+            xmin = 436.08
+            xmax = 438.37
+            text = "Yeah <PName> Beth </PName> . Yeah <PName> Beth </PName> , that's an excellent idea."
+        intervals [284]:
+            xmin = 438.37
+            xmax = 446.52
+            text = ""
+        intervals [285]:
+            xmin = 446.52
+            xmax = 446.96
+            text = "Yeah."
+        intervals [286]:
+            xmin = 446.96
+            xmax = 447.09
+            text = ""
+        intervals [287]:
+            xmin = 447.09
+            xmax = 447.41
+            text = "Yeah."
+        intervals [288]:
+            xmin = 447.41
+            xmax = 447.82
+            text = ""
+        intervals [289]:
+            xmin = 447.82
+            xmax = 448.1
+            text = "<FILL/>"
+        intervals [290]:
+            xmin = 448.1
+            xmax = 448.39
+            text = ""
+        intervals [291]:
+            xmin = 448.39
+            xmax = 448.86
+            text = "Yeah."
+        intervals [292]:
+            xmin = 448.86
+            xmax = 449.58
+            text = ""
+        intervals [293]:
+            xmin = 449.58
+            xmax = 450.15
+            text = "Huh."
+        intervals [294]:
+            xmin = 450.15
+            xmax = 450.6
+            text = ""
+        intervals [295]:
+            xmin = 450.6
+            xmax = 452.33
+            text = "Yeah uh-huh. Yeah yeah yeah."
+        intervals [296]:
+            xmin = 452.33
+            xmax = 460.68
+            text = ""
+        intervals [297]:
+            xmin = 460.68
+            xmax = 462.85
+            text = "A little kiosks, yes."
+        intervals [298]:
+            xmin = 462.85
+            xmax = 463.34
+            text = ""
+        intervals [299]:
+            xmin = 463.34
+            xmax = 467.25
+            text = "I can take of that. I <ST/> Yeah, yeah I can take of that, yeah, yeah."
+        intervals [300]:
+            xmin = 467.25
+            xmax = 467.93
+            text = ""
+        intervals [301]:
+            xmin = 467.93
+            xmax = 468.44
+            text = "Uh-huh."
+        intervals [302]:
+            xmin = 468.44
+            xmax = 469.04
+            text = ""
+        intervals [303]:
+            xmin = 469.04
+            xmax = 470.42
+            text = "Yes, I'll take care of that."
+        intervals [304]:
+            xmin = 470.42
+            xmax = 471.09
+            text = ""
+        intervals [305]:
+            xmin = 471.09
+            xmax = 471.57
+            text = "Yeah."
+        intervals [306]:
+            xmin = 471.57
+            xmax = 473.31
+            text = ""
+        intervals [307]:
+            xmin = 473.31
+            xmax = 473.74
+            text = "Yeah."
+        intervals [308]:
+            xmin = 473.74
+            xmax = 474.93
+            text = ""

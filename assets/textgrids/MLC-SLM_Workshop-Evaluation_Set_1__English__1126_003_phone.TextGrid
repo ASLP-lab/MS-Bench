@@ -1,0 +1,3388 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 1872.855827562
+tiers? <exists>
+size = 2
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0
+        xmax = 1872.855827562
+        intervals: size = 511
+        intervals [1]:
+            xmin = 0.0
+            xmax = 19.563385143
+            text = ""
+        intervals [2]:
+            xmin = 19.563385143
+            xmax = 22.226242527
+            text = "Yes, so what can we say about movies and television?"
+        intervals [3]:
+            xmin = 22.226242527
+            xmax = 24.063072882
+            text = ""
+        intervals [4]:
+            xmin = 24.063072882
+            xmax = 25.362979626
+            text = "Yeah. Um."
+        intervals [5]:
+            xmin = 25.362979626
+            xmax = 27.349245968
+            text = ""
+        intervals [6]:
+            xmin = 27.349245968
+            xmax = 31.556896524
+            text = "Very, there's a, there's a huge variety. Um."
+        intervals [7]:
+            xmin = 31.556896524
+            xmax = 32.189379701
+            text = ""
+        intervals [8]:
+            xmin = 32.189379701
+            xmax = 36.348456381
+            text = "You know, there's action, horror, love horror. Um."
+        intervals [9]:
+            xmin = 36.348456381
+            xmax = 41.125026744
+            text = ""
+        intervals [10]:
+            xmin = 41.125026744
+            xmax = 46.366817255
+            text = "Animated, I love animation, um fantasy, thriller."
+        intervals [11]:
+            xmin = 46.366817255
+            xmax = 48.465277875
+            text = ""
+        intervals [12]:
+            xmin = 48.465277875
+            xmax = 49.514984951
+            text = "A lot."
+        intervals [13]:
+            xmin = 49.514984951
+            xmax = 52.292550822
+            text = ""
+        intervals [14]:
+            xmin = 52.292550822
+            xmax = 56.222611316
+            text = "It would have to be um ab- animation probably, I mean."
+        intervals [15]:
+            xmin = 56.222611316
+            xmax = 56.711464326
+            text = ""
+        intervals [16]:
+            xmin = 56.711464326
+            xmax = 63.018904805
+            text = "I wouldn't say animation is a genre, but um style-wise it is my favorite."
+        intervals [17]:
+            xmin = 63.018904805
+            xmax = 63.051137945
+            text = ""
+        intervals [18]:
+            xmin = 63.051137945
+            xmax = 69.525877789
+            text = "There's a lot, I mean, two D animation specifically. There's like a lot you can experiment with, I suppose. Um."
+        intervals [19]:
+            xmin = 69.525877789
+            xmax = 69.53356587
+            text = ""
+        intervals [20]:
+            xmin = 69.53356587
+            xmax = 77.044821128
+            text = "You can change the frame rate and stuff and it makes things move more quickly or slowly depending on what you set it as um."
+        intervals [21]:
+            xmin = 77.044821128
+            xmax = 79.212645634
+            text = ""
+        intervals [22]:
+            xmin = 79.212645634
+            xmax = 84.053395561
+            text = "Characters usually can be explored more properly just by their appearances."
+        intervals [23]:
+            xmin = 84.053395561
+            xmax = 84.07360345
+            text = ""
+        intervals [24]:
+            xmin = 84.07360345
+            xmax = 90.098677585
+            text = "Because you have a lot of freedom with height, and design and stuff. And you can usually tell what they are like."
+        intervals [25]:
+            xmin = 90.098677585
+            xmax = 90.311895036
+            text = ""
+        intervals [26]:
+            xmin = 90.311895036
+            xmax = 94.304662446
+            text = "Just one with just one look at them if you you you're if you're a good designer, it is."
+        intervals [27]:
+            xmin = 94.304662446
+            xmax = 103.677518791
+            text = ""
+        intervals [28]:
+            xmin = 103.677518791
+            xmax = 104.346678012
+            text = "Yeah."
+        intervals [29]:
+            xmin = 104.346678012
+            xmax = 105.520690396
+            text = ""
+        intervals [30]:
+            xmin = 105.520690396
+            xmax = 109.801174603
+            text = "Looks less awkward um and more flowy, I suppose."
+        intervals [31]:
+            xmin = 109.801174603
+            xmax = 120.785665549
+            text = ""
+        intervals [32]:
+            xmin = 120.785665549
+            xmax = 121.758207811
+            text = "Best show ever."
+        intervals [33]:
+            xmin = 121.758207811
+            xmax = 124.565436797
+            text = ""
+        intervals [34]:
+            xmin = 124.565436797
+            xmax = 125.625608779
+            text = "In the world."
+        intervals [35]:
+            xmin = 125.625608779
+            xmax = 128.298303853
+            text = ""
+        intervals [36]:
+            xmin = 128.298303853
+            xmax = 135.228226577
+            text = "Incredible. Um. I do love how um the family is portrayed."
+        intervals [37]:
+            xmin = 135.228226577
+            xmax = 135.246155422
+            text = ""
+        intervals [38]:
+            xmin = 135.246155422
+            xmax = 138.405956764
+            text = "It's very different compared to say the Simpsons or Family Guy."
+        intervals [39]:
+            xmin = 138.405956764
+            xmax = 138.531533761
+            text = ""
+        intervals [40]:
+            xmin = 138.531533761
+            xmax = 144.585595402
+            text = "Mostly because the whole dynamic for those, for most adult animation is comedy."
+        intervals [41]:
+            xmin = 144.585595402
+            xmax = 144.68889602
+            text = ""
+        intervals [42]:
+            xmin = 144.68889602
+            xmax = 150.865374633
+            text = "That's mostly talking about like abuse and stuff, like how Homel Homer Simpson likes to strangle Bart a lot whenever he does anything wrong."
+        intervals [43]:
+            xmin = 150.865374633
+            xmax = 151.026436485
+            text = ""
+        intervals [44]:
+            xmin = 151.026436485
+            xmax = 157.940094556
+            text = "Or um how Peter Griffin constantly um neglects Meg all the time and says that she doesn't matter, that kind of thing."
+        intervals [45]:
+            xmin = 157.940094556
+            xmax = 158.344897388
+            text = ""
+        intervals [46]:
+            xmin = 158.344897388
+            xmax = 159.689133012
+            text = "But, um, and that's."
+        intervals [47]:
+            xmin = 159.689133012
+            xmax = 160.928098725
+            text = ""
+        intervals [48]:
+            xmin = 160.928098725
+            xmax = 162.149318971
+            text = "Yes, Meg Griffin. She's."
+        intervals [49]:
+            xmin = 162.149318971
+            xmax = 162.946311709
+            text = ""
+        intervals [50]:
+            xmin = 162.946311709
+            xmax = 163.753560227
+            text = "No one likes her."
+        intervals [51]:
+            xmin = 163.753560227
+            xmax = 165.066945758
+            text = ""
+        intervals [52]:
+            xmin = 165.066945758
+            xmax = 168.302351569
+            text = "It's quite unfortunate. Literally everyone hate her."
+        intervals [53]:
+            xmin = 168.302351569
+            xmax = 170.649768995
+            text = ""
+        intervals [54]:
+            xmin = 170.649768995
+            xmax = 173.696816819
+            text = "No, she's fine. I don't know why everyone hates her ."
+        intervals [55]:
+            xmin = 173.696816819
+            xmax = 176.492710649
+            text = ""
+        intervals [56]:
+            xmin = 176.492710649
+            xmax = 181.559156109
+            text = "It's non-running gag um yeah and South Park too South Park is known for its stock."
+        intervals [57]:
+            xmin = 181.559156109
+            xmax = 183.611873769
+            text = ""
+        intervals [58]:
+            xmin = 183.611873769
+            xmax = 189.128071975
+            text = "Sexual assault, pedophilia, everything. Um. Anything they get their hands on."
+        intervals [59]:
+            xmin = 189.128071975
+            xmax = 190.052116445
+            text = ""
+        intervals [60]:
+            xmin = 190.052116445
+            xmax = 193.594544864
+            text = "Evolution, Christianity, atheism, no one is safe."
+        intervals [61]:
+            xmin = 193.594544864
+            xmax = 195.669352669
+            text = ""
+        intervals [62]:
+            xmin = 195.669352669
+            xmax = 198.370436842
+            text = "Celebrities too. Yeah um."
+        intervals [63]:
+            xmin = 198.370436842
+            xmax = 198.746954423
+            text = ""
+        intervals [64]:
+            xmin = 198.746954423
+            xmax = 205.344802763
+            text = "Yeah, so all those, but Bob's Burgers, um I feel like it's a child-friendly one of adult animation."
+        intervals [65]:
+            xmin = 205.344802763
+            xmax = 205.38451951
+            text = ""
+        intervals [66]:
+            xmin = 205.38451951
+            xmax = 212.699728699
+            text = "Because it's humor mainly comes in awkwardness and just really stupid stuff."
+        intervals [67]:
+            xmin = 212.699728699
+            xmax = 212.726636983
+            text = ""
+        intervals [68]:
+            xmin = 212.726636983
+            xmax = 217.520155563
+            text = "Like you kind of just sometimes characters say things you just left thinking what just happened um."
+        intervals [69]:
+            xmin = 217.520155563
+            xmax = 221.038157788
+            text = ""
+        intervals [70]:
+            xmin = 221.038157788
+            xmax = 226.197446468
+            text = "Yeah, it reflects it like, you know, it's it's good because Bob Belcher is actually a healthy father."
+        intervals [71]:
+            xmin = 226.197446468
+            xmax = 226.243574955
+            text = ""
+        intervals [72]:
+            xmin = 226.243574955
+            xmax = 231.579103254
+            text = "He doesn't, you know, he loves his kids, obviously. He was a bit off the rails in the earlier seasons."
+        intervals [73]:
+            xmin = 231.579103254
+            xmax = 231.621387701
+            text = ""
+        intervals [74]:
+            xmin = 231.621387701
+            xmax = 238.955704307
+            text = "But like nowadays he's a lot more, I don't know. He's just he's a very good example for a father figure, I would say. Um."
+        intervals [75]:
+            xmin = 238.955704307
+            xmax = 241.988765095
+            text = ""
+        intervals [76]:
+            xmin = 241.988765095
+            xmax = 248.574488986
+            text = "Yeah, it's that's kind of what I love about that dynamic. Like Linda's really loud and likes to sing and."
+        intervals [77]:
+            xmin = 248.574488986
+            xmax = 248.645351991
+            text = ""
+        intervals [78]:
+            xmin = 248.645351991
+            xmax = 255.779891273
+            text = "Bob's a lot more reserved and, um you know. Jean obviously takes after Linda uh more, and Tina takes after her father."
+        intervals [79]:
+            xmin = 255.779891273
+            xmax = 257.384648182
+            text = ""
+        intervals [80]:
+            xmin = 257.384648182
+            xmax = 263.374439081
+            text = "I would argue that Louise Belcher is, like, a mix of the two, um, she's cause she's not very smiley."
+        intervals [81]:
+            xmin = 263.374439081
+            xmax = 263.388523886
+            text = ""
+        intervals [82]:
+            xmin = 263.388523886
+            xmax = 270.811917802
+            text = "But she's, she has got confidence, the confidence that Bob lacks. And she also, but she's also got that sort of moral."
+        intervals [83]:
+            xmin = 270.811917802
+            xmax = 270.895935103
+            text = ""
+        intervals [84]:
+            xmin = 270.895935103
+            xmax = 275.235856897
+            text = "I mean, not moral the groundingness that Bob has."
+        intervals [85]:
+            xmin = 275.235856897
+            xmax = 287.060125665
+            text = ""
+        intervals [86]:
+            xmin = 287.060125665
+            xmax = 290.10460579
+            text = "Yeah, I don't, I mean, she's okay. I don't really like her for that."
+        intervals [87]:
+            xmin = 290.10460579
+            xmax = 290.227615088
+            text = ""
+        intervals [88]:
+            xmin = 290.227615088
+            xmax = 295.778409659
+            text = "Just because I just think it's good to respect your um authority figures."
+        intervals [89]:
+            xmin = 295.778409659
+            xmax = 295.805317943
+            text = ""
+        intervals [90]:
+            xmin = 295.805317943
+            xmax = 299.952433222
+            text = "So I don't really like how she goes around just um you know going like."
+        intervals [91]:
+            xmin = 299.952433222
+            xmax = 300.12682527
+            text = ""
+        intervals [92]:
+            xmin = 300.12682527
+            xmax = 305.191203668
+            text = "Uh you know my father's so stupid. It just feels a bit mean but you know."
+        intervals [93]:
+            xmin = 305.191203668
+            xmax = 305.76640561
+            text = ""
+        intervals [94]:
+            xmin = 305.76640561
+            xmax = 308.010146726
+            text = "Though I'm not gonna hold against her. She's a kid after all."
+        intervals [95]:
+            xmin = 308.010146726
+            xmax = 320.131881352
+            text = ""
+        intervals [96]:
+            xmin = 320.131881352
+            xmax = 324.335786991
+            text = "I will admit, um I do like the way they portray her insecurity."
+        intervals [97]:
+            xmin = 324.335786991
+            xmax = 324.431005596
+            text = ""
+        intervals [98]:
+            xmin = 324.431005596
+            xmax = 330.793775135
+            text = "And how her hat is like somewhat of a comfort to her. Like how she wears it everywhere."
+        intervals [99]:
+            xmin = 330.793775135
+            xmax = 330.812995337
+            text = ""
+        intervals [100]:
+            xmin = 330.812995337
+            xmax = 336.067123705
+            text = "Like she wears it um in the rain and sh- she wears it when she's sleeping and everything."
+        intervals [101]:
+            xmin = 336.067123705
+            xmax = 336.124198068
+            text = ""
+        intervals [102]:
+            xmin = 336.124198068
+            xmax = 341.484051937
+            text = "Um uh when someone I think at some point some older dude took it from her and she got really insecure about it."
+        intervals [103]:
+            xmin = 341.484051937
+            xmax = 341.602334785
+            text = ""
+        intervals [104]:
+            xmin = 341.602334785
+            xmax = 344.643853278
+            text = "That was very well um perceived, I guess."
+        intervals [105]:
+            xmin = 344.643853278
+            xmax = 344.665656196
+            text = ""
+        intervals [106]:
+            xmin = 344.665656196
+            xmax = 350.351578432
+            text = "Because most people assume that kids who have that kind of comfort are usually really like you know needy and."
+        intervals [107]:
+            xmin = 350.351578432
+            xmax = 350.447868905
+            text = ""
+        intervals [108]:
+            xmin = 350.447868905
+            xmax = 356.085009347
+            text = "Yeah, I'm so sick and weak, that kind of thing, so that was nice, they didn't make that for her."
+        intervals [109]:
+            xmin = 356.085009347
+            xmax = 369.463561859
+            text = ""
+        intervals [110]:
+            xmin = 369.463561859
+            xmax = 372.405514215
+            text = "Yeah, you know I I'd say what it is."
+        intervals [111]:
+            xmin = 372.405514215
+            xmax = 373.80858902
+            text = ""
+        intervals [112]:
+            xmin = 373.80858902
+            xmax = 377.860012233
+            text = "Um yeah, it's good to portray that well."
+        intervals [113]:
+            xmin = 377.860012233
+            xmax = 391.349165592
+            text = ""
+        intervals [114]:
+            xmin = 391.349165592
+            xmax = 394.032602067
+            text = "I love Teddy, he's so fun."
+        intervals [115]:
+            xmin = 394.032602067
+            xmax = 398.142657132
+            text = ""
+        intervals [116]:
+            xmin = 398.142657132
+            xmax = 401.55232111
+            text = "He's got pretty bad jealousy issues, I would say."
+        intervals [117]:
+            xmin = 401.55232111
+            xmax = 401.566405915
+            text = ""
+        intervals [118]:
+            xmin = 401.566405915
+            xmax = 405.790964805
+            text = "Like when I think Bob Belcher brought over um."
+        intervals [119]:
+            xmin = 405.790964805
+            xmax = 406.360732622
+            text = ""
+        intervals [120]:
+            xmin = 406.360732622
+            xmax = 408.347583549
+            text = "Someone he called mister Interesting."
+        intervals [121]:
+            xmin = 408.347583549
+            xmax = 408.487455905
+            text = ""
+        intervals [122]:
+            xmin = 408.487455905
+            xmax = 416.181448131
+            text = "Um and that's what Teddy called him and Teddy got really mad when Bob was just trying to talk to him. That was pretty funny."
+        intervals [123]:
+            xmin = 416.181448131
+            xmax = 418.103468411
+            text = ""
+        intervals [124]:
+            xmin = 418.103468411
+            xmax = 418.599349644
+            text = "Yeah."
+        intervals [125]:
+            xmin = 418.599349644
+            xmax = 421.001874995
+            text = ""
+        intervals [126]:
+            xmin = 421.001874995
+            xmax = 421.658311361
+            text = "Poor thing."
+        intervals [127]:
+            xmin = 421.658311361
+            xmax = 435.075014196
+            text = ""
+        intervals [128]:
+            xmin = 435.075014196
+            xmax = 436.102557678
+            text = "Exactly."
+        intervals [129]:
+            xmin = 436.102557678
+            xmax = 443.006863475
+            text = ""
+        intervals [130]:
+            xmin = 443.006863475
+            xmax = 445.967657117
+            text = "Yep, Paul just help him pee when he's got that thing."
+        intervals [131]:
+            xmin = 445.967657117
+            xmax = 447.421290695
+            text = ""
+        intervals [132]:
+            xmin = 447.421290695
+            xmax = 450.404272251
+            text = "Most famously. That was a song in one of them actually."
+        intervals [133]:
+            xmin = 450.404272251
+            xmax = 454.10852321
+            text = ""
+        intervals [134]:
+            xmin = 454.10852321
+            xmax = 459.745290816
+            text = "It's actually pretty good, surprisingly. Um considering we have to come up with an end credits song, for every single episode."
+        intervals [135]:
+            xmin = 459.745290816
+            xmax = 464.834101489
+            text = ""
+        intervals [136]:
+            xmin = 464.834101489
+            xmax = 470.60666576
+            text = "They have to come up with. And yeah, that's that also. That's not even including the montages and stuff. They usually have to go through each day."
+        intervals [137]:
+            xmin = 470.60666576
+            xmax = 480.960147808
+            text = ""
+        intervals [138]:
+            xmin = 480.960147808
+            xmax = 482.938637964
+            text = "And the burger of the day and."
+        intervals [139]:
+            xmin = 482.938637964
+            xmax = 486.408225151
+            text = ""
+        intervals [140]:
+            xmin = 486.408225151
+            xmax = 486.688840112
+            text = "Yeah."
+        intervals [141]:
+            xmin = 486.688840112
+            xmax = 488.323066924
+            text = ""
+        intervals [142]:
+            xmin = 488.323066924
+            xmax = 492.990318412
+            text = "Yeah. Very clever. Ridiculously, yes."
+        intervals [143]:
+            xmin = 492.990318412
+            xmax = 494.041115596
+            text = ""
+        intervals [144]:
+            xmin = 494.041115596
+            xmax = 495.03938757
+            text = "But some."
+        intervals [145]:
+            xmin = 495.03938757
+            xmax = 497.807096774
+            text = ""
+        intervals [146]:
+            xmin = 497.807096774
+            xmax = 498.441363467
+            text = "Yeah."
+        intervals [147]:
+            xmin = 498.441363467
+            xmax = 501.899922024
+            text = ""
+        intervals [148]:
+            xmin = 501.899922024
+            xmax = 502.908541467
+            text = "Mine too."
+        intervals [149]:
+            xmin = 502.908541467
+            xmax = 506.388103287
+            text = ""
+        intervals [150]:
+            xmin = 506.388103287
+            xmax = 510.560362032
+            text = "I think what I like about The Simpsons is that um."
+        intervals [151]:
+            xmin = 510.560362032
+            xmax = 510.843713054
+            text = ""
+        intervals [152]:
+            xmin = 510.843713054
+            xmax = 516.195506005
+            text = "Yeah, I think it was the first of its kind to start to kickstart everything."
+        intervals [153]:
+            xmin = 516.195506005
+            xmax = 517.26660134
+            text = ""
+        intervals [154]:
+            xmin = 517.26660134
+            xmax = 523.61340239
+            text = "Um yeah, so Homer is pretty funny, um as horrible as a dad he might be."
+        intervals [155]:
+            xmin = 523.61340239
+            xmax = 523.815792461
+            text = ""
+        intervals [156]:
+            xmin = 523.815792461
+            xmax = 530.386442433
+            text = "Um and yeah, it's it's somewhat frustrating to watch it because I don't know."
+        intervals [157]:
+            xmin = 530.386442433
+            xmax = 531.173368849
+            text = ""
+        intervals [158]:
+            xmin = 531.173368849
+            xmax = 536.289786837
+            text = "But I do like the characters are very distinct in their style. Um."
+        intervals [159]:
+            xmin = 536.289786837
+            xmax = 536.600046143
+            text = ""
+        intervals [160]:
+            xmin = 536.600046143
+            xmax = 541.559966447
+            text = "You know. And I kind of like the stereotypical suburban family they've got."
+        intervals [161]:
+            xmin = 541.559966447
+            xmax = 541.608677648
+            text = ""
+        intervals [162]:
+            xmin = 541.608677648
+            xmax = 548.158922765
+            text = "Um where Bart's like the troublesome brother and Lisa's all smart and polite, that kind of thing."
+        intervals [163]:
+            xmin = 548.158922765
+            xmax = 548.741736115
+            text = ""
+        intervals [164]:
+            xmin = 548.741736115
+            xmax = 553.625148444
+            text = "And yeah, it's it's a pretty cool T V series."
+        intervals [165]:
+            xmin = 553.625148444
+            xmax = 573.170773311
+            text = ""
+        intervals [166]:
+            xmin = 573.170773311
+            xmax = 573.904985058
+            text = "Yeah ."
+        intervals [167]:
+            xmin = 573.904985058
+            xmax = 587.075989411
+            text = ""
+        intervals [168]:
+            xmin = 587.075989411
+            xmax = 587.936456091
+            text = "Thirty-eight, I think."
+        intervals [169]:
+            xmin = 587.936456091
+            xmax = 592.114644179
+            text = ""
+        intervals [170]:
+            xmin = 592.114644179
+            xmax = 593.290541674
+            text = "Yeah, um."
+        intervals [171]:
+            xmin = 593.290541674
+            xmax = 594.52168257
+            text = ""
+        intervals [172]:
+            xmin = 594.52168257
+            xmax = 600.716492896
+            text = "I will say that Bob definitely Bob's Burgers definitely took inspiration from The Simpsons."
+        intervals [173]:
+            xmin = 600.716492896
+            xmax = 600.861464538
+            text = ""
+        intervals [174]:
+            xmin = 600.861464538
+            xmax = 607.237247014
+            text = "After but after a while it kind of fell in its own place, where it just decided to kind of gravitate towards."
+        intervals [175]:
+            xmin = 607.237247014
+            xmax = 607.596662582
+            text = ""
+        intervals [176]:
+            xmin = 607.596662582
+            xmax = 613.137174196
+            text = "What I'm assuming the writers thought was the best choice. Um. It's it's a lot more original now, and I think."
+        intervals [177]:
+            xmin = 613.137174196
+            xmax = 613.184203333
+            text = ""
+        intervals [178]:
+            xmin = 613.184203333
+            xmax = 616.438791467
+            text = "I mean, I would prefer the later seasons compared to the early ones."
+        intervals [179]:
+            xmin = 616.438791467
+            xmax = 637.344507836
+            text = ""
+        intervals [180]:
+            xmin = 637.344507836
+            xmax = 640.073776635
+            text = "They tried cocaine once and then just left it at that."
+        intervals [181]:
+            xmin = 640.073776635
+            xmax = 649.148970155
+            text = ""
+        intervals [182]:
+            xmin = 649.148970155
+            xmax = 653.170120585
+            text = "Yeah, supporting characters as well, going back to that ah from Bob's Burgers."
+        intervals [183]:
+            xmin = 653.170120585
+            xmax = 654.573497633
+            text = ""
+        intervals [184]:
+            xmin = 654.573497633
+            xmax = 655.279018037
+            text = "You've got."
+        intervals [185]:
+            xmin = 655.279018037
+            xmax = 657.588196677
+            text = ""
+        intervals [186]:
+            xmin = 657.588196677
+            xmax = 662.097546338
+            text = "I would, I do not like um Jimmy Pesto Junior."
+        intervals [187]:
+            xmin = 662.097546338
+            xmax = 665.41487667
+            text = ""
+        intervals [188]:
+            xmin = 665.41487667
+            xmax = 668.959069907
+            text = "He is so annoying. Um. First off, he's got."
+        intervals [189]:
+            xmin = 668.959069907
+            xmax = 669.216922868
+            text = ""
+        intervals [190]:
+            xmin = 669.216922868
+            xmax = 676.034776089
+            text = "I mean, I know I shouldn't like, you know, be mean to him or anything, but he always talks like this, and it's so frustrating. Um."
+        intervals [191]:
+            xmin = 676.034776089
+            xmax = 677.789435564
+            text = ""
+        intervals [192]:
+            xmin = 677.789435564
+            xmax = 682.585021206
+            text = "And he's always like saying that, like, you don't understand me, father. I want to dance or whatever."
+        intervals [193]:
+            xmin = 682.585021206
+            xmax = 682.66693071
+            text = ""
+        intervals [194]:
+            xmin = 682.66693071
+            xmax = 687.782087372
+            text = "It's so annoying because, I don't know, it's like he's got the passion and all but he's very bad at it. Um."
+        intervals [195]:
+            xmin = 687.782087372
+            xmax = 688.512614506
+            text = ""
+        intervals [196]:
+            xmin = 688.512614506
+            xmax = 695.107501213
+            text = "I guess that's the appeal though. He is very funny at some points. Um. I just don't understand what Tina Belcher sees in him."
+        intervals [197]:
+            xmin = 695.107501213
+            xmax = 695.507281432
+            text = ""
+        intervals [198]:
+            xmin = 695.507281432
+            xmax = 699.442400395
+            text = "Keeps going after him every single time anytime she gets she's always like you know."
+        intervals [199]:
+            xmin = 699.442400395
+            xmax = 699.453932516
+            text = ""
+        intervals [200]:
+            xmin = 699.453932516
+            xmax = 706.523123109
+            text = "How do you wanna like go here with me do you wanna like um come here with me do you wanna go out, for the valentine's thing whatever um."
+        intervals [201]:
+            xmin = 706.523123109
+            xmax = 720.970288866
+            text = ""
+        intervals [202]:
+            xmin = 720.970288866
+            xmax = 721.68528041
+            text = "Yeah."
+        intervals [203]:
+            xmin = 721.68528041
+            xmax = 727.721930986
+            text = ""
+        intervals [204]:
+            xmin = 727.721930986
+            xmax = 729.81003312
+            text = "You got Zeke, um."
+        intervals [205]:
+            xmin = 729.81003312
+            xmax = 731.180001912
+            text = ""
+        intervals [206]:
+            xmin = 731.180001912
+            xmax = 731.854159424
+            text = "He's great."
+        intervals [207]:
+            xmin = 731.854159424
+            xmax = 732.720182864
+            text = ""
+        intervals [208]:
+            xmin = 732.720182864
+            xmax = 738.376531348
+            text = "He's very fond of tackling people, um very loud, you know. He's thick in accent."
+        intervals [209]:
+            xmin = 738.376531348
+            xmax = 738.969265348
+            text = ""
+        intervals [210]:
+            xmin = 738.969265348
+            xmax = 745.8412313
+            text = "Um. The whole package, I guess. I do, I would definitely if I if I was Tina."
+        intervals [211]:
+            xmin = 745.8412313
+            xmax = 745.880993094
+            text = ""
+        intervals [212]:
+            xmin = 745.880993094
+            xmax = 750.550311644
+            text = "And I have to choose between Jimmy Pesto and Zeke. I would definitely go for Zeke. Like."
+        intervals [213]:
+            xmin = 750.550311644
+            xmax = 751.183399764
+            text = ""
+        intervals [214]:
+            xmin = 751.183399764
+            xmax = 758.389501082
+            text = "He is rough and he is a bit like um unintentionally loud and that kind of thing. But he's a good dude overall."
+        intervals [215]:
+            xmin = 758.389501082
+            xmax = 758.403555855
+            text = ""
+        intervals [216]:
+            xmin = 758.403555855
+            xmax = 762.451028323
+            text = "Like I think he's got good morals and stuff and he's quite nice to people and."
+        intervals [217]:
+            xmin = 762.451028323
+            xmax = 762.679307532
+            text = ""
+        intervals [218]:
+            xmin = 762.679307532
+            xmax = 767.214096822
+            text = "I know he seems like a sweet kid and uh Jimmy Junior is just a lost cause in my opinion."
+        intervals [219]:
+            xmin = 767.214096822
+            xmax = 779.77308691
+            text = ""
+        intervals [220]:
+            xmin = 779.77308691
+            xmax = 780.340234015
+            text = "Yeah."
+        intervals [221]:
+            xmin = 780.340234015
+            xmax = 781.30767091
+            text = ""
+        intervals [222]:
+            xmin = 781.30767091
+            xmax = 786.432576634
+            text = "So sweet, yeah, cause um just shows that he cares about his family and stuff."
+        intervals [223]:
+            xmin = 786.432576634
+            xmax = 801.192892736
+            text = ""
+        intervals [224]:
+            xmin = 801.192892736
+            xmax = 803.583885965
+            text = "And that is her fault as well, I would say."
+        intervals [225]:
+            xmin = 803.583885965
+            xmax = 804.680485441
+            text = ""
+        intervals [226]:
+            xmin = 804.680485441
+            xmax = 809.805171676
+            text = "She's basically, uh one thing I really hate about her is that she's such a pervert, like."
+        intervals [227]:
+            xmin = 809.805171676
+            xmax = 809.935585052
+            text = ""
+        intervals [228]:
+            xmin = 809.935585052
+            xmax = 815.731207486
+            text = "You know, she's always, I don't know. There's just something so in- infuriating about it. Um."
+        intervals [229]:
+            xmin = 815.731207486
+            xmax = 818.328304171
+            text = ""
+        intervals [230]:
+            xmin = 818.328304171
+            xmax = 826.158614795
+            text = "It's just so annoying when people cause I swear, if he was a boy, and Jimmy Junior was a girl, it would be totally different. Everyone would be attacking and saying."
+        intervals [231]:
+            xmin = 826.158614795
+            xmax = 826.358724394
+            text = ""
+        intervals [232]:
+            xmin = 826.358724394
+            xmax = 830.162245327
+            text = "That's horrible. She's harassing him. I mean, he's harassing her. That kind of thing."
+        intervals [233]:
+            xmin = 830.162245327
+            xmax = 830.222281321
+            text = ""
+        intervals [234]:
+            xmin = 830.222281321
+            xmax = 837.602246873
+            text = "But since she's a girl, it's okay. Um. I don't really like that because um it's still harassment regardless gender."
+        intervals [235]:
+            xmin = 837.602246873
+            xmax = 841.019675606
+            text = ""
+        intervals [236]:
+            xmin = 841.019675606
+            xmax = 841.642996423
+            text = "Exactly."
+        intervals [237]:
+            xmin = 841.642996423
+            xmax = 850.558061628
+            text = ""
+        intervals [238]:
+            xmin = 850.558061628
+            xmax = 850.95251699
+            text = "Ron."
+        intervals [239]:
+            xmin = 850.95251699
+            xmax = 857.408597499
+            text = ""
+        intervals [240]:
+            xmin = 857.408597499
+            xmax = 860.301383063
+            text = "Yeah, for like, what was it, two days or something?"
+        intervals [241]:
+            xmin = 860.301383063
+            xmax = 863.910268151
+            text = ""
+        intervals [242]:
+            xmin = 863.910268151
+            xmax = 864.821595847
+            text = "With a rap song."
+        intervals [243]:
+            xmin = 864.821595847
+            xmax = 868.29446478
+            text = ""
+        intervals [244]:
+            xmin = 868.29446478
+            xmax = 875.48282063
+            text = "It was the rap Bob. Yeah, that was that was a really good episode. Um. Very, very funny."
+        intervals [245]:
+            xmin = 875.48282063
+            xmax = 876.616965942
+            text = ""
+        intervals [246]:
+            xmin = 876.616965942
+            xmax = 880.933670147
+            text = "It's another reason I love Linda. She's just so like, I feel like she doesn't understand anything."
+        intervals [247]:
+            xmin = 880.933670147
+            xmax = 887.140474265
+            text = "In a way, like, she just assumes everything is gonna go to plan and stuff, you know. Um."
+        intervals [248]:
+            xmin = 887.140474265
+            xmax = 887.191768181
+            text = ""
+        intervals [249]:
+            xmin = 887.191768181
+            xmax = 889.478972315
+            text = "So loud and singy and that kind of thing."
+        intervals [250]:
+            xmin = 889.478972315
+            xmax = 895.35777166
+            text = ""
+        intervals [251]:
+            xmin = 895.35777166
+            xmax = 896.222680786
+            text = "With a rap song."
+        intervals [252]:
+            xmin = 896.222680786
+            xmax = 898.695660193
+            text = ""
+        intervals [253]:
+            xmin = 898.695660193
+            xmax = 901.432617073
+            text = "That's insane. I kind of wanna do that to someone."
+        intervals [254]:
+            xmin = 901.432617073
+            xmax = 910.804234616
+            text = ""
+        intervals [255]:
+            xmin = 910.804234616
+            xmax = 912.048080125
+            text = "The guidance counsellor."
+        intervals [256]:
+            xmin = 912.048080125
+            xmax = 914.643015237
+            text = ""
+        intervals [257]:
+            xmin = 914.643015237
+            xmax = 915.384588501
+            text = "Rudy?"
+        intervals [258]:
+            xmin = 915.384588501
+            xmax = 918.429533265
+            text = ""
+        intervals [259]:
+            xmin = 918.429533265
+            xmax = 920.7778486
+            text = "Regular-sized Rudy. Best Rudy in my opinion."
+        intervals [260]:
+            xmin = 920.7778486
+            xmax = 922.925969242
+            text = ""
+        intervals [261]:
+            xmin = 922.925969242
+            xmax = 929.311506861
+            text = "Yeah, I love his, um, the whole asthma thing, I love the gags that run with it."
+        intervals [262]:
+            xmin = 929.311506861
+            xmax = 929.323127816
+            text = ""
+        intervals [263]:
+            xmin = 929.323127816
+            xmax = 934.678462565
+            text = "The way his voice goes like this when he can't inhale and stuff . Very funny. Um."
+        intervals [264]:
+            xmin = 934.678462565
+            xmax = 935.694550599
+            text = ""
+        intervals [265]:
+            xmin = 935.694550599
+            xmax = 939.888398852
+            text = "I think I think another thing I like about him is like, I don't know."
+        intervals [266]:
+            xmin = 939.888398852
+            xmax = 946.404599195
+            text = "He's just so he's the only one out of the whole cast, in my opinion, that kind of more or less acts his age."
+        intervals [267]:
+            xmin = 946.404599195
+            xmax = 946.435351519
+            text = ""
+        intervals [268]:
+            xmin = 946.435351519
+            xmax = 954.435351519
+            text = "He's a lot more innocent and he doesn't really understand anything. And like, you know. He's always like, you know, oh, maybe we shouldn't do this guys. That kind of thing. Um."
+        intervals [269]:
+            xmin = 954.435351519
+            xmax = 955.773378595
+            text = ""
+        intervals [270]:
+            xmin = 955.773378595
+            xmax = 959.868460365
+            text = "I do feel bad for him cause he's just so vul- vulnerable and like, you know."
+        intervals [271]:
+            xmin = 959.868460365
+            xmax = 966.339977099
+            text = ""
+        intervals [272]:
+            xmin = 966.339977099
+            xmax = 967.33232581
+            text = "That was so funny yeah."
+        intervals [273]:
+            xmin = 967.33232581
+            xmax = 969.256868743
+            text = ""
+        intervals [274]:
+            xmin = 969.256868743
+            xmax = 976.001004033
+            text = "Yeah, he came over, like Louise was like, they wanted to, um, ride bikes or something in this one location."
+        intervals [275]:
+            xmin = 976.001004033
+            xmax = 976.073976291
+            text = ""
+        intervals [276]:
+            xmin = 976.073976291
+            xmax = 983.526077963
+            text = "And they weren't allowed to and the police came over and then she just fooled them into thinking that he was disabled, I suppose."
+        intervals [277]:
+            xmin = 983.526077963
+            xmax = 983.665440747
+            text = ""
+        intervals [278]:
+            xmin = 983.665440747
+            xmax = 986.712574179
+            text = "He comes over and he's just like, what do you mean? I'm a regular kid."
+        intervals [279]:
+            xmin = 986.712574179
+            xmax = 986.979299874
+            text = ""
+        intervals [280]:
+            xmin = 986.979299874
+            xmax = 993.857467011
+            text = "And police are like, you know, yep, you're the most normal kid ever and stuff, you know, we're with your power, the whole police force. So funny."
+        intervals [281]:
+            xmin = 993.857467011
+            xmax = 995.788436699
+            text = ""
+        intervals [282]:
+            xmin = 995.788436699
+            xmax = 1000.155266777
+            text = "Yeah oh look at his little arms and that kind of thing very funny um."
+        intervals [283]:
+            xmin = 1000.155266777
+            xmax = 1001.407452757
+            text = ""
+        intervals [284]:
+            xmin = 1001.407452757
+            xmax = 1002.533466559
+            text = "Very, very good."
+        intervals [285]:
+            xmin = 1002.533466559
+            xmax = 1011.750593417
+            text = ""
+        intervals [286]:
+            xmin = 1011.750593417
+            xmax = 1014.925468677
+            text = "It was kind of a flop um a little bit. I mean."
+        intervals [287]:
+            xmin = 1014.925468677
+            xmax = 1015.755491356
+            text = ""
+        intervals [288]:
+            xmin = 1015.755491356
+            xmax = 1022.7992484
+            text = "Yeah, I mean, the scores were pretty bad. But that's usually what happens when adult animation tries to do that stuff."
+        intervals [289]:
+            xmin = 1022.7992484
+            xmax = 1022.810484358
+            text = ""
+        intervals [290]:
+            xmin = 1022.810484358
+            xmax = 1029.978064068
+            text = "Like, I think apart from the South Park movie, um all other movies, including animation, haven't done so well."
+        intervals [291]:
+            xmin = 1029.978064068
+            xmax = 1031.237951443
+            text = ""
+        intervals [292]:
+            xmin = 1031.237951443
+            xmax = 1038.029337105
+            text = "I think so, yeah. I think they might have just compiled a bunch of episodes, and then just called it a movie cause some people do that."
+        intervals [293]:
+            xmin = 1038.029337105
+            xmax = 1040.673301869
+            text = ""
+        intervals [294]:
+            xmin = 1040.673301869
+            xmax = 1047.852182129
+            text = "Yeah. Um, they did that with, um, Kimetsu no Yaiba, which is Demon Slayer. It's an anime. Um."
+        intervals [295]:
+            xmin = 1047.852182129
+            xmax = 1048.634309872
+            text = ""
+        intervals [296]:
+            xmin = 1048.634309872
+            xmax = 1050.071981042
+            text = "Very good one too, in my opinion."
+        intervals [297]:
+            xmin = 1050.071981042
+            xmax = 1068.92256971
+            text = ""
+        intervals [298]:
+            xmin = 1068.92256971
+            xmax = 1069.629873174
+            text = "Shading."
+        intervals [299]:
+            xmin = 1069.629873174
+            xmax = 1072.903065407
+            text = ""
+        intervals [300]:
+            xmin = 1072.903065407
+            xmax = 1075.48300287
+            text = "There was a lot of fluidity in the movements as well."
+        intervals [301]:
+            xmin = 1075.48300287
+            xmax = 1076.598070796
+            text = ""
+        intervals [302]:
+            xmin = 1076.598070796
+            xmax = 1082.178142956
+            text = "Sometimes um Bob's Burgers with the animation, it would go I would I wanna give props the animates."
+        intervals [303]:
+            xmin = 1082.178142956
+            xmax = 1082.193519118
+            text = ""
+        intervals [304]:
+            xmin = 1082.193519118
+            xmax = 1085.96836695
+            text = "Cuz it would go very smooth at some points, um which is pretty impressive."
+        intervals [305]:
+            xmin = 1085.96836695
+            xmax = 1086.969588394
+            text = ""
+        intervals [306]:
+            xmin = 1086.969588394
+            xmax = 1090.937390007
+            text = "I think generally Bob's Burgers has a very organic."
+        intervals [307]:
+            xmin = 1090.937390007
+            xmax = 1091.241069211
+            text = ""
+        intervals [308]:
+            xmin = 1091.241069211
+            xmax = 1096.939702142
+            text = "Sort of um feel to it, it still feels like it's an indie animation even though it's mainstream ."
+        intervals [309]:
+            xmin = 1096.939702142
+            xmax = 1110.294338033
+            text = ""
+        intervals [310]:
+            xmin = 1110.294338033
+            xmax = 1111.08917202
+            text = "Yeah."
+        intervals [311]:
+            xmin = 1111.08917202
+            xmax = 1119.097043653
+            text = ""
+        intervals [312]:
+            xmin = 1119.097043653
+            xmax = 1119.767375366
+            text = "Here we go."
+        intervals [313]:
+            xmin = 1119.767375366
+            xmax = 1125.696641587
+            text = ""
+        intervals [314]:
+            xmin = 1125.696641587
+            xmax = 1132.936377611
+            text = "Spider-Verse has arguably been one of the best movie series I've ever watched in my entire life. I'm not even kidding. Um."
+        intervals [315]:
+            xmin = 1132.936377611
+            xmax = 1135.786223463
+            text = ""
+        intervals [316]:
+            xmin = 1135.786223463
+            xmax = 1143.341893667
+            text = "Yes, it was the animation first off was very unique and they actually say we're in the golden age of animation right now because of that."
+        intervals [317]:
+            xmin = 1143.341893667
+            xmax = 1144.214565595
+            text = ""
+        intervals [318]:
+            xmin = 1144.214565595
+            xmax = 1151.86962193
+            text = "Yeah, because um Spider-Verse was able to compile two D and three D at the same time, um if that makes sense."
+        intervals [319]:
+            xmin = 1151.86962193
+            xmax = 1153.871385532
+            text = ""
+        intervals [320]:
+            xmin = 1153.871385532
+            xmax = 1159.839335327
+            text = "And yes, a lot of animation, a lot of more anime anime movies now have kind of taken after that."
+        intervals [321]:
+            xmin = 1159.839335327
+            xmax = 1159.990174776
+            text = ""
+        intervals [322]:
+            xmin = 1159.990174776
+            xmax = 1164.449675518
+            text = "Um and animation now is like looking a lot more prettier than it did before when it compared to."
+        intervals [323]:
+            xmin = 1164.449675518
+            xmax = 1164.503304296
+            text = ""
+        intervals [324]:
+            xmin = 1164.503304296
+            xmax = 1168.844913908
+            text = "If you compare Encanto to, um I don't know, Wild Robot, for examp-."
+        intervals [325]:
+            xmin = 1168.844913908
+            xmax = 1169.10965403
+            text = ""
+        intervals [326]:
+            xmin = 1169.10965403
+            xmax = 1175.12541399
+            text = "You would notice a huge difference in the animation and generally in my opinion it's a lot more aesthetically pleasing. Um."
+        intervals [327]:
+            xmin = 1175.12541399
+            xmax = 1179.600134871
+            text = ""
+        intervals [328]:
+            xmin = 1179.600134871
+            xmax = 1181.361865967
+            text = "Uh the opposite, actually, I think."
+        intervals [329]:
+            xmin = 1181.361865967
+            xmax = 1181.95938161
+            text = ""
+        intervals [330]:
+            xmin = 1181.95938161
+            xmax = 1186.487774243
+            text = "It's because of this sort of, it's got a, it is realistic, I suppose."
+        intervals [331]:
+            xmin = 1186.487774243
+            xmax = 1186.872082754
+            text = ""
+        intervals [332]:
+            xmin = 1186.872082754
+            xmax = 1193.422518185
+            text = "But it's got this certain fantastical edge to it that kind of makes you forget about real life, if that makes sense."
+        intervals [333]:
+            xmin = 1193.422518185
+            xmax = 1193.474480691
+            text = ""
+        intervals [334]:
+            xmin = 1193.474480691
+            xmax = 1200.662191358
+            text = "And you kind of you just know that it's a fictional world and it sort of explores its story with its animation."
+        intervals [335]:
+            xmin = 1200.662191358
+            xmax = 1200.709822379
+            text = ""
+        intervals [336]:
+            xmin = 1200.709822379
+            xmax = 1204.677219616
+            text = "Um, sorry, they kind of go hand in hand a lot better. Um."
+        intervals [337]:
+            xmin = 1204.677219616
+            xmax = 1213.047579512
+            text = ""
+        intervals [338]:
+            xmin = 1213.047579512
+            xmax = 1213.743900873
+            text = "Yeah."
+        intervals [339]:
+            xmin = 1213.743900873
+            xmax = 1215.006276686
+            text = ""
+        intervals [340]:
+            xmin = 1215.006276686
+            xmax = 1217.583180949
+            text = "The fiction in general is a quite um."
+        intervals [341]:
+            xmin = 1217.583180949
+            xmax = 1219.147050237
+            text = ""
+        intervals [342]:
+            xmin = 1219.147050237
+            xmax = 1226.234755126
+            text = "Quite a, um, fascinating aspect of the whole idea of people, um."
+        intervals [343]:
+            xmin = 1226.234755126
+            xmax = 1226.276084058
+            text = ""
+        intervals [344]:
+            xmin = 1226.276084058
+            xmax = 1233.938528342
+            text = "Um, I mean, it's, it's always been around like with mythology and different religions and stuff. I suppose. I mean, this is not fiction. Um, but you know."
+        intervals [345]:
+            xmin = 1233.938528342
+            xmax = 1241.919531658
+            text = ""
+        intervals [346]:
+            xmin = 1241.919531658
+            xmax = 1242.602646458
+            text = "I suppose."
+        intervals [347]:
+            xmin = 1242.602646458
+            xmax = 1242.97964923
+            text = ""
+        intervals [348]:
+            xmin = 1242.97964923
+            xmax = 1249.341889474
+            text = "Um, yes, but certain, yes, there's, like, mythology and, um."
+        intervals [349]:
+            xmin = 1249.341889474
+            xmax = 1249.951178513
+            text = ""
+        intervals [350]:
+            xmin = 1249.951178513
+            xmax = 1254.224590843
+            text = "They are really old m- um religions, like Greek mythology, for example, that's obviously not true."
+        intervals [351]:
+            xmin = 1254.224590843
+            xmax = 1254.758370584
+            text = ""
+        intervals [352]:
+            xmin = 1254.758370584
+            xmax = 1259.969960229
+            text = "Um but yeah, it's very fascinating to think about and speculate."
+        intervals [353]:
+            xmin = 1259.969960229
+            xmax = 1278.886707965
+            text = ""
+        intervals [354]:
+            xmin = 1278.886707965
+            xmax = 1280.918744137
+            text = "Incredible. Even better, I would argue."
+        intervals [355]:
+            xmin = 1280.918744137
+            xmax = 1287.738108957
+            text = ""
+        intervals [356]:
+            xmin = 1287.738108957
+            xmax = 1294.211547963
+            text = "Yes, um I think the thing is that they planned out the entire Spider-Verse movie from the beginning."
+        intervals [357]:
+            xmin = 1294.211547963
+            xmax = 1294.46200268
+            text = ""
+        intervals [358]:
+            xmin = 1294.46200268
+            xmax = 1300.22639724
+            text = "So when they made the first Spider-Verse thing, they already planned across the Spider-Verse and beyond the Spider-Verse."
+        intervals [359]:
+            xmin = 1300.22639724
+            xmax = 1301.395492602
+            text = ""
+        intervals [360]:
+            xmin = 1301.395492602
+            xmax = 1307.030749086
+            text = "The across the Spider-Verse was originally gonna be the end, um because it was gonna be a four-hour movie. They were like, we better split."
+        intervals [361]:
+            xmin = 1307.030749086
+            xmax = 1307.048466279
+            text = ""
+        intervals [362]:
+            xmin = 1307.048466279
+            xmax = 1309.727210752
+            text = "This is gonna be a long time to watch um."
+        intervals [363]:
+            xmin = 1309.727210752
+            xmax = 1310.934882912
+            text = ""
+        intervals [364]:
+            xmin = 1310.934882912
+            xmax = 1311.459977709
+            text = "Yeah."
+        intervals [365]:
+            xmin = 1311.459977709
+            xmax = 1322.939008032
+            text = ""
+        intervals [366]:
+            xmin = 1322.939008032
+            xmax = 1323.577537289
+            text = "Yeah."
+        intervals [367]:
+            xmin = 1323.577537289
+            xmax = 1340.244843572
+            text = ""
+        intervals [368]:
+            xmin = 1340.244843572
+            xmax = 1341.016778415
+            text = "Marvelous."
+        intervals [369]:
+            xmin = 1341.016778415
+            xmax = 1346.436943112
+            text = ""
+        intervals [370]:
+            xmin = 1346.436943112
+            xmax = 1347.7741656
+            text = "Stanley's a legend."
+        intervals [371]:
+            xmin = 1347.7741656
+            xmax = 1364.396696207
+            text = ""
+        intervals [372]:
+            xmin = 1364.396696207
+            xmax = 1369.759244208
+            text = "Oh, yeah, I I have a lot of opinions on Harry Potter. Um."
+        intervals [373]:
+            xmin = 1369.759244208
+            xmax = 1370.103847086
+            text = ""
+        intervals [374]:
+            xmin = 1370.103847086
+            xmax = 1376.67347585
+            text = "Very, very good idea for a story first off about an orphan who goes to a magical school. That's very cool um."
+        intervals [375]:
+            xmin = 1376.67347585
+            xmax = 1377.329830221
+            text = ""
+        intervals [376]:
+            xmin = 1377.329830221
+            xmax = 1383.275128952
+            text = "But I would argue that the execution, it's kind of deteriorated as it went along, almost."
+        intervals [377]:
+            xmin = 1383.275128952
+            xmax = 1383.47151462
+            text = ""
+        intervals [378]:
+            xmin = 1383.47151462
+            xmax = 1389.986809009
+            text = "I feel like the author sort of just J K Rowling at some points. She threw in everything she could think of."
+        intervals [379]:
+            xmin = 1389.986809009
+            xmax = 1390.138483948
+            text = ""
+        intervals [380]:
+            xmin = 1390.138483948
+            xmax = 1396.116415681
+            text = "Um, the third movie, we ran and get introduced to Sirius Black and the books too. We get introduced to Sirius Black."
+        intervals [381]:
+            xmin = 1396.116415681
+            xmax = 1396.202634486
+            text = ""
+        intervals [382]:
+            xmin = 1396.202634486
+            xmax = 1400.855296273
+            text = "And apparently and Harry doesn't know who the hell this is everyone else does though you know."
+        intervals [383]:
+            xmin = 1400.855296273
+            xmax = 1401.143034762
+            text = ""
+        intervals [384]:
+            xmin = 1401.143034762
+            xmax = 1405.515155877
+            text = "Hermione knows about it, Ron knows about it, there's been absolutely no reference, he doesn't even know his own godfather."
+        intervals [385]:
+            xmin = 1405.515155877
+            xmax = 1405.959036963
+            text = ""
+        intervals [386]:
+            xmin = 1405.959036963
+            xmax = 1413.674458389
+            text = "There's nothing um that comes back to that. And it's very confusing because you're thinking. If he was such a big deal, wouldn't he be known before this?"
+        intervals [387]:
+            xmin = 1413.674458389
+            xmax = 1413.755553193
+            text = ""
+        intervals [388]:
+            xmin = 1413.755553193
+            xmax = 1418.587947342
+            text = "Like, that would be incredible if it was obvious- if it was like, foreshadowed, when, like, someone said, you know um."
+        intervals [389]:
+            xmin = 1418.587947342
+            xmax = 1418.652643919
+            text = ""
+        intervals [390]:
+            xmin = 1418.652643919
+            xmax = 1424.0360945
+            text = "I don't know, this situation is almost bad as like, you know, that time where Sirius Black killed so many people with one spell."
+        intervals [391]:
+            xmin = 1424.0360945
+            xmax = 1424.375291018
+            text = ""
+        intervals [392]:
+            xmin = 1424.375291018
+            xmax = 1429.207548995
+            text = "And then, you know, everyone's like, oh, yeah, that's so true. And Harry Potter will be like, who's Sirius Black? And then they tell them something like."
+        intervals [393]:
+            xmin = 1429.207548995
+            xmax = 1429.555240324
+            text = ""
+        intervals [394]:
+            xmin = 1429.555240324
+            xmax = 1434.193702886
+            text = "And then, you know, it could have been forgotten until the third book, but they didn't do that."
+        intervals [395]:
+            xmin = 1434.193702886
+            xmax = 1434.239363303
+            text = ""
+        intervals [396]:
+            xmin = 1434.239363303
+            xmax = 1438.040593031
+            text = "They just just went along with it and it's it's a bit annoying."
+        intervals [397]:
+            xmin = 1438.040593031
+            xmax = 1447.451877166
+            text = ""
+        intervals [398]:
+            xmin = 1447.451877166
+            xmax = 1451.254170783
+            text = "Yes, it's very important to plan out the that's the reason."
+        intervals [399]:
+            xmin = 1451.254170783
+            xmax = 1451.315051339
+            text = ""
+        intervals [400]:
+            xmin = 1451.315051339
+            xmax = 1456.104873522
+            text = "Why, in my opinion, Marvel and Marvel surpasses that kind of thing."
+        intervals [401]:
+            xmin = 1456.104873522
+            xmax = 1456.138581398
+            text = ""
+        intervals [402]:
+            xmin = 1456.138581398
+            xmax = 1461.115094378
+            text = "Because the creators, they actually plan out everything before they do it."
+        intervals [403]:
+            xmin = 1461.115094378
+            xmax = 1461.167594321
+            text = ""
+        intervals [404]:
+            xmin = 1461.167594321
+            xmax = 1467.963386408
+            text = "And if there's gonna be a sequel, then they already know it before they make the first one. Um. So that's kind of why."
+        intervals [405]:
+            xmin = 1467.963386408
+            xmax = 1468.000128775
+            text = ""
+        intervals [406]:
+            xmin = 1468.000128775
+            xmax = 1472.507840949
+            text = "Cause I think J K Rowling didn't know it was gonna take off cause she went to a lot of authors."
+        intervals [407]:
+            xmin = 1472.507840949
+            xmax = 1472.555830261
+            text = ""
+        intervals [408]:
+            xmin = 1472.555830261
+            xmax = 1478.006181128
+            text = "I mean, a lot of publishers um about her book story that was eventually will be turned into a movie."
+        intervals [409]:
+            xmin = 1478.006181128
+            xmax = 1478.162187553
+            text = ""
+        intervals [410]:
+            xmin = 1478.162187553
+            xmax = 1481.20692096
+            text = "Um didn't really get that popular."
+        intervals [411]:
+            xmin = 1481.20692096
+            xmax = 1481.235293701
+            text = ""
+        intervals [412]:
+            xmin = 1481.235293701
+            xmax = 1489.234415475
+            text = "But I mean, until she found that one author, a publisher, they published it and then it wa- wa- was really popular and then got turned into a movie. Then she obviously had to make more."
+        intervals [413]:
+            xmin = 1489.234415475
+            xmax = 1489.588706947
+            text = ""
+        intervals [414]:
+            xmin = 1489.588706947
+            xmax = 1493.039873477
+            text = "Um but yeah, Marvel kind of just knows what it's doing all along so."
+        intervals [415]:
+            xmin = 1493.039873477
+            xmax = 1509.240170411
+            text = ""
+        intervals [416]:
+            xmin = 1509.240170411
+            xmax = 1509.805329133
+            text = "Yes."
+        intervals [417]:
+            xmin = 1509.805329133
+            xmax = 1521.608199663
+            text = ""
+        intervals [418]:
+            xmin = 1521.608199663
+            xmax = 1523.203447932
+            text = "Yeah, and they're just forgotten about."
+        intervals [419]:
+            xmin = 1523.203447932
+            xmax = 1531.963544671
+            text = ""
+        intervals [420]:
+            xmin = 1531.963544671
+            xmax = 1533.400815911
+            text = "I'm a proud hater."
+        intervals [421]:
+            xmin = 1533.400815911
+            xmax = 1535.531359298
+            text = ""
+        intervals [422]:
+            xmin = 1535.531359298
+            xmax = 1540.676514869
+            text = "Of Harry Potter. Everything in general, I think. I had a lot of things."
+        intervals [423]:
+            xmin = 1540.676514869
+            xmax = 1549.203484301
+            text = ""
+        intervals [424]:
+            xmin = 1549.203484301
+            xmax = 1549.914033398
+            text = "Very Sigma ."
+        intervals [425]:
+            xmin = 1549.914033398
+            xmax = 1556.653107268
+            text = ""
+        intervals [426]:
+            xmin = 1556.653107268
+            xmax = 1557.814135159
+            text = "Jack Sparrow?"
+        intervals [427]:
+            xmin = 1557.814135159
+            xmax = 1561.876470308
+            text = ""
+        intervals [428]:
+            xmin = 1561.876470308
+            xmax = 1563.510306362
+            text = "Johnny Depp nailed it."
+        intervals [429]:
+            xmin = 1563.510306362
+            xmax = 1565.615741896
+            text = ""
+        intervals [430]:
+            xmin = 1565.615741896
+            xmax = 1571.717766346
+            text = "He was like made to play Jack Sparrow. I think that was possibly his best acting he's ever done in his entire life."
+        intervals [431]:
+            xmin = 1571.717766346
+            xmax = 1572.841863913
+            text = ""
+        intervals [432]:
+            xmin = 1572.841863913
+            xmax = 1573.913271404
+            text = "Like, it's just ."
+        intervals [433]:
+            xmin = 1573.913271404
+            xmax = 1575.278089811
+            text = ""
+        intervals [434]:
+            xmin = 1575.278089811
+            xmax = 1580.388251497
+            text = "Exactly, like, just the character and stuff, it just, I don't know, he understood the assignment."
+        intervals [435]:
+            xmin = 1580.388251497
+            xmax = 1580.421188829
+            text = ""
+        intervals [436]:
+            xmin = 1580.421188829
+            xmax = 1587.69498213
+            text = "And it was, it definitely surpassed my expectations, because I've watched a few scenes of it. And I was, I was thinking just, wow."
+        intervals [437]:
+            xmin = 1587.69498213
+            xmax = 1587.707597295
+            text = ""
+        intervals [438]:
+            xmin = 1587.707597295
+            xmax = 1594.483289333
+            text = "That's, I can really tell who he is. You know, as as soon as he's introduced, you just know, oh, this guy's a bit special."
+        intervals [439]:
+            xmin = 1594.483289333
+            xmax = 1595.130145243
+            text = ""
+        intervals [440]:
+            xmin = 1595.130145243
+            xmax = 1598.012570136
+            text = "He can just tell us immediately as soon as he's sane."
+        intervals [441]:
+            xmin = 1598.012570136
+            xmax = 1608.19033253
+            text = ""
+        intervals [442]:
+            xmin = 1608.19033253
+            xmax = 1608.773398578
+            text = "Yeah."
+        intervals [443]:
+            xmin = 1608.773398578
+            xmax = 1616.145596332
+            text = ""
+        intervals [444]:
+            xmin = 1616.145596332
+            xmax = 1621.577752807
+            text = "No, I mean, yeah, I wanted to get into it for a while, but then I didn't."
+        intervals [445]:
+            xmin = 1621.577752807
+            xmax = 1626.401228906
+            text = ""
+        intervals [446]:
+            xmin = 1626.401228906
+            xmax = 1632.401768727
+            text = "I think I think it's because it was sort of the first thing ever. Like same with Harry Potter."
+        intervals [447]:
+            xmin = 1632.401768727
+            xmax = 1632.441127056
+            text = ""
+        intervals [448]:
+            xmin = 1632.441127056
+            xmax = 1637.634999507
+            text = "I feel like um cause there have been a few different magical school things that I've read."
+        intervals [449]:
+            xmin = 1637.634999507
+            xmax = 1637.735836067
+            text = ""
+        intervals [450]:
+            xmin = 1637.735836067
+            xmax = 1644.344464868
+            text = "I mean, watched um and they're a bit less popular like Little Witch Academia. But it's a anime."
+        intervals [451]:
+            xmin = 1644.344464868
+            xmax = 1644.600721164
+            text = ""
+        intervals [452]:
+            xmin = 1644.600721164
+            xmax = 1650.191997987
+            text = "Um that was very well executed, I would say. Um it's it was a bit."
+        intervals [453]:
+            xmin = 1650.191997987
+            xmax = 1650.708095303
+            text = ""
+        intervals [454]:
+            xmin = 1650.708095303
+            xmax = 1657.109639915
+            text = "The anot- the magic is very uncreative, but that doesn't really matter, because they used it more for a visual aspect."
+        intervals [455]:
+            xmin = 1657.109639915
+            xmax = 1657.128730036
+            text = ""
+        intervals [456]:
+            xmin = 1657.128730036
+            xmax = 1660.341297224
+            text = "So the magic was still necessary, so that's fine with me."
+        intervals [457]:
+            xmin = 1660.341297224
+            xmax = 1660.461403051
+            text = ""
+        intervals [458]:
+            xmin = 1660.461403051
+            xmax = 1668.450668072
+            text = "Um but yeah, when it comes to um it being the first thing of its kind."
+        intervals [459]:
+            xmin = 1668.450668072
+            xmax = 1668.544371762
+            text = ""
+        intervals [460]:
+            xmin = 1668.544371762
+            xmax = 1672.338571832
+            text = "Um obviously, it would blow up a lot more quickly because no one's ever seen this before."
+        intervals [461]:
+            xmin = 1672.338571832
+            xmax = 1672.359513649
+            text = ""
+        intervals [462]:
+            xmin = 1672.359513649
+            xmax = 1675.196994707
+            text = "So, you know, everyone's gonna be like, oh, this is amazing."
+        intervals [463]:
+            xmin = 1675.196994707
+            xmax = 1678.927236756
+            text = ""
+        intervals [464]:
+            xmin = 1678.927236756
+            xmax = 1686.052454555
+            text = "I mean, as soon as Star Wars ended, a lot of people just got in line to watch it again, which has been, in my opinion, a bit too much, but go ahead."
+        intervals [465]:
+            xmin = 1686.052454555
+            xmax = 1687.284282169
+            text = ""
+        intervals [466]:
+            xmin = 1687.284282169
+            xmax = 1690.131386874
+            text = "Star Trek too. The Star Trek is pretty popular."
+        intervals [467]:
+            xmin = 1690.131386874
+            xmax = 1694.057244047
+            text = ""
+        intervals [468]:
+            xmin = 1694.057244047
+            xmax = 1695.427056562
+            text = "I know nothing about it. Um."
+        intervals [469]:
+            xmin = 1695.427056562
+            xmax = 1702.320167241
+            text = ""
+        intervals [470]:
+            xmin = 1702.320167241
+            xmax = 1705.764081993
+            text = "We seem to gravitate towards fantasy more than sky-fi sci-fi."
+        intervals [471]:
+            xmin = 1705.764081993
+            xmax = 1723.800108855
+            text = ""
+        intervals [472]:
+            xmin = 1723.800108855
+            xmax = 1730.132778635
+            text = "So you just try to think of them and they all leave your brain. Um, oh, Miss Peregrine's Home for Peculiar Children."
+        intervals [473]:
+            xmin = 1730.132778635
+            xmax = 1732.741789449
+            text = ""
+        intervals [474]:
+            xmin = 1732.741789449
+            xmax = 1736.242822697
+            text = "Lovely movie, um very good visual visuals."
+        intervals [475]:
+            xmin = 1736.242822697
+            xmax = 1736.548132193
+            text = ""
+        intervals [476]:
+            xmin = 1736.548132193
+            xmax = 1744.476201341
+            text = "I love the idea of um a a place where, I don't know, it's it's like a time loop."
+        intervals [477]:
+            xmin = 1744.476201341
+            xmax = 1744.657904307
+            text = ""
+        intervals [478]:
+            xmin = 1744.657904307
+            xmax = 1752.605188761
+            text = "You know, the idea of someone entering this world where they have to live the same day every single day and like, you know, or do the exact same things and stuff like that."
+        intervals [479]:
+            xmin = 1752.605188761
+            xmax = 1752.756630594
+            text = ""
+        intervals [480]:
+            xmin = 1752.756630594
+            xmax = 1756.177041529
+            text = "That sounds maddening. I would never be able to do that. Um."
+        intervals [481]:
+            xmin = 1756.177041529
+            xmax = 1756.766008399
+            text = ""
+        intervals [482]:
+            xmin = 1756.766008399
+            xmax = 1763.982367887
+            text = "It's almost something like it's re- it's reminiscent of Alice in Wonderland a little bit, um which is definitely one of my favorite movies."
+        intervals [483]:
+            xmin = 1763.982367887
+            xmax = 1764.11299309
+            text = ""
+        intervals [484]:
+            xmin = 1764.11299309
+            xmax = 1766.950115857
+            text = "Um but yeah it's, it was a very good movie."
+        intervals [485]:
+            xmin = 1766.950115857
+            xmax = 1766.984540315
+            text = ""
+        intervals [486]:
+            xmin = 1766.984540315
+            xmax = 1774.179861052
+            text = "It's it it combined fantasy and um eeriness very well, which is pretty hard to do."
+        intervals [487]:
+            xmin = 1774.179861052
+            xmax = 1800.116948601
+            text = ""
+        intervals [488]:
+            xmin = 1800.116948601
+            xmax = 1800.770382679
+            text = "Yeah."
+        intervals [489]:
+            xmin = 1800.770382679
+            xmax = 1808.155070412
+            text = ""
+        intervals [490]:
+            xmin = 1808.155070412
+            xmax = 1810.465980533
+            text = "And then um he made that song too."
+        intervals [491]:
+            xmin = 1810.465980533
+            xmax = 1816.228816742
+            text = ""
+        intervals [492]:
+            xmin = 1816.228816742
+            xmax = 1817.775452313
+            text = "But he still sang it, so."
+        intervals [493]:
+            xmin = 1817.775452313
+            xmax = 1819.119514327
+            text = ""
+        intervals [494]:
+            xmin = 1819.119514327
+            xmax = 1820.67832456
+            text = "He's pretty cool, that guy."
+        intervals [495]:
+            xmin = 1820.67832456
+            xmax = 1824.549722172
+            text = ""
+        intervals [496]:
+            xmin = 1824.549722172
+            xmax = 1825.822079923
+            text = "Of course he is, yeah ."
+        intervals [497]:
+            xmin = 1825.822079923
+            xmax = 1825.857471335
+            text = ""
+        intervals [498]:
+            xmin = 1825.857471335
+            xmax = 1827.115010213
+            text = "Wasn't he in Camp Rock?"
+        intervals [499]:
+            xmin = 1827.115010213
+            xmax = 1828.902681941
+            text = ""
+        intervals [500]:
+            xmin = 1828.902681941
+            xmax = 1829.567380229
+            text = "School of Rock."
+        intervals [501]:
+            xmin = 1829.567380229
+            xmax = 1836.161505474
+            text = ""
+        intervals [502]:
+            xmin = 1836.161505474
+            xmax = 1838.279476671
+            text = "Oh, Gulliver's Travels."
+        intervals [503]:
+            xmin = 1838.279476671
+            xmax = 1840.452976024
+            text = ""
+        intervals [504]:
+            xmin = 1840.452976024
+            xmax = 1841.099831934
+            text = "No."
+        intervals [505]:
+            xmin = 1841.099831934
+            xmax = 1847.724880933
+            text = ""
+        intervals [506]:
+            xmin = 1847.724880933
+            xmax = 1849.87638086
+            text = "Oh sounds interesting."
+        intervals [507]:
+            xmin = 1849.87638086
+            xmax = 1855.153551824
+            text = ""
+        intervals [508]:
+            xmin = 1855.153551824
+            xmax = 1857.761977407
+            text = "Oh, there's bloody Lord Of The Rings as well."
+        intervals [509]:
+            xmin = 1857.761977407
+            xmax = 1864.418643313
+            text = ""
+        intervals [510]:
+            xmin = 1864.418643313
+            xmax = 1867.779026446
+            text = "Admittedly, um I have never watched that."
+        intervals [511]:
+            xmin = 1867.779026446
+            xmax = 1872.855827562
+            text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0
+        xmax = 1872.855827562
+        intervals: size = 331
+        intervals [1]:
+            xmin = 0.0
+            xmax = 22.826135298
+            text = ""
+        intervals [2]:
+            xmin = 22.826135298
+            xmax = 23.925793245
+            text = "A lot."
+        intervals [3]:
+            xmin = 23.925793245
+            xmax = 40.082800949
+            text = ""
+        intervals [4]:
+            xmin = 40.082800949
+            xmax = 41.114472475
+            text = "Animated."
+        intervals [5]:
+            xmin = 41.114472475
+            xmax = 49.657315975
+            text = ""
+        intervals [6]:
+            xmin = 49.657315975
+            xmax = 51.32947362
+            text = "What would you say is your favorite?"
+        intervals [7]:
+            xmin = 51.32947362
+            xmax = 94.342522686
+            text = ""
+        intervals [8]:
+            xmin = 94.342522686
+            xmax = 101.721552934
+            text = "Yeah. And the good thing about animation, I think, is that you can obviously you can do a lot more."
+        intervals [9]:
+            xmin = 101.721552934
+            xmax = 101.856234285
+            text = ""
+        intervals [10]:
+            xmin = 101.856234285
+            xmax = 103.590488905
+            text = "In terms of effects."
+        intervals [11]:
+            xmin = 103.590488905
+            xmax = 104.557903277
+            text = ""
+        intervals [12]:
+            xmin = 104.557903277
+            xmax = 105.4680524
+            text = "Yeah."
+        intervals [13]:
+            xmin = 105.4680524
+            xmax = 112.175428776
+            text = ""
+        intervals [14]:
+            xmin = 112.175428776
+            xmax = 119.37583611
+            text = "Um and we can't talk about animation without mentioning Bob's Burgers."
+        intervals [15]:
+            xmin = 119.37583611
+            xmax = 121.789361576
+            text = ""
+        intervals [16]:
+            xmin = 121.789361576
+            xmax = 123.935711748
+            text = "Best show ever, number one."
+        intervals [17]:
+            xmin = 123.935711748
+            xmax = 125.670552614
+            text = ""
+        intervals [18]:
+            xmin = 125.670552614
+            xmax = 127.083980968
+            text = "On both our lists."
+        intervals [19]:
+            xmin = 127.083980968
+            xmax = 159.730141117
+            text = ""
+        intervals [20]:
+            xmin = 159.730141117
+            xmax = 160.883939531
+            text = "Is Meg the daughter?"
+        intervals [21]:
+            xmin = 160.883939531
+            xmax = 162.182638995
+            text = ""
+        intervals [22]:
+            xmin = 162.182638995
+            xmax = 162.924538823
+            text = "Oh right, okay."
+        intervals [23]:
+            xmin = 162.924538823
+            xmax = 169.429134995
+            text = ""
+        intervals [24]:
+            xmin = 169.429134995
+            xmax = 170.642080914
+            text = "Is she annoying?"
+        intervals [25]:
+            xmin = 170.642080914
+            xmax = 173.70834894
+            text = ""
+        intervals [26]:
+            xmin = 173.70834894
+            xmax = 174.73470169
+            text = "So it's just a."
+        intervals [27]:
+            xmin = 174.73470169
+            xmax = 175.532991866
+            text = ""
+        intervals [28]:
+            xmin = 175.532991866
+            xmax = 176.45171756
+            text = "Right, it's a gag."
+        intervals [29]:
+            xmin = 176.45171756
+            xmax = 181.561723808
+            text = ""
+        intervals [30]:
+            xmin = 181.561723808
+            xmax = 183.399175196
+            text = "Oh , South Park, yes."
+        intervals [31]:
+            xmin = 183.399175196
+            xmax = 194.139629
+            text = ""
+        intervals [32]:
+            xmin = 194.139629
+            xmax = 195.629635922
+            text = "No one is safe, that's for sure."
+        intervals [33]:
+            xmin = 195.629635922
+            xmax = 218.174933816
+            text = ""
+        intervals [34]:
+            xmin = 218.174933816
+            xmax = 220.93879898
+            text = "Yet it still reflects family life."
+        intervals [35]:
+            xmin = 220.93879898
+            xmax = 238.978176224
+            text = ""
+        intervals [36]:
+            xmin = 238.978176224
+            xmax = 241.593604622
+            text = "I think so. He's a lot more normal than Linda."
+        intervals [37]:
+            xmin = 241.593604622
+            xmax = 275.517763216
+            text = ""
+        intervals [38]:
+            xmin = 275.517763216
+            xmax = 282.408836585
+            text = "I think you could say moral because , you know. In the end she always comes around and does the right thing."
+        intervals [39]:
+            xmin = 282.408836585
+            xmax = 283.610759955
+            text = ""
+        intervals [40]:
+            xmin = 283.610759955
+            xmax = 286.528386741
+            text = "Even though she's often the one who causes the trouble."
+        intervals [41]:
+            xmin = 286.528386741
+            xmax = 308.396321681
+            text = ""
+        intervals [42]:
+            xmin = 308.396321681
+            xmax = 312.118531516
+            text = "Yet she has enormous confidence and um."
+        intervals [43]:
+            xmin = 312.118531516
+            xmax = 313.828650025
+            text = ""
+        intervals [44]:
+            xmin = 313.828650025
+            xmax = 319.591453073
+            text = "Yeah, the confidence and and she takes charge of situations and she's al- always ready with a plan."
+        intervals [45]:
+            xmin = 319.591453073
+            xmax = 356.271703141
+            text = ""
+        intervals [46]:
+            xmin = 356.271703141
+            xmax = 364.1318776
+            text = "Yeah, they they would assume that she'd be an introvert, and withdrawn and and have some issues and phobias and things."
+        intervals [47]:
+            xmin = 364.1318776
+            xmax = 364.161338567
+            text = ""
+        intervals [48]:
+            xmin = 364.161338567
+            xmax = 369.441569483
+            text = "But it's it's it's an unspoken security blanket of sorts, isn't it?"
+        intervals [49]:
+            xmin = 369.441569483
+            xmax = 379.229977569
+            text = ""
+        intervals [50]:
+            xmin = 379.229977569
+            xmax = 380.00912707
+            text = "Definitely."
+        intervals [51]:
+            xmin = 380.00912707
+            xmax = 382.551115829
+            text = ""
+        intervals [52]:
+            xmin = 382.551115829
+            xmax = 389.548673794
+            text = "Um and then there's the other the s- the supporting characters too, which really make the show."
+        intervals [53]:
+            xmin = 389.548673794
+            xmax = 389.663704928
+            text = ""
+        intervals [54]:
+            xmin = 389.663704928
+            xmax = 391.000429769
+            text = "Like Teddy."
+        intervals [55]:
+            xmin = 391.000429769
+            xmax = 394.233078423
+            text = ""
+        intervals [56]:
+            xmin = 394.233078423
+            xmax = 397.199789247
+            text = "He's been inside um."
+        intervals [57]:
+            xmin = 397.199789247
+            xmax = 416.445312818
+            text = ""
+        intervals [58]:
+            xmin = 416.445312818
+            xmax = 418.000970674
+            text = "He was so threatened, wasn't he?"
+        intervals [59]:
+            xmin = 418.000970674
+            xmax = 418.739026461
+            text = ""
+        intervals [60]:
+            xmin = 418.739026461
+            xmax = 419.720139214
+            text = "So jealous."
+        intervals [61]:
+            xmin = 419.720139214
+            xmax = 421.758967608
+            text = ""
+        intervals [62]:
+            xmin = 421.758967608
+            xmax = 428.329309256
+            text = "And he's always trying to strengthen their friendship, instead of just letting it be like."
+        intervals [63]:
+            xmin = 428.329309256
+            xmax = 429.61155461
+            text = ""
+        intervals [64]:
+            xmin = 429.61155461
+            xmax = 434.76227888
+            text = "He doesn't he doesn't just allow the friendship to flow. He's he's gonna force it."
+        intervals [65]:
+            xmin = 434.76227888
+            xmax = 436.554188027
+            text = ""
+        intervals [66]:
+            xmin = 436.554188027
+            xmax = 442.927021033
+            text = "But it's kind of sweet too at the same time, because he would do anything for for Bob and Linda."
+        intervals [67]:
+            xmin = 442.927021033
+            xmax = 451.060418535
+            text = ""
+        intervals [68]:
+            xmin = 451.060418535
+            xmax = 453.894056594
+            text = "That's the other part of Bob's Burgers is the music."
+        intervals [69]:
+            xmin = 453.894056594
+            xmax = 460.331658124
+            text = ""
+        intervals [70]:
+            xmin = 460.331658124
+            xmax = 464.820899093
+            text = "It's really impressive, really impressive. Every single episode has a song."
+        intervals [71]:
+            xmin = 464.820899093
+            xmax = 474.14979321
+            text = ""
+        intervals [72]:
+            xmin = 474.14979321
+            xmax = 480.906035077
+            text = "And then of course there's the um the opening the opening scene with the with the new shop next door."
+        intervals [73]:
+            xmin = 480.906035077
+            xmax = 483.11635232
+            text = ""
+        intervals [74]:
+            xmin = 483.11635232
+            xmax = 486.382608225
+            text = "Burger of the day and then the the van, the exterminator van."
+        intervals [75]:
+            xmin = 486.382608225
+            xmax = 486.704512438
+            text = ""
+        intervals [76]:
+            xmin = 486.704512438
+            xmax = 488.196586422
+            text = "As a new company each time."
+        intervals [77]:
+            xmin = 488.196586422
+            xmax = 495.735158911
+            text = ""
+        intervals [78]:
+            xmin = 495.735158911
+            xmax = 497.803252733
+            text = "The Simpsons comes close."
+        intervals [79]:
+            xmin = 497.803252733
+            xmax = 499.332399092
+            text = ""
+        intervals [80]:
+            xmin = 499.332399092
+            xmax = 501.638823429
+            text = "It used to be my favourite."
+        intervals [81]:
+            xmin = 501.638823429
+            xmax = 503.726629156
+            text = ""
+        intervals [82]:
+            xmin = 503.726629156
+            xmax = 505.254181914
+            text = "Until Bob's came along."
+        intervals [83]:
+            xmin = 505.254181914
+            xmax = 516.229219961
+            text = ""
+        intervals [84]:
+            xmin = 516.229219961
+            xmax = 517.114521782
+            text = "That's true."
+        intervals [85]:
+            xmin = 517.114521782
+            xmax = 554.341028478
+            text = ""
+        intervals [86]:
+            xmin = 554.341028478
+            xmax = 560.388290527
+            text = "It it definitely um opened up almost a new genre."
+        intervals [87]:
+            xmin = 560.388290527
+            xmax = 560.855041437
+            text = ""
+        intervals [88]:
+            xmin = 560.855041437
+            xmax = 563.952764044
+            text = "In animation, in that it had that family sort of."
+        intervals [89]:
+            xmin = 563.952764044
+            xmax = 564.626792531
+            text = ""
+        intervals [90]:
+            xmin = 564.626792531
+            xmax = 569.654797586
+            text = "Um set up and each week."
+        intervals [91]:
+            xmin = 569.654797586
+            xmax = 570.457775244
+            text = ""
+        intervals [92]:
+            xmin = 570.457775244
+            xmax = 573.143865027
+            text = "They don't age, they're always at the same age and everything."
+        intervals [93]:
+            xmin = 573.143865027
+            xmax = 573.917252323
+            text = ""
+        intervals [94]:
+            xmin = 573.917252323
+            xmax = 577.39225283
+            text = "Goes back to square one and then they start on a on a new story."
+        intervals [95]:
+            xmin = 577.39225283
+            xmax = 578.588057768
+            text = ""
+        intervals [96]:
+            xmin = 578.588057768
+            xmax = 580.064459427
+            text = "Yeah, it's really clever."
+        intervals [97]:
+            xmin = 580.064459427
+            xmax = 580.935735245
+            text = ""
+        intervals [98]:
+            xmin = 580.935735245
+            xmax = 587.056922555
+            text = "And um what are they up to now, thirty thirty-five seasons or something now?"
+        intervals [99]:
+            xmin = 587.056922555
+            xmax = 587.957157109
+            text = ""
+        intervals [100]:
+            xmin = 587.957157109
+            xmax = 590.520249755
+            text = "Wow. Yeah, that's amazing."
+        intervals [101]:
+            xmin = 590.520249755
+            xmax = 616.853188928
+            text = ""
+        intervals [102]:
+            xmin = 616.853188928
+            xmax = 624.594192049
+            text = "Yeah, I agree. It were the first seasons were almost like an indie or alternative type show."
+        intervals [103]:
+            xmin = 624.594192049
+            xmax = 625.113073012
+            text = ""
+        intervals [104]:
+            xmin = 625.113073012
+            xmax = 631.324740316
+            text = "Um with with uh with an edge, but it was a little bit too inaccessible for everyone."
+        intervals [105]:
+            xmin = 631.324740316
+            xmax = 632.457416974
+            text = ""
+        intervals [106]:
+            xmin = 632.457416974
+            xmax = 636.724295917
+            text = "Because um it was very risky and there was drug use and."
+        intervals [107]:
+            xmin = 636.724295917
+            xmax = 640.166033608
+            text = ""
+        intervals [108]:
+            xmin = 640.166033608
+            xmax = 643.195723817
+            text = "Yeah and then yeah then you never heard of him again."
+        intervals [109]:
+            xmin = 643.195723817
+            xmax = 643.272101136
+            text = ""
+        intervals [110]:
+            xmin = 643.272101136
+            xmax = 648.98817729
+            text = "But I think that where it is now, is is um just the natural place for it to be, I think."
+        intervals [111]:
+            xmin = 648.98817729
+            xmax = 653.334016267
+            text = ""
+        intervals [112]:
+            xmin = 653.334016267
+            xmax = 653.895246189
+            text = "Yeah."
+        intervals [113]:
+            xmin = 653.895246189
+            xmax = 663.317807502
+            text = ""
+        intervals [114]:
+            xmin = 663.317807502
+            xmax = 664.114406307
+            text = "Why?"
+        intervals [115]:
+            xmin = 664.114406307
+            xmax = 676.089853983
+            text = ""
+        intervals [116]:
+            xmin = 676.089853983
+            xmax = 677.725045957
+            text = "The speech impediment, yes."
+        intervals [117]:
+            xmin = 677.725045957
+            xmax = 706.930295246
+            text = ""
+        intervals [118]:
+            xmin = 706.930295246
+            xmax = 712.955160898
+            text = "I agree. I don't understand what she sees in him other than he is a boy who's her age."
+        intervals [119]:
+            xmin = 712.955160898
+            xmax = 713.670592575
+            text = ""
+        intervals [120]:
+            xmin = 713.670592575
+            xmax = 720.894729443
+            text = "And she is very boy crazy, which might explain why she's fixated on on him."
+        intervals [121]:
+            xmin = 720.894729443
+            xmax = 722.071325269
+            text = ""
+        intervals [122]:
+            xmin = 722.071325269
+            xmax = 724.461301744
+            text = "Because all the other boys in the class are."
+        intervals [123]:
+            xmin = 724.461301744
+            xmax = 726.664634326
+            text = ""
+        intervals [124]:
+            xmin = 726.664634326
+            xmax = 727.681818179
+            text = "Questionable."
+        intervals [125]:
+            xmin = 727.681818179
+            xmax = 767.843181475
+            text = ""
+        intervals [126]:
+            xmin = 767.843181475
+            xmax = 772.47790974
+            text = "Zeke is, he he does, his heart is in the right place."
+        intervals [127]:
+            xmin = 772.47790974
+            xmax = 772.769843413
+            text = ""
+        intervals [128]:
+            xmin = 772.769843413
+            xmax = 779.604025798
+            text = "That episode where he um he gets into trouble at school, just because he wants to make his grandmother happy."
+        intervals [129]:
+            xmin = 779.604025798
+            xmax = 780.353027462
+            text = ""
+        intervals [130]:
+            xmin = 780.353027462
+            xmax = 781.240698588
+            text = "That was sweet."
+        intervals [131]:
+            xmin = 781.240698588
+            xmax = 787.907082819
+            text = ""
+        intervals [132]:
+            xmin = 787.907082819
+            xmax = 793.967357806
+            text = "Yeah, and um and Jimmy Pesto is in his own world, where he thinks he's fantastic and."
+        intervals [133]:
+            xmin = 793.967357806
+            xmax = 795.146911132
+            text = ""
+        intervals [134]:
+            xmin = 795.146911132
+            xmax = 798.402505164
+            text = "And and he's actually not interested in romance, really."
+        intervals [135]:
+            xmin = 798.402505164
+            xmax = 799.598883309
+            text = ""
+        intervals [136]:
+            xmin = 799.598883309
+            xmax = 801.174927778
+            text = "But Tina keeps pushing it."
+        intervals [137]:
+            xmin = 801.174927778
+            xmax = 803.617160941
+            text = ""
+        intervals [138]:
+            xmin = 803.617160941
+            xmax = 804.638194915
+            text = "Yeah, definitely ."
+        intervals [139]:
+            xmin = 804.638194915
+            xmax = 815.74503224
+            text = ""
+        intervals [140]:
+            xmin = 815.74503224
+            xmax = 817.47366584
+            text = "That's one of your pet peeves, isn't it?"
+        intervals [141]:
+            xmin = 817.47366584
+            xmax = 837.893209304
+            text = ""
+        intervals [142]:
+            xmin = 837.893209304
+            xmax = 841.01457024
+            text = "Yes, gender equality goes both ways, doesn't it?"
+        intervals [143]:
+            xmin = 841.01457024
+            xmax = 842.19801908
+            text = ""
+        intervals [144]:
+            xmin = 842.19801908
+            xmax = 845.785024577
+            text = "Um, yeah, that's very true."
+        intervals [145]:
+            xmin = 845.785024577
+            xmax = 850.526539506
+            text = "And then there's um the health inspectors, Hugo and."
+        intervals [146]:
+            xmin = 850.526539506
+            xmax = 851.021869147
+            text = ""
+        intervals [147]:
+            xmin = 851.021869147
+            xmax = 857.362599668
+            text = "Ron, that's it, and Hug- Hugo used to be engaged to Linda."
+        intervals [148]:
+            xmin = 857.362599668
+            xmax = 860.896836514
+            text = ""
+        intervals [149]:
+            xmin = 860.896836514
+            xmax = 863.901099254
+            text = "Yeah, something like that. And then she broke up with him."
+        intervals [150]:
+            xmin = 863.901099254
+            xmax = 864.838458905
+            text = ""
+        intervals [151]:
+            xmin = 864.838458905
+            xmax = 865.989301769
+            text = "Over the phone."
+        intervals [152]:
+            xmin = 865.989301769
+            xmax = 889.499453844
+            text = ""
+        intervals [153]:
+            xmin = 889.499453844
+            xmax = 895.196321956
+            text = "She's very singy, so I can imagine her breaking up with Hugo over the phone."
+        intervals [154]:
+            xmin = 895.196321956
+            xmax = 896.243162315
+            text = ""
+        intervals [155]:
+            xmin = 896.243162315
+            xmax = 897.32125849
+            text = "With a rap song."
+        intervals [156]:
+            xmin = 897.32125849
+            xmax = 902.970446707
+            text = ""
+        intervals [157]:
+            xmin = 902.970446707
+            xmax = 905.040909834
+            text = "Oh my gosh. Um."
+        intervals [158]:
+            xmin = 905.040909834
+            xmax = 906.197966043
+            text = ""
+        intervals [159]:
+            xmin = 906.197966043
+            xmax = 910.465946886
+            text = "And who are the other supporting characters? Oh, you've got Philip Frond."
+        intervals [160]:
+            xmin = 910.465946886
+            xmax = 912.082386407
+            text = ""
+        intervals [161]:
+            xmin = 912.082386407
+            xmax = 914.254145836
+            text = "But yes and."
+        intervals [162]:
+            xmin = 914.254145836
+            xmax = 915.846529803
+            text = ""
+        intervals [163]:
+            xmin = 915.846529803
+            xmax = 918.397271093
+            text = "Oh yes, regular-sized Rudy."
+        intervals [164]:
+            xmin = 918.397271093
+            xmax = 920.858923336
+            text = ""
+        intervals [165]:
+            xmin = 920.858923336
+            xmax = 921.963631632
+            text = "Yeah, he's awesome."
+        intervals [166]:
+            xmin = 921.963631632
+            xmax = 954.589331348
+            text = ""
+        intervals [167]:
+            xmin = 954.589331348
+            xmax = 955.719479273
+            text = "That's true."
+        intervals [168]:
+            xmin = 955.719479273
+            xmax = 961.800834195
+            text = ""
+        intervals [169]:
+            xmin = 961.800834195
+            xmax = 966.166769704
+            text = "There was that episode where they convinced the police, that there was something wrong with him."
+        intervals [170]:
+            xmin = 966.166769704
+            xmax = 967.373288867
+            text = ""
+        intervals [171]:
+            xmin = 967.373288867
+            xmax = 969.256868743
+            text = "Even though there's nothing wrong with him."
+        intervals [172]:
+            xmin = 969.256868743
+            xmax = 993.908700864
+            text = ""
+        intervals [173]:
+            xmin = 993.908700864
+            xmax = 995.742308212
+            text = "And we're all breaking down in tears."
+        intervals [174]:
+            xmin = 995.742308212
+            xmax = 1004.12733925
+            text = ""
+        intervals [175]:
+            xmin = 1004.12733925
+            xmax = 1011.483654312
+            text = "Um yeah, and then they did that movie, the Bob's Burgers movie. That was pretty good."
+        intervals [176]:
+            xmin = 1011.483654312
+            xmax = 1015.018910303
+            text = ""
+        intervals [177]:
+            xmin = 1015.018910303
+            xmax = 1015.699305483
+            text = "Was it?"
+        intervals [178]:
+            xmin = 1015.699305483
+            xmax = 1030.066528748
+            text = ""
+        intervals [179]:
+            xmin = 1030.066528748
+            xmax = 1031.224351301
+            text = "There's a South Park movie?"
+        intervals [180]:
+            xmin = 1031.224351301
+            xmax = 1039.522476574
+            text = ""
+        intervals [181]:
+            xmin = 1039.522476574
+            xmax = 1040.480188661
+            text = "That would work."
+        intervals [182]:
+            xmin = 1040.480188661
+            xmax = 1052.210002737
+            text = ""
+        intervals [183]:
+            xmin = 1052.210002737
+            xmax = 1057.419862351
+            text = "Yeah, the thing that I noticed about the animated movies."
+        intervals [184]:
+            xmin = 1057.419862351
+            xmax = 1057.653750418
+            text = ""
+        intervals [185]:
+            xmin = 1057.653750418
+            xmax = 1063.676775733
+            text = "Both Bob's Burgers and The Simpsons is that that obviously the quality is very different."
+        intervals [186]:
+            xmin = 1063.676775733
+            xmax = 1063.99450363
+            text = ""
+        intervals [187]:
+            xmin = 1063.99450363
+            xmax = 1068.891817386
+            text = "You had that um gradual change in aspect and um."
+        intervals [188]:
+            xmin = 1068.891817386
+            xmax = 1069.933991358
+            text = ""
+        intervals [189]:
+            xmin = 1069.933991358
+            xmax = 1072.881179736
+            text = "The shading and the music quality and."
+        intervals [190]:
+            xmin = 1072.881179736
+            xmax = 1075.541421311
+            text = ""
+        intervals [191]:
+            xmin = 1075.541421311
+            xmax = 1076.44920113
+            text = "Yeah."
+        intervals [192]:
+            xmin = 1076.44920113
+            xmax = 1096.957733243
+            text = ""
+        intervals [193]:
+            xmin = 1096.957733243
+            xmax = 1098.189893284
+            text = "Yeah, I agree."
+        intervals [194]:
+            xmin = 1098.189893284
+            xmax = 1099.529851968
+            text = ""
+        intervals [195]:
+            xmin = 1099.529851968
+            xmax = 1106.467996123
+            text = "And um and yeah, the the background sort of um cinema type of music."
+        intervals [196]:
+            xmin = 1106.467996123
+            xmax = 1106.515948404
+            text = ""
+        intervals [197]:
+            xmin = 1106.515948404
+            xmax = 1110.267429749
+            text = "In in those movies as well was was quite impressive."
+        intervals [198]:
+            xmin = 1110.267429749
+            xmax = 1112.765030888
+            text = ""
+        intervals [199]:
+            xmin = 1112.765030888
+            xmax = 1119.042788105
+            text = "Talking about movies, I think that we need to talk about Marvel movies."
+        intervals [200]:
+            xmin = 1119.042788105
+            xmax = 1119.801544911
+            text = ""
+        intervals [201]:
+            xmin = 1119.801544911
+            xmax = 1125.626012035
+            text = "Yeah, because they're the best movies and I love them."
+        intervals [202]:
+            xmin = 1125.626012035
+            xmax = 1133.602502787
+            text = ""
+        intervals [203]:
+            xmin = 1133.602502787
+            xmax = 1135.447597317
+            text = "That was a very good movie."
+        intervals [204]:
+            xmin = 1135.447597317
+            xmax = 1143.379955001
+            text = ""
+        intervals [205]:
+            xmin = 1143.379955001
+            xmax = 1144.177758281
+            text = "Do they?"
+        intervals [206]:
+            xmin = 1144.177758281
+            xmax = 1152.339611809
+            text = ""
+        intervals [207]:
+            xmin = 1152.339611809
+            xmax = 1153.858178971
+            text = "Oh, that's right."
+        intervals [208]:
+            xmin = 1153.858178971
+            xmax = 1176.641902628
+            text = ""
+        intervals [209]:
+            xmin = 1176.641902628
+            xmax = 1179.086211086
+            text = "Is that because it looks more realistic, do you think?"
+        intervals [210]:
+            xmin = 1179.086211086
+            xmax = 1205.724195574
+            text = ""
+        intervals [211]:
+            xmin = 1205.724195574
+            xmax = 1213.039969442
+            text = "And I suppose that's why we watch movies as well as is to get out of our reality and experience something different."
+        intervals [212]:
+            xmin = 1213.039969442
+            xmax = 1233.951251427
+            text = ""
+        intervals [213]:
+            xmin = 1233.951251427
+            xmax = 1241.795208544
+            text = "Well, yeah, I I suppose you could argue that some religions are fiction, because they can't all be true, can they?"
+        intervals [214]:
+            xmin = 1241.795208544
+            xmax = 1260.199624256
+            text = ""
+        intervals [215]:
+            xmin = 1260.199624256
+            xmax = 1264.518284752
+            text = "Hmm. Yes, I you know I agree. Um."
+        intervals [216]:
+            xmin = 1264.518284752
+            xmax = 1265.291960829
+            text = ""
+        intervals [217]:
+            xmin = 1265.291960829
+            xmax = 1268.109557442
+            text = "But going back to Spider-Verse."
+        intervals [218]:
+            xmin = 1268.109557442
+            xmax = 1269.111330988
+            text = ""
+        intervals [219]:
+            xmin = 1269.111330988
+            xmax = 1275.93456085
+            text = "I really did not think I was gonna like it before I watched it. And it was such a good movie."
+        intervals [220]:
+            xmin = 1275.93456085
+            xmax = 1276.471912519
+            text = ""
+        intervals [221]:
+            xmin = 1276.471912519
+            xmax = 1278.830528173
+            text = "And the sequel was was just as good."
+        intervals [222]:
+            xmin = 1278.830528173
+            xmax = 1281.38660624
+            text = ""
+        intervals [223]:
+            xmin = 1281.38660624
+            xmax = 1287.534331371
+            text = "Yeah, I agree, which is pretty rare. The sequel often doesn't live up to the the first."
+        intervals [224]:
+            xmin = 1287.534331371
+            xmax = 1300.248869157
+            text = ""
+        intervals [225]:
+            xmin = 1300.248869157
+            xmax = 1301.220808308
+            text = "Right, okay."
+        intervals [226]:
+            xmin = 1301.220808308
+            xmax = 1309.746235926
+            text = ""
+        intervals [227]:
+            xmin = 1309.746235926
+            xmax = 1310.533878122
+            text = "Yeah."
+        intervals [228]:
+            xmin = 1310.533878122
+            xmax = 1312.544319419
+            text = ""
+        intervals [229]:
+            xmin = 1312.544319419
+            xmax = 1314.063696362
+            text = "Uh it's a bit like, um."
+        intervals [230]:
+            xmin = 1314.063696362
+            xmax = 1316.204687899
+            text = ""
+        intervals [231]:
+            xmin = 1316.204687899
+            xmax = 1322.896848319
+            text = "Uh the Marvel the the main Marvel movies um with Endgame being the last one."
+        intervals [232]:
+            xmin = 1322.896848319
+            xmax = 1324.056917709
+            text = ""
+        intervals [233]:
+            xmin = 1324.056917709
+            xmax = 1331.91056342
+            text = "Uh that was that was a real saga and and you really needed to you really needed the the um to watch each part."
+        intervals [234]:
+            xmin = 1331.91056342
+            xmax = 1332.850753162
+            text = ""
+        intervals [235]:
+            xmin = 1332.850753162
+            xmax = 1337.897907666
+            text = "And they were all equally good. Actually, they were all equally awesome."
+        intervals [236]:
+            xmin = 1337.897907666
+            xmax = 1341.908886797
+            text = ""
+        intervals [237]:
+            xmin = 1341.908886797
+            xmax = 1345.927003507
+            text = "They were marvelous, absolutely. Um."
+        intervals [238]:
+            xmin = 1345.927003507
+            xmax = 1347.852351097
+            text = ""
+        intervals [239]:
+            xmin = 1347.852351097
+            xmax = 1351.558454956
+            text = "Oh yeah, for sure. Um."
+        intervals [240]:
+            xmin = 1351.558454956
+            xmax = 1352.271787914
+            text = ""
+        intervals [241]:
+            xmin = 1352.271787914
+            xmax = 1358.369467182
+            text = "And so what other movie franchises are there, that equal Marvel?"
+        intervals [242]:
+            xmin = 1358.369467182
+            xmax = 1359.468183526
+            text = ""
+        intervals [243]:
+            xmin = 1359.468183526
+            xmax = 1363.691521742
+            text = "I suppose there's um Harry Potter."
+        intervals [244]:
+            xmin = 1363.691521742
+            xmax = 1438.641555418
+            text = ""
+        intervals [245]:
+            xmin = 1438.641555418
+            xmax = 1442.454243224
+            text = "I I agree with you that that came out of nowhere and it really does feel like."
+        intervals [246]:
+            xmin = 1442.454243224
+            xmax = 1443.172456092
+            text = ""
+        intervals [247]:
+            xmin = 1443.172456092
+            xmax = 1447.246036011
+            text = "She didn't consider the entire story from the beginning."
+        intervals [248]:
+            xmin = 1447.246036011
+            xmax = 1493.06520074
+            text = ""
+        intervals [249]:
+            xmin = 1493.06520074
+            xmax = 1500.979673047
+            text = "Yeah, yeah. So with Harry Potter, there's no doubt that the characters are really interesting."
+        intervals [250]:
+            xmin = 1500.979673047
+            xmax = 1500.98978017
+            text = ""
+        intervals [251]:
+            xmin = 1500.98978017
+            xmax = 1505.852614597
+            text = "And and they have their own depth and substance. Um."
+        intervals [252]:
+            xmin = 1505.852614597
+            xmax = 1506.934552451
+            text = ""
+        intervals [253]:
+            xmin = 1506.934552451
+            xmax = 1509.216856726
+            text = "And she's a fantastic storyteller."
+        intervals [254]:
+            xmin = 1509.216856726
+            xmax = 1509.84432917
+            text = ""
+        intervals [255]:
+            xmin = 1509.84432917
+            xmax = 1514.330644301
+            text = "But it's those details that really took me out of the story."
+        intervals [256]:
+            xmin = 1514.330644301
+            xmax = 1515.145291019
+            text = ""
+        intervals [257]:
+            xmin = 1515.145291019
+            xmax = 1521.474898261
+            text = "Because, like you said, these things came out of nowhere, and then they were never mentioned again."
+        intervals [258]:
+            xmin = 1521.474898261
+            xmax = 1523.411152591
+            text = ""
+        intervals [259]:
+            xmin = 1523.411152591
+            xmax = 1530.41716607
+            text = "Yeah, as if they didn't exist again, and it just um, yeah, very, very frustrating, but we are quite critical."
+        intervals [260]:
+            xmin = 1530.41716607
+            xmax = 1542.162000731
+            text = ""
+        intervals [261]:
+            xmin = 1542.162000731
+            xmax = 1546.302529003
+            text = "But then um Pirates of the Caribbean."
+        intervals [262]:
+            xmin = 1546.302529003
+            xmax = 1547.579586485
+            text = ""
+        intervals [263]:
+            xmin = 1547.579586485
+            xmax = 1549.161199855
+            text = "That's another movie franchise."
+        intervals [264]:
+            xmin = 1549.161199855
+            xmax = 1550.375034263
+            text = ""
+        intervals [265]:
+            xmin = 1550.375034263
+            xmax = 1556.307114198
+            text = "Very, very cool. Yes, so well done. And I think that that character of Jack Black."
+        intervals [266]:
+            xmin = 1556.307114198
+            xmax = 1557.894860011
+            text = ""
+        intervals [267]:
+            xmin = 1557.894860011
+            xmax = 1561.727053039
+            text = "Jack Sparrow, not Jack Black, Jack Sparrow. Um."
+        intervals [268]:
+            xmin = 1561.727053039
+            xmax = 1563.528142462
+            text = ""
+        intervals [269]:
+            xmin = 1563.528142462
+            xmax = 1565.5790562
+            text = "Oh, he just owns it."
+        intervals [270]:
+            xmin = 1565.5790562
+            xmax = 1571.740482355
+            text = ""
+        intervals [271]:
+            xmin = 1571.740482355
+            xmax = 1572.744696215
+            text = "Yeah ."
+        intervals [272]:
+            xmin = 1572.744696215
+            xmax = 1574.156793629
+            text = ""
+        intervals [273]:
+            xmin = 1574.156793629
+            xmax = 1575.26786378
+            text = "The most entertaining."
+        intervals [274]:
+            xmin = 1575.26786378
+            xmax = 1598.040470386
+            text = ""
+        intervals [275]:
+            xmin = 1598.040470386
+            xmax = 1603.419936786
+            text = "I agree completely. Yeah. And um and the other characters really."
+        intervals [276]:
+            xmin = 1603.419936786
+            xmax = 1603.885530232
+            text = ""
+        intervals [277]:
+            xmin = 1603.885530232
+            xmax = 1608.141930966
+            text = "A side characters, he's he's just the star of of those movies."
+        intervals [278]:
+            xmin = 1608.141930966
+            xmax = 1609.797365181
+            text = ""
+        intervals [279]:
+            xmin = 1609.797365181
+            xmax = 1615.695169064
+            text = "Um are there any other franchises? We're not really into Star Wars, are we?"
+        intervals [280]:
+            xmin = 1615.695169064
+            xmax = 1622.684344314
+            text = ""
+        intervals [281]:
+            xmin = 1622.684344314
+            xmax = 1625.944320403
+            text = "Yeah, I don't see what the fuss is about. Maybe we need to try it."
+        intervals [282]:
+            xmin = 1625.944320403
+            xmax = 1676.597953097
+            text = ""
+        intervals [283]:
+            xmin = 1676.597953097
+            xmax = 1678.897985551
+            text = "Yeah, yeah, that's very true."
+        intervals [284]:
+            xmin = 1678.897985551
+            xmax = 1686.697476033
+            text = ""
+        intervals [285]:
+            xmin = 1686.697476033
+            xmax = 1687.191772261
+            text = "Yeah."
+        intervals [286]:
+            xmin = 1687.191772261
+            xmax = 1690.497078495
+            text = ""
+        intervals [287]:
+            xmin = 1690.497078495
+            xmax = 1694.035760825
+            text = "Yes, yeah, and I don't I don't really get that either."
+        intervals [288]:
+            xmin = 1694.035760825
+            xmax = 1696.818993688
+            text = ""
+        intervals [289]:
+            xmin = 1696.818993688
+            xmax = 1701.598160325
+            text = "Another franchise that maybe we need to give a go to, but."
+        intervals [290]:
+            xmin = 1701.598160325
+            xmax = 1705.803923798
+            text = ""
+        intervals [291]:
+            xmin = 1705.803923798
+            xmax = 1709.942075109
+            text = "Yeah, yeah, definitely. Yeah, definitely. Um."
+        intervals [292]:
+            xmin = 1709.942075109
+            xmax = 1711.303560972
+            text = ""
+        intervals [293]:
+            xmin = 1711.303560972
+            xmax = 1719.208523831
+            text = "For instance, um what's a, what's a good fantasy movie? I mean, you've got the Pirates of the Caribbean. Um."
+        intervals [294]:
+            xmin = 1719.208523831
+            xmax = 1720.913423497
+            text = ""
+        intervals [295]:
+            xmin = 1720.913423497
+            xmax = 1722.708685337
+            text = "I can't think of any right now."
+        intervals [296]:
+            xmin = 1722.708685337
+            xmax = 1730.207690257
+            text = ""
+        intervals [297]:
+            xmin = 1730.207690257
+            xmax = 1732.698554861
+            text = "That was very good. That was so good."
+        intervals [298]:
+            xmin = 1732.698554861
+            xmax = 1774.687363842
+            text = ""
+        intervals [299]:
+            xmin = 1774.687363842
+            xmax = 1778.337194711
+            text = "Yeah, yeah. Um."
+        intervals [300]:
+            xmin = 1778.337194711
+            xmax = 1779.270883366
+            text = ""
+        intervals [301]:
+            xmin = 1779.270883366
+            xmax = 1784.146555078
+            text = "I'm trying to think of other other films that I really enjoy."
+        intervals [302]:
+            xmin = 1784.146555078
+            xmax = 1785.948833574
+            text = ""
+        intervals [303]:
+            xmin = 1785.948833574
+            xmax = 1790.865805966
+            text = "There are a lot of comedy films that I love. There's one called Dirty Work."
+        intervals [304]:
+            xmin = 1790.865805966
+            xmax = 1791.326351344
+            text = ""
+        intervals [305]:
+            xmin = 1791.326351344
+            xmax = 1794.218112817
+            text = "That's hilarious. Um."
+        intervals [306]:
+            xmin = 1794.218112817
+            xmax = 1796.10666408
+            text = ""
+        intervals [307]:
+            xmin = 1796.10666408
+            xmax = 1799.722027516
+            text = "And oh, we we s- we spoke about Jack Black."
+        intervals [308]:
+            xmin = 1799.722027516
+            xmax = 1801.229853183
+            text = ""
+        intervals [309]:
+            xmin = 1801.229853183
+            xmax = 1806.459045822
+            text = "He is hilarious. I mean, of course, there's the Kung Fu Panda character that he narrates."
+        intervals [310]:
+            xmin = 1806.459045822
+            xmax = 1813.96910957
+            text = ""
+        intervals [311]:
+            xmin = 1813.96910957
+            xmax = 1816.009726051
+            text = "Oh, that's actually a remake of an old song."
+        intervals [312]:
+            xmin = 1816.009726051
+            xmax = 1817.781754402
+            text = ""
+        intervals [313]:
+            xmin = 1817.781754402
+            xmax = 1818.877604414
+            text = "He did sing it?"
+        intervals [314]:
+            xmin = 1818.877604414
+            xmax = 1820.825782213
+            text = ""
+        intervals [315]:
+            xmin = 1820.825782213
+            xmax = 1821.877447947
+            text = "He is very cool."
+        intervals [316]:
+            xmin = 1821.877447947
+            xmax = 1822.226035005
+            text = ""
+        intervals [317]:
+            xmin = 1822.226035005
+            xmax = 1824.426462947
+            text = "He's very talented, he's he's in a band."
+        intervals [318]:
+            xmin = 1824.426462947
+            xmax = 1827.825749182
+            text = ""
+        intervals [319]:
+            xmin = 1827.825749182
+            xmax = 1828.902681941
+            text = "Uh School of Rock."
+        intervals [320]:
+            xmin = 1828.902681941
+            xmax = 1829.723261469
+            text = ""
+        intervals [321]:
+            xmin = 1829.723261469
+            xmax = 1835.689555978
+            text = "Yes. Yep um. And uh what else was he in?"
+        intervals [322]:
+            xmin = 1835.689555978
+            xmax = 1838.327824274
+            text = ""
+        intervals [323]:
+            xmin = 1838.327824274
+            xmax = 1840.009513468
+            text = "Did you watch Gulli's Travels?"
+        intervals [324]:
+            xmin = 1840.009513468
+            xmax = 1841.6800599
+            text = ""
+        intervals [325]:
+            xmin = 1841.6800599
+            xmax = 1847.218979469
+            text = "And he's um he's like uh a giant in the land of little people."
+        intervals [326]:
+            xmin = 1847.218979469
+            xmax = 1849.90570329
+            text = ""
+        intervals [327]:
+            xmin = 1849.90570329
+            xmax = 1853.272621618
+            text = "Hmm, it's really good. Um."
+        intervals [328]:
+            xmin = 1853.272621618
+            xmax = 1858.125390361
+            text = ""
+        intervals [329]:
+            xmin = 1858.125390361
+            xmax = 1864.402223114
+            text = "Lord Of The Rings, yeah, I knew there was another one of those fantasy type um movie franchises."
+        intervals [330]:
+            xmin = 1864.402223114
+            xmax = 1869.752531507
+            text = ""
+        intervals [331]:
+            xmin = 1869.752531507
+            xmax = 1872.855827562
+            text = "It's very good, oh that's all folks, okay."

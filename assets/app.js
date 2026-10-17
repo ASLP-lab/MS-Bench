@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261014-audio-follow";
+const DATA_VERSION = "20261018-sample-names";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
@@ -272,8 +272,8 @@ function renderDiagnostics() {
   $("[data-diagnostic-panel]").innerHTML = `
     <aside class="diagnostic-metrics" aria-labelledby="diagnostic-metrics-title">
       <h3 id="diagnostic-metrics-title">Note: Metrics for ${escapeHTML(data.title)}</h3>
-      <dl class="diagnostic-metric-key">${data.metrics.map(metric => `<div><dt>${scientificNotation(metric.symbol)}</dt><dd>${scientificNotation(metric.definition)}</dd></div>`).join("")}</dl>
-      <p data-diagnostic-note>${scientificNotation(data.note)} * indicates p &lt; 0.05 as reported in paper Table 2.</p>
+      <dl class="diagnostic-metric-key">${data.metrics.map(metric => `<div><dt>${scientificNotation(metric.symbol)}</dt><dd data-i18n-scientific="${escapeHTML(metric.definition)}">${scientificNotation(metric.definition)}</dd></div>`).join("")}</dl>
+      <p data-diagnostic-note data-i18n-scientific="${escapeHTML(data.note + " * indicates p < 0.05 as reported in paper Table 2.")}">${scientificNotation(data.note)} * indicates p &lt; 0.05 as reported in paper Table 2.</p>
     </aside>
     <div class="diagnostic-copy"><h3>Key finding</h3><p>${escapeHTML(data.description)}</p></div>
     <div class="diagnostic-chart">${data.series.map(series => {
@@ -281,8 +281,8 @@ function renderDiagnostics() {
       return `<section class="series-block"><div class="series-title"><span>${scientificNotation(series.label.replace(/^Delta /, "Δ").replace(/rho/g, "ρ"))}</span><small>${series.unit === "rho" ? "fixed domain [-1, 1]" : `percentage points, domain [-${domain}, ${domain}]`}</small></div><div class="series-axis"><span>−${domain}</span><span>+${domain}</span></div><div class="series-rows">${systems.map((system, index) => {
         const value = series.values[index];
         const width = value == null ? 0 : Math.min(50, Math.abs(value) / domain * 50);
-        const significance = series.significant[index] === true ? `<span class="significance" aria-label="significant as reported in paper">*</span>` : "";
-        return `<div class="series-row"><span>${escapeHTML(system.name)}</span><div class="diverging-track" aria-hidden="true">${value == null ? "" : `<i class="${value < 0 ? "negative" : "positive"}" data-diagnostic-bar data-final-width="${width}" style="width:0%"></i>`}</div><strong aria-label="${escapeHTML(diagnosticValue(value, series.unit))}${series.significant[index] === true ? "; significant" : ""}">${value == null ? "Not evaluated" : `<span aria-hidden="true" data-diagnostic-value data-target="${value}" data-unit="${series.unit}">${escapeHTML(diagnosticValue(0, series.unit))}</span>`}${significance}</strong></div>`;
+        const significance = series.significant[index] === true ? `<span class="significance" aria-hidden="true">*</span>` : "";
+        return `<div class="series-row"><span>${escapeHTML(system.name)}</span><div class="diverging-track" aria-hidden="true">${value == null ? "" : `<i class="${value < 0 ? "negative" : "positive"}" data-diagnostic-bar data-final-width="${width}" style="width:0%"></i>`}</div><strong>${value == null ? "Not evaluated" : `<span class="visually-hidden">${escapeHTML(diagnosticValue(value, series.unit))}${series.significant[index] === true ? "; significant" : ""}</span><span aria-hidden="true" data-diagnostic-value data-target="${value}" data-unit="${series.unit}">${escapeHTML(diagnosticValue(0, series.unit))}</span>`}${significance}</strong></div>`;
       }).join("")}</div></section>`;
     }).join("")}</div>`;
   animateDiagnosticValues($("[data-diagnostic-panel]"));
@@ -292,8 +292,16 @@ function speakerColor(speaker, speakers) {
   return SPEAKER_COLORS[Math.max(0, speakers.indexOf(speaker)) % SPEAKER_COLORS.length];
 }
 
-function conditionDetails(conditions) {
-  return `<dl class="condition-details" tabindex="0" aria-label="Recording condition values">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(conditionLabel(conditions[axis]))}<small>${axis === "N" ? escapeHTML(ACOUSTIC_LABELS[conditions[axis]]) : `Range: ${escapeHTML(CONDITION_RANGES[conditions[axis]])}`}</small></dd></div>`).join("")}</dl>`;
+function conditionDetails(example) {
+  const { conditions, stats } = example;
+  const values = {
+    P: `${stats.num_speakers} speakers`,
+    O: `${(stats.overlap_ratio * 100).toFixed(2)}%`,
+    S: stats.speaker_similarity_max.toFixed(4),
+    T: `${(stats.speaker_switch_q25 * 1000).toFixed(1)} ms`,
+    N: `dₙ = ${stats.noise_difficulty.toFixed(4)}`
+  };
+  return `<dl class="condition-details" tabindex="0" aria-label="Recording condition values">${AXES.map(axis => `<div class="axis-${axis.toLowerCase()}"><dt>${axisIcon(axis)}${escapeHTML(AXIS_META[axis].name)}</dt><dd>${escapeHTML(values[axis])}<small>Range: ${escapeHTML(conditionLabel(conditions[axis]))}</small></dd></div>`).join("")}</dl>`;
 }
 
 function timelineSVG(example, speakers) {
@@ -319,33 +327,21 @@ function timelineSVG(example, speakers) {
 }
 
 function caseEvidence(example) {
-  const clip = example.clip_stats;
   const similarity = example.speaker_similarity;
-  if (!clip || !similarity) return "";
+  if (!similarity) return "";
   const maximum = similarity.maximum;
   const pair = similarity.distinct_reference_pair;
-  const names = pair ? pair.speakers.map(escapeHTML).join(" + ") : "No verified distinct-speaker mapping";
-  const sourceNames = maximum.source_speakers.map(escapeHTML).join(" + ");
-  const sameReference = maximum.mapping_status === "merged";
-  const pairNote = sameReference
-    ? `<p class="source-annotation-note"><b>Source annotation note:</b> ${sourceNames} align mainly with the same revised reference speaker, ${escapeHTML(maximum.reference_speakers[0])}. The source maximum is not a distinct-speaker pair in this reference.</p>`
-    : maximum.mapping_status === "unmapped"
-      ? `<p class="source-annotation-note">Source labels ${sourceNames} could not be mapped confidently to two revised reference speakers.</p>`
-      : "";
-  return `<div class="case-evidence">
-    <section><h3>Overlap in this excerpt</h3><div class="evidence-value"><strong>${clip.overlap_seconds.toFixed(1)} s</strong><span>overlapping reference speech</span></div><p><b>${(clip.overlap_ratio * 100).toFixed(1)}%</b> of reference speech; up to <b>${clip.peak_concurrent_speakers}</b> concurrent speakers. Full-recording overlap: <b>${(example.stats.overlap_ratio * 100).toFixed(1)}%</b>.</p><p>${clip.overlap_seconds > 0 ? "Shaded timeline bands mark intervals with two or more reference speakers." : "No overlapping reference speech occurs in this excerpt."}</p></section>
-    <section><h3>Maximum speaker similarity</h3><div class="evidence-value"><strong>${maximum.cosine_similarity.toFixed(4)}</strong><span>full-recording source cosine similarity</span></div>${pairNote}<p><b>${maximum.mapping_status === "distinct" ? "Reference speaker pair" : "Highest mapped distinct-speaker pair"}:</b> ${names}${pair && maximum.mapping_status !== "distinct" ? ` (source cosine: ${pair.cosine_similarity.toFixed(4)})` : ""}.</p><p>Outlined tracks identify this pair; use the speaker shortcuts above to compare their voices.</p><details class="source-pair-provenance"><summary>Source speaker labels</summary><p>Source maximum: ${sourceNames}.${pair ? `<br>Highlighted pair: ${pair.source_speakers.map(escapeHTML).join(' + ')} → ${names}.` : ""}<br>Source labels are mapped by interval alignment with the revised benchmark TextGrid. Similarities come from source recording embeddings, not this excerpt.</p></details></section>
-  </div>`;
+  return `<div class="case-evidence"><section><h3>Maximum speaker similarity</h3><div class="evidence-value"><strong>${maximum.cosine_similarity.toFixed(4)}</strong><span>full-recording source cosine similarity</span></div>${pair ? `<p><b>Reference speaker pair:</b> ${pair.speakers.map(escapeHTML).join(" + ")}${maximum.mapping_status !== "distinct" ? ` (source cosine: ${pair.cosine_similarity.toFixed(4)})` : ""}.</p><p>Outlined tracks identify this pair; use the speaker shortcuts to compare their voices.</p>` : "<p>Speaker-pair labels are unavailable for this recording.</p>"}</section></div>`;
 }
 
-function caseDetail(example, index) {
+function caseDetail(example) {
   const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
   return `<article class="sample-panel" data-sample-panel="${escapeHTML(example.slug)}" aria-labelledby="sample-title-${escapeHTML(example.slug)}">
-    <header class="sample-head"><div class="case-meta"><span>Sample ${index + 1}</span><span>${escapeHTML(scenarioGroup(example.scenario))}</span><span>${escapeHTML(example.language)}</span></div><h3 id="sample-title-${escapeHTML(example.slug)}">${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></header>
-    ${conditionDetails(example.conditions)}
-    <div class="sample-player"><div><strong>Reference audio</strong><span>${formatTime(example.clip_duration_seconds)} excerpt</span></div><audio controls preload="none" src="${escapeHTML(example.audio)}" data-case-audio="${escapeHTML(example.slug)}" aria-label="Play ${escapeHTML(example.title)}">Your browser does not support audio playback.</audio></div><p class="player-error" data-audio-error hidden></p>
+    <header class="sample-head"><h3 id="sample-title-${escapeHTML(example.slug)}">${escapeHTML(example.title)}</h3><p>${escapeHTML(example.description)}</p></header>
+    ${conditionDetails(example)}
+    <div class="sample-player"><div><strong>Reference audio</strong><span>${example.audio_scope === "full_recording" ? "Full recording" : "Excerpt"} · ${formatTime(example.clip_duration_seconds)}</span></div><audio controls preload="none" src="${escapeHTML(versioned(example.audio))}" data-case-audio="${escapeHTML(example.slug)}" aria-label="Play ${escapeHTML(example.title)}">Your browser does not support audio playback.</audio></div><p class="player-error" data-audio-error hidden></p>
     <div class="caption-heading"><div class="caption-controls"><label><input type="checkbox" data-follow-playback checked> Follow playback</label><button type="button" data-resume-follow hidden>Resume follow</button></div></div>
-    <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}" role="region" aria-label="${escapeHTML(example.title)} reference transcript" tabindex="0">${example.timeline.map((segment, i) => `<button type="button" class="caption-line" style="--speaker:${speakerColor(segment.speaker, speakers)}" data-caption-index="${i}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b>${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
+    <div class="live-transcript" data-transcript="${escapeHTML(example.slug)}" role="region" aria-label="${escapeHTML(example.title)} reference transcript" tabindex="0">${example.timeline.map((segment, i) => `<button type="button" class="caption-line" title="Play from ${formatTime(segment.start)}" style="--speaker:${speakerColor(segment.speaker, speakers)}" data-caption-index="${i}" data-start="${segment.start}" data-end="${segment.end}"><time>${formatTime(segment.start)}</time><b>${escapeHTML(segment.speaker)}</b><span>${escapeHTML(segment.text.replace(/<sil>|<pause>|<\$>/g, " "))}</span></button>`).join("")}</div>
 
   </article>`;
 }
@@ -375,9 +371,10 @@ function updateCasePlayback(audio) {
   }
   const first = active[0] || lines.filter(line => Number(line.dataset.start) <= audio.currentTime).at(-1) || lines[0];
   const follow = $("[data-follow-playback]", detail);
-  if (first && follow?.checked && transcript.dataset.activeIndex !== first.dataset.captionIndex) {
+  const outside = first && (first.offsetTop < transcript.scrollTop || first.offsetTop + Math.min(first.clientHeight, transcript.clientHeight) > transcript.scrollTop + transcript.clientHeight);
+  if (first && follow?.checked && (transcript.dataset.activeIndex !== first.dataset.captionIndex || outside)) {
     transcript.dataset.activeIndex = first.dataset.captionIndex;
-    transcript.scrollTo({ top: first.offsetTop - transcript.clientHeight / 2 + first.clientHeight / 2, behavior: "auto" });
+    transcript.scrollTo({ top: first.offsetTop - Math.max(0, (transcript.clientHeight - first.clientHeight) / 2), behavior: "auto" });
   }
 }
 
@@ -413,7 +410,7 @@ function comparisonColumn(title, segments, output = null) {
     const color = speakerColor(speakerKey(segment), speakers);
     return segment.valid_timing === false
       ? `<div class="comparison-line invalid" style="--speaker:${color}">${body}<em>Invalid interval</em></div>`
-      : `<button type="button" class="comparison-line" style="--speaker:${color}" data-comparison-index="${index}" data-start="${Math.max(0, segment.start)}" data-end="${segment.end}">${body}</button>`;
+      : `<button type="button" class="comparison-line" title="Play from ${formatTime(Math.max(0, segment.start))}" style="--speaker:${color}" data-comparison-index="${index}" data-start="${Math.max(0, segment.start)}" data-end="${segment.end}">${body}</button>`;
   }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterances are available in this audio example."}</p>`}</div></article>`;
 }
 
@@ -423,9 +420,10 @@ function updateComparisonPlayback(audio) {
     const active = lines.filter(line => audio.currentTime >= Number(line.dataset.start) && audio.currentTime < Number(line.dataset.end));
     lines.forEach(line => line.classList.toggle("active", active.includes(line)));
     const anchor = active[0] || lines.filter(line => Number(line.dataset.start) <= audio.currentTime).at(-1) || lines[0];
-    if (state.comparison.follow && anchor && transcript.dataset.activeIndex !== anchor.dataset.comparisonIndex) {
+    const outside = anchor && (anchor.offsetTop < transcript.scrollTop || anchor.offsetTop + Math.min(anchor.clientHeight, transcript.clientHeight) > transcript.scrollTop + transcript.clientHeight);
+    if (state.comparison.follow && anchor && (transcript.dataset.activeIndex !== anchor.dataset.comparisonIndex || outside)) {
       transcript.dataset.activeIndex = anchor.dataset.comparisonIndex;
-      transcript.scrollTo({ top: anchor.offsetTop - transcript.clientHeight / 2 + anchor.clientHeight / 2, behavior: "auto" });
+      transcript.scrollTo({ top: anchor.offsetTop - Math.max(0, (transcript.clientHeight - anchor.clientHeight) / 2), behavior: "auto" });
     }
   });
 }
@@ -464,7 +462,7 @@ function selectSample(slug, scroll = true, historyMode = "replace") {
     const example = state.examples.find(item => item.slug === slug);
     const full = state.metadata?.find(item => item.recording_id === example.recording_id);
     const speakers = [...new Set(example.timeline.map(segment => segment.speaker))];
-    $("[data-sample-analysis-content]").innerHTML = `<dl class="sample-source"><div><dt>Recording device</dt><dd>${escapeHTML(example.recording_device)}</dd></div><div><dt>Full recording</dt><dd data-full-duration="${escapeHTML(example.slug)}">${full ? formatDuration(full.duration_seconds, true) : "Metadata loading"}</dd></div></dl>${example.focus_windows?.length ? `<div class="focus-windows">${example.focus_windows.map(window => `<button type="button" data-seek="${window.start}">${escapeHTML(window.label)} at ${formatTime(window.start)}</button>`).join("")}</div>` : ""}${caseEvidence(example)}<div class="timeline-head"><div><h3>Reference speaker timeline</h3><p>Select a block to seek.</p></div></div><div class="timeline-legend"><span><i class="overlap-swatch" aria-hidden="true"></i>Overlapping speech</span><span><i class="similarity-swatch" aria-hidden="true"></i>Similar speaker pair</span></div>${timelineSVG(example, speakers)}`;
+    $("[data-sample-analysis-content]").innerHTML = `<dl class="sample-source"><div><dt>Full recording</dt><dd data-full-duration="${escapeHTML(example.slug)}">${full ? formatDuration(full.duration_seconds, true) : "Metadata loading"}</dd></div></dl>${example.focus_windows?.length ? `<div class="focus-windows">${example.focus_windows.map(window => `<button type="button" data-seek="${window.start}">${escapeHTML(window.label)} at ${formatTime(window.start)}</button>`).join("")}</div>` : ""}${caseEvidence(example)}<div class="timeline-head"><div><h3>Reference speaker timeline</h3><p>Select a block to seek.</p></div></div><div class="timeline-legend"><span><i class="overlap-swatch" aria-hidden="true"></i>Overlapping speech</span><span><i class="similarity-swatch" aria-hidden="true"></i>Similar speaker pair</span></div>${timelineSVG(example, speakers)}`;
   }
   const index = state.examples.findIndex(example => example.slug === slug);
   $("[data-sample-position]").textContent = `${index + 1} / ${state.examples.length}`;
@@ -486,8 +484,57 @@ function moveSample(step) {
   selectSample(state.examples[(index + step + state.examples.length) % state.examples.length].slug);
 }
 
+// Keep gesture-triggered playback synchronous; defer only the seek until metadata exists.
+const pendingAudioSeeks = new WeakMap();
+function seekAndPlay(audio, seconds) {
+  if (!Number.isFinite(seconds)) return;
+  const ticket = {};
+  pendingAudioSeeks.set(audio, ticket);
+  const panel = audio.closest("[data-sample-panel]");
+  const follow = $("[data-follow-playback]", panel);
+  follow.checked = true;
+  $("[data-resume-follow]", panel).hidden = true;
+  delete $("[data-transcript]", panel).dataset.activeIndex;
+  state.comparison.follow = true;
+  const compareFollow = $("[data-compare-follow]");
+  if (compareFollow) compareFollow.checked = true;
+  $$('[data-comparison-transcript]').forEach(transcript => delete transcript.dataset.activeIndex);
+  $("[data-audio-error]", panel).hidden = true;
+  const seek = () => {
+    if (pendingAudioSeeks.get(audio) !== ticket || audio.dataset.caseAudio !== state.currentSampleSlug) return;
+    const end = Number.isFinite(audio.duration) ? Math.max(0, audio.duration - .01) : seconds;
+    audio.currentTime = Math.max(0, Math.min(seconds, end));
+    updateCasePlayback(audio);
+  };
+  if (audio.readyState >= 1) seek();
+  else audio.addEventListener("loadedmetadata", seek, { once: true });
+  pauseActiveAudio(audio);
+  audio.play().catch(error => {
+    if (error.name === "AbortError" || pendingAudioSeeks.get(audio) !== ticket || audio.dataset.caseAudio !== state.currentSampleSlug) return;
+    const message = $("[data-audio-error]", panel);
+    message.hidden = false;
+    message.textContent = "Use the audio player's play control, then select the line again.";
+  });
+}
+
+function pauseTranscriptFollow(target) {
+  const transcript = target.closest("[data-transcript], [data-comparison-transcript]");
+  if (!transcript) return;
+  if (transcript.hasAttribute("data-comparison-transcript")) {
+    state.comparison.follow = false;
+    $("[data-compare-follow]").checked = false;
+  } else {
+    const panel = transcript.closest("[data-sample-panel]");
+    $("[data-follow-playback]", panel).checked = false;
+    $("[data-resume-follow]", panel).hidden = false;
+  }
+}
+
 function setupSampleBrowser() {
   const browser = $("[data-case-grid]");
+  // Suspend following before a pointer can land on a moving caption row.
+  browser.addEventListener("pointerdown", event => pauseTranscriptFollow(event.target));
+  browser.addEventListener("wheel", event => pauseTranscriptFollow(event.target), { passive: true });
   browser.addEventListener("click", event => {
     const selection = event.target.closest("[data-select-sample]");
     if (selection) selectSample(selection.dataset.selectSample);
@@ -501,15 +548,7 @@ function setupSampleBrowser() {
       else audio.pause();
     }
     const seekTarget = event.target.closest("[data-start], [data-timeline-start], [data-seek]");
-    if (seekTarget) {
-      audio.currentTime = Number(seekTarget.dataset.start ?? seekTarget.dataset.timelineStart ?? seekTarget.dataset.seek);
-      audio.play().catch(error => {
-        if (error.name === "AbortError") return;
-        const message = $("[data-audio-error]", panel);
-        message.hidden = false;
-        message.textContent = "Use the audio player's play control, then select the line again.";
-      });
-    }
+    if (seekTarget) seekAndPlay(audio, Number(seekTarget.dataset.start ?? seekTarget.dataset.timelineStart ?? seekTarget.dataset.seek));
     const resume = event.target.closest("[data-resume-follow]");
     if (resume) {
       $("[data-follow-playback]", panel).checked = true;
@@ -554,6 +593,7 @@ function setupSampleBrowser() {
     }
   });
   browser.addEventListener("keydown", event => {
+    if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End"].includes(event.key)) pauseTranscriptFollow(event.target);
     const timeline = event.target.closest("[data-timeline-start]");
     if (timeline && (event.key === "Enter" || event.key === " ")) {
       event.preventDefault();
@@ -579,7 +619,7 @@ function renderCases() {
   state.sampleNavObserver?.disconnect();
   pauseActiveAudio();
   const browser = $("[data-case-grid]");
-  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong><span>Scroll between samples; scroll within the transcript to read.</span></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHTML(example.title)}</strong><small>${escapeHTML(example.language)} · ${formatTime(example.clip_duration_seconds)}</small></div></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>View overlap, speaker similarity, and timeline for this sample</summary><div data-sample-analysis-content></div></details><section class="sample-comparison" id="model-comparison" data-model-comparison><p class="loading-block">Loading model outputs...</p></section>`;
+  browser.innerHTML = `<div class="sample-browser-toolbar"><div><strong>Listen & read</strong></div><div class="sample-browser-controls"><label><input type="checkbox" data-loop-sample ${state.loopSample ? "checked" : ""}> Loop audio</label><button type="button" data-move-sample="-1" aria-label="Previous sample">↑ Previous</button><span data-sample-position role="status" aria-live="polite"></span><button type="button" data-move-sample="1" aria-label="Next sample">Next ↓</button></div></div><div class="sample-browser-layout"><nav class="sample-sidebar" aria-label="Choose an audio sample">${state.examples.map((example, index) => `<button type="button" data-select-sample="${escapeHTML(example.slug)}"><span class="sample-index">Sample ${index + 1}</span><strong>${escapeHTML(example.title)}</strong><span class="sample-meta"><span>${escapeHTML(scenarioGroup(example.scenario))}</span><span>${escapeHTML(example.language)}</span></span></button>`).join("")}</nav><div class="sample-stage" data-sample-stage role="region" aria-label="Audio samples; scroll up or down to change sample" tabindex="0">${state.examples.map(caseDetail).join("")}</div></div><details class="sample-browser-analysis"><summary>Speaker similarity and timeline</summary><div data-sample-analysis-content></div></details><section class="sample-comparison" id="model-comparison" data-model-comparison><p class="loading-block">Loading model outputs...</p></section>`;
   const stage = $("[data-sample-stage]", browser);
   $$('[data-case-audio]', browser).forEach(audio => {
     const panel = audio.closest("[data-sample-panel]");
@@ -603,8 +643,13 @@ function renderCases() {
     if (visible) selectSample(visible.target.dataset.samplePanel, false);
   }, { root: stage, threshold: [.6] });
   $$('[data-sample-panel]', browser).forEach(panel => state.sampleObserver.observe(panel));
-  state.sampleNavObserver = new ResizeObserver(syncSampleNavigation);
+  state.sampleNavObserver = new ResizeObserver(() => {
+    syncSampleNavigation();
+    const audio = $("[data-case-audio]", $(`[data-sample-panel="${state.currentSampleSlug}"]`));
+    if (audio) updateCasePlayback(audio);
+  });
   state.sampleNavObserver.observe($(".sample-sidebar", browser));
+  state.sampleNavObserver.observe(stage);
   renderExplorer();
 }
 

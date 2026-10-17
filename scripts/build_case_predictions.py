@@ -148,7 +148,7 @@ def main():
                             'warnings': sorted(issues), 'sources': provenance, 'segments': selected})
         cases.append({'recording_id': recording_id, 'slug': example['slug'], 'clip_start_seconds': clip_start,
                       'clip_duration_seconds': example['clip_duration_seconds'], 'outputs': outputs})
-    data = {'schema_version': '1.1.0', 'data_version': '20261014-model-comparison',
+    data = {'schema_version': '1.1.0', 'data_version': '20261018-text-seek',
             'systems': [{'id': m['system_id'], 'name': m['system']} for m in models], 'cases': cases}
     output = ROOT / 'demo-data/case_predictions.json'
     output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')

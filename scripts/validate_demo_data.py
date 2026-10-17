@@ -63,12 +63,15 @@ def main() -> None:
         fail("Acoustic diagnostics must include lexical, attribution, and R_time series")
 
     examples = json.loads((ROOT / "demo-data/representative_examples.json").read_text(encoding="utf-8"))
-    if len(examples) != 10 or len({example["recording_id"] for example in examples}) != 10:
-        fail("Reference gallery must contain ten unique recordings")
-    if len({example["slug"] for example in examples}) != 10:
+    if len(examples) != 12 or len({example["recording_id"] for example in examples}) != 12:
+        fail("Reference gallery must contain twelve unique recordings")
+    if len({example["slug"] for example in examples}) != len(examples):
         fail("Reference gallery slugs must be unique")
-    if any(example["slug"] == "japanese" for example in examples):
-        fail("Japanese phone conversation must not appear in the reference gallery")
+    if any(example["slug"] in {"japanese", "glasses", "many-speakers"} for example in examples):
+        fail("Removed examples must not appear in the reference gallery")
+    added = {example["slug"]: example for example in examples if example["slug"].startswith("english-")}
+    if len(added) != 4 or any(example["language"] != "English" for example in added.values()):
+        fail("Reference gallery must include four selected English examples")
     if not any(example["conditions"]["P"] == "P3" for example in examples):
         fail("Reference gallery must include a P3 case")
     canonical = {row["recording_id"]: row for row in rows}
@@ -82,8 +85,16 @@ def main() -> None:
             asset = ROOT / example[field]
             if not asset.is_file():
                 fail(f"{recording_id}: missing {field} asset {example[field]}")
-        if example["clip_duration_seconds"] > 300.1:
-            fail(f"{recording_id}: excerpt exceeds five minutes")
+        for field in ("num_speakers", "overlap_ratio", "speaker_similarity_max", "speaker_switch_q25", "noise_difficulty"):
+            if not math.isclose(example["stats"][field], canonical[recording_id][field], abs_tol=1e-6):
+                fail(f"{recording_id}: displayed {field} differs from benchmark metadata")
+        source_duration = example["source_duration_seconds"]
+        if not math.isclose(source_duration, canonical[recording_id]["duration_seconds"], abs_tol=.1):
+            fail(f"{recording_id}: source duration differs from benchmark metadata")
+        expected_scope = "full_recording" if source_duration < 600 else "excerpt"
+        expected_duration = source_duration if source_duration < 600 else 299.9
+        if example["audio_scope"] != expected_scope or not math.isclose(example["clip_duration_seconds"], expected_duration, abs_tol=.001):
+            fail(f"{recording_id}: short recordings must be whole; long recordings use five-minute excerpts")
         for segment in example["timeline"]:
             if segment["start"] < 0 or segment["end"] < segment["start"] or segment["end"] > example["clip_duration_seconds"] + 0.5:
                 fail(f"{recording_id}: invalid timeline interval {segment}")

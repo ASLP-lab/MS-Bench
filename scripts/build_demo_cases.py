@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build ten local reference excerpts and traceable speaker/overlap annotations.
+"""Build curated audio examples and traceable speaker/overlap annotations.
 
 Requires the parent benchmark workspace, corrected TextGrids, source similarity
 CSVs, and ffmpeg. Existing paper-level metadata is never recomputed or modified.
@@ -22,17 +22,41 @@ WORKSPACE = ROOT.parent
 sys.path.insert(0, str(WORKSPACE))
 from pipeline.tools.parser_textgrid import merge_intervals, parse_textgrid
 
-NEW_CASES = [
-    ("many-speakers", "BenchFilms_ZH::part005_ad51a3ea", "Nine-speaker dialogue",
-     "A nine-speaker film excerpt with rapid turn changes and high acoustic quality.",
-     "many-speakers-film.mp3"),
-    ("heavy-overlap", "alimeeting_far::R8005_M8009", "High-overlap meeting",
-     "A four-speaker far-field meeting with a recording-level overlap ratio of 63.6% and poor acoustic quality.",
-     "heavy-overlap-alimeeting.mp3"),
-    ("livestream", "SmoothConv_DuplexConv::1767604747_yZ95W3sEa9_seg91_92_93_active",
-     "Live-streaming discussion", "A two-speaker live-streaming interaction with no overlap and low speaker similarity.",
-     "livestream-discussion.mp3"),
+# Preserve retained slugs so saved case URLs remain valid. Retired glasses and
+# many-speakers samples are deliberately omitted. Titles describe content within the four scenario groups.
+CASE_SPECS = [
+    ("meeting", "aishell4::M_R003S01C01", "Meeting",
+     "A Chinese team discussion recorded with a far-field microphone array.", "meeting-aishell4.mp3"),
+    ("education", "SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active", "Tutoring dialogue",
+     "A Chinese tutoring interaction with teacher-student dialogue.", "education-smoothconv.mp3"),
+    ("podcast", "BenchFilms_ZH::part004_e12074b4", "Podcast",
+     "Two speakers discuss a film and its characters in a Chinese podcast.", "podcast-benchzh.mp3"),
+    ("film", "BenchFilms_ZH::000049_part018", "Film",
+     "Chinese film dialogue with multiple characters and degraded acoustic quality.", "film-benchfilms.mp3"),
+    ("dinner", "dipco_eval_U01_CH1::S06", "Dinner-party conversation",
+     "Four speakers converse in English around a dinner table, with overlapping speech.", "dinner-party-dipco.mp3"),
+    ("vehicle", "aishell5_DX01C01::eval1-013-DX01C01", "In-vehicle conversation",
+     "A two-speaker Chinese conversation recorded inside a vehicle.", "in-vehicle.mp3"),
+    ("english-ami", "ami_array1-01::ES2014d", "Meeting",
+     "A four-speaker English meeting with modest overlap and longer intervals between turns.", "english-ami-meeting.mp3"),
+    ("heavy-overlap", "alimeeting_far::R8005_M8009", "Meeting",
+     "A four-speaker Chinese meeting with 63.64% recording-level overlap.", "heavy-overlap-alimeeting.mp3"),
+    ("livestream", "SmoothConv_DuplexConv::1767604747_yZ95W3sEa9_seg91_92_93_active", "Live-stream dialogue",
+     "A two-speaker Chinese live-stream interaction with no overlapping speech.", "livestream-discussion.mp3"),
+    ("english-meeting", "notsofar_1::MTG_32110", "Meeting",
+     "Seven speakers discuss amusement-park complaints in English, with 61.81% recording-level overlap.", "english-workplace-meeting.mp3"),
+    ("english-film", "BenchFilms_ZH::000102_part014", "Film",
+     "English science-fiction film dialogue with fourteen reference speakers.", "english-science-fiction.mp3"),
+    ("english-conversation", "MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone", "Natural conversation",
+     "Two speakers discuss films and television in English, with no overlap and high acoustic quality.", "english-everyday-conversation.mp3"),
 ]
+METRICS_PATH = WORKSPACE / "OpenSource-TestSets/all_testsets_all_metrics.jsonl"
+
+
+def audio_duration(path: Path) -> float:
+    return float(subprocess.check_output(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)], text=True).strip())
+
 
 
 def rounded(value: float) -> float:
@@ -90,9 +114,18 @@ def intersect_duration(first: list, second: list) -> float:
     return total
 
 
-def similarity_annotations(recording_id: str, corrected: list[dict]) -> dict:
+def similarity_annotations(recording_id: str, corrected: list[dict], metrics: dict) -> dict:
     dataset, key = recording_id.split("::", 1)
     directory = WORKSPACE / "OpenSource-TestSets" / dataset / "speaker_similarity" / key
+    if not (directory / "metadata.json").is_file():
+        # Aggregate measurements do not identify a speaker pair. Do not invent one.
+        return {"maximum": {"source_speakers": [], "reference_speakers": [],
+                            "cosine_similarity": metrics["speaker_similarity"]["max"],
+                            "mapping_status": "unmapped"},
+                "distinct_reference_pair": None,
+                "source": str(METRICS_PATH.relative_to(WORKSPACE)),
+                "scope": "full_recording_source_embeddings", "speaker_mapping": {},
+                "mapping_method": "pair_labels_unavailable_in_source_metrics"}
     source_metadata = json.loads((directory / "metadata.json").read_text())
     source_grid = Path(source_metadata["textgrid"])
     if not source_grid.exists():
@@ -150,41 +183,56 @@ def similarity_annotations(recording_id: str, corrected: list[dict]) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--encode-audio", action="store_true", help="Encode the three new MP3 excerpts")
+    parser.add_argument("--encode-audio", action="store_true", help="Encode missing audio or audio whose selected duration changed")
     args = parser.parse_args()
     metadata = {row["recording_id"]: row for row in
                 map(json.loads, (ROOT / "benchmark/metadata.jsonl").read_text().splitlines())}
     destination = ROOT / "demo-data/representative_examples.json"
-    examples = [example for example in json.loads(destination.read_text()) if example["slug"] != "japanese"]
-    by_slug = {example["slug"]: example for example in examples}
-    by_slug["education"]["title"] = "Tutoring conversation"
-    for slug, recording_id, title, description, audio_name in NEW_CASES:
-        if slug not in by_slug:
-            row = metadata[recording_id]
-            example = {"slug": slug, "recording_id": recording_id, "title": title,
-                       "description": description, "audio": f"assets/audio/{audio_name}",
-                       **{key: row[key] for key in ("language", "scenario", "recording_device", "conditions")},
-                       "stats": {key: row[key] for key in ("num_speakers", "overlap_ratio", "speaker_similarity_max",
-                                                          "speaker_switch_q25", "noise_difficulty")}}
-            examples.append(example)
-            by_slug[slug] = example
-    for example in examples:
-        dataset, key = example["recording_id"].split("::", 1)
+    metrics = {(row["source_dataset"], row["key"]): row for row in
+               map(json.loads, METRICS_PATH.read_text().splitlines())}
+    examples = []
+    for slug, recording_id, title, description, audio_name in CASE_SPECS:
+        row = metadata[recording_id]
+        dataset, key = recording_id.split("::", 1)
+        measurement = metrics[dataset, key]
+        measured = {"overlap_ratio": measurement["overlap_ratio"],
+                    "speaker_similarity_max": measurement["speaker_similarity"]["max"],
+                    "speaker_switch_q25": measurement["speaker_switch_time"]["q25"]}
+        for field, value in measured.items():
+            if not math.isclose(value, row[field], abs_tol=1e-6):
+                raise ValueError(f"{recording_id}: source measurement {field} differs from benchmark metadata")
+        example = {"slug": slug, "recording_id": recording_id, "title": title,
+                   "description": description,
+                   "audio": f"assets/audio/{audio_name}",
+                   **{field: row[field] for field in ("language", "scenario", "recording_device", "conditions")},
+                   "stats": {"num_speakers": row["num_speakers"], **measured, "noise_difficulty": row["noise_difficulty"]},
+                   "stats_source": {"path": str(METRICS_PATH.relative_to(WORKSPACE)),
+                                    "source_dataset": dataset, "key": key,
+                                    "source_num_speakers": measurement["num_speakers"],
+                                    "speaker_number": "corrected_reference",
+                                    "acoustic_degradation": "benchmark/metadata.jsonl:noise_difficulty"}}
+        examples.append(example)
         grid = WORKSPACE / "challenge100_v2_textgrids" / f"{dataset}__{key}.TextGrid"
         _, _, corrected = parse_textgrid(grid)
+        if len({segment["speaker"] for segment in corrected}) != row["num_speakers"]:
+            raise ValueError(f"{recording_id}: corrected reference speaker number differs from benchmark metadata")
         audio = grid.with_suffix(".wav")
-        is_new = example["slug"] in {item[0] for item in NEW_CASES}
-        if is_new:
-            probe = json.loads(subprocess.check_output(
-                ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "json", str(audio)], text=True))
-            example["clip_duration_seconds"] = rounded(min(299.9, float(probe["format"]["duration"])))
-            if args.encode_audio:
-                subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(audio),
-                                "-t", str(example["clip_duration_seconds"]), "-map", "0:a:0", "-ac", "1",
-                                "-ar", "16000", "-codec:a", "libmp3lame", "-b:a", "64k",
-                                str(ROOT / example["audio"])], check=True)
-            example["textgrid"] = f"assets/textgrids/{grid.name}"
-            shutil.copyfile(grid, ROOT / example["textgrid"])
+        full_duration = rounded(audio_duration(audio))
+        # Short recordings are played whole; long recordings retain a five-minute example.
+        duration = full_duration if full_duration < 600 else 299.9
+        example["source_duration_seconds"] = full_duration
+        example["audio_scope"] = "full_recording" if duration == full_duration else "excerpt"
+        example["clip_duration_seconds"] = duration
+        encoded = ROOT / example["audio"]
+        needs_encoding = not encoded.is_file() or abs(audio_duration(encoded) - duration) > .15
+        if needs_encoding:
+            if not args.encode_audio:
+                raise ValueError(f"{slug}: audio needs rebuilding; run with --encode-audio")
+            subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(audio),
+                            "-t", str(duration), "-map", "0:a:0", "-ac", "1", "-ar", "16000",
+                            "-codec:a", "libmp3lame", "-b:a", "64k", str(encoded)], check=True)
+        example["textgrid"] = f"assets/textgrids/{grid.name}"
+        shutil.copyfile(grid, ROOT / example["textgrid"])
         duration = example["clip_duration_seconds"]
         example["clip_start_seconds"] = 0.0
         example["timeline"] = [{**segment, "start": rounded(segment["start"]),
@@ -198,7 +246,7 @@ def main() -> None:
                                  "reference_speech_seconds": rounded(speech_seconds),
                                  "overlap_ratio": rounded(overlap_seconds / speech_seconds) if speech_seconds else 0.0,
                                  "peak_concurrent_speakers": max([len(region["speakers"]) for region in example["overlap_regions"]], default=1)}
-        example["speaker_similarity"] = similarity_annotations(example["recording_id"], corrected)
+        example["speaker_similarity"] = similarity_annotations(example["recording_id"], corrected, measurement)
         maximum = example["speaker_similarity"]["maximum"]["cosine_similarity"]
         if not math.isclose(maximum, example["stats"]["speaker_similarity_max"], abs_tol=1e-6):
             raise ValueError(f"{example['recording_id']}: source maximum does not match benchmark metadata")
@@ -214,7 +262,7 @@ def main() -> None:
                     windows.append({"label": f"Listen: {speaker}", "start": segment["start"], "end": segment["end"]})
         example["focus_windows"] = windows
     destination.write_text(json.dumps(examples, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Built {len(examples)} reference cases with corrected overlap regions and verified source-speaker mappings.")
+    print(f"Built {len(examples)} audio examples with corrected references, source measurements, and traceable speaker mappings.")
 
 
 if __name__ == "__main__":

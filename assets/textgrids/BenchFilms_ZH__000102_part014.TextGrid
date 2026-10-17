@@ -1,0 +1,920 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000
+xmax = 365.030000
+tiers? <exists>
+size = 14
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "spk_01"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 105
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 9.330000
+                text = ""
+            intervals [2]:
+                xmin = 9.330000
+                xmax = 17.284000
+                text = "Deal,called a fist bump, by the way."
+            intervals [3]:
+                xmin = 17.284000
+                xmax = 20.185000
+                text = ""
+            intervals [4]:
+                xmin = 20.185000
+                xmax = 21.481000
+                text = "What's that?"
+            intervals [5]:
+                xmin = 21.481000
+                xmax = 22.735000
+                text = ""
+            intervals [6]:
+                xmin = 22.735000
+                xmax = 23.996000
+                text = "Fist my bomb?"
+            intervals [7]:
+                xmin = 23.996000
+                xmax = 24.204000
+                text = ""
+            intervals [8]:
+                xmin = 24.204000
+                xmax = 25.903000
+                text = "No, it's fist bump."
+            intervals [9]:
+                xmin = 25.903000
+                xmax = 28.554000
+                text = ""
+            intervals [10]:
+                xmin = 28.554000
+                xmax = 29.782000
+                text = "It's not the same."
+            intervals [11]:
+                xmin = 29.782000
+                xmax = 32.813000
+                text = ""
+            intervals [12]:
+                xmin = 32.813000
+                xmax = 37.401000
+                text = "Exactly, the astrophage has to reach Tau Ceti, otherwise we wouldn't see the Petrova boat."
+            intervals [13]:
+                xmin = 37.401000
+                xmax = 45.247000
+                text = ""
+            intervals [14]:
+                xmin = 45.247000
+                xmax = 47.380000
+                text = "Do we really need this whole model?"
+            intervals [15]:
+                xmin = 47.380000
+                xmax = 49.221000
+                text = ""
+            intervals [16]:
+                xmin = 49.221000
+                xmax = 49.912000
+                text = "Right."
+            intervals [17]:
+                xmin = 49.912000
+                xmax = 52.832000
+                text = ""
+            intervals [18]:
+                xmin = 52.832000
+                xmax = 53.713000
+                text = "Oh boy."
+            intervals [19]:
+                xmin = 53.713000
+                xmax = 54.505000
+                text = ""
+            intervals [20]:
+                xmin = 54.505000
+                xmax = 58.493000
+                text = "You know I used to have one of these in my classroom, and it was a lot simpler to set up."
+            intervals [21]:
+                xmin = 58.493000
+                xmax = 62.854000
+                text = ""
+            intervals [22]:
+                xmin = 62.854000
+                xmax = 63.316000
+                text = "One sec."
+            intervals [23]:
+                xmin = 63.316000
+                xmax = 63.653000
+                text = "What?"
+            intervals [24]:
+                xmin = 63.653000
+                xmax = 64.317000
+                text = "What?"
+            intervals [25]:
+                xmin = 64.317000
+                xmax = 65.628000
+                text = ""
+            intervals [26]:
+                xmin = 65.628000
+                xmax = 66.857000
+                text = "That is a great question？"
+            intervals [27]:
+                xmin = 66.857000
+                xmax = 68.649000
+                text = ""
+            intervals [28]:
+                xmin = 68.649000
+                xmax = 69.381000
+                text = "You know what?"
+            intervals [29]:
+                xmin = 69.381000
+                xmax = 70.090000
+                text = ""
+            intervals [30]:
+                xmin = 70.090000
+                xmax = 70.844000
+                text = "Try this."
+            intervals [31]:
+                xmin = 70.844000
+                xmax = 76.945000
+                text = ""
+            intervals [32]:
+                xmin = 76.945000
+                xmax = 77.498000
+                text = "No"
+            intervals [33]:
+                xmin = 77.498000
+                xmax = 79.145000
+                text = ""
+            intervals [34]:
+                xmin = 79.145000
+                xmax = 80.215000
+                text = "Can't unhear it really."
+            intervals [35]:
+                xmin = 80.215000
+                xmax = 81.865000
+                text = ""
+            intervals [36]:
+                xmin = 81.865000
+                xmax = 83.413000
+                text = "Let's try this."
+            intervals [37]:
+                xmin = 83.413000
+                xmax = 84.567000
+                text = ""
+            intervals [38]:
+                xmin = 84.567000
+                xmax = 89.557000
+                text = "No, no, no need, no need to even continue, Nope."
+            intervals [39]:
+                xmin = 89.557000
+                xmax = 97.855000
+                text = ""
+            intervals [40]:
+                xmin = 97.855000
+                xmax = 98.577000
+                text = "I mean."
+            intervals [41]:
+                xmin = 98.577000
+                xmax = 100.255000
+                text = ""
+            intervals [42]:
+                xmin = 100.255000
+                xmax = 101.024000
+                text = "Meryl Streep."
+            intervals [43]:
+                xmin = 101.024000
+                xmax = 105.695000
+                text = ""
+            intervals [44]:
+                xmin = 105.695000
+                xmax = 106.721000
+                text = "She can do anything."
+            intervals [45]:
+                xmin = 106.721000
+                xmax = 112.089000
+                text = ""
+            intervals [46]:
+                xmin = 112.089000
+                xmax = 114.089000
+                text = "Don't think so."
+            intervals [47]:
+                xmin = 114.089000
+                xmax = 117.965000
+                text = ""
+            intervals [48]:
+                xmin = 117.965000
+                xmax = 118.637000
+                text = "That's not bad."
+            intervals [49]:
+                xmin = 118.637000
+                xmax = 120.285000
+                text = ""
+            intervals [50]:
+                xmin = 120.285000
+                xmax = 126.414000
+                text = "All right, and in answer to your question, I have no idea what I'm doing in space."
+            intervals [51]:
+                xmin = 126.414000
+                xmax = 126.765000
+                text = ""
+            intervals [52]:
+                xmin = 126.765000
+                xmax = 127.695000
+                text = "I don't remember."
+            intervals [53]:
+                xmin = 127.695000
+                xmax = 136.545000
+                text = ""
+            intervals [54]:
+                xmin = 136.545000
+                xmax = 137.728000
+                text = "I want to go to sleep."
+            intervals [55]:
+                xmin = 137.728000
+                xmax = 141.305000
+                text = ""
+            intervals [56]:
+                xmin = 141.305000
+                xmax = 144.765000
+                text = "Sleep, uh, just go like this."
+            intervals [57]:
+                xmin = 144.765000
+                xmax = 148.212000
+                text = ""
+            intervals [58]:
+                xmin = 148.212000
+                xmax = 153.680000
+                text = "not died, just lay here for twenty nine thousand seconds,and then we..."
+            intervals [59]:
+                xmin = 153.680000
+                xmax = 154.225000
+                text = "wake up."
+            intervals [60]:
+                xmin = 154.225000
+                xmax = 158.902000
+                text = ""
+            intervals [61]:
+                xmin = 158.902000
+                xmax = 160.167000
+                text = "OK, here we go."
+            intervals [62]:
+                xmin = 160.167000
+                xmax = 164.715000
+                text = ""
+            intervals [63]:
+                xmin = 164.715000
+                xmax = 165.395000
+                text = "Good night, sir."
+            intervals [64]:
+                xmin = 165.395000
+                xmax = 167.661000
+                text = ""
+            intervals [65]:
+                xmin = 167.661000
+                xmax = 169.818000
+                text = "No, that's fine, that's a little weird."
+            intervals [66]:
+                xmin = 169.818000
+                xmax = 171.215000
+                text = ""
+            intervals [67]:
+                xmin = 171.215000
+                xmax = 172.050000
+                text = "I'll be good."
+            intervals [68]:
+                xmin = 172.050000
+                xmax = 172.253000
+                text = "Good night."
+            intervals [69]:
+                xmin = 172.253000
+                xmax = 174.575000
+                text = ""
+            intervals [70]:
+                xmin = 174.575000
+                xmax = 179.090000
+                text = "That's really interesting, That's sounds like something uh,we can unpack that tomorrow."
+            intervals [71]:
+                xmin = 179.090000
+                xmax = 194.965000
+                text = ""
+            intervals [72]:
+                xmin = 194.965000
+                xmax = 195.972000
+                text = "That's where you're gonna be."
+            intervals [73]:
+                xmin = 195.972000
+                xmax = 199.165000
+                text = ""
+            intervals [74]:
+                xmin = 199.165000
+                xmax = 201.585000
+                text = "I wonder if it would work from a little farther back."
+            intervals [75]:
+                xmin = 201.585000
+                xmax = 204.285000
+                text = ""
+            intervals [76]:
+                xmin = 204.285000
+                xmax = 211.100000
+                text = "Well...Hey,look, I'm seeing...So many sides of you lately, and it's great."
+            intervals [77]:
+                xmin = 211.100000
+                xmax = 211.882000
+                text = ""
+            intervals [78]:
+                xmin = 211.882000
+                xmax = 214.292000
+                text = "Right now, I'm seeing the underside of you."
+            intervals [79]:
+                xmin = 214.292000
+                xmax = 218.595000
+                text = ""
+            intervals [80]:
+                xmin = 218.595000
+                xmax = 220.320000
+                text = "Kind of a side sleeper anyway."
+            intervals [81]:
+                xmin = 220.320000
+                xmax = 220.395000
+                text = ""
+            intervals [82]:
+                xmin = 220.395000
+                xmax = 221.159000
+                text = "Good night."
+            intervals [83]:
+                xmin = 221.159000
+                xmax = 224.255000
+                text = ""
+            intervals [84]:
+                xmin = 224.255000
+                xmax = 226.358000
+                text = "So we watch each other sleep."
+            intervals [85]:
+                xmin = 226.358000
+                xmax = 229.095000
+                text = ""
+            intervals [86]:
+                xmin = 229.095000
+                xmax = 231.585000
+                text = "Eridians don't sleep like a human does."
+            intervals [87]:
+                xmin = 231.585000
+                xmax = 231.820000
+                text = ""
+            intervals [88]:
+                xmin = 231.820000
+                xmax = 234.210000
+                text = "they seem legitimately paralyzed."
+            intervals [89]:
+                xmin = 234.210000
+                xmax = 234.295000
+                text = ""
+            intervals [90]:
+                xmin = 234.295000
+                xmax = 236.487000
+                text = "if danger comes, you can't wake up."
+            intervals [91]:
+                xmin = 236.487000
+                xmax = 236.815000
+                text = ""
+            intervals [92]:
+                xmin = 236.815000
+                xmax = 238.491000
+                text = "it's a survival norm."
+            intervals [93]:
+                xmin = 238.491000
+                xmax = 240.265000
+                text = ""
+            intervals [94]:
+                xmin = 240.265000
+                xmax = 241.807000
+                text = "Someone has to keep you safe."
+            intervals [95]:
+                xmin = 241.807000
+                xmax = 281.765000
+                text = ""
+            intervals [96]:
+                xmin = 281.765000
+                xmax = 282.623000
+                text = "It's an honor."
+            intervals [97]:
+                xmin = 282.623000
+                xmax = 282.900000
+                text = ""
+            intervals [98]:
+                xmin = 282.900000
+                xmax = 291.878000
+                text = "I'm excited to share what I've learned about astrophage and spin drives. We have one thousand and nine of these little engines that could on the Hail Mary and..."
+            intervals [99]:
+                xmin = 291.878000
+                xmax = 298.814000
+                text = ""
+            intervals [100]:
+                xmin = 298.814000
+                xmax = 299.497000
+                text = "OK,"
+            intervals [101]:
+                xmin = 299.497000
+                xmax = 341.250000
+                text = ""
+            intervals [102]:
+                xmin = 341.250000
+                xmax = 347.690000
+                text = "This is less than a gram of astrophage, and we only need a fraction of this for this demonstration, if you want to take a look."
+            intervals [103]:
+                xmin = 347.690000
+                xmax = 350.075000
+                text = ""
+            intervals [104]:
+                xmin = 350.075000
+                xmax = 352.001000
+                text = "To melt a metric ton of metal."
+            intervals [105]:
+                xmin = 352.001000
+                xmax = 365.030000
+                text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "spk_02"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 34
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 114.095000
+                text = ""
+            intervals [2]:
+                xmin = 114.095000
+                xmax = 116.591000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 116.591000
+                xmax = 119.628000
+                text = ""
+            intervals [4]:
+                xmin = 119.628000
+                xmax = 120.088000
+                text = "I like."
+            intervals [5]:
+                xmin = 120.088000
+                xmax = 129.455000
+                text = ""
+            intervals [6]:
+                xmin = 129.455000
+                xmax = 132.055000
+                text = "Is OK, Grace find out when Grace go home."
+            intervals [7]:
+                xmin = 132.055000
+                xmax = 137.825000
+                text = ""
+            intervals [8]:
+                xmin = 137.825000
+                xmax = 139.828000
+                text = "hmm, No understand word."
+            intervals [9]:
+                xmin = 139.828000
+                xmax = 145.765000
+                text = ""
+            intervals [10]:
+                xmin = 145.765000
+                xmax = 146.245000
+                text = "Died?"
+            intervals [11]:
+                xmin = 146.245000
+                xmax = 146.725000
+                text = "Is died?"
+            intervals [12]:
+                xmin = 146.725000
+                xmax = 146.728000
+                text = ""
+            intervals [13]:
+                xmin = 146.728000
+                xmax = 147.238000
+                text = "Died?"
+            intervals [14]:
+                xmin = 147.238000
+                xmax = 147.258000
+                text = ""
+            intervals [15]:
+                xmin = 147.258000
+                xmax = 148.228000
+                text = "no,no.no.no."
+            intervals [16]:
+                xmin = 148.228000
+                xmax = 154.275000
+                text = ""
+            intervals [17]:
+                xmin = 154.275000
+                xmax = 155.593000
+                text = "Oh, understand."
+            intervals [18]:
+                xmin = 155.593000
+                xmax = 155.755000
+                text = ""
+            intervals [19]:
+                xmin = 155.755000
+                xmax = 157.217000
+                text = "We call this."
+            intervals [20]:
+                xmin = 157.217000
+                xmax = 166.355000
+                text = ""
+            intervals [21]:
+                xmin = 166.355000
+                xmax = 167.608000
+                text = "I watch Grace sleep."
+            intervals [22]:
+                xmin = 167.608000
+                xmax = 172.255000
+                text = ""
+            intervals [23]:
+                xmin = 172.255000
+                xmax = 172.946000
+                text = "No,not safe."
+            intervals [24]:
+                xmin = 172.946000
+                xmax = 173.015000
+                text = ""
+            intervals [25]:
+                xmin = 173.015000
+                xmax = 174.375000
+                text = "Eridians must watch sleep."
+            intervals [26]:
+                xmin = 174.375000
+                xmax = 181.235000
+                text = ""
+            intervals [27]:
+                xmin = 181.235000
+                xmax = 184.303000
+                text = "Rocky watch crew many days."
+            intervals [28]:
+                xmin = 184.303000
+                xmax = 186.091000
+                text = ""
+            intervals [29]:
+                xmin = 186.091000
+                xmax = 188.017000
+                text = "Crew not wake up."
+            intervals [30]:
+                xmin = 188.017000
+                xmax = 196.085000
+                text = ""
+            intervals [31]:
+                xmin = 196.085000
+                xmax = 198.823000
+                text = "No, it's usually closer, on your chest."
+            intervals [32]:
+                xmin = 198.823000
+                xmax = 201.725000
+                text = ""
+            intervals [33]:
+                xmin = 201.725000
+                xmax = 204.206000
+                text = "But Grace won't feel comfortable and safe."
+            intervals [34]:
+                xmin = 204.206000
+                xmax = 365.030000
+                text = ""
+    item [3]:
+        class = "IntervalTier"
+        name = "spk_03"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 9
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 71.275000
+                text = ""
+            intervals [2]:
+                xmin = 71.275000
+                xmax = 73.598000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 73.598000
+                xmax = 73.678000
+                text = ""
+            intervals [4]:
+                xmin = 73.678000
+                xmax = 74.941000
+                text = "Question."
+            intervals [5]:
+                xmin = 74.941000
+                xmax = 77.883000
+                text = ""
+            intervals [6]:
+                xmin = 77.883000
+                xmax = 79.118000
+                text = "Don't like that voice."
+            intervals [7]:
+                xmin = 79.118000
+                xmax = 80.225000
+                text = ""
+            intervals [8]:
+                xmin = 80.225000
+                xmax = 80.825000
+                text = "Scary."
+            intervals [9]:
+                xmin = 80.825000
+                xmax = 365.030000
+                text = ""
+    item [4]:
+        class = "IntervalTier"
+        name = "spk_04"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 83.949000
+                text = ""
+            intervals [2]:
+                xmin = 83.949000
+                xmax = 87.861000
+                text = "Oh!Why is a schoolteacher in space."
+            intervals [3]:
+                xmin = 87.861000
+                xmax = 365.030000
+                text = ""
+    item [5]:
+        class = "IntervalTier"
+        name = "spk_05"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 5
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 89.675000
+                text = ""
+            intervals [2]:
+                xmin = 89.675000
+                xmax = 92.309000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 92.309000
+                xmax = 93.076000
+                text = ""
+            intervals [4]:
+                xmin = 93.076000
+                xmax = 94.633000
+                text = "What's so funny? Question."
+            intervals [5]:
+                xmin = 94.633000
+                xmax = 365.030000
+                text = ""
+    item [6]:
+        class = "IntervalTier"
+        name = "spk_06"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 5
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 94.735000
+                text = ""
+            intervals [2]:
+                xmin = 94.735000
+                xmax = 97.797000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 97.797000
+                xmax = 98.606000
+                text = ""
+            intervals [4]:
+                xmin = 98.606000
+                xmax = 100.215000
+                text = "it has charm, but no."
+            intervals [5]:
+                xmin = 100.215000
+                xmax = 365.030000
+                text = ""
+    item [7]:
+        class = "IntervalTier"
+        name = "spk_07"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 101.805000
+                text = ""
+            intervals [2]:
+                xmin = 101.805000
+                xmax = 103.931000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 103.931000
+                xmax = 365.030000
+                text = ""
+    item [8]:
+        class = "IntervalTier"
+        name = "spk_08"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 106.975000
+                text = ""
+            intervals [2]:
+                xmin = 106.975000
+                xmax = 110.089000
+                text = "Why is a school teacher in space?"
+            intervals [3]:
+                xmin = 110.089000
+                xmax = 365.030000
+                text = ""
+    item [9]:
+        class = "IntervalTier"
+        name = "spk_09"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 9
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 291.878000
+                text = ""
+            intervals [2]:
+                xmin = 291.878000
+                xmax = 294.078000
+                text = "为什么他对我们像小孩一样"
+            intervals [3]:
+                xmin = 294.078000
+                xmax = 302.565000
+                text = ""
+            intervals [4]:
+                xmin = 302.565000
+                xmax = 309.038000
+                text = "Once the mission is complete, we have the option to end our lives on our terms."
+            intervals [5]:
+                xmin = 309.038000
+                xmax = 315.765000
+                text = ""
+            intervals [6]:
+                xmin = 315.765000
+                xmax = 317.004000
+                text = "I will have what she's having."
+            intervals [7]:
+                xmin = 317.004000
+                xmax = 317.045000
+                text = ""
+            intervals [8]:
+                xmin = 317.045000
+                xmax = 317.716000
+                text = "Ha ha ha."
+            intervals [9]:
+                xmin = 317.716000
+                xmax = 365.030000
+                text = ""
+    item [10]:
+        class = "IntervalTier"
+        name = "spk_10"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 13
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 258.485000
+                text = ""
+            intervals [2]:
+                xmin = 258.485000
+                xmax = 261.312000
+                text = "Flight team, I want you to meet Doctor Ryland Grace."
+            intervals [3]:
+                xmin = 261.312000
+                xmax = 262.861000
+                text = ""
+            intervals [4]:
+                xmin = 262.861000
+                xmax = 267.132000
+                text = "He is currently the world's leading authority in astrophage biology."
+            intervals [5]:
+                xmin = 267.132000
+                xmax = 267.160000
+                text = ""
+            intervals [6]:
+                xmin = 267.160000
+                xmax = 272.164000
+                text = "Doctor Grace, these are the three astronauts going on the mission, and their backups for redundancy."
+            intervals [7]:
+                xmin = 272.164000
+                xmax = 272.945000
+                text = ""
+            intervals [8]:
+                xmin = 272.945000
+                xmax = 278.176000
+                text = "Yao, Ilyukhina and DuBois ，our pilot, engineer and science officer."
+            intervals [9]:
+                xmin = 278.176000
+                xmax = 291.878000
+                text = ""
+            intervals [10]:
+                xmin = 291.878000
+                xmax = 292.501000
+                text = "Stop!"
+            intervals [11]:
+                xmin = 292.501000
+                xmax = 299.599000
+                text = ""
+            intervals [12]:
+                xmin = 299.599000
+                xmax = 301.343000
+                text = "you're doing great."
+            intervals [13]:
+                xmin = 301.343000
+                xmax = 365.030000
+                text = ""
+    item [11]:
+        class = "IntervalTier"
+        name = "spk_11"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 295.352000
+                text = ""
+            intervals [2]:
+                xmin = 295.352000
+                xmax = 297.993000
+                text = "无所谓，慢慢就习惯了。"
+            intervals [3]:
+                xmin = 297.993000
+                xmax = 365.030000
+                text = ""
+    item [12]:
+        class = "IntervalTier"
+        name = "spk_12"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 309.085000
+                text = ""
+            intervals [2]:
+                xmin = 309.085000
+                xmax = 312.554000
+                text = "The alternative is slow, miserable death by starvation."
+            intervals [3]:
+                xmin = 312.554000
+                xmax = 365.030000
+                text = ""
+    item [13]:
+        class = "IntervalTier"
+        name = "spk_13"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 3
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 312.569000
+                text = ""
+            intervals [2]:
+                xmin = 312.569000
+                xmax = 315.545000
+                text = "I want to do lethal injection with a little bit of heroin."
+            intervals [3]:
+                xmin = 315.545000
+                xmax = 365.030000
+                text = ""
+    item [14]:
+        class = "IntervalTier"
+        name = "spk_14"
+        xmin = 0.000000
+        xmax = 365.030000
+        intervals: size = 9
+            intervals [1]:
+                xmin = 0.000000
+                xmax = 318.725000
+                text = ""
+            intervals [2]:
+                xmin = 318.725000
+                xmax = 333.107000
+                text = "Following on from Doctor Grace's discovery, we've built an IR emitter set to the wavelength of CO two, which attracts the astrophage to this revolver face, the drive then rotates outwards. Yeah."
+            intervals [3]:
+                xmin = 333.107000
+                xmax = 333.270000
+                text = ""
+            intervals [4]:
+                xmin = 333.270000
+                xmax = 339.085000
+                text = "We increase the IR, the astrophage get excited, thrust the ship forward."
+            intervals [5]:
+                xmin = 339.085000
+                xmax = 339.305000
+                text = ""
+            intervals [6]:
+                xmin = 339.305000
+                xmax = 341.062000
+                text = "And so on, so on."
+            intervals [7]:
+                xmin = 341.062000
+                xmax = 348.129000
+                text = ""
+            intervals [8]:
+                xmin = 348.129000
+                xmax = 349.329000
+                text = "To do what?"
+            intervals [9]:
+                xmin = 349.329000
+                xmax = 365.030000
+                text = ""

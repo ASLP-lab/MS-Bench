@@ -259,7 +259,7 @@ sub { font-size: .75em; vertical-align: -.2em; }
 .focus-windows { display: flex; flex-wrap: wrap; margin-top: 12px; gap: 8px; }
 .focus-windows button { min-height: 38px; padding: 7px 11px; color: var(--blue-dark); background: var(--paper); border: 1px solid var(--line-strong); border-radius: 6px; cursor: pointer; font-size: 11px; font-weight: 650; }
 .focus-windows button:hover { background: var(--blue-soft); }
-.case-evidence { display: grid; margin-top: 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.case-evidence { display: grid; margin-top: 24px; grid-template-columns: 1fr; gap: 14px; }
 .case-evidence > section { min-width: 0; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .case-evidence h3 { margin: 0 0 10px; font-size: 14px; line-height: 1.4; }
 .evidence-value { display: grid; gap: 2px; }
@@ -319,26 +319,25 @@ sub { font-size: .75em; vertical-align: -.2em; }
 .sample-browser-controls [role="status"] { min-width: 44px; color: var(--muted); font-family: var(--mono); font-size: 11px; text-align: center; }
 .sample-browser-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); }
 .sample-sidebar { position: relative; max-height: 780px; padding: 10px; background: var(--surface); border-right: 1px solid var(--line); overflow-y: auto; overscroll-behavior: contain; }
-.sample-sidebar button { display: flex; width: 100%; min-height: 62px; padding: 10px 8px; border: 1px solid transparent; border-radius: 6px; background: transparent; cursor: pointer; gap: 8px; text-align: left; }
-.sample-sidebar button > span { color: var(--muted); font-family: var(--mono); font-size: 11px; }
-.sample-sidebar button > div { min-width: 0; }
+.sample-sidebar button { display: grid; width: 100%; min-height: 48px; padding: 10px 8px; border: 1px solid transparent; border-radius: 6px; background: transparent; cursor: pointer; align-content: start; gap: 4px; text-align: left; }
+.sample-index { color: var(--muted); font-family: var(--mono); font-size: 10px; }
+.sample-meta { display: flex; flex-wrap: wrap; color: var(--muted); gap: 2px 8px; font-size: 10px; line-height: 1.5; }
 .sample-sidebar strong { display: block; color: var(--ink); font-size: 12px; line-height: 1.4; }
-.sample-sidebar small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
 .sample-sidebar button:hover { background: var(--paper); }
 .sample-sidebar button.active { background: var(--paper); border-color: var(--line-strong); box-shadow: inset 3px 0 0 var(--blue); }
 .sample-stage { position: relative; min-width: 0; height: clamp(620px, calc(100dvh - 160px), 780px); overflow-y: auto; scroll-snap-type: y mandatory; scroll-behavior: auto; }
 .sample-panel { display: flex; height: 100%; min-height: 0; padding: 22px; flex-direction: column; scroll-snap-align: start; scroll-snap-stop: always; }
 .sample-panel > :not(.live-transcript) { flex-shrink: 0; }
-.sample-head h3 { margin: 8px 0 5px; color: var(--ink); font-size: 24px; line-height: 1.3; letter-spacing: -.02em; }
+.sample-head h3 { margin: 0 0 5px; color: var(--ink); font-size: 24px; line-height: 1.3; letter-spacing: -.02em; }
 .sample-head p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .sample-panel .condition-details { margin: 5px 0 14px; border-radius: 8px; }
 .sample-panel .condition-details > div { padding: 8px; }
 .sample-panel .condition-details dt { align-items: flex-start; font-size: 11px; line-height: 1.4; }
 .sample-panel .condition-icon { width: 16px; height: 16px; }
-.sample-panel .condition-details dd { margin-top: 5px; font-size: 11px; }
+.sample-panel .condition-details dd { margin-top: 7px; font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; }
 .sample-panel .condition-details small { font-size: 9px; font-weight: 400; }
 .sample-panel .sample-player { grid-template-columns: 120px minmax(0, 1fr); padding: 10px 12px; }
-.sample-panel .caption-heading > div:first-child { display: grid; gap: 2px; }
+.sample-panel .caption-heading > div:first-child { display: flex; flex-wrap: nowrap; min-height: 30px; gap: 6px; }
 .sample-panel .caption-heading { margin: 14px 0 9px; gap: 10px; }
 .sample-panel .caption-heading > div:first-child > span { font-size: 10px; }
 .sample-panel .caption-controls { gap: 6px; }
@@ -551,3 +550,12 @@ sub { font-size: .75em; vertical-align: -.2em; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* The language control shares the existing compact header and focus palette. */
+.language-button { min-height: 36px; padding: 5px 10px; color: var(--blue-dark); background: var(--paper); border: 1px solid var(--line-strong); border-radius: 6px; font-size: 13px; font-weight: 650; cursor: pointer; white-space: nowrap; }
+.language-button:hover { background: var(--blue-soft); }
+.language-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+html[lang="zh-CN"] { line-break: strict; }
+html[lang="zh-CN"] .hero h1 span { letter-spacing: .01em; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }

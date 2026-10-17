@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261014-audio-follow">
+  <link rel="stylesheet" href="assets/style.css?v=20261018-sample-names">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,6 +20,7 @@
       </a>
       <div class="header-actions">
         <a class="text-link desktop-link" href="https://github.com/ASLP-lab/MS-Bench">GitHub</a>
+        <button class="language-button" type="button" data-language-toggle data-i18n-ignore lang="zh-CN" aria-label="Switch to Chinese">中文</button>
         <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">Sections</button>
       </div>
     </div>
@@ -193,7 +194,7 @@
         <section class="cases section-pad" id="cases">
           <header class="section-head">
             <h2>Audio examples</h2>
-            <p class="section-note"><strong>Note:</strong> Choose an audio example and two models. Play the audio to follow their transcripts alongside the reference.</p>
+            <p class="section-note"><strong>Note:</strong> Choose a sample and compare the reference with two models. Click any transcript line to play from that point. Scroll within a transcript to browse freely; click a line or enable following to resume automatic scrolling.</p>
           </header>
           <div class="sample-browser module-state" data-module="cases" data-case-grid><p class="loading-block">Loading representative cases...</p></div>
         </section>
@@ -207,6 +208,7 @@
   </div>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/app.js?v=20261014-audio-follow" defer></script>
+  <script src="assets/i18n.js?v=20261018-sample-names" defer></script>
+  <script src="assets/app.js?v=20261018-sample-names" defer></script>
 </body>
 </html>
