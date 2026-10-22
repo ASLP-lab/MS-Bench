@@ -17,7 +17,6 @@ const ZH = {
   "MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark": "MS-Bench：面向多说话人语音识别的条件分层基准",
   "Listen to examples": "听音频示例",
   "Explore conditions": "按条件筛选",
-  "Paper (arXiv)": "阅读论文（arXiv）",
   "Benchmark headline statistics": "数据概况",
   "Total duration": "总时长",
   "Condition dimensions": "录音条件",
