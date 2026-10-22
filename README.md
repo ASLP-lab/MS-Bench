@@ -4,6 +4,7 @@
 
 <h2>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</h2>
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2610.25824-b31b1b.svg)](https://arxiv.org/abs/2610.25824)
 [![Demo](https://img.shields.io/badge/Demo-Project%20Page-blue.svg)](https://aslp-lab.github.io/MS-Bench/)
 
 </div>
@@ -34,11 +35,11 @@ Each tier shows its condition range, recording count, and percentage of the 99 r
 
 | Dimension | Tier 0 | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
 |:--|:--:|:--:|:--:|:--:|:--:|
-| **P: Speaker number**<br><sub>Number of reference speakers</sub> | **P0**<br>2 speakers<br>27 / 27.3% | **P1**<br>3-4 speakers<br>29 / 29.3% | **P2**<br>5-8 speakers<br>33 / 33.3% | **P3**<br>≥9 speakers<br>10 / 10.1% | - |
-| **O: Overlap ratio**<br><sub>Recording-level overlap</sub> | **O0**<br>0<br>23 / 23.2% | **O1**<br>(0, 0.10)<br>22 / 22.2% | **O2**<br>[0.10, 0.20)<br>10 / 10.1% | **O3**<br>[0.20, 0.40)<br>26 / 26.3% | **O4**<br>[0.40, 1.00]<br>18 / 18.2% |
-| **S: Speaker similarity**<br><sub>Maximum pairwise cosine similarity</sub> | **S0**<br>[0.00, 0.32)<br>9 / 9.1% | **S1**<br>[0.32, 0.49)<br>12 / 12.1% | **S2**<br>[0.49, 0.65)<br>31 / 31.3% | **S3**<br>[0.65, 1.00]<br>47 / 47.5% | - |
-| **T: Speaker turn interval**<br><sub>25th percentile; higher tiers mean shorter intervals</sub> | **T0**<br>≥0.45 s<br>10 / 10.1% | **T1**<br>[0.15, 0.45) s<br>14 / 14.1% | **T2**<br>[0.06, 0.15) s<br>42 / 42.4% | **T3**<br>[0.00, 0.06) s<br>33 / 33.3% | - |
-| **N: Acoustic quality**<br><sub>d_N; higher tiers mean poorer quality</sub> | **N0**<br>[0.00, 0.27)<br>7 / 7.1% | **N1**<br>[0.27, 0.51)<br>5 / 5.1% | **N2**<br>[0.51, 0.74)<br>25 / 25.3% | **N3**<br>[0.74, 1.00]<br>62 / 62.6% | - |
+| **P: Speaker number**<br><sub>Number of reference speakers</sub> | **P0**<br><sub>2 speakers</sub><br><sub>27 / 27.3%</sub> | **P1**<br><sub>3-4 speakers</sub><br><sub>29 / 29.3%</sub> | **P2**<br><sub>5-8 speakers</sub><br><sub>33 / 33.3%</sub> | **P3**<br><sub>≥9 speakers</sub><br><sub>10 / 10.1%</sub> | - |
+| **O: Overlap ratio**<br><sub>Recording-level overlap</sub> | **O0**<br><sub>0</sub><br><sub>23 / 23.2%</sub> | **O1**<br><sub>(0, 0.10)</sub><br><sub>22 / 22.2%</sub> | **O2**<br><sub>[0.10, 0.20)</sub><br><sub>10 / 10.1%</sub> | **O3**<br><sub>[0.20, 0.40)</sub><br><sub>26 / 26.3%</sub> | **O4**<br><sub>[0.40, 1.00]</sub><br><sub>18 / 18.2%</sub> |
+| **S: Speaker similarity**<br><sub>Maximum pairwise cosine similarity</sub> | **S0**<br><sub>[0.00, 0.32)</sub><br><sub>9 / 9.1%</sub> | **S1**<br><sub>[0.32, 0.49)</sub><br><sub>12 / 12.1%</sub> | **S2**<br><sub>[0.49, 0.65)</sub><br><sub>31 / 31.3%</sub> | **S3**<br><sub>[0.65, 1.00]</sub><br><sub>47 / 47.5%</sub> | - |
+| **T: Speaker turn interval**<br><sub>25th percentile; higher tiers mean shorter intervals</sub> | **T0**<br><sub>≥0.45 s</sub><br><sub>10 / 10.1%</sub> | **T1**<br><sub>[0.15, 0.45) s</sub><br><sub>14 / 14.1%</sub> | **T2**<br><sub>[0.06, 0.15) s</sub><br><sub>42 / 42.4%</sub> | **T3**<br><sub>[0.00, 0.06) s</sub><br><sub>33 / 33.3%</sub> | - |
+| **N: Acoustic quality**<br><sub>d_N; higher tiers mean poorer quality</sub> | **N0**<br><sub>[0.00, 0.27)</sub><br><sub>7 / 7.1%</sub> | **N1**<br><sub>[0.27, 0.51)</sub><br><sub>5 / 5.1%</sub> | **N2**<br><sub>[0.51, 0.74)</sub><br><sub>25 / 25.3%</sub> | **N3**<br><sub>[0.74, 1.00]</sub><br><sub>62 / 62.6%</sub> | - |
 
 View the interactive condition distributions on the [demo page](https://aslp-lab.github.io/MS-Bench/demo.html#overview).
 
