@@ -24,9 +24,47 @@ def csv_rows(path: Path, delimiter=','):
 
 
 def source_unit(path: Path, payload: dict, offset: float, issues=None):
+    failed = payload.get('status') == 'failed' and not payload.get('segments')
+    issues = list(issues or [])
+    if failed:
+        issues.append('Inference failed: audio upload timed out.' if payload.get('special_marker') == 'inference_failed_upload_timeout'
+                      else 'Inference failed; no transcription was returned.')
     return {'source': str(path.relative_to(WORKSPACE)), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
-            'source_start_seconds': offset, 'segments': payload.get('segments', []), 'issues': list(issues or []),
+            'source_start_seconds': offset, 'segments': payload.get('segments', []), 'issues': issues, 'failed': failed,
             'incomplete': payload.get('status') not in {None, 'success'} or payload.get('finish_reason') == 'length' or bool(payload.get('invalid_output_lines'))}
+
+
+def soulx_offsets(paths: list[Path], split_rows: dict, recording_id: str, source_duration: float):
+    """Prefer planned split times; recover a complete, duration-checked new split set.
+
+    The challenge100-not-in-258 outputs do not occur in the older split TSV.
+    Their reported chunk durations cover the source exactly. Do not use cumulative
+    durations for the older stream-copy chunks: their small tail overruns drift.
+    """
+    offsets = {path.stem: float(split_rows[path.stem]['original_start'])
+               for path in paths if path.stem in split_rows}
+    if paths and paths[0].stem == recording_id:
+        offsets[recording_id] = 0.0
+    if offsets or not paths:
+        return offsets, set()
+    parts = [re.fullmatch(re.escape(recording_id) + r'__part(\d+)', path.stem) for path in paths]
+    if any(part is None or int(part[1]) != index for index, part in enumerate(parts)):
+        return offsets, set()
+    durations = []
+    for path in paths:
+        payload = json.loads(path.read_text())
+        if payload.get('key') != path.stem:
+            return offsets, set()
+        try:
+            duration = float(payload['audio_duration_seconds'])
+        except (KeyError, TypeError, ValueError):
+            return offsets, set()
+        if not math.isfinite(duration) or not 0 < duration <= 300:
+            return offsets, set()
+        durations.append(duration)
+    if not math.isfinite(source_duration) or not math.isclose(math.fsum(durations), source_duration, rel_tol=0, abs_tol=.001):
+        return offsets, set()
+    return {path.stem: math.fsum(durations[:index]) for index, path in enumerate(paths)}, {path.stem for path in paths}
 
 
 def main():
@@ -92,17 +130,18 @@ def main():
                 else:
                     missing = True
             elif model_id == 'soulx':
-                paths = sorted((RESULTS / 'soulx-transcriber-results').glob(recording_id + '*.json'))
+                paths = sorted(path for path in (RESULTS / 'soulx-transcriber-results').glob(recording_id + '*.json')
+                               if path.stem == recording_id or re.fullmatch(re.escape(recording_id) + r'__part\d+', path.stem))
+                offsets, recovered = soulx_offsets(paths, split_rows, recording_id, example['source_duration_seconds'])
                 for path in paths:
-                    split = split_rows.get(path.stem)
-                    if split:
-                        offset = float(split['original_start'])
-                    elif path.stem == recording_id:
-                        offset = 0
-                    else:
+                    if path.stem not in offsets:
                         unmapped_sources.append({'source': str(path.relative_to(WORKSPACE)), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'source_start_seconds': None})
                         continue  # No verified source offset for this part.
-                    units.append(source_unit(path, json.loads(path.read_text()), offset))
+                    payload = json.loads(path.read_text())
+                    unit = source_unit(path, payload, offsets[path.stem])
+                    if path.stem in recovered:
+                        unit.update(offset_method='contiguous_result_durations', source_duration_seconds=payload['audio_duration_seconds'])
+                    units.append(unit)
                 missing = not units
             selected = []
             provenance = list(unmapped_sources)
@@ -112,7 +151,7 @@ def main():
             for index, unit in enumerate(units):
                 incomplete |= unit['incomplete']
                 issues.update(unit['issues'])
-                provenance.append({k: v for k, v in unit.items() if k not in {'segments', 'issues', 'incomplete'}})
+                provenance.append({k: v for k, v in unit.items() if k not in {'segments', 'issues', 'incomplete', 'failed'}})
                 provenance_index = len(provenance) - 1
                 for raw_index, segment in enumerate(unit['segments']):
                     try:
@@ -136,6 +175,8 @@ def main():
             selected.sort(key=lambda x: (x['start'], x['source_unit'], x['source_segment']))
             if not units:
                 status = 'unmapped' if unmapped_sources else 'missing'
+            elif all(unit['failed'] for unit in units):
+                status = 'failed'
             elif invalid_count or issues:
                 status = 'invalid'
             elif incomplete:
@@ -148,7 +189,7 @@ def main():
                             'warnings': sorted(issues), 'sources': provenance, 'segments': selected})
         cases.append({'recording_id': recording_id, 'slug': example['slug'], 'clip_start_seconds': clip_start,
                       'clip_duration_seconds': example['clip_duration_seconds'], 'outputs': outputs})
-    data = {'schema_version': '1.1.0', 'data_version': '20261018-text-seek',
+    data = {'schema_version': '1.1.0', 'data_version': '20261029-output-backfill',
             'systems': [{'id': m['system_id'], 'name': m['system']} for m in models], 'cases': cases}
     output = ROOT / 'demo-data/case_predictions.json'
     output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')

@@ -24,6 +24,40 @@ def fail(message: str) -> None:
     raise AssertionError(message)
 
 
+def validate_predictions(examples: list[dict]) -> None:
+    data = json.loads((ROOT / 'demo-data/case_predictions.json').read_text(encoding='utf-8'))
+    if [system['id'] for system in data['systems']] != EXPECTED_SYSTEMS:
+        fail('Prediction systems must match the seven leaderboard systems')
+    if [case['recording_id'] for case in data['cases']] != [example['recording_id'] for example in examples]:
+        fail('Predictions must cover every audio example exactly once and in gallery order')
+    for case, example in zip(data['cases'], examples):
+        label = example['recording_id']
+        for field in ('slug', 'clip_start_seconds', 'clip_duration_seconds'):
+            if case[field] != example[field]:
+                fail(f'{label}: prediction {field} differs from the audio example')
+        if [output['system_id'] for output in case['outputs']] != EXPECTED_SYSTEMS:
+            fail(f'{label}: missing or duplicated model output')
+        for output in case['outputs']:
+            if output['status'] not in {'available', 'partial', 'invalid', 'missing', 'unmapped', 'failed'}:
+                fail(f'{label}: unknown prediction status')
+            if output['status'] == 'failed' and (output['segments'] or not output['warnings']):
+                fail(f'{label}: failed inference must explain why it has no transcript')
+            for segment in output['segments']:
+                index = segment['source_unit']
+                if not isinstance(index, int) or not 0 <= index < len(output['sources']):
+                    fail(f'{label}: invalid prediction source index')
+                offset = output['sources'][index]['source_start_seconds']
+                if offset is None or not math.isfinite(offset):
+                    fail(f'{label}: playable prediction has no source offset')
+                start, end = segment['start'], segment['end']
+                if not all(math.isfinite(time) for time in (start, end)):
+                    fail(f'{label}: non-finite prediction interval')
+                if segment['valid_timing'] and not (end > start and end > 0 and start < case['clip_duration_seconds']):
+                    fail(f'{label}: prediction does not intersect the audio example')
+                if not isinstance(segment['text'], str) or not isinstance(segment['speaker'], str):
+                    fail(f'{label}: invalid prediction text or speaker')
+
+
 def main() -> None:
     rows = load_rows()
     ids = [row["recording_id"] for row in rows]
@@ -150,7 +184,8 @@ def main() -> None:
             if not (0 <= window["start"] < window["end"] <= example["clip_duration_seconds"]):
                 fail(f"{recording_id}: invalid listening shortcut interval")
 
-    print(f"Validated {len(rows)} recordings, {len(leaderboard)} systems, and {len(examples)} representative cases.")
+    validate_predictions(examples)
+    print(f"Validated {len(rows)} recordings, {len(leaderboard)} systems, {len(examples)} representative cases, and {len(examples) * len(EXPECTED_SYSTEMS)} model outputs.")
 
 
 if __name__ == "__main__":

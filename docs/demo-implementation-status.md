@@ -1,5 +1,21 @@
 # Demo implementation status
 
+## Missing model output audit and backfill (2026-10-29)
+
+- Checked all twelve audio examples and seven systems against `100_results`. SoulX outputs for five examples existed but were omitted because their newer split inputs are absent from `split_under_5min_textgrid/segments.tsv`. Recover their offsets only after checking consecutive part numbers, result identity, valid chunk durations, and agreement with the original recording duration to within 1 ms. Preserve explicit manifest offsets for older stream-copy splits.
+
+| Sample | Recording | Restored SoulX utterances |
+|---|---|---:|
+| 03, Podcast | `BenchFilms_ZH::part004_e12074b4` | 38 |
+| 04, Film | `BenchFilms_ZH::000049_part018` | 18 |
+| 08, Meeting | `alimeeting_far::R8005_M8009` | 168 |
+| 11, Film | `BenchFilms_ZH::000102_part014` | 79 |
+| 12, Natural conversation | `MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone` | 70 |
+
+- MOSS Pro on sample 08 has no transcription in `100_results`: its abnormal result records `inference_failed_upload_timeout`. Show an explicit inference-failed status and audio-upload-timeout warning in English and Chinese. Retain the Qwen Omni and VibeVoice partial-output statuses on that sample. Paper scores and original result files are unchanged.
+- Export now contains 81 available, two partial, and one failed slots, with 6,446 utterances. Verified every exported utterance against its raw source text, speaker, timestamps, source indices, and SHA-256 hash (112 files), and confirmed all previously present utterances are unchanged. Added split-mapping regression tests and prediction coverage checks to the demo validator. Bumped script/data cache versions for the updated browser export.
+- Browser verification passed for all 84 model selections, actual audio playback and transcript-click seeking in all five restored cases (including second-part offsets), and English/Chinese failure messages. No JavaScript errors or failed resource requests were observed. Seven regression tests and validation of 99 recordings, twelve examples, and 84 output slots pass. Playback testing used a local static server with HTTP byte-range support.
+
 ## Natural Chinese copy and free transcript seeking (2026-10-18)
 
 - Rename samples 8 and 10 to Meeting. Use Podcast / 播客 for sample 3, Film / 影视剧 for samples 4 and 11, and Natural conversation / 自然交谈 for sample 12; canonical scenarios and audio remain unchanged. Replace sample 7 with AMI ES2014d, a four-speaker English meeting with 11.57% overlap and a longer turn interval. Retire the old film sample's slug rather than attaching different audio to its old result identity.

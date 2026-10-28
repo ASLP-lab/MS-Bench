@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "data_version": "20261018-text-seek",
+  "data_version": "20261029-output-backfill",
   "systems": [
     {
       "id": "moss_pro",
@@ -3372,7 +3372,7 @@
             {
               "source": "100_results/soulx-transcriber-results/SmoothConv_DuplexConv::1765590910_uKOHNdpyc5_seg5_6_7_8_9_10_11_active.json",
               "sha256": "99ce119f335933b1e2f632335c710951c7add2a755f3894ac2a991220ea42d2b",
-              "source_start_seconds": 0
+              "source_start_seconds": 0.0
             }
           ],
           "segments": [
@@ -5575,24 +5575,369 @@
         },
         {
           "system_id": "soulx",
-          "status": "unmapped",
+          "status": "available",
           "invalid_timestamps": 0,
-          "warnings": [
-            "Source offsets for split inputs are unavailable."
-          ],
+          "warnings": [],
           "sources": [
             {
               "source": "100_results/soulx-transcriber-results/BenchFilms_ZH::part004_e12074b4__part0000.json",
               "sha256": "dfac99c5cd7cfa43685fed2139c4b1230f45e4b40002955179822b8444eca969",
-              "source_start_seconds": null
+              "source_start_seconds": 0.0,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 200.09
             },
             {
               "source": "100_results/soulx-transcriber-results/BenchFilms_ZH::part004_e12074b4__part0001.json",
               "sha256": "6e9fd16b041114b0873e234566a8fd7a21a28a4d0b7e8327596d17ae3191f567",
-              "source_start_seconds": null
+              "source_start_seconds": 200.09,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 172.94
             }
           ],
-          "segments": []
+          "segments": [
+            {
+              "start": 0.38,
+              "end": 7.96,
+              "speaker": "Speaker_1",
+              "text": "对，我觉得尤其是你看她们之间的关系也是，我觉得女性之间的关系背后真正反映的是她们的自我。因为你讲一个一群人的关系，他们肯定简单粗暴讲就是两个方面，就是我们相亲相爱的部分和我们起冲突的部分对吧？但你会发现在《阳光姐妹淘》里面，她们所有起冲突的部分是与她的个人成长、她内心的那些东西高度相关的，比如我是一个外省来的女孩，我很自卑，比如我家里欠了钱，然后我希望有一天我可以出人头地，所以我想要去当什么什么样的人，比如我自己背负什么样的创伤，所以我不爱讲话，我也不信任关系，这导致我们种种之间的彼此的看不起，它是和你的自卑、你的抱负、你在家庭里面的爱的缺失，你所有求而不得想要获得的那个东西高度相关的，而你们的相亲相爱也是因为你们看到了对方身上这一部分，你看到了他的自卑，因而你不再恨他了，不再觉得他是一个穷酸的乡下人，你看到他承担的背后家庭的不容易和他如何想要努力的做出改变，所以你想要愿意帮助他成为他的同路人，人和人的关系的质感，不管是冲突还是相爱，都是因为我在你身上看见了真正的你，你也看见了真正的我，我们是有血有肉的人，所以才能够缔结深刻的连接，但是《小时代》里面所有的这种不管是冲突还是相亲相爱，你都会觉得它和你是谁无关，那就是我决定选择你了，成为我的姐妹团的一员，就像皮卡丘一样，那不管你是谁，你就当个皮卡丘一样，我就要给你最好的精灵球，带你住大房子，给你漂亮衣服，出了困难告诉我呀，怎么不找我帮忙，就是所有的一切就好像是搭在一个空中楼阁之上。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 0
+            },
+            {
+              "start": 8.13,
+              "end": 8.39,
+              "speaker": "Speaker_2",
+              "text": "对，",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 1
+            },
+            {
+              "start": 8.39,
+              "end": 10.0,
+              "speaker": "Speaker_1",
+              "text": "这是我在看《小时代》的时候一直来一个困惑，就是他们这几个人是怎么玩到一块去的，因为故事的开场，他们就是时代姐妹花了，对他们就住在一个大房子里面了，就算我们在大学的时候从来没有住在一个合租的大house里面，但他们就这样住在了一起，因为我觉得对我来说非常重要的是人物的关系首先是人物的关系是怎么建立的，是我是谁以及你是谁决定了我们是朋友还是敌人还是陌生人，因为我们并不是李冰冰和李雪，我们并不是打娘胎里面就认识的，就是你们之所以从陌生人变成朋友，一定是你们之间发现了彼此身上相似的地方，或者说彼此可以承诺的地方，哪怕你不一定要讲述你们成为朋友的这个过程，但你至少应该让观众看来是有说服力的，至少的一个前提是观众应该能看出来你是一个怎样的人，他是一个怎样的人，这个怎样的人并不仅仅指的是说我是一个万千少女中平凡的人，他是一个有钱又厉害的人，这是远远不够的，对，所以像《阳光姐妹淘》里面主人公娜美，她就是从乡下过来，她非常的敏感，非常的自卑，然后她对于这样的小群体，她其实也是一直抱着一个远远观望的态度，但是直到这个小群体以自己的方式逐步接纳了她，像这样的过程对我们来说就是自然的嘛，对，因为他们的关系的递进是伴随着我们对于这个人的了解，以及他们自己对自我的了解，但是《小时代》相反，你会觉得他们关系的递进还有所有冲突的产生与我是谁无关，而往往只能借助于一些最经典和更加刻板的戏剧冲突，那就是爱情，那是和男人的关系，你就会发现为什么时代姐妹花这个名字以及塑料闺蜜、塑料姐妹长期以来被污名，它往往是因为被刻画成围绕一个男性的关系，一群女生在一起，不管是两个还是两个以上，他们所有的争夺勾心斗角一定是围绕着男人而起的。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 2
+            },
+            {
+              "start": 200.1,
+              "end": 221.27,
+              "speaker": "Speaker_1",
+              "text": "是的，其实阳光姐妹淘也有同样的情节，就是主人公暗恋上的那个男孩，其实后来是跟那个女神在一起嘛，并且她亲眼撞见了他们在一起，那它也很容易导向了那个撒狗血的情节，但是它并没有这么处理，它其实处理是很淡淡的。 主人公发现这一点，但是常年来他一直把这个秘密有点像藏在自己的心里，他就像可能很多女孩在青春期都会经历的一次",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 0
+            },
+            {
+              "start": 221.29,
+              "end": 222.06,
+              "speaker": "Speaker_2",
+              "text": "失恋",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 1
+            },
+            {
+              "start": 222.07,
+              "end": 230.33,
+              "speaker": "Speaker_1",
+              "text": "对只属于自己的盛大的暗恋和失恋，然后对方完全不知道，然后我就很喜欢这个电影最后结尾的处理吧，因为很多年之后他们再一次相逢了",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 2
+            },
+            {
+              "start": 230.33,
+              "end": 230.54,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 3
+            },
+            {
+              "start": 230.54,
+              "end": 233.37,
+              "speaker": "Speaker_1",
+              "text": "她又看到自己青春期的那个男神，他就已经发福了",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 4
+            },
+            {
+              "start": 233.37,
+              "end": 234.08,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 5
+            },
+            {
+              "start": 234.08,
+              "end": 249.06,
+              "speaker": "Speaker_1",
+              "text": "然后她就惊讶的发现，对方对她一点印象都没有，这件事情最终的结局就是这样，然后她其实也是在那一刻，我觉得她是恍然大悟了，哦，那真正的对她来说念念不忘的其实并不是这个男性，而是说她和她的姐妹淘共同构筑的那一段青春记忆",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 6
+            },
+            {
+              "start": 249.06,
+              "end": 249.58,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 7
+            },
+            {
+              "start": 249.58,
+              "end": 255.56,
+              "speaker": "Speaker_2",
+              "text": "我觉得她能够在当时青春期的时候就淡淡的处理这件事，也是因为她能够看见",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 8
+            },
+            {
+              "start": 255.56,
+              "end": 275.56,
+              "speaker": "Speaker_2",
+              "text": "她姐妹，就是我喜欢的这个男孩喜欢上的另一个对象是一个我知道他是谁的人，他是一个这样的女孩，他怎么怎么样，你就会能够理解这件事儿，但是你不觉得当顾里和南湘去抢一个男人的时候，顾里其实根本不知道南湘是谁吗？就是你觉得顾里眼中她看到过南湘是谁吗？我觉得从来没有看到过",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 9
+            },
+            {
+              "start": 275.56,
+              "end": 277.25,
+              "speaker": "Speaker_1",
+              "text": "我们观众其实也很难看到",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 10
+            },
+            {
+              "start": 277.25,
+              "end": 282.57,
+              "speaker": "Speaker_2",
+              "text": "根本南湘就太刻板印象了，就是一个壳在那里，我觉得顾里看到了南湘并不比我们看到的更多",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 11
+            },
+            {
+              "start": 282.57,
+              "end": 282.98,
+              "speaker": "Speaker_1",
+              "text": "是",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 12
+            },
+            {
+              "start": 282.98,
+              "end": 288.15,
+              "speaker": "Speaker_2",
+              "text": "所以他的愤怒和他们关系的纠葛也只是基于一个空壳对空壳的纠葛",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 13
+            },
+            {
+              "start": 288.15,
+              "end": 298.57,
+              "speaker": "Speaker_1",
+              "text": "对，但其实这种围绕着同一个男性来争夺某一段感情的女性关系，除了小时代后面我们还是在很多文艺作品中反复看到，但同时我们也看到了它进步的地方",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 14
+            },
+            {
+              "start": 298.57,
+              "end": 310.21000000000004,
+              "speaker": "Speaker_2",
+              "text": "有一些变化，比如我印象很深刻的是七月与安生，我觉得可能是我自己在院线上看到的第一部以双女主为核心的，而且是真正的双女主，不是那种假模假式设的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 15
+            },
+            {
+              "start": 310.21000000000004,
+              "end": 311.93,
+              "speaker": "Speaker_1",
+              "text": "不是假模假样的双女主",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 16
+            },
+            {
+              "start": 311.93,
+              "end": 312.9,
+              "speaker": "Speaker_2",
+              "text": "我也不知道",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 17
+            },
+            {
+              "start": 313.65,
+              "end": 317.37,
+              "speaker": "Speaker_2",
+              "text": "因为后面后面又出了太多奇怪的工业产品，但是我觉得七月与安生",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 18
+            },
+            {
+              "start": 317.37,
+              "end": 322.97,
+              "speaker": "Speaker_2",
+              "text": "你能看到七月是谁，你也能看到安生是谁，七月和安生也知道彼此是谁，这已经很难得了",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 19
+            },
+            {
+              "start": 322.97,
+              "end": 330.15999999999997,
+              "speaker": "Speaker_1",
+              "text": "对，而且我觉得那是我第一次好像在文艺作品中看到就两个女性她们有一点点互为镜像的关系",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 20
+            },
+            {
+              "start": 330.15999999999997,
+              "end": 330.44,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 21
+            },
+            {
+              "start": 330.44,
+              "end": 333.71000000000004,
+              "speaker": "Speaker_1",
+              "text": "因为后来非常戳我的其实是这个片子它最后的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 22
+            },
+            {
+              "start": 333.71000000000004,
+              "end": 340.62,
+              "speaker": "Speaker_1",
+              "text": "算是一个戏剧反转嘛，就是七月和安生到最后他们有点像互换了一样人生的那种感觉，比如说安生",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 23
+            },
+            {
+              "start": 340.62,
+              "end": 345.34000000000003,
+              "speaker": "Speaker_1",
+              "text": "平时表现出来的是比较的张扬跋扈的，但其实他内心对于那种传统的家庭",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 24
+            },
+            {
+              "start": 345.34000000000003,
+              "end": 346.62,
+              "speaker": "Speaker_2",
+              "text": "很脆弱很渴望",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 25
+            },
+            {
+              "start": 346.62,
+              "end": 349.03999999999996,
+              "speaker": "Speaker_1",
+              "text": "他是很渴望爱，渴望家庭，渴望联系的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 26
+            },
+            {
+              "start": 349.03999999999996,
+              "end": 349.31,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 27
+            },
+            {
+              "start": 349.31,
+              "end": 355.03,
+              "speaker": "Speaker_1",
+              "text": "但是你看七月，他平时表现的是那样的一个好像乖乖女的形象，但其实他内心一直在压抑",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 28
+            },
+            {
+              "start": 355.03,
+              "end": 355.47,
+              "speaker": "Speaker_2",
+              "text": "叛逆的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 29
+            },
+            {
+              "start": 355.47,
+              "end": 355.51,
+              "speaker": "Speaker_1",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 30
+            },
+            {
+              "start": 355.51,
+              "end": 355.71000000000004,
+              "speaker": "Speaker_2",
+              "text": "那个",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 31
+            },
+            {
+              "start": 355.71000000000004,
+              "end": 368.56,
+              "speaker": "Speaker_1",
+              "text": "对于自由那种向往，但是随着他们关系的递进以及随着他们两个个人成长阶段的变化，你就会发现他们逐步发生了这样一个调转，所以最后片子我记得有个台词嘛，就说这句话有点咯噔，但是我一直都很喜欢这句话",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 32
+            },
+            {
+              "start": 368.56,
+              "end": 372.37,
+              "speaker": "Speaker_1",
+              "text": "安生变成了安稳了的七月，七月变成了流浪者的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 33
+            },
+            {
+              "start": 372.37,
+              "end": 373.03,
+              "speaker": "Speaker_2",
+              "text": "安生",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 34
+            }
+          ]
         }
       ]
     },
@@ -7566,19 +7911,182 @@
         },
         {
           "system_id": "soulx",
-          "status": "unmapped",
+          "status": "available",
           "invalid_timestamps": 0,
-          "warnings": [
-            "Source offsets for split inputs are unavailable."
-          ],
+          "warnings": [],
           "sources": [
             {
               "source": "100_results/soulx-transcriber-results/BenchFilms_ZH::000049_part018__part0000.json",
               "sha256": "8aa6bcc8aedcf72da698c04f61b78d1df9b74d33a3d6e151b4d15d883a89b3af",
-              "source_start_seconds": null
+              "source_start_seconds": 0.0,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 296.635
             }
           ],
-          "segments": []
+          "segments": [
+            {
+              "start": 4.58,
+              "end": 5.16,
+              "speaker": "Speaker_1",
+              "text": "阿妮？",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 0
+            },
+            {
+              "start": 13.1,
+              "end": 13.79,
+              "speaker": "Speaker_1",
+              "text": "阿妮？",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 1
+            },
+            {
+              "start": 20.89,
+              "end": 27.86,
+              "speaker": "Speaker_1",
+              "text": "欧家齐，欧家齐还在吗？",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 2
+            },
+            {
+              "start": 29.32,
+              "end": 33.47,
+              "speaker": "Speaker_2",
+              "text": "在，没人毁得了他。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 3
+            },
+            {
+              "start": 38.83,
+              "end": 49.41,
+              "speaker": "Speaker_3",
+              "text": "老马，谢谢你亲手为我送来这么大一个贺礼，可惜你命短，喝不上喜酒喽。吉时已到。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 4
+            },
+            {
+              "start": 50.98,
+              "end": 52.5,
+              "speaker": "Speaker_4",
+              "text": "我得回去洞房花烛夜了。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 5
+            },
+            {
+              "start": 112.84,
+              "end": 117.34,
+              "speaker": "Speaker_5",
+              "text": "阿罗汉，让他们见识一下本可汗的实力！阿杜南，阿罗汉！",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 6
+            },
+            {
+              "start": 127.09,
+              "end": 131.14,
+              "speaker": "Speaker_6",
+              "text": "时机已到，传令下去，即刻开拔焉支山。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 7
+            },
+            {
+              "start": 131.21,
+              "end": 134.98,
+              "speaker": "Speaker_3",
+              "text": "慕家齐正在激战，我们全军却在此时撤离，是不是？",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 8
+            },
+            {
+              "start": 135.02,
+              "end": 145.15,
+              "speaker": "Speaker_6",
+              "text": "你留下，想做什么就做什么，记住，除去甲胄，你就是你。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 9
+            },
+            {
+              "start": 196.64,
+              "end": 197.94,
+              "speaker": "Speaker_3",
+              "text": "被围了。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 10
+            },
+            {
+              "start": 198.18,
+              "end": 198.57999999999998,
+              "speaker": "Speaker_7",
+              "text": "救我！",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 11
+            },
+            {
+              "start": 220.24,
+              "end": 237.06,
+              "speaker": "Speaker_3",
+              "text": "滥杀无辜不是可汗之为，小裴将军，加冕大漠可汗之位可是你叔父亲口许诺的，你这是意欲何为啊？ 大军已开拔焉支山，我此刻无甲在身，只是一介百姓，这些老幼妇孺无碍你可汗之位。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 12
+            },
+            {
+              "start": 239.84,
+              "end": 248.02,
+              "speaker": "Speaker_3",
+              "text": "在军帐对你那是客气，在此地本可汗怕你？ 还愣着，给我宰了他。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 13
+            },
+            {
+              "start": 250.36,
+              "end": 250.88,
+              "speaker": "Speaker_8",
+              "text": "哎呀！",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 14
+            },
+            {
+              "start": 251.3,
+              "end": 255.14,
+              "speaker": "Speaker_3",
+              "text": "快，给本可汗杀了他。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 15
+            },
+            {
+              "start": 255.68,
+              "end": 256.12,
+              "speaker": "Speaker_9",
+              "text": "啊！",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 16
+            },
+            {
+              "start": 259.46,
+              "end": 264.34,
+              "speaker": "Speaker_3",
+              "text": "杀了他的首级，赏一百金鞭！",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 17
+            }
+          ]
         }
       ]
     },
@@ -24434,9 +24942,11 @@
       "outputs": [
         {
           "system_id": "moss_pro",
-          "status": "partial",
+          "status": "failed",
           "invalid_timestamps": 0,
-          "warnings": [],
+          "warnings": [
+            "Inference failed: audio upload timed out."
+          ],
           "sources": [
             {
               "source": "100_results/MOSS-Transcribe-Diarize-Pro/abnormal_results/alimeeting_far/R8005_M8009.json",
@@ -30013,49 +30523,1574 @@
         },
         {
           "system_id": "soulx",
-          "status": "unmapped",
+          "status": "available",
           "invalid_timestamps": 0,
-          "warnings": [
-            "Source offsets for split inputs are unavailable."
-          ],
+          "warnings": [],
           "sources": [
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0000.json",
               "sha256": "e209467b4039dd1b58ec9d7df12680ebee34f081dea20dbb21242dfafffabb25",
-              "source_start_seconds": null
+              "source_start_seconds": 0.0,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 253.74
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0001.json",
               "sha256": "1f544af2ae71c21043fde54bf90240ab313a61d94d76044500dba2a3f5746892",
-              "source_start_seconds": null
+              "source_start_seconds": 253.74,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 265.71
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0002.json",
               "sha256": "3a5c2ad22e507c18f3d44b07e0307151b987985ecdc88ff7238a86efa36de2c3",
-              "source_start_seconds": null
+              "source_start_seconds": 519.45,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 231.66
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0003.json",
               "sha256": "d6f87690f412a1c50e051589d54e7d9e44760752b5236d69f99b2fefced21573",
-              "source_start_seconds": null
+              "source_start_seconds": 751.11,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 269.32
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0004.json",
               "sha256": "2eb113c13b219fbaf88945dbff1bc6504bec161c4e9732c794a2a413ffb001ee",
-              "source_start_seconds": null
+              "source_start_seconds": 1020.43,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 255.61
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0005.json",
               "sha256": "b9e329528e8624c02d65159b84ca2608af0c601bc10c0c13daaa19da821fb721",
-              "source_start_seconds": null
+              "source_start_seconds": 1276.04,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 247.49
             },
             {
               "source": "100_results/soulx-transcriber-results/alimeeting_far::R8005_M8009__part0006.json",
               "sha256": "ec674c9761ab34c94aad13cbdf47132134b7676d1d45aad44ce81ea10e10706c",
-              "source_start_seconds": null
+              "source_start_seconds": 1523.53,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 253.46
             }
           ],
-          "segments": []
+          "segments": [
+            {
+              "start": 8.09,
+              "end": 15.7,
+              "speaker": "Speaker_1",
+              "text": "今天咱们开个会议，到元旦了，咱们几个人对于领导来说，咱们商量商量给员工发点礼品。",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 0
+            },
+            {
+              "start": 16.39,
+              "end": 29.0,
+              "speaker": "Speaker_1",
+              "text": "呃你们就是应该预算一下，发点福利是吧？啊对大家一起过，对一年了咱们一共，对咱们一共是三十个人，三十个人咱们员工一共三四十个人",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 1
+            },
+            {
+              "start": 18.72,
+              "end": 19.13,
+              "speaker": "Speaker_2",
+              "text": "发点福利",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 2
+            },
+            {
+              "start": 19.62,
+              "end": 24.41,
+              "speaker": "Speaker_3",
+              "text": "弄点儿福利是吧，给大给大家干干一年了是吧，行您这提议好",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 3
+            },
+            {
+              "start": 26.65,
+              "end": 27.03,
+              "speaker": "Speaker_3",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 4
+            },
+            {
+              "start": 29.19,
+              "end": 29.52,
+              "speaker": "Speaker_3",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 5
+            },
+            {
+              "start": 29.3,
+              "end": 31.04,
+              "speaker": "Speaker_1",
+              "text": "嗯嗯啊你觉着",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 6
+            },
+            {
+              "start": 30.91,
+              "end": 32.54,
+              "speaker": "Speaker_2",
+              "text": "咱们就看看",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 7
+            },
+            {
+              "start": 32.7,
+              "end": 36.5,
+              "speaker": "Speaker_3",
+              "text": "所以说咱做一下儿预算，多少钱的标准是吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 8
+            },
+            {
+              "start": 34.06,
+              "end": 38.6,
+              "speaker": "Speaker_1",
+              "text": "预算一下大概对对对对对对对对你们感觉应该给多少合适",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 9
+            },
+            {
+              "start": 38.64,
+              "end": 39.2,
+              "speaker": "Speaker_2",
+              "text": "对对对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 10
+            },
+            {
+              "start": 39.24,
+              "end": 48.61,
+              "speaker": "Speaker_3",
+              "text": "我觉得我说这一年了反正是大家都卖力气了呃在咱们呢一千两千块钱，您看行我觉得行",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 11
+            },
+            {
+              "start": 42.0,
+              "end": 42.74,
+              "speaker": "Speaker_4",
+              "text": "一千块钱",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 12
+            },
+            {
+              "start": 43.92,
+              "end": 44.92,
+              "speaker": "Speaker_4",
+              "text": "一人一千",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 13
+            },
+            {
+              "start": 48.17,
+              "end": 59.68,
+              "speaker": "Speaker_1",
+              "text": "我觉得呃一千两千呃呃一千块钱两千块钱都可以，但是呢我觉着呢呃你们觉着咱们预算一下三十个人是吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 14
+            },
+            {
+              "start": 48.92,
+              "end": 49.17,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 15
+            },
+            {
+              "start": 49.87,
+              "end": 50.72,
+              "speaker": "Speaker_2",
+              "text": "两千块钱",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 16
+            },
+            {
+              "start": 52.17,
+              "end": 52.66,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 17
+            },
+            {
+              "start": 54.16,
+              "end": 54.37,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 18
+            },
+            {
+              "start": 55.24,
+              "end": 55.74,
+              "speaker": "Speaker_2",
+              "text": "一千",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 19
+            },
+            {
+              "start": 59.42,
+              "end": 59.74,
+              "speaker": "Speaker_3",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 20
+            },
+            {
+              "start": 59.74,
+              "end": 62.22,
+              "speaker": "Speaker_1",
+              "text": "一人一千你大概值多少钱是吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 21
+            },
+            {
+              "start": 62.32,
+              "end": 62.64,
+              "speaker": "Speaker_3",
+              "text": "哦",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 22
+            },
+            {
+              "start": 62.83,
+              "end": 65.13,
+              "speaker": "Speaker_2",
+              "text": "一人一千那还不好算，三十个人嘛",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 23
+            },
+            {
+              "start": 63.85,
+              "end": 64.12,
+              "speaker": "Speaker_1",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 24
+            },
+            {
+              "start": 64.42,
+              "end": 64.72,
+              "speaker": "Speaker_3",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 25
+            },
+            {
+              "start": 64.52,
+              "end": 68.23,
+              "speaker": "Speaker_1",
+              "text": "啊但是你们是统一是给一千还是给两千",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 26
+            },
+            {
+              "start": 65.13,
+              "end": 66.42,
+              "speaker": "Speaker_2",
+              "text": "三十个人啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 27
+            },
+            {
+              "start": 67.33,
+              "end": 68.0,
+              "speaker": "Speaker_2",
+              "text": "三十个人",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 28
+            },
+            {
+              "start": 68.59,
+              "end": 69.35,
+              "speaker": "Speaker_3",
+              "text": "呃现在",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 29
+            },
+            {
+              "start": 68.62,
+              "end": 70.35,
+              "speaker": "Speaker_1",
+              "text": "啊跟你们自己说",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 30
+            },
+            {
+              "start": 70.67,
+              "end": 70.95,
+              "speaker": "Speaker_2",
+              "text": "我",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 31
+            },
+            {
+              "start": 70.95,
+              "end": 75.23,
+              "speaker": "Speaker_3",
+              "text": "因为咱们觉得咱们今年的业绩不错，已经赚了钱了，呃还是两千吧行吗",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 32
+            },
+            {
+              "start": 73.78,
+              "end": 74.42,
+              "speaker": "Speaker_2",
+              "text": "对对对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 33
+            },
+            {
+              "start": 75.41,
+              "end": 76.3,
+              "speaker": "Speaker_4",
+              "text": "呃让让",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 34
+            },
+            {
+              "start": 75.7,
+              "end": 80.42,
+              "speaker": "Speaker_2",
+              "text": "现在不现在不是一天两天的事儿，现在问题是咱们给大伙儿的福利",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 35
+            },
+            {
+              "start": 77.64,
+              "end": 77.94,
+              "speaker": "Speaker_3",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 36
+            },
+            {
+              "start": 80.7,
+              "end": 81.22,
+              "speaker": "Speaker_3",
+              "text": "对对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 37
+            },
+            {
+              "start": 80.78,
+              "end": 83.56,
+              "speaker": "Speaker_2",
+              "text": "是以什么模式给大伙儿，是不是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 38
+            },
+            {
+              "start": 83.02,
+              "end": 84.38,
+              "speaker": "Speaker_4",
+              "text": "不是你先有这",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 39
+            },
+            {
+              "start": 83.56,
+              "end": 85.3,
+              "speaker": "Speaker_2",
+              "text": "你这卡呀还是送什么啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 40
+            },
+            {
+              "start": 84.01,
+              "end": 86.42,
+              "speaker": "Speaker_3",
+              "text": "先先先先说啊那我这钱儿是吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 41
+            },
+            {
+              "start": 85.3,
+              "end": 86.44,
+              "speaker": "Speaker_2",
+              "text": "还是直接食品呢",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 42
+            },
+            {
+              "start": 86.99,
+              "end": 87.48,
+              "speaker": "Speaker_3",
+              "text": "我",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 43
+            },
+            {
+              "start": 87.0,
+              "end": 92.0,
+              "speaker": "Speaker_4",
+              "text": "不是你这个得先有个预算是吧咱得先预算这边儿来再再考虑",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 44
+            },
+            {
+              "start": 87.87,
+              "end": 96.91,
+              "speaker": "Speaker_1",
+              "text": "现在你们现在先预算一下儿呗，哎你们是给一千还是给五百，还是给两千还是给一千五，你们自己觉得合适",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 45
+            },
+            {
+              "start": 90.38,
+              "end": 90.7,
+              "speaker": "Speaker_2",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 46
+            },
+            {
+              "start": 93.17,
+              "end": 93.5,
+              "speaker": "Speaker_4",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 47
+            },
+            {
+              "start": 94.57,
+              "end": 95.12,
+              "speaker": "Speaker_4",
+              "text": "是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 48
+            },
+            {
+              "start": 95.36,
+              "end": 100.74000000000001,
+              "speaker": "Speaker_3",
+              "text": "现在我说是一年了都挺辛苦的，呃给两千块钱行吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 49
+            },
+            {
+              "start": 97.74000000000001,
+              "end": 98.14,
+              "speaker": "Speaker_1",
+              "text": "一年了",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 50
+            },
+            {
+              "start": 98.7,
+              "end": 99.12,
+              "speaker": "Speaker_2",
+              "text": "对对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 51
+            },
+            {
+              "start": 98.91,
+              "end": 99.16,
+              "speaker": "Speaker_4",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 52
+            },
+            {
+              "start": 100.83,
+              "end": 101.11,
+              "speaker": "Speaker_1",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 53
+            },
+            {
+              "start": 101.09,
+              "end": 104.84,
+              "speaker": "Speaker_2",
+              "text": "你们看要两两千行不行，这是对行这是一个基数",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 54
+            },
+            {
+              "start": 102.22999999999999,
+              "end": 102.78999999999999,
+              "speaker": "Speaker_3",
+              "text": "你你",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 55
+            },
+            {
+              "start": 105.05,
+              "end": 105.68,
+              "speaker": "Speaker_3",
+              "text": "呃行吗",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 56
+            },
+            {
+              "start": 105.12,
+              "end": 106.34,
+              "speaker": "Speaker_4",
+              "text": "啊啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 57
+            },
+            {
+              "start": 105.68,
+              "end": 107.12,
+              "speaker": "Speaker_3",
+              "text": "这还是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 58
+            },
+            {
+              "start": 105.72,
+              "end": 109.16,
+              "speaker": "Speaker_1",
+              "text": "你觉得两千多不多呀，我觉得还有点紧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 59
+            },
+            {
+              "start": 108.22999999999999,
+              "end": 110.0,
+              "speaker": "Speaker_2",
+              "text": "嗯嗯就是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 60
+            },
+            {
+              "start": 109.53,
+              "end": 112.97999999999999,
+              "speaker": "Speaker_3",
+              "text": "大老板别那么抠了，差不多就行了，你这两千两千不会过",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 61
+            },
+            {
+              "start": 111.31,
+              "end": 111.62,
+              "speaker": "Speaker_2",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 62
+            },
+            {
+              "start": 112.38,
+              "end": 115.06,
+              "speaker": "Speaker_1",
+              "text": "两千两千你们觉得能办什么呢",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 63
+            },
+            {
+              "start": 113.84,
+              "end": 114.16,
+              "speaker": "Speaker_2",
+              "text": "就是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 64
+            },
+            {
+              "start": 114.12,
+              "end": 117.5,
+              "speaker": "Speaker_4",
+              "text": "啊首先呢你们得算这一千一",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 65
+            },
+            {
+              "start": 114.84,
+              "end": 116.7,
+              "speaker": "Speaker_2",
+              "text": "买点儿吃的买点儿用的",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 66
+            },
+            {
+              "start": 117.25,
+              "end": 118.57,
+              "speaker": "Speaker_3",
+              "text": "嗯我给两千块钱",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 67
+            },
+            {
+              "start": 117.75999999999999,
+              "end": 118.0,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 68
+            },
+            {
+              "start": 119.59,
+              "end": 120.0,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 69
+            },
+            {
+              "start": 119.97999999999999,
+              "end": 123.12,
+              "speaker": "Speaker_4",
+              "text": "这是采用什么方式给给员工发放",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 70
+            },
+            {
+              "start": 122.28,
+              "end": 126.6,
+              "speaker": "Speaker_1",
+              "text": "我觉得两千有点高了吧，两千我感觉两千有点儿高，我觉得",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 71
+            },
+            {
+              "start": 123.68,
+              "end": 124.41,
+              "speaker": "Speaker_3",
+              "text": "我说这是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 72
+            },
+            {
+              "start": 124.38,
+              "end": 124.68,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 73
+            },
+            {
+              "start": 125.79,
+              "end": 133.8,
+              "speaker": "Speaker_3",
+              "text": "那你那你那你说给一千五一千五又拿不出手去，发东西行，不是要一千五你发东西行，要是给钱一千五不值钱啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 74
+            },
+            {
+              "start": 126.95,
+              "end": 127.24,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 75
+            },
+            {
+              "start": 129.0,
+              "end": 131.12,
+              "speaker": "Speaker_2",
+              "text": "咱们这儿效益还可以，咱们这儿效益",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 76
+            },
+            {
+              "start": 133.1,
+              "end": 136.88,
+              "speaker": "Speaker_4",
+              "text": "现在的钱啊不值钱了，不像过去了，它这毛了",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 77
+            },
+            {
+              "start": 135.16,
+              "end": 135.44,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 78
+            },
+            {
+              "start": 136.98,
+              "end": 137.38,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 79
+            },
+            {
+              "start": 137.25,
+              "end": 137.55,
+              "speaker": "Speaker_1",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 80
+            },
+            {
+              "start": 137.38,
+              "end": 139.76,
+              "speaker": "Speaker_4",
+              "text": "两千块钱买不了多少东西，明白吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 81
+            },
+            {
+              "start": 138.86,
+              "end": 139.16,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 82
+            },
+            {
+              "start": 140.19,
+              "end": 144.77,
+              "speaker": "Speaker_1",
+              "text": "但是那你们说这两千块钱都来买什么，你们觉得可以买什么",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 83
+            },
+            {
+              "start": 144.12,
+              "end": 145.4,
+              "speaker": "Speaker_3",
+              "text": "我反正我认为是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 84
+            },
+            {
+              "start": 144.95,
+              "end": 152.12,
+              "speaker": "Speaker_2",
+              "text": "那那咱们就是百姓家庭呗，你买你买什么呀，都都是啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 85
+            },
+            {
+              "start": 149.39,
+              "end": 150.57,
+              "speaker": "Speaker_1",
+              "text": "啊那",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 86
+            },
+            {
+              "start": 150.96,
+              "end": 151.32,
+              "speaker": "Speaker_3",
+              "text": "是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 87
+            },
+            {
+              "start": 151.72,
+              "end": 152.03,
+              "speaker": "Speaker_4",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 88
+            },
+            {
+              "start": 152.17000000000002,
+              "end": 152.73,
+              "speaker": "Speaker_3",
+              "text": "啊对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 89
+            },
+            {
+              "start": 152.82,
+              "end": 161.84,
+              "speaker": "Speaker_1",
+              "text": "现在咱们预算好了啊，呃大家一致的观点就那意思给两千是吧，给两千，但是这两千块钱是怎么运作",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 90
+            },
+            {
+              "start": 156.93,
+              "end": 157.21,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 91
+            },
+            {
+              "start": 158.16,
+              "end": 158.46,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 92
+            },
+            {
+              "start": 158.49,
+              "end": 159.2,
+              "speaker": "Speaker_4",
+              "text": "行可以",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 93
+            },
+            {
+              "start": 162.22,
+              "end": 166.18,
+              "speaker": "Speaker_3",
+              "text": "我说要我要我说呀还是发东西",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 94
+            },
+            {
+              "start": 162.23,
+              "end": 164.81,
+              "speaker": "Speaker_2",
+              "text": "是采取什么样的方式，不知道",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 95
+            },
+            {
+              "start": 162.26,
+              "end": 163.81,
+              "speaker": "Speaker_1",
+              "text": "是买什么或者是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 96
+            },
+            {
+              "start": 166.9,
+              "end": 174.93,
+              "speaker": "Speaker_3",
+              "text": "因为为什么呀，这一公一个公司的形象，人家从外头看哟这公司不错，哟大包小包奔奔家递了，邻街邻邻居也看哟这公司不错",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 97
+            },
+            {
+              "start": 175.5,
+              "end": 175.88,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 98
+            },
+            {
+              "start": 175.94,
+              "end": 182.4,
+              "speaker": "Speaker_3",
+              "text": "哎您说呢，假如看着甭管是里头是，甭管里头装装几个鸡蛋，它一一整箱的对吗，假如这",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 99
+            },
+            {
+              "start": 176.88,
+              "end": 177.12,
+              "speaker": "Speaker_4",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 100
+            },
+            {
+              "start": 178.51,
+              "end": 178.87,
+              "speaker": "Speaker_1",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 101
+            },
+            {
+              "start": 181.69,
+              "end": 185.32,
+              "speaker": "Speaker_1",
+              "text": "啊你那意思两千块钱全是买食品是吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 102
+            },
+            {
+              "start": 184.85,
+              "end": 189.12,
+              "speaker": "Speaker_3",
+              "text": "哎你回家有老乡儿看的，说买点儿买点儿看着这行吗",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 103
+            },
+            {
+              "start": 187.72,
+              "end": 191.12,
+              "speaker": "Speaker_4",
+              "text": "对可以那什么可以咱到时候买点儿食品买点儿别的",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 104
+            },
+            {
+              "start": 189.26,
+              "end": 193.62,
+              "speaker": "Speaker_1",
+              "text": "啊你们自己谈，你你你认为是买什么你们自己说，你说说",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 105
+            },
+            {
+              "start": 192.78,
+              "end": 197.66,
+              "speaker": "Speaker_3",
+              "text": "我反正我作为我们一个老乡儿来要买买点儿油什么给老乡儿送礼他看他说对吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 106
+            },
+            {
+              "start": 197.12,
+              "end": 199.02,
+              "speaker": "Speaker_2",
+              "text": "对就是可以买点儿油",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 107
+            },
+            {
+              "start": 197.66,
+              "end": 199.84,
+              "speaker": "Speaker_3",
+              "text": "对吧都是你你",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 108
+            },
+            {
+              "start": 199.34,
+              "end": 208.74,
+              "speaker": "Speaker_1",
+              "text": "那那我问你们啊，就这些东西是在呃什么市场买，是在呃网上买，还是到大型超市去买呀，沃尔玛呀，大中",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 109
+            },
+            {
+              "start": 199.84,
+              "end": 201.68,
+              "speaker": "Speaker_3",
+              "text": "你你",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 110
+            },
+            {
+              "start": 205.0,
+              "end": 205.24,
+              "speaker": "Speaker_2",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 111
+            },
+            {
+              "start": 206.56,
+              "end": 212.37,
+              "speaker": "Speaker_3",
+              "text": "不是也不是要是说要是要是我认为就是就是超市买物物买",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 112
+            },
+            {
+              "start": 208.74,
+              "end": 211.57,
+              "speaker": "Speaker_1",
+              "text": "天客隆啊去学吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 113
+            },
+            {
+              "start": 209.71,
+              "end": 216.53,
+              "speaker": "Speaker_2",
+              "text": "啊实实哎实在一点的买吧，啊对啊对啊对啊对啊",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 114
+            },
+            {
+              "start": 210.55,
+              "end": 211.02,
+              "speaker": "Speaker_4",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 115
+            },
+            {
+              "start": 212.98,
+              "end": 215.06,
+              "speaker": "Speaker_4",
+              "text": "超市批发的肯定好一点儿对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 116
+            },
+            {
+              "start": 214.54,
+              "end": 217.12,
+              "speaker": "Speaker_1",
+              "text": "要不以我来讲，我老上网，我觉着在网上",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 117
+            },
+            {
+              "start": 217.2,
+              "end": 222.5,
+              "speaker": "Speaker_3",
+              "text": "网有时候是怎么说呢，入口的东西还尽量还是超市买去",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 118
+            },
+            {
+              "start": 217.25,
+              "end": 221.0,
+              "speaker": "Speaker_4",
+              "text": "网上有时候儿贵点儿，但是那个东西比较全",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 119
+            },
+            {
+              "start": 220.07,
+              "end": 221.47,
+              "speaker": "Speaker_2",
+              "text": "网上东西比较全",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 120
+            },
+            {
+              "start": 221.66,
+              "end": 222.0,
+              "speaker": "Speaker_1",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 121
+            },
+            {
+              "start": 221.88,
+              "end": 223.07,
+              "speaker": "Speaker_4",
+              "text": "但是那有那什么的",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 122
+            },
+            {
+              "start": 223.13,
+              "end": 224.51,
+              "speaker": "Speaker_2",
+              "text": "你网上的东西",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 123
+            },
+            {
+              "start": 223.62,
+              "end": 225.66,
+              "speaker": "Speaker_1",
+              "text": "我觉着网上还可以",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 124
+            },
+            {
+              "start": 224.51,
+              "end": 227.09,
+              "speaker": "Speaker_3",
+              "text": "嗯还是超市正规点儿",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 125
+            },
+            {
+              "start": 225.17000000000002,
+              "end": 226.32999999999998,
+              "speaker": "Speaker_4",
+              "text": "网上东西比较全",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 126
+            },
+            {
+              "start": 226.66,
+              "end": 231.85,
+              "speaker": "Speaker_1",
+              "text": "你可以找直直销商啊，直销商现在很流行网购啊，真的",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 127
+            },
+            {
+              "start": 228.6,
+              "end": 228.94,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 128
+            },
+            {
+              "start": 229.05,
+              "end": 230.42000000000002,
+              "speaker": "Speaker_3",
+              "text": "直销商我觉得",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 129
+            },
+            {
+              "start": 230.86,
+              "end": 233.19,
+              "speaker": "Speaker_2",
+              "text": "对网上京东的还可以现在",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 130
+            },
+            {
+              "start": 232.82,
+              "end": 235.12,
+              "speaker": "Speaker_1",
+              "text": "呃京东也有京东的也有",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 131
+            },
+            {
+              "start": 233.19,
+              "end": 235.12,
+              "speaker": "Speaker_2",
+              "text": "嗯对对对还是还是",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 132
+            },
+            {
+              "start": 235.35,
+              "end": 237.41,
+              "speaker": "Speaker_3",
+              "text": "我认为我认为不是我是进超市",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 133
+            },
+            {
+              "start": 235.35,
+              "end": 238.32,
+              "speaker": "Speaker_1",
+              "text": "但京东假货多，大商场淘宝也行",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 134
+            },
+            {
+              "start": 237.41,
+              "end": 237.75,
+              "speaker": "Speaker_2",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 135
+            },
+            {
+              "start": 238.88,
+              "end": 241.56,
+              "speaker": "Speaker_3",
+              "text": "我进超市对嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 136
+            },
+            {
+              "start": 239.04,
+              "end": 240.84,
+              "speaker": "Speaker_2",
+              "text": "嗯超市也行",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 137
+            },
+            {
+              "start": 239.88,
+              "end": 243.78,
+              "speaker": "Speaker_1",
+              "text": "啊你进超市，但是你去了超市它是二道商，它比较贵",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 138
+            },
+            {
+              "start": 243.94,
+              "end": 244.98,
+              "speaker": "Speaker_4",
+              "text": "就是比较贵",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 139
+            },
+            {
+              "start": 244.32,
+              "end": 249.59,
+              "speaker": "Speaker_3",
+              "text": "对他要有网的，因为因为咱们买的，因为咱们买的全是入口的东西，对吧",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 140
+            },
+            {
+              "start": 244.98,
+              "end": 247.37,
+              "speaker": "Speaker_1",
+              "text": "比较贵那就是你你你和两千块钱",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 141
+            },
+            {
+              "start": 248.56,
+              "end": 253.74,
+              "speaker": "Speaker_4",
+              "text": "哎我这我觉得咱们买东西还不如说超市不如发员工那什么那",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 142
+            },
+            {
+              "start": 249.19,
+              "end": 251.32,
+              "speaker": "Speaker_1",
+              "text": "你要这样儿，你可能就没花钱",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 143
+            },
+            {
+              "start": 253.38,
+              "end": 253.63,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 144
+            },
+            {
+              "start": 253.82000000000002,
+              "end": 255.71,
+              "speaker": "Speaker_1",
+              "text": "那超市那会员那超市那卡",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 0
+            },
+            {
+              "start": 255.44,
+              "end": 255.95000000000002,
+              "speaker": "Speaker_2",
+              "text": "反正你",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 1
+            },
+            {
+              "start": 255.94,
+              "end": 256.82,
+              "speaker": "Speaker_3",
+              "text": "那也可以",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 2
+            },
+            {
+              "start": 255.96,
+              "end": 260.48,
+              "speaker": "Speaker_4",
+              "text": "那那不行啊那不行有有的有的有的员工对",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 3
+            },
+            {
+              "start": 257.11,
+              "end": 265.85,
+              "speaker": "Speaker_3",
+              "text": "她的意思呢就是把这钱呃换成卡就比如说家乐福你拿这个钱买点东西家乐福的嘛是吧",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 4
+            },
+            {
+              "start": 261.21000000000004,
+              "end": 261.52,
+              "speaker": "Speaker_1",
+              "text": "对",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 5
+            },
+            {
+              "start": 262.91,
+              "end": 263.18,
+              "speaker": "Speaker_4",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 6
+            },
+            {
+              "start": 263.55,
+              "end": 264.48,
+              "speaker": "Speaker_1",
+              "text": "对家乐福的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 7
+            },
+            {
+              "start": 264.55,
+              "end": 280.15000000000003,
+              "speaker": "Speaker_4",
+              "text": "不是你听着这发东西呢是一个事儿一个为了拿东西人家说说这公司的形象问题让人看又这公司在我不是让人看着又这这个买卖这个人家这这个促销小团体也不错跟打广告时候这个团体真的不错",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 8
+            },
+            {
+              "start": 270.90000000000003,
+              "end": 274.49,
+              "speaker": "Speaker_1",
+              "text": "不是这形象留人留下问题这是个问题嘛",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 9
+            },
+            {
+              "start": 274.89,
+              "end": 278.59000000000003,
+              "speaker": "Speaker_3",
+              "text": "我跟你说啊我跟你说啊我不是那个意思",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 10
+            },
+            {
+              "start": 277.57,
+              "end": 278.17,
+              "speaker": "Speaker_1",
+              "text": "啊",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 11
+            },
+            {
+              "start": 279.3,
+              "end": 280.1,
+              "speaker": "Speaker_3",
+              "text": "你的意思",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 12
+            },
+            {
+              "start": 280.45,
+              "end": 281.08,
+              "speaker": "Speaker_2",
+              "text": "嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 13
+            },
+            {
+              "start": 281.19,
+              "end": 286.7,
+              "speaker": "Speaker_3",
+              "text": "你的意思给钱给钱其实自己拿卡去购物",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 14
+            },
+            {
+              "start": 283.33,
+              "end": 284.98,
+              "speaker": "Speaker_4",
+              "text": "不好给放还是",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 15
+            },
+            {
+              "start": 286.78000000000003,
+              "end": 289.22,
+              "speaker": "Speaker_2",
+              "text": "对那也行我觉得这样嗯",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 16
+            },
+            {
+              "start": 287.45,
+              "end": 293.36,
+              "speaker": "Speaker_4",
+              "text": "那也行拿给卡购物去哎对这也这这也挺好的",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 17
+            },
+            {
+              "start": 289.48,
+              "end": 292.0,
+              "speaker": "Speaker_3",
+              "text": "你买回家的老油老酱油老酱",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 18
+            },
+            {
+              "start": 290.33000000000004,
+              "end": 299.41,
+              "speaker": "Speaker_2",
+              "text": "我觉得我觉得一般一般人都方便要卡唉一般人都要卡唉一般都",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 19
+            },
+            {
+              "start": 293.46000000000004,
+              "end": 298.38,
+              "speaker": "Speaker_3",
+              "text": "你的意思把这东西挪到咱们开会的时候给大家发这是你的意思吗",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 20
+            },
+            {
+              "start": 295.05,
+              "end": 299.41,
+              "speaker": "Speaker_1",
+              "text": "给卡还方便点儿对给卡还方便点儿要是自个儿领钱",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 21
+            },
+            {
+              "start": 299.41,
+              "end": 301.15,
+              "speaker": "Speaker_2",
+              "text": "要钱不中我就愿意要卡",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 22
+            }
+          ]
         }
       ]
     },
@@ -31316,7 +33351,7 @@
             {
               "source": "100_results/soulx-transcriber-results/SmoothConv_DuplexConv::1767604747_yZ95W3sEa9_seg91_92_93_active.json",
               "sha256": "daf34e5d9577600c5472feb56801322e1b78ce42613c977be1234f5a470a9e14",
-              "source_start_seconds": 0
+              "source_start_seconds": 0.0
             }
           ],
           "segments": [
@@ -52519,24 +54554,738 @@
         },
         {
           "system_id": "soulx",
-          "status": "unmapped",
+          "status": "available",
           "invalid_timestamps": 0,
-          "warnings": [
-            "Source offsets for split inputs are unavailable."
-          ],
+          "warnings": [],
           "sources": [
             {
               "source": "100_results/soulx-transcriber-results/BenchFilms_ZH::000102_part014__part0000.json",
               "sha256": "7e61a2cbb90c24e584edb7aa2dd8f3a7530f6e1fa305b85e2757aa1ea77330e3",
-              "source_start_seconds": null
+              "source_start_seconds": 0.0,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 185.19
             },
             {
               "source": "100_results/soulx-transcriber-results/BenchFilms_ZH::000102_part014__part0001.json",
               "sha256": "eb62f20715ce3c16cae30e828428b0df28c3fd6eecb71c26391b5d1ec71739bd",
-              "source_start_seconds": null
+              "source_start_seconds": 185.19,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 179.84
             }
           ],
-          "segments": []
+          "segments": [
+            {
+              "start": 9.58,
+              "end": 17.26,
+              "speaker": "Speaker_1",
+              "text": "Deal. Call it fist bump, by the way.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 0
+            },
+            {
+              "start": 20.33,
+              "end": 25.61,
+              "speaker": "Speaker_1",
+              "text": "What's that? Fist my bum. No, it's fist bump.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 1
+            },
+            {
+              "start": 28.54,
+              "end": 29.56,
+              "speaker": "Speaker_1",
+              "text": "It's not the same.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 2
+            },
+            {
+              "start": 32.7,
+              "end": 36.82,
+              "speaker": "Speaker_1",
+              "text": "Exactly. The astrophage has to reach Talcedi, otherwise we wouldn't see the petrobo.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 3
+            },
+            {
+              "start": 41.31,
+              "end": 42.14,
+              "speaker": "Speaker_1",
+              "text": "Ho ho ho.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 4
+            },
+            {
+              "start": 45.22,
+              "end": 46.66,
+              "speaker": "Speaker_1",
+              "text": "Do we really need this whole model?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 5
+            },
+            {
+              "start": 49.38,
+              "end": 50.0,
+              "speaker": "Speaker_1",
+              "text": "Right.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 6
+            },
+            {
+              "start": 52.77,
+              "end": 58.22,
+              "speaker": "Speaker_1",
+              "text": "Oh boy. You know, I used to have one of these in my classroom and it was a lot simpler to set up.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 7
+            },
+            {
+              "start": 62.86,
+              "end": 64.06,
+              "speaker": "Speaker_1",
+              "text": "One sec. What what",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 8
+            },
+            {
+              "start": 65.59,
+              "end": 66.72,
+              "speaker": "Speaker_1",
+              "text": "That is a great question.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 9
+            },
+            {
+              "start": 68.66,
+              "end": 70.7,
+              "speaker": "Speaker_1",
+              "text": "You know what? Try this.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 10
+            },
+            {
+              "start": 71.42,
+              "end": 74.66,
+              "speaker": "Speaker_2",
+              "text": "Why is a school teacher in space? Question.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 11
+            },
+            {
+              "start": 76.98,
+              "end": 79.1,
+              "speaker": "Speaker_2",
+              "text": "No. Don't like that voice.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 12
+            },
+            {
+              "start": 79.22,
+              "end": 80.22,
+              "speaker": "Speaker_1",
+              "text": "Can't unhear it, really.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 13
+            },
+            {
+              "start": 80.3,
+              "end": 80.86,
+              "speaker": "Speaker_2",
+              "text": "Scary.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 14
+            },
+            {
+              "start": 81.86,
+              "end": 82.98,
+              "speaker": "Speaker_1",
+              "text": "Let's try this.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 15
+            },
+            {
+              "start": 83.98,
+              "end": 87.58,
+              "speaker": "Speaker_3",
+              "text": "Ooh, why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 16
+            },
+            {
+              "start": 84.98,
+              "end": 89.1,
+              "speaker": "Speaker_1",
+              "text": "Nope, nope, no need, no need to even continue. Good note.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 17
+            },
+            {
+              "start": 89.7,
+              "end": 91.74,
+              "speaker": "Speaker_4",
+              "text": "Why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 18
+            },
+            {
+              "start": 93.22,
+              "end": 94.62,
+              "speaker": "Speaker_4",
+              "text": "What's so funny? Question.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 19
+            },
+            {
+              "start": 95.02000000000001,
+              "end": 97.94,
+              "speaker": "Speaker_2",
+              "text": "Why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 20
+            },
+            {
+              "start": 97.94,
+              "end": 98.58,
+              "speaker": "Speaker_1",
+              "text": "I mean",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 21
+            },
+            {
+              "start": 98.42,
+              "end": 100.3,
+              "speaker": "Speaker_2",
+              "text": "It has charm, but no.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 22
+            },
+            {
+              "start": 100.42,
+              "end": 100.94,
+              "speaker": "Speaker_1",
+              "text": "Meryl Streep?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 23
+            },
+            {
+              "start": 101.86,
+              "end": 103.82,
+              "speaker": "Speaker_5",
+              "text": "Why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 24
+            },
+            {
+              "start": 105.66,
+              "end": 106.7,
+              "speaker": "Speaker_1",
+              "text": "She can do anything.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 25
+            },
+            {
+              "start": 107.86,
+              "end": 110.1,
+              "speaker": "Speaker_6",
+              "text": "Why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 26
+            },
+            {
+              "start": 111.42,
+              "end": 112.34,
+              "speaker": "Speaker_2",
+              "text": "Oh oh oh oh, excellent.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 27
+            },
+            {
+              "start": 114.18,
+              "end": 116.5,
+              "speaker": "Speaker_7",
+              "text": "Why is a school teacher in space?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 28
+            },
+            {
+              "start": 117.97999999999999,
+              "end": 118.62,
+              "speaker": "Speaker_1",
+              "text": "That's not bad.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 29
+            },
+            {
+              "start": 119.58,
+              "end": 120.06,
+              "speaker": "Speaker_8",
+              "text": "I like.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 30
+            },
+            {
+              "start": 120.42,
+              "end": 127.5,
+              "speaker": "Speaker_1",
+              "text": "All right. And in answer to your question, I have no idea what I'm doing in space. I don't remember.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 31
+            },
+            {
+              "start": 129.46,
+              "end": 132.02,
+              "speaker": "Speaker_9",
+              "text": "Is okay. Grace find out when Grace go home.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 32
+            },
+            {
+              "start": 136.62,
+              "end": 137.46,
+              "speaker": "Speaker_1",
+              "text": "I want to go to sleep.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 33
+            },
+            {
+              "start": 138.34,
+              "end": 139.74,
+              "speaker": "Speaker_10",
+              "text": "Hmm, no understand. Word.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 34
+            },
+            {
+              "start": 141.26,
+              "end": 144.7,
+              "speaker": "Speaker_1",
+              "text": "Sleep? Uh, just uh, go like this?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 35
+            },
+            {
+              "start": 145.5,
+              "end": 148.26,
+              "speaker": "Speaker_11",
+              "text": "Die? It's dying. Die? No, no, no, no, no.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 36
+            },
+            {
+              "start": 148.26,
+              "end": 151.94,
+              "speaker": "Speaker_1",
+              "text": "Not die. Just lay here for twenty nine thousand seconds and then we",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 37
+            },
+            {
+              "start": 153.62,
+              "end": 154.26,
+              "speaker": "Speaker_1",
+              "text": "wake up.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 38
+            },
+            {
+              "start": 154.42000000000002,
+              "end": 157.26,
+              "speaker": "Speaker_12",
+              "text": "Oh, understand. We call this",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 39
+            },
+            {
+              "start": 158.86,
+              "end": 161.06,
+              "speaker": "Speaker_1",
+              "text": "Okay, here we go. Sleep.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 40
+            },
+            {
+              "start": 164.86,
+              "end": 165.42000000000002,
+              "speaker": "Speaker_1",
+              "text": "Good night, sir.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 41
+            },
+            {
+              "start": 166.46,
+              "end": 167.54,
+              "speaker": "Speaker_13",
+              "text": "I watch great sleep.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 42
+            },
+            {
+              "start": 167.74,
+              "end": 170.02,
+              "speaker": "Speaker_1",
+              "text": "No, that's fine. That's a little weird. Maybe",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 43
+            },
+            {
+              "start": 171.38,
+              "end": 172.38,
+              "speaker": "Speaker_1",
+              "text": "I'll be good. Good night.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 44
+            },
+            {
+              "start": 172.42000000000002,
+              "end": 174.42000000000002,
+              "speaker": "Speaker_14",
+              "text": "Not safe. Iradians must watch sleep.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 45
+            },
+            {
+              "start": 174.82,
+              "end": 178.66,
+              "speaker": "Speaker_1",
+              "text": "That's really interesting. That sounds like something uh, can unpack that tomorrow.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 46
+            },
+            {
+              "start": 182.1,
+              "end": 184.34,
+              "speaker": "Speaker_15",
+              "text": "Rugby watch crew many days.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 47
+            },
+            {
+              "start": 186.17,
+              "end": 187.89,
+              "speaker": "Speaker_1",
+              "text": "Kronum, wake up.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 0
+            },
+            {
+              "start": 194.94,
+              "end": 195.85999999999999,
+              "speaker": "Speaker_2",
+              "text": "That's where you're gonna be?",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 1
+            },
+            {
+              "start": 196.16,
+              "end": 198.76,
+              "speaker": "Speaker_1",
+              "text": "No, it's usually closer on your chest.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 2
+            },
+            {
+              "start": 199.19,
+              "end": 201.59,
+              "speaker": "Speaker_2",
+              "text": "I wonder if it would work from a little farther back.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 3
+            },
+            {
+              "start": 202.26,
+              "end": 204.16,
+              "speaker": "Speaker_1",
+              "text": "But Grace won't feel comfortable and safe.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 4
+            },
+            {
+              "start": 204.57999999999998,
+              "end": 207.42,
+              "speaker": "Speaker_2",
+              "text": "Well, I'm... And look, I'm seeing uh um...",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 5
+            },
+            {
+              "start": 208.72,
+              "end": 213.9,
+              "speaker": "Speaker_2",
+              "text": "So many sides of you lately, and it's great. Right now I'm seeing the underside of you.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 6
+            },
+            {
+              "start": 218.66,
+              "end": 220.86,
+              "speaker": "Speaker_2",
+              "text": "Kind of a side sleeper anyway. Good night.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 7
+            },
+            {
+              "start": 224.24,
+              "end": 226.14,
+              "speaker": "Speaker_2",
+              "text": "So we watch each other sleep.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 8
+            },
+            {
+              "start": 229.24,
+              "end": 238.07999999999998,
+              "speaker": "Speaker_2",
+              "text": "Iradians don't sleep like a human does. They seem legitimately paralyzed. If danger comes, you can't wake up. It's a survival norm.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 9
+            },
+            {
+              "start": 240.16,
+              "end": 241.72,
+              "speaker": "Speaker_2",
+              "text": "Someone has to keep you safe.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 10
+            },
+            {
+              "start": 258.56,
+              "end": 261.32,
+              "speaker": "Speaker_3",
+              "text": "My team, I want you to meet Dr. Rylan Grace.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 11
+            },
+            {
+              "start": 262.88,
+              "end": 272.03999999999996,
+              "speaker": "Speaker_3",
+              "text": "He is currently the world's leading authority in astrophage biology. Dr. Grace, these are the three astronauts going on the mission and their backups for redundancy.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 12
+            },
+            {
+              "start": 273.0,
+              "end": 278.0,
+              "speaker": "Speaker_3",
+              "text": "Yao, El Yucna, and Dubois. Our pilot, engineer, and science officer.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 13
+            },
+            {
+              "start": 281.76,
+              "end": 287.2,
+              "speaker": "Speaker_2",
+              "text": "It's an honor. I'm excited to share what I've learned about astrophage and spin drives.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 14
+            },
+            {
+              "start": 287.3,
+              "end": 287.64,
+              "speaker": "Speaker_4",
+              "text": "We have",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 15
+            },
+            {
+              "start": 287.94,
+              "end": 292.0,
+              "speaker": "Speaker_2",
+              "text": "One thousand and nine of these little engines that could on the Hail Mary and uh...",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 16
+            },
+            {
+              "start": 292.0,
+              "end": 294.15999999999997,
+              "speaker": "Speaker_5",
+              "text": "那为什么对人像小孩一样",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 17
+            },
+            {
+              "start": 295.32,
+              "end": 297.72,
+              "speaker": "Speaker_6",
+              "text": "无所谓慢慢就是了",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 18
+            },
+            {
+              "start": 298.76,
+              "end": 299.32,
+              "speaker": "Speaker_5",
+              "text": "Okay.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 19
+            },
+            {
+              "start": 300.08,
+              "end": 300.88,
+              "speaker": "Speaker_7",
+              "text": "You're doing great.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 20
+            },
+            {
+              "start": 300.88,
+              "end": 301.2,
+              "speaker": "Speaker_2",
+              "text": "What?",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 21
+            },
+            {
+              "start": 302.76,
+              "end": 309.08,
+              "speaker": "Speaker_5",
+              "text": "Once the mission is complete, we have the option to end our lives on our terms.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 22
+            },
+            {
+              "start": 309.24,
+              "end": 312.44,
+              "speaker": "Speaker_8",
+              "text": "The alternative is slow, miserable death by starvation.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 23
+            },
+            {
+              "start": 312.6,
+              "end": 315.4,
+              "speaker": "Speaker_9",
+              "text": "I want to do a lethal injection with a little bit of heroin.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 24
+            },
+            {
+              "start": 315.64,
+              "end": 317.36,
+              "speaker": "Speaker_10",
+              "text": "I will have what she's having.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 25
+            },
+            {
+              "start": 318.96000000000004,
+              "end": 332.96000000000004,
+              "speaker": "Speaker_11",
+              "text": "Following on from Dr. Grace's discovery, we've built an IR emitter set to the wavelength of CO2, which attracts the astrophage to this revolving face. The drive then rotates outwards.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 26
+            },
+            {
+              "start": 333.4,
+              "end": 340.91999999999996,
+              "speaker": "Speaker_11",
+              "text": "We increase the IR, the astrophage get excited, thrust the ship forward, and so on, so on.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 27
+            },
+            {
+              "start": 341.44,
+              "end": 347.76,
+              "speaker": "Speaker_2",
+              "text": "This is less than a gram of astrophage, and we only need a fraction of this for this demonstration. If you wanna take a look.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 28
+            },
+            {
+              "start": 348.48,
+              "end": 349.08,
+              "speaker": "Speaker_11",
+              "text": "To do what?",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 29
+            },
+            {
+              "start": 350.03999999999996,
+              "end": 351.72,
+              "speaker": "Speaker_2",
+              "text": "To melt a metric ton of metal.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 30
+            }
+          ]
         }
       ]
     },
@@ -56193,54 +58942,699 @@
         },
         {
           "system_id": "soulx",
-          "status": "unmapped",
+          "status": "available",
           "invalid_timestamps": 0,
-          "warnings": [
-            "Source offsets for split inputs are unavailable."
-          ],
+          "warnings": [],
           "sources": [
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0000.json",
               "sha256": "702661ab2aa09377c95bea40925d19daf5ef948aff2959d615958f3a5a572feb",
-              "source_start_seconds": null
+              "source_start_seconds": 0.0,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 189.54
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0001.json",
               "sha256": "6ab90ebdda745c11519b1d8226d446aa9c5a8b80577513e2eceebe8993cb8d1c",
-              "source_start_seconds": null
+              "source_start_seconds": 189.54,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 283.85
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0002.json",
               "sha256": "2d8438e589926c3fb338faf1f8d22287c463e502cc0f8bcbf51e6f7eda385e72",
-              "source_start_seconds": null
+              "source_start_seconds": 473.39,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 251.69
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0003.json",
               "sha256": "9147584c32fa18901fbcaea65710fb84f978abc4164c35d0dee877b34f3dcadc",
-              "source_start_seconds": null
+              "source_start_seconds": 725.08,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 210.23
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0004.json",
               "sha256": "65ca090510d5c67f5965c2e4df1982e637d83caf9d976dfbbf112c9089bb39ef",
-              "source_start_seconds": null
+              "source_start_seconds": 935.31,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 269.8
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0005.json",
               "sha256": "503c3b9069cde5484cee074118c4e7dea2426d4bde0d63ef63be42d22839301c",
-              "source_start_seconds": null
+              "source_start_seconds": 1205.1100000000001,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 158.91
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0006.json",
               "sha256": "6be4fb1850c5c8f0e75fafc34459ee7b9d8a9b4739946602efcc21547b850d50",
-              "source_start_seconds": null
+              "source_start_seconds": 1364.02,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 257.82
             },
             {
               "source": "100_results/soulx-transcriber-results/MLC-SLM_Workshop-Evaluation_Set_1::English__1126_003_phone__part0007.json",
               "sha256": "4cb78758a9444e54da8f16cefcd5f5c1f617c8dc6ce3d8c00e5cbb9658018ae6",
-              "source_start_seconds": null
+              "source_start_seconds": 1621.84,
+              "offset_method": "contiguous_result_durations",
+              "source_duration_seconds": 253.4791875
             }
           ],
-          "segments": []
+          "segments": [
+            {
+              "start": 0.98,
+              "end": 10.37,
+              "speaker": "Speaker_1",
+              "text": "Australian English Project Collection. I am Recorder One, Louise De Villiers. The topic is movie and television.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 0
+            },
+            {
+              "start": 11.98,
+              "end": 18.75,
+              "speaker": "Speaker_2",
+              "text": "Australian English Project Collection. I'm Recorder Two, Evelyn De Villiers. The topic is movies and television.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 1
+            },
+            {
+              "start": 19.62,
+              "end": 23.72,
+              "speaker": "Speaker_1",
+              "text": "Yes, so what can we say about movies and television? A lot.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 2
+            },
+            {
+              "start": 24.18,
+              "end": 25.34,
+              "speaker": "Speaker_2",
+              "text": "Yeah, um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 3
+            },
+            {
+              "start": 27.45,
+              "end": 36.28,
+              "speaker": "Speaker_2",
+              "text": "Very there's a there's a huge variety, um you know, there's action, horror, love horror, um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 4
+            },
+            {
+              "start": 40.19,
+              "end": 41.02,
+              "speaker": "Speaker_1",
+              "text": "Animated.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 5
+            },
+            {
+              "start": 41.17,
+              "end": 43.06,
+              "speaker": "Speaker_2",
+              "text": "Animated. I love animation.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 6
+            },
+            {
+              "start": 43.1,
+              "end": 43.76,
+              "speaker": "Speaker_1",
+              "text": "Um yeah.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 7
+            },
+            {
+              "start": 43.81,
+              "end": 46.16,
+              "speaker": "Speaker_2",
+              "text": "Fantasy, thriller.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 8
+            },
+            {
+              "start": 48.62,
+              "end": 49.34,
+              "speaker": "Speaker_1",
+              "text": "A lot.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 9
+            },
+            {
+              "start": 49.62,
+              "end": 51.12,
+              "speaker": "Speaker_2",
+              "text": "What would you say is your favorite?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 10
+            },
+            {
+              "start": 52.43,
+              "end": 58.84,
+              "speaker": "Speaker_1",
+              "text": "It would have to be um a- animation, probably. I mean, I wouldn't say animation is a genre,",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 11
+            },
+            {
+              "start": 59.18,
+              "end": 67.91,
+              "speaker": "Speaker_2",
+              "text": "But um style wise it is my favourite. There's a lot, I mean two D animations specifically, there's like a lot you can experiment with.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 12
+            },
+            {
+              "start": 68.41,
+              "end": 76.83,
+              "speaker": "Speaker_1",
+              "text": "I suppose. Um you can change the frame rate and stuff and it makes things move more quickly or slowly depending on what you set it as um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 13
+            },
+            {
+              "start": 79.33,
+              "end": 88.0,
+              "speaker": "Speaker_1",
+              "text": "Characters usually can be explored more properly just by their appearances because you have a lot of freedom with height and design and stuff and.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 14
+            },
+            {
+              "start": 88.12,
+              "end": 94.28,
+              "speaker": "Speaker_1",
+              "text": "You can usually tell what they are like just one with just one look at them if if you're if you're a good designer that is.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 15
+            },
+            {
+              "start": 94.53,
+              "end": 103.33,
+              "speaker": "Speaker_2",
+              "text": "Yeah, and the good thing about animation, I think, is that you can obviously you can do a lot more in terms of effects.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 16
+            },
+            {
+              "start": 103.75,
+              "end": 104.11,
+              "speaker": "Speaker_1",
+              "text": "Yeah.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 17
+            },
+            {
+              "start": 104.78,
+              "end": 105.42,
+              "speaker": "Speaker_2",
+              "text": "Yeah.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 18
+            },
+            {
+              "start": 105.58,
+              "end": 109.56,
+              "speaker": "Speaker_1",
+              "text": "Looks less awkward um and more flowy, I suppose.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 19
+            },
+            {
+              "start": 110.47999999999999,
+              "end": 119.28,
+              "speaker": "Speaker_2",
+              "text": "Yeah, um and we can't talk about animation without mentioning Bob's Burgers.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 20
+            },
+            {
+              "start": 120.95,
+              "end": 121.69,
+              "speaker": "Speaker_1",
+              "text": "Best show ever.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 21
+            },
+            {
+              "start": 121.84,
+              "end": 123.72,
+              "speaker": "Speaker_2",
+              "text": "Best show ever. Number one.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 22
+            },
+            {
+              "start": 124.69,
+              "end": 125.5,
+              "speaker": "Speaker_1",
+              "text": "In the world.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 23
+            },
+            {
+              "start": 125.81,
+              "end": 126.84,
+              "speaker": "Speaker_2",
+              "text": "On both our lists.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 24
+            },
+            {
+              "start": 128.41,
+              "end": 132.75,
+              "speaker": "Speaker_1",
+              "text": "Incredible. Um I do love how um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 25
+            },
+            {
+              "start": 134.03,
+              "end": 142.03,
+              "speaker": "Speaker_1",
+              "text": "The family is portrayed. It's very different compared to, say, The Simpsons or Family Guy, mostly because the whole dynamic for those,",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 26
+            },
+            {
+              "start": 142.25,
+              "end": 150.75,
+              "speaker": "Speaker_1",
+              "text": "for most adult animation is comedy. That's mostly talking about like abuse and stuff, like how Homer Simpson likes to strangle Bart a lot whenever he does anything wrong.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 27
+            },
+            {
+              "start": 151.19,
+              "end": 159.25,
+              "speaker": "Speaker_1",
+              "text": "Or um how Peter Griffin constantly um neglects Meg all the time and says that she doesn't matter, that kind of thing. But um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 28
+            },
+            {
+              "start": 159.38,
+              "end": 160.81,
+              "speaker": "Speaker_2",
+              "text": "Is is Meg the daughter?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 29
+            },
+            {
+              "start": 160.97,
+              "end": 162.19,
+              "speaker": "Speaker_1",
+              "text": "Yes, Meg Griffin. She's.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 30
+            },
+            {
+              "start": 162.22,
+              "end": 162.94,
+              "speaker": "Speaker_2",
+              "text": "Oh right, okay.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 31
+            },
+            {
+              "start": 162.97,
+              "end": 163.72,
+              "speaker": "Speaker_1",
+              "text": "No one likes her.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 32
+            },
+            {
+              "start": 165.03,
+              "end": 168.12,
+              "speaker": "Speaker_1",
+              "text": "It's quite unfortunate. Literally everyone hates her.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 33
+            },
+            {
+              "start": 169.59,
+              "end": 170.44,
+              "speaker": "Speaker_2",
+              "text": "Is she annoying?",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 34
+            },
+            {
+              "start": 170.88,
+              "end": 171.75,
+              "speaker": "Speaker_1",
+              "text": "No, she's fine.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 35
+            },
+            {
+              "start": 172.59,
+              "end": 173.75,
+              "speaker": "Speaker_1",
+              "text": "I don't know why everyone hates her.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 36
+            },
+            {
+              "start": 173.81,
+              "end": 174.62,
+              "speaker": "Speaker_2",
+              "text": "So it's just a.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 37
+            },
+            {
+              "start": 174.91,
+              "end": 175.53,
+              "speaker": "Speaker_1",
+              "text": "It's a gag.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 38
+            },
+            {
+              "start": 175.56,
+              "end": 176.47,
+              "speaker": "Speaker_2",
+              "text": "Right, it's a gag.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 39
+            },
+            {
+              "start": 176.5,
+              "end": 177.94,
+              "speaker": "Speaker_1",
+              "text": "It's a non-running gag, um.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 40
+            },
+            {
+              "start": 178.19,
+              "end": 181.56,
+              "speaker": "Speaker_1",
+              "text": "Yeah. And South Park too. South Park's known for its dark humor.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 41
+            },
+            {
+              "start": 181.59,
+              "end": 183.56,
+              "speaker": "Speaker_2",
+              "text": "Uh South Park, yes.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 42
+            },
+            {
+              "start": 183.62,
+              "end": 188.88,
+              "speaker": "Speaker_1",
+              "text": "Sexual assault, pedophilia, everything, um anything they get their hands on.",
+              "valid_timing": true,
+              "source_unit": 0,
+              "source_segment": 43
+            },
+            {
+              "start": 190.20999999999998,
+              "end": 193.51999999999998,
+              "speaker": "Speaker_1",
+              "text": "Evolution, Christianity, atheism, no one is safe.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 0
+            },
+            {
+              "start": 194.16,
+              "end": 195.64,
+              "speaker": "Speaker_2",
+              "text": "No one is safe, that's for sure.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 1
+            },
+            {
+              "start": 195.66,
+              "end": 196.45999999999998,
+              "speaker": "Speaker_1",
+              "text": "Celebrities too.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 2
+            },
+            {
+              "start": 197.2,
+              "end": 197.92,
+              "speaker": "Speaker_2",
+              "text": "Anyway.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 3
+            },
+            {
+              "start": 198.0,
+              "end": 209.64,
+              "speaker": "Speaker_1",
+              "text": "Um, yeah, so all those, but Bob's Burgers, um I feel like it's a child friendly one of adult animation because its humour mainly comes in awkwardness.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 4
+            },
+            {
+              "start": 210.2,
+              "end": 217.0,
+              "speaker": "Speaker_1",
+              "text": "And just really stupid stuff. Like you kind of just sometimes characters say things and you're just left thinking what just happened.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 5
+            },
+            {
+              "start": 217.07999999999998,
+              "end": 217.56,
+              "speaker": "Speaker_1",
+              "text": "Um.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 6
+            },
+            {
+              "start": 218.35999999999999,
+              "end": 220.84,
+              "speaker": "Speaker_2",
+              "text": "Yeah, it still reflects family life.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 7
+            },
+            {
+              "start": 221.12,
+              "end": 229.0,
+              "speaker": "Speaker_1",
+              "text": "Yeah, it reflects it like, you know, it's good because Bob Belcher is actually a healthy father. He doesn't, you know, he loves his kids obviously. He was a bit.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 8
+            },
+            {
+              "start": 229.48,
+              "end": 237.95999999999998,
+              "speaker": "Speaker_1",
+              "text": "Off the rails in the earlier seasons, but like nowadays he's a lot more, I don't know, he's just, he's a very good example for a father figure, I would say.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 9
+            },
+            {
+              "start": 238.39999999999998,
+              "end": 238.88,
+              "speaker": "Speaker_1",
+              "text": "Um.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 10
+            },
+            {
+              "start": 239.0,
+              "end": 241.56,
+              "speaker": "Speaker_2",
+              "text": "I think so. He's a lot more normal than Linda.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 11
+            },
+            {
+              "start": 242.0,
+              "end": 242.68,
+              "speaker": "Speaker_1",
+              "text": "Yeah.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 12
+            },
+            {
+              "start": 243.16,
+              "end": 253.28,
+              "speaker": "Speaker_1",
+              "text": "That's kind of what I love about that dynamic. Like, Linda's really loud and likes to sing and Bob's a lot more reserved and um, you know, Jean obviously takes after Linda.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 13
+            },
+            {
+              "start": 253.76,
+              "end": 255.83999999999997,
+              "speaker": "Speaker_1",
+              "text": "Ah, more, and Tina takes after her father.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 14
+            },
+            {
+              "start": 256.52,
+              "end": 257.32,
+              "speaker": "Speaker_2",
+              "text": "Definitely.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 15
+            },
+            {
+              "start": 257.44,
+              "end": 260.2,
+              "speaker": "Speaker_1",
+              "text": "I would argue that Louise Belcher is like a mix of the two.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 16
+            },
+            {
+              "start": 260.28,
+              "end": 260.76,
+              "speaker": "Speaker_2",
+              "text": "Um.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 17
+            },
+            {
+              "start": 261.2,
+              "end": 264.03999999999996,
+              "speaker": "Speaker_1",
+              "text": "She's cause she's not very smiley, but she's.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 18
+            },
+            {
+              "start": 264.82,
+              "end": 275.26,
+              "speaker": "Speaker_1",
+              "text": "She has got confidence, the confidence that Bob lacks, and she also, but she's also got that sort of moral, I mean, not moral, but the grounding ness that Bob has.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 19
+            },
+            {
+              "start": 275.52,
+              "end": 276.91999999999996,
+              "speaker": "Speaker_2",
+              "text": "I think you could say moral.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 20
+            },
+            {
+              "start": 277.4,
+              "end": 278.15999999999997,
+              "speaker": "Speaker_1",
+              "text": "I suppose.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 21
+            },
+            {
+              "start": 278.28,
+              "end": 282.15999999999997,
+              "speaker": "Speaker_2",
+              "text": "You know, in the end, she always comes around and does the right thing.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 22
+            },
+            {
+              "start": 283.56,
+              "end": 286.56,
+              "speaker": "Speaker_2",
+              "text": "Even though she's often the one who causes the trouble.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 23
+            },
+            {
+              "start": 287.2,
+              "end": 290.98,
+              "speaker": "Speaker_1",
+              "text": "Yeah, I don't, I mean, she's okay. I don't really like her for that, just because.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 24
+            },
+            {
+              "start": 291.68,
+              "end": 299.84,
+              "speaker": "Speaker_1",
+              "text": "I just think it's good to respect your um authority figures, so I don't really like how she goes around just um, you know, going like.",
+              "valid_timing": true,
+              "source_unit": 1,
+              "source_segment": 25
+            }
+          ]
         }
       ]
     }

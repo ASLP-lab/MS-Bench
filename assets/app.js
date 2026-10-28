@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261018-sample-names";
+const DATA_VERSION = "20261029-output-backfill";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
@@ -401,7 +401,7 @@ function syncSampleNavigation() {
 }
 
 function comparisonColumn(title, segments, output = null) {
-  const statusNames = { available: "Output available", partial: "Partial or incomplete output", invalid: "Output has timestamp or model-identity issues", missing: "No output available", unmapped: "Excerpt timing unavailable" };
+  const statusNames = { available: "Output available", partial: "Partial or incomplete output", invalid: "Output has timestamp or model-identity issues", missing: "No output available", failed: "Inference failed", unmapped: "Excerpt timing unavailable" };
   const status = output ? statusNames[output.status] || "Output unavailable" : "Reference transcript";
   const speakerKey = segment => `${segment.source_unit ?? "reference"}:${segment.speaker}`;
   const speakers = [...new Set(segments.map(speakerKey))];
@@ -411,7 +411,7 @@ function comparisonColumn(title, segments, output = null) {
     return segment.valid_timing === false
       ? `<div class="comparison-line invalid" style="--speaker:${color}">${body}<em>Invalid interval</em></div>`
       : `<button type="button" class="comparison-line" title="Play from ${formatTime(Math.max(0, segment.start))}" style="--speaker:${color}" data-comparison-index="${index}" data-start="${Math.max(0, segment.start)}" data-end="${segment.end}">${body}</button>`;
-  }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterances are available in this audio example."}</p>`}</div></article>`;
+  }).join("") : `<p class="comparison-empty">${output?.status === "unmapped" ? "This split output cannot be aligned to the excerpt with the available timing metadata." : output?.status === "failed" ? "The model did not return a transcript for this recording." : output?.status === "missing" ? "No result was found for this recording." : "No transcribed utterances are available in this audio example."}</p>`}</div></article>`;
 }
 
 function updateComparisonPlayback(audio) {
