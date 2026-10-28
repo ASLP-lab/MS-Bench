@@ -18,11 +18,11 @@ The leaderboard, detailed evaluation results, and Condition Explorer are availab
 
 <p align="center">
   <a href="https://aslp-lab.github.io/MS-Bench/assets/ms-bench-demo.mp4">
-    <img src="assets/ms-bench-demo-poster.jpg" alt="Watch the MS-Bench demo: grounding who spoke what and when" width="100%">
+    <img src="assets/ms-bench-demo-poster.jpg" alt="MS-Bench demo cover with the paper title, authors, and project links" width="100%">
   </a>
 </p>
 
-**[▶ Watch the full demo](https://aslp-lab.github.io/MS-Bench/assets/ms-bench-demo.mp4)** · [Download MP4](assets/ms-bench-demo.mp4) · 1080p · 5 min 38 s
+**[▶ Watch the full demo](https://aslp-lab.github.io/MS-Bench/assets/ms-bench-demo.mp4)**
 
 ## Benchmark Overview
 
@@ -62,7 +62,7 @@ Acoustic quality is represented by `d_N = 1 - (p_D + p_N) / 2`, where `p_D` and 
 
 ## Overall Performance
 
-Results from the [paper](https://arxiv.org/abs/2610.25824). All error rates are percentages (↓ lower is better); **bold** indicates the best score.
+**Overall performance and robustness on MS-Bench.** Results from the [paper](https://arxiv.org/abs/2610.25824). All error rates are percentages (↓ lower is better); **bold** indicates the best score.
 
 | System | DER ↓ | cpWER ↓ | tcpWER ↓ | WER ↓ | Excluded units | Soft-degradation units |
 |:--|--:|--:|--:|--:|--:|--:|
@@ -80,38 +80,43 @@ DER evaluates diarization (0.5-second collar); cpWER evaluates speaker-attribute
 
 ## Condition-wise Analysis
 
-Results from Table 2 of the paper. **Δ** denotes an error-rate difference in percentage points (pp); **ρ** denotes a Spearman correlation; **\*** marks statistical significance.
+**Condition-wise diagnostic results across the seven evaluated systems.** Entries report paired error-rate differences (Δ, in percentage points) or Spearman correlations (ρ); **\*** marks statistical significance.
 
-### Speaker Interaction and Similarity
-
-| System | Overlap Δlex (pp) | Overlap Δattr (pp) | Similarity ρsim | Turn-boundary Δattr (pp) | Speaker-count ρattr given D, O |
-|:--|--:|--:|--:|--:|--:|
-| MOSS-Transcribe-Diarize-Pro | +27.3* | +10.6* | +0.311* | +2.49* | +0.403* |
-| MOSS-Transcribe-Diarize | +27.3* | +10.9* | +0.312* | +2.48* | +0.350* |
-| Qwen3.8-Omni-Flash | +28.7* | +10.5* | +0.323* | +2.74* | +0.257 |
-| VibeVoice-ASR | +34.3* | +4.2* | +0.297* | +3.07* | +0.054 |
-| pyannote+Qwen3-ASR | +38.6* | +19.1* | +0.248* | +3.43* | +0.438* |
-| Doubao-ASR 2.0 | +27.2* | +6.3* | +0.268* | +4.17* | +0.281* |
-| SoulX-Transcriber (5-min segments) | +35.2* | +8.7* | +0.319* | +1.51* | — |
-
-### Acoustic Quality
-
-| System | ρ(d_N, E_lex) | ρ(d_N, E_attr) | ρ(d_N, R_time) |
-|:--|--:|--:|--:|
-| MOSS-Transcribe-Diarize-Pro | +0.392* | −0.060 | −0.350* |
-| MOSS-Transcribe-Diarize | +0.480* | −0.121 | −0.405* |
-| Qwen3.8-Omni-Flash | +0.364* | −0.063 | −0.335* |
-| VibeVoice-ASR | +0.569* | +0.081 | −0.436* |
-| pyannote+Qwen3-ASR | +0.392* | +0.030 | −0.437* |
-| Doubao-ASR 2.0 | +0.304* | −0.057 | −0.145 |
-| SoulX-Transcriber (5-min segments) | +0.181* | −0.174* | −0.246* |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">System</th>
+      <th colspan="2">Overlap</th>
+      <th>Speaker similarity</th>
+      <th colspan="3">Acoustic quality</th>
+      <th>Speaker turn interval</th>
+      <th>Speaker number</th>
+    </tr>
+    <tr>
+      <th>Δ<sub>lex</sub></th><th>Δ<sub>attr</sub></th>
+      <th>ρ<sub>sim</sub></th>
+      <th>ρ<sub>lex</sub></th><th>ρ<sub>attr</sub></th><th>ρ<sub>time</sub></th>
+      <th>Δ<sub>attr</sub></th>
+      <th>ρ<sub>attr∣D,O</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>MOSS-Transcribe-Diarize-Pro</td><td>+27.3*</td><td>+10.6*</td><td>+0.311*</td><td>+0.392*</td><td>−0.060</td><td>−0.350*</td><td>+2.49*</td><td>+0.403*</td></tr>
+    <tr><td>MOSS-Transcribe-Diarize</td><td>+27.3*</td><td>+10.9*</td><td>+0.312*</td><td>+0.480*</td><td>−0.121</td><td>−0.405*</td><td>+2.48*</td><td>+0.350*</td></tr>
+    <tr><td>Qwen3.8-Omni-Flash</td><td>+28.7*</td><td>+10.5*</td><td>+0.323*</td><td>+0.364*</td><td>−0.063</td><td>−0.335*</td><td>+2.74*</td><td>+0.257</td></tr>
+    <tr><td>VibeVoice-ASR</td><td>+34.3*</td><td>+4.2*</td><td>+0.297*</td><td>+0.569*</td><td>+0.081</td><td>−0.436*</td><td>+3.07*</td><td>+0.054</td></tr>
+    <tr><td>pyannote+Qwen3-ASR</td><td>+38.6*</td><td>+19.1*</td><td>+0.248*</td><td>+0.392*</td><td>+0.030</td><td>−0.437*</td><td>+3.43*</td><td>+0.438*</td></tr>
+    <tr><td>Doubao-ASR 2.0</td><td>+27.2*</td><td>+6.3*</td><td>+0.268*</td><td>+0.304*</td><td>−0.057</td><td>−0.145</td><td>+4.17*</td><td>+0.281*</td></tr>
+    <tr><td>SoulX-Transcriber (5-min segments)</td><td>+35.2*</td><td>+8.7*</td><td>+0.319*</td><td>+0.181*</td><td>−0.174*</td><td>−0.246*</td><td>+1.51*</td><td>—</td></tr>
+  </tbody>
+</table>
 
 `lex` denotes lexical recognition error; `attr` denotes speaker-attribution error; `R_time` is predicted/reference speech duration. Speaker-count correlations control for dataset (`D`) and overlap (`O`), excluding the ≥9-speaker tier and SoulX.
 
 - **Overlap** degrades both lexical recognition and speaker attribution across all seven systems.
 - **Speaker similarity** increases speaker confusion even without overlapping speech.
-- **Speaker turn boundaries** mainly increase attribution errors, with no significant lexical or segmentation penalty.
-- **Acoustic degradation** mainly affects lexical recognition and is associated with shorter predicted speech timelines in six of seven systems.
-- **Higher speaker counts** are associated with greater attribution difficulty after controlling for dataset and overlap, significantly in four of six systems.
+- **Acoustic quality:** Poorer quality mainly affects lexical recognition and is associated with shorter predicted speech timelines in six of seven systems.
+- **Speaker turn interval:** Errors near speaker switches mainly concern attribution, with no significant lexical or segmentation penalty.
+- **Speaker number:** Higher speaker counts are associated with greater attribution difficulty after controlling for dataset and overlap, significantly in four of six systems.
 
 Explore the results interactively on the [project page](https://aslp-lab.github.io/MS-Bench/).
