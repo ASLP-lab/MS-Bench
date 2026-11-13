@@ -18,6 +18,7 @@ EXPECTED_TIERS = {
     "N": {"N0": 7, "N1": 5, "N2": 25, "N3": 62},
 }
 EXPECTED_SYSTEMS = ["moss_pro", "moss", "qwen_omni", "vibevoice", "pyannote_qwen", "doubao", "soulx"]
+ADDITIONAL_SYSTEMS = ["elevenlabs_scribe_v2", "nemotron_35_transcribe"]
 
 
 def fail(message: str) -> None:
@@ -26,8 +27,9 @@ def fail(message: str) -> None:
 
 def validate_predictions(examples: list[dict]) -> None:
     data = json.loads((ROOT / 'demo-data/case_predictions.json').read_text(encoding='utf-8'))
-    if [system['id'] for system in data['systems']] != EXPECTED_SYSTEMS:
-        fail('Prediction systems must match the seven leaderboard systems')
+    systems = EXPECTED_SYSTEMS + ADDITIONAL_SYSTEMS
+    if [system['id'] for system in data['systems']] != systems:
+        fail('Prediction systems must match the leaderboard systems')
     if [case['recording_id'] for case in data['cases']] != [example['recording_id'] for example in examples]:
         fail('Predictions must cover every audio example exactly once and in gallery order')
     for case, example in zip(data['cases'], examples):
@@ -35,7 +37,7 @@ def validate_predictions(examples: list[dict]) -> None:
         for field in ('slug', 'clip_start_seconds', 'clip_duration_seconds'):
             if case[field] != example[field]:
                 fail(f'{label}: prediction {field} differs from the audio example')
-        if [output['system_id'] for output in case['outputs']] != EXPECTED_SYSTEMS:
+        if [output['system_id'] for output in case['outputs']] != systems:
             fail(f'{label}: missing or duplicated model output')
         for output in case['outputs']:
             if output['status'] not in {'available', 'partial', 'invalid', 'missing', 'unmapped', 'failed'}:
@@ -52,7 +54,10 @@ def validate_predictions(examples: list[dict]) -> None:
                 start, end = segment['start'], segment['end']
                 if not all(math.isfinite(time) for time in (start, end)):
                     fail(f'{label}: non-finite prediction interval')
-                if segment['valid_timing'] and not (end > start and end > 0 and start < case['clip_duration_seconds']):
+                point = output['system_id'] in ADDITIONAL_SYSTEMS and end == start
+                intersects = (0 <= start < case['clip_duration_seconds'] if point else
+                              end > start and end > 0 and start < case['clip_duration_seconds'])
+                if segment['valid_timing'] and not intersects:
                     fail(f'{label}: prediction does not intersect the audio example')
                 if not isinstance(segment['text'], str) or not isinstance(segment['speaker'], str):
                     fail(f'{label}: invalid prediction text or speaker')
@@ -85,8 +90,8 @@ def main() -> None:
         fail("Condition distribution does not match the paper")
 
     leaderboard = json.loads((ROOT / "demo-data/leaderboard.json").read_text(encoding="utf-8"))
-    if [row["system_id"] for row in leaderboard] != EXPECTED_SYSTEMS:
-        fail("Leaderboard must contain the seven paper systems in stable ID order")
+    if [row["system_id"] for row in leaderboard] != EXPECTED_SYSTEMS + ADDITIONAL_SYSTEMS:
+        fail("Leaderboard must contain seven paper systems and two additional evaluations")
     if any(row["system"] == "DiaScriber" for row in leaderboard):
         fail("DiaScriber must not appear in the paper main table")
 
@@ -185,7 +190,7 @@ def main() -> None:
                 fail(f"{recording_id}: invalid listening shortcut interval")
 
     validate_predictions(examples)
-    print(f"Validated {len(rows)} recordings, {len(leaderboard)} systems, {len(examples)} representative cases, and {len(examples) * len(EXPECTED_SYSTEMS)} model outputs.")
+    print(f"Validated {len(rows)} recordings, {len(leaderboard)} systems, {len(examples)} representative cases, and {len(examples) * len(leaderboard)} model outputs.")
 
 
 if __name__ == "__main__":

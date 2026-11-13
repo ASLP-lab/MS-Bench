@@ -1,9 +1,103 @@
 [
-  {"system_id":"moss_pro","system":"MOSS-Transcribe-Diarize-Pro","der":10.96,"cpwer":21.95,"tcpwer":22.81,"wer":22.49,"excluded":15,"soft_degradation":2},
-  {"system_id":"moss","system":"MOSS-Transcribe-Diarize","der":12.74,"cpwer":24.94,"tcpwer":26.22,"wer":25.02,"excluded":0,"soft_degradation":2},
-  {"system_id":"qwen_omni","system":"Qwen3.8-Omni-Flash","der":17.97,"cpwer":29.43,"tcpwer":32.59,"wer":27.86,"excluded":5,"soft_degradation":2},
-  {"system_id":"vibevoice","system":"VibeVoice-ASR","der":20.19,"cpwer":43.41,"tcpwer":44.76,"wer":33.11,"excluded":10,"soft_degradation":12},
-  {"system_id":"pyannote_qwen","system":"pyannote+Qwen3-ASR","der":17.35,"cpwer":43.25,"tcpwer":46.54,"wer":34.96,"excluded":0,"soft_degradation":1},
-  {"system_id":"doubao","system":"Doubao-ASR 2.0","der":39.52,"cpwer":55.37,"tcpwer":62.07,"wer":38.20,"excluded":4,"soft_degradation":26},
-  {"system_id":"soulx","system":"SoulX-Transcriber","der":19.42,"cpwer":49.16,"tcpwer":52.60,"wer":39.96,"excluded":8,"soft_degradation":30}
+  {
+    "system_id": "moss_pro",
+    "system": "MOSS-Transcribe-Diarize-Pro",
+    "der": 10.96,
+    "cpwer": 21.95,
+    "tcpwer": 22.81,
+    "wer": 22.49,
+    "excluded": 15,
+    "soft_degradation": 2
+  },
+  {
+    "system_id": "moss",
+    "system": "MOSS-Transcribe-Diarize",
+    "der": 12.74,
+    "cpwer": 24.94,
+    "tcpwer": 26.22,
+    "wer": 25.02,
+    "excluded": 0,
+    "soft_degradation": 2
+  },
+  {
+    "system_id": "qwen_omni",
+    "system": "Qwen3.8-Omni-Flash",
+    "der": 17.97,
+    "cpwer": 29.43,
+    "tcpwer": 32.59,
+    "wer": 27.86,
+    "excluded": 5,
+    "soft_degradation": 2
+  },
+  {
+    "system_id": "vibevoice",
+    "system": "VibeVoice-ASR",
+    "der": 20.19,
+    "cpwer": 43.41,
+    "tcpwer": 44.76,
+    "wer": 33.11,
+    "excluded": 10,
+    "soft_degradation": 12
+  },
+  {
+    "system_id": "pyannote_qwen",
+    "system": "pyannote+Qwen3-ASR",
+    "der": 17.35,
+    "cpwer": 43.25,
+    "tcpwer": 46.54,
+    "wer": 34.96,
+    "excluded": 0,
+    "soft_degradation": 1
+  },
+  {
+    "system_id": "doubao",
+    "system": "Doubao-ASR 2.0",
+    "der": 39.52,
+    "cpwer": 55.37,
+    "tcpwer": 62.07,
+    "wer": 38.2,
+    "excluded": 4,
+    "soft_degradation": 26
+  },
+  {
+    "system_id": "soulx",
+    "system": "SoulX-Transcriber",
+    "der": 19.42,
+    "cpwer": 49.16,
+    "tcpwer": 52.6,
+    "wer": 39.96,
+    "excluded": 8,
+    "soft_degradation": 30
+  },
+  {
+    "system_id": "elevenlabs_scribe_v2",
+    "system": "ElevenLabs Scribe v2",
+    "official_url": "https://elevenlabs.io/docs/api-reference/speech-to-text/convert",
+    "wer": 29.92,
+    "cpwer": 43.71,
+    "tcpwer": 46.53,
+    "der": 47.46,
+    "excluded": 4,
+    "soft_degradation": 1,
+    "paper_comparable": false,
+    "scored_recordings": 95,
+    "total_recordings": 99,
+    "der_source": "transcript_intervals"
+  },
+  {
+    "system_id": "nemotron_35_transcribe",
+    "system": "Nemotron 3.5 Transcribe 30B-A4B",
+    "official_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+    "wer": 33.54,
+    "cpwer": 34.53,
+    "tcpwer": 41.63,
+    "der": 21.42,
+    "excluded": 14,
+    "soft_degradation": 1,
+    "paper_comparable": false,
+    "scored_recordings": 85,
+    "tcpwer_scored_recordings": 47,
+    "total_recordings": 99,
+    "der_source": "native_speaker_activity"
+  }
 ]

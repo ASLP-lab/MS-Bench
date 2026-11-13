@@ -3,7 +3,7 @@
 document.documentElement.classList.add("js");
 
 const DATA_ROOT = "demo-data";
-const DATA_VERSION = "20261029-output-backfill";
+const DATA_VERSION = "20261113-model-examples";
 const AXES = ["P", "O", "S", "T", "N"];
 const AXIS_META = {
   P: { name: "Speaker number", icon: "users", hint: "How many people are speaking", definition: "Number of reference speakers in each recording, grouped into predefined ranges." },
@@ -182,7 +182,7 @@ function renderOverview(summary) {
 }
 
 function rankedValues(rows, metric) {
-  return [...new Set(rows.map(row => row[metric]).filter(value => Number.isFinite(value)).sort((a, b) => a - b))];
+  return [...new Set(rows.filter(row => row.paper_comparable !== false).map(row => row[metric]).filter(value => Number.isFinite(value)).sort((a, b) => a - b))];
 }
 
 function tableCellClass(value, ranking) {
@@ -195,6 +195,8 @@ function sortedLeaderboard(rows) {
   const { key, direction } = state.sort;
   return [...rows].sort((a, b) => {
     if (key === "system") return direction === "asc" ? a.system.localeCompare(b.system) : b.system.localeCompare(a.system);
+    if (!Number.isFinite(a[key])) return Number.isFinite(b[key]) ? 1 : 0;
+    if (!Number.isFinite(b[key])) return -1;
     return direction === "asc" ? a[key] - b[key] : b[key] - a[key];
   });
 }
@@ -205,25 +207,31 @@ function sortHeader(label, key, descendingBetter = false) {
   return `<th aria-sort="${active ? (state.sort.direction === "asc" ? "ascending" : "descending") : "none"}"><button type="button" class="sort-button" data-sort="${key}" data-default-direction="${descendingBetter ? "desc" : "asc"}">${escapeHTML(label)}${arrow}</button></th>`;
 }
 
+function boardSystem(row) {
+  const name = escapeHTML(row.system);
+  if (!row.official_url?.startsWith("https://")) return name;
+  return `<a class="system-link" href="${escapeHTML(row.official_url)}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+}
+
 function leaderboardTable(rows) {
   const sorted = sortedLeaderboard(rows);
   if (state.boardView === "robustness") {
     const excludedRank = rankedValues(rows, "excluded");
     const softRank = rankedValues(rows, "soft_degradation");
     const policies = { moss_pro: "≤90 min", moss: "≤90 min", vibevoice: "≤60 min", soulx: "≤5 min" };
-    return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("Excluded units", "excluded")}${sortHeader("Soft-degradation units", "soft_degradation")}<th>Input policy</th></tr></thead><tbody>${sorted.map(row => `<tr><th>${escapeHTML(row.system)}</th><td class="${tableCellClass(row.excluded, excludedRank)}">${row.excluded}</td><td class="${tableCellClass(row.soft_degradation, softRank)}">${row.soft_degradation}</td><td>${escapeHTML(policies[row.system_id] || "Complete recording")}</td></tr>`).join("")}</tbody></table>`;
+    return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("Excluded units", "excluded")}${sortHeader("Soft-degradation units", "soft_degradation")}<th>Input policy</th></tr></thead><tbody>${sorted.map(row => `<tr data-system-id="${escapeHTML(row.system_id)}"><th>${boardSystem(row)}</th><td class="${row.paper_comparable === false ? "" : tableCellClass(row.excluded, excludedRank)}">${row.excluded}</td><td class="${row.paper_comparable === false ? "" : tableCellClass(row.soft_degradation, softRank)}">${row.soft_degradation ?? "—"}</td><td>${escapeHTML(policies[row.system_id] || "Complete recording")}</td></tr>`).join("")}</tbody></table>`;
   }
   const metrics = ["der", "cpwer", "tcpwer", "wer"];
   const ranking = Object.fromEntries(metrics.map(metric => [metric, rankedValues(rows, metric)]));
-  return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("DER (%)", "der")}${sortHeader("cpWER (%)", "cpwer")}${sortHeader("tcpWER (%)", "tcpwer")}${sortHeader("WER (%)", "wer")}</tr></thead><tbody>${sorted.map(row => `<tr><th>${escapeHTML(row.system)}</th>${metrics.map(metric => `<td class="${tableCellClass(row[metric], ranking[metric])}">${row[metric].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  return `<table class="results-table"><thead><tr>${sortHeader("System", "system")}${sortHeader("DER (%)", "der")}${sortHeader("cpWER (%)", "cpwer")}${sortHeader("tcpWER (%)", "tcpwer")}${sortHeader("WER (%)", "wer")}</tr></thead><tbody>${sorted.map(row => `<tr data-system-id="${escapeHTML(row.system_id)}"><th>${boardSystem(row)}</th>${metrics.map(metric => `<td class="${row.paper_comparable === false ? "" : tableCellClass(row[metric], ranking[metric])}">${row[metric].toFixed(2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
 }
 
 function renderLeaderboard() {
   if (!state.leaderboard) return;
   $("[data-leaderboard]").innerHTML = leaderboardTable(state.leaderboard);
   $("[data-leaderboard-note]").textContent = state.boardView === "overall"
-    ? "Best values use a tinted cell; second-best values are underlined."
-    : "Counts are inference-unit counts. Total unit denominators are unavailable, so no coverage percentage is shown.";
+    ? "Best and second-best highlighting applies to the seven paper systems only."
+    : "Paper rows count inference units. Additional evaluations count whole recordings. A dash means the metric was not assessed.";
 }
 
 function scientificNotation(value) {
@@ -758,7 +766,7 @@ const loaders = {
   leaderboard: async () => {
     try {
       const data = await fetchJSON(`${DATA_ROOT}/leaderboard.json`);
-      if (!Array.isArray(data) || data.length !== 7) throw new Error("leaderboard.json must contain seven paper systems");
+      if (!Array.isArray(data) || !data.length || new Set(data.map(row => row.system_id)).size !== data.length) throw new Error("leaderboard.json must contain unique system IDs");
       state.leaderboard = data; renderLeaderboard();
     } catch (error) { moduleError($("[data-leaderboard]"), error, "leaderboard"); }
   },
