@@ -91,6 +91,13 @@ main > section { scroll-margin-top: 88px; }
 .section-head .section-note { max-width: none; margin-top: 14px; padding: 10px 14px; background: var(--blue-soft); border: 1px solid var(--line); border-radius: 8px; font-size: 13px; line-height: 1.65; }
 .section-note > strong { color: var(--blue-dark); font-weight: 700; }
 
+.news .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; max-width: none; margin-bottom: 12px; }
+.news .section-head h2 { display: inline-flex; align-items: center; gap: 10px; }
+.news-icons { display: inline-flex; align-items: center; gap: 5px; }
+.news time { color: var(--muted); font-size: 13px; }
+.news p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.news p strong { color: var(--ink); }
+
 .condition-coverage { display: grid; gap: 4px; }
 .coverage-heading { margin: 0 0 20px; }
 .coverage-heading h3 { margin: 0; font-size: 19px; letter-spacing: -.015em; }
@@ -167,6 +174,8 @@ main > section { scroll-margin-top: 88px; }
 .results-table thead th { color: var(--muted); background: var(--surface); font-size: 11px; font-weight: 700; }
 .results-table th:first-child { position: sticky; left: 0; z-index: 1; width: 290px; min-width: 290px; max-width: 290px; text-align: left; white-space: normal; }
 .results-table tbody th { background: var(--paper); }
+.results-table .system-link { color: var(--blue-dark); text-decoration: none; }
+.results-table .system-link:hover, .results-table .system-link:focus-visible { color: var(--blue); }
 .results-table tbody tr:last-child th, .results-table tbody tr:last-child td { border-bottom: 0; }
 .results-table tbody tr:nth-child(even) td:not(.best) { background: var(--surface); }
 .results-table tbody tr:hover th, .results-table tbody tr:hover td { background: var(--surface-blue); }
@@ -559,3 +568,4 @@ html[lang="zh-CN"] { line-break: strict; }
 html[lang="zh-CN"] .hero h1 span { letter-spacing: .01em; }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+

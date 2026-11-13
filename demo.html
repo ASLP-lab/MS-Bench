@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f6f8fc">
   <title>MS-Bench: A Condition-Stratified Multi-Speaker ASR Benchmark</title>
   <link rel="icon" href="assets/mark.svg?v=20261007-demo-layout" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261018-sample-names">
+  <link rel="stylesheet" href="assets/style.css?v=20261113-model-examples">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,6 +29,7 @@
   <div class="page-frame">
     <aside class="side-nav" id="site-nav" data-menu aria-label="Section navigation">
       <nav>
+        <a href="#news" lang="en" data-i18n-ignore>News!</a>
         <a href="#introduction">Overview</a>
         <a href="#overview">Composition</a>
         <a href="#explore">Explorer</a>
@@ -55,8 +56,22 @@
             <div><strong>5</strong><span>Condition dimensions</span></div>
             <div><strong>2-14</strong><span>Speakers</span></div>
             <div><strong>21.87%</strong><span>Duration-weighted overlap</span></div>
-            <div><strong>7</strong><span>Evaluated systems</span></div>
+            <div><strong>9</strong><span>Evaluated systems</span></div>
           </div>
+        </section>
+
+        <section class="news section-pad" id="news" aria-labelledby="news-title" lang="en" data-i18n-ignore>
+          <header class="section-head">
+            <h2 id="news-title">News!
+              <span class="news-icons" aria-hidden="true">
+                <img src="assets/icons/megaphone.svg" alt="" width="19" height="19">
+                <img src="assets/icons/megaphone.svg" alt="" width="19" height="19">
+                <img src="assets/icons/megaphone.svg" alt="" width="19" height="19">
+              </span>
+            </h2>
+            <time datetime="2026-11-10">Nov 10, 2026</time>
+          </header>
+          <p>We evaluated <strong>ElevenLabs Scribe v2</strong> and <strong>Nemotron 3.5 Transcribe 30B-A4B</strong> on MS-Bench recordings.</p>
         </section>
 
         <section class="benchmark-introduction section-pad" id="introduction">
@@ -148,7 +163,7 @@
         <section class="leaderboard section-pad" id="leaderboard">
           <header class="section-head">
             <h2>Overall performance</h2>
-            <p class="section-note"><strong>Note:</strong> Seven systems from the paper. Lower is better for every error metric. DER uses a 0.5-second collar; tcpWER uses a 5-second collar.</p>
+            <p class="section-note"><strong>Note:</strong> Seven paper systems and two additional whole-recording evaluations. Lower is better. DER uses a 0.5-second collar and tcpWER uses a 5-second collar.</p>
           </header>
           <div class="performance-findings">
             <p><strong>Accuracy across tasks.</strong> MOSS-Transcribe-Diarize-Pro has the lowest error on all four metrics. Similar diarization scores can still hide large transcription differences: Qwen3.8-Omni-Flash and pyannote+Qwen3-ASR have DERs of 17.97% and 17.35%, but cpWERs of 29.43% and 43.25%.</p>
@@ -171,6 +186,7 @@
             <div>
               <p><b>DER</b>: diarization error with a 0.5-second collar. <b>cpWER</b>: speaker-attributed transcription error under optimal speaker permutation. <b>tcpWER</b>: time-constrained cpWER with a 5-second collar. <b>WER</b>: speaker-agnostic lexical error.</p>
               <p>Metrics use each system's scoreable inference units, so valid subsets may differ. Excluded units cannot be scored reliably. Soft-degradation units remain parseable and are retained.</p>
+              <p>For the two additional systems, soft-degradation counts include scored recordings with clear hallucinations confirmed during transcript review. Each recording counts once.</p>
             </div>
           </details>
         </section>
@@ -208,7 +224,7 @@
   </div>
 
   <noscript><div class="noscript">Interactive charts require JavaScript. You can still download the <a href="benchmark/metadata.jsonl">benchmark metadata</a> and read the <a href="docs/evaluation-protocol.md">evaluation protocol</a>.</div></noscript>
-  <script src="assets/i18n.js?v=20261029-output-backfill" defer></script>
-  <script src="assets/app.js?v=20261029-output-backfill" defer></script>
+  <script src="assets/i18n.js?v=20261110-official-links" defer></script>
+  <script src="assets/app.js?v=20261113-model-examples" defer></script>
 </body>
 </html>
